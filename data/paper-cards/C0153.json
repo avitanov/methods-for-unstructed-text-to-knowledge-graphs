@@ -1,0 +1,781 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0153",
+    "title": "Llm-Tikg: Threat Intelligence Knowledge Graph Construction Utilizing Large Language Model",
+    "pdf_path": "data/manual-pdfs/C0153.pdf",
+    "authors": [
+      "Yuelin Hua",
+      "Futai Zou",
+      "Jiajia Han",
+      "Xin Sun",
+      "Yilei Wang"
+    ],
+    "year": 2023,
+    "venue": "Preprint submitted to Computers & Security",
+    "identifier": {
+      "status": "reported",
+      "value": "SSRN 4671345; https://ssrn.com/abstract=4671345",
+      "evidence": [
+        {
+          "span_id": "C0153-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "Electronic copy available at: https://ssrn.com/abstract=4671345"
+        }
+      ]
+    },
+    "abstract": "Open-source threat intelligence is often unstructured and cannot be directly applied to detection and defense. Existing knowledge-graph construction methods are limited by domain-specific entity attributes, lengthy-text analysis, large labeled-data requirements, the lack of authoritative annotated threat-intelligence datasets, and neglect of textual attack-behavior descriptions. LLM-TIKG uses GPT few-shot learning for data annotation and augmentation, creates datasets for fine-tuning a smaller 7B model, and uses the fine-tuned model for topic classification, entity and relationship extraction, and TTP extraction from attack descriptions. The resulting threat-intelligence knowledge graph supports automated analysis of textualized threat intelligence. The reported precision is 87.88% for named entity recognition and 96.53% for TTP classification.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0153-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Yuelin Hua, Futai Zou, Jiajia Han, Xin Sun, Yilei Wang",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication metadata",
+      "span_id": "C0153-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Preprint submitted to Computers & Security December 6, 2023",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication metadata",
+      "span_id": "C0153-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Preprint submitted to Computers & Security",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Publication metadata",
+      "span_id": "C0153-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Electronic copy available at: https://ssrn.com/abstract=4671345",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0153-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We propose LLM-TIKG that applies the large language model to construct a knowledge graph from unstructured open-source threat intelligence. The few-shot learning capability of GPT is leveraged to achieve data annotation and augmentation, thereby creating the datasets for fine-tuning a smaller language model (7B).",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0153-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "OSCTI often presents challenges due to its article-type content and unstructured format, rendering it unsuitable for direct application in subsequent detection and defense.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0153-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Current approaches suffer from ... accuracy of information extraction ... demand for labeled data ... [and] absence of attack behaviors.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3.1 Overview",
+      "span_id": "C0153-D-P003-PICTURE-0001",
+      "page": 3,
+      "excerpt": "The Llama2-7B model is then fine-tuned using the LoRA-based instruction tuning approach, enabling it to classify input texts, extract threat intelligence entities and their relationships, as well as extract TTP.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.2.2 Dataset Generation",
+      "span_id": "C0153-D-P004-PICTURE-0001",
+      "page": 4,
+      "excerpt": "We choose the GPT-3.5-turbo model and use the instruction + examples + input template.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.3 Model Fine-tuning",
+      "span_id": "C0153-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "We adopt Low-Rank Adaptation (LoRA) for fine-tuning the model.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.4 Knowledge Graph Construction",
+      "span_id": "C0153-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "For malware, the same malicious software may be described differently ... We merge these terms using rule-based methods. For attack types and relationships, we adopt a clustering-based approach.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3.1 Overview",
+      "span_id": "C0153-D-P003-PICTURE-0001",
+      "page": 3,
+      "excerpt": "It takes textual open-source threat intelligence as input and constructs a threat intelligence knowledge graph through the analysis of text content by large language models.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "3.3 Model Fine-tuning",
+      "span_id": "C0153-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "The Llama2-7B model is fine-tuned with the collected dataset so that it can output results corresponding to the target instructions.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.1 Overview",
+      "span_id": "C0153-D-P003-PICTURE-0001",
+      "page": 3,
+      "excerpt": "Data Acquisition → Dataset Generation → Model Fine-tuning → Knowledge Graph Construction.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.3 Model Fine-tuning",
+      "span_id": "C0153-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "The data format of the training dataset is instruction+input+output.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.4 Knowledge Graph Construction",
+      "span_id": "C0153-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "Perform topic classification ... Process end-of-report IoCs ... Conduct entity and relationship recognition ... TTP classification ... Establish relationship between TTP and main object.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.2.2 Dataset Generation",
+      "span_id": "C0153-D-P005-TABLE-0001",
+      "page": 5,
+      "excerpt": "Entity type ... Malware, Threat Type, Attacker, Technique, Tool, Vulnerability, IP, Domain, URL, File, Hash.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "4.2.2 TTP Classification",
+      "span_id": "C0153-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The MITRE ATT&CK matrix includes both techniques and sub-techniques, with 229 distinct technique categories and 595 sub-technique categories incorporated in our dataset.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.2.1 Data Acquisition",
+      "span_id": "C0153-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We crawl the content of each report, extracting the text and removing extra information such as advertisements and sidebars.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.4 Knowledge Graph Construction",
+      "span_id": "C0153-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Process end-of-report IoCs; get each section of the report; conduct entity and relationship recognition; TTP classification; establish relationship between TTP and main object.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.4 Knowledge Graph Construction",
+      "span_id": "C0153-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "We merge these terms using rule-based methods ... For attack types and relationships, we adopt a clustering-based approach for consolidation.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3.2.1 Data Acquisition",
+      "span_id": "C0153-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We collect a large amount of content published on various open-source threat intelligence platforms, including security company content platforms, security news, and influential personal security blogs.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.2.1 Data Acquisition",
+      "span_id": "C0153-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We impose a limit on the input length, truncating the first paragraph of the report if it exceeds 150 words.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.4 Knowledge Graph Construction",
+      "span_id": "C0153-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Entities and relationships are extracted section by section ... Since the input in the TTP classification training dataset consists of single sentences, we also use single sentences as input.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.1 Overview",
+      "span_id": "C0153-D-P003-PICTURE-0001",
+      "page": 3,
+      "excerpt": "Entity and relationship fusion ... Entity and relationship ... TTP attack classification ... Knowledge Graph.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "4.4 Performance on Real Datasets",
+      "span_id": "C0153-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "The extracted and processed information is deposited into the graph database Neo4j, which converts the list into a graph.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.2.2 Dataset Generation",
+      "span_id": "C0153-D-P004-PICTURE-0001",
+      "page": 4,
+      "excerpt": "We choose the GPT-3.5-turbo model and use the instruction + examples + input template.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.3 Model Fine-tuning",
+      "span_id": "C0153-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "We adopt Low-Rank Adaptation (LoRA) for fine-tuning the model.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.4 Knowledge Graph Construction",
+      "span_id": "C0153-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "For attack types and relationships, we adopt a clustering-based approach ... hierarchical agglomerative clustering.",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.1 Experimental Setup",
+      "span_id": "C0153-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "We collect a total of 12,545 pieces of content ... Topic Classification 2000; Entity and Relationship Extraction 1600/15000; TTP Classification 38946.",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.2.2 TTP Classification",
+      "span_id": "C0153-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "One part of the dataset uses the TTP classification of malware examples from MITRE ATT&CK ... The other part originates from the labeled dataset in Tram.",
+      "confidence": "medium"
+    },
+    "datasets-18-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Introduction contributions",
+      "span_id": "C0153-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "This dataset can be found at https://github.com/Netsec-SJTU/LLM-TIKG-dataset.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.1 Experimental Setup",
+      "span_id": "C0153-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "To evaluate the performance of the proposed method, we employ Accuracy, Precision, Recall, and F1-Score as evaluation metrics.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.2.1 Named Entity Recognition; 4.2.2 TTP Classification",
+      "span_id": "C0153-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "Table 3 compares BERT-CRF, GPT3.5, GPT4, LLaMA-15000, and LLaMA-1600; Table 4 compares TTPDrill, Tram, LLaMA-Tec, and LLaMA-SubTec.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.1 Experimental Setup",
+      "span_id": "C0153-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "The model fine-tuning process is implemented using Python 3.9 on 2×3090 GPUs, with a maximum learning rate of 1×10−4 and a maximum of 10 epochs. The maximum sequence length was set to 1024 tokens for the Entity and Relationship Extraction task and 512 tokens for the remaining two tasks.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.2.2 TTP Classification",
+      "span_id": "C0153-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The dataset is divided into a training set and a test set at a ratio of 10 : 1. Since the dataset contains negative samples ... accuracy is added to the evaluation indices.",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.2.1 Named Entity Recognition",
+      "span_id": "C0153-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "BERT-CRF 70.98 66.40 68.61; GPT3.5 77.83 95.72 85.85; GPT4 79.30 94.73 86.33; LLaMA-15000 68.72 77.78 72.97; LLaMA-1600 87.88 83.99 85.89.",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.2.2 TTP Classification",
+      "span_id": "C0153-D-P008-TABLE-0002",
+      "page": 8,
+      "excerpt": "TTPDrill 10.23 8.17 52.15 11.05; Tram 23.83 23.07 99.49 37.45; LLaMA-Tec 97.47 96.53 99.95 98.21; LLaMA-SubTec 83.60 77.89 99.80 87.50.",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.4 Performance on Real Datasets",
+      "span_id": "C0153-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "We classify 9681 articles as threat intelligence reports from a collection of 12,542 articles ... extraction of 50,745 entities and 64,948 relationships.",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction contributions",
+      "span_id": "C0153-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We propose a method ... maps natural language descriptions of attack behaviors into TTPs ... correlates low-level and high-level threat intelligence.",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.3.1 Dataset Quality",
+      "span_id": "C0153-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "The accuracy of the model is improved by manually correcting the labeling errors in the dataset.",
+      "confidence": "medium"
+    },
+    "strengths-23-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.4 Knowledge Graph Construction",
+      "span_id": "C0153-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "The main object of the report is taken as an attribute of the entity through which the threat intelligence correlation information ... can be depicted.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2.1 Named Entity Recognition",
+      "span_id": "C0153-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "The Llama2-7B model’s entity extraction capabilities are less effective when applied to very long text and non-natural language descriptions like tables. Consequently, some omissions may occur.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.2.2 Dataset Generation",
+      "span_id": "C0153-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "GPT-3.5’s responses may exhibit a certain degree of ‘LLM hallucination’ ... security organizations ... as attackers.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.4 Knowledge Graph Construction",
+      "span_id": "C0153-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "A relationship may appear as malware A using PowerShell ... and another relationship may be B-PowerShell-cmd.exe ... Directly connecting PowerShell with msf.ps1 or cmd.exe may lead to confusion.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0153-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Threat intelligence entities exhibit domain-specific characteristics, such as ambiguous entity boundaries and polysemous expressions ... [and] limitations related to the maximum sequence length.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.3.1 Dataset Quality",
+      "span_id": "C0153-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "Despite the implementation of a rule-based filtering method ... inaccuracies persist in the form of omitted and misjudged information.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Conclusion",
+      "span_id": "C0153-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "In future work, we will explore ways to further enhance model performance to release the greater potential of large language models.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4.2.1 Named Entity Recognition",
+      "span_id": "C0153-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "The accuracy of named entity recognition can be further improved ... increasing the number of certain types of entities in the dataset, in cooperation with regular expression matching, and increasing the input sequence length.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "3.4 Knowledge Graph Construction",
+      "span_id": "C0153-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "For attack types and relationships, we adopt a clustering-based approach for consolidation.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4.4 Performance on Real Datasets",
+      "span_id": "C0153-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "The extracted and processed information is deposited into the graph database Neo4j.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2.1 Named Entity Recognition",
+      "span_id": "C0153-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "The Llama2-7B model’s entity extraction capabilities are less effective when applied to very long text and non-natural language descriptions like tables.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.4 Knowledge Graph Construction",
+      "span_id": "C0153-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Another problem is the data redundancy in the extracted entities and relationships, which necessitates consolidation.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2.2 TTP Classification",
+      "span_id": "C0153-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "The rule matching method will fail when new categories and new expressions appear.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Introduction contributions",
+      "span_id": "C0153-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "This dataset can be found at https://github.com/Netsec-SJTU/LLM-TIKG-dataset.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses automated construction of a threat-intelligence knowledge graph from unstructured open-source cyber-threat reports. It targets fragmented IoC extraction, domain-specific and ambiguous entity recognition, limited handling of long reports, expensive manual annotation, and the omission of attack-behavior descriptions and MITRE ATT&CK TTP information needed for attack-chain analysis, intrusion detection, and attribution.",
+  "methodology": {
+    "primary_family": "Instruction-tuned or fine-tuned LLM methods",
+    "secondary_families": [
+      "Generative text-to-structure methods",
+      "Zero-shot and few-shot LLM prompting",
+      "Ontology-constrained and schema-guided methods",
+      "Hybrid NLP and LLM methods",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "supervised",
+    "description": "LLM-TIKG is a multi-stage pipeline. First, web crawlers collect report title, link, and cleaned content from security-company platforms, security news, and personal security blogs. GPT-3.5-turbo is prompted with task instructions, demonstrations, and report text to generate labels for topic classification, entity/relation extraction, and TTP classification. For entity/relation data, prompts specify entity types and output examples; filtering rules remove unsupported entity types, keep only relations whose endpoints are extracted entities, and manually correct part of the generated labels. TTP data combines MITRE ATT&CK malware-behavior examples with Tram data and is augmented by back-translation and GPT rewriting. Llama2-7B is instruction-tuned with LoRA on instruction/input/output examples. At inference, the model classifies reports using title and first-paragraph content, skips non-threat reports, extracts end-of-report IoCs with regular expressions and connects them to the report's main object, processes reports section by section, extracts entities and relations, and classifies TTPs sentence by sentence for reports centered on malware or attackers. Post-processing resolves generic references to preceding entities, attaches the report's main object to reduce cross-instance ambiguity, merges malware aliases with rules, clusters attack types and relationships using embeddings, cosine distance, and hierarchical agglomerative clustering, and stores the resulting graph in Neo4j."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The method uses a task-defined schema with entity categories Malware, Threat Type, Attacker, Technique, Tool, Vulnerability, IP, Domain, URL, File, and Hash, plus prompted relationship tuples. TTP classification is grounded in the MITRE ATT&CK technique and sub-technique taxonomy; the experiment reports 229 technique categories and 595 sub-technique categories represented in the dataset. The paper does not describe a separate formal KG ontology.",
+    "evidence": [
+      {
+        "span_id": "C0153-D-P005-TABLE-0001",
+        "page": 5,
+        "excerpt": "Entity type ... Malware, Threat Type, Attacker, Technique, Tool, Vulnerability, IP, Domain, URL, File, Hash."
+      },
+      {
+        "span_id": "C0153-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "The MITRE ATT&CK matrix includes both techniques and sub-techniques, with 229 distinct technique categories and 595 sub-technique categories incorporated in our dataset."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing and report cleaning",
+    "Topic classification",
+    "Entity and concept extraction",
+    "Entity typing",
+    "Relation and triple extraction",
+    "Event/attack-behavior interpretation through TTP classification",
+    "Entity resolution and alias fusion",
+    "Knowledge fusion and deduplication",
+    "Graph construction",
+    "Graph updating"
+  ],
+  "input_output": {
+    "input_type": "Unstructured English open-source cyber-threat-intelligence reports, including security-company content, security news, and personal security blogs; reports may contain prose, IoC lists, and tables.",
+    "input_granularity": "Report-level topic classification uses the title and first paragraph; entity and relationship extraction is performed section by section, with overlong sections split to satisfy model input limits; TTP classification uses individual sentences; end-of-report IoCs are processed separately.",
+    "output_representation": "Typed entity nodes and directed relationship edges represented as entity-relation-entity tuples, including IoCs, malware, attackers, tools, files, vulnerabilities, threat types, and MITRE ATT&CK TTP nodes; the final graph is deposited in Neo4j."
+  },
+  "models_and_tools": [
+    "GPT-3.5-turbo for few-shot annotation, data augmentation, and rewriting",
+    "Llama2-7B with LoRA instruction tuning for topic classification, entity/relation extraction, and TTP classification",
+    "BERT-CRF comparison model",
+    "GPT-3.5 and GPT-4 out-of-the-box comparison models",
+    "TTPDrill baseline",
+    "Tram baseline",
+    "Regular expressions for end-of-report IoCs",
+    "Word embeddings, cosine similarity, and hierarchical agglomerative clustering for consolidation",
+    "Neo4j graph database",
+    "Web crawlers for report collection"
+  ],
+  "datasets": [
+    "12,545 collected blog, news, and security-analysis contents (the real-data experiment later reports 12,542 articles)",
+    "Topic-classification dataset: 2,000 instances",
+    "Entity and relationship extraction datasets: 1,600 manually modified instances and 15,000 coarsely filtered instances",
+    "TTP-classification dataset: 38,946 instances",
+    "MITRE ATT&CK malware examples and technique/sub-technique labels",
+    "Tram labeled dataset",
+    "SJTU/LLM-TIKG-dataset repository"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Accuracy",
+      "Precision",
+      "Recall",
+      "F1-score"
+    ],
+    "baselines": [
+      "BERT-CRF for named entity recognition",
+      "GPT-3.5 for prompted NER",
+      "GPT-4 for prompted NER",
+      "TTPDrill for TTP classification",
+      "Tram for TTP classification"
+    ],
+    "setting": "Task-level evaluation covers NER, TTP classification, fine-tuning dataset quality, and training epochs, followed by application to the complete collected corpus. NER models use the same test set; BERT-CRF is trained for 20 epochs. Llama2 fine-tuning uses Python 3.9, two RTX 3090 GPUs, maximum learning rate 1×10^-4, up to 10 epochs, maximum sequence length 1024 for entity/relation extraction and 512 for the other tasks. The TTP dataset is split 10:1 into training and test sets and includes negative samples. The real-data run classifies reports and constructs a Neo4j graph."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "NER: BERT-CRF achieved 70.98 precision, 66.40 recall, and 68.61 F1; GPT-3.5 achieved 77.83/95.72/85.85; GPT-4 achieved 79.30/94.73/86.33; LLaMA-15000 achieved 68.72/77.78/72.97; LLaMA-1600 achieved 87.88/83.99/85.89 for precision/recall/F1.",
+      "TTP technique classification: LLaMA-Tec achieved 97.47 accuracy, 96.53 precision, 99.95 recall, and 98.21 F1; TTPDrill achieved 10.23/8.17/52.15/11.05 and Tram 23.83/23.07/99.49/37.45.",
+      "TTP sub-technique classification: LLaMA-SubTec achieved 83.60 accuracy, 77.89 precision, 99.80 recall, and 87.50 F1.",
+      "On the real corpus, 9,681 of 12,542 articles were classified as threat-intelligence reports, yielding 50,745 entities and 64,948 relationships in Neo4j.",
+      "The manually corrected 1,600-example dataset produced substantially better NER precision than the 15,000-example coarsely filtered dataset, supporting the paper's observation that label quality mattered more than raw dataset size in this experiment.",
+      "The authors report that performance improved with training epochs until saturation, after which fluctuations and decline occurred."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0153-D-P007-TABLE-0001",
+        "page": 7,
+        "excerpt": "BERT-CRF 70.98 66.40 68.61; GPT3.5 77.83 95.72 85.85; GPT4 79.30 94.73 86.33; LLaMA-15000 68.72 77.78 72.97; LLaMA-1600 87.88 83.99 85.89."
+      },
+      {
+        "span_id": "C0153-D-P008-TABLE-0002",
+        "page": 8,
+        "excerpt": "TTPDrill 10.23 8.17 52.15 11.05; Tram 23.83 23.07 99.49 37.45; LLaMA-Tec 97.47 96.53 99.95 98.21; LLaMA-SubTec 83.60 77.89 99.80 87.50."
+      },
+      {
+        "span_id": "C0153-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "We classify 9681 articles as threat intelligence reports from a collection of 12,542 articles ... extraction of 50,745 entities and 64,948 relationships."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author claim: the pipeline integrates low-level IoCs with higher-level attackers, malware, tools, relationships, and TTPs.",
+      "Author claim: GPT-based few-shot annotation and augmentation reduces the manual effort required to create task datasets.",
+      "Experimental result: manually corrected data substantially improves NER precision over the larger coarsely filtered dataset.",
+      "Experimental result: the fine-tuned model reports high task-level TTP classification scores and produces a large graph from real reports.",
+      "Review-level interpretation: the section-wise extraction, report-object anchoring, alias fusion, and relationship clustering address several practical cross-sentence and cross-report integration problems."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0153-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "We propose a method ... maps natural language descriptions of attack behaviors into TTPs ... correlates low-level and high-level threat intelligence."
+      },
+      {
+        "span_id": "C0153-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "The accuracy of the model is improved by manually correcting the labeling errors in the dataset."
+      },
+      {
+        "span_id": "C0153-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "The main object of the report is taken as an attribute of the entity through which the threat intelligence correlation information ... can be depicted."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author-reported weakness: Llama2-7B entity extraction is less effective on very long text and non-natural-language descriptions such as tables, causing omissions.",
+      "Author-reported weakness: GPT-3.5 may hallucinate unsupported entity types and misclassify security organizations or words containing IP/Domain; filtering and manual correction are required.",
+      "Author-reported weakness: relationship extraction can interleave relationships when shared tools occur across multiple malware instances, creating ambiguity.",
+      "Review-level interpretation: graph construction is evaluated mainly through component-level NER/TTP metrics and graph counts; the paper does not report end-to-end precision, recall, or correctness of the final graph.",
+      "Review-level interpretation: the described pipeline uses alias rules and clustering, but does not report a dedicated coreference or canonical entity-linking evaluation."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0153-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "The Llama2-7B model’s entity extraction capabilities are less effective when applied to very long text and non-natural language descriptions like tables. Consequently, some omissions may occur."
+      },
+      {
+        "span_id": "C0153-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "GPT-3.5’s responses may exhibit a certain degree of ‘LLM hallucination’ ... security organizations ... as attackers."
+      },
+      {
+        "span_id": "C0153-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "A relationship may appear as malware A using PowerShell ... and another relationship may be B-PowerShell-cmd.exe ... Directly connecting PowerShell with msf.ps1 or cmd.exe may lead to confusion."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "Threat-intelligence entities have ambiguous boundaries and polysemous expressions.",
+      "Long-text input limits reduce extraction effectiveness.",
+      "Authoritative open-source annotated threat-intelligence datasets are scarce and manual annotation is labor-intensive.",
+      "GPT-generated labels contain omissions and misjudgments even after rule-based filtering.",
+      "The fine-tuned model can omit entities in long text and tables.",
+      "The authors identify further model-performance enhancement as future work."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0153-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "Threat intelligence entities exhibit domain-specific characteristics, such as ambiguous entity boundaries and polysemous expressions ... [and] limitations related to the maximum sequence length."
+      },
+      {
+        "span_id": "C0153-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "Despite the implementation of a rule-based filtering method ... inaccuracies persist in the form of omitted and misjudged information."
+      },
+      {
+        "span_id": "C0153-D-P010-TEXT-0003",
+        "page": 10,
+        "excerpt": "In future work, we will explore ways to further enhance model performance to release the greater potential of large language models."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-suggested improvement: increase the representation of particular entity types in the training data.",
+      "Author-suggested improvement: combine model extraction with regular-expression matching.",
+      "Author-suggested improvement: increase the model input sequence length using advanced methods.",
+      "Review-level proposed improvement: evaluate and calibrate the alias-fusion and relationship-clustering stages with manually verified cross-document entity and relation links.",
+      "Review-level proposed improvement: add graph-level precision/recall and human factuality checks, including evaluation on tables and long reports."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0153-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "The accuracy of named entity recognition can be further improved ... increasing the number of certain types of entities in the dataset, in cooperation with regular expression matching, and increasing the input sequence length."
+      },
+      {
+        "span_id": "C0153-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "For attack types and relationships, we adopt a clustering-based approach for consolidation."
+      },
+      {
+        "span_id": "C0153-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "The extracted and processed information is deposited into the graph database Neo4j."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Long reports and tabular or list-like content remain difficult for the extractor and can cause omissions.",
+      "Unsupported or incorrectly typed entities can still arise from generative annotation and require filtering or manual correction.",
+      "Shared tools and generic mentions can produce ambiguous relationship assignments across malware or attacker instances.",
+      "Data redundancy and inconsistent malware naming still require heuristic fusion and clustering.",
+      "Review-level inference: the paper leaves unresolved whether strong component-level scores translate into a correct, complete, and trustworthy end-to-end threat-intelligence graph.",
+      "Review-level inference: the paper does not establish robust cross-source entity linking, coreference resolution, or graph-update accuracy through dedicated evaluation."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0153-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "The Llama2-7B model’s entity extraction capabilities are less effective when applied to very long text and non-natural language descriptions like tables."
+      },
+      {
+        "span_id": "C0153-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "Another problem is the data redundancy in the extracted entities and relationships, which necessitates consolidation."
+      },
+      {
+        "span_id": "C0153-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "The rule matching method will fail when new categories and new expressions appear."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that the manually corrected labeled dataset is available at https://github.com/Netsec-SJTU/LLM-TIKG-dataset. No separate implementation repository or license information is reported in the paper."
+}

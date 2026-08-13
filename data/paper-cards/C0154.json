@@ -1,0 +1,804 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0154",
+    "title": "LLM4Schema.org: Generating Schema.org Markups With Large Language Models",
+    "pdf_path": "data/batches/batch-05/C0154.pdf",
+    "authors": [
+      "Minh-Hoang Dang",
+      "Thi Hoang Thi Pham",
+      "Pascal Molli",
+      "Hala Skaf-Molli",
+      "Alban Gaignard"
+    ],
+    "year": "not_reported",
+    "venue": "Semantic Web",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The paper introduces LLM4Schema.org, an approach for evaluating large language models in generating Schema.org markups from webpage text. It reports that 40–50% of markup produced by GPT-3.5 and GPT-4 is invalid, non-factual, or non-compliant with the Schema.org ontology, and that specialized LLM-powered agents can identify and remove these errors. After curation, GPT-4 outperforms human annotators in generating accurate and comprehensive Schema.org markups, while both GPT-3.5 and GPT-4 improve areas where human annotators fall short.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author information",
+      "span_id": "C0154-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Minh-Hoang Dang, Thi Hoang Thi Pham, Pascal Molli, Hala Skaf-Molli and Alban Gaignard",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-02-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Header",
+      "span_id": "C0154-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Semantic Web 0 (0) 1",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-03-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0154-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Our study identifies that 40-50% of the markup produced by GPT-3.5 and GPT-4 are either invalid, non-factual, or non-compliant with the Schema.org ontology. We show that these errors can be identified and removed using specialized agents powered by LLMs. Once errors are filtered out, GPT-4 outperforms human annotators.",
+      "confidence": "medium"
+    },
+    "problem_addressed-04-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0154-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "There is a gap in understanding the performance of LLMs on real, potentially lengthy web pages with a real ontology like Schema.org... How can we evaluate the correctness and completion of generated markup? More generally, can we trust the LLM in the task of generating Schema.org markup for web pages?",
+      "confidence": "medium"
+    },
+    "problem_addressed-04-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Motivation",
+      "span_id": "C0154-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The primary challenge lies not in generating Schema.org markup using a large language model (LLM) but in assessing the accuracy and completeness of the generated markup relative to the webpage’s content.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-05-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3.1 Schema.org Markup Generation with LLMs",
+      "span_id": "C0154-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "Given a webpage and a set of Schema.org types, we use LLMs to generate Schema.org markup by employing prompt engineering techniques.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-06-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.1 Schema.org Markup Generation with LLMs",
+      "span_id": "C0154-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "The prompt includes Schema.org types, their properties, and examples from the Schema.org documentation.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-06-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.2 Schema.org Markup Validity Agent",
+      "span_id": "C0154-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "We developed a simple validator based on shape constraints validation... We generated SHACL shapes for the entire Schema.org ontology.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-06-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "LLM4Schema.org Overview",
+      "span_id": "C0154-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "Validity Agent... Factuality Agent... Compliance Agent... markups that pass these agents are considered correct.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-07-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "LLM4Schema.org Overview",
+      "span_id": "C0154-D-P006-PICTURE-0001",
+      "page": 6,
+      "excerpt": "The pipeline begins with a webpage with Schema.org markup in JSON-LD format... Validity Agent... Factuality Agent... Compliance Agent... We consider markups that pass these agents to be correct.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-08-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "3.1 Schema.org Markup Generation with LLMs",
+      "span_id": "C0154-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "Example [INDEX] for [TYPE]... Example content... Example markup... The content: <content>[CONTENT]</content>",
+      "confidence": "medium"
+    },
+    "methodology-description-09-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Figure 4 and pipeline description",
+      "span_id": "C0154-D-P005-PICTURE-0001",
+      "page": 5,
+      "excerpt": "Overall pipeline: Humans and LLMs produce markups; Validity, Factuality, and Compliance steps curate them; MIMR compares the resulting human and LLM markups.",
+      "confidence": "medium"
+    },
+    "methodology-description-09-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "LLM4Schema.org Overview",
+      "span_id": "C0154-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "For LLMs we first extract the text of the webpage... and ask an LLM to generate the markup... We subject them to the following evaluation procedures: Validity Agent, Factuality Agent, and Compliance Agent.",
+      "confidence": "medium"
+    },
+    "methodology-description-09-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.3 Schema.org Markup Factuality Agent",
+      "span_id": "C0154-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "The Factuality agent takes a text and a markup as inputs, verifying whether the properties and values mentioned in the markup are grounded in the webpage text.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-10-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Background and motivation",
+      "span_id": "C0154-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Schema.org... includes 806 types, 1476 properties, and 14 Datatypes.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-10-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.2 Schema.org Markup Validity Agent",
+      "span_id": "C0154-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "We generated SHACL shapes for the entire Schema.org ontology... Propagate all properties from parent type to children types. Close the shapes to enable reasoning under Closed World Assumption.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-10-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.4 Schema.org Markup Compliance Agent",
+      "span_id": "C0154-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "The Compliance agent takes a markup as input and ensures that each property’s value aligns with the ontology expectations outlined in the Schema.org documentation.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-11-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "LLM4Schema.org Overview",
+      "span_id": "C0154-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "We first extract the text of the webpage... ask an LLM to generate the markup... Validity Agent... Factuality Agent... Compliance Agent.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-11-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.1 Schema.org Markup Generation with LLMs",
+      "span_id": "C0154-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "We divide the text TXT into chunks while maintaining a 10% overlap between adjacent chunks... Subsequently, we merge the JSON-LD output from each chunk to create the final markup.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-11-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.2–3.4 Agents",
+      "span_id": "C0154-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "The Validity agent... verifies whether the markup is syntactically correct... The Factuality agent... verifies whether the properties and values... are grounded in the webpage text... The Compliance agent... ensures that each property’s value aligns with the ontology expectations.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-12-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "LLM4Schema.org Overview",
+      "span_id": "C0154-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "The pipeline begins with a webpage with Schema.org markup in JSON-LD format... we first extract the text of the webpage.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-13-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.1 Schema.org Markup Generation with LLMs",
+      "span_id": "C0154-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "To address the limitation of an LLM’s context window... we divide the text TXT into chunks while maintaining a 10% overlap between adjacent chunks.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-13-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "4.3 Sampling over WebDataCommons",
+      "span_id": "C0154-D-P015-TEXT-0002",
+      "page": 15,
+      "excerpt": "For each webpage, we extracted the textual content from fully-rendered webpages... and the human JSON-LD markup.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-14-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.1 Schema.org Markup Generation with LLMs",
+      "span_id": "C0154-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "Please write the Schema.org JSON-LD markup that matches the content according to the Schema.org type(s). Only output JSON-LD markup.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-14-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.2 Schema.org Markup Validity Agent",
+      "span_id": "C0154-D-P008-PICTURE-0002",
+      "page": 8,
+      "excerpt": "We use RDFLib pySHACL to validate the markup against these shapes, subsequently removing any invalid property-value pairs from the markup.",
+      "confidence": "medium"
+    },
+    "models_and_tools-15-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.1.2 Experimental results for the Factuality agent",
+      "span_id": "C0154-D-P012-TEXT-0001",
+      "page": 12,
+      "excerpt": "We used a quantized version of Mixtral-8x7B-Instruct... We set the temperature to 0.0 when prompted to ensure a deterministic response.",
+      "confidence": "medium"
+    },
+    "models_and_tools-15-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.3 Sampling over WebDataCommons",
+      "span_id": "C0154-D-P015-TEXT-0002",
+      "page": 15,
+      "excerpt": "For each webpage, we extracted the textual content from fully-rendered webpages using HTML2Text, and the human JSON-LD markup using extruct.",
+      "confidence": "medium"
+    },
+    "models_and_tools-15-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.2.1 Ground truth dataset for Compliance agent",
+      "span_id": "C0154-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "We measure the semantic distance between their embeddings using Spacy and retain pairs with the largest distances as negative examples.",
+      "confidence": "medium"
+    },
+    "datasets-16-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.3 Sampling over WebDataCommons",
+      "span_id": "C0154-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "The corpus... consists of a representative sampled subset... 877 million web pages... 877M include Schema.org markup in JSON-LD format.",
+      "confidence": "medium"
+    },
+    "datasets-16-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.3 Sampling over WebDataCommons",
+      "span_id": "C0154-D-P014-TEXT-0002",
+      "page": 14,
+      "excerpt": "Within each C-set, we removed invalid properties and types... resulting in a total of 1.2 million C-sets... grouped the C-sets by quantiles and sampled 30 pages from each, resulting in 180 pages in total.",
+      "confidence": "medium"
+    },
+    "datasets-16-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.1.1 Ground truth dataset for Factuality agent",
+      "span_id": "C0154-D-P011-TABLE-0003",
+      "page": 11,
+      "excerpt": "Factual ground-truth consists of 785 positive examples, 498 negative intrinsic examples, and 630 negative extrinsic examples.",
+      "confidence": "medium"
+    },
+    "datasets-16-04": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.2.1 Ground truth dataset for Compliance agent",
+      "span_id": "C0154-D-P013-TABLE-0004",
+      "page": 13,
+      "excerpt": "Compliance 785 positive, 147 negative, total 932.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-17-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.1.2 Experimental results for the Factuality agent",
+      "span_id": "C0154-D-P012-TABLE-0001",
+      "page": 12,
+      "excerpt": "Precision, Recall, and F1 of the Factuality agent.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-17-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.4 Humans Vs LLMs",
+      "span_id": "C0154-D-P016-TABLE-0002",
+      "page": 16,
+      "excerpt": "The Rejection Rate is the percentage of triples rejected by the pipeline. MIMR: h for Human, l for LLMs.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-17-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.5 Evaluating the accuracy of the MIMR metric",
+      "span_id": "C0154-D-P017-TABLE-0003",
+      "page": 17,
+      "excerpt": "Cohen’s Kappa 0.750 for GPT-3.5 and 0.895 for GPT-4.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-18-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.4 Humans Vs LLMs",
+      "span_id": "C0154-D-P016-TEXT-0001",
+      "page": 16,
+      "excerpt": "We compare human-generated markup to GPT-generated markup (GPT-3.5-Turbo-16k-0613 and GPT-4-0125-preview) for 180 web pages.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-19-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4. Experiments",
+      "span_id": "C0154-D-P011-TEXT-0001",
+      "page": 11,
+      "excerpt": "The experimental study aims to address... reliability of the Factuality agent... reliability of the Compliance agent... representative sample... reliability of the MIMR metric... Are LLM-generated markup better than human-generated markup?",
+      "confidence": "medium"
+    },
+    "evaluation-setting-19-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.5 Evaluating the accuracy of the MIMR metric",
+      "span_id": "C0154-D-P017-TEXT-0002",
+      "page": 17,
+      "excerpt": "We selected 10% random web pages to validate the scoring metric. Then, 7 participants were presented with 2 curated markups of the same web page and were asked to choose between A: human-generated, B: GPT-generated, or Tie.",
+      "confidence": "medium"
+    },
+    "main_results-20-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.1.2 Experimental results for the Factuality agent",
+      "span_id": "C0154-D-P012-TABLE-0001",
+      "page": 12,
+      "excerpt": "Factual (Intrinsic) 0.866 precision, 0.938 recall, 0.901 F1; Factual (Extrinsic) 0.945 precision, 0.945 recall, 0.945 F1.",
+      "confidence": "medium"
+    },
+    "main_results-20-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.2.2 Experimental results for the Compliance agent",
+      "span_id": "C0154-D-P013-TABLE-0002",
+      "page": 13,
+      "excerpt": "Compliance 0.9 precision, 0.914 recall, 0.907 F1.",
+      "confidence": "medium"
+    },
+    "main_results-20-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.4 Humans Vs LLMs",
+      "span_id": "C0154-D-P016-TABLE-0003",
+      "page": 16,
+      "excerpt": "Human 5690 input, 4875 valid, 3315 factual, 2719 compliant, 52.2%; GPT-3.5 4190, 3369, 2489, 2055, 50.9%; GPT-4 5260, 4613, 3573, 3113, 40.8%; MIMR human 0.568 and GPT-4 0.707.",
+      "confidence": "medium"
+    },
+    "main_results-20-04": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.5 Evaluating the accuracy of the MIMR metric",
+      "span_id": "C0154-D-P017-TABLE-0004",
+      "page": 17,
+      "excerpt": "Cohen’s Kappa 0.750 for GPT-3.5 and 0.895 for GPT-4.",
+      "confidence": "medium"
+    },
+    "strengths-21-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Related Work",
+      "span_id": "C0154-D-P018-TEXT-0001",
+      "page": 18,
+      "excerpt": "In LLM4Schema.org, we consider Schema.org, with 806 types and 1476 properties, we process real-world significant web pages, where obtaining ground truth is impractical.",
+      "confidence": "medium"
+    },
+    "strengths-21-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "LLM4Schema.org Overview",
+      "span_id": "C0154-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Validity Agent... Factuality Agent... Compliance Agent... markups that pass these agents are considered correct.",
+      "confidence": "medium"
+    },
+    "strengths-21-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.5 Evaluating the accuracy of the MIMR metric",
+      "span_id": "C0154-D-P017-TABLE-0003",
+      "page": 17,
+      "excerpt": "The high Kappa statistic indicates a substantial agreement between the human judgments and the MIMR metric.",
+      "confidence": "medium"
+    },
+    "weaknesses-22-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.5 MIMR: Markup Ideal Match Ratio",
+      "span_id": "C0154-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "The MIMR metric remains coarse-grained and purely quantitative... a markup with fewer properties might include properties that are considered more important.",
+      "confidence": "medium"
+    },
+    "weaknesses-22-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Appendix C.2–C.3",
+      "span_id": "C0154-D-P022-TEXT-0002",
+      "page": 22,
+      "excerpt": "As a binary classifier, LLMs can produce false negatives... the abstract term 'sameAs' makes the prompt ambiguous... definitions can be too vague or ambiguous, or too detailed.",
+      "confidence": "medium"
+    },
+    "weaknesses-22-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion and future work",
+      "span_id": "C0154-D-P019-TEXT-0003",
+      "page": 19,
+      "excerpt": "The limitation of triple-level verifications that can lead to false positives or negatives due to omitted context.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-23-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Future work",
+      "span_id": "C0154-D-P019-TEXT-0001",
+      "page": 19,
+      "excerpt": "Future iterations should address instances where a web page has multiple entities of the same type... incorporate more sophisticated prompting techniques... address the limitation of triple-level verifications... increase language diversity... experiment with a broader range of open-source quantized models.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-23-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Appendix E. Language as a sampling feature",
+      "span_id": "C0154-D-P024-TEXT-0002",
+      "page": 24,
+      "excerpt": "We do not know the quality of the generated markups when the web pages are in different languages.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Future work",
+      "span_id": "C0154-D-P019-TEXT-0001",
+      "page": 19,
+      "excerpt": "Future iterations should address instances where a web page has multiple entities of the same type... incorporate more sophisticated prompting techniques... address the limitation of triple-level verifications... increase language diversity... experiment with a broader range of open-source quantized models.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Appendix C.3 Compliance Agent",
+      "span_id": "C0154-D-P022-TEXT-0002",
+      "page": 22,
+      "excerpt": "This observation suggests that Schema.org definitions are not always clear and may need to be refined to improve the compliance of the generated markups.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Motivation",
+      "span_id": "C0154-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Evaluating the correctness and the completeness of schema markup given a web page traditionally requires a ground truth. However, such ground truth does not exist and might be difficult to build.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Related Work",
+      "span_id": "C0154-D-P018-TEXT-0002",
+      "page": 18,
+      "excerpt": "In an open-ended task such as Schema.org markup generation, it is challenging to establish a ground truth.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Appendix C.2–C.3",
+      "span_id": "C0154-D-P022-TEXT-0003",
+      "page": 22,
+      "excerpt": "Wrong predictions occur when the LLMs fail to understand subtleties... definitions can be too vague or ambiguous, or too detailed.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-04": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Future work",
+      "span_id": "C0154-D-P019-TEXT-0004",
+      "page": 19,
+      "excerpt": "We do not know the quality of the generated markups when the web pages are in different languages.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-26-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "4. Experiments",
+      "span_id": "C0154-D-P011-TEXT-0001",
+      "page": 11,
+      "excerpt": "All experimental results and the code for reproducibility are available on the project website.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-26-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "4.1.1 Ground truth dataset for Factuality agent",
+      "span_id": "C0154-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "The Factuality ground-truth... is available on our GitHub repository.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-26-03": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "4.3 Sampling over WebDataCommons",
+      "span_id": "C0154-D-P014-TEXT-0003",
+      "page": 14,
+      "excerpt": "The entire C-sets dataset is available on Zenodo.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses how to generate reliable and sufficiently complete Schema.org JSON-LD markups from real, potentially lengthy webpage text when no complete ground-truth markup exists. It specifically investigates whether LLM-generated markup can outperform human-generated markup after filtering syntactic invalidity, unsupported statements, and violations of Schema.org property expectations.",
+  "methodology": {
+    "primary_family": "Generative text-to-structure methods",
+    "secondary_families": [
+      "Few-shot LLM prompting",
+      "Ontology-constrained and schema-guided methods",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "few_shot",
+    "description": "LLM4Schema.org first extracts webpage body text and selects a target Schema.org type. An LLM is prompted with the target type, its allowed properties, Schema.org documentation examples, and the webpage content to generate JSON-LD. Long text is split into overlapping chunks and the outputs are merged. A custom SHACL-based Validity agent removes syntactically invalid types, properties, and values. An LLM-based Factuality agent checks each property-value-type triple against the webpage text, while an LLM-based Compliance agent checks each property value against the Schema.org property definition. The curated human and LLM markups are compared using the MIMR metric."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "Uses the Schema.org ontology as the target schema, including its types, properties, inheritance relationships, expected value types, and natural-language property definitions. The paper reports 806 types and 1476 properties. Generated JSON-LD is constrained and validated against Schema.org-derived SHACL shapes; compliance is checked against Schema.org documentation.",
+    "evidence": [
+      {
+        "span_id": "C0154-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "Schema.org... includes 806 types, 1476 properties, and 14 Datatypes."
+      },
+      {
+        "span_id": "C0154-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "We generated SHACL shapes for the entire Schema.org ontology... Propagate all properties from parent type to children types. Close the shapes to enable reasoning under Closed World Assumption."
+      },
+      {
+        "span_id": "C0154-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "The Compliance agent takes a markup as input and ensures that each property’s value aligns with the ontology expectations outlined in the Schema.org documentation."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing and webpage-body extraction",
+    "Ontology/schema-guided type and property selection",
+    "Entity and concept extraction",
+    "Relation and triple extraction",
+    "Graph construction as Schema.org JSON-LD/RDF markup",
+    "Graph validation and correction",
+    "Factuality filtering against source text"
+  ],
+  "input_output": {
+    "input_type": "Rendered webpage HTML and its visible body text, together with a selected Schema.org target type; the evaluation also uses existing human-authored JSON-LD markup from the webpage.",
+    "input_granularity": "Real-world complete webpages, processed as body text and divided into overlapping token chunks; the evaluation uses one selected target type and the corresponding root markup entity per webpage.",
+    "output_representation": "Schema.org JSON-LD markup representing entities, typed properties, property values, nested entities, and RDF triples; curated output retains only valid, factual, and Schema.org-compliant property-value-type statements."
+  },
+  "models_and_tools": [
+    "GPT-3.5-Turbo-16k-0613",
+    "GPT-4-0125-preview",
+    "Quantized Mixtral-8x7B-Instruct for Factuality and Compliance evaluation",
+    "Schema.org ontology and documentation",
+    "Custom SHACL shapes",
+    "RDFLib pySHACL",
+    "HTML2Text",
+    "extruct",
+    "spaCy embeddings for negative compliance examples"
+  ],
+  "datasets": [
+    "WebDataCommons 2023 / CommonCrawl October 2022 corpus: 877 million pages with Schema.org JSON-LD and 1.2 million characteristic sets",
+    "180 sampled webpages from six independent low/medium/high quantile groups",
+    "Schema.org documentation factuality ground truth: 785 positive, 498 intrinsic-negative, and 630 extrinsic-negative examples",
+    "Schema.org documentation compliance ground truth: 785 positive and 147 negative examples"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Precision",
+      "Recall",
+      "F1 score",
+      "Triple rejection rate",
+      "Markup Ideal Match Ratio (MIMR)",
+      "Cohen’s Kappa"
+    ],
+    "baselines": [
+      "Human-generated Schema.org markup from the webpages",
+      "GPT-3.5-generated markup",
+      "GPT-4-generated markup"
+    ],
+    "setting": "The study evaluates three components: Factuality and Compliance agents on positive/negative tests derived from Schema.org documentation; and the complete pipeline on 180 real webpages sampled from WebDataCommons. Human and LLM markups receive the same validity, factuality, and compliance curation. GPT-3.5 and GPT-4 are compared with the existing human markup. MIMR is additionally compared with blinded human judgments on a 10% webpage sample evaluated by 7 participants."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "[Experimental result] Factuality agent: intrinsic precision 0.866, recall 0.938, F1 0.901; extrinsic precision, recall, and F1 all 0.945.",
+      "[Experimental result] Compliance agent: precision 0.900, recall 0.914, F1 0.907.",
+      "[Experimental result] Across 180 webpages, human markup had 5690 input triples, 4875 valid, 3315 factual, and 2719 compliant; rejection rate 52.2%. GPT-3.5 had 4190 input, 3369 valid, 2489 factual, and 2055 compliant; rejection rate 50.9%. GPT-4 had 5260 input, 4613 valid, 3573 factual, and 3113 compliant; rejection rate 40.8%.",
+      "[Experimental result] Aggregate MIMR scores were human 0.687 and GPT-3.5 0.585, while GPT-4 scored 0.707 against human 0.568.",
+      "[Experimental result] MIMR agreement with blinded human preferences was substantial: Cohen’s Kappa 0.750 for GPT-3.5 and 0.895 for GPT-4.",
+      "[Author interpretation] GPT-3.5 and GPT-4 help improve webpages in low and medium quantiles, whereas humans perform better in the highest instance/property quantiles."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0154-D-P012-TABLE-0001",
+        "page": 12,
+        "excerpt": "Factual (Intrinsic) 0.866 precision, 0.938 recall, 0.901 F1; Factual (Extrinsic) 0.945 precision, 0.945 recall, 0.945 F1."
+      },
+      {
+        "span_id": "C0154-D-P013-TABLE-0002",
+        "page": 13,
+        "excerpt": "Compliance 0.9 precision, 0.914 recall, 0.907 F1."
+      },
+      {
+        "span_id": "C0154-D-P016-TABLE-0003",
+        "page": 16,
+        "excerpt": "Human 5690 input, 4875 valid, 3315 factual, 2719 compliant, 52.2%; GPT-3.5 4190, 3369, 2489, 2055, 50.9%; GPT-4 5260, 4613, 3573, 3113, 40.8%; MIMR human 0.568 and GPT-4 0.707."
+      },
+      {
+        "span_id": "C0154-D-P017-TABLE-0004",
+        "page": 17,
+        "excerpt": "Cohen’s Kappa 0.750 for GPT-3.5 and 0.895 for GPT-4."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "[Author claim] The pipeline evaluates real webpages with a large Schema.org ontology rather than only short benchmark sentences and small schemas.",
+      "[Author claim] It provides separate validity, factuality, and compliance curation stages and evaluates the two LLM-based agents independently.",
+      "[Experimental result] GPT-4 achieved a higher aggregate MIMR than human markup after curation, and MIMR showed substantial agreement with blinded human judgments.",
+      "[Review-level inference] The use of visible webpage text and ontology documentation creates a practical ground-truth-free evaluation design for open-ended markup generation, although it does not remove evaluator error."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0154-D-P018-TEXT-0001",
+        "page": 18,
+        "excerpt": "In LLM4Schema.org, we consider Schema.org, with 806 types and 1476 properties, we process real-world significant web pages, where obtaining ground truth is impractical."
+      },
+      {
+        "span_id": "C0154-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "Validity Agent... Factuality Agent... Compliance Agent... markups that pass these agents are considered correct."
+      },
+      {
+        "span_id": "C0154-D-P017-TABLE-0003",
+        "page": 17,
+        "excerpt": "The high Kappa statistic indicates a substantial agreement between the human judgments and the MIMR metric."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "[Author-reported weakness] The MIMR metric is coarse-grained and purely quantitative; a markup with fewer but more important properties may be qualitatively better.",
+      "[Experimental limitation] Triple-level factuality and compliance checks can generate false positives and false negatives because they omit broader context.",
+      "[Experimental finding] The agents make false-positive and false-negative errors, including failures with implicit meanings, negation, ambiguous properties, and external links.",
+      "[Review-level inference] Aggregate MIMR is not a direct measure of semantic correctness or downstream knowledge-graph utility because it measures contribution to a merged markup."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0154-D-P010-TEXT-0001",
+        "page": 10,
+        "excerpt": "The MIMR metric remains coarse-grained and purely quantitative... a markup with fewer properties might include properties that are considered more important."
+      },
+      {
+        "span_id": "C0154-D-P022-TEXT-0002",
+        "page": 22,
+        "excerpt": "As a binary classifier, LLMs can produce false negatives... the abstract term 'sameAs' makes the prompt ambiguous... definitions can be too vague or ambiguous, or too detailed."
+      },
+      {
+        "span_id": "C0154-D-P019-TEXT-0003",
+        "page": 19,
+        "excerpt": "The limitation of triple-level verifications that can lead to false positives or negatives due to omitted context."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "Multiple entities of the same type on one webpage are not fully handled; future versions should generate all possible markups or specify the target entity.",
+      "The current prompting approach could be improved with prompt-tuning, prompt-design patterns, and iterative feedback from the curation agents.",
+      "Triple-level verification can omit context and cause false positives or false negatives.",
+      "The evaluation sample has limited language diversity; performance may vary across languages.",
+      "The authors plan to test more open-source quantized models to reduce costs and expand experiments."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0154-D-P019-TEXT-0001",
+        "page": 19,
+        "excerpt": "Future iterations should address instances where a web page has multiple entities of the same type... incorporate more sophisticated prompting techniques... address the limitation of triple-level verifications... increase language diversity... experiment with a broader range of open-source quantized models."
+      },
+      {
+        "span_id": "C0154-D-P024-TEXT-0002",
+        "page": 24,
+        "excerpt": "We do not know the quality of the generated markups when the web pages are in different languages."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "[Author-proposed] Generate markups for all same-type entities or explicitly identify the target entity.",
+      "[Author-proposed] Use prompt-tuning or stronger prompt-design patterns with iterative feedback from Validity, Factuality, and Compliance agents.",
+      "[Author-proposed] Replace or supplement triple-level checks with context-aware verification.",
+      "[Author-proposed] Stratify evaluation by language resource level and increase multilingual coverage.",
+      "[Author-proposed] Evaluate more open-source quantized models to reduce cost and enable larger experiments.",
+      "[Review-level proposal] Add entity-level/global consistency checks and downstream graph-quality evaluation in addition to triple-level validity and MIMR."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0154-D-P019-TEXT-0001",
+        "page": 19,
+        "excerpt": "Future iterations should address instances where a web page has multiple entities of the same type... incorporate more sophisticated prompting techniques... address the limitation of triple-level verifications... increase language diversity... experiment with a broader range of open-source quantized models."
+      },
+      {
+        "span_id": "C0154-D-P022-TEXT-0002",
+        "page": 22,
+        "excerpt": "This observation suggests that Schema.org definitions are not always clear and may need to be refined to improve the compliance of the generated markups."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Reliable evaluation of open-ended Schema.org markup remains unresolved because no complete ground truth exists for real webpages.",
+      "LLM-generated markup still contains invalid, non-factual, and non-compliant statements without curation.",
+      "Resolving implicit meaning, negation, cross-property context, entity identity, and ambiguous Schema.org definitions remains difficult.",
+      "The approach does not establish performance across languages or broader open-source model families.",
+      "It remains unclear how well MIMR reflects semantic importance and downstream knowledge-graph usefulness rather than markup quantity or contribution to a merge."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0154-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "Evaluating the correctness and the completeness of schema markup given a web page traditionally requires a ground truth. However, such ground truth does not exist and might be difficult to build."
+      },
+      {
+        "span_id": "C0154-D-P018-TEXT-0002",
+        "page": 18,
+        "excerpt": "In an open-ended task such as Schema.org markup generation, it is challenging to establish a ground truth."
+      },
+      {
+        "span_id": "C0154-D-P022-TEXT-0003",
+        "page": 22,
+        "excerpt": "Wrong predictions occur when the LLMs fail to understand subtleties... definitions can be too vague or ambiguous, or too detailed."
+      },
+      {
+        "span_id": "C0154-D-P019-TEXT-0004",
+        "page": 19,
+        "excerpt": "We do not know the quality of the generated markups when the web pages are in different languages."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that experimental results and reproducibility code are available at the LLM4Schema.org GitHub project. Factuality and compliance ground-truth examples are provided in repository subdirectories, and the WebDataCommons characteristic-set dataset is available through Zenodo DOI 10.5281/zenodo.12080148."
+}

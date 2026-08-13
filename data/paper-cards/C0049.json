@@ -1,0 +1,841 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0049",
+    "title": "CTI-Thinker: an LLM-driven system for CTI knowledge graph construction and attack reasoning",
+    "pdf_path": "data/pdfs/C0049.pdf",
+    "authors": [
+      "Xiuzhang Yang",
+      "Ruijie Zhong",
+      "Yuling Chen",
+      "Guojun Peng",
+      "Di Yao",
+      "Chaofan Chen",
+      "Chenyang Wang",
+      "Dongni Zhang",
+      "Yilin Zhou",
+      "Zixuan Yang"
+    ],
+    "year": 2026,
+    "venue": "Cybersecurity",
+    "identifier": {
+      "status": "reported",
+      "value": "https://doi.org/10.1186/s42400-025-00505-y",
+      "evidence": [
+        {
+          "span_id": "C0049-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "https://doi.org/10.1186/s42400-025-00505-y"
+        }
+      ]
+    },
+    "abstract": "The paper proposes CTI-Thinker, an LLM-driven system for constructing cyber threat intelligence knowledge graphs and performing attack reasoning. It combines in-context learning and LoRA-based fine-tuning to extract threat entities and relations, vector-based alignment for entity normalization and knowledge fusion, and a GraphRAG reasoning engine incorporating the structured graph and external ATT&CK resources. The reported experiments evaluate entity and relation extraction, alignment, and attack-oriented question answering, with claimed improvements in precision, robustness, and generalizability.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0049-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Xiuzhang Yang, Ruijie Zhong, Yuling Chen, Guojun Peng, Di Yao, Chaofan Chen, Chenyang Wang, Dongni Zhang, Yilin Zhou and Zixuan Yang",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Article header",
+      "span_id": "C0049-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Yang et al. Cybersecurity (2026) 9:106",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Article header",
+      "span_id": "C0049-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Yang et al. Cybersecurity (2026) 9:106",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Article header",
+      "span_id": "C0049-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "https://doi.org/10.1186/s42400-025-00505-y",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0049-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We propose CTI-Thinker, a novel system that integrates large language models with semantic alignment to the ATT&CK framework for CTI knowledge graph construction and threat reasoning. First, CTI-Thinker leverages in-context learning and LoRA-based fine-tuning to extract structured threat entities and relations. Then, it adopts vector-based alignment strategies to unify heterogeneous expressions, enabling entity normalization and knowledge fusion for constructing a high-quality CTI knowledge graph.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0049-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Existing open-source CTI resources commonly suffer from issues such as unstandardized structure and fragmented knowledge... these limitations significantly constrain their effectiveness in tasks such as attack attribution, intent inference, and intelligent question answering.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0049-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "Existing LLM-based threat intelligence extraction methods still face several challenges... lack unified modeling for both knowledge extraction and attack chain reasoning... absence of effective entity alignment and knowledge fusion... prone to generating hallucinations.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Fine-Tuned LLM for Entity and Relation Extraction",
+      "span_id": "C0049-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "CTI-Thinker performs instruction tuning on a pre-trained large language model (i.e., LLaMA-3-8B). Instead of relying on full-parameter fine-tuning... the system adopts Low-Rank Adaptation (LoRA).",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "LLM-based threat data annotation",
+      "span_id": "C0049-D-P012-TEXT-0001",
+      "page": 12,
+      "excerpt": "LLaMA3-8b, DeepSeek, and ChatGPT are employed to construct standardized prompt templates... under few-shot learning settings.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Overview",
+      "span_id": "C0049-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "It leverages in-context learning and fine-tuned LLMs to automate knowledge extraction, employs knowledge alignment to integrate threat profiles, and utilizes GraphRAG to enable question answering and attack scenario reasoning.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Overview",
+      "span_id": "C0049-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "The fine-tuned LLM integrates structured knowledge graph content with contextual cues to produce CTI inference results compliant with STIX 2.1 and ATT&CK standards.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Overview",
+      "span_id": "C0049-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "The overall architecture of CTI-Thinker comprises four key modules: Data Preprocessing; Entity and Relation Extraction; Knowledge Alignment and Aggregation; and RAG-based Attack Inference.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "LLM-based threat data annotation",
+      "span_id": "C0049-D-P012-TEXT-0001",
+      "page": 12,
+      "excerpt": "Given the potential for large language models to produce overgeneralized or hallucinated outputs, expert knowledge is incorporated to review and refine the initial annotations.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Fine-Tuned LLM for Entity and Relation Extraction",
+      "span_id": "C0049-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "During the fine-tuning phase, the model is trained on instruction-output pairs derived from annotated CTI corpora.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Model design and implementation",
+      "span_id": "C0049-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "CTI-Thinker is an LLM-driven system for CTI extraction and reasoning that incorporates ATT&CK-based semantic mapping.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "In-Context Learning and LLM Fine-Tuning",
+      "span_id": "C0049-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "CTI-Thinker selects the top-k semantically similar examples to construct a demonstration set... The fine-tuned LLM... produces structured knowledge units in the form of relational triples.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Threat reasoning indexing stage",
+      "span_id": "C0049-D-P015-TEXT-0003",
+      "page": 15,
+      "excerpt": "Entities are grouped according to semantic similarity... each cluster represents a coherent category of threat elements... and stored in a graph index database to support downstream reasoning.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Figure 3 prompt templates",
+      "span_id": "C0049-D-P011-PICTURE-0001",
+      "page": 11,
+      "excerpt": "The task requires the identification of twelve entity types... The relation extraction prompt specifies eleven relation types.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "RAG-based Attack Inference",
+      "span_id": "C0049-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "The fine-tuned LLM integrates structured knowledge graph content with contextual cues to produce CTI inference results compliant with STIX 2.1 and ATT&CK standards.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "LLM-based threat data annotation",
+      "span_id": "C0049-D-P012-TEXT-0001",
+      "page": 12,
+      "excerpt": "Raw documents are preprocessed through paragraph segmentation, content categorization, and data cleaning. Each paragraph is further split into sentence-level units suitable for LLM input.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Knowledge alignment leveraging LLM and vector-based similarity analysis",
+      "span_id": "C0049-D-P014-TEXT-0002",
+      "page": 14,
+      "excerpt": "CTI-Thinker implements a two-stage knowledge alignment framework, consisting of coarse-grained knowledge grouping using LLMs and fine-grained entity alignment via vector-based similarity computation.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Threat reasoning indexing stage",
+      "span_id": "C0049-D-P015-TEXT-0003",
+      "page": 15,
+      "excerpt": "Each CTI document is segmented into semantically coherent chunks, from which the system extracts security-relevant elements... to construct a structured entity set.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "LLM-based threat data annotation",
+      "span_id": "C0049-D-P012-TEXT-0001",
+      "page": 12,
+      "excerpt": "Data is collected from a wide range of channels, including APT analysis reports published by major security vendors... threat event and vulnerability alerts... technical blogs and cybersecurity research consultancies.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "LLM-based threat data annotation",
+      "span_id": "C0049-D-P012-TEXT-0001",
+      "page": 12,
+      "excerpt": "Each paragraph is further split into sentence-level units suitable for LLM input.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Threat reasoning indexing stage",
+      "span_id": "C0049-D-P015-TEXT-0002",
+      "page": 15,
+      "excerpt": "Each CTI document is segmented into semantically coherent chunks... For each extracted entity, a corresponding semantic description is generated.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Figure 3 prompt templates",
+      "span_id": "C0049-D-P011-PICTURE-0001",
+      "page": 11,
+      "excerpt": "The output must be structurally clear, semantically accurate, and ready for direct integration into security systems.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Fine-Tuned LLM for Entity and Relation Extraction",
+      "span_id": "C0049-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "CTI-Thinker(Prompt) → <entityi, relationij, entityj>.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-03": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Knowledge Alignment and Aggregation",
+      "span_id": "C0049-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "The system subsequently auto-generates a structured CTI InfoBox... Such output serves as the foundation for constructing a high-quality CTI knowledge graph.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Experimental setup",
+      "span_id": "C0049-D-P018-TEXT-0001",
+      "page": 18,
+      "excerpt": "We perform parameter-efficient fine-tuning of the LLaMA3-8B model using the LoRA technique within the LLaMA-Factory framework.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "In-Context Learning–Based Retrieval of CTI Semantic Samples",
+      "span_id": "C0049-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "A k-nearest neighbors retriever is then employed to identify semantically relevant examples by computing the cosine similarity.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Threat reasoning indexing stage",
+      "span_id": "C0049-D-P015-TEXT-0003",
+      "page": 15,
+      "excerpt": "CTI-Thinker performs fine-grained semantic mapping on raw documents based on structured CTI corpora and external security knowledge sources, including the ATT&CK framework and STIX 2.1 standard.",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Datasets and evaluation metrics",
+      "span_id": "C0049-D-P017-TEXT-0001",
+      "page": 17,
+      "excerpt": "The final dataset comprises a representative collection of entities, including APT groups, attack tools, and vulnerability, along with their hierarchical relations. The dataset is split into training, validation, and test sets in an 8:1:1 ratio.",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Table 2",
+      "span_id": "C0049-D-P016-TABLE-0002",
+      "page": 16,
+      "excerpt": "CTI-Thinker: sentences Train 2762, Val 345, Test 345; entities Train 6786, Val 816, Test 827; relations Train 3957, Val 477, Test 509.",
+      "confidence": "medium"
+    },
+    "datasets-18-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Threat reasoning analysis in CTI contexts",
+      "span_id": "C0049-D-P023-TABLE-0003",
+      "page": 23,
+      "excerpt": "30 queries covering 20 APT organizations",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Datasets and evaluation metrics",
+      "span_id": "C0049-D-P017-TEXT-0001",
+      "page": 17,
+      "excerpt": "For evaluation metrics, this study adopts three widely used indicators... Precision, Recall, and F1-score.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Threat reasoning analysis in CTI contexts",
+      "span_id": "C0049-D-P023-TEXT-0002",
+      "page": 23,
+      "excerpt": "Using exact-match accuracy after ontology/alias normalization as the metric...",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Appendix",
+      "span_id": "C0049-D-P027-TEXT-0003",
+      "page": 27,
+      "excerpt": "We designed three scoring dimensions: accuracy, completeness, and relevance.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Datasets and evaluation metrics",
+      "span_id": "C0049-D-P017-TEXT-0001",
+      "page": 17,
+      "excerpt": "Two representative deep learning models... BiLSTM-CRF and BERT-BiLSTM-CRF... five representative fine-tuned large language models... GPT-4o, DeepSeek-R1, LoRA-LLaMA3-8B, LoRA-QWen, and LoRA-Mistral-7B... ATTCKG+ and LLM-TIKG.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Knowledge alignment with CTI-Thinker",
+      "span_id": "C0049-D-P023-TEXT-0002",
+      "page": 23,
+      "excerpt": "We conduct comparative experiments against three representative models: ECBERT, CTI-BERT, and ATTACK-BERT.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-03": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Threat reasoning analysis in CTI contexts",
+      "span_id": "C0049-D-P023-TABLE-0003",
+      "page": 23,
+      "excerpt": "The three models listed in Table 11 (CTI-Thinker, LLM-RAG, and a native LLM).",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Datasets and evaluation metrics",
+      "span_id": "C0049-D-P017-TEXT-0001",
+      "page": 17,
+      "excerpt": "The dataset is split into training, validation, and test sets in an 8:1:1 ratio... All models are evaluated on the same dataset under a unified evaluation framework and server environment... all experimental results are averaged over ten independent runs.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Experimental setup",
+      "span_id": "C0049-D-P018-TEXT-0002",
+      "page": 18,
+      "excerpt": "The input sequence length is set to a maximum of 1024 tokens, with a learning rate of 2e-5... The model is trained for 10 epochs... Mixed precision (FP16) training is employed.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Threat reasoning analysis in CTI contexts",
+      "span_id": "C0049-D-P023-TEXT-0003",
+      "page": 23,
+      "excerpt": "We pose 30 queries covering 20 APT organizations... Using exact-match accuracy after ontology/alias normalization as the metric.",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 3",
+      "span_id": "C0049-D-P016-TABLE-0001",
+      "page": 16,
+      "excerpt": "CTI-Thinker (Ours Method): Precision 0.8314, Recall 0.8458, F1-score 0.8385.",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 4",
+      "span_id": "C0049-D-P018-TABLE-0002",
+      "page": 18,
+      "excerpt": "CTI-Thinker (Ours Method): Precision 0.7769, Recall 0.7610, F1-score 0.7689.",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 11",
+      "span_id": "C0049-D-P023-TABLE-0003",
+      "page": 23,
+      "excerpt": "CTI-Thinker Accuracy 0.635; LLM-RAG 0.615; Native LLM 0.223.",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Knowledge alignment with CTI-Thinker",
+      "span_id": "C0049-D-P023-TEXT-0001",
+      "page": 23,
+      "excerpt": "The alignment results demonstrate that CTI-Thinker effectively identifies synonymous expressions, linguistic variants, and abbreviation mappings.",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Discussion and conclusion",
+      "span_id": "C0049-D-P025-TEXT-0002",
+      "page": 25,
+      "excerpt": "GraphRAG ensures factual consistency through entity linking, evidence binding, and contextual constraints, offering high-confidence support for tactical threat analysis.",
+      "confidence": "medium"
+    },
+    "strengths-23-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Analysis of entity and relation extraction",
+      "span_id": "C0049-D-P018-TEXT-0003",
+      "page": 18,
+      "excerpt": "CTI-Thinker consistently demonstrates superior performance across all three key metrics, achieving a precision of 0.8314, recall of 0.8458, and an F1-score of 0.8385.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Limitations",
+      "span_id": "C0049-D-P025-TEXT-0001",
+      "page": 25,
+      "excerpt": "The model is prone to semantic drift or the generation of redundant triples... These issues may lead to incorrect entity aggregation or omission.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Limitations",
+      "span_id": "C0049-D-P025-TEXT-0002",
+      "page": 25,
+      "excerpt": "Its ability to maintain coherent context in multi-turn reasoning scenarios... remains unstable.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Datasets and evaluation metrics",
+      "span_id": "C0049-D-P017-TEXT-0003",
+      "page": 17,
+      "excerpt": "The CTI-Thinker dataset is newly curated and open-sourced in this study.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Limitations",
+      "span_id": "C0049-D-P025-TEXT-0001",
+      "page": 25,
+      "excerpt": "Although CTI-Thinker demonstrates strong performance... it still faces limitations in generalizing to complex attack contexts characterized by redundant expressions, heterogeneous data sources, and semantic ambiguity.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Limitations",
+      "span_id": "C0049-D-P025-TEXT-0002",
+      "page": 25,
+      "excerpt": "The interpretability and consistency of reasoning paths require further improvement for deployment. Moreover, enhanced integration with real-world threat artifacts... is necessary.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Future work",
+      "span_id": "C0049-D-P025-TEXT-0001",
+      "page": 25,
+      "excerpt": "We will further evaluate the applicability and robustness of CTI-Thinker across large-scale, multi-source, and multilingual CTI corpora... and explore... multimodal inputs.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Future work",
+      "span_id": "C0049-D-P025-TEXT-0002",
+      "page": 25,
+      "excerpt": "Subsequent efforts will incorporate provenance graphs and the temporal dependencies of attack chain events to strengthen the logical relationships and sequential constraints among adversarial behaviors.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Limitations",
+      "span_id": "C0049-D-P025-TEXT-0001",
+      "page": 25,
+      "excerpt": "The model is prone to semantic drift or the generation of redundant triples... affecting the completeness of the knowledge graph structure and the accuracy of downstream reasoning.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Limitations",
+      "span_id": "C0049-D-P025-TEXT-0002",
+      "page": 25,
+      "excerpt": "Its ability to maintain coherent context in multi-turn reasoning scenarios... remains unstable.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Future work",
+      "span_id": "C0049-D-P025-TEXT-0003",
+      "page": 25,
+      "excerpt": "The integration of provenance graphs and the temporal dependencies of attack chain events is proposed for future efforts.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Contributions",
+      "span_id": "C0049-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We constructed a comprehensive CTI data-set... which has been released as an open-source resource on GitHub.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Availability of data and materials; Code availability",
+      "span_id": "C0049-D-P027-TEXT-0002",
+      "page": 27,
+      "excerpt": "Data will be made available on request. The code used in the evaluation study will be made publicly available upon the acceptance of this paper.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses the conversion of heterogeneous, fragmented, and largely unstructured cyber threat intelligence reports into semantically consistent knowledge graphs that support ATT&CK-aligned attack-chain reasoning. It targets limitations of prior systems including dependence on manual annotation, isolated entity or relation extraction, weak cross-paragraph context handling, polysemy and ambiguity, fragmented entity alignment, hallucination, prompt sensitivity, and limited tactical-level inference.",
+  "methodology": {
+    "primary_family": "Instruction-tuned or fine-tuned LLM methods",
+    "secondary_families": [
+      "Zero-shot and few-shot LLM prompting",
+      "Generative text-to-structure methods",
+      "Ontology-constrained and schema-guided methods",
+      "Hybrid NLP and LLM methods",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "supervised",
+    "description": "CTI-Thinker is a four-stage LLM-based pipeline. It collects and cleans multi-source CTI, segments documents into paragraphs and sentences, and uses expert-reviewed LLM-generated annotations. A KNN retriever selects semantically similar demonstrations for in-context prompting. A LoRA-adapted LLaMA-3-8B generates standardized entity-relation triples. A two-stage alignment module first groups entities and relations by semantic category using an LLM, then applies encoder embeddings and cosine similarity with a validation-tuned threshold to merge aliases and variants. The resulting graph and summaries are indexed for GraphRAG, which retrieves relevant nodes, neighboring subgraphs, ATT&CK knowledge, and STIX 2.1 information to generate evidence-oriented tactical reasoning and question-answering responses."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The system uses the STIX 2.1 specification for twelve entity types and produces inference results compliant with STIX 2.1 and MITRE ATT&CK standards. The relation schema contains eleven specified relation types, and ATT&CK tactic-technique mappings guide semantic alignment and reasoning.",
+    "evidence": [
+      {
+        "span_id": "C0049-D-P011-PICTURE-0001",
+        "page": 11,
+        "excerpt": "The task requires the identification of twelve entity types... The relation extraction prompt specifies eleven relation types."
+      },
+      {
+        "span_id": "C0049-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "The fine-tuned LLM integrates structured knowledge graph content with contextual cues to produce CTI inference results compliant with STIX 2.1 and ATT&CK standards."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing and sentence segmentation",
+    "Entity and concept extraction",
+    "Entity typing",
+    "Relation and triple extraction",
+    "Entity resolution and linking",
+    "Knowledge fusion and deduplication",
+    "Graph construction",
+    "Graph validation and correction",
+    "Graph-based attack reasoning and question answering"
+  ],
+  "input_output": {
+    "input_type": "Unstructured cyber threat intelligence text, including APT analysis reports, threat-event and vulnerability alerts, technical blogs, and cybersecurity consultancy material.",
+    "input_granularity": "Documents are processed as paragraphs and then sentence-level units for annotation and extraction; later reasoning operates over semantically coherent document chunks, entity summaries, graph communities, and user queries.",
+    "output_representation": "Standardized JSON annotations containing typed entities and relations; relational triples in the form <entity, relation, entity>; aligned and fused CTI knowledge graphs with entity summaries and graph communities; and ATT&CK/STIX-aligned reasoning answers and attack-chain representations."
+  },
+  "models_and_tools": [
+    "LLaMA-3-8B with LoRA instruction tuning",
+    "DeepSeek and ChatGPT for annotation prompt construction",
+    "K-nearest-neighbor retriever",
+    "TF-IDF similarity computation and sentence embedding encoders",
+    "SecureBERT encoder",
+    "LLaMA-Factory",
+    "GraphRAG",
+    "MITRE ATT&CK knowledge base",
+    "STIX 2.1"
+  ],
+  "datasets": [
+    "Newly curated and open-sourced CTI-Thinker dataset: 2,762/345/345 train-validation-test sentences, 6,786/816/827 entities, and 3,957/477/509 relations",
+    "LLM-TIKG publicly available dataset: 1,410/176/176 train-validation-test sentences, 5,514/681/672 entities, and 2,955/374/385 relations",
+    "Real-world APT28 CTI document for qualitative extraction case study",
+    "Threat reasoning queries: 30 queries covering 20 APT organizations",
+    "APT38 and Gamaredon Group query-answering examples"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Precision",
+      "Recall",
+      "F1-score for entity recognition and relation extraction",
+      "Triple-alignment precision, recall, and F1-score",
+      "Entity-alignment precision, recall, and F1-score",
+      "Exact-match accuracy after ontology and alias normalization for threat reasoning",
+      "Appendix reasoning score based on accuracy, completeness, and relevance"
+    ],
+    "baselines": [
+      "Bert+BiLSTM-CRF",
+      "ATTCKG+",
+      "LLM-TIKG",
+      "ChatGPT-4o",
+      "DeepSeek-R1",
+      "LoRA-LLaMA3-8B",
+      "LoRA-QWen",
+      "LoRA-Mistral-7B",
+      "ECBERT",
+      "CTI-BERT",
+      "ATTACK-BERT",
+      "LLM-RAG",
+      "Native LLM",
+      "all-MiniLM-L6-v2",
+      "all-mpnet-base-v2",
+      "SecureBERT",
+      "Randomly selected ICL examples"
+    ],
+    "setting": "The extraction and alignment experiments use the reported CTI datasets with an 8:1:1 train-validation-test split. Models are evaluated on the same dataset under a unified evaluation framework and server environment; extraction results are averaged over ten independent runs. LoRA training uses an NVIDIA A40 48 GB GPU, maximum sequence length 1024, learning rate 2e-5, 10 epochs, gradient accumulation of 8, validation every 50 steps, checkpointing every 100 steps, and FP16. Reasoning is evaluated on 30 queries covering 20 APT organizations using exact-match accuracy and an appendix scoring rubric."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Entity recognition: precision 0.8314, recall 0.8458, F1 0.8385.",
+      "Relation recognition: precision 0.7769, recall 0.7610, F1 0.7689.",
+      "Compared with Bert+BiLSTM-CRF, the paper reports a 9.97% F1 improvement for entity recognition; compared with ATTCKG+ and LLM-TIKG, it reports 10.95% and 3.81% improvements, respectively.",
+      "For relation extraction, CTI-Thinker reports F1 improvements of approximately 21.26% over ATTCKG+ and 9.96% over LLM-TIKG.",
+      "KNN-based ICL with seven examples achieved triple F1 0.7689 and entity F1 0.8385; performance declined slightly at nine examples.",
+      "Alignment with SecureBERT plus embedding similarity achieved triple-alignment F1 0.7349 and entity-alignment F1 0.8288, outperforming ECBERT, CTI-BERT, and ATTACK-BERT.",
+      "At similarity threshold 0.80, the reported best threshold results were triple-alignment F1 0.7718 and entity-alignment F1 0.8383.",
+      "Reasoning accuracy over 30 queries was 0.635 for CTI-Thinker, 0.615 for LLM-RAG, and 0.223 for the Native LLM.",
+      "In qualitative examples, CTI-Thinker produced more focused, evidence-oriented answers and mapped APT38 malware and behaviors to ATT&CK techniques, while the compared non-GraphRAG outputs were described as broader, less grounded, or off-topic."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0049-D-P016-TABLE-0001",
+        "page": 16,
+        "excerpt": "CTI-Thinker (Ours Method): Precision 0.8314, Recall 0.8458, F1-score 0.8385."
+      },
+      {
+        "span_id": "C0049-D-P018-TABLE-0002",
+        "page": 18,
+        "excerpt": "CTI-Thinker (Ours Method): Precision 0.7769, Recall 0.7610, F1-score 0.7689."
+      },
+      {
+        "span_id": "C0049-D-P023-TABLE-0003",
+        "page": 23,
+        "excerpt": "CTI-Thinker Accuracy 0.635; LLM-RAG 0.615; Native LLM 0.223."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Review-level interpretation: the method covers a comparatively broad Text-to-KG workflow, combining extraction, alignment, graph construction, and graph-supported reasoning.",
+      "The paper reports strong extraction performance against the listed baselines, including entity F1 0.8385 and relation F1 0.7689.",
+      "The two-stage alignment mechanism explicitly addresses aliases, abbreviations, semantic variants, and heterogeneous expressions across CTI sources.",
+      "The GraphRAG module binds retrieval to graph entities, neighborhoods, ATT&CK mappings, and supporting evidence, improving the reported focus and traceability of answers.",
+      "The use of LoRA provides parameter-efficient adaptation of LLaMA-3-8B, while KNN-based example selection improves over random demonstration selection in the reported ICL experiments."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0049-D-P023-TEXT-0001",
+        "page": 23,
+        "excerpt": "The alignment results demonstrate that CTI-Thinker effectively identifies synonymous expressions, linguistic variants, and abbreviation mappings."
+      },
+      {
+        "span_id": "C0049-D-P025-TEXT-0002",
+        "page": 25,
+        "excerpt": "GraphRAG ensures factual consistency through entity linking, evidence binding, and contextual constraints, offering high-confidence support for tactical threat analysis."
+      },
+      {
+        "span_id": "C0049-D-P018-TEXT-0003",
+        "page": 18,
+        "excerpt": "CTI-Thinker consistently demonstrates superior performance across all three key metrics, achieving a precision of 0.8314, recall of 0.8458, and an F1-score of 0.8385."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "The method remains dependent on annotated data and expert review for constructing the training corpus, despite using ICL and parameter-efficient fine-tuning.",
+      "The pipeline contains multiple LLM, retrieval, alignment, and graph-indexing components, which may increase implementation and operational complexity.",
+      "The reasoning evaluation is relatively small, comprising 30 queries over 20 APT organizations, and the paper does not report a broad multilingual or cross-modal evaluation.",
+      "Review-level interpretation: reported gains are not directly comparable across unrelated datasets or task configurations; the paper's strongest claims are therefore limited to its unified experimental setting.",
+      "The paper reports residual semantic drift, redundant triples, entity aggregation errors, omission, and instability in multi-turn reasoning."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0049-D-P025-TEXT-0001",
+        "page": 25,
+        "excerpt": "The model is prone to semantic drift or the generation of redundant triples... These issues may lead to incorrect entity aggregation or omission."
+      },
+      {
+        "span_id": "C0049-D-P025-TEXT-0002",
+        "page": 25,
+        "excerpt": "Its ability to maintain coherent context in multi-turn reasoning scenarios... remains unstable."
+      },
+      {
+        "span_id": "C0049-D-P017-TEXT-0003",
+        "page": 17,
+        "excerpt": "The CTI-Thinker dataset is newly curated and open-sourced in this study."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "Limited generalization in complex attack contexts with redundant expressions, heterogeneous data sources, and semantic ambiguity.",
+      "Semantic drift and redundant triples can cause incorrect entity aggregation or omission and reduce knowledge-graph completeness and downstream reasoning accuracy.",
+      "Multi-turn reasoning remains unstable, particularly for causal tracing and tactical transitions.",
+      "Reasoning-path interpretability and consistency require improvement for deployment.",
+      "The system needs stronger integration with real-world threat artifacts such as malware samples and event logs for deeper event-level reasoning and attribution."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0049-D-P025-TEXT-0001",
+        "page": 25,
+        "excerpt": "Although CTI-Thinker demonstrates strong performance... it still faces limitations in generalizing to complex attack contexts characterized by redundant expressions, heterogeneous data sources, and semantic ambiguity."
+      },
+      {
+        "span_id": "C0049-D-P025-TEXT-0002",
+        "page": 25,
+        "excerpt": "The interpretability and consistency of reasoning paths require further improvement for deployment. Moreover, enhanced integration with real-world threat artifacts... is necessary."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed: evaluate the system on large-scale, multi-source, and multilingual CTI corpora and across diverse security incident categories.",
+      "Author-proposed: explore prompt engineering and knowledge-modeling strategies for multimodal inputs such as malware and log data.",
+      "Author-proposed: incorporate provenance graphs and temporal dependencies of attack-chain events to strengthen sequential constraints, causal analysis, and attribution.",
+      "Review-level inference: add stronger ablation studies for the separate contributions of ICL, LoRA, alignment, GraphRAG, ATT&CK retrieval, and evidence binding.",
+      "Review-level inference: evaluate robustness under adversarial prompt variation, noisy reports, unseen attack groups, and independently annotated external test sets."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0049-D-P025-TEXT-0001",
+        "page": 25,
+        "excerpt": "We will further evaluate the applicability and robustness of CTI-Thinker across large-scale, multi-source, and multilingual CTI corpora... and explore... multimodal inputs."
+      },
+      {
+        "span_id": "C0049-D-P025-TEXT-0002",
+        "page": 25,
+        "excerpt": "Subsequent efforts will incorporate provenance graphs and the temporal dependencies of attack chain events to strengthen the logical relationships and sequential constraints among adversarial behaviors."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-identified unresolved issues include robust generalization to ambiguous, redundant, heterogeneous, and poorly structured CTI; stable multi-turn attack-chain reasoning; interpretable and consistent reasoning paths; and event-level integration of malware and log artifacts.",
+      "Review-level inference: the paper does not establish whether the reported alignment threshold generalizes across domains, languages, or unseen entity types.",
+      "Review-level inference: hallucination control and evidence faithfulness remain dependent on retrieval, graph structure, and ontology constraints rather than being eliminated.",
+      "Review-level inference: the long-term cost, latency, maintenance requirements, and update behavior of the multi-stage system are not fully evaluated."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0049-D-P025-TEXT-0001",
+        "page": 25,
+        "excerpt": "The model is prone to semantic drift or the generation of redundant triples... affecting the completeness of the knowledge graph structure and the accuracy of downstream reasoning."
+      },
+      {
+        "span_id": "C0049-D-P025-TEXT-0002",
+        "page": 25,
+        "excerpt": "Its ability to maintain coherent context in multi-turn reasoning scenarios... remains unstable."
+      },
+      {
+        "span_id": "C0049-D-P025-TEXT-0003",
+        "page": 25,
+        "excerpt": "The integration of provenance graphs and the temporal dependencies of attack chain events is proposed for future efforts."
+      }
+    ]
+  },
+  "code_and_data_availability": "The CTI-Thinker dataset is described as newly curated and open-sourced on GitHub. The paper states that data will be made available on request and that the evaluation code will be made publicly available upon acceptance."
+}

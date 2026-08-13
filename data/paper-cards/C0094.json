@@ -1,0 +1,814 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0094",
+    "title": "Distantly supervised Web relation extraction for knowledge base population",
+    "pdf_path": "data/batches/batch-03/C0094.pdf",
+    "authors": [
+      "Isabelle Augenstein",
+      "Diana Maynard",
+      "Fabio Ciravegna"
+    ],
+    "year": 2016,
+    "venue": "Semantic Web, volume 7, pages 335–349",
+    "identifier": {
+      "status": "reported",
+      "value": "DOI: 10.3233/SW-150180",
+      "evidence": [
+        {
+          "span_id": "C0094-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "DOI 10.3233/SW-150180"
+        }
+      ]
+    },
+    "abstract": "The paper proposes distantly supervised relation extraction from heterogeneous Web pages for knowledge-base population. It addresses data sparsity, noise, and lexical ambiguity through cross-domain entity recognition, cross-sentence extraction with unsupervised coreference methods, statistical training-seed selection, and integration of relation mentions from multiple Web sources.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0094-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Isabelle Augenstein, Diana Maynard and Fabio Ciravegna",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0094-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Semantic Web 7 (2016) 335–349",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0094-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Semantic Web 7 (2016) 335–349",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0094-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "DOI 10.3233/SW-150180",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0094-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Our approach reduces the impact of data sparsity by making entity recognition tools more robust across domains and extracting relations across sentence boundaries using unsupervised co-reference resolution methods.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-02": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0094-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "To combine information extracted from multiple sources for populating knowledge bases we present and evaluate several information integration strategies.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0094-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Extracting information from Web pages for populating large, cross-domain knowledge bases requires methods which are suitable across domains, do not require manual effort to adapt to new domains, are able to deal with noise, and integrate information extracted from different Web pages.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "1. Introduction",
+      "span_id": "C0094-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "This work improves on existing distant supervision approaches by addressing four challenges.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "4.8. Predicting relations",
+      "span_id": "C0094-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "we choose the same classifier as in Mintz et al. [22], a multi-class logistic regression classifier. We train one classifier per class and model.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3. Distantly supervised relation extraction",
+      "span_id": "C0094-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "automatically labelling a corpus with properties, P and resources, R ... from a knowledge base, KB, to train a classifier to learn to predict binary relations.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.3. Information integration",
+      "span_id": "C0094-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "it is useful to integrate information taken from multiple predictions to increase the chances of predicting the correct relation.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "4. System",
+      "span_id": "C0094-D-P008-SECTION-0001",
+      "page": 8,
+      "excerpt": "The system is specified as sequential corpus construction, NLP processing, relation-candidate identification, sentence annotation, seed selection, feature extraction, classification, and relation prediction/integration.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0094-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Distant supervision is an unsupervised method which uses background information from the Linking Open Data cloud to automatically label sentences with relations to create training data for relation classifiers.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "3. Distantly supervised relation extraction",
+      "span_id": "C0094-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "automatically labelling a corpus ... from a knowledge base, KB, to train a classifier",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4.1. Corpus",
+      "span_id": "C0094-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "seven Freebase classes and their five to seven most prominent properties are selected, as shown in Table 1.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4.2. NLP pipeline",
+      "span_id": "C0094-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "Text content is extracted from HTML pages using the Jsoup API ... Each paragraph is then processed with Stanford CoreNLP ... to split the text into sentences, tokenise it, annotate it with part of speech (POS) tags and normalise time expressions.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4.8. Predicting relations",
+      "span_id": "C0094-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "The models are used to classify each relation mention candidate into one of the relations of the class or NONE (no relation). Relation mention predictions are then aggregated to predict relations.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3. Distantly supervised relation extraction",
+      "span_id": "C0094-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "during training, we only consider statements which are contained in a knowledge base, i.e. (s, p, o) ∈ KB",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "4.1. Corpus",
+      "span_id": "C0094-D-P007-TABLE-0002",
+      "page": 7,
+      "excerpt": "Freebase classes and properties used",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "4.2. NLP pipeline",
+      "span_id": "C0094-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "split the text into sentences, tokenise it, annotate it with part of speech (POS) tags and normalise time expressions. Named entities are classified using the 7 class ... named entity model.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "4.3. Relation candidate identification",
+      "span_id": "C0094-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "we also implement our own NER, which only recognises entity boundaries, but does not classify them.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.2. Relaxed setting",
+      "span_id": "C0094-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "we have to resolve the subject in a different way, e.g. by performing co-reference resolution",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-04": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.3. Information integration",
+      "span_id": "C0094-D-P006-TEXT-0004",
+      "page": 6,
+      "excerpt": "predictions can be used for the purpose of knowledge base population by aggregating relation mentions to relations.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "4.1. Corpus",
+      "span_id": "C0094-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "For each entity, at most 10 Web pages were retrieved via the Google Search API",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "4.2. NLP pipeline",
+      "span_id": "C0094-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "Text content is extracted from HTML pages using the Jsoup API",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "4.2. NLP pipeline",
+      "span_id": "C0094-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "Each paragraph is then processed with Stanford CoreNLP to split the text into sentences",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "4.4. Annotating sentences",
+      "span_id": "C0094-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "For our relaxed setting ... only the paragraph the sentence is in must contain a lexicalisation of the subject.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3. Distantly supervised relation extraction",
+      "span_id": "C0094-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "relations are of the form (s, p, o) ∈ R × P × R, consisting of a subject, a predicate and an object",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "4.8. Predicting relations",
+      "span_id": "C0094-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "Relation mention predictions are then aggregated to predict relations",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.1. Corpus",
+      "span_id": "C0094-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "retrieve them using the Freebase API ... at most 10 Web pages were retrieved via the Google Search API",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.2. NLP pipeline",
+      "span_id": "C0094-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "Text content is extracted from HTML pages using the Jsoup API ... processed with Stanford CoreNLP",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.8. Predicting relations",
+      "span_id": "C0094-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "a multi-class logistic regression classifier. We train one classifier per class and model.",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.1. Corpus",
+      "span_id": "C0094-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "This resulted in 1800 to 2200 entities per class.",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.1. Corpus",
+      "span_id": "C0094-D-P008-TABLE-0002",
+      "page": 8,
+      "excerpt": "In total, the corpus consists of around one million pages drawn from 76,000 different websites.",
+      "confidence": "medium"
+    },
+    "datasets-18-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "5. Evaluation",
+      "span_id": "C0094-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "50% of the knowledge base is used for training and 50% for testing.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "5. Evaluation",
+      "span_id": "C0094-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "The following metrics are computed: precision, recall and a top line.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Table 3",
+      "span_id": "C0094-D-P011-TABLE-0002",
+      "page": 11,
+      "excerpt": "Seed selection results: micro average of precision (P) and recall (R) over all relations",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.7. Models",
+      "span_id": "C0094-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "Mintz: This model follows the setting of the model which only uses lexical features described in Mintz et al [22].",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.7. Models",
+      "span_id": "C0094-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "Baseline: This group of models follows the setting described in Section 4. It uses sentences annotated with both Stanford NERC and our NER.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-03": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Table 4",
+      "span_id": "C0094-D-P011-TABLE-0003",
+      "page": 11,
+      "excerpt": "Information integration results ... using the CorefN+Stop+Unam+Stat75 model and different information integration methods",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "5. Evaluation",
+      "span_id": "C0094-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "we carry out a hold-out evaluation, for which 50% of the knowledge base is used for training and 50% for testing.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "5. Evaluation",
+      "span_id": "C0094-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "The top line we provide is only an estimate, since the corpus is too big to examine each sentence manually.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "5.1. Results",
+      "span_id": "C0094-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "we cannot compare our results to Mintz et al.’s approach directly as they use a Wikipedia as a corpus and use a different evaluation setup.",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Tables 3 and 4",
+      "span_id": "C0094-D-P011-TABLE-0001",
+      "page": 11,
+      "excerpt": "CorefN + Stop + Unam + Stat75: P 0.857, R 0.0289; Limit75 + MultiLab: P 0.857, R 0.0289.",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 6",
+      "span_id": "C0094-D-P011-TABLE-0002",
+      "page": 11,
+      "excerpt": "River: Best normal P 0.875 R 0.0234; Best extended P 0.889 R 0.0902.",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "6. Discussion and future work",
+      "span_id": "C0094-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "extracting relation mentions across sentence boundaries not only increases recall by up to 25% depending on the model, but also increases precision by 8% on average.",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "6. Discussion and future work",
+      "span_id": "C0094-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "We experiment with a simple NER, which we use in addition to a NERC trained for the news domain ... non-standard named entity classes such as MusicalArtist:track and MusicalArtist:album.",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "6. Discussion and future work",
+      "span_id": "C0094-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "a gazetteer-based method for co-reference resolution achieves the same performance on our Web corpus as the Stanford CoreNLP co-reference resolution system.",
+      "confidence": "medium"
+    },
+    "strengths-23-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.3. Information integration",
+      "span_id": "C0094-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "After predictions are aggregated using Aggr ... if the label with highest confidence and the one with second highest confidence are mutual labels, both of them are returned.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.1. Results",
+      "span_id": "C0094-D-P011-TEXT-0001",
+      "page": 11,
+      "excerpt": "the NE class feature for the relation extractor is missing for all those NEs only detected by our own NER",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.1. Results",
+      "span_id": "C0094-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "The two biggest groups of errors are entity boundary recognition and subject identification errors.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "6. Discussion and future work",
+      "span_id": "C0094-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "Removing too many seeds tends to hurt performance rather than improve it.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "6. Discussion and future work",
+      "span_id": "C0094-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "At the moment, our NER only recognises, but does not classify NEs.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "6. Discussion and future work",
+      "span_id": "C0094-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "The performance of those methods is dependent on the type of relation it is applied to and on how many seeds there are available for training.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "6. Discussion and future work",
+      "span_id": "C0094-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "it might not necessarily be useful for scenarios for which only a small corpus of documents or only a very small number of relation tuples is available in the knowledge base.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "6. Discussion and future work",
+      "span_id": "C0094-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "In future work, we aim to research distantly supervised named entity classification methods to assist relation extraction.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "5.1. Results",
+      "span_id": "C0094-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "To increase the top line, one strategy could be to just retrieve more pages per query ... Another option would be to use more sophisticated method for building search queries.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "6. Discussion and future work",
+      "span_id": "C0094-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "In future work, we plan to research how to jointly extract relations from text, lists and tables on Web pages",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "6. Discussion and future work",
+      "span_id": "C0094-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "It is not just the quantity of documents retrieved that matters, but also the relevance to the information extraction task.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "6. Discussion and future work",
+      "span_id": "C0094-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "jointly extract relations from text, lists and tables on Web pages in order to reduce the impact of data sparsity",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "6. Discussion and future work",
+      "span_id": "C0094-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "At the moment, our NER only recognises, but does not classify NEs.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Populate large cross-domain knowledge bases from unstructured heterogeneous Web text without manual domain adaptation. The authors target shortcomings of prior distant supervision for Web extraction: unrecognised nonstandard entities, sentence-boundary restrictions that cause sparsity, ambiguous object lexicalisations that create noisy labels, and lack of integration across redundant Web documents.",
+  "methodology": {
+    "primary_family": "Classical machine learning",
+    "secondary_families": [
+      "Ontology-constrained and schema-guided methods",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "weakly_supervised",
+    "description": "Execution pipeline: (1) select seven Freebase classes and five to seven properties each; retrieve entities and Web pages with Google Search queries; (2) extract HTML text with Jsoup, then use Stanford CoreNLP for sentence splitting, tokenisation, POS tagging, time normalisation, NER, and optionally coreference; (3) add a custom boundary-only entity recogniser using noun/capitalised-word sequences and quoted strings; (4) align subject/object lexicalisations from Freebase to automatically label positive and negative sentence candidates; (5) filter ambiguous training seeds with Stop, Unam, Stat, and StatRes; (6) extract lexical, POS, context, order, and NE features; (7) train one multiclass logistic-regression classifier per class to predict a property or NONE for each relation mention; (8) support a relaxed paragraph setting with Stanford or gazetteer-based coreference; and (9) aggregate mention predictions using Comb, Aggr, Limit, and MultiLab strategies to produce KB relations."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The Freebase knowledge base supplies the schema-constrained classes, properties, subject/object entities, and their lexicalisations. Only triples already in Freebase are used for distant labels; extraction is performed per selected class and predicts its applicable properties.",
+    "evidence": [
+      {
+        "span_id": "C0094-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "during training, we only consider statements which are contained in a knowledge base, i.e. (s, p, o) ∈ KB"
+      },
+      {
+        "span_id": "C0094-D-P007-TABLE-0002",
+        "page": 7,
+        "excerpt": "Freebase classes and properties used"
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing",
+    "Entity and concept extraction",
+    "Entity typing",
+    "Coreference resolution",
+    "Relation and triple extraction",
+    "Graph construction",
+    "Knowledge fusion and deduplication"
+  ],
+  "input_output": {
+    "input_type": "Unstructured text extracted from HTML Web pages, retrieved by Google Search API and annotated using Freebase entity lexicalisations.",
+    "input_granularity": "Web documents are split into paragraphs and sentences; normal extraction uses sentences containing a subject and another entity, while the relaxed setting considers paragraphs whose sentences can contain coreferent subject mentions.",
+    "output_representation": "Schema-defined binary Freebase relation tuples/facts: a subject, predicate/property, and object; relation-mention predictions are aggregated into relations for knowledge-base population."
+  },
+  "models_and_tools": [
+    "Multiclass logistic regression; one classifier per Freebase class and model",
+    "Stanford CoreNLP for sentence splitting, tokenisation, POS tagging, time normalisation, 7-class NER, and CorefS",
+    "Custom boundary-only NER based on noun/capitalised-word sequences and quoted strings",
+    "Jsoup for HTML text extraction",
+    "Google Search API for corpus retrieval",
+    "Freebase API for selected entity/property retrieval",
+    "WordNet and Wikipedia redirection pages for class synonym/hypernym/hyponym gazetteers",
+    "Bergsma and Lin Web co-occurrence gender/number gazetteers for CorefN/CorefP"
+  ],
+  "datasets": [
+    "Author-constructed Web corpus of approximately one million pages from 76,000 websites",
+    "Freebase-derived hold-out relation dataset covering seven selected classes: Musical Artist, Politician, Business Operation, Educational Institution, Film, Book, and River; five to seven prominent properties per class",
+    "For corpus construction, 1,800–2,200 entities per class with values for all selected properties; up to ten Web pages per entity"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Micro-averaged precision",
+      "Micro-averaged recall",
+      "Estimated recall top line"
+    ],
+    "baselines": [
+      "Reimplemented Mintz et al. lexical-feature distant-supervision model: Stanford NERC only, 1% unrelated entities as negative training data, tuple-level feature aggregation",
+      "Authors' Baseline: Stanford NERC plus custom NER, all negative training data, no seed filtering",
+      "Comb information-integration model for comparison with Aggr, Limit, and MultiLab variants",
+      "CorefS Stanford CoreNLP coreference model for comparison with gazetteer-based CorefN and CorefP"
+    ],
+    "setting": "Automatic hold-out evaluation for knowledge-base population: relation tuples from the selected Freebase portion are split 50%/50% for training/testing after the Web corpus is automatically annotated with known Freebase relations. Results are micro-averaged over relations/classes; recall is bounded by an estimated top line because not every KB tuple is textually represented in the retrieved corpus. The authors state that direct comparison to Mintz et al. is not possible because that work used Wikipedia and a different evaluation setup."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Across all relations, the best reported relaxed model—CorefN with Stop+Unam+Stat75 seed selection and MultiLab+Limit75 integration—achieved micro precision 0.857 and recall 0.0289; its estimated recall top line was 0.0917.",
+      "For seed selection under MultiLab+Limit75, the authors' Baseline reached P=0.770, R=0.0401; Stop+Unam+Stat75 raised precision to 0.801 while lowering recall to 0.0243. Excessive filtering (Stat25) reduced precision to 0.767 and recall to 0.00128.",
+      "For integration using CorefN+Stop+Unam+Stat75, Comb achieved P=0.742/R=0.0328, Aggr P=0.813/R=0.0341, MultiLab P=0.837/R=0.0307, and MultiLab+Limit75 P=0.857/R=0.0289.",
+      "The best extended (CorefN) model improved precision and recall over the best normal model for Musical Artist, Politician, River, Business Operation, and Book; e.g., River changed from P=0.875/R=0.0234 to P=0.889/R=0.0902, while Educational Institution and Film did not improve precision.",
+      "The authors conclude that cross-sentence extraction increased recall by up to 25% depending on model and precision by 8% on average; statistical seed selection increased precision by 3% on average."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0094-D-P011-TABLE-0001",
+        "page": 11,
+        "excerpt": "CorefN + Stop + Unam + Stat75: P 0.857, R 0.0289; Limit75 + MultiLab: P 0.857, R 0.0289."
+      },
+      {
+        "span_id": "C0094-D-P011-TABLE-0002",
+        "page": 11,
+        "excerpt": "River: Best normal P 0.875 R 0.0234; Best extended P 0.889 R 0.0902."
+      },
+      {
+        "span_id": "C0094-D-P013-TEXT-0003",
+        "page": 13,
+        "excerpt": "extracting relation mentions across sentence boundaries not only increases recall by up to 25% depending on the model, but also increases precision by 8% on average."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "The system is designed for heterogeneous Web pages rather than a single narrow domain, combining a news-trained NERC with a custom recogniser for nonstandard entity types such as tracks and albums.",
+      "It handles relation evidence across sentence boundaries using both standard and lightweight gazetteer-based coreference alternatives; the latter achieved performance comparable to Stanford CoreNLP coreference on this Web corpus.",
+      "It treats redundant relation mentions as evidence to integrate for KB population and permits mutually compatible multiple labels through MultiLab.",
+      "[Review-level inference] The design is modular and ablation-oriented: seed filtering, coreference strategy, and aggregation strategy are separately varied, which makes the source of performance trade-offs inspectable within this experimental setting."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0094-D-P013-TEXT-0001",
+        "page": 13,
+        "excerpt": "We experiment with a simple NER, which we use in addition to a NERC trained for the news domain ... non-standard named entity classes such as MusicalArtist:track and MusicalArtist:album."
+      },
+      {
+        "span_id": "C0094-D-P013-TEXT-0002",
+        "page": 13,
+        "excerpt": "a gazetteer-based method for co-reference resolution achieves the same performance on our Web corpus as the Stanford CoreNLP co-reference resolution system."
+      },
+      {
+        "span_id": "C0094-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "After predictions are aggregated using Aggr ... if the label with highest confidence and the one with second highest confidence are mutual labels, both of them are returned."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "The custom NER identifies boundaries but does not classify named entities, leaving the NE-class feature unavailable for candidates found only by that recogniser.",
+      "Entity-boundary and subject-identification errors are the two largest error groups. Non-greedy matching can train on a partial noun phrase rather than the correct complete phrase, and the model can attribute an object relation to the wrong subject.",
+      "Seed filtering trades recall for precision; removing too many positive training instances can damage both.",
+      "[Review-level inference] The reported recall values are low and the estimated top line is itself low, so the approach's KB-population coverage is constrained by what the retrieval and candidate-identification pipeline surfaces, even when precision is high.",
+      "[Review-level inference] The automatic Freebase hold-out measures recovery of known KB tuples in a corpus labelled from that KB; it does not establish correctness or novelty of facts beyond the reference KB."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0094-D-P011-TEXT-0001",
+        "page": 11,
+        "excerpt": "the NE class feature for the relation extractor is missing for all those NEs only detected by our own NER"
+      },
+      {
+        "span_id": "C0094-D-P012-TEXT-0002",
+        "page": 12,
+        "excerpt": "The two biggest groups of errors are entity boundary recognition and subject identification errors."
+      },
+      {
+        "span_id": "C0094-D-P013-TEXT-0003",
+        "page": 13,
+        "excerpt": "Removing too many seeds tends to hurt performance rather than improve it."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The custom NER currently recognises entities but does not classify them.",
+      "The performance of seed-selection methods depends on relation type and number of available seeds; filtering too aggressively harms performance.",
+      "The method may not suit scenarios with only a small document corpus or very few relation tuples in the training KB, because distant supervision requires either a very large corpus or a large KB.",
+      "The estimated recall top line is not exact because the corpus is too large to manually examine every sentence.",
+      "The system does not account for an entity appearing in more than one relation, which can create incorrect positive context weights and wrong-subject predictions."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0094-D-P013-TEXT-0001",
+        "page": 13,
+        "excerpt": "At the moment, our NER only recognises, but does not classify NEs."
+      },
+      {
+        "span_id": "C0094-D-P013-TEXT-0002",
+        "page": 13,
+        "excerpt": "The performance of those methods is dependent on the type of relation it is applied to and on how many seeds there are available for training."
+      },
+      {
+        "span_id": "C0094-D-P013-TEXT-0003",
+        "page": 13,
+        "excerpt": "it might not necessarily be useful for scenarios for which only a small corpus of documents or only a very small number of relation tuples is available in the knowledge base."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Authors' proposed improvement: develop distantly supervised named-entity classification to support relation extraction.",
+      "Authors' proposed improvement: retrieve more Web pages per query or formulate more sophisticated retrieval queries to raise the recall top line.",
+      "Authors' proposed improvement: jointly extract relations from text, lists, and tables on Web pages to reduce data sparsity and improve relation-mention precision.",
+      "[Review-level inference] Add subject-aware modelling or explicit relation-context disambiguation to address wrong-subject predictions and cases in which an entity participates in multiple relations.",
+      "[Review-level inference] Constrain candidate spans using syntactic/noun-phrase boundaries or a span-ranking model to reduce partial-span errors induced by non-greedy candidate matching."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0094-D-P013-TEXT-0001",
+        "page": 13,
+        "excerpt": "In future work, we aim to research distantly supervised named entity classification methods to assist relation extraction."
+      },
+      {
+        "span_id": "C0094-D-P012-TEXT-0002",
+        "page": 12,
+        "excerpt": "To increase the top line, one strategy could be to just retrieve more pages per query ... Another option would be to use more sophisticated method for building search queries."
+      },
+      {
+        "span_id": "C0094-D-P013-TEXT-0003",
+        "page": 13,
+        "excerpt": "In future work, we plan to research how to jointly extract relations from text, lists and tables on Web pages"
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-stated unresolved problem: obtaining a sufficiently large and relevant Web corpus for distant supervision; both retrieval quantity and document relevance affect extraction.",
+      "Author-stated unresolved problem: data sparsity remains, motivating extraction from text, lists, and tables jointly.",
+      "Author-stated unresolved problem: robust entity classification for nonstandard Web entity types remains unaddressed by the current boundary-only custom NER.",
+      "[Review-level inference] Generalisation to real KB expansion beyond known Freebase tuples and to settings with sparse seed knowledge remains unresolved because the evaluation is a KB hold-out on automatically aligned Web data."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0094-D-P013-TEXT-0001",
+        "page": 13,
+        "excerpt": "It is not just the quantity of documents retrieved that matters, but also the relevance to the information extraction task."
+      },
+      {
+        "span_id": "C0094-D-P013-TEXT-0002",
+        "page": 13,
+        "excerpt": "jointly extract relations from text, lists and tables on Web pages in order to reduce the impact of data sparsity"
+      },
+      {
+        "span_id": "C0094-D-P013-TEXT-0003",
+        "page": 13,
+        "excerpt": "At the moment, our NER only recognises, but does not classify NEs."
+      }
+    ]
+  },
+  "code_and_data_availability": "not_reported"
+}

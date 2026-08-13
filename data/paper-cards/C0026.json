@@ -1,0 +1,778 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0026",
+    "title": "Identifying Relations for Open Information Extraction",
+    "pdf_path": "data/batches/batch-02/C0026.pdf",
+    "authors": [
+      "Anthony Fader",
+      "Stephen Soderland",
+      "Oren Etzioni"
+    ],
+    "year": 2011,
+    "venue": "Proceedings of the 2011 Conference on Empirical Methods in Natural Language Processing (EMNLP 2011)",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The paper identifies incoherent and uninformative extractions in Open Information Extraction systems and introduces syntactic and lexical constraints on binary verbal relation phrases. The constraints are implemented in ReVerb, which substantially improves precision-recall performance over earlier Open IE extractors.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0026-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Anthony Fader, Stephen Soderland, and Oren Etzioni",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Bibliographic header",
+      "span_id": "C0026-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the 2011 Conference on Empirical Methods in Natural Language Processing",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Bibliographic header",
+      "span_id": "C0026-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the 2011 Conference on Empirical Methods in Natural Language Processing, pages 1535–1545",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0026-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We introduce two simple syntactic and lexical constraints on binary relations expressed by verbs.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction and Motivation",
+      "span_id": "C0026-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We have observed that two types of errors are frequent in the output of Open IE systems such as TEXTRUNNER and WOE: incoherent extractions and uninformative extractions.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0026-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "The paper concludes with a detailed analysis of REVERB’s errors, suggesting directions for future work.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0026-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We introduce two simple syntactic and lexical constraints on binary relations expressed by verbs.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Constraints on Relation Phrases",
+      "span_id": "C0026-D-P003-PICTURE-0001",
+      "page": 3,
+      "excerpt": "A simple part-of-speech-based regular expression reduces the number of incoherent extractions.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Confidence Function",
+      "span_id": "C0026-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "We use a logistic regression classifier to assign a confidence score to each extraction.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "ReVerb",
+      "span_id": "C0026-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "ReVerb first identifies relation phrases that satisfy the syntactic and lexical constraints, and then finds a pair of NP arguments for each identified relation phrase.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Confidence Function",
+      "span_id": "C0026-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We trained the confidence function by manually labeling the extractions from a set of 1,000 sentences from the Web and Wikipedia as correct or incorrect.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Confidence Function",
+      "span_id": "C0026-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "ReVerb uses a specified model of relations for extraction, and requires labeled data only for assigning confidence scores to its extractions.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Syntactic Constraint",
+      "span_id": "C0026-D-P003-PICTURE-0001",
+      "page": 3,
+      "excerpt": "V | V P | V W*P; V = verb particle? adv?; W = (noun | adj | adv | pron | det); P = (prep | particle | inf. marker).",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Extraction Algorithm",
+      "span_id": "C0026-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "For each verb v in s, find the longest sequence of words rv such that rv starts at v, satisfies the syntactic constraint, and satisfies the lexical constraint.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Extraction Algorithm",
+      "span_id": "C0026-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "We set D to be the set of all relation phrases that take at least k distinct argument pairs ... k = 20 ... approximately 1.7 million distinct normalized relation phrases.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Introduction and Motivation",
+      "span_id": "C0026-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Open IE solves this problem by identifying relation phrases ... where the target relations cannot be specified in advance.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Extraction Algorithm",
+      "span_id": "C0026-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "We use a large dictionary D of relation phrases that are known to take many distinct arguments.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Extraction Algorithm",
+      "span_id": "C0026-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "ReVerb takes as input a POS-tagged and NP-chunked sentence and returns a set of (x, r, y) extraction triples.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Extraction Algorithm",
+      "span_id": "C0026-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "Find the nearest noun phrase x to the left of r ... Find the nearest noun phrase y to the right of r.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Extraction Algorithm",
+      "span_id": "C0026-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "In an offline step, we construct D by finding all matches of the POS pattern in a corpus of 500 million Web sentences.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Experiments",
+      "span_id": "C0026-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "We created a test set of 500 sentences sampled from the Web, using Yahoo’s random link service.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Extraction Algorithm",
+      "span_id": "C0026-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "ReVerb takes as input a POS-tagged and NP-chunked sentence.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Experiments",
+      "span_id": "C0026-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Each system is given a set of sentences as input.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Extraction Algorithm",
+      "span_id": "C0026-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "returns a set of (x, r, y) extraction triples.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Confidence Function",
+      "span_id": "C0026-D-P004-TABLE-0002",
+      "page": 4,
+      "excerpt": "ReVerb uses these features to assign a confidence score to an extraction (x, r, y) from a sentence s.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Extraction Algorithm",
+      "span_id": "C0026-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "ReVerb uses OpenNLP for POS tagging and NP chunking.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Confidence Function",
+      "span_id": "C0026-D-P004-TABLE-0002",
+      "page": 4,
+      "excerpt": "ReVerb uses these features to assign a confidence score ... using a logistic regression classifier.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Experiments",
+      "span_id": "C0026-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "We compare ReVerb to the following systems: ReVerb¬lex, TextRunner, TextRunner-R, WOEpos, and WOEparse.",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Extraction Algorithm",
+      "span_id": "C0026-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We construct D ... in a corpus of 500 million Web sentences.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Experiments",
+      "span_id": "C0026-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "We created a test set of 500 sentences sampled from the Web.",
+      "confidence": "medium"
+    },
+    "datasets-17-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Confidence Function",
+      "span_id": "C0026-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "We trained the confidence function by manually labeling ... 1,000 sentences from the Web and Wikipedia.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Experiments",
+      "span_id": "C0026-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "For a given threshold, we can measure the precision and recall of the output.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Experiments",
+      "span_id": "C0026-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "The judges reached agreement on 86% of the extractions, with an agreement score of κ = 0.68.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Results",
+      "span_id": "C0026-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "We compute a precision-recall curve by varying the confidence threshold, and then compute the area under the curve (AUC).",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Experiments",
+      "span_id": "C0026-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We compare ReVerb to the following systems: ReVerb¬lex ... TextRunner ... TextRunner-R ... WOEpos ... WOEparse.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Experiments",
+      "span_id": "C0026-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "After running each extractor over the input sentences, two human judges independently evaluated each extraction as correct or incorrect.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Results",
+      "span_id": "C0026-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "We compute a precision-recall curve by varying the confidence threshold, and then compute the area under the curve (AUC).",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Evaluation At Scale",
+      "span_id": "C0026-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "We ran both ReVerb and TextRunner on Banko and Etzioni’s corpus of 500 million Web sentences.",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Results",
+      "span_id": "C0026-D-P006-PICTURE-0001",
+      "page": 6,
+      "excerpt": "ReVerb achieves an AUC that is 30% higher than WOEparse and is more than double the AUC of WOEpos or TextRunner.",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Results",
+      "span_id": "C0026-D-P006-PICTURE-0002",
+      "page": 6,
+      "excerpt": "More than 30% of ReVerb’s extractions are at precision 0.8 or higher, compared to virtually none for the other systems.",
+      "confidence": "medium"
+    },
+    "main_results-21-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Evaluation At Scale",
+      "span_id": "C0026-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "ReVerb’s frequency 1 extractions had a precision of 0.75, which TextRunner could not approach even with frequency 10 extractions, which had a precision of 0.34.",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Abstract",
+      "span_id": "C0026-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "More than 30% of ReVerb’s extractions are at precision 0.8 or higher—compared to virtually none for earlier systems.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "ReVerb",
+      "span_id": "C0026-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The relation phrase is identified “holistically” rather than word-by-word.",
+      "confidence": "medium"
+    },
+    "strengths-22-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Results",
+      "span_id": "C0026-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "The processing times for ReVerb, TextRunner, and WOEpos are all approximately the same ... WOEparse processes each sentence with a dependency parser, resulting in much longer processing time.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Error Analysis",
+      "span_id": "C0026-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "65% Correct relation phrase, incorrect arguments; 16% N-ary relation.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Limitations",
+      "span_id": "C0026-D-P003-TABLE-0002",
+      "page": 3,
+      "excerpt": "85% Satisfy Constraints; 15% do not match the constraints.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Error Analysis",
+      "span_id": "C0026-D-P007-TABLE-0003",
+      "page": 7,
+      "excerpt": "52% Could not identify correct arguments; 23% Relation filtered out by lexical constraint; 17% Identified a more specific relation.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Limitations",
+      "span_id": "C0026-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Our constraints represent an idealized model of relation phrases in English.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Limitations",
+      "span_id": "C0026-D-P003-TABLE-0002",
+      "page": 3,
+      "excerpt": "85% of the binary verbal relation phrases in a sample of Web sentences satisfy our constraints.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Conclusions and Future Work",
+      "span_id": "C0026-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "The error analysis ... suggests natural directions for future work. For instance, since many of ReVerb’s errors are due to incorrect arguments, improved methods for argument extraction are in order.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Conclusions and Future Work",
+      "span_id": "C0026-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "We plan to explore utilizing our constraints to improve the performance of learned CRF models.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Conclusions and Future Work",
+      "span_id": "C0026-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "Improved methods for argument extraction are in order.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Limitations",
+      "span_id": "C0026-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Many of the example relation phrases ... involve long-range dependencies between words in the sentence.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Error Analysis",
+      "span_id": "C0026-D-P007-TABLE-0002",
+      "page": 7,
+      "excerpt": "The majority of extractions that were missed by ReVerb were cases where the correct relation phrase was found, but the arguments were not correctly identified.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusions and Future Work",
+      "span_id": "C0026-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "The paper’s contributions are ... constraints on binary, verb-based relation phrases in English.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Introduction and Motivation",
+      "span_id": "C0026-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The source code for ReVerb is available at http://reverb.cs.washington.edu/",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Conclusions and Future Work",
+      "span_id": "C0026-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "We make ReVerb and the data used in our experiments available to the research community.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses incoherent relation phrases and uninformative extractions produced by open-domain relation extractors such as TextRunner and WOE. Its objective is to design simple, scalable constraints that produce more coherent and informative binary verbal relations while retaining broad Web-scale coverage.",
+  "methodology": {
+    "primary_family": "Rule-based NLP",
+    "secondary_families": [
+      "Linguistic and dependency-based extraction",
+      "Classical machine learning"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "weakly_supervised",
+    "description": "ReVerb operates on POS-tagged and noun-phrase-chunked sentences. For each verb, it identifies the longest contiguous relation phrase matching a verb-centered POS regular expression and passing a lexical frequency constraint. It merges adjacent or overlapping matches, then selects the nearest valid noun phrase to the left and right as arguments. A logistic regression classifier assigns extraction confidence. The lexical dictionary is built offline from 500 million Web sentences; relation phrases are normalized and retained when they take at least 20 distinct argument pairs, yielding approximately 1.7 million normalized phrases."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "No fixed ontology or relation vocabulary is required. ReVerb uses a corpus-derived dictionary of relation phrases and syntactic/lexical constraints over binary verbal relations; the resulting relations remain open-domain surface phrases.",
+    "evidence": [
+      {
+        "span_id": "C0026-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "Open IE solves this problem by identifying relation phrases ... where the target relations cannot be specified in advance."
+      },
+      {
+        "span_id": "C0026-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "We use a large dictionary D of relation phrases that are known to take many distinct arguments."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "text preprocessing",
+    "entity and concept extraction",
+    "relation and triple extraction"
+  ],
+  "input_output": {
+    "input_type": "Unstructured English Web sentences; the relation dictionary is induced from a corpus of 500 million Web sentences, and evaluation uses Web sentences with additional training examples from Wikipedia.",
+    "input_granularity": "Sentence-level; extraction is performed on individual POS-tagged, NP-chunked sentences.",
+    "output_representation": "Binary extraction triples (x, r, y), where x and y are noun-phrase arguments and r is a contiguous verbal relation phrase; each extraction also receives a confidence score."
+  },
+  "models_and_tools": [
+    "ReVerb rule-based extraction algorithm",
+    "Part-of-speech tagging and noun-phrase chunking using OpenNLP",
+    "Verb-centered POS regular expression for syntactic filtering",
+    "Corpus-derived lexical relation dictionary with phrase normalization",
+    "Logistic regression confidence classifier",
+    "Compared systems: TextRunner, TextRunner-R, WOEpos, WOEparse"
+  ],
+  "datasets": [
+    "500 million Web sentences for constructing the lexical dictionary",
+    "500 Web sentences sampled with Yahoo’s random link service for intrinsic evaluation",
+    "1,000 Web and Wikipedia sentences manually labeled for confidence training",
+    "Penn Treebank sentences for generating TextRunner-R training examples",
+    "67,562 positive and 356,834 negative TextRunner-R training instances",
+    "Banko and Etzioni’s 500 million Web-sentence corpus for scale evaluation"
+  ],
+  "evaluation": {
+    "metrics": [
+      "precision",
+      "recall",
+      "precision-recall curve",
+      "area under the precision-recall curve (AUC)",
+      "inter-annotator agreement",
+      "processing time",
+      "error-category percentages",
+      "frequency-conditioned precision"
+    ],
+    "baselines": [
+      "TextRunner",
+      "TextRunner-R",
+      "WOEpos",
+      "WOEparse",
+      "ReVerb without the lexical constraint (ReVerb¬lex)"
+    ],
+    "setting": "Intrinsic comparison on 500 randomly sampled Web sentences. Two human judges labeled each extraction correct or incorrect; only cases where they concurred were used for reported precision-recall results. Confidence thresholds generated precision-recall curves and AUC values. Additional experiments measured speed on 100,000 sentences and precision at frequency thresholds on a 500-million-sentence corpus."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "ReVerb achieved an AUC 30% higher than WOEparse and more than twice the AUC of WOEpos and TextRunner.",
+      "ReVerb’s AUC was 23% higher than ReVerb¬lex; removing the lexical constraint reduced performance.",
+      "TextRunner-R achieved an AUC 71% higher than TextRunner and performed on par with WOEpos, but remained below ReVerb.",
+      "More than 30% of ReVerb extractions were at precision 0.8 or higher, compared with virtually none for the other systems.",
+      "WOEparse had slightly higher recall than ReVerb (0.64 versus 0.62) but lower precision.",
+      "In the relation-phrase-only evaluation, ReVerb had higher precision and recall than the compared systems.",
+      "On 100,000 sentences, ReVerb took 16 minutes, TextRunner and WOEpos each took 21 minutes, and WOEparse took 11 hours.",
+      "At scale, ReVerb achieved precision 0.75 for frequency-1 extractions; TextRunner could not approach this even at frequency 10, where its precision was 0.34."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0026-D-P006-PICTURE-0001",
+        "page": 6,
+        "excerpt": "ReVerb achieves an AUC that is 30% higher than WOEparse and is more than double the AUC of WOEpos or TextRunner."
+      },
+      {
+        "span_id": "C0026-D-P006-PICTURE-0002",
+        "page": 6,
+        "excerpt": "More than 30% of ReVerb’s extractions are at precision 0.8 or higher, compared to virtually none for the other systems."
+      },
+      {
+        "span_id": "C0026-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "ReVerb’s frequency 1 extractions had a precision of 0.75, which TextRunner could not approach even with frequency 10 extractions, which had a precision of 0.34."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Simple syntactic and lexical constraints substantially reduce incoherent and uninformative extractions.",
+      "Relation phrases are identified holistically rather than by independent word-level decisions.",
+      "The corpus-derived lexical constraint supports open-domain extraction without a fixed relation inventory.",
+      "The shallow implementation is substantially faster than the dependency-parser baseline in the reported speed test.",
+      "The method retains useful recall while greatly improving precision over earlier Open IE systems.",
+      "Review-level inference: binary triples provide a straightforward intermediate representation for downstream knowledge-graph construction."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0026-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "More than 30% of ReVerb’s extractions are at precision 0.8 or higher—compared to virtually none for earlier systems."
+      },
+      {
+        "span_id": "C0026-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "The relation phrase is identified “holistically” rather than word-by-word."
+      },
+      {
+        "span_id": "C0026-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "The processing times for ReVerb, TextRunner, and WOEpos are all approximately the same ... WOEparse processes each sentence with a dependency parser, resulting in much longer processing time."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Argument-finding heuristics account for 65% of incorrect ReVerb extractions.",
+      "The binary relation model mishandles n-ary relations; 16% of incorrect extractions in the error analysis were n-ary relations.",
+      "The constraints miss some valid relations: 15% of manually identified binary verbal relation phrases failed the constraints.",
+      "The method misses relations because of incorrect argument identification, lexical filtering, overly specific alternative relations, and POS/chunking errors.",
+      "Sentence-local, nearest-NP argument extraction does not resolve richer discourse or document-level structure.",
+      "Review-level inference: surface relation phrases and noun-phrase arguments are not directly canonicalized or linked to a KG ontology."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0026-D-P007-TABLE-0001",
+        "page": 7,
+        "excerpt": "65% Correct relation phrase, incorrect arguments; 16% N-ary relation."
+      },
+      {
+        "span_id": "C0026-D-P003-TABLE-0002",
+        "page": 3,
+        "excerpt": "85% Satisfy Constraints; 15% do not match the constraints."
+      },
+      {
+        "span_id": "C0026-D-P007-TABLE-0003",
+        "page": 7,
+        "excerpt": "52% Could not identify correct arguments; 23% Relation filtered out by lexical constraint; 17% Identified a more specific relation."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The constraints are an idealized model of English relation phrases and do not cover all valid relations.",
+      "The method misses non-contiguous phrases, phrases not between their arguments, and phrases that do not match the POS pattern.",
+      "Deeper syntactic analysis could model long-range dependencies more flexibly but would increase processing time and, according to the authors’ observations, can reduce precision on Web text.",
+      "ReVerb models binary relations and therefore mishandles n-ary relations expressed by ditransitive verbs.",
+      "Incorrect argument extraction is the dominant source of both incorrect and missed extractions.",
+      "The authors identify improved argument extraction and combining the constraints with constrained CRF learning as future directions."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0026-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "Our constraints represent an idealized model of relation phrases in English."
+      },
+      {
+        "span_id": "C0026-D-P003-TABLE-0002",
+        "page": 3,
+        "excerpt": "85% of the binary verbal relation phrases in a sample of Web sentences satisfy our constraints."
+      },
+      {
+        "span_id": "C0026-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "The error analysis ... suggests natural directions for future work. For instance, since many of ReVerb’s errors are due to incorrect arguments, improved methods for argument extraction are in order."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-stated: improve argument extraction methods.",
+      "Author-stated: combine heuristically labeled training examples, CRF learning, and the proposed constraints.",
+      "Review-level inference: add entity linking and relation canonicalization for knowledge-graph population.",
+      "Review-level inference: extend the binary, sentence-level method to n-ary relations, events, qualifiers, and document-level context.",
+      "Review-level inference: add provenance and calibrated uncertainty to extracted graph facts."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0026-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "We plan to explore utilizing our constraints to improve the performance of learned CRF models."
+      },
+      {
+        "span_id": "C0026-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "Improved methods for argument extraction are in order."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "How to recover valid non-contiguous and long-range relation phrases while preserving Web-scale efficiency.",
+      "How to identify all correct arguments, including coordination and relations with more than two arguments.",
+      "How to avoid lexical filtering of valid but infrequent relations while rejecting overspecified phrases.",
+      "How to extend Open IE beyond binary verbal relations.",
+      "Review-level inference: how to normalize open relation phrases and arguments into coherent, interoperable knowledge-graph schemas."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0026-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "Many of the example relation phrases ... involve long-range dependencies between words in the sentence."
+      },
+      {
+        "span_id": "C0026-D-P007-TABLE-0002",
+        "page": 7,
+        "excerpt": "The majority of extractions that were missed by ReVerb were cases where the correct relation phrase was found, but the arguments were not correctly identified."
+      },
+      {
+        "span_id": "C0026-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "The paper’s contributions are ... constraints on binary, verb-based relation phrases in English."
+      }
+    ]
+  },
+  "code_and_data_availability": "The authors state that ReVerb and the data used in the experiments are available to the research community at http://reverb.cs.washington.edu/ ."
+}

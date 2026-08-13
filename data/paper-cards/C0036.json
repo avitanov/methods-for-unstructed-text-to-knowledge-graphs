@@ -1,0 +1,725 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0036",
+    "title": "Enhancing Domain-Independent Knowledge Graph Construction through OpenIE Cleaning and LLMs Validation",
+    "pdf_path": "data/manual-pdfs/C0036.pdf",
+    "authors": [
+      "Othmane Kabal",
+      "Mounira Harzallah",
+      "Fabrice Guillet",
+      "Ryutaro Ichise"
+    ],
+    "year": 2024,
+    "venue": "Procedia Computer Science; 28th International Conference on Knowledge-Based and Intelligent Information & Engineering Systems (KES 2024)",
+    "identifier": {
+      "status": "reported",
+      "value": "HAL Id: hal-04702397; https://nantes-universite.hal.science/hal-04702397v1",
+      "evidence": [
+        {
+          "span_id": "C0036-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "HAL Id: hal-04702397"
+        }
+      ]
+    },
+    "abstract": "The paper proposes G-T2KG, a domain-independent knowledge-graph construction pipeline that combines OpenIE with noun-phrase-based cleaning and LLM-based validation. The method aims to reduce incorrect triplets while preserving recall without domain-specific adaptations. It is evaluated on computer-science and music gold standards constructed by the authors. Results show higher recall than selected state-of-the-art approaches on the computer-science corpus, improved precision after LLM validation, and satisfactory performance on the music corpus.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0036-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Othmane KABAL, Mounira HARZALLAH, Fabrice GUILLET, Ryutaro ICHISE",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication information",
+      "span_id": "C0036-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "28th International Conference on Knowledge-Based and Intelligent Information & Engineering Systems (KES 2024)",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication information",
+      "span_id": "C0036-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Procedia Computer Science 00 (2024) ... KES 2024",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Repository metadata",
+      "span_id": "C0036-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "HAL Id: hal-04702397",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0036-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We introduce G-T2KG, a novel pipeline for KG construction that aims to preserve the domain independence while reducing incorrect triplets.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0036-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "OpenIE methods ... capture a larger part of relevant triplets, [but] also deliver many irrelevant ones requiring post-filtering.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0036-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "We propose a new domain independent approach ... that incorporates both a noun phrase based cleaning and a LLMs based validation.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Proposed method",
+      "span_id": "C0036-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "General T2KG (G-T2KG) is a pipeline approach ...",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Rule-Based Noun phrase Cleaning",
+      "span_id": "C0036-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "syntactic rule-based approach",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Rule-Based Noun phrase Cleaning",
+      "span_id": "C0036-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Dependency Tree Analysis ... using Stanford CoreNLP",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Triplets Validator",
+      "span_id": "C0036-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "we employ an LLM-based validation using the GPT-4 model ... zero-shot prompting technique",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Proposed method",
+      "span_id": "C0036-D-P004-PICTURE-0001",
+      "page": 4,
+      "excerpt": "G-T2KG is a pipeline approach that is structured in five components",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Rule-Based Noun phrase Cleaning",
+      "span_id": "C0036-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "Employ GPT-4 to identify the head ... using a 'zero-shot' approach",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Triplets Validator",
+      "span_id": "C0036-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "utilizing a zero-shot prompting technique",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Proposed method",
+      "span_id": "C0036-D-P004-PICTURE-0001",
+      "page": 4,
+      "excerpt": "Text preprocessing (C1) ... Information Extraction (C2) ... Post-processing (C3) ... validation (C4) ... mapping (C5)",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Proposed method",
+      "span_id": "C0036-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The mapping approach proposed by SciCero is adopted in the pipeline.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Rule-Based Noun phrase Cleaning",
+      "span_id": "C0036-D-P005-PICTURE-0003",
+      "page": 5,
+      "excerpt": "The sub-component C3.1 aims to enhance the quality of the triplets extracted from OpenIE 6 in 3 steps",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Related Work",
+      "span_id": "C0036-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "OpenIE ... [extracts] domain-independent triplets.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Proposed method",
+      "span_id": "C0036-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The mapping component ... includes the mapping of entities ... and predicates ... to reduce the heterogeneity.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Proposed method",
+      "span_id": "C0036-D-P004-PICTURE-0001",
+      "page": 4,
+      "excerpt": "G-T2KG architecture with five components: preprocessing, information extraction, post-processing, triplet validation, and mapping.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Proposed method",
+      "span_id": "C0036-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The second tool, pattern-based Hypernym Relation Extractor ... extract hypernym relationships to enrich our graph with 'is-a' relationships.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Triplets Validator",
+      "span_id": "C0036-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "filter out erroneous triplets resulting from the information extraction process",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Gold Standard Creation",
+      "span_id": "C0036-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "we selected 12 abstracts of computer science articles ... The Music GS was derived from the corpus ...",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Gold Standard Creation",
+      "span_id": "C0036-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "108 sentences ... abstracts were segmented into sentences",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Gold Standard Creation",
+      "span_id": "C0036-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "comprising 100 sentences",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0036-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "KGs organize information into triplets of (subject, predicate, object)",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Proposed method",
+      "span_id": "C0036-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "mapping component ... includes the mapping of entities ... and predicates",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Proposed method",
+      "span_id": "C0036-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Open Information Extraction system ... OpenIE 6 ... features an advanced coordination analyzer",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Rule-Based Noun phrase Cleaning",
+      "span_id": "C0036-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Dependency tree from Stanford CoreNLP",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Triplets Validator",
+      "span_id": "C0036-D-P006-PICTURE-0003",
+      "page": 6,
+      "excerpt": "Triplets Validation prompt",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Gold Standard Creation",
+      "span_id": "C0036-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "CS-GS ... 12 abstracts ... 108 sentences ... 180 triplets, including 247 unique entities and 100 unique predicates.",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Gold Standard Creation",
+      "span_id": "C0036-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "The Music GS ultimately contained 410 triplets, including 488 unique entities and 155 unique predicates.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Evaluation Method",
+      "span_id": "C0036-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "Three conventional metrics are used: Precision (P), Recall (R), and F1 scores",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Evaluation Method",
+      "span_id": "C0036-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "To examine the effects of the component TV, we reconducted the evaluation after its removal ... evaluation for SciCero ... two experiments with ChatGPT-4",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Evaluation results on computer science corpus",
+      "span_id": "C0036-D-P007-TABLE-0002",
+      "page": 7,
+      "excerpt": "G T2KG ... SciCero ... GPT-4-Exp 1 ... GPT-4-Exp 2",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Evaluation Method",
+      "span_id": "C0036-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "manual matching by three annotators, employing a majority vote",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Evaluation Method",
+      "span_id": "C0036-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "if a triplet is deemed correct but is not present in the GS, it is added",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Evaluation results on computer science corpus",
+      "span_id": "C0036-D-P007-TABLE-0003",
+      "page": 7,
+      "excerpt": "Precision, Recall and F1-score for the compared approaches",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Evaluation results on computer science corpus",
+      "span_id": "C0036-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "G T2KG Opt1 ... 72.07% precision, 44.44% recall, 54.98% F1-score",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Evaluation results on music corpus",
+      "span_id": "C0036-D-P007-TABLE-0002",
+      "page": 7,
+      "excerpt": "G T2KG Opt2 ... 63.97% precision, 36.60% recall, 46.56% F1-score",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Results Analysis",
+      "span_id": "C0036-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "integration of GPT-4 as a validation tool significantly improves precision by 14% to 25%, with a minimal impact on recall",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Related Work",
+      "span_id": "C0036-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "our pipeline approach ... leverages the capability of OpenIE to discover a wide range of triplets",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Results Analysis",
+      "span_id": "C0036-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "integration of GPT-4 as a validation tool significantly improves precision by 14% to 25%",
+      "confidence": "medium"
+    },
+    "strengths-23-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion and future work",
+      "span_id": "C0036-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "we have made the source code for G-T2KG publicly available",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Results Analysis",
+      "span_id": "C0036-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "GPT-4 validation ... improves precision by 14% to 25%, with a minimal impact on recall (reduction of up to 3.3%)",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion and future work",
+      "span_id": "C0036-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "Errors in one component can affect subsequent components ... execution time and resources ... unsuitable for contexts involving confidential data",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Conclusion and future work",
+      "span_id": "C0036-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "Despite the advantages ... our approach ... has certain limitations, notably its pipeline structure.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Conclusion and future work",
+      "span_id": "C0036-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "the use of GPT-4 for validation makes this approach unsuitable for contexts involving confidential data",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Conclusion and future work",
+      "span_id": "C0036-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "In future works, we aim to utilize open-source LLMs ... apply them at other stages ... further enrich our graphs by incorporating entity typing.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Evaluation",
+      "span_id": "C0036-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "the absence of universal gold standards ... without relying on a specific ontology",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion and future work",
+      "span_id": "C0036-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "we aim to utilize open-source LLMs ... and ... enrich our graphs by incorporating entity typing",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0036-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "We have made the source code of our approach, as well as the gold standards we developed, available ... https://github.com/OthmaneKabal/G-T2KG",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Conclusion and future work",
+      "span_id": "C0036-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "we have made the source code for G-T2KG publicly available",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses automatic construction of knowledge graphs from raw, unstructured text when domain-specific NER and relation-extraction systems improve precision but reduce domain independence, while OpenIE preserves broad coverage but produces many incorrect triplets. The objective is to build a reusable, domain-independent pipeline that cleans OpenIE outputs and validates extracted triplets against their source sentences using an LLM.",
+  "methodology": {
+    "primary_family": "Hybrid NLP and LLM methods",
+    "secondary_families": [
+      "Rule-based NLP",
+      "Linguistic and dependency-based extraction",
+      "Generative text-to-structure methods",
+      "Zero-shot and few-shot LLM prompting",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "zero_shot",
+    "description": "G-T2KG processes raw text through five sequential components. C1 performs corpus cleaning, coreference resolution, and sentence segmentation. C2 extracts triplets with OpenIE6 and extracts hypernym or is-a relations with a pattern-based Hypernym Relation Extractor. C3 cleans OpenIE triplets using predicate rectification, stopword removal, lemmatization, noun-phrase checks, and either Stanford CoreNLP dependency-tree analysis (Option 1) or zero-shot GPT-4 head identification (Option 2). Cleaned OpenIE triplets are merged with hypernym triplets. C4 validates each triplet by converting it into an affirmation and asking GPT-4 whether it corresponds to the source sentence; invalid triplets are filtered. C5 maps entities and predicates using the approach adopted from SciCero to reduce label heterogeneity. Mapping is deliberately performed after validation so that mapped labels not present in the sentence do not complicate verification. The architecture is therefore a modular hybrid of symbolic/syntactic processing, neural OpenIE, pattern-based extraction, zero-shot LLM cleaning/validation, and post-extraction mapping. The paper does not report entity typing as part of the implemented pipeline."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The proposed method is domain-independent and does not require a fixed domain ontology or schema for extraction. It produces open subject-predicate-object triplets. Predicate mapping is used later to reduce heterogeneity, and hypernym-pattern extraction adds is-a relations. The evaluation uses manually constructed gold standards rather than an ontology-driven target schema.",
+    "evidence": [
+      {
+        "span_id": "C0036-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "OpenIE ... [extracts] domain-independent triplets."
+      },
+      {
+        "span_id": "C0036-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "The mapping component ... includes the mapping of entities ... and predicates ... to reduce the heterogeneity."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing: corpus cleaning, coreference resolution, and sentence segmentation",
+    "Entity and concept extraction: noun-phrase identification and cleaning of subject/object arguments",
+    "Coreference resolution",
+    "Relation and triple extraction: OpenIE6 and pattern-based hypernym extraction",
+    "Knowledge fusion and deduplication: merging cleaned OpenIE triplets with hypernym triplets and mapping entities/predicates",
+    "Graph validation and correction: GPT-4 source-sentence validation and filtering",
+    "Graph construction: formation of a knowledge graph from validated and mapped triplets"
+  ],
+  "input_output": {
+    "input_type": "Raw unstructured natural-language text, including computer-science article abstracts and a music document",
+    "input_granularity": "Sentence-level extraction evaluated within document/abstract-level corpora",
+    "output_representation": "Validated subject-predicate-object triplets, including hypernym/is-a relations, subsequently mapped at the entity and predicate level to reduce label heterogeneity and form a knowledge graph"
+  },
+  "models_and_tools": [
+    "OpenIE6 for open information extraction",
+    "Deep neural-network-based OpenIE with coordination analysis",
+    "Pattern-based Hypernym Relation Extractor using predefined patterns",
+    "Stanford CoreNLP dependency parser",
+    "GPT-4 for zero-shot noun-phrase head identification in Option 2",
+    "GPT-4 for zero-shot triplet validation",
+    "Entity and predicate mapping approach adopted from SciCero",
+    "GPT-4 few-shot baselines with four examples and an instruction-refined experiment"
+  ],
+  "datasets": [
+    "CS-GS: 12 computer-science abstracts from the Web of Science dataset, 108 sentences, 180 gold triplets, 247 unique entities, and 100 unique predicates",
+    "Music GS: one randomly selected document titled '20th Century Music' from the referenced music corpus, 100 sentences, 410 gold triplets, 488 unique entities, and 155 unique predicates"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Precision",
+      "Recall",
+      "F1-score"
+    ],
+    "baselines": [
+      "G-T2KG Option 1 without triplet validation",
+      "G-T2KG Option 2 without triplet validation",
+      "SciCero",
+      "GPT-4-Exp 1: few-shot prompting with four examples and paragraph context",
+      "GPT-4-Exp 2: instruction-refined GPT-4 extraction addressing coreference, pronouns, conjunctions, and mentions"
+    ],
+    "setting": "Three annotators manually matched extracted triplets to gold-standard triplets using majority vote. Correct triplets absent from the gold standard were added during evaluation. The computer-science corpus compared G-T2KG variants with SciCero and two GPT-4 extraction experiments; the music corpus evaluated G-T2KG variants only. Results were reported separately for the Stanford CoreNLP dependency-tree cleaning option and the GPT-4 head-identification option, each with and without GPT-4 triplet validation."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "On the computer-science corpus, G-T2KG Option 1 with validation achieved 72.07% precision, 44.44% recall, and 54.98% F1; without validation it achieved 58.50% precision, 47.77% recall, and 52.59% F1.",
+      "On the computer-science corpus, G-T2KG Option 2 with validation achieved 75.00% precision, 41.66% recall, and 53.56% F1; without validation it achieved 50.00% precision, 44.44% recall, and 47.05% F1.",
+      "SciCero achieved 72.09% precision, 17.22% recall, and 27.50% F1 on the computer-science corpus. GPT-4-Exp 1 achieved 25.65% precision, 32.77% recall, and 28.77% F1; GPT-4-Exp 2 achieved 27.81% precision, 43.88% recall, and 34.04% F1.",
+      "On the music corpus, G-T2KG Option 1 with validation achieved 64.88% precision, 35.12% recall, and 45.57% F1; Option 2 with validation achieved 63.97% precision, 36.60% recall, and 46.56% F1.",
+      "The authors report that GPT-4 validation increased precision by 14% to 25% while reducing recall by up to 3.3%, depending on the configuration and corpus.",
+      "The authors report that G-T2KG outperformed SciCero in recall on the computer-science corpus and that G-T2KG identified triplets missed by SciCero. These are authors' interpretations of the reported experiments, not cross-dataset generalizations."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0036-D-P007-TABLE-0001",
+        "page": 7,
+        "excerpt": "G T2KG Opt1 ... 72.07% precision, 44.44% recall, 54.98% F1-score"
+      },
+      {
+        "span_id": "C0036-D-P007-TABLE-0002",
+        "page": 7,
+        "excerpt": "G T2KG Opt2 ... 63.97% precision, 36.60% recall, 46.56% F1-score"
+      },
+      {
+        "span_id": "C0036-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "integration of GPT-4 as a validation tool significantly improves precision by 14% to 25%, with a minimal impact on recall"
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Combines broad-coverage OpenIE extraction with syntactic cleaning and LLM validation while retaining a domain-independent design.",
+      "The pipeline includes coordination analysis through OpenIE6 and a separate hypernym extractor intended to reduce information loss and enrich is-a relations.",
+      "GPT-4 validation substantially improves precision in the reported ablations while causing only a limited recall reduction.",
+      "The method is evaluated on two distinct domains and the paper provides newly constructed gold standards.",
+      "The authors report public release of source code and the developed gold standards."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0036-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "our pipeline approach ... leverages the capability of OpenIE to discover a wide range of triplets"
+      },
+      {
+        "span_id": "C0036-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "integration of GPT-4 as a validation tool significantly improves precision by 14% to 25%"
+      },
+      {
+        "span_id": "C0036-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "we have made the source code for G-T2KG publicly available"
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "The sequential pipeline can propagate errors from one component into later components, producing cumulative inaccuracies.",
+      "Multiple separate deep-learning-based models may increase execution time and resource requirements for large corpora.",
+      "Using GPT-4 for validation is unsuitable for confidential medical or economic data because source text must be sent to the external model.",
+      "GPT-4 validation improves precision at the cost of some recall.",
+      "The music-domain evaluation does not compare G-T2KG against other methods."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0036-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "GPT-4 validation ... improves precision by 14% to 25%, with a minimal impact on recall (reduction of up to 3.3%)"
+      },
+      {
+        "span_id": "C0036-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "Errors in one component can affect subsequent components ... execution time and resources ... unsuitable for contexts involving confidential data"
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The pipeline structure allows component errors to affect subsequent components.",
+      "The use of multiple separate deep-learning architectures can be costly in execution time and resources for large corpora.",
+      "External GPT-4 validation is unsuitable for confidential data contexts.",
+      "The authors identify the need to apply open-source LLMs for confidential-data settings and to enrich graphs with entity typing."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0036-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "Despite the advantages ... our approach ... has certain limitations, notably its pipeline structure."
+      },
+      {
+        "span_id": "C0036-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "the use of GPT-4 for validation makes this approach unsuitable for contexts involving confidential data"
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed: replace GPT-4 with open-source LLMs such as Llama to support confidential data.",
+      "Author-proposed: apply open-source LLMs at additional stages of the pipeline.",
+      "Author-proposed: enrich the generated graphs by incorporating entity typing.",
+      "Review-level inference: evaluate stronger entity resolution/linking and schema normalization because the reported pipeline maps entities and predicates but does not report comprehensive entity typing or linking experiments.",
+      "Review-level inference: add external baselines and matched-domain comparisons for the music corpus, and evaluate on larger and more diverse documents.",
+      "Review-level inference: report validation cost, latency, annotator agreement, and error breakdowns to clarify operational trade-offs."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0036-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "In future works, we aim to utilize open-source LLMs ... apply them at other stages ... further enrich our graphs by incorporating entity typing."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "The paper leaves open how to avoid cumulative pipeline errors across preprocessing, extraction, cleaning, validation, and mapping.",
+      "Confidential-data deployment remains unresolved while validation depends on an external GPT-4 service.",
+      "Entity typing is not yet incorporated into the proposed pipeline and is identified as future work.",
+      "The absence of universal ontology-independent gold standards remains an evaluation challenge.",
+      "The paper does not establish how well the approach scales to large corpora or how its runtime and resource costs compare with alternatives.",
+      "Review-level inference: robust handling of negation, conjunctions, long noun phrases, and semantically implausible OpenIE structures remains an open accuracy problem."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0036-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "the absence of universal gold standards ... without relying on a specific ontology"
+      },
+      {
+        "span_id": "C0036-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "we aim to utilize open-source LLMs ... and ... enrich our graphs by incorporating entity typing"
+      }
+    ]
+  },
+  "code_and_data_availability": "The authors state that the source code for G-T2KG and the constructed gold standards are publicly available at https://github.com/OthmaneKabal/G-T2KG."
+}

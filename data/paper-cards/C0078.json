@@ -1,0 +1,823 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0078",
+    "title": "Large Language Models for Automatic Knowledge Graph Construction From Text Documents: a Materials Science Case Study",
+    "pdf_path": "data/pdfs/C0078.pdf",
+    "authors": [
+      "Vladislav Kaverinskiy"
+    ],
+    "year": 2025,
+    "venue": "Digital Transformation and Intelligent Systems: Theory, Models, Practice (monograph)",
+    "identifier": {
+      "status": "reported",
+      "value": "DOI: 10.31274/isudp.2025.197.010",
+      "evidence": [
+        {
+          "span_id": "C0078-D-P004-TEXT-0001",
+          "page": 4,
+          "excerpt": "DOI: 10.31274/isudp.2025.197.010"
+        }
+      ]
+    },
+    "abstract": "The study compares GPT-4, Qwen, and DeepSeek for automated generation of OWL ontologies from materials-science articles. It finds that prompt engineering and iterative refinement can produce basic ontologies, but depth, accuracy, and scalability remain inadequate for fully automatic construction.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Chapter title page",
+      "span_id": "C0078-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Vladislav Kaverinskiy",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Chapter title page",
+      "span_id": "C0078-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "DOI: 10.31274/isudp.2025.197.010",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Front matter",
+      "span_id": "C0078-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "DIGITAL TRANSFORMATION AND INTELLIGENT SYSTEMS: THEORY, MODELS, PRACTICE; Monograph",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Chapter title page",
+      "span_id": "C0078-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "DOI: 10.31274/isudp.2025.197.010",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0078-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The presented study investigates the application of large language models (LLMs) in automating the creation of OWL ontologies from scientific articles, focusing on materials science.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-02": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0078-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "while LLMs can produce basic ontologies, there is room for improvement in terms of depth, accuracy, and scalability.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0078-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The research compares the performance of different LLMs, such as GPT-4, Qwen, and DeepSeek, in generating ontologies that capture the essential information and relationships presented in the articles.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "10.2.5 Brief Review of Popular LLMs",
+      "span_id": "C0078-D-P016-TEXT-0002",
+      "page": 16,
+      "excerpt": "there is a vast field to carry out research for the prompts and approaches for LLMs usage to obtain ontologies from subject-specific text documents.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "10.3 Materials and Methods",
+      "span_id": "C0078-D-P017-TEXT-0001",
+      "page": 17,
+      "excerpt": "The investigation process included changes and modifications of the text prompt trying to have the model generate a better result.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "10.4.4 Discussion",
+      "span_id": "C0078-D-P036-TEXT-0002",
+      "page": 36,
+      "excerpt": "the first more simple prompt — P1; the more complicated prompt with a detailed explanation of the ontology structure — P2; and the prompt with subsequent step-by-step entity creation and augmentation — P3.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "10.4.1 GPT-4",
+      "span_id": "C0078-D-P019-TEXT-0001",
+      "page": 19,
+      "excerpt": "Here is the structure the ontology you must follow. Classes: article; abstract; author; material; research method; process; material property.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Conclusions",
+      "span_id": "C0078-D-P041-TEXT-0002",
+      "page": 41,
+      "excerpt": "DeepSeek (R1) adopted a different strategy by progressively building the ontology through a series of smaller, focused tasks.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "10.4.3 DeepSeek R1",
+      "span_id": "C0078-D-P035-TEXT-0001",
+      "page": 35,
+      "excerpt": "First make the hierarchy system of the OWL classes only... properties and individuals... are to be done in the following stages.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "10.3 Materials and Methods",
+      "span_id": "C0078-D-P017-TEXT-0002",
+      "page": 17,
+      "excerpt": "number of RDF triplets (estimated by Jena-Fuseki when data loading and parsing); numbers of ontology entities; linkage factors.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "10.3 Materials and Methods",
+      "span_id": "C0078-D-P017-TEXT-0001",
+      "page": 17,
+      "excerpt": "The investigation process included changes and modifications of the text prompt trying to have the model generate a better result.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "10.4.1 GPT-4",
+      "span_id": "C0078-D-P019-TEXT-0002",
+      "page": 19,
+      "excerpt": "The following subprompt was: “Do it by your own means. And return OWL code here.”",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "10.3 Materials and Methods",
+      "span_id": "C0078-D-P017-TEXT-0001",
+      "page": 17,
+      "excerpt": "The used for the study LLMs were the following: GPT-4, Qwen ... and DeepSeek (R1).",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "10.4.3 DeepSeek R1",
+      "span_id": "C0078-D-P035-PICTURE-0002",
+      "page": 35,
+      "excerpt": "The scheme of the method is presented in Figure 10.2... a way of at least partial automatisation of high-quality ontology creation has been found.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "10.4.4 Discussion",
+      "span_id": "C0078-D-P038-TEXT-0003",
+      "page": 38,
+      "excerpt": "DeepSeek seems to be a rather more perspective tool to be a helper for a knowledge engineer for semi-automatic ontology creation with human supervision.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "10.4.1 GPT-4",
+      "span_id": "C0078-D-P019-TEXT-0001",
+      "page": 19,
+      "excerpt": "Your task is ... to build OWL ontology... The terms are to be structured into classes. Also you can have hierarchy of properties.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "10.4.3 DeepSeek R1",
+      "span_id": "C0078-D-P035-TEXT-0002",
+      "page": 35,
+      "excerpt": "First make the hierarchy system of the OWL classes only... On this step do not provide properties and individuals.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "10.4.1 GPT-4",
+      "span_id": "C0078-D-P019-TEXT-0001",
+      "page": 19,
+      "excerpt": "specific technical terms ... must form the ontology entities. Use the ontology properties to link the entities.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "10.4.2.2 QwQ-32B-Preview",
+      "span_id": "C0078-D-P027-TEXT-0002",
+      "page": 27,
+      "excerpt": "The model then defines relationships between these entities using properties.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "10.3 Materials and Methods",
+      "span_id": "C0078-D-P017-TEXT-0003",
+      "page": 17,
+      "excerpt": "number of RDF triplets ... numbers of ontology entities ... linkage factors.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "10.3 Materials and Methods",
+      "span_id": "C0078-D-P017-TEXT-0001",
+      "page": 17,
+      "excerpt": "the input for all the cases was a text document devoted to alumomatrix composites Al-Si-Ni and Al-TiC.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "10.4.1 GPT-4",
+      "span_id": "C0078-D-P019-TEXT-0002",
+      "page": 19,
+      "excerpt": "The input files are attached to the messages in PDF format.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "10.3 Materials and Methods",
+      "span_id": "C0078-D-P017-TEXT-0001",
+      "page": 17,
+      "excerpt": "only one and the same file was used in all the experiments.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "10.4.2.1 Qwen2.5-Coder-32B-Instruct",
+      "span_id": "C0078-D-P027-TEXT-0002",
+      "page": 27,
+      "excerpt": "The prompt was additionally tested on another article also devoted to materials science.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "10.4.1 GPT-4",
+      "span_id": "C0078-D-P019-TEXT-0001",
+      "page": 19,
+      "excerpt": "provide a valid OWL file understandable by the graph DBMS.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "10.4.3 DeepSeek R1",
+      "span_id": "C0078-D-P035-TEXT-0002",
+      "page": 35,
+      "excerpt": "The properties must be asserted to named individuals and be declared as Object Properties or Data Properties.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "10.3 Materials and Methods",
+      "span_id": "C0078-D-P017-TEXT-0001",
+      "page": 17,
+      "excerpt": "GPT-4, Qwen (QwQ-32B-Preview, Qwen2.5-Coder-32B-Instruct, Qwen2.5–72B-Instruct, Qwen2.5-Plus), and DeepSeek (R1).",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "10.3 Materials and Methods",
+      "span_id": "C0078-D-P017-TEXT-0002",
+      "page": 17,
+      "excerpt": "number of RDF triplets (estimated by Jena-Fuseki when data loading and parsing).",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "10.4.2.1 Qwen2.5-Coder-32B-Instruct",
+      "span_id": "C0078-D-P023-TEXT-0003",
+      "page": 23,
+      "excerpt": "it appeared not valid — have not been parsed using Protégé.",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "10.3 Materials and Methods",
+      "span_id": "C0078-D-P017-TEXT-0001",
+      "page": 17,
+      "excerpt": "This was a research article grounded on experimental studies, although ... this text ... has not been officially published yet.",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "10.4.2.1 Qwen2.5-Coder-32B-Instruct",
+      "span_id": "C0078-D-P027-TEXT-0002",
+      "page": 27,
+      "excerpt": "The prompt was additionally tested on another article ... “Al-Si-Ni SINTERED ALLOY: STRUCTURE AND PROPERTIES. PART 2: SINTERING AND FORGING”.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "10.3 Materials and Methods",
+      "span_id": "C0078-D-P017-TEXT-0001",
+      "page": 17,
+      "excerpt": "number of RDF triplets ... numbers of ontology entities (Classes, Object Properties, Data type Properties, Named Individuals); linkage factors.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "10.4.4 Discussion",
+      "span_id": "C0078-D-P037-TABLE-0002",
+      "page": 37,
+      "excerpt": "Numerical characteristics of generated ontologies: RDF triplets, Classes, Object Properties, Data type Properties, Named Individuals, average OP and DP per NI.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "10.4.4 Discussion",
+      "span_id": "C0078-D-P036-TEXT-0001",
+      "page": 36,
+      "excerpt": "The basic bare ontology contains only 21 RDF triplets, linking 5 classes with 5 Object Properties. Individuals were not expected in this ontology.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "10.4.4 Discussion",
+      "span_id": "C0078-D-P037-TABLE-0002",
+      "page": 37,
+      "excerpt": "Numerical characteristics of generated ontologies",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "10.3 Materials and Methods",
+      "span_id": "C0078-D-P017-TEXT-0001",
+      "page": 17,
+      "excerpt": "only one and the same file was used in all the experiments.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "10.4 Experimental Results",
+      "span_id": "C0078-D-P019-TEXT-0002",
+      "page": 19,
+      "excerpt": "For the moment we do not have yet an etalon “gold standard” ontology to compare with the generated results.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "10.4.4 Discussion",
+      "span_id": "C0078-D-P036-TEXT-0003",
+      "page": 36,
+      "excerpt": "the first more simple prompt — P1 ... detailed explanation ... P2 ... step-by-step entity creation and augmentation — P3.",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "10.4.4 Discussion",
+      "span_id": "C0078-D-P037-TABLE-0001",
+      "page": 37,
+      "excerpt": "DeepSeek R1 P3: 878 RDF triplets, 55 classes, 30 object properties, 12 data type properties, 68 named individuals, 3.02 average OP and 1.89 average DP per NI.",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "10.4.4 Discussion",
+      "span_id": "C0078-D-P038-TEXT-0002",
+      "page": 38,
+      "excerpt": "Applying the iterative step-by-step prompt with DeepSeek (R1) LLM provides the creation of more, probably, as many as possible entities and their linking.",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "10.4.4 Discussion",
+      "span_id": "C0078-D-P038-TEXT-0003",
+      "page": 38,
+      "excerpt": "GPT-4 and Qwen are not still strong candidates for complete autoimmunization of OWL ontologies generation.",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusions",
+      "span_id": "C0078-D-P041-TEXT-0001",
+      "page": 41,
+      "excerpt": "The quality and specificity of the prompts directly influence the output’s accuracy, depth, and coherence.",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusions",
+      "span_id": "C0078-D-P041-TEXT-0002",
+      "page": 41,
+      "excerpt": "DeepSeek (R1) ... progressively building the ontology through a series of smaller, focused tasks ... more detailed and coherent ontology.",
+      "confidence": "medium"
+    },
+    "strengths-23-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "10.3 Materials and Methods",
+      "span_id": "C0078-D-P017-TEXT-0003",
+      "page": 17,
+      "excerpt": "number of RDF triplets ... numbers of ontology entities ... linkage factors.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "10.4 Experimental Results",
+      "span_id": "C0078-D-P019-TEXT-0001",
+      "page": 19,
+      "excerpt": "we do not have yet an etalon “gold standard” ontology to compare with the generated results.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusions",
+      "span_id": "C0078-D-P041-TEXT-0002",
+      "page": 41,
+      "excerpt": "Models like GPT-4 and Qwen sometimes introduced contradictions or incomplete relationships, necessitating post-validation steps.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusions",
+      "span_id": "C0078-D-P041-TEXT-0003",
+      "page": 41,
+      "excerpt": "As the complexity and volume of input data increased, the performance of LLMs deteriorated.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "10.4.4 Discussion",
+      "span_id": "C0078-D-P038-TEXT-0001",
+      "page": 38,
+      "excerpt": "we do not have yet a “gold standard” ontology ... still not studied SPARQL query creation for such ontologies.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "10.4.3 DeepSeek R1",
+      "span_id": "C0078-D-P035-TEXT-0002",
+      "page": 35,
+      "excerpt": "one of the most important limitations for today is quite a small number of tokens for input and especially output.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Conclusions",
+      "span_id": "C0078-D-P041-TEXT-0003",
+      "page": 41,
+      "excerpt": "DeepSeek (R1) faced limitations related to token restrictions and the need for continuous human oversight.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Conclusions",
+      "span_id": "C0078-D-P041-TEXT-0001",
+      "page": 41,
+      "excerpt": "highlighting the importance of domain-tailored fine-tuning for LLMs.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "10.2.4 Automatic ontologies creation",
+      "span_id": "C0078-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "Future research is expected to focus on improving the integration of LLMs with ontology engineering tools, developing methods for real-time ontology updating, and enhancing the interpretability and validation.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "10.2.3 Usage of AI and LLMs for Automatic Databases Creation",
+      "span_id": "C0078-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "Future research is expected to focus on enhancing the precision of entity and relationship extraction.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusions",
+      "span_id": "C0078-D-P041-TEXT-0001",
+      "page": 41,
+      "excerpt": "Ensuring that the generated ontologies adhered to logical principles and avoided inconsistencies proved challenging.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusions",
+      "span_id": "C0078-D-P041-TEXT-0002",
+      "page": 41,
+      "excerpt": "The lack of specialized training in materials science and ontology engineering led to inaccuracies and oversights.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusions",
+      "span_id": "C0078-D-P042-TEXT-0003",
+      "page": 42,
+      "excerpt": "current models exhibit remarkable abilities, they fall short of fully automating the process without substantial human involvement.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "10.3 Materials and Methods",
+      "span_id": "C0078-D-P017-TEXT-0001",
+      "page": 17,
+      "excerpt": "You can find the corresponding PDF document ... by the link: https://drive.google.com/file/d/1Ed-65hgkrIgfjANAEYO9YAX-1MQbkXW6X/view",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "References",
+      "span_id": "C0078-D-P045-TEXT-0002",
+      "page": 45,
+      "excerpt": "A small demo ontologies created by GPT ... GitHub; Demo ontologies generated using Qwen ... GitHub; An OWL ontology generated using DeepSeek ... GitHub.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "medium",
+  "problem_addressed": "How to use general LLMs to turn a materials-science research article into a valid, populated OWL ontology/knowledge-graph representation, and which model and prompting strategy yields the most complete and linked result. The study specifically tests whether prompt detail and staged generation mitigate the difficulty of creating logically consistent, domain-specific ontologies.",
+  "methodology": {
+    "primary_family": "Zero-shot and few-shot LLM prompting (without task-specific model training)",
+    "secondary_families": [
+      "Ontology-constrained and schema-guided methods",
+      "Generative text-to-structure methods",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "zero_shot",
+    "description": "Contributions and workflow: (1) compares GPT-4, four Qwen variants, and DeepSeek-R1 on OWL generation from materials-science PDF articles; (2) designs and iteratively refines prompts from a general request (P1), through an explicit domain ontology schema (P2), to DeepSeek's staged creation/augmentation workflow (P3); (3) asks models to identify article metadata, authors, materials, processes, methods, properties, figures, results, and references; classify them as OWL classes/individuals; and emit RDF/XML OWL with object and data properties; (4) loads/parses outputs with Jena-Fuseki and Protégé, executes SPARQL count queries, and compares triples, classes, properties, individuals, and linkage factors. Author-reported conclusion: staged DeepSeek-R1 is the best current approach in this study, but remains a human-supervised assistant rather than an autonomous ontology generator."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "OWL/RDF ontology is both the target representation and a prompt-specified schema. P2 supplies classes and expected properties for article, abstract, author, material, research method, process, material property, structural component, and results/findings; models may add classes/properties. DeepSeek P3 explicitly constructs the class hierarchy before object properties, datatype properties, and named individuals.",
+    "evidence": [
+      {
+        "span_id": "C0078-D-P019-TEXT-0001",
+        "page": 19,
+        "excerpt": "Your task is ... to build OWL ontology... The terms are to be structured into classes. Also you can have hierarchy of properties."
+      },
+      {
+        "span_id": "C0078-D-P035-TEXT-0002",
+        "page": 35,
+        "excerpt": "First make the hierarchy system of the OWL classes only... On this step do not provide properties and individuals."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Entity and concept extraction",
+    "Entity typing",
+    "Relation and triple extraction",
+    "Ontology or schema discovery",
+    "Graph construction",
+    "Graph validation and correction"
+  ],
+  "input_output": {
+    "input_type": "PDF text of materials-science scientific research articles, including article sections, figures and captions, and bibliography/references.",
+    "input_granularity": "One full scientific article PDF per model interaction in the main experiment; an additional materials-science article is tested with Qwen. The requested ontology spans document-level metadata, figures, technical terms, references, and research content.",
+    "output_representation": "OWL ontology, principally RDF/XML, containing OWL classes, named individuals, object properties, datatype properties, RDF triples, labels/comments, and optionally domains/ranges; intended to be usable by a graph DBMS."
+  },
+  "models_and_tools": [
+    "GPT-4",
+    "QwQ-32B-Preview",
+    "Qwen2.5-Coder-32B-Instruct",
+    "Qwen2.5-72B-Instruct",
+    "Qwen2.5-Plus",
+    "DeepSeek-R1",
+    "Apache Jena-Fuseki",
+    "Protégé",
+    "SPARQL queries"
+  ],
+  "datasets": [
+    "Main input: one unpublished experimental materials-science research article on alumomatrix composites Al-Si-Ni and Al-TiC and their coefficient of thermal expansion.",
+    "Additional Qwen test: “Al-Si-Ni SINTERED ALLOY: STRUCTURE AND PROPERTIES. PART 2: SINTERING AND FORGING.”"
+  ],
+  "evaluation": {
+    "metrics": [
+      "RDF triple count",
+      "Number of classes",
+      "Number of object properties",
+      "Number of datatype properties",
+      "Number of named individuals",
+      "Average object properties per named individual",
+      "Average datatype properties per named individual",
+      "OWL validity/parseability in Protégé",
+      "Qualitative completeness, correctness, depth, coherence, and scalability assessment"
+    ],
+    "baselines": [
+      "Bare demonstration ontology: 21 RDF triples, 5 classes, 3 object properties, 2 datatype properties, and no named individuals.",
+      "Comparative prompt/model conditions: GPT-4 P1/P2/P2-extended, Qwen2.5-Coder-32B-Instruct P1/P2/P2-article 2, and DeepSeek-R1 P3."
+    ],
+    "setting": "Small exploratory case study using one common PDF for the main model comparisons because of Qwen's one-file-per-message restriction and input/output limits. Prompt P1 is simple, P2 gives a detailed ontology structure, and P3 uses step-by-step entity creation and augmentation. Generated OWL is parsed/loaded and assessed with Jena-Fuseki, Protégé, SPARQL structural queries, and qualitative manual inspection. No gold-standard ontology exists, so no precision/recall or task-accuracy evaluation is performed."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Table 10.2: GPT-4 P1 produced 54 triples/14 classes/5 OP/8 DP/7 named individuals; GPT-4 P2 produced 107/14/10/8/47; GPT-4 P2-extended produced 128/14/11/8/22.",
+      "Qwen2.5-Coder-32B-Instruct P1 was invalid; P2 produced 236 triples/8 classes/9 OP/14 DP/27 named individuals; P2 on article 2 produced 262/9/26/0/45.",
+      "DeepSeek-R1 P3 produced the largest artifact: 878 triples, 55 classes, 30 OP, 12 DP, 68 named individuals, 3.02 average OP/NI, and 1.89 average DP/NI.",
+      "Author interpretation: DeepSeek's staged workflow yielded the most detailed and coherent ontology among the tested conditions, whereas GPT-4 and Qwen were not strong candidates for complete automatic OWL-ontology generation."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0078-D-P037-TABLE-0001",
+        "page": 37,
+        "excerpt": "DeepSeek R1 P3: 878 RDF triplets, 55 classes, 30 object properties, 12 data type properties, 68 named individuals, 3.02 average OP and 1.89 average DP per NI."
+      },
+      {
+        "span_id": "C0078-D-P038-TEXT-0002",
+        "page": 38,
+        "excerpt": "Applying the iterative step-by-step prompt with DeepSeek (R1) LLM provides the creation of more, probably, as many as possible entities and their linking."
+      },
+      {
+        "span_id": "C0078-D-P038-TEXT-0003",
+        "page": 38,
+        "excerpt": "GPT-4 and Qwen are not still strong candidates for complete autoimmunization of OWL ontologies generation."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author-reported: detailed, schema-aligned prompts improve output accuracy, depth, and coherence.",
+      "Author-reported: QwQ-32B-Preview can identify/classify entities and explain its reasoning even without an extensive schema prompt.",
+      "Author-reported: DeepSeek-R1's staged creation of classes, properties, and individuals yields the most detailed/coherent result and a high number of linked entities.",
+      "[Review-level inference] The study usefully combines structural artifact measurements with validity checks and qualitative error inspection, instead of treating raw triple count alone as quality."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0078-D-P041-TEXT-0001",
+        "page": 41,
+        "excerpt": "The quality and specificity of the prompts directly influence the output’s accuracy, depth, and coherence."
+      },
+      {
+        "span_id": "C0078-D-P041-TEXT-0002",
+        "page": 41,
+        "excerpt": "DeepSeek (R1) ... progressively building the ontology through a series of smaller, focused tasks ... more detailed and coherent ontology."
+      },
+      {
+        "span_id": "C0078-D-P017-TEXT-0003",
+        "page": 17,
+        "excerpt": "number of RDF triplets ... numbers of ontology entities ... linkage factors."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author-reported: the study uses only one main, unpublished input article and has no gold-standard ontology, precluding semantic precision/recall or reliable correctness comparison.",
+      "Author-reported: GPT-4 and Qwen omit or misrepresent domain details, generate incomplete/shallow structures, can produce invalid OWL, and may introduce contradictions.",
+      "Author-reported: token limits, poor scaling to larger or diverse sources, lack of specialized materials-science/ontology training, and required human review prevent standalone deployment.",
+      "[Review-level inference] Structural size and linkage counts are proxy metrics; without a reference ontology or expert annotation they do not establish factual completeness or logical correctness."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0078-D-P019-TEXT-0001",
+        "page": 19,
+        "excerpt": "we do not have yet an etalon “gold standard” ontology to compare with the generated results."
+      },
+      {
+        "span_id": "C0078-D-P041-TEXT-0002",
+        "page": 41,
+        "excerpt": "Models like GPT-4 and Qwen sometimes introduced contradictions or incomplete relationships, necessitating post-validation steps."
+      },
+      {
+        "span_id": "C0078-D-P041-TEXT-0003",
+        "page": 41,
+        "excerpt": "As the complexity and volume of input data increased, the performance of LLMs deteriorated."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "No gold-standard ontology; SPARQL-query generation for the ontologies has not yet been studied.",
+      "The P3 approach is constrained by small input, especially output, token limits.",
+      "The evaluated systems still require continuous human oversight for logical consistency and completeness.",
+      "The main study is demonstrative and uses one input file; Qwen's one-file interface and input/output limits influenced the design."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0078-D-P038-TEXT-0001",
+        "page": 38,
+        "excerpt": "we do not have yet a “gold standard” ontology ... still not studied SPARQL query creation for such ontologies."
+      },
+      {
+        "span_id": "C0078-D-P035-TEXT-0002",
+        "page": 35,
+        "excerpt": "one of the most important limitations for today is quite a small number of tokens for input and especially output."
+      },
+      {
+        "span_id": "C0078-D-P041-TEXT-0003",
+        "page": 41,
+        "excerpt": "DeepSeek (R1) faced limitations related to token restrictions and the need for continuous human oversight."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Develop domain-tailored fine-tuning/training for materials science and ontology engineering.",
+      "Use validation and refinement methods to detect logical inconsistencies, contradictions, omissions, and incorrect relations.",
+      "Improve model/tool integration, real-time ontology updating, interpretability, and scalability to larger and multiple documents.",
+      "Adopt structured task decomposition and detailed but adaptable prompts; retain expert review for complex ontology decisions.",
+      "Create comprehensive benchmarks and gold-standard ontologies with stronger semantic/logical evaluation."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0078-D-P041-TEXT-0001",
+        "page": 41,
+        "excerpt": "highlighting the importance of domain-tailored fine-tuning for LLMs."
+      },
+      {
+        "span_id": "C0078-D-P013-TEXT-0002",
+        "page": 13,
+        "excerpt": "Future research is expected to focus on improving the integration of LLMs with ontology engineering tools, developing methods for real-time ontology updating, and enhancing the interpretability and validation."
+      },
+      {
+        "span_id": "C0078-D-P013-TEXT-0003",
+        "page": 13,
+        "excerpt": "Future research is expected to focus on enhancing the precision of entity and relationship extraction."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "How to automatically produce logically valid, semantically deep, complete, reusable, and scalable domain ontologies from scientific text.",
+      "How to evaluate generated ontologies against gold standards beyond structural counts, including logical validity and factual coverage.",
+      "How to preserve material-process context and avoid hallucinated, omitted, contradictory, or overly superficial entities/relations.",
+      "How to handle large, multi-document and continuously updated scientific corpora within model token limits.",
+      "How to achieve reliable autonomy while maintaining meaningful human control and ontology-engineering expertise."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0078-D-P041-TEXT-0001",
+        "page": 41,
+        "excerpt": "Ensuring that the generated ontologies adhered to logical principles and avoided inconsistencies proved challenging."
+      },
+      {
+        "span_id": "C0078-D-P041-TEXT-0002",
+        "page": 41,
+        "excerpt": "The lack of specialized training in materials science and ontology engineering led to inaccuracies and oversights."
+      },
+      {
+        "span_id": "C0078-D-P042-TEXT-0003",
+        "page": 42,
+        "excerpt": "current models exhibit remarkable abilities, they fall short of fully automating the process without substantial human involvement."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper provides links to the main unpublished input PDF and a second test article on Google Drive, and cites public GitHub Gists for GPT-4 demonstration ontologies, Qwen-generated artifacts/responses, and a DeepSeek-generated OWL ontology. No consolidated code repository, executable experiment scripts, prompt archive, or complete reproducibility package is reported in the paper."
+}

@@ -1,0 +1,698 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0125",
+    "title": "A Survey on Generative Knowledge Graph Construction",
+    "pdf_path": "data/manual-pdfs/C0125.pdf",
+    "authors": [
+      "Zhao Hong",
+      "Hongfa Huang"
+    ],
+    "year": 2026,
+    "venue": "Artificial Intelligence and Robotics Research, 15(1), 168-179",
+    "identifier": {
+      "status": "reported",
+      "value": "DOI: 10.12677/airr.2026.151017",
+      "evidence": [
+        {
+          "span_id": "C0125-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "https://doi.org/10.12677/airr.2026.151017"
+        }
+      ]
+    },
+    "abstract": "This survey reviews generative knowledge graph construction, contrasting conventional sequence-to-sequence approaches with LLM-driven construction. It covers LLM roles in ontology construction, knowledge extraction, and knowledge fusion, compares advantages and limitations, and identifies future work on architecture optimization, multimodal integration, and intelligent fusion.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0125-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "A Survey on Generative Knowledge Graph Construction; Zhao Hong; Hongfa Huang.",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication header",
+      "span_id": "C0125-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Artificial Intelligence and Robotics Research, 2026, 15(1), 168-179; Published Online January 2026.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication header",
+      "span_id": "C0125-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Artificial Intelligence and Robotics Research, 2026, 15(1), 168-179.",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Publication header",
+      "span_id": "C0125-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "https://doi.org/10.12677/airr.2026.151017",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0125-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "This survey provides a comprehensive review of recent progress in generative knowledge graph construction... LLMs across key components—including ontology construction, knowledge extraction, and knowledge fusion.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "1. Introduction",
+      "span_id": "C0125-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "How to automatically construct high-quality knowledge graphs from unstructured or semi-structured data has become a core problem.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0125-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "Traditional knowledge graph construction pipelines rely on discriminative models, but they often suffer from error propagation and limited cross-domain generalization.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "1. Introduction",
+      "span_id": "C0125-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "This survey focuses on generative knowledge graph construction and systematically reviews its evolution from traditional Seq2Seq-driven methods to LLM-enabled methods.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.3.1–3.3.3 Large-model-driven generative methods",
+      "span_id": "C0125-D-P006-SECTION-0001",
+      "page": 6,
+      "excerpt": "The paper separately reviews LLM-enhanced ontology construction, LLM-driven knowledge extraction, and LLM-enabled knowledge fusion.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.2.1 Copy-based sequence generation",
+      "span_id": "C0125-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "CopyRE extracts triples with overlapping relations end-to-end; CopyMTL is described as joint extraction of entities and relations with multi-task learning.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "1. Introduction",
+      "span_id": "C0125-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The article aims to systematically review the complete evolution from traditional Seq2Seq-driven to LLM-enabled generative KGC.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3.3.1–3.3.3",
+      "span_id": "C0125-D-P006-SECTION-0002",
+      "page": 6,
+      "excerpt": "The reviewed LLM methods are organized into ontology construction, knowledge extraction, and knowledge fusion.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.1.2 Generative methods",
+      "span_id": "C0125-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The triple extraction task is converted into a conditional text generation problem; the model autoregressively generates the linearized target triple sequence.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.2 Traditional Seq2Seq generative methods",
+      "span_id": "C0125-D-P005-SECTION-0002",
+      "page": 5,
+      "excerpt": "The survey distinguishes copy-based, structure-linearization-based, and label-enhanced sequence generation methods.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.3.1–3.3.3 Large-model-driven generative methods",
+      "span_id": "C0125-D-P006-SECTION-0003",
+      "page": 6,
+      "excerpt": "LLM methods cover ontology construction, schema-based and schema-free extraction, and schema-level and instance-level knowledge fusion.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "2.1 Knowledge graph definition",
+      "span_id": "C0125-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Fk is background knowledge, such as a rule set, schema, implicit knowledge constraints, type-hierarchy constraints, or domain ontology.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.3.1 LLM-enhanced ontology construction",
+      "span_id": "C0125-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "LLMs can map natural-language requirements to formal ontologies; bottom-up approaches use open information extraction and clustering to generate schemas.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.3.2 Schema-based extraction",
+      "span_id": "C0125-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "Ontology-guided extraction first generates a domain ontology with LLMs and then uses it for RDF triple extraction.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "2.2 Generative knowledge graph construction",
+      "span_id": "C0125-D-P003-CAPTION-0001",
+      "page": 3,
+      "excerpt": "Core KGC tasks include named entity recognition, relation extraction, event extraction, entity linking, and knowledge graph completion; Figure 1 is the overall pipeline.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.3.1–3.3.3",
+      "span_id": "C0125-D-P006-SECTION-0002",
+      "page": 6,
+      "excerpt": "The review covers ontology construction, knowledge extraction, and fusion including semantic alignment, conflict resolution, disambiguation, normalization, and validation.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "4. Future directions",
+      "span_id": "C0125-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "Dynamic knowledge-memory systems use temporal knowledge graphs for continuous evolution and self-reflection.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "1. Introduction",
+      "span_id": "C0125-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The problem is to automatically construct high-quality knowledge graphs from unstructured or semi-structured data.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "2.2 Generative knowledge graph construction",
+      "span_id": "C0125-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "D denotes data sources, which can be text, webpages, tables, or multimodal content.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "2.2 Generative knowledge graph construction",
+      "span_id": "C0125-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "For the input sentence “Bill Gates and Paul Allen co-founded Microsoft in 1975,” the system predicts structured relation facts.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.2.1–3.2.2",
+      "span_id": "C0125-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "The survey describes a Top-k copy strategy for document-level extraction and MLBiNet for document-level/cross-sentence event association.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-03": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.3.1–3.3.2",
+      "span_id": "C0125-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "AutoSchemaKG is described as inducing ontology schemas from large-scale corpora, while AutoRE is cited for document-level relation extraction.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "2.1–2.2",
+      "span_id": "C0125-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "A KG is defined with entity/concept set E, relation set R, fact triples T, and background knowledge Fk; the example outputs two relation facts.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.1.2 Generative methods",
+      "span_id": "C0125-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The output is a linearized target triple sequence.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-03": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.3.2 Schema-based extraction",
+      "span_id": "C0125-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "Ontology-guided extraction is used for RDF triple extraction.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.1.2 Generative methods",
+      "span_id": "C0125-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "MASS, T5 and BART are cited as pretrained sequence-to-sequence models fine-tuned for generation.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.2.1–3.2.3",
+      "span_id": "C0125-D-P005-SECTION-0002",
+      "page": 5,
+      "excerpt": "The paper describes explicit copy mechanisms, reinforcement-learning ordering, Top-k copying, structure linearization, and explicit label markers.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.3.1–3.3.3",
+      "span_id": "C0125-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "Examples include metacognitive prompting, prefix instructions and dynamic decoding, chain-of-thought, instruction fine-tuning, multi-turn dialogue, clustering, and LLM semantic similarity.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-17-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "3.4 Comparison of generative KGC methods",
+      "span_id": "C0125-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "Table 1 summarizes advantages and disadvantages of different generative KGC methods.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-17-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "5. Conclusion",
+      "span_id": "C0125-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "The article systematically reviews and organizes the technological evolution from Seq2Seq models to LLM-enabled approaches.",
+      "confidence": "medium"
+    },
+    "main_results-18-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "3.4 Comparison of generative KGC methods",
+      "span_id": "C0125-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "Table 1 gives the stated advantages and disadvantages of six method families, including copy, linearization, label enhancement, and three LLM-driven categories.",
+      "confidence": "medium"
+    },
+    "main_results-18-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4. Future directions",
+      "span_id": "C0125-D-P008-SECTION-0002",
+      "page": 8,
+      "excerpt": "The proposed directions are generative-architecture optimization and explainability, unification and multimodal expansion, and intelligent knowledge fusion and cognitive applications.",
+      "confidence": "medium"
+    },
+    "main_results-18-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "5. Conclusion",
+      "span_id": "C0125-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "Traditional generation alleviates error propagation, while LLMs extend construction from extraction to ontology construction, extraction, and fusion.",
+      "confidence": "medium"
+    },
+    "strengths-19-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.4 Comparison of generative KGC methods",
+      "span_id": "C0125-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "The table lists strengths for each family, including reduced hallucination/repetition, unified format and semantic consistency, label semantics, ontology co-evolution, cross-domain adaptation, and fusion with validation.",
+      "confidence": "medium"
+    },
+    "strengths-19-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "1. Introduction",
+      "span_id": "C0125-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "The stated purpose is to review the full evolution and provide systematic reference for method selection and frontier exploration.",
+      "confidence": "medium"
+    },
+    "weaknesses-20-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.4 Comparison of generative KGC methods",
+      "span_id": "C0125-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "The table states limitations including long-text sensitivity, large decoding space, label omissions/offsets, lack of systematic evaluation, semantic drift, high computation, human verification, and scalability bottlenecks.",
+      "confidence": "medium"
+    },
+    "weaknesses-20-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "1. Introduction",
+      "span_id": "C0125-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "The paper describes its aim as a systematic review of the technical evolution and comparison of approaches; no review protocol or experiment is described in the article body.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-21-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "3.1.2 Generative methods",
+      "span_id": "C0125-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "For long text or multiple relations, generative methods may have unstable decoding and semantic hallucinations.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-21-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4. Future directions",
+      "span_id": "C0125-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "Remaining problems include model homogenization, limited cross-modal transfer capability, and insufficient application expansion.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-21-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "5. Conclusion",
+      "span_id": "C0125-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "Generative KGC still faces challenges in model architecture, cross-modal capability, and application depth.",
+      "confidence": "medium"
+    },
+    "possible_improvements-22-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4.1 Generative architecture optimization and explainability",
+      "span_id": "C0125-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "The paper proposes neuro-symbolic models for controllable end-to-end generation and names spiking, dynamic, neural ODE, and diffusion architectures as possible breakthroughs.",
+      "confidence": "medium"
+    },
+    "possible_improvements-22-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4.2 Unification and multimodal expansion",
+      "span_id": "C0125-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "Future models may map NER, relation extraction, event extraction, and KG completion into a unified text-generation framework and use vision-language pretraining.",
+      "confidence": "medium"
+    },
+    "possible_improvements-22-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4.3 Intelligent knowledge fusion and cognitive applications",
+      "span_id": "C0125-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "Dynamic knowledge-memory systems based on temporal knowledge graphs support continuous evolution and self-reflection.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-23-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.4 Comparison of generative KGC methods",
+      "span_id": "C0125-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "The table identifies controllability, consistency, standardized-output, human-verification, compute, and scale limitations across the reviewed families.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-23-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4. Future directions",
+      "span_id": "C0125-D-P008-SECTION-0002",
+      "page": 8,
+      "excerpt": "The future directions explicitly target explainability, multimodal integration, dynamic evolution, and knowledge-driven reasoning.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-24-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Copyright and access notice",
+      "span_id": "C0125-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "This work is licensed under the Creative Commons Attribution International License (CC BY 4.0)... Open Access.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses how generative methods can automate knowledge graph construction from unstructured or semi-structured sources and overcome limitations of discriminative pipeline approaches, especially error propagation and limited cross-domain generalization. Its objective is to survey the evolution from Seq2Seq generation to LLM-driven full-process construction and compare their mechanisms, applications, benefits, limitations, and future directions.",
+  "methodology": {
+    "primary_family": "Generative text-to-structure methods",
+    "secondary_families": [
+      "Zero-shot and few-shot LLM prompting",
+      "Instruction-tuned or fine-tuned LLM methods",
+      "Ontology-constrained and schema-guided methods",
+      "Validation, correction, and knowledge-fusion methods",
+      "Joint entity-relation extraction"
+    ],
+    "system_type": "end_to_end",
+    "supervision_setting": "not_reported",
+    "description": "This is a narrative survey, not a newly evaluated KGC model. It frames KGC as mapping raw data and background knowledge to a graph, then classifies the literature into discriminative and generative paradigms. For generative extraction, input text x is mapped autoregressively to a linearized target sequence y of triples/structures; pretrained Seq2Seq models such as MASS, T5, and BART can be fine-tuned with cross-entropy. It reviews: (1) copy-based generation, where a decoder copies subject/object spans from input while selecting relation labels, with reinforcement learning for triple order and Top-k pruning for documents; (2) structure-linearization, which serializes events/triples and can constrain decoding with event schemas; and (3) label-augmented generation, which inserts explicit entity/type labels in natural-language-like output. For LLM-era KGC, the surveyed execution patterns include top-down ontology assistance (natural-language requirements to formal ontology), bottom-up schema induction (open extraction, clustering, definition, and canonicalization), schema-guided or schema-free extraction, and schema-/instance-level fusion through alignment, disambiguation, conflict resolution, and verification. Review-level inference: because this paper synthesizes methods rather than implementing one, descriptions of architecture, prompts, training, and pipelines are literature-level categories, not a single reproducible workflow authored and tested by Zhao and Huang."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The survey treats background knowledge, rules, schemas, type hierarchies, and domain ontologies as constraints on the semantic space of a KG. It reviews top-down LLM-assisted ontology modelling from natural-language requirements into formal ontology; bottom-up schema induction through open extraction and clustering; ontology-guided RDF triple extraction; dynamic/evolving schemas; and schema-level alignment/canonicalization during fusion. Schema use is therefore a major reviewed component, not an ontology implemented by this survey.",
+    "evidence": [
+      {
+        "span_id": "C0125-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "Fk is background knowledge, such as a rule set, schema, implicit knowledge constraints, type-hierarchy constraints, or domain ontology."
+      },
+      {
+        "span_id": "C0125-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "LLMs can map natural-language requirements to formal ontologies; bottom-up approaches use open information extraction and clustering to generate schemas."
+      },
+      {
+        "span_id": "C0125-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "Ontology-guided extraction first generates a domain ontology with LLMs and then uses it for RDF triple extraction."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Entity and concept extraction",
+    "Entity typing",
+    "Entity resolution and linking",
+    "Relation and triple extraction",
+    "Event extraction",
+    "Ontology or schema discovery",
+    "Graph construction",
+    "Knowledge fusion and deduplication",
+    "Graph validation and correction",
+    "Graph updating"
+  ],
+  "input_output": {
+    "input_type": "The surveyed KGC problem uses unstructured or semi-structured data sources, especially natural-language text/sentences/documents; the general formulation also permits webpages, tables, and multimodal content.",
+    "input_granularity": "The reviewed methods operate at sentence level for relational facts, with extensions to document-level extraction, cross-sentence event detection, and large-scale corpora for schema induction.",
+    "output_representation": "The reviewed outputs include entities, entity categories/types, relation facts and triples, event structures, linked entities, RDF triples, formal ontologies/schemas, and constructed or fused knowledge graphs. Generative systems commonly linearize triples or event structures into text sequences before decoding them into structured graph content."
+  },
+  "models_and_tools": [
+    "Seq2Seq pretrained generative models: MASS, T5, and BART",
+    "Copy mechanism/pointer-style decoder (CopyRE)",
+    "Reinforcement-learning extraction-order modelling",
+    "Feature-space nonlinear mapping and multi-task copy mechanism (CopyMTL)",
+    "Top-k copy strategy with dynamic entity-pair pruning",
+    "T5-based controllable sequence-to-structure event extraction (Text2Event)",
+    "TANL label-augmented structured prediction",
+    "GENRE/autoregressive entity retrieval",
+    "DeepStruct and UIE unified structure generation",
+    "LLM approaches using metacognitive prompting, prefix instructions/dynamic decoding, chain-of-thought, instruction fine-tuning, multi-turn dialogue, clustering, and semantic-similarity canonicalization"
+  ],
+  "datasets": "not_reported",
+  "evaluation": {
+    "metrics": "not_reported",
+    "baselines": "not_reported",
+    "setting": "No original empirical benchmark, dataset, metric, baseline, or quantitative experiment is presented. The paper is a qualitative survey that compares families of generative KGC approaches through narrative discussion and Table 1."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "The survey concludes that conventional Seq2Seq generation provides end-to-end knowledge extraction and can reduce error accumulation associated with discriminative pipelines.",
+      "It classifies traditional generative approaches into copy-based, structure-linearization-based, and label-enhanced sequence generation, and LLM-era work into ontology construction, knowledge extraction, and knowledge fusion.",
+      "Its qualitative comparison finds that copy-based generation reduces entity hallucination/repetition and works well for overlapping relations; structural linearization offers uniform output and high semantic consistency; label enhancement improves type/relation distinction and is stable in low-resource and cross-task settings; LLM methods offer adaptation, ontology evolution, extraction, and semantic fusion but face controllability, evaluation, computational, and scalability issues.",
+      "It identifies architecture/explainability, unified and multimodal construction, and intelligent/dynamic fusion for cognitive applications as future research directions."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0125-D-P007-TABLE-0001",
+        "page": 7,
+        "excerpt": "Table 1 gives the stated advantages and disadvantages of six method families, including copy, linearization, label enhancement, and three LLM-driven categories."
+      },
+      {
+        "span_id": "C0125-D-P008-SECTION-0002",
+        "page": 8,
+        "excerpt": "The proposed directions are generative-architecture optimization and explainability, unification and multimodal expansion, and intelligent knowledge fusion and cognitive applications."
+      },
+      {
+        "span_id": "C0125-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "Traditional generation alleviates error propagation, while LLMs extend construction from extraction to ontology construction, extraction, and fusion."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author synthesis: copy-based sequence generation explicitly copies entities, reducing entity hallucination and repeated generation; it is strong for overlapping-relation extraction.",
+      "Author synthesis: structure-linearization methods provide a uniform output format, high semantic consistency, and can extend to event extraction and entity linking.",
+      "Author synthesis: label-enhanced generation exposes label semantics, improves distinction of entity/relation types, and is reported as stable in low-resource and cross-task settings.",
+      "Author synthesis: LLM-assisted ontology construction supports semantic consistency, automation, and schema co-evolution; LLM extraction can generate triples without a manually supplied ontology and adapt across domains; LLM fusion combines multi-source information with semantic consistency and end-to-end integration/verification.",
+      "Review-level inference: the survey's taxonomy connects pre-LLM Seq2Seq mechanisms with LLM-era ontology, extraction, and fusion workflows, making it useful for methodology-level comparison rather than single-model performance selection."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0125-D-P007-TABLE-0001",
+        "page": 7,
+        "excerpt": "The table lists strengths for each family, including reduced hallucination/repetition, unified format and semantic consistency, label semantics, ontology co-evolution, cross-domain adaptation, and fusion with validation."
+      },
+      {
+        "span_id": "C0125-D-P002-TEXT-0002",
+        "page": 2,
+        "excerpt": "The stated purpose is to review the full evolution and provide systematic reference for method selection and frontier exploration."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author synthesis: copy-based methods are sensitive to long text and complex sentence structures, and relation generation still depends on a closed label set.",
+      "Author synthesis: structure-linearization has a large decoding space and high inference cost; label errors and structural drift become more pronounced for long text.",
+      "Author synthesis: label-enhanced methods produce long outputs, can omit or misplace labels, are sensitive to label design, and need additional template optimization to generalize to open domains.",
+      "Author synthesis: LLM ontology construction lacks systematic evaluation and standardized output; LLM extraction has weak consistency/controllability and may drift semantically; LLM fusion requires substantial compute and human verification and has an efficiency bottleneck at scale.",
+      "Review-level inference: since no systematic search protocol, study-selection procedure, dataset comparison, or quantitative synthesis is reported in the paper, its comparative claims should be used as qualitative orientation rather than as a measured ranking of methods."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0125-D-P007-TABLE-0001",
+        "page": 7,
+        "excerpt": "The table states limitations including long-text sensitivity, large decoding space, label omissions/offsets, lack of systematic evaluation, semantic drift, high computation, human verification, and scalability bottlenecks."
+      },
+      {
+        "span_id": "C0125-D-P002-TEXT-0002",
+        "page": 2,
+        "excerpt": "The paper describes its aim as a systematic review of the technical evolution and comparison of approaches; no review protocol or experiment is described in the article body."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The field is described as facing model-architecture homogenization, limited cross-modal transfer, and insufficient application expansion.",
+      "Generative approaches can suffer unstable decoding and semantic hallucination for long texts or multiple relations.",
+      "The conclusion states that generative KGC still faces challenges in model architecture, multimodal ability, and application depth."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0125-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "For long text or multiple relations, generative methods may have unstable decoding and semantic hallucinations."
+      },
+      {
+        "span_id": "C0125-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "Remaining problems include model homogenization, limited cross-modal transfer capability, and insufficient application expansion."
+      },
+      {
+        "span_id": "C0125-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "Generative KGC still faces challenges in model architecture, cross-modal capability, and application depth."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Develop neuro-symbolic models that combine neural representation capacity with symbolic-logic interpretability for controllable end-to-end generation.",
+      "Investigate alternative architectures, including spiking, dynamic, neural ODE, and diffusion models, for causal modelling and knowledge representation.",
+      "Unify NER, relation extraction, event extraction, and KG completion in a text-to-text generation framework.",
+      "Use vision-language pretraining for cross-modal entity alignment and semantic consistency in multimodal KGs.",
+      "Develop dynamic temporal-KG memory, continual evolution, and self-reflection to support long-term memory and explainable/cognitive reasoning."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0125-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "The paper proposes neuro-symbolic models for controllable end-to-end generation and names spiking, dynamic, neural ODE, and diffusion architectures as possible breakthroughs."
+      },
+      {
+        "span_id": "C0125-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "Future models may map NER, relation extraction, event extraction, and KG completion into a unified text-generation framework and use vision-language pretraining."
+      },
+      {
+        "span_id": "C0125-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "Dynamic knowledge-memory systems based on temporal knowledge graphs support continuous evolution and self-reflection."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Controllable, explainable generation that avoids semantic hallucination, structural drift, and inconsistent outputs.",
+      "Robust long-document and complex-relation extraction without the output-length, label-offset, or decoding-space problems described for Seq2Seq approaches.",
+      "Standardized outputs and systematic evaluation for LLM-assisted ontology construction.",
+      "Reliable schema-free extraction and scalable semantic fusion that reduce semantic drift, human-verification dependence, computation cost, and large-scale efficiency bottlenecks.",
+      "Cross-modal transfer/alignment, dynamic updating, and knowledge-driven reasoning for cognitive applications."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0125-D-P007-TABLE-0001",
+        "page": 7,
+        "excerpt": "The table identifies controllability, consistency, standardized-output, human-verification, compute, and scale limitations across the reviewed families."
+      },
+      {
+        "span_id": "C0125-D-P008-SECTION-0002",
+        "page": 8,
+        "excerpt": "The future directions explicitly target explainability, multimodal integration, dynamic evolution, and knowledge-driven reasoning."
+      }
+    ]
+  },
+  "code_and_data_availability": "No code repository, dataset release, supplementary material, or reproducibility package for this survey is stated in the PDF. The article itself is marked Open Access under CC BY 4.0."
+}

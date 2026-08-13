@@ -1,0 +1,859 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0004",
+    "title": "A Systematic Literature Review on RDF Triple Generation from Natural Language Texts",
+    "pdf_path": "data/batches/batch-02/C0004.pdf",
+    "authors": [
+      "André Gomes Regino",
+      "Anderson Rossanez",
+      "Ricardo da Silva Torres",
+      "Julio Cesar dos Reis"
+    ],
+    "year": 2024,
+    "venue": "Semantic Web",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "Systematic literature review of methods that generate RDF triples and enhance knowledge graphs from natural-language texts. It retrieved and categorized 150 articles, analyzes challenges and limitations, reports a recent transformer trend, and identifies research gaps and future directions.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0004-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "André Gomes Regino, Anderson Rossanez, Ricardo da Silva Torres and Julio Cesar dos Reis",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "5.1.2 Non-English",
+      "span_id": "C0004-D-P018-TEXT-0001",
+      "page": 18,
+      "excerpt": "https://neo4j.com/ (As of Feb. 2024)",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Journal header",
+      "span_id": "C0004-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Semantic Web 0 (0) 1",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0004-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "This survey examines methods for RDF triple generation and Knowledge Graphs (KGs) enhancement from natural language texts.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-02": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0004-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "We retrieved, categorized, and analyzed 150 articles from several scientific databases.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "1. Introduction",
+      "span_id": "C0004-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The central problem addressed in this work is the effective generation of RDF triples from NL texts.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "1. Introduction",
+      "span_id": "C0004-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Our study also investigates existing methods from literature for incorporating generated RDF triples into an existing KG, respecting an underlying ontology.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "1. Introduction",
+      "span_id": "C0004-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Our study employs a systematic approach organized into three phases: Preparation, Execution, and Reporting.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.2 Execution Phase, Table 6",
+      "span_id": "C0004-D-P011-TABLE-0001",
+      "page": 11,
+      "excerpt": "Transformer; T-Box Population; A-Box Population; Link Creation are categories of the retrieved articles.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "6.1 Findings and Limitations",
+      "span_id": "C0004-D-P024-TEXT-0002",
+      "page": 24,
+      "excerpt": "combining both quantitative and qualitative approaches is crucial for generating more consistent and comprehensive evaluations.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3. Systematic Literature Review Methodology",
+      "span_id": "C0004-D-P006-CAPTION-0001",
+      "page": 6,
+      "excerpt": "Systematic literature review methodology comprising three main phases: Preparation, Execution, and Reporting.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "3.1 Preparation Phase, Table 2",
+      "span_id": "C0004-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "The research questions concern surveyed methods, including techniques, automation, applications, and T-Box/A-Box use.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.1 Preparation Phase",
+      "span_id": "C0004-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "( generation OR extraction OR construction OR population ) AND ( triples OR knowledge graph OR knowledge base ) AND ( natural language text OR unstructured text OR textual data )",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.1 Preparation Phase",
+      "span_id": "C0004-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "The chosen databases were ACM DL, IEEE Xplore, Springer Link, Elsevier, Scopus, and ACL Anthology.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.2 Execution Phase",
+      "span_id": "C0004-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "Each student... analyzed 10 articles each... The authors of this study double-checked the final assessment of each article.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-04": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.2 Execution Phase",
+      "span_id": "C0004-D-P012-TEXT-0004",
+      "page": 12,
+      "excerpt": "We focused on investigations that actively process NL text, generate RDF triples, and integrate them into an existing KG.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "2.1 Triple Generation: Formalization and Challenges",
+      "span_id": "C0004-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Ontology O is formed by the components (C, P, R), where C represents a set of classes, P is a set of properties, and R is a set of relationships. O is also named T-Box.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.2 Execution Phase, Table 6",
+      "span_id": "C0004-D-P011-TABLE-0002",
+      "page": 11,
+      "excerpt": "T-Box Population: Approaches that define new classes and properties; A-Box Population: Approaches that insert new instances.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "1. Introduction",
+      "span_id": "C0004-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Intent and entity discovery, relation extraction, and named entity recognition are examples of techniques.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "1. Introduction",
+      "span_id": "C0004-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Investigate methods that link the created triples to an existing set of classes and relations defined by one or more ontologies.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "1. Introduction",
+      "span_id": "C0004-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "Investigate techniques that check the added knowledge’s consistency, validity, and semantic coherence.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-04": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "6.3 Open Research Challenges",
+      "span_id": "C0004-D-P026-TEXT-0004",
+      "page": 26,
+      "excerpt": "Dynamic Knowledge Graph Evolution: Ensuring the dynamic growth and temporal evolution of NL-based KGs... is complex.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "1. Introduction",
+      "span_id": "C0004-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Natural Language (NL) texts (e.g., web pages, social network posts, unstructured textual documents).",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3.2 Execution Phase",
+      "span_id": "C0004-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "We collected all articles that matched the search criteria in the predefined databases.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "2.1 Triple Generation: Formalization and Challenges",
+      "span_id": "C0004-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Given a set of NL texts T = {t1, t2, . . . , tn}... generate RDF triples.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.2 Execution Phase",
+      "span_id": "C0004-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "To verify the criteria, we read the title and abstract of each article.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "2.1 Triple Generation: Formalization and Challenges",
+      "span_id": "C0004-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Triple (Ti): A statement in the form of a subject-predicate-object.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "2.1 Triple Generation: Formalization and Challenges",
+      "span_id": "C0004-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "generated triples are inserted into KG leading to an enhanced knowledge graph KG′, i.e., KG′ = KG ∪ ST.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-03": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "7. Conclusion",
+      "span_id": "C0004-D-P026-TEXT-0003",
+      "page": 26,
+      "excerpt": "We identified from the literature the most prominent approaches... and presented a detailed description of the most key studies.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "1. Introduction",
+      "span_id": "C0004-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Some studies... consider rule-based methods like Open Information Extraction (OpenIE) and Semantic Role Labeling (SRL). More recent studies employ Transformers.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.1 Preparation Phase",
+      "span_id": "C0004-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "The chosen databases were ACM DL, IEEE Xplore, Springer Link, Elsevier, Scopus, and ACL Anthology.",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.2 Execution Phase",
+      "span_id": "C0004-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "We retrieved a total of 150 articles from our search queries.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "5. Category-based Literature Analysis Results",
+      "span_id": "C0004-D-P016-TEXT-0002",
+      "page": 16,
+      "excerpt": "From the total of 150 articles obtained after the first screening... we narrowed them down to 15.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4. Quantitative-based Literature Analysis Results",
+      "span_id": "C0004-D-P012-TEXT-0001",
+      "page": 12,
+      "excerpt": "We conducted a literature analysis based on the metadata.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4. Quantitative-based Literature Analysis Results",
+      "span_id": "C0004-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "Number of articles per year; number of articles per category; number of articles by domain; number of articles by scientific database; number of articles by evaluation type.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4. Quantitative-based Literature Analysis Results, Table 8",
+      "span_id": "C0004-D-P015-TABLE-0003",
+      "page": 15,
+      "excerpt": "ACM DL 14; IEEE Xplore 43; SpringerLink 37; Elsevier Scopus 48; ACL Anthology 7.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-19-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "3.1 Preparation Phase, Table 4",
+      "span_id": "C0004-D-P009-TABLE-0001",
+      "page": 9,
+      "excerpt": "Papers... that create, use or theoretically define a way to generate triples from any kind of textual data; Articles written in English.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-19-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "3.1 Preparation Phase, Table 5",
+      "span_id": "C0004-D-P010-TABLE-0002",
+      "page": 10,
+      "excerpt": "Articles 10 years older than the execution of the queries in August 2023; duplicate; less than 4 pages; without abstract; not written in English.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-19-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "3.2 Execution Phase",
+      "span_id": "C0004-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "Each student... analyzed 10 articles each... The authors of this study double-checked the final assessment.",
+      "confidence": "medium"
+    },
+    "main_results-20-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0004-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We retrieved, categorized, and analyzed 150 articles from several scientific databases.",
+      "confidence": "medium"
+    },
+    "main_results-20-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "5. Category-based Literature Analysis Results",
+      "span_id": "C0004-D-P016-TEXT-0002",
+      "page": 16,
+      "excerpt": "From the total of 150 articles... we narrowed them down to 15.",
+      "confidence": "medium"
+    },
+    "main_results-20-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4. Quantitative-based Literature Analysis Results",
+      "span_id": "C0004-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "We observe... Transformers are one of the most used techniques in the literature.",
+      "confidence": "medium"
+    },
+    "main_results-20-04": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4. Quantitative-based Literature Analysis Results, Figure 4",
+      "span_id": "C0004-D-P014-CAPTION-0004",
+      "page": 14,
+      "excerpt": "Lower numbers of studies in the Multilingual or Link Creation categories... A-Box population or English-specific are more common.",
+      "confidence": "medium"
+    },
+    "main_results-20-05": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "6.1 Findings and Limitations",
+      "span_id": "C0004-D-P024-TEXT-0005",
+      "page": 24,
+      "excerpt": "We did not find a single standard used by the 15 studies... Constructing a ‘generic gold standard’... would be a valuable asset.",
+      "confidence": "medium"
+    },
+    "main_results-20-06": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4. Quantitative-based Literature Analysis Results, Figure 7",
+      "span_id": "C0004-D-P016-CAPTION-0006",
+      "page": 16,
+      "excerpt": "Most studies present a fully automated method, do not relate to a real-world usage scenarios, and do not disclose their data publicly.",
+      "confidence": "medium"
+    },
+    "strengths-21-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3. Systematic Literature Review Methodology",
+      "span_id": "C0004-D-P006-CAPTION-0001",
+      "page": 6,
+      "excerpt": "Systematic literature review methodology comprising three main phases: Preparation, Execution, and Reporting.",
+      "confidence": "medium"
+    },
+    "strengths-21-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.2 Execution Phase, Table 6",
+      "span_id": "C0004-D-P011-TABLE-0002",
+      "page": 11,
+      "excerpt": "Categories include Transformer, language categories, T-Box Population, A-Box Population, Lexical Resources, transformation type, and Link Creation.",
+      "confidence": "medium"
+    },
+    "strengths-21-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "5. Category-based Literature Analysis Results",
+      "span_id": "C0004-D-P016-TEXT-0003",
+      "page": 16,
+      "excerpt": "we narrowed them down to 15... The upcoming sections describe in further detail the categories and the studies that best fit such categories.",
+      "confidence": "medium"
+    },
+    "weaknesses-22-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.1 Preparation Phase",
+      "span_id": "C0004-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "We chose databases... ACM DL, IEEE Xplore, Springer Link, Elsevier, Scopus, and ACL Anthology.",
+      "confidence": "medium"
+    },
+    "weaknesses-22-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.1 Preparation Phase, Table 4",
+      "span_id": "C0004-D-P009-TABLE-0002",
+      "page": 9,
+      "excerpt": "IC-03 Language: Articles written in English.",
+      "confidence": "medium"
+    },
+    "weaknesses-22-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.1 Preparation Phase, Table 5",
+      "span_id": "C0004-D-P010-TABLE-0003",
+      "page": 10,
+      "excerpt": "Articles 10 years older than the execution of the queries in August 2023.",
+      "confidence": "medium"
+    },
+    "weaknesses-22-04": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "5. Category-based Literature Analysis Results",
+      "span_id": "C0004-D-P016-TEXT-0004",
+      "page": 16,
+      "excerpt": "From the total of 150 articles... we narrowed them down to 15.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-23-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "6.1 Findings and Limitations",
+      "span_id": "C0004-D-P024-TEXT-0001",
+      "page": 24,
+      "excerpt": "several articles lack extensive evaluation in real-world scenarios, relying on relatively small datasets or limited case studies.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-23-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "6.1 Findings and Limitations",
+      "span_id": "C0004-D-P024-TEXT-0002",
+      "page": 24,
+      "excerpt": "Many studies employing transformer architectures focus on English-centric applications... computational intensity associated with transformers is a common challenge.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-23-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "6.1 Findings and Limitations",
+      "span_id": "C0004-D-P024-TEXT-0003",
+      "page": 24,
+      "excerpt": "The availability of publicly accessible data remains limited, impacting the reproducibility and accessibility of the proposed studies.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-23-04": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "6.1 Findings and Limitations",
+      "span_id": "C0004-D-P024-TEXT-0004",
+      "page": 24,
+      "excerpt": "We did not find a single standard used by the 15 studies in the literature described in Section 5.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "6.1 Findings and Limitations",
+      "span_id": "C0004-D-P024-TEXT-0001",
+      "page": 24,
+      "excerpt": "Constructing a ‘generic gold standard’... would be a valuable asset.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "6.1 Findings and Limitations",
+      "span_id": "C0004-D-P024-TEXT-0002",
+      "page": 24,
+      "excerpt": "combining both quantitative and qualitative approaches is crucial for generating more consistent and comprehensive evaluations.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "6.1 Findings and Limitations",
+      "span_id": "C0004-D-P024-TEXT-0003",
+      "page": 24,
+      "excerpt": "These limitations demand research efforts to enhance the multilingual applicability, dataset diversity, and computational efficiency.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-04": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "6.1 Findings and Limitations",
+      "span_id": "C0004-D-P024-TEXT-0004",
+      "page": 24,
+      "excerpt": "validating solutions in diverse and realistic settings.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "6.3 Open Research Challenges",
+      "span_id": "C0004-D-P025-TEXT-0001",
+      "page": 25,
+      "excerpt": "Multilingual NL-Based KG Generation... remains a significant challenge.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "6.3 Open Research Challenges",
+      "span_id": "C0004-D-P025-TEXT-0002",
+      "page": 25,
+      "excerpt": "Real-World Applicability and Scalability: Many NL-based KG generation methods lack extensive validation in real-world scenarios.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "6.3 Open Research Challenges",
+      "span_id": "C0004-D-P025-TEXT-0003",
+      "page": 25,
+      "excerpt": "The lack of standardized evaluation metrics to calculate the quality and completeness of generated RDF triples represents a challenge.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-04": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "6.3 Open Research Challenges",
+      "span_id": "C0004-D-P026-TEXT-0004",
+      "page": 26,
+      "excerpt": "Handling Ambiguity and Polysemy... Ethical and Bias... Dynamic Knowledge Graph Evolution... User Involvement.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper reviews how unstructured natural-language text can be transformed into RDF subject-predicate-object triples and integrated into an existing ontology-governed knowledge graph; it characterizes methods, benefits, drawbacks, inputs/outputs, automation, applications, and T-Box/A-Box population.",
+  "methodology": {
+    "primary_family": "Not applicable — systematic literature review, not a Text-to-KG extraction system",
+    "secondary_families": [
+      "Transformer encoder methods (survey category)",
+      "Ontology-constrained and schema-guided methods (survey categories: T-Box and A-Box population)",
+      "Validation, correction, and knowledge-fusion methods (reviewed challenge area)"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "not_reported",
+    "description": "The authors define six research questions; construct Boolean searches over generation/extraction/construction/population × triples/KG/KB × natural-language/unstructured/textual data; search ACM DL, IEEE Xplore, SpringerLink, Elsevier Scopus, and ACL Anthology; screen title and abstracts; apply inclusion/exclusion rules; have 15 graduate students review ten articles each with author double-checking; categorize papers, generate metadata, filter the 150 retrieved records to 15 closely aligned papers, then report quantitative, qualitative, and category-based synthesis. The review categories are language specificity, transformer use, T-Box/A-Box population, lexical resources, domain specificity, and link creation."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The survey formalizes ontology O as classes, properties, and relationships (T-Box), treats an RDF KG as triples governed by that ontology, and analyzes both T-Box population (new classes/properties) and A-Box population (new instances). It does not itself execute ontology alignment or KG insertion.",
+    "evidence": [
+      {
+        "span_id": "C0004-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "Ontology O is formed by the components (C, P, R), where C represents a set of classes, P is a set of properties, and R is a set of relationships. O is also named T-Box."
+      },
+      {
+        "span_id": "C0004-D-P011-TABLE-0002",
+        "page": 11,
+        "excerpt": "T-Box Population: Approaches that define new classes and properties; A-Box Population: Approaches that insert new instances."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Survey scope: entity and concept extraction",
+    "Survey scope: entity resolution and linking",
+    "Survey scope: relation and triple extraction",
+    "Survey scope: ontology or schema discovery/population",
+    "Survey scope: graph construction and insertion",
+    "Survey scope: knowledge fusion and deduplication",
+    "Survey scope: graph validation and correction",
+    "Survey scope: graph updating/evolution"
+  ],
+  "input_output": {
+    "input_type": "Input to this study: scientific articles returned by database searches. Target phenomenon reviewed: unstructured natural-language texts, including web pages, social-media posts, and unstructured textual documents.",
+    "input_granularity": "For the reviewed systems, text can range from sentences to documents; the paper's formal problem defines a set of textual documents T = {t1, t2, ..., tn}. For the review itself, the unit is an article, initially screened by title and abstract then read in depth.",
+    "output_representation": "The surveyed task output is RDF triples in <subject, predicate, object> form, inserted into an existing KG to produce enhanced KG′ = KG ∪ ST. The paper itself outputs a systematic categorization and quantitative/qualitative literature synthesis."
+  },
+  "models_and_tools": [
+    "Literature-search sources: ACM Digital Library, IEEE Xplore, SpringerLink, Elsevier Scopus, ACL Anthology",
+    "Review workflow: manual/collaborative reading, author double-checking, categorical metadata analysis",
+    "Surveyed technical categories include rule-based OpenIE/SRL and transformer-based methods; these are reviewed, not run by this paper"
+  ],
+  "datasets": [
+    "Review corpus: 150 articles retrieved from six scientific databases",
+    "Detailed focused subset: 15 articles that process NL text, generate RDF triples, and integrate them into an existing ontology-constrained KG"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Review-level descriptive counts by publication year, category, domain, source database, automation level, real-world use, data availability, and evaluation type",
+      "No Text-to-KG model performance metric is computed by this survey"
+    ],
+    "baselines": "not_reported",
+    "setting": "Systematic literature review executed with searches current to August 2023. Inclusion allowed English book chapters, conference papers, journals, and theses that create, use, or theoretically define text-to-triple generation; exclusions covered papers more than ten years old, duplicates, short papers, absent abstracts, non-English works, and works merely mentioning a tool. Fifteen graduate students reviewed ten papers each, and authors double-checked assessments. The study reports descriptive/bibliometric and qualitative synthesis rather than a held-out model benchmark."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "The authors retrieved 150 articles, organized them in 10 categories, and selected 15 closely focused articles for detailed discussion.",
+      "The review reports a rising publication trend from 2019–2022 and identifies transformers as one of the most used techniques in the literature.",
+      "A-Box population and English-specific studies are more common, whereas multilingual and link-creation categories have fewer studies.",
+      "The surveyed work uses varied evaluation types; quantitative evaluation, especially using gold standards, is reported as common, but no common gold standard was found across the 15 detailed studies.",
+      "Most surveyed solutions are automatic or semi-automatic; most do not describe real-world usage or publicly disclose data."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0004-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "We retrieved, categorized, and analyzed 150 articles from several scientific databases."
+      },
+      {
+        "span_id": "C0004-D-P016-TEXT-0002",
+        "page": 16,
+        "excerpt": "From the total of 150 articles... we narrowed them down to 15."
+      },
+      {
+        "span_id": "C0004-D-P013-TEXT-0003",
+        "page": 13,
+        "excerpt": "We observe... Transformers are one of the most used techniques in the literature."
+      },
+      {
+        "span_id": "C0004-D-P014-CAPTION-0004",
+        "page": 14,
+        "excerpt": "Lower numbers of studies in the Multilingual or Link Creation categories... A-Box population or English-specific are more common."
+      },
+      {
+        "span_id": "C0004-D-P024-TEXT-0005",
+        "page": 24,
+        "excerpt": "We did not find a single standard used by the 15 studies... Constructing a ‘generic gold standard’... would be a valuable asset."
+      },
+      {
+        "span_id": "C0004-D-P016-CAPTION-0006",
+        "page": 16,
+        "excerpt": "Most studies present a fully automated method, do not relate to a real-world usage scenarios, and do not disclose their data publicly."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: The explicit three-phase protocol, Boolean search formulation, stated eligibility criteria, database list, and reported screening/refinement path make the review more auditable than an unstated narrative survey.",
+      "Review-level inference: The paper combines broad quantitative coverage of 150 retrieved articles with detailed, category-based qualitative discussion of 15 papers tightly aligned to ontology-respecting KG enhancement.",
+      "Review-level inference: Its categories capture methodological, language, ontology-population, resource, domain, and linking dimensions, enabling comparison beyond a single model family."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0004-D-P006-CAPTION-0001",
+        "page": 6,
+        "excerpt": "Systematic literature review methodology comprising three main phases: Preparation, Execution, and Reporting."
+      },
+      {
+        "span_id": "C0004-D-P011-TABLE-0002",
+        "page": 11,
+        "excerpt": "Categories include Transformer, language categories, T-Box Population, A-Box Population, Lexical Resources, transformation type, and Link Creation."
+      },
+      {
+        "span_id": "C0004-D-P016-TEXT-0003",
+        "page": 16,
+        "excerpt": "we narrowed them down to 15... The upcoming sections describe in further detail the categories and the studies that best fit such categories."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: The review's evidence base is constrained by English-only eligibility, a ten-year cutoff, six selected databases, and title/abstract screening before full reading; relevant work outside those choices may be missed.",
+      "Review-level inference: The detailed synthesis is limited to 15 papers after an initial 150-record analysis, so category-level claims should not be read as a comprehensive benchmark of every retrieved paper.",
+      "Review-level inference: It reports a collaborative review and author double-checking but does not report inter-reviewer agreement, a formal quality appraisal score, or a reproducible record-level screening flow in the examined text."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0004-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "We chose databases... ACM DL, IEEE Xplore, Springer Link, Elsevier, Scopus, and ACL Anthology."
+      },
+      {
+        "span_id": "C0004-D-P009-TABLE-0002",
+        "page": 9,
+        "excerpt": "IC-03 Language: Articles written in English."
+      },
+      {
+        "span_id": "C0004-D-P010-TABLE-0003",
+        "page": 10,
+        "excerpt": "Articles 10 years older than the execution of the queries in August 2023."
+      },
+      {
+        "span_id": "C0004-D-P016-TEXT-0004",
+        "page": 16,
+        "excerpt": "From the total of 150 articles... we narrowed them down to 15."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The surveyed literature often lacks extensive real-world validation and relies on relatively small datasets or limited case studies, limiting conclusions about scalability and robustness.",
+      "Transformer approaches in the surveyed literature are often English-centric, depend on large high-quality training datasets, and can be computationally intensive.",
+      "Publicly accessible data and real-world application reporting are limited among surveyed studies, impairing reproducibility and accessibility.",
+      "No single gold standard was found across the 15 detailed studies."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0004-D-P024-TEXT-0001",
+        "page": 24,
+        "excerpt": "several articles lack extensive evaluation in real-world scenarios, relying on relatively small datasets or limited case studies."
+      },
+      {
+        "span_id": "C0004-D-P024-TEXT-0002",
+        "page": 24,
+        "excerpt": "Many studies employing transformer architectures focus on English-centric applications... computational intensity associated with transformers is a common challenge."
+      },
+      {
+        "span_id": "C0004-D-P024-TEXT-0003",
+        "page": 24,
+        "excerpt": "The availability of publicly accessible data remains limited, impacting the reproducibility and accessibility of the proposed studies."
+      },
+      {
+        "span_id": "C0004-D-P024-TEXT-0004",
+        "page": 24,
+        "excerpt": "We did not find a single standard used by the 15 studies in the literature described in Section 5."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Authors' proposed direction: develop a generic gold standard and unified evaluation basis for comparing text-to-KG methods.",
+      "Authors' proposed direction: combine quantitative and qualitative assessment to evaluate both volume-oriented measures and semantic coherence.",
+      "Authors' proposed direction: improve multilingual applicability, dataset diversity, and computational efficiency of transformer-based KG generation.",
+      "Authors' proposed direction: validate methods on larger, more diverse, and realistic settings."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0004-D-P024-TEXT-0001",
+        "page": 24,
+        "excerpt": "Constructing a ‘generic gold standard’... would be a valuable asset."
+      },
+      {
+        "span_id": "C0004-D-P024-TEXT-0002",
+        "page": 24,
+        "excerpt": "combining both quantitative and qualitative approaches is crucial for generating more consistent and comprehensive evaluations."
+      },
+      {
+        "span_id": "C0004-D-P024-TEXT-0003",
+        "page": 24,
+        "excerpt": "These limitations demand research efforts to enhance the multilingual applicability, dataset diversity, and computational efficiency."
+      },
+      {
+        "span_id": "C0004-D-P024-TEXT-0004",
+        "page": 24,
+        "excerpt": "validating solutions in diverse and realistic settings."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Multilingual RDF triple/KG generation, especially for less-resourced languages and cross-language generalization",
+      "Real-world applicability and scalable processing of large, dynamic datasets",
+      "Evaluation measures for quality, completeness, semantic accuracy, coherence, and relevance",
+      "Ambiguity and polysemy handling through context-aware disambiguation",
+      "Ethical bias in training data and generated knowledge",
+      "Dynamic KG acquisition, integration, and temporal evolution under real-time updates",
+      "Effective user, domain-expert, and human-in-the-loop feedback mechanisms"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0004-D-P025-TEXT-0001",
+        "page": 25,
+        "excerpt": "Multilingual NL-Based KG Generation... remains a significant challenge."
+      },
+      {
+        "span_id": "C0004-D-P025-TEXT-0002",
+        "page": 25,
+        "excerpt": "Real-World Applicability and Scalability: Many NL-based KG generation methods lack extensive validation in real-world scenarios."
+      },
+      {
+        "span_id": "C0004-D-P025-TEXT-0003",
+        "page": 25,
+        "excerpt": "The lack of standardized evaluation metrics to calculate the quality and completeness of generated RDF triples represents a challenge."
+      },
+      {
+        "span_id": "C0004-D-P026-TEXT-0004",
+        "page": 26,
+        "excerpt": "Handling Ambiguity and Polysemy... Ethical and Bias... Dynamic Knowledge Graph Evolution... User Involvement."
+      }
+    ]
+  },
+  "code_and_data_availability": "not_reported"
+}

@@ -1,0 +1,808 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0005",
+    "title": "Constructing Knowledge Graphs from Text Using Large Language Models: Scoping Review",
+    "pdf_path": "/tmp/batch03-c0005-R4tlcA/C0005.pdf",
+    "authors": [
+      "Giovanna Borges Bottino",
+      "José de Jesus Pérez Alcázar"
+    ],
+    "year": 2025,
+    "venue": "Companion Proceedings of the 40th Brazilian Symposium on Data Bases",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The use of Large Language Models (LLMs) for Knowledge Graph (KG) construction has gained significant traction, yet the field lacks methodological standardization. This study conducts a scope review following the PRISMA framework to map existing techniques and categorize them into four main approaches: (i) RDF-Based; (ii) Prompt-Based; (iii) RAG-Based; and (iv) Hybrid Pipelines. Analyzing 126 primary studies, the authors identify scalability and automation as benefits, alongside low precision and manual curation as challenges.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "front matter",
+      "span_id": "C0005-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Giovanna Borges Bottino and José de Jesus Pérez Alcázar are listed as the authors.",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "front matter",
+      "span_id": "C0005-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The header identifies the Companion Proceedings of the 40th Brazilian Symposium on Data Bases and October 2025.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "front matter",
+      "span_id": "C0005-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Companion Proceedings of the 40th Brazilian Symposium on Data Bases, October 2025 – Fortaleza, CE, Brazil.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0005-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The use of Large Language Models (LLMs) for Knowledge Graph (KG) construction has gained significant traction, yet the field lacks methodological standardization. This study conducts a scope review following the PRISMA framework to map existing techniques and categorize them into four main approaches: (i) RDF-Based; (ii) Prompt-Based; (iii) RAG-Based; (iv) Hybrid Pipelines.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0005-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "A scope review of this topic is essential to map existing techniques, compare their effectiveness, and identify gaps in the literature.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Research Questions",
+      "span_id": "C0005-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "What techniques are associated with the use of LLMs in constructing knowledge graphs from Text Sources?",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-06-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Constructing KG from text source using LLM",
+      "span_id": "C0005-D-P007-PICTURE-0001",
+      "page": 7,
+      "excerpt": "The extracted method descriptions are grouped into four categories: RDF-Based, Prompt-Based, RAG-Based, and Hybrid Pipelines.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-06-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "RDF-Based",
+      "span_id": "C0005-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "RDF-Based approaches align extracted elements with established vocabularies, serialize data in RDF, and store triples in a triple store.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-06-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Hybrid Pipelines",
+      "span_id": "C0005-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "Hybrid Pipelines combine traditional NLP techniques, such as Named Entity Recognition and Relation Extraction, with LLM-based reasoning, including post-processing, semantic validation, or contextual augmentation.",
+      "confidence": "medium"
+    },
+    "methodology-description-07-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Methodology",
+      "span_id": "C0005-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The review process was divided into three phases: planning, which involved developing the research protocol; execution, which entailed conducting the review; and reporting, which consisted of summarizing and presenting the results.",
+      "confidence": "medium"
+    },
+    "methodology-description-07-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Information Sources; Search Strategy; Data Extraction and Synthesis Strategy",
+      "span_id": "C0005-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Scopus, IEEE Xplore, ScienceDirect, and ACM were selected ... The search string was formulated as “Knowledge Graph” AND (“Large Language Model” OR “LLM” OR “Generative Pre-trained Transformers”) AND text.",
+      "confidence": "medium"
+    },
+    "methodology-description-07-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Prompt-Based",
+      "span_id": "C0005-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "The process begins with a corpus of text. A prompt is designed ... and passed to an LLM ... The model outputs structured triples, which may be cleaned and stored in a graph database or serialized as RDF.",
+      "confidence": "medium"
+    },
+    "methodology-description-07-04": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "RAG-Based",
+      "span_id": "C0005-D-P008-TEXT-0004",
+      "page": 8,
+      "excerpt": "The input is preprocessed and passed to an RAG module ... retrieved documents, along with the original input, are combined into an enriched prompt ... The LLM generates subject-predicate-object triples, which are evaluated and integrated into the existing graph.",
+      "confidence": "medium"
+    },
+    "methodology-description-07-05": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Hybrid Pipelines",
+      "span_id": "C0005-D-P009-TEXT-0005",
+      "page": 9,
+      "excerpt": "NLP tools ... extract initial entities and relationships. The output is then passed to an LLM, which refines, validates, or augments it ... Final triples are aligned with ontologies and stored.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-08-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "RDF-Based",
+      "span_id": "C0005-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "After defining the domain and selecting existing ontologies, the user generates a prompt that sends the existing ontologies as text, a link, or a description, along with the text. Each extracted element is aligned with established vocabularies.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-08-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Prompt-Based",
+      "span_id": "C0005-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "With this method, no supervised fine-tuning is required; it just emphasizes prompt design without relying on predefined ontologies.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-08-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "RAG-Based",
+      "span_id": "C0005-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "The goal is to enhance LLM with external knowledge sources, such as document bases, wikis, databases, or existing graphs, before or during the triple generation process.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-09-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0005-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Automatically creating a knowledge graph ... includes entity recognition, coreference resolution, and relation extraction.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-09-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "RDF-Based",
+      "span_id": "C0005-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Each extracted element is aligned with established vocabularies. The data is serialized in RDF ... and the resulting triples are stored in a triple store.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-09-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "RAG-Based",
+      "span_id": "C0005-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "The input is preprocessed ... relevant documents are retrieved ... triples are generated, evaluated, and integrated into the existing graph.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-09-04": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Hybrid Pipelines",
+      "span_id": "C0005-D-P009-TEXT-0004",
+      "page": 9,
+      "excerpt": "NLP tools ... extract initial entities and relationships. The LLM refines, validates, or augments it ... Final triples are aligned with ontologies and stored.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-10-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0005-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The paper focuses on constructing knowledge graphs from unstructured data and describes the source as text.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-10-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "RAG-Based",
+      "span_id": "C0005-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "The pipeline begins with a user-provided input, such as a document or a short text.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-11-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0005-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Entity recognition identifies mentions of entities within the data ... Relation extraction establishes semantic connections between entities.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-11-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "RAG-Based",
+      "span_id": "C0005-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "The pipeline begins with a user-provided input, such as a document or a short text.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-12-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Prompt-Based",
+      "span_id": "C0005-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "The model outputs structured triples, which may be cleaned and stored in a graph database or serialized as RDF.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-12-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "RDF-Based",
+      "span_id": "C0005-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "The data is serialized in RDF ... Finally, the resulting triples are stored in a triple store.",
+      "confidence": "medium"
+    },
+    "models_and_tools-13-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Which LLMs have been most commonly used for this purpose?",
+      "span_id": "C0005-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "The most frequently used LLM was OpenAI GPT, followed by LLAMA and Chat GLM. GPT-4 and its branches were the most commonly used GPT versions.",
+      "confidence": "medium"
+    },
+    "models_and_tools-13-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Template-Driven Prompt",
+      "span_id": "C0005-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "This subcategory ... utilized Baidu ERNIE 4.0 in healthcare settings.",
+      "confidence": "medium"
+    },
+    "models_and_tools-13-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "RDF-Based",
+      "span_id": "C0005-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "The most used LLM was OpenAI GPT, primarily GPT-3 and GPT-3.5 ... triples are stored in a triple store, where they can be queried using SPARQL.",
+      "confidence": "medium"
+    },
+    "models_and_tools-13-04": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Hybrid Pipelines",
+      "span_id": "C0005-D-P009-TEXT-0004",
+      "page": 9,
+      "excerpt": "NLP tools (e.g., spaCy, BERT, dependency parsers) extract initial entities and relationships. ... the most used [LLM] was Owen.",
+      "confidence": "medium"
+    },
+    "datasets-14-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Data Extraction and Synthesis Strategy",
+      "span_id": "C0005-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "Data extraction was carried out in three stages: compiling a reading form; conducting a detailed analysis; and synthesizing the data for integration into the systematic review.",
+      "confidence": "medium"
+    },
+    "datasets-14-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Reporting the review",
+      "span_id": "C0005-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "A search ... on March 31, 2025, retrieving 321 studies, with 48 duplicates removed ... After full-text screening ... 126 included studies included an evaluation of the generated knowledge graphs.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-15-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "RDF-Based",
+      "span_id": "C0005-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "They are evaluated using Recall, variants, and F1-score.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-15-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "RAG-Based",
+      "span_id": "C0005-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "It is usually assessed by precision and Recall.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-15-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Hybrid Pipelines",
+      "span_id": "C0005-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "Recall that SimKGC and WN18RR were the metrics used for evaluation.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-16-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Eligibility Criteria",
+      "span_id": "C0005-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The study selection strategy was based on and adapted from ... PRISMA ... four main phases: Identification, Screening, Eligibility, and Inclusion.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-16-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Conclusion",
+      "span_id": "C0005-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "Methodological heterogeneity, variability in evaluation metrics, and the absence of standardized benchmarks complicate direct comparison between approaches.",
+      "confidence": "medium"
+    },
+    "main_results-17-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Which LLMs have been most commonly used for this purpose?",
+      "span_id": "C0005-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "Among the 126 studies analyzed, 36 compared multiple models ... The most frequently used LLM was OpenAI GPT, followed by LLAMA and Chat GLM.",
+      "confidence": "medium"
+    },
+    "main_results-17-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "What are the key advantages ...; main limitations",
+      "span_id": "C0005-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "The studies identified three main advantages ... automation, scalability, and precision.",
+      "confidence": "medium"
+    },
+    "main_results-17-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "RDF-Based",
+      "span_id": "C0005-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "This approach ... produce knowledge graphs with RDF syntax and tools ... semantically compatible with existing formal ontologies.",
+      "confidence": "medium"
+    },
+    "main_results-17-04": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Prompt-Based",
+      "span_id": "C0005-D-P007-TEXT-0004",
+      "page": 7,
+      "excerpt": "This category ... directly extract structured triples ... without relying on predefined ontologies.",
+      "confidence": "medium"
+    },
+    "main_results-17-05": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Summary",
+      "span_id": "C0005-D-P010-TEXT-0005",
+      "page": 10,
+      "excerpt": "RDF-based and hybrid pipelines prioritize semantic control, structural rigor, and interpretability, while prompt-based and RAG-based methods offer flexibility, scalability, and accessibility at the cost of reproducibility and formal grounding.",
+      "confidence": "medium"
+    },
+    "strengths-18-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Eligibility Criteria",
+      "span_id": "C0005-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The adoption of PRISMA ensured a standardized, transparent, and rigorous selection process.",
+      "confidence": "medium"
+    },
+    "strengths-18-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Data Extraction and Synthesis Strategy",
+      "span_id": "C0005-D-P005-PICTURE-0002",
+      "page": 5,
+      "excerpt": "Figure 1 illustrates the PRISMA flowchart ... Identification, Screening, and Inclusion.",
+      "confidence": "medium"
+    },
+    "strengths-18-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Prompt-Based",
+      "span_id": "C0005-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "It was divided into subcategories: Zero-Shot Prompting, Sequential Prompt Chaining, and Template-Driven Prompt.",
+      "confidence": "medium"
+    },
+    "strengths-18-04": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Summary",
+      "span_id": "C0005-D-P010-TEXT-0004",
+      "page": 10,
+      "excerpt": "These approaches differ in semantic formalism, reliance on prompting, architectural complexity, intended use cases, supervision, reproducibility, and semantic robustness.",
+      "confidence": "medium"
+    },
+    "weaknesses-19-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Summary",
+      "span_id": "C0005-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "Prompt-based and RAG-based approaches are ... less reliable for high-stakes applications ... prompt-based and RAG-based methods are highly sensitive to non-deterministic factors.",
+      "confidence": "medium"
+    },
+    "weaknesses-19-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion",
+      "span_id": "C0005-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "Methodological heterogeneity, variability in evaluation metrics, and the absence of standardized benchmarks complicate direct comparison between approaches.",
+      "confidence": "medium"
+    },
+    "weaknesses-19-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Hybrid Pipelines; Summary",
+      "span_id": "C0005-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "This subcategory encompasses 13 studies ... Hybrid pipelines ... [are] the only class that typically incorporates supervised learning components.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-20-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "RDF-Based",
+      "span_id": "C0005-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "The outputs often do not match the quality typically achieved by human experts, since it cannot resolve contradictions or conflicting knowledge within RDF.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-20-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Prompt-Based",
+      "span_id": "C0005-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "Hallucinations persist even with prompt refinement and [the methods have] poor support for complex relations.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-20-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Hybrid Pipelines",
+      "span_id": "C0005-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "This method ... requires expert validation for higher precision, since some models presented only 68% initial accuracy.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-20-04": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Conclusion",
+      "span_id": "C0005-D-P011-TEXT-0004",
+      "page": 11,
+      "excerpt": "As limitations of this review, the rapid evolution of the field may have led to the exclusion of very recent research that has not yet been indexed in the consulted sources.",
+      "confidence": "medium"
+    },
+    "possible_improvements-21-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Conclusion",
+      "span_id": "C0005-D-P011-TEXT-0001",
+      "page": 11,
+      "excerpt": "For future research, there is a clear need to develop standardized metrics for evaluating LLM-generated Knowledge Graphs. Explore new models that mitigate hallucinations and enhance extraction reliability to improve accuracy and computational efficiency.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-22-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "What are the main limitations of using LLMs for this purpose?",
+      "span_id": "C0005-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "The studies highlighted three recurring issues: manual curation, limited generalization, and low precision.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-22-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "RAG-Based",
+      "span_id": "C0005-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "This category has ... no symbolic reasoning or graph inference, and has no automated validation or integration with RDF-based ontologies.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-22-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion",
+      "span_id": "C0005-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "The field still faces ... low precision, the need for manual curation, and limited generalization across domains ... [and] the absence of standardized benchmarks.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-23-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Reporting the review",
+      "span_id": "C0005-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "The data can be accessed through the Google Drive [footnote 1].",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses the lack of methodological standardization and consolidated evidence about techniques that use LLMs to construct knowledge graphs from unstructured text. Its objective is to map existing approaches, compare their effectiveness and characteristics, and identify benefits, limitations, and research gaps.",
+  "methodology": {
+    "primary_family": "not_reported",
+    "secondary_families": [
+      "Generative text-to-structure methods",
+      "Zero-shot and few-shot LLM prompting",
+      "Instruction-tuned or fine-tuned LLM methods",
+      "Ontology-constrained and schema-guided methods",
+      "Hybrid NLP and LLM methods",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "not_reported",
+    "supervision_setting": "not_reported",
+    "description": "This is a PRISMA-based scoping review, not a single Text-to-KG system. The review has planning, execution, and reporting phases. It searches Scopus, IEEE Xplore, ScienceDirect, and ACM using the query “Knowledge Graph” AND (“Large Language Model” OR “LLM” OR “Generative Pre-trained Transformers”) AND text; screens studies using eligibility criteria; extracts bibliographic and methodological information; and synthesizes 126 included primary studies into four categories. The reviewed execution patterns are: RDF-based ontology selection, LLM-assisted extraction and RDF serialization; prompt-based direct structured-triple extraction; RAG-based retrieval followed by enriched LLM triple generation and graph integration; and hybrid NLP extraction followed by LLM refinement, validation, or augmentation and graph storage."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "Ontology/schema use varies by reviewed category. RDF-Based methods explicitly define a domain and select existing ontologies, provide ontology text, links, or descriptions to the LLM, align extracted elements with established vocabularies, serialize RDF, and store triples. Prompt-Based methods generally do not rely on predefined ontologies. RAG-Based methods use external document bases, wikis, databases, or existing graphs as retrieved context but usually do not enforce formal schema alignment. Hybrid Pipelines may align final triples with ontologies depending on their NLP configuration.",
+    "evidence": [
+      {
+        "span_id": "C0005-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "After defining the domain and selecting existing ontologies, the user generates a prompt that sends the existing ontologies as text, a link, or a description, along with the text. Each extracted element is aligned with established vocabularies."
+      },
+      {
+        "span_id": "C0005-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "With this method, no supervised fine-tuning is required; it just emphasizes prompt design without relying on predefined ontologies."
+      },
+      {
+        "span_id": "C0005-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "The goal is to enhance LLM with external knowledge sources, such as document bases, wikis, databases, or existing graphs, before or during the triple generation process."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing",
+    "Entity and concept extraction",
+    "Coreference resolution",
+    "Relation and triple extraction",
+    "Ontology or schema discovery and selection",
+    "Graph construction and RDF serialization",
+    "Knowledge fusion and deduplication",
+    "Graph validation and correction"
+  ],
+  "input_output": {
+    "input_type": "Unstructured textual data, including raw documents, corpora, short texts, and domain documents such as healthcare, policy, education, legal, manufacturing, and general-knowledge text.",
+    "input_granularity": "Document-, corpus-, and short-text-level inputs; the review also describes mentions and relations as extraction targets.",
+    "output_representation": "Subject-predicate-object triples, RDF triples or other RDF serializations, and populated graph databases/triple stores; hybrid systems may output ontology-aligned final triples."
+  },
+  "models_and_tools": [
+    "OpenAI GPT, especially GPT-3, GPT-3.5, GPT-4, and GPT-4o",
+    "LLAMA/LLaMA",
+    "ChatGLM",
+    "Baidu ERNIE 4.0",
+    "Owen",
+    "BERT",
+    "spaCy",
+    "dependency parsers",
+    "RAG modules",
+    "RDF tools and triple stores",
+    "SPARQL"
+  ],
+  "datasets": [
+    "Scoping-review corpus of 126 included primary studies",
+    "Search-result pool: 321 retrieved studies from Scopus, IEEE Xplore, ScienceDirect, and ACM on 31 March 2025"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Recall",
+      "Recall variants",
+      "F1-score",
+      "Precision",
+      "SimKGC",
+      "WN18RR"
+    ],
+    "baselines": "not_reported",
+    "setting": "Scoping-review synthesis of primary studies rather than a new controlled experiment. The review applied PRISMA-style identification, screening, eligibility, and inclusion; it reports category counts, model/domain frequencies, and qualitative cross-study comparisons, while noting heterogeneous metrics and evaluation practices."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "The review analyzed 126 primary studies and grouped them into four categories: RDF-Based (50 studies), Prompt-Based (35), RAG-Based (22), and Hybrid Pipelines (19).",
+      "Among 36 studies that compared multiple models, OpenAI GPT was most frequently used, followed by LLAMA and ChatGLM; GPT-4 and its branches were the most common GPT versions.",
+      "When application domains were specified, general knowledge was most frequent, followed by health and manufacturing processes.",
+      "The review identifies automation, scalability, and precision as recurring advantages, and manual curation, limited generalization, and low precision as recurring limitations.",
+      "RDF-Based methods emphasize formal ontologies, RDF serialization, semantic interoperability, and SPARQL querying; Prompt-Based methods emphasize direct triple extraction without supervised fine-tuning or predefined ontologies; RAG-Based methods add retrieved external context; Hybrid Pipelines combine classical NLP extraction with LLM refinement, validation, or augmentation.",
+      "The review reports that no single approach resolves all challenges and that prompt- and RAG-based methods are more flexible but less reproducible, while RDF-based and hybrid methods provide greater structural control and interpretability."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0005-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "Among the 126 studies analyzed, 36 compared multiple models ... The most frequently used LLM was OpenAI GPT, followed by LLAMA and Chat GLM."
+      },
+      {
+        "span_id": "C0005-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "The studies identified three main advantages ... automation, scalability, and precision."
+      },
+      {
+        "span_id": "C0005-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "This approach ... produce knowledge graphs with RDF syntax and tools ... semantically compatible with existing formal ontologies."
+      },
+      {
+        "span_id": "C0005-D-P007-TEXT-0004",
+        "page": 7,
+        "excerpt": "This category ... directly extract structured triples ... without relying on predefined ontologies."
+      },
+      {
+        "span_id": "C0005-D-P010-TEXT-0005",
+        "page": 10,
+        "excerpt": "RDF-based and hybrid pipelines prioritize semantic control, structural rigor, and interpretability, while prompt-based and RAG-based methods offer flexibility, scalability, and accessibility at the cost of reproducibility and formal grounding."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "The review uses an explicit PRISMA-adapted protocol with stated research questions, databases, search string, eligibility criteria, extraction stages, and synthesis procedure.",
+      "It provides a compact taxonomy of four recurring LLM-based KG-construction patterns and further subdivides prompt-based methods into zero-shot prompting, sequential prompt chaining, and template-driven prompting.",
+      "It compares approaches along useful dimensions: ontology alignment, prompting role, supervision, reproducibility, semantic control, scalability, and interpretability.",
+      "It identifies recurring cross-study benefits and limitations rather than presenting only isolated paper summaries."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0005-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "The adoption of PRISMA ensured a standardized, transparent, and rigorous selection process."
+      },
+      {
+        "span_id": "C0005-D-P005-PICTURE-0002",
+        "page": 5,
+        "excerpt": "Figure 1 illustrates the PRISMA flowchart ... Identification, Screening, and Inclusion."
+      },
+      {
+        "span_id": "C0005-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "It was divided into subcategories: Zero-Shot Prompting, Sequential Prompt Chaining, and Template-Driven Prompt."
+      },
+      {
+        "span_id": "C0005-D-P010-TEXT-0004",
+        "page": 10,
+        "excerpt": "These approaches differ in semantic formalism, reliance on prompting, architectural complexity, intended use cases, supervision, reproducibility, and semantic robustness."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: the four categories do not map cleanly onto the repository's finer-grained Text-to-KG taxonomy and mix architectural choices (RDF, RAG, hybrid) with prompting strategies and supervision settings.",
+      "The review reports heterogeneous metrics and no standardized benchmarks, limiting direct comparison across studies.",
+      "The category counts are internally inconsistent: the four reported counts sum to 126, but the text elsewhere states that 19 Hybrid Pipeline studies include 13 supervised fine-tuning studies and also presents the total as 126 without a clear overlap policy.",
+      "The review's cross-study claims about precision, accuracy, reproducibility, and model prevalence are summarized qualitatively, with limited method-, dataset-, split-, and metric-level quantitative evidence."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0005-D-P010-TEXT-0001",
+        "page": 10,
+        "excerpt": "Prompt-based and RAG-based approaches are ... less reliable for high-stakes applications ... prompt-based and RAG-based methods are highly sensitive to non-deterministic factors."
+      },
+      {
+        "span_id": "C0005-D-P011-TEXT-0002",
+        "page": 11,
+        "excerpt": "Methodological heterogeneity, variability in evaluation metrics, and the absence of standardized benchmarks complicate direct comparison between approaches."
+      },
+      {
+        "span_id": "C0005-D-P010-TEXT-0003",
+        "page": 10,
+        "excerpt": "This subcategory encompasses 13 studies ... Hybrid pipelines ... [are] the only class that typically incorporates supervised learning components."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The rapidly evolving field may have caused very recent research not yet indexed in the consulted sources to be excluded.",
+      "Persistent challenges across the reviewed studies include low precision, the need for manual curation, and limited generalization across domains.",
+      "Methodological heterogeneity, variable evaluation metrics, and the absence of standardized benchmarks complicate direct comparisons.",
+      "The paper notes that LLM-generated outputs may hallucinate, have poor support for complex relations, fail to resolve contradictions or conflicting RDF knowledge, and require expert validation in some hybrid settings."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0005-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "The outputs often do not match the quality typically achieved by human experts, since it cannot resolve contradictions or conflicting knowledge within RDF."
+      },
+      {
+        "span_id": "C0005-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "Hallucinations persist even with prompt refinement and [the methods have] poor support for complex relations."
+      },
+      {
+        "span_id": "C0005-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "This method ... requires expert validation for higher precision, since some models presented only 68% initial accuracy."
+      },
+      {
+        "span_id": "C0005-D-P011-TEXT-0004",
+        "page": 11,
+        "excerpt": "As limitations of this review, the rapid evolution of the field may have led to the exclusion of very recent research that has not yet been indexed in the consulted sources."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Develop standardized metrics for evaluating LLM-generated knowledge graphs.",
+      "Explore models and methods that mitigate hallucinations and improve extraction reliability, accuracy, and computational efficiency.",
+      "Review-level inference: future syntheses should enforce explicit overlap accounting, harmonize category definitions with Text-to-KG stages, and report compatible dataset/task/split/metric associations before comparing methods."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0005-D-P011-TEXT-0001",
+        "page": 11,
+        "excerpt": "For future research, there is a clear need to develop standardized metrics for evaluating LLM-generated Knowledge Graphs. Explore new models that mitigate hallucinations and enhance extraction reliability to improve accuracy and computational efficiency."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Low precision, false positives, semantic ambiguity, and systemic errors in named-entity recognition and triple generation remain unresolved.",
+      "Manual curation and expert validation are still required for system configuration, ontology development, rule-based setups, and high-precision output.",
+      "Generalization across domains remains limited, especially where methods depend on rigid models or domain-specific resources.",
+      "Hallucinations, inability to resolve contradictions or conflicting knowledge, and weak handling of complex relations remain open problems.",
+      "The field lacks standardized benchmarks and consistent evaluation metrics, making cross-method comparison difficult.",
+      "Prompt and RAG methods remain sensitive to nondeterminism and may lack formal grounding, symbolic reasoning, automated validation, or ontology integration."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0005-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "The studies highlighted three recurring issues: manual curation, limited generalization, and low precision."
+      },
+      {
+        "span_id": "C0005-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "This category has ... no symbolic reasoning or graph inference, and has no automated validation or integration with RDF-based ontologies."
+      },
+      {
+        "span_id": "C0005-D-P011-TEXT-0003",
+        "page": 11,
+        "excerpt": "The field still faces ... low precision, the need for manual curation, and limited generalization across domains ... [and] the absence of standardized benchmarks."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that the review data can be accessed through a Google Drive folder, but no code repository is reported."
+}

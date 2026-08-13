@@ -1,0 +1,655 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0007",
+    "title": "Semi-Automatic Knowledge Graph Construction by Relation Pattern Extraction",
+    "pdf_path": "data/batches/batch-02/C0007.pdf",
+    "authors": [
+      "Yingju Xia",
+      "Zhongguang Zheng",
+      "Yao Meng",
+      "Jun Sun"
+    ],
+    "year": 2019,
+    "venue": "Computación y Sistemas, Vol. 23, No. 3",
+    "identifier": {
+      "status": "reported",
+      "value": "10.13053/CyS-23-3-3243",
+      "evidence": [
+        {
+          "span_id": "C0007-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "doi: 10.13053/CyS-23-3-3243"
+        }
+      ]
+    },
+    "abstract": "The paper proposes a semi-automatic method for knowledge-graph construction by extracting relation patterns and finding new relations. Relation patterns are represented as tag sequences, pattern similarity is learned from existing relation instances using a Siamese network, and similarity plus clustering is used to extract new patterns and detect new relations. Experiments on large-scale web pages evaluate similarity learning and new-relation clustering.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0007-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Yingju Xia, Zhongguang Zheng, Yao Meng, Jun Sun",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication metadata",
+      "span_id": "C0007-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Computación y Sistemas, Vol. 23, No. 3, 2019",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication metadata",
+      "span_id": "C0007-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Computación y Sistemas, Vol. 23, No. 3, 2019, pp. 785–793",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Publication metadata",
+      "span_id": "C0007-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "doi: 10.13053/CyS-23-3-3243",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0007-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "This paper proposed a novel semi-automatic method that builds knowledge graph by extracting relation patterns and finding new relations. The pattern similarity is adopted to extract new patterns for existing relations. The new relations are detected by using the pattern similarity and clustering technique.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0007-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "There are always various representations for one relation... There are always various templates to generate relation (relation, object) among different websites... The manual annotation is an expensive and time-consuming step.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0007-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The vector of the (relation, object) pair is gotten from the embedding method and feed to the Siamese network to learn a similarity metric.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Relation Patterns Building and Refining",
+      "span_id": "C0007-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "The relation pattern... use the centroid point as the relation pattern.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Relation Patterns Building and Refining",
+      "span_id": "C0007-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "The clustering method... may get some relation instances clusters using clustering method.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Method Introduction",
+      "span_id": "C0007-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "There are several steps in our system: Make the representation for the relation instances; Learn the similarity between tag sequences; Build extraction patterns from seed instances; Refine the extraction patterns with new instances.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "The Siamese Network for Sequence Similarity Calculation",
+      "span_id": "C0007-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We use ‘0’ to indicate the same relation and ‘1’ for different relations.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0007-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Each web page is presented as a DOM Tree... the sample (relation, object) is presented as tag sequence of the XPath.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "The Siamese Network for Sequence Similarity Calculation",
+      "span_id": "C0007-D-P004-PICTURE-0002",
+      "page": 4,
+      "excerpt": "The word embeddings are... trained a Skip-Gram word2vec model from the intermediate result of DOM tree parsing... the structure of the feature map network is a 5 layers full-connected network.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Relation Patterns Building and Refining",
+      "span_id": "C0007-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "The relation patterns can achieve self-improvement by finding more and more samples using the similarity metric.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0007-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Given some instances of the relations for an entity, the system build the relation patterns and find more relation instances from web pages.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Experiments",
+      "span_id": "C0007-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The future work includes finding new representation of the relation patterns and give the labels for new relations automatically.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Experiments—Data Set",
+      "span_id": "C0007-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We built a knowledge graph for enterprise using the proposed method... the system... extracts information from web pages.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Relation Patterns Building and Refining",
+      "span_id": "C0007-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "This method can also be used to detect the patterns for new relations.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0007-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We focus on extracting the special information from structured web and building a knowledge graph... Each page on this kind of websites contains one or more facts about a particular entity.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Representation of the Input Relation Instances",
+      "span_id": "C0007-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The inputs of this system are two relation instances from the webpages. The relation (R) and object (O) of each relation instance will be embedded in a tag sequence of XPath.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Experiments—Data Set",
+      "span_id": "C0007-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We built a knowledge graph... which contains 2,717,653 company entities and 22,257,276 triples.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0007-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "The system can also find new relations by clustering method using the learned similarity metric.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "The Siamese Network for Sequence Similarity Calculation",
+      "span_id": "C0007-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We adopted the word embedding approach and trained a Skip-Gram word2vec model from the intermediate result of DOM tree parsing.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "The Siamese Network for Sequence Similarity Calculation",
+      "span_id": "C0007-D-P004-PICTURE-0002",
+      "page": 4,
+      "excerpt": "The structure of the feature map network is a 5 layers full-connected network.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Experiments",
+      "span_id": "C0007-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "Two clustering methods (Hierarchy and K-Means) are evaluated.",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Experiments—Data Set",
+      "span_id": "C0007-D-P005-TABLE-0001",
+      "page": 5,
+      "excerpt": "We got a collection of websites about Japanese companies... the knowledge graph... contains 2,717,653 company entities and 22,257,276 triples.",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0007-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "There are 10 relations and total 286,276 instances.",
+      "confidence": "medium"
+    },
+    "datasets-18-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0007-D-P006-TABLE-0003",
+      "page": 6,
+      "excerpt": "Relation: fax, email, permission, introduction, domains, offices.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0007-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "The evaluation metric for similarity are: FA (False Accept Rate), FR (False Reject Rate), EER (Equal Error Rate).",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0007-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Using precision and recall... to evaluate the performance.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0007-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "We train the model on the previous 10 relations... Then we test this model on the dataset with different relations.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0007-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "We find the optimal threshold on the valid dataset and use the threshold to get the FA and FR on test dataset.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0007-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "Input test data of k categories... Clustering, output k clusters... Compare the assigned labels with the true labels.",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0007-D-P006-TABLE-0001",
+      "page": 6,
+      "excerpt": "10,000 instances, 100 iteration steps, EER 0.04; 10,000 instances, 500 iteration steps, EER 0.01.",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0007-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "The system got EER 0.05 on the unseen datasets.",
+      "confidence": "medium"
+    },
+    "main_results-21-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0007-D-P007-TABLE-0003",
+      "page": 7,
+      "excerpt": "K-Means Clustering: Fax 0.7284 precision, 0.912 recall; Email 0.9134, 0.77; Permission 0.7414, 0.671; Introduction 0.9989, 0.882; Domains 0.8503, 1.00; Office 0.9883, 0.93.",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0007-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The knowledge graph can be built in a semi-automatic way. Given some instances... the system build the relation patterns and find more relation instances.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Experimental Results",
+      "span_id": "C0007-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "The system got EER 0.05 on the unseen datasets.",
+      "confidence": "medium"
+    },
+    "strengths-22-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Relation Patterns Building and Refining",
+      "span_id": "C0007-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "The system can also be used to detect the patterns for new relations.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0007-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We focus on extracting the special information from structured web and building a knowledge graph.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "The Siamese Network for Sequence Similarity Calculation",
+      "span_id": "C0007-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "We also should give the label ‘0’ (same relation). It is a training instance for the system.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Experimental Results",
+      "span_id": "C0007-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "Input test data of k... categories... Clustering, output k clusters.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-04": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion",
+      "span_id": "C0007-D-P007-TEXT-0004",
+      "page": 7,
+      "excerpt": "The future work includes... give the labels for new relations automatically.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Conclusion",
+      "span_id": "C0007-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "The future work includes finding new representation of the relation patterns and give the labels for new relations automatically.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Introduction",
+      "span_id": "C0007-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "The conversional relation extraction methods learn extraction patterns from manual annotations.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion",
+      "span_id": "C0007-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "The future work includes finding new representation of the relation patterns and give the labels for new relations automatically.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0007-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "The templates will change due to the webpages revisions... pages... may differ due to the missing fields, varying numbers of instances and conditional formatting.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses semi-automatic extraction of relation-object facts from enterprise web pages when the same relation has different textual representations, website templates vary across sources, and templates change over time. It aims to reduce the manual annotation burden while constructing a knowledge graph and discovering previously unseen relations.",
+  "methodology": {
+    "primary_family": "Neural NLP pipelines",
+    "secondary_families": [
+      "Classical machine learning",
+      "Linguistic and dependency-based extraction"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "supervised",
+    "description": "The system parses webpages into DOM trees and represents each relation-object instance as two XPath-derived tag sequences containing the relation and object text. Tag tokens are embedded with a Skip-Gram word2vec model trained on DOM-parsing output. Concatenated embeddings are processed by two shared five-layer fully connected feature-map networks forming a Siamese architecture. The learned distance metric identifies similar instances, whose centroid forms a relation pattern. Seed patterns are iteratively expanded and refined with newly extracted instances; clustering of instances is additionally used to detect patterns for new relations."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "No external ontology is reported. Existing relation names and manually supplied seed relation instances define the initial relation schema; newly discovered relation clusters are not automatically assigned semantic labels.",
+    "evidence": [
+      {
+        "span_id": "C0007-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "Given some instances of the relations for an entity, the system build the relation patterns and find more relation instances from web pages."
+      },
+      {
+        "span_id": "C0007-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "The future work includes finding new representation of the relation patterns and give the labels for new relations automatically."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing",
+    "Entity and concept extraction",
+    "Relation and triple extraction",
+    "Graph construction",
+    "Ontology or schema discovery"
+  ],
+  "input_output": {
+    "input_type": "Enterprise-company webpages containing semi-structured textual fields and DOM structure",
+    "input_granularity": "Webpage-level relation-object instances, represented by XPath/DOM tag sequences for the relation and its object",
+    "output_representation": "Knowledge-graph triples for company entities and relations; intermediate outputs are relation extraction patterns, similarity scores, and clusters for existing or new relations"
+  },
+  "models_and_tools": [
+    "DOM tree parsing",
+    "XPath",
+    "Skip-Gram word2vec embeddings",
+    "Siamese network",
+    "Five-layer fully connected feature-map network",
+    "Centroid-based relation-pattern construction",
+    "Hierarchical clustering",
+    "K-Means clustering"
+  ],
+  "datasets": [
+    "Enterprise Knowledge Graph dataset: Japanese company websites; 2,717,653 company entities and 22,257,276 triples",
+    "Ten-relation similarity-learning subset with 286,276 instances: name, address, person, homepage, phone number, rel-org, finance, size, date, and product",
+    "Unseen relation dataset: fax, email, permission, introduction, domains, and offices"
+  ],
+  "evaluation": {
+    "metrics": [
+      "False Accept Rate (FA)",
+      "False Reject Rate (FR)",
+      "Equal Error Rate (EER)",
+      "Precision",
+      "Recall"
+    ],
+    "baselines": "not_reported",
+    "setting": "Similarity learning is trained and evaluated on labeled genuine/impostor pairs from ten known relations, with experiments varying the number of instances and iteration steps. Generalization is tested on unseen relations separated from training, using a validation set to select the threshold and a test set to calculate FA, FR, and EER. New-relation detection is evaluated by clustering test data into the known number of categories and comparing assigned cluster labels with true labels using precision and recall."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "On the ten known relations, using 10,000 instances and 100 iteration steps produced EER 0.04; using 10,000 instances and 500 iteration steps produced EER 0.01.",
+      "On the unseen-relation dataset, the system achieved EER 0.05.",
+      "For clustering-based new-relation detection, K-Means generally outperformed hierarchical clustering in the reported precision/recall results. K-Means precision/recall included fax 0.7284/0.912, email 0.9134/0.770, permission 0.7414/0.671, introduction 0.9989/0.882, domains 0.8503/1.00, and offices 0.9883/0.93.",
+      "The authors report that performance improves as the number of instances per relation increases and tends toward convergence at approximately 1,000 instances per relation."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0007-D-P006-TABLE-0001",
+        "page": 6,
+        "excerpt": "10,000 instances, 100 iteration steps, EER 0.04; 10,000 instances, 500 iteration steps, EER 0.01."
+      },
+      {
+        "span_id": "C0007-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "The system got EER 0.05 on the unseen datasets."
+      },
+      {
+        "span_id": "C0007-D-P007-TABLE-0003",
+        "page": 7,
+        "excerpt": "K-Means Clustering: Fax 0.7284 precision, 0.912 recall; Email 0.9134, 0.77; Permission 0.7414, 0.671; Introduction 0.9989, 0.882; Domains 0.8503, 1.00; Office 0.9883, 0.93."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "(Author claim) The approach reduces dependence on exhaustive manual annotations by starting from a small set of labeled relation instances and expanding patterns iteratively.",
+      "(Experimental result) The learned similarity metric supports transfer from known relations to unseen relations, with reported unseen-data EER of 0.05.",
+      "(Review-level inference) Representing relation instances through DOM/XPath tag sequences directly addresses cross-template layout variation, although the method remains tied to webpage structure.",
+      "(Experimental result) The method supports both extraction of more instances for existing relations and clustering-based discovery of new relation groups."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0007-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "The knowledge graph can be built in a semi-automatic way. Given some instances... the system build the relation patterns and find more relation instances."
+      },
+      {
+        "span_id": "C0007-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "The system got EER 0.05 on the unseen datasets."
+      },
+      {
+        "span_id": "C0007-D-P005-TEXT-0003",
+        "page": 5,
+        "excerpt": "The system can also be used to detect the patterns for new relations."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "(Review-level inference) The input setting is semi-structured enterprise webpages rather than ordinary free text, so applicability to prose is not demonstrated.",
+      "(Review-level inference) The method requires manually labeled seed instances and pair labels for similarity learning, leaving a nontrivial annotation requirement.",
+      "(Author-reported future work) New relations are not automatically assigned semantic labels.",
+      "(Review-level inference) The clustering evaluation prespecifies the number of categories and requires cluster-label assignment, which may not reflect open-world deployment.",
+      "(Review-level inference) The reported experiments do not include comparisons with an experimental baseline."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0007-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "We focus on extracting the special information from structured web and building a knowledge graph."
+      },
+      {
+        "span_id": "C0007-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "We also should give the label ‘0’ (same relation). It is a training instance for the system."
+      },
+      {
+        "span_id": "C0007-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "Input test data of k... categories... Clustering, output k clusters."
+      },
+      {
+        "span_id": "C0007-D-P007-TEXT-0004",
+        "page": 7,
+        "excerpt": "The future work includes... give the labels for new relations automatically."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "not_reported",
+    "value": null,
+    "evidence": []
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "(Author-stated future work) Investigate new representations of relation patterns.",
+      "(Author-stated future work) Automatically assign labels to newly discovered relations.",
+      "(Review-level proposed improvement) Evaluate the method on unstructured prose and heterogeneous domains, using open-world discovery without a prespecified number of clusters.",
+      "(Review-level proposed improvement) Report comparisons against annotation-based, wrapper-induction, and neural relation-extraction baselines under matched data and metrics."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0007-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "The future work includes finding new representation of the relation patterns and give the labels for new relations automatically."
+      },
+      {
+        "span_id": "C0007-D-P002-TEXT-0002",
+        "page": 2,
+        "excerpt": "The conversional relation extraction methods learn extraction patterns from manual annotations."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "(Author-stated unresolved problem) How to represent relation patterns more effectively remains open.",
+      "(Author-stated unresolved problem) Automatically assigning semantic labels to newly discovered relation clusters remains open.",
+      "(Review-level inference) Robust extraction from changing, incomplete, and cross-site webpage templates is not fully resolved by the reported experiments.",
+      "(Review-level inference) The paper does not establish whether the learned DOM-pattern similarity transfers to natural-language text or domains beyond enterprise webpages."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0007-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "The future work includes finding new representation of the relation patterns and give the labels for new relations automatically."
+      },
+      {
+        "span_id": "C0007-D-P002-TEXT-0002",
+        "page": 2,
+        "excerpt": "The templates will change due to the webpages revisions... pages... may differ due to the missing fields, varying numbers of instances and conditional formatting."
+      }
+    ]
+  },
+  "code_and_data_availability": "not_reported"
+}

@@ -1,0 +1,698 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0001",
+    "title": "A Comprehensive Survey on Automatic Knowledge Graph Construction",
+    "pdf_path": "data/batches/batch-02/C0001.pdf",
+    "authors": [
+      "Lingfeng Zhong",
+      "Jia Wu",
+      "Qian Li",
+      "Hao Peng",
+      "Xindong Wu"
+    ],
+    "year": 2022,
+    "venue": "ACM Computing Surveys",
+    "identifier": {
+      "status": "reported",
+      "value": "arXiv:2302.05019v1; DOI: 0000001.0000001",
+      "evidence": [
+        {
+          "span_id": "C0001-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "arXiv:2302.05019v1 [cs.IR] 10 Feb 2023"
+        },
+        {
+          "span_id": "C0001-D-P001-TEXT-0002",
+          "page": 1,
+          "excerpt": "https://doi.org/0000001.0000001"
+        }
+      ]
+    },
+    "abstract": "The paper surveys more than 300 methods for automatic knowledge graph construction, organizing the field into knowledge acquisition, knowledge refinement, and knowledge evolution. It reviews entity discovery and linking, coreference resolution, relation extraction, graph completion, knowledge fusion, conditional knowledge acquisition and completion, and knowledge dynamics, and discusses resources, challenges, and future directions.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Front matter",
+      "span_id": "C0001-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "LINGFENG ZHONG, JIA WU, QIAN LI, HAO PENG, and XINDONG WU",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "ACM Reference Format",
+      "span_id": "C0001-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Lingfeng Zhong, Jia Wu, Qian Li, Hao Peng, and Xindong Wu. 2022.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "ACM Reference Format",
+      "span_id": "C0001-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "ACM Comput. Surv. 36, 4, Article 66 (July 2022)",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Front matter",
+      "span_id": "C0001-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "arXiv:2302.05019v1 [cs.IR] 10 Feb 2023",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-02": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "ACM Reference Format",
+      "span_id": "C0001-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "https://doi.org/0000001.0000001",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0001-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We comprehensively survey more than 300 methods to summarize the latest developments in knowledge graph construction.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0001-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "There is a demand for a systematic review of paradigms to organize knowledge structures beyond data-level mentions.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0001-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "A systematic solution that can automatically build a knowledge graph from unstructured or semi-structured data offers a massive boost to what is a very arduous manual process.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0001-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Information extraction systems like TextRunner and Knowitall ... were driven by designated rules or clustering.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0001-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "Deep learning models have delivered good performances with tasks like named entity recognition, entity typing, entity linking, coreference resolution, and relation extraction.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Major Differences and Contributions",
+      "span_id": "C0001-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "We comprehensively analyze models for knowledge graph construction ... from knowledge acquisition to knowledge graph refinement.",
+      "confidence": "medium"
+    },
+    "methodology-description-08-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0001-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "A knowledge graph is built in three steps: knowledge acquisition, knowledge refinement, and knowledge evolution.",
+      "confidence": "medium"
+    },
+    "methodology-description-08-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Organization of the Survey",
+      "span_id": "C0001-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Section 3 delivers methods to pre-process semi-structured data ... Section 4 ... entities and relationships ... Section 5 ... refining knowledge graphs ... Section 6 ... evolutionary knowledge graphs.",
+      "confidence": "medium"
+    },
+    "methodology-description-08-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Definition 2",
+      "span_id": "C0001-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "Knowledge graph construction f is a procedure that maps a data source into a knowledge graph.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-09-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Definitions",
+      "span_id": "C0001-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "In practice, background knowledge can be seen as a rule set, schema, or set of implicit math principles.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-09-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Definition 2",
+      "span_id": "C0001-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Knowledge graph construction is usually unable to continue without background knowledge that is provided by pre-designed rules or a language model of representations.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-10-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Figure 1",
+      "span_id": "C0001-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The general process ... semi-structured or unstructured input data is manufactured into a raw knowledge graph by acquiring knowledge.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-10-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Knowledge Acquisition",
+      "span_id": "C0001-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "Knowledge acquisition ... includes entity recognition, coreference resolution, and relation extraction.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-10-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "End-to-end Unified Framework for Construction",
+      "span_id": "C0001-D-P037-TEXT-0003",
+      "page": 37,
+      "excerpt": "Incorporating knowledge acquisition with knowledge refinement tasks to build an integrated joint model remains a formidable bottleneck.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-11-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Figure 1",
+      "span_id": "C0001-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Table, Web pages, images, text ... Existing KGs",
+      "confidence": "medium"
+    },
+    "input_output-input_type-11-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "HACE environments",
+      "span_id": "C0001-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "Heterogenous ... Table, Web pages, images, text, Temporal Data, Existing KGs",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-12-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Table 1",
+      "span_id": "C0001-D-P004-TABLE-0001",
+      "page": 4,
+      "excerpt": "Target Data: Web, Tab, Sent, Doc",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-12-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Long and Intricate Contexts for KG Construction",
+      "span_id": "C0001-D-P034-TEXT-0002",
+      "page": 34,
+      "excerpt": "Intricate cross-sentence or cross-paragraph contexts impedes different KG construction sub-tasks.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-13-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Figure 1",
+      "span_id": "C0001-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Entity Linking, Entity Typing, Named Entity Recognition, Coreference Resolution, Relation Extraction ... Raw KGs",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-13-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Definitions",
+      "span_id": "C0001-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "T is the set of factual triples ... a standard binary fact is a triple (h, t, r).",
+      "confidence": "medium"
+    },
+    "models_and_tools-14-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Knowledge Graph Construction Tools",
+      "span_id": "C0001-D-P008-TABLE-0001",
+      "page": 8,
+      "excerpt": "NLTK, StanfordNLP, KnowItAll, TextRunner, ReVerb, OLLIE, spaCy, OpenNRE, and gBuilder",
+      "confidence": "medium"
+    },
+    "models_and_tools-14-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Knowledge Graph Construction Tools",
+      "span_id": "C0001-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "OpenKE provides multiple knowledge representation models for knowledge graph completion, while OpenEA ... supports merging structures in knowledge graphs.",
+      "confidence": "medium"
+    },
+    "models_and_tools-14-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0001-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "With advances in the pre-training of deep learning models, such as the pre-trained BERT model and ... GCN models.",
+      "confidence": "medium"
+    },
+    "datasets-15-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Practical Knowledge Graph Projects",
+      "span_id": "C0001-D-P005-TABLE-0001",
+      "page": 5,
+      "excerpt": "YAGO, Freebase, DBpedia, CN-DBpedia, Probase, Wikidata, CN-Probase, WordNet, ConceptNet, HowNet, Babelnet, ASER, TransOMCS, Pubmed, Drugbank, Huapu, OAG, COVID-19 Concepts, GEDMatch, and OpenKG.cn",
+      "confidence": "medium"
+    },
+    "main_results-16-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0001-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We comprehensively survey more than 300 methods.",
+      "confidence": "medium"
+    },
+    "main_results-16-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Major Differences and Contributions",
+      "span_id": "C0001-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "We introduce the process of knowledge graph construction ... summarize necessary information on KG-related resources.",
+      "confidence": "medium"
+    },
+    "main_results-16-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Conclusion",
+      "span_id": "C0001-D-P037-TEXT-0003",
+      "page": 37,
+      "excerpt": "We reviewed the tasks, methods, challenges, and related resources used to construct, refine, and integrate KGs from various data types in different scenarios.",
+      "confidence": "medium"
+    },
+    "strengths-17-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Major Differences and Contributions",
+      "span_id": "C0001-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Unlike other surveys, we go deeper into the paradigms of the recent models ... according to different stages and aspects of the HACE environments.",
+      "confidence": "medium"
+    },
+    "strengths-17-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Practical Knowledge Graph Projects",
+      "span_id": "C0001-D-P005-TABLE-0002",
+      "page": 5,
+      "excerpt": "The information of practical KG projects.",
+      "confidence": "medium"
+    },
+    "strengths-17-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Knowledge Graph Construction Tools",
+      "span_id": "C0001-D-P008-TABLE-0003",
+      "page": 8,
+      "excerpt": "The information of off-the-shelf knowledge graph tools.",
+      "confidence": "medium"
+    },
+    "weaknesses-18-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Abstract",
+      "span_id": "C0001-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We comprehensively survey more than 300 methods",
+      "confidence": "medium"
+    },
+    "weaknesses-18-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Organization of the Survey",
+      "span_id": "C0001-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Section 7 delivers solutions that store knowledge graphs effectively. Finally, we envisage future directions.",
+      "confidence": "medium"
+    },
+    "weaknesses-18-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion",
+      "span_id": "C0001-D-P037-TEXT-0003",
+      "page": 37,
+      "excerpt": "We reviewed the tasks, methods, challenges, and related resources ...",
+      "confidence": "medium"
+    },
+    "possible_improvements-19-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Long and Intricate Contexts for KG Construction",
+      "span_id": "C0001-D-P034-TEXT-0001",
+      "page": 34,
+      "excerpt": "How to obtain commonsense rules and adapt them to suitable scenarios is an important direction.",
+      "confidence": "medium"
+    },
+    "possible_improvements-19-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Federated Learning",
+      "span_id": "C0001-D-P035-TEXT-0002",
+      "page": 35,
+      "excerpt": "How to create a privacy-reserved super feature space for encrypted entity alignment ... is still open for exploration.",
+      "confidence": "medium"
+    },
+    "possible_improvements-19-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "End-to-end Unified Framework for Construction",
+      "span_id": "C0001-D-P037-TEXT-0003",
+      "page": 37,
+      "excerpt": "Searching for end-to-end frameworks that unify both extraction and the refinement of knowledge graphs could be an enlightening future direction.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-20-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Long and Intricate Contexts for KG Construction",
+      "span_id": "C0001-D-P034-TEXT-0001",
+      "page": 34,
+      "excerpt": "More linguistic structures should be explored to comprehend tortuous expressions.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-20-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Federated Learning",
+      "span_id": "C0001-D-P035-TEXT-0002",
+      "page": 35,
+      "excerpt": "Entity alignment is a paradoxical bottleneck that impedes federated learning.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-20-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Cross-lingual Knowledge Graph",
+      "span_id": "C0001-D-P036-TEXT-0003",
+      "page": 36,
+      "excerpt": "Machine translation remains a formidable bottleneck to cross-lingual tasks.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-20-04": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "End-to-end Unified Framework for Construction",
+      "span_id": "C0001-D-P037-TEXT-0004",
+      "page": 37,
+      "excerpt": "Training a framework that unifies the general procedures of knowledge construction would be a ... challenging multi-task learning problem.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-21-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Practical Knowledge Graph Projects",
+      "span_id": "C0001-D-P005-TABLE-0001",
+      "page": 5,
+      "excerpt": "The information of practical KG projects ... URL",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-21-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Knowledge Graph Construction Tools",
+      "span_id": "C0001-D-P008-TABLE-0002",
+      "page": 8,
+      "excerpt": "The information of off-the-shelf knowledge graph tools ... URL",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses the need for a systematic organization of automatic knowledge graph construction methods that can transform heterogeneous, semi-structured, and unstructured data into conceptualized structured knowledge, while also refining and evolving existing graphs in complex big-data environments.",
+  "methodology": {
+    "primary_family": "not_reported",
+    "secondary_families": [
+      "Rule-based NLP",
+      "Linguistic and dependency-based extraction",
+      "Classical machine learning",
+      "Neural NLP pipelines",
+      "Transformer encoder methods",
+      "Joint entity-relation extraction",
+      "Ontology-constrained and schema-guided methods",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "not_reported",
+    "supervision_setting": "not_reported",
+    "description": "This is a broad narrative survey rather than a single Text-to-KG system. It defines knowledge graph construction as mapping data sources plus background knowledge into graphs, then organizes reviewed methods in execution and lifecycle order: semi-structured preprocessing; knowledge acquisition through entity discovery, typing, linking, coreference resolution, and relation extraction; knowledge refinement through completion and fusion; knowledge evolution through conditional and temporal knowledge methods; storage; and open research directions. The survey compares methods by data environment, motivation, and architecture."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The survey treats background knowledge as essential to knowledge graph construction. It may be supplied as pre-designed rules, an ontology, a schema, or implicit mathematical principles. The formal KG definition includes concepts, relations, factual triples, and background constraints; YAGO is cited as integrating Wikipedia with a WordNet ontology.",
+    "evidence": [
+      {
+        "span_id": "C0001-D-P005-TEXT-0001",
+        "page": 5,
+        "excerpt": "In practice, background knowledge can be seen as a rule set, schema, or set of implicit math principles."
+      },
+      {
+        "span_id": "C0001-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "Knowledge graph construction is usually unable to continue without background knowledge that is provided by pre-designed rules or a language model of representations."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing and content extraction",
+    "Entity and concept extraction",
+    "Entity typing",
+    "Coreference resolution",
+    "Entity linking and disambiguation",
+    "Relation and triple extraction",
+    "Graph construction",
+    "Knowledge graph completion",
+    "Knowledge fusion and deduplication/entity alignment",
+    "Graph validation and interpretable reasoning",
+    "Graph updating and temporal/conditional evolution"
+  ],
+  "input_output": {
+    "input_type": "Heterogeneous data sources, including unstructured text, semi-structured web pages and tables, images, temporal data, and existing knowledge graphs.",
+    "input_granularity": "The reviewed methods operate over web pages, table forms, sentences, textual documents, long cross-sentence or cross-paragraph contexts, and existing graph structures.",
+    "output_representation": "Intermediate outputs include cleaned documents, entity mentions and types, linked entities, coreference pairs or clusters, relations, and factual triples. Final outputs include raw, refined, fused, complete, conditional, temporal, dynamic, and stored knowledge graphs."
+  },
+  "models_and_tools": [
+    "Rule- and pattern-based systems: TextRunner, KnowItAll, ReVerb, and OLLIE",
+    "Statistical NLP toolkits: NLTK and StanfordNLP",
+    "Neural NLP systems and toolkits: CNN/LSTM models, spaCy, OpenNRE, and gBuilder",
+    "Pretrained and graph-based approaches: BERT and graph convolutional networks",
+    "Knowledge refinement tools: OpenKE, OpenEA, OpenNE, and Falcon-AO",
+    "Reviewed model families for NER, entity typing, entity linking, coreference resolution, open and domain-specific relation extraction, distant supervision, few-shot extraction, joint extraction, document-level extraction, completion, fusion, and temporal/dynamic KGs"
+  ],
+  "datasets": [
+    "YAGO",
+    "Freebase",
+    "DBpedia",
+    "CN-DBpedia",
+    "Probase",
+    "Wikidata",
+    "CN-Probase",
+    "WordNet",
+    "ConceptNet",
+    "HowNet",
+    "BabelNet",
+    "ASER",
+    "TransOMCS",
+    "Google Knowledge Graph",
+    "PubMed",
+    "DrugBank",
+    "AMiner ASN",
+    "Huapu",
+    "Open Academic Graph",
+    "COVID-19 Concept dataset",
+    "Aminer COVID-19 Open Data",
+    "GEDmatch",
+    "OpenKG.cn"
+  ],
+  "evaluation": {
+    "metrics": "not_reported",
+    "baselines": "not_reported",
+    "setting": "not_reported"
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "The survey covers more than 300 knowledge graph construction methods.",
+      "It organizes KG construction into knowledge acquisition, knowledge refinement, and knowledge evolution, with detailed coverage of entity discovery, coreference resolution, relation extraction, completion, fusion, condition knowledge, and knowledge dynamics.",
+      "It identifies a progression from rule- and pattern-based information extraction toward statistical, neural, pretrained, graph-based, joint, few-shot, document-level, interpretable, multimodal, federated, and end-to-end approaches.",
+      "The survey provides practical KG projects, datasets, tools, architecture summaries, and a discussion of challenges in heterogeneous, autonomous, complex, and evolving data environments."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0001-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "We comprehensively survey more than 300 methods."
+      },
+      {
+        "span_id": "C0001-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "We introduce the process of knowledge graph construction ... summarize necessary information on KG-related resources."
+      },
+      {
+        "span_id": "C0001-D-P037-TEXT-0003",
+        "page": 37,
+        "excerpt": "We reviewed the tasks, methods, challenges, and related resources used to construct, refine, and integrate KGs from various data types in different scenarios."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author-claimed strength: broad coverage spanning acquisition, refinement, evolution, resources, and future directions.",
+      "Author-claimed strength: methods are organized around task stages, data environments, motivations, and architectures rather than only individual applications.",
+      "Review-level interpretation: Figure 1 and the section structure provide a useful lifecycle model connecting text extraction with graph refinement and evolution.",
+      "Review-level interpretation: Tables 2 and 3 make the survey practically useful by associating projects and tools with access links and task categories."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0001-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "Unlike other surveys, we go deeper into the paradigms of the recent models ... according to different stages and aspects of the HACE environments."
+      },
+      {
+        "span_id": "C0001-D-P005-TABLE-0002",
+        "page": 5,
+        "excerpt": "The information of practical KG projects."
+      },
+      {
+        "span_id": "C0001-D-P008-TABLE-0003",
+        "page": 8,
+        "excerpt": "The information of off-the-shelf knowledge graph tools."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Review-level interpretation: the paper is a survey and does not present one reproducible Text-to-KG algorithm or a controlled experimental comparison.",
+      "Review-level interpretation: the very broad scope combines extraction, graph completion, fusion, storage, and evolution, so task-specific results are summarized heterogeneously rather than evaluated under a common benchmark.",
+      "Review-level interpretation: the survey predates the current instruction-tuned and generative LLM methodology family and does not provide a dedicated LLM prompting or fine-tuning taxonomy."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0001-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "We comprehensively survey more than 300 methods"
+      },
+      {
+        "span_id": "C0001-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "Section 7 delivers solutions that store knowledge graphs effectively. Finally, we envisage future directions."
+      },
+      {
+        "span_id": "C0001-D-P037-TEXT-0003",
+        "page": 37,
+        "excerpt": "We reviewed the tasks, methods, challenges, and related resources ..."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "not_reported",
+    "value": null,
+    "evidence": []
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Develop end-to-end frameworks that unify knowledge acquisition and knowledge graph refinement.",
+      "Build high-quality off-the-shelf systems that reduce manual component adjustment and model cross-task semantics.",
+      "Improve long-context reasoning over cross-sentence and cross-paragraph evidence, including commonsense, logic, temporal, and geographical conditions.",
+      "Advance multimodal construction, privacy-preserving federated learning, cross-lingual low-resource construction, and human-machine collaboration.",
+      "Develop models for advanced semantics such as metaphor, simile, equivocation, and commonsense validation."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0001-D-P034-TEXT-0001",
+        "page": 34,
+        "excerpt": "How to obtain commonsense rules and adapt them to suitable scenarios is an important direction."
+      },
+      {
+        "span_id": "C0001-D-P035-TEXT-0002",
+        "page": 35,
+        "excerpt": "How to create a privacy-reserved super feature space for encrypted entity alignment ... is still open for exploration."
+      },
+      {
+        "span_id": "C0001-D-P037-TEXT-0003",
+        "page": 37,
+        "excerpt": "Searching for end-to-end frameworks that unify both extraction and the refinement of knowledge graphs could be an enlightening future direction."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Reliable reasoning over long and intricate contexts with multiple linguistic objects and multi-hop dependencies.",
+      "Obtaining and adapting commonsense rules and evidence structures for validating extracted facts.",
+      "Constructing multimodal knowledge graphs that resolve ambiguity through cross-modal dependencies.",
+      "Privacy-preserving entity alignment and federated learning without exchanging sensitive data.",
+      "Semantic evolution of knowledge under changing temporal and contextual conditions.",
+      "Human-machine allocation of uncertain facts to appropriate experts, authorities, or users.",
+      "Accurate cross-lingual construction under translation errors, conflicts, and minority-language data scarcity.",
+      "A unified multi-task framework combining knowledge acquisition, refinement, and evolution."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0001-D-P034-TEXT-0001",
+        "page": 34,
+        "excerpt": "More linguistic structures should be explored to comprehend tortuous expressions."
+      },
+      {
+        "span_id": "C0001-D-P035-TEXT-0002",
+        "page": 35,
+        "excerpt": "Entity alignment is a paradoxical bottleneck that impedes federated learning."
+      },
+      {
+        "span_id": "C0001-D-P036-TEXT-0003",
+        "page": 36,
+        "excerpt": "Machine translation remains a formidable bottleneck to cross-lingual tasks."
+      },
+      {
+        "span_id": "C0001-D-P037-TEXT-0004",
+        "page": 37,
+        "excerpt": "Training a framework that unifies the general procedures of knowledge construction would be a ... challenging multi-task learning problem."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper does not report survey-specific code or a dedicated released dataset. It provides access links for numerous existing KG projects and off-the-shelf tools, including datasets such as YAGO, Freebase, DBpedia, Wikidata, ASER, TransOMCS, and OpenKG.cn, and tools such as TextRunner, spaCy, OpenNRE, gBuilder, OpenKE, and OpenEA."
+}

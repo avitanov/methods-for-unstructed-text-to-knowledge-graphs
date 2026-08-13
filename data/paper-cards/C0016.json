@@ -1,0 +1,755 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0016",
+    "title": "Fine-Tuning Language Models for Triple Extraction with Data Augmentation",
+    "pdf_path": "data/batches/batch-02/C0016.pdf",
+    "authors": [
+      "Yujia Zhang",
+      "Tyler Sadler",
+      "Mohammad Reza Taesiri",
+      "Wenjie Xu",
+      "Marek Z. Reformat"
+    ],
+    "year": 2024,
+    "venue": "Proceedings of the 1st Workshop on Knowledge Graphs and Large Language Models (KaLLM 2024)",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The paper fine-tunes large language models for text-to-triple extraction using diverse prompt-based data augmentation. It trains eleven approximately 7B-parameter models with HuggingFace trainers and evaluates output against test triples using type, partial, exact, and strict criteria; the authors report results that outperform ChatGPT and match or exceed GPT-4.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title block",
+      "span_id": "C0016-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Yujia Zhang, Tyler Sadler, Mohammad Reza Taesiri, Wenjie Xu, Marek Z. Reformat",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication footer",
+      "span_id": "C0016-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the 1st Workshop on Knowledge Graphs and Large Language Models (KaLLM 2024) ... August 15, 2024 ©2024 Association for Computational Linguistics",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication footer",
+      "span_id": "C0016-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the 1st Workshop on Knowledge Graphs and Large Language Models (KaLLM 2024), pages 116–124",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0016-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We use a diverse data augmentation process to fine-tune large language models to extract triples from the text... Evaluation involves comparing model output with test set triples based on several criteria, such as type, partial, exact, and strict accuracy.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "3 Problem and Experimental Setup",
+      "span_id": "C0016-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The paper focuses on extracting information from plain text. It is the task of building triples of the form ⟨subject, predicate, object⟩ based on the content of a sentence.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0016-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "The construction of triples adhering to the DBpedia ontology format has been particularly interesting.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3.4 Overall Experiments Setup",
+      "span_id": "C0016-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "we utilized HuggingFace libraries to perform supervised finetuning utilizing Parameter-Efficient Finetuning (PEFT) and Low-Rank Adaptation (LoRA) on the WebNLG dataset.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3 Problem and Experimental Setup",
+      "span_id": "C0016-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "All the components of a triple are extracted at the same time.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "5 Discussion and Limitations — Prompt and Data Preparation",
+      "span_id": "C0016-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "the task of extracting triples from WebNLG data involves the usage of DBpedia specific vocabulary... DBpedia ontology has been used to determine if the triples/relations were consistent.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3 Problem and Experimental Setup",
+      "span_id": "C0016-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "All the components of a triple are extracted at the same time.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Figure 2 / 3.4 Overall Experiments Setup",
+      "span_id": "C0016-D-P005-PICTURE-0002",
+      "page": 5,
+      "excerpt": "Experimental Workflow: data preparation; fine-tuning with auto train/SFT or alpaca-lora utilizing PEFT and LoRA; applying LoRA to model; benchmarking with test dataset; triple evaluation.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "3.4 Overall Experiments Setup",
+      "span_id": "C0016-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "we utilized HuggingFace libraries to perform supervised finetuning",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.3 Prompt Engineering & Data Preparation",
+      "span_id": "C0016-D-P004-TABLE-0001",
+      "page": 4,
+      "excerpt": "The overall Data Augmentation Tricks: Text2triples, Explanation, Triples2text, and Reflection.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.4 Overall Experiments Setup",
+      "span_id": "C0016-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "After training, the LoRA weights are combined with the base model to obtain our fine-tuned model output. These exported weights are used to run inference on the model.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4.1 Evaluation Procedure",
+      "span_id": "C0016-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "The evaluation framework comprises two phases: Inference, generating the model’s output on the test set, and evaluation, comparing this output against ground truth triples.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3 Problem and Experimental Setup",
+      "span_id": "C0016-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Within the DBpedia dataset, triples are generated and represented using the DBpedia ontology as the schema.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "5 Discussion and Limitations — Prompt and Data Preparation",
+      "span_id": "C0016-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The WebNLG dataset has been analyzed to ensure the training data is of high quality. DBpedia ontology has been used to determine if the triples/relations were consistent.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3 Problem and Experimental Setup",
+      "span_id": "C0016-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "it is the task of building triples of the form ⟨subject, predicate, object⟩ based on the content of a sentence.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0016-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "These triples are the basic units of knowledge graphs.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.3 Prompt Engineering & Data Preparation",
+      "span_id": "C0016-D-P004-TABLE-0003",
+      "page": 4,
+      "excerpt": "Reflection: when provided a text along with triples ... check these triples in light of the text and correct any inaccuracies.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3.3 Prompt Engineering & Data Preparation",
+      "span_id": "C0016-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "a prompt is a sequence of natural language inputs for a model, consisting of an instruction, context, and input text.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3.3 Prompt Engineering & Data Preparation",
+      "span_id": "C0016-D-P004-TABLE-0002",
+      "page": 4,
+      "excerpt": "Text2triples: input Sentence, output Triples; Triples2text: input Triples, output Sentence; Reflection: input Sentence Triples, output Corrected triples.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.1 Datasets — WebNLG",
+      "span_id": "C0016-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "It includes 13,211 training data and 2,155 test data.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "4.1 Evaluation Procedure",
+      "span_id": "C0016-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "The test set ... includes 2,155 instances of directly extracting triples from text.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-03": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "5 Discussion and Limitations — Other Datasets",
+      "span_id": "C0016-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "In DocRed, a few triples are extracted from paragraph sentences.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.3 Prompt Engineering & Data Preparation",
+      "span_id": "C0016-D-P004-TABLE-0001",
+      "page": 4,
+      "excerpt": "gather all potential triples, adhering to the pattern: (subject|relationship|object).",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3 Problem and Experimental Setup",
+      "span_id": "C0016-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "each fact is denoted ⟨s, p, o⟩, s ∈ S, p ∈ P, o ∈ O.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.4 Overall Experiments Setup",
+      "span_id": "C0016-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "we utilized HuggingFace libraries to perform supervised finetuning utilizing Parameter-Efficient Finetuning (PEFT) and Low-Rank Adaptation (LoRA)",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.4 Overall Experiments Setup",
+      "span_id": "C0016-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "We used two prewritten trainers, finetune script from alpaca-Lora and autotrain-advanced from HuggingFace.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.4 Overall Experiments Setup",
+      "span_id": "C0016-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "All models were trained using two Nvidia 3090 24GB GPUs and a cutoff length 1024.",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.1 Datasets",
+      "span_id": "C0016-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "WebNLG ... includes 13,211 training data and 2,155 test data.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.1 Datasets",
+      "span_id": "C0016-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "A subset of KELM, named KELM-sub, is used which contains 400,000/5,000 samples as train/test set.",
+      "confidence": "medium"
+    },
+    "datasets-17-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.3 Prompt Engineering & Data Preparation",
+      "span_id": "C0016-D-P004-TABLE-0003",
+      "page": 4,
+      "excerpt": "WebNLG-combined: 3*N; WebNLG-combined-with-reflections: 4*N; WebNLG-reflections-updated-instructions: 4*N.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.1 Evaluation Procedure",
+      "span_id": "C0016-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "The scores are calculated using the evaluate package ... based on four different criteria. First is type evaluation (TE) ... Partial evaluation (PE) ... Exact evaluation (EE) ... Strict evaluation (SE).",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.2 Results",
+      "span_id": "C0016-D-P006-TABLE-0001",
+      "page": 6,
+      "excerpt": "Baseline rows reported are GPT-4 50 samples, GPT-4-0314, ChatGPT-3.5-2023, and GPT-4 Full.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "3.4 Overall Experiments Setup",
+      "span_id": "C0016-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "For the finetune script, we set an approximately 85:15 split between training and validation data.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.1 Evaluation Procedure",
+      "span_id": "C0016-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "All models were benchmarked with a maximum token limit of 1,024, and the output was generated without streaming.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.2 Results — Ablation Study",
+      "span_id": "C0016-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "We performed ablation studies to evaluate the impact of different data augmentation strategies ... four Training Datasets.",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.2 Results — WebNLG Dataset",
+      "span_id": "C0016-D-P006-TABLE-0001",
+      "page": 6,
+      "excerpt": "Orca-mini-3-7b: F1 0.753 Type, 0.738 Partial, 0.719 Exact, 0.717 Strict; GPT-4 50 samples: 0.714, 0.692, 0.657, 0.645; GPT-4-0314: 0.700, 0.675, 0.640, 0.629.",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.2 Results — WebNLG Dataset",
+      "span_id": "C0016-D-P006-TABLE-0002",
+      "page": 6,
+      "excerpt": "Vicuna-33b: F1 0.755 Type, 0.742 Partial, 0.727 Exact, 0.724 Strict.",
+      "confidence": "medium"
+    },
+    "main_results-21-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.2 Results — Other Datasets",
+      "span_id": "C0016-D-P008-TABLE-0003",
+      "page": 8,
+      "excerpt": "KELM Orca-mini-3-7b strict F1 0.826; DocRED Orca-mini-3 strict F1 0.024 and llama-2-13b strict F1 0.002; SKE orca-mini-3 strict F1 0.827 and llama-2-13b 0.124.",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.3 Prompt Engineering & Data Preparation",
+      "span_id": "C0016-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Such an approach allowed us to increase the size of training datasets by 3- and 4-fold.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction — Contributions",
+      "span_id": "C0016-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "small, fine-tuned models can outperform the baselines set up by GPT family models: ChatGPT and GPT-4.",
+      "confidence": "medium"
+    },
+    "strengths-22-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "5 Discussion and Limitations — Prompt and Data Preparation",
+      "span_id": "C0016-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "The consistent structure of triples is essential so the model can effectively learn how to form triples properly.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "5 Discussion and Limitations — Limitations",
+      "span_id": "C0016-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "They hallucinated on occasion ... Also, models had looping issues, where they would continually generate output until they reached the token limit.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2 Results — Other Datasets",
+      "span_id": "C0016-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The Llama-2-13b finetuned on another dataset DocRED performed very poorly and was completely unable to learn proper formatting of triples.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2 Results — WebNLG Dataset",
+      "span_id": "C0016-D-P006-TABLE-0003",
+      "page": 6,
+      "excerpt": "GPT comparison rows are separately reported as GPT-4 50 samples, GPT-4-0314, ChatGPT-3.5-2023, and GPT-4 Full.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "5 Discussion and Limitations — Limitations",
+      "span_id": "C0016-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "They hallucinated on occasion ... The models frequently hallucinated the birthplace of Bezos, providing false information about the location. Also, models had looping issues.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.2 Results — Other Datasets",
+      "span_id": "C0016-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "the reference triples ... were of poor quality: limited to a few relations, incoherent structure, a limited number of triples.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.2 Results — Other Datasets",
+      "span_id": "C0016-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "For yet another dataset – FewRel – the issue seems to be related to the model not knowing when to generate triples following the DBpedia and when using Wikidata formats.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "5 Discussion and Limitations — Limitations",
+      "span_id": "C0016-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "They hallucinated on occasion ... models had looping issues.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "5 Discussion and Limitations — Prompt and Data Preparation",
+      "span_id": "C0016-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "Exposure to different properties is also of high importance. The properties seen in the training and testing sets overlapped, with thirty-six properties unique to the test set.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4.2 Results — Model Selection/Multilingual Triples",
+      "span_id": "C0016-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "if a language model is not exposed to a text in a given language, its performance, related to this language, is not satisfactory.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5 Discussion and Limitations — Limitations",
+      "span_id": "C0016-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "They hallucinated on occasion ... models had looping issues, where they would continually generate output until they reached the token limit.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2 Results — Other Datasets",
+      "span_id": "C0016-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The best scores have been obtained for the KELM dataset. The Llama-2-13b finetuned on another dataset DocRED performed very poorly.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2 Results — Other Datasets",
+      "span_id": "C0016-D-P008-TABLE-0003",
+      "page": 8,
+      "excerpt": "Strict F1 ranges from 0.826 for Orca-mini-3-7b on KELM and 0.827 for Orca-mini-3 on SKE to 0.024 and 0.002 on DocRED.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Extract subject–predicate–object triples directly from unstructured/plain-text sentences so that text-derived facts can populate knowledge graphs, while improving contextual relation extraction and adherence to the DBpedia ontology format.",
+  "methodology": {
+    "primary_family": "Instruction-tuned or fine-tuned LLM methods [Review-level inference]",
+    "secondary_families": [
+      "Generative text-to-structure methods [Review-level inference]",
+      "Ontology-constrained and schema-guided methods [Review-level inference]"
+    ],
+    "system_type": "not_reported",
+    "supervision_setting": "supervised",
+    "description": "The authors construct augmented WebNLG training variants in execution order: Text2triples examples; GPT-3.5-generated extraction explanations; Triples2text reconstruction examples; and reflection examples that validate or correct generated triples. Human-written and GPT-4-rephrased instructions diversify prompts. They then apply PEFT/LoRA supervised fine-tuning with HuggingFace tooling, merge LoRA weights with each base model, run prompted inference on test sentences, and compare generated triples with reference triples under four matching criteria."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "DBpedia supplies the target schema/vocabulary for the WebNLG-focused setting: triples are intended to use DBpedia-style classes and properties, and the authors checked that training/test properties were present in DBpedia. The paper does not report a separate ontology-reasoning or decoding-constraint mechanism.",
+    "evidence": [
+      {
+        "span_id": "C0016-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "Within the DBpedia dataset, triples are generated and represented using the DBpedia ontology as the schema."
+      },
+      {
+        "span_id": "C0016-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "The WebNLG dataset has been analyzed to ensure the training data is of high quality. DBpedia ontology has been used to determine if the triples/relations were consistent."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Relation and triple extraction",
+    "Graph construction [Review-level inference: extracted triples are stated to be basic KG units]",
+    "Graph validation and correction [Review-level inference: reflection examples ask the model to validate/correct triples]"
+  ],
+  "input_output": {
+    "input_type": "Plain natural-language text/sentences embedded in model-specific instruction prompts; auxiliary augmentation tasks additionally use triples as input for triple-to-text reconstruction or text-plus-triples for reflection.",
+    "input_granularity": "Primarily individual sentences; the WebNLG test set contains 2,155 text-to-triple instances. Auxiliary evaluation includes document/paragraph-oriented DocRED material.",
+    "output_representation": "Linearized subject–predicate–object triples, formatted as (subject|relationship|object) / ⟨subject, predicate, object⟩; the WebNLG-focused outputs use DBpedia-compatible vocabulary."
+  },
+  "models_and_tools": [
+    "Fine-tuned open-weight LLMs including Vicuna-7B/33B, WizardLM-7B, Orca-mini variants, Llama-2 variants, LlongOrca-7B, SOLAR-Instruct-10B, Mistral-t5-7B, Mixtral-8x7B, and Platypus-30B",
+    "GPT-3.5/ChatGPT and GPT-4 as comparison systems; GPT-3.5 generates explanation augmentation data and GPT-4 rephrases some instructions",
+    "HuggingFace libraries; PEFT; LoRA; alpaca-Lora fine-tune script; autotrain-advanced using TRL SFT Trainer; evaluate package",
+    "Two Nvidia 3090 24GB GPUs; cutoff/maximum token length 1,024"
+  ],
+  "datasets": [
+    "WebNLG: 13,211 training instances and 2,155 test instances; basis for the principal DBpedia-style training data",
+    "WebNLG-combined: 39,633 entries (Text2triples, Explanation, Triples2text)",
+    "WebNLG-combined-with-reflections: 52,844 entries; WebNLG-reflections-updated-instructions: fourfold original size",
+    "KELM-sub: 400,000 train / 5,000 test samples",
+    "SKE/SKE2019 and SKE21 Chinese relation-extraction data; SKE21 has 194,747 train, 21,639 validation, and 1,150 test examples",
+    "FewRel: 70,000 Wikipedia instances across 100 relations",
+    "DocRED: 5,053 Wikipedia articles, 132,375 entities, 56,354 relational facts, plus distantly supervised data over 101,873 documents"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Precision, recall, and F1",
+      "Type evaluation (TE): subject/predicate/object tags must match",
+      "Partial evaluation (PE): triples partially or completely match irrespective of tag",
+      "Exact evaluation (EE): triples match exactly irrespective of tag",
+      "Strict evaluation (SE): both triples and tags match"
+    ],
+    "baselines": [
+      "GPT-4 50 samples",
+      "GPT-4-0314",
+      "ChatGPT-3.5-2023",
+      "GPT-4 Full"
+    ],
+    "setting": "Fine-tuned models are benchmarked by generating non-streamed outputs with a 1,024 maximum-token limit, then comparing them to ground-truth triples. The main WebNLG test has 2,155 direct text-to-triple instances and uses the same instruction forms as training. For the alpaca-Lora fine-tune script, the authors use an approximately 85:15 train/validation split; the reported validation sizes are 6,000 for WebNLG-combined and 8,000 for WebNLG-combined-with-reflections. The paper also reports an ablation across four WebNLG training-data variants and results on SKE, DocRED, FewRel, KELM, and raw WebNLG."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "On WebNLG-reflections-updated-instructions, Orca-mini-3-7b records F1 values of 0.753 (type), 0.738 (partial), 0.719 (exact), and 0.717 (strict), exceeding the listed GPT-4 50-sample baseline (0.714, 0.692, 0.657, 0.645) and GPT-4-0314 (0.700, 0.675, 0.640, 0.629) in that table.",
+      "Vicuna-33b achieves the highest Table 4 F1 values: 0.755 type, 0.742 partial, 0.727 exact, and 0.724 strict; it is a larger model than the focal 7B group.",
+      "On KELM, Orca-mini-3-7b achieves F1 0.879 type, 0.857 partial, 0.830 exact, and 0.826 strict; Llama-2-13b scores 0.852, 0.825, 0.785, and 0.776 respectively.",
+      "Performance is very low on DocRED: Orca-mini-3 has strict F1 0.024 and Llama-2-13b strict F1 0.002. On SKE, Orca-mini-3 has strict F1 0.827 whereas Llama-2-13b has 0.124."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0016-D-P006-TABLE-0001",
+        "page": 6,
+        "excerpt": "Orca-mini-3-7b: F1 0.753 Type, 0.738 Partial, 0.719 Exact, 0.717 Strict; GPT-4 50 samples: 0.714, 0.692, 0.657, 0.645; GPT-4-0314: 0.700, 0.675, 0.640, 0.629."
+      },
+      {
+        "span_id": "C0016-D-P006-TABLE-0002",
+        "page": 6,
+        "excerpt": "Vicuna-33b: F1 0.755 Type, 0.742 Partial, 0.727 Exact, 0.724 Strict."
+      },
+      {
+        "span_id": "C0016-D-P008-TABLE-0003",
+        "page": 8,
+        "excerpt": "KELM Orca-mini-3-7b strict F1 0.826; DocRED Orca-mini-3 strict F1 0.024 and llama-2-13b strict F1 0.002; SKE orca-mini-3 strict F1 0.827 and llama-2-13b 0.124."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "The augmentation procedure creates threefold and fourfold WebNLG training variants by adding explanations, triple-to-text, and reflection tasks.",
+      "The reported WebNLG results show that a fine-tuned 7B Orca-mini-3 model can exceed the listed GPT-4 and ChatGPT baselines under the paper's common evaluation protocol.",
+      "The approach checks DBpedia vocabulary consistency and produces triples in a consistent DBpedia-compatible format.",
+      "[Review-level inference] Evaluating type, partial, exact, and strict matching exposes progressively stricter forms of output correctness instead of relying on one aggregate score."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0016-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "Such an approach allowed us to increase the size of training datasets by 3- and 4-fold."
+      },
+      {
+        "span_id": "C0016-D-P001-TEXT-0002",
+        "page": 1,
+        "excerpt": "small, fine-tuned models can outperform the baselines set up by GPT family models: ChatGPT and GPT-4."
+      },
+      {
+        "span_id": "C0016-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "The consistent structure of triples is essential so the model can effectively learn how to form triples properly."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Fine-tuned models occasionally hallucinate facts and can loop until reaching the token limit.",
+      "[Review-level inference] The strongest reported performance is concentrated in the WebNLG/DBpedia-style setting; the sharply low DocRED results indicate limited robustness to dataset formats and relation coverage.",
+      "[Review-level inference] The comparison with GPT systems is tied to the paper's prompted test configuration, including a separately labelled GPT-4 50-sample row, so it should not be read as a general cross-task superiority claim."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0016-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "They hallucinated on occasion ... Also, models had looping issues, where they would continually generate output until they reached the token limit."
+      },
+      {
+        "span_id": "C0016-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "The Llama-2-13b finetuned on another dataset DocRED performed very poorly and was completely unable to learn proper formatting of triples."
+      },
+      {
+        "span_id": "C0016-D-P006-TABLE-0003",
+        "page": 6,
+        "excerpt": "GPT comparison rows are separately reported as GPT-4 50 samples, GPT-4-0314, ChatGPT-3.5-2023, and GPT-4 Full."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The models sometimes hallucinate, illustrated by repeatedly generating a false birthplace for Jeff Bezos.",
+      "Models can enter output loops and continue generation until the token limit.",
+      "Dataset quality, relation coverage, representation format, size, and language exposure materially affect performance; DocRED has limited/incoherent target triples and small annotated training data, while FewRel mixes DBpedia and Wikidata formats."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0016-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "They hallucinated on occasion ... The models frequently hallucinated the birthplace of Bezos, providing false information about the location. Also, models had looping issues."
+      },
+      {
+        "span_id": "C0016-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "the reference triples ... were of poor quality: limited to a few relations, incoherent structure, a limited number of triples."
+      },
+      {
+        "span_id": "C0016-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "For yet another dataset – FewRel – the issue seems to be related to the model not knowing when to generate triples following the DBpedia and when using Wikidata formats."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "[Review-level inference] Add constrained decoding, post-generation validation, or repair against the target ontology to reduce hallucinated predicates/facts and malformed or looping output.",
+      "[Review-level inference] Train and test on consistently formatted, higher-quality, multi-relation data with broader property coverage and explicit handling of schema differences such as DBpedia versus Wikidata.",
+      "[Review-level inference] Include multilingual model/data selection and language-specific evaluation because the authors attribute the large SKE performance gap partly to base-model Chinese-text exposure."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0016-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "They hallucinated on occasion ... models had looping issues."
+      },
+      {
+        "span_id": "C0016-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "Exposure to different properties is also of high importance. The properties seen in the training and testing sets overlapped, with thirty-six properties unique to the test set."
+      },
+      {
+        "span_id": "C0016-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "if a language model is not exposed to a text in a given language, its performance, related to this language, is not satisfactory."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "[Review-level inference] Reliable factuality in generated triples remains unresolved because fine-tuned models can hallucinate facts.",
+      "[Review-level inference] Robust extraction across heterogeneous datasets, relation ontologies, document-level contexts, and languages remains unresolved; results vary strongly across WebNLG, KELM, SKE, FewRel, and DocRED.",
+      "[Review-level inference] Preventing uncontrolled repetitive generation while retaining complete multi-triple extraction remains unresolved."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0016-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "They hallucinated on occasion ... models had looping issues, where they would continually generate output until they reached the token limit."
+      },
+      {
+        "span_id": "C0016-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "The best scores have been obtained for the KELM dataset. The Llama-2-13b finetuned on another dataset DocRED performed very poorly."
+      },
+      {
+        "span_id": "C0016-D-P008-TABLE-0003",
+        "page": 8,
+        "excerpt": "Strict F1 ranges from 0.826 for Orca-mini-3-7b on KELM and 0.827 for Orca-mini-3 on SKE to 0.024 and 0.002 on DocRED."
+      }
+    ]
+  },
+  "code_and_data_availability": "not_reported"
+}

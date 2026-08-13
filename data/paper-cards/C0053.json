@@ -1,0 +1,849 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0053",
+    "title": "N-ary Relation Extraction for Simultaneous T-Box and A-Box Knowledge Base Augmentation",
+    "pdf_path": "data/batches/batch-03/C0053.pdf",
+    "authors": [
+      "Marco Fossati",
+      "Emilio Dorigatti",
+      "Claudio Giuliano"
+    ],
+    "year": 2015,
+    "venue": "Semantic Web (IOS Press); the PDF header gives volume/issue as “Undefined 0 (2015)”.",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The paper presents FACT EXTRACTOR, a complete NLP pipeline that reads a textual corpus and produces machine-readable, confidence-scored statements linked to KB-compliant URIs. It uses Frame Semantics for N-ary relation extraction, simultaneously augments a target KB’s T-Box and A-Box, uses only POS-level NLP, and trains supervised classifiers through crowdsourcing. In a DBpedia/Italian Wikipedia soccer use case, it produces more than 213,000 triples with estimated 81.27% F1; outputs are integrated into Italian DBpedia and the code is publicly released.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0053-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Marco Fossati, Emilio Dorigatti, and Claudio Giuliano.",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication header",
+      "span_id": "C0053-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "© 2015 – IOS Press and the authors.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication header",
+      "span_id": "C0053-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Undefined 0 (2015) 1; IOS Press.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0053-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "This paper depicts the FACT EXTRACTOR, a complete Natural Language Processing (NLP) pipeline which reads an input textual corpus and produces machine-readable statements.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "1.2 Problem and Solution",
+      "span_id": "C0053-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We tackle how to automatically enrich DBpedia resources with novel statements extracted from the text of Wikipedia articles.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "1.2 Problem and Solution",
+      "span_id": "C0053-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "We conceive the solution as a machine learning task implementing the Frame Semantics linguistic theory.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "1.2 Problem and Solution",
+      "span_id": "C0053-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We conceive the solution as a machine learning task... cast this as a classification activity falling into the supervised learning paradigm.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3 System Description",
+      "span_id": "C0053-D-P005-CAPTION-0002",
+      "page": 5,
+      "excerpt": "The repository also holds the input labels for two automatic classifiers... based on Support Vector Machines (SVM).",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "7 Numerical Expressions Normalization",
+      "span_id": "C0053-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "We opted for the implementation of a rule-based system to detect and normalize numerical expressions.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "8 Dataset Production",
+      "span_id": "C0053-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "The integration of the extraction results into DBpedia requires their conversion to a suitable data model, i.e., RDF.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "4.1 Lexical Units Extraction",
+      "span_id": "C0053-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "We first extract the complete set of verbs through a standard NLP pipeline: tokenization, lemmatization and POS tagging.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3 System Description",
+      "span_id": "C0053-D-P005-PICTURE-0001",
+      "page": 5,
+      "excerpt": "The high-level workflow has three sequential parts: Corpus Analysis, Supervised Fact Extraction, and Dataset Production.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "6 Supervised Fact Extraction",
+      "span_id": "C0053-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "Given as input an unknown sentence, the full frame classification workflow involves... tokenization, POS tagging, EL, FE classification, and frame classification.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0053-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "It enables a completely supervised yet reasonably priced machine learning environment through a crowdsourcing strategy.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "6.2 Training Set Creation",
+      "span_id": "C0053-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "The training set is randomly sampled from the input corpus and contains 3,055 items.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3 System Description",
+      "span_id": "C0053-D-P005-PICTURE-0001",
+      "page": 5,
+      "excerpt": "Corpus Analysis; Supervised Fact Extraction; Dataset Production.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "6.3 Frame Classification: Features",
+      "span_id": "C0053-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "We train our classifiers with... token... lemma... contextual sliding window... FE labels... gazetteer.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "8 Dataset Production",
+      "span_id": "C0053-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "We opted for the less verbose strategy, namely N-ary relations.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "5 Use Case Frame Repository",
+      "span_id": "C0053-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "A total of 6 frames and 15 FEs are modeled with Italian labels.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "10.2 T-Box Enrichment",
+      "span_id": "C0053-D-P017-TEXT-0002",
+      "page": 17,
+      "excerpt": "We manually identified the following mappings from frames and FEs to DBPO properties.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "6.3 Frame Classification: Features",
+      "span_id": "C0053-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "We automatically build a wide-coverage gazetteer with relevant DBpedia ontology (DBPO) classes as keys and instances as values.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "4 Corpus Analysis",
+      "span_id": "C0053-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "A pre-processing step is required to obtain the raw text representation only.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "6 Supervised Fact Extraction",
+      "span_id": "C0053-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "Entity Linking... linking relevant parts of a source sentence to URIs of a target KB.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "10.2 T-Box Enrichment",
+      "span_id": "C0053-D-P017-TEXT-0003",
+      "page": 17,
+      "excerpt": "One of our main objectives is to extend the target KB ontology with new properties on existing classes.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "1.1 Contributions",
+      "span_id": "C0053-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We focus on Wikipedia as the source corpus and on DBpedia as the target KB.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "4 Corpus Analysis",
+      "span_id": "C0053-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "We leverage... WIKIEXTRACTOR... to obtain the raw text representation only.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3 System Description",
+      "span_id": "C0053-D-P005-PICTURE-0001",
+      "page": 5,
+      "excerpt": "Corpus Analysis includes Lexical Units Extraction and Lexical Units Ranking; Supervised Fact Extraction includes Sentence Selection.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "6.1 Sentence Selection",
+      "span_id": "C0053-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "We set the interval to 5 < w < 25, where w is the number of words.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-03": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "8 Dataset Production",
+      "span_id": "C0053-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "Each candidate sentence inherits the document subject.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "8 Dataset Production",
+      "span_id": "C0053-D-P011-TEXT-0001",
+      "page": 11,
+      "excerpt": "We opted for the less verbose strategy, namely N-ary relations.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "8.1 Confidence Scores",
+      "span_id": "C0053-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "Besides the fact datasets, we also keep track of confidence scores and generate additional datasets accordingly.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.1 Lexical Units Extraction",
+      "span_id": "C0053-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "TREE TAGGER is exploited to fulfill these tasks.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "6 Supervised Fact Extraction",
+      "span_id": "C0053-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "We leverage THE WIKI MACHINE... for connecting text to Wikipedia URLs.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "6.3 Frame Classification: Features",
+      "span_id": "C0053-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "The repository... holds the input labels for two automatic classifiers... based on Support Vector Machines (SVM).",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "6.2 Training Set Creation",
+      "span_id": "C0053-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "The training set... contains 3,055 items. The outcome is the same amount of frame examples and 55,385 FE examples.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "10.1 Classification Performance",
+      "span_id": "C0053-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "We randomly sampled 500 sentences... results were further manually validated twice by the authors.",
+      "confidence": "medium"
+    },
+    "datasets-17-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "10.3 A-Box Population",
+      "span_id": "C0053-D-P017-TEXT-0003",
+      "page": 17,
+      "excerpt": "Out of 49,063 input sentences, we generated a total of 213,479 and 216,451 triples.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "10.1 Classification Performance",
+      "span_id": "C0053-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "We proceed with 2 evaluation settings... lenient... strict.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "10.4 Final Fact Correctness",
+      "span_id": "C0053-D-P018-TABLE-0002",
+      "page": 18,
+      "excerpt": "Fact correctness evaluation over 132 triples... Classifier, Normalizer, Linker, All.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "9 Baseline Classifier",
+      "span_id": "C0053-D-P012-TEXT-0001",
+      "page": 12,
+      "excerpt": "To enable a performance evaluation comparison with the supervised method, we developed a rule-based algorithm that handles the full frame and FEs annotation.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "9 Baseline Classifier",
+      "span_id": "C0053-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "If at least one core FE is detected in multiple frames, the baseline makes a random assignment for the frame.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "10.1 Classification Performance",
+      "span_id": "C0053-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "We assess the overall performance of the baseline and the supervised systems over a gold standard dataset.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "10.4 Final Fact Correctness",
+      "span_id": "C0053-D-P018-TEXT-0002",
+      "page": 18,
+      "excerpt": "We randomly selected 10 instances for each frame from the supervised dataset and retrieve all the related triples.",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "10.1 Classification Performance",
+      "span_id": "C0053-D-P013-TABLE-0001",
+      "page": 13,
+      "excerpt": "Supervised FE F1: 78.94 lenient and 69.96 strict; supervised frame F1: 83.60.",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "10.3 A-Box Population",
+      "span_id": "C0053-D-P017-TEXT-0002",
+      "page": 17,
+      "excerpt": "Out of 49,063 input sentences, we generated a total of 213,479 and 216,451 triples.",
+      "confidence": "medium"
+    },
+    "main_results-21-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "10.4 Final Fact Correctness",
+      "span_id": "C0053-D-P019-TABLE-0003",
+      "page": 19,
+      "excerpt": "Classifier .763; Normalizer .820; Linker .430; All .727.",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "1.1 Contributions",
+      "span_id": "C0053-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "N-ary relation extraction... simultaneous T-Box and A-Box population... shallow NLP machinery... low-cost yet supervised machine learning.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "10.1 Classification Performance",
+      "span_id": "C0053-D-P013-TABLE-0002",
+      "page": 13,
+      "excerpt": "Supervised results exceed baseline F1 in both FE settings and frame classification.",
+      "confidence": "medium"
+    },
+    "strengths-22-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "8 Dataset Production",
+      "span_id": "C0053-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "We add an extra instance type triple... as well as a provenance triple to indicate the original sentence.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "11.6 Scaling Up",
+      "span_id": "C0053-D-P020-TEXT-0001",
+      "page": 20,
+      "excerpt": "Our approach has been tested on the Italian language, a specific domain, and with a small frame repository.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "10.4.1 Discussion",
+      "span_id": "C0053-D-P019-TEXT-0002",
+      "page": 19,
+      "excerpt": "Most of the errors involve the linker.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "8 Dataset Production",
+      "span_id": "C0053-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "This assumption strongly depends on the corpus... will not perform well for general-purpose ones such as news articles.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "11.1 LU Ambiguity",
+      "span_id": "C0053-D-P019-TEXT-0001",
+      "page": 19,
+      "excerpt": "The number of frames per LU in our use case repository may not be exhaustive.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "11.2 Manual Intervention Costs",
+      "span_id": "C0053-D-P019-TEXT-0002",
+      "page": 19,
+      "excerpt": "Crowdsourcing still entails the manual effort needed to create the training set.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "11.8 Miscellanea",
+      "span_id": "C0053-D-P021-TEXT-0003",
+      "page": 21,
+      "excerpt": "The T-Box and A-Box evaluation results may be proportionally different if obtained with English data.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "11.9 Technical Future Work",
+      "span_id": "C0053-D-P021-TEXT-0001",
+      "page": 21,
+      "excerpt": "LUs are handled as unigrams, but n-grams should be considered too... the inclusion of the frame confidence would further refine the final confidence score.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "10.2 T-Box Enrichment",
+      "span_id": "C0053-D-P017-TEXT-0002",
+      "page": 17,
+      "excerpt": "Our system would undeniably benefit from a property matching facility to discover more potential mappings.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "10.4.1 Discussion",
+      "span_id": "C0053-D-P019-TEXT-0003",
+      "page": 19,
+      "excerpt": "The linker tends to assign a fairly high confidence to these matches... many assertions with undeserved high scores.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "11.6 Scaling Up",
+      "span_id": "C0053-D-P020-TEXT-0001",
+      "page": 20,
+      "excerpt": "We outline below the points that need to be addressed for scaling up to multilingual open information extraction.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "10.2 T-Box Enrichment",
+      "span_id": "C0053-D-P017-TEXT-0002",
+      "page": 17,
+      "excerpt": "A research contribution in ontology alignment is out of scope for this work.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "10.4.1 Discussion",
+      "span_id": "C0053-D-P019-TEXT-0003",
+      "page": 19,
+      "excerpt": "This leads to many assertions with undeserved high scores.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0053-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The codebase is released as free software and is publicly available in the DBpedia Association repository.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "4.2 Lexical Units Selection",
+      "span_id": "C0053-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "The ranking is publicly available in the code repository.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-03": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "13 Conclusion",
+      "span_id": "C0053-D-P024-TEXT-0003",
+      "page": 24,
+      "excerpt": "The codebase is publicly available as part of the DBPEDIA ASSOCIATION repository.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Automatically enrich DBpedia from unstructured Wikipedia text by extracting meaningful, disambiguated factual assertions. The objective is to discover Frame-Semantic N-ary relations and produce RDF suitable for simultaneous A-Box fact population and candidate T-Box property augmentation, while avoiding deep parsing and costly expert annotation.",
+  "methodology": {
+    "primary_family": "Classical machine learning",
+    "secondary_families": [
+      "Ontology-constrained and schema-guided methods",
+      "Rule-based NLP",
+      "Linguistic and dependency-based extraction"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "supervised",
+    "description": "FACT EXTRACTOR first strips Wikipedia to raw text, tokenizes, lemmatizes, and POS-tags it with TreeTagger; ranks verb lexical units using TF-IDF dispersion; and maps selected verbs to a hand-built, Italian soccer Frame-Semantic repository (6 frames, 15 frame elements). It selects 5–25-word seeds, crowdsources bottom-up annotations, trains SVM FE and frame classifiers using token/lemma, context-window, predicted-role, entity-linking, and DBpedia gazetteer features, then normalizes numeric expressions using regex/transformation rules. Finally it represents each extracted frame as an RDF N-ary relation, adds type/provenance/confidence triples, and links entity mentions with The Wiki Machine to DBpedia URIs."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "DBpedia is the target KB and RDF output schema. A custom frame repository defines frames, frame elements, core/non-core roles, and mappings to DBpedia ontology classes/properties. Frames and FEs provide candidate T-Box properties; extracted instances populate the A-Box. The system maps six frames and fifteen FEs in the use case, manually identifies mappings such as ACTIVITY→careerStation, AWARD→award, STATUS→playerStatus, and uses DBpedia classes in the entity-linking gazetteer.",
+    "evidence": [
+      {
+        "span_id": "C0053-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "A total of 6 frames and 15 FEs are modeled with Italian labels."
+      },
+      {
+        "span_id": "C0053-D-P017-TEXT-0002",
+        "page": 17,
+        "excerpt": "We manually identified the following mappings from frames and FEs to DBPO properties."
+      },
+      {
+        "span_id": "C0053-D-P010-TEXT-0003",
+        "page": 10,
+        "excerpt": "We automatically build a wide-coverage gazetteer with relevant DBpedia ontology (DBPO) classes as keys and instances as values."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing",
+    "Entity and concept extraction",
+    "Entity typing",
+    "Entity resolution and linking",
+    "Relation and triple extraction",
+    "Ontology or schema discovery",
+    "Graph construction",
+    "Graph validation and correction"
+  ],
+  "input_output": {
+    "input_type": "Unstructured Italian Wikipedia article text in the soccer domain, extracted from Wikipedia markup; DBpedia is also queried for ontology classes/instances and existing assertions.",
+    "input_granularity": "Corpus-level verb ranking; document/article-level topical subject; 5–25-word sentence seeds for annotation and classification; entity-linking surface forms/chunks within seeds.",
+    "output_representation": "Confidence-scored RDF triples encoding N-ary Frame-Semantic relations: a document/topic subject links to a reified frame instance, which links to FE participants/literals; frame instances also receive ontology type and source-sentence provenance triples. Outputs include RDF fact and confidence-score datasets for DBpedia."
+  },
+  "models_and_tools": [
+    "Support Vector Machine classifiers for FE and frame classification",
+    "TreeTagger for tokenization, lemmatization, and POS tagging",
+    "WikiExtractor for Wikipedia text extraction",
+    "The Wiki Machine for entity linking",
+    "CrowdFlower for training-data annotation",
+    "TF-IDF and standard deviation for lexical-unit ranking",
+    "YAML regular-expression/transformation rules for numeric normalization",
+    "DBpedia SPARQL endpoint for corpus slicing and gazetteer creation"
+  ],
+  "datasets": [
+    "Italian Wikipedia soccer-player/article use-case corpus: approximately 52,000 articles",
+    "49,063 input sentences used for A-Box generation",
+    "Crowdsourced training set: 3,055 items / 55,385 FE examples",
+    "Gold-standard evaluation set: 500 random sentences, crowdsourced then manually validated twice by the authors",
+    "Italian DBpedia chapter/release based on the 21 January 2015 Italian Wikipedia dump",
+    "132 triples sampled from supervised output for final-correctness evaluation"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Precision, recall, and F1 for FE classification under lenient and strict span matching",
+      "Precision, recall, and F1 for frame classification",
+      "Crowd agreement score (weighted-majority average)",
+      "T-Box property coverage/frequency distribution",
+      "A-Box assertion counts, overlap, and relative gain against Italian DBpedia",
+      "Manual correctness ratios for classifier-produced elements, normalized numeric elements, entity links, and complete triples",
+      "Confidence-score distribution statistics"
+    ],
+    "baselines": [
+      "Rule-based baseline frame/FE classifier: applies entity linking, maps linked DBpedia ontology classes to FE rules, uses at least one detected core FE for relaxed frame assignment, and randomly resolves overlapping frame/FE mappings.",
+      "Alternative sentence-selection strategies explored but not used as the main baseline: sentence splitter, chunker grammar, syntactic strategy, and lexical strategy."
+    ],
+    "setting": "The main comparison evaluates supervised versus rule-based extraction on 500 randomly sampled Italian Wikipedia sentences containing a selected LU, with crowd labels manually validated twice. FE evaluation uses both partial-span (lenient) and exact-span (strict) matching; frame evaluation is sentence-level. T-Box/A-Box analyses compare generated outputs against the Italian DBpedia chapter built from the same 21 January 2015 dump. Final fact correctness manually evaluates 132 triples: 10 instances per frame from supervised output, excluding direct instance-type triples."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "On FE classification, supervised outperformed the baseline: lenient P/R/F1 83.33/75.00/78.94 versus 73.48/65.83/69.45; strict 73.59/66.66/69.96 versus 67.68/63.79/65.68.",
+      "On frame classification, supervised P/R/F1 was 84.35/82.86/83.60 versus baseline 74.25/62.50/67.87.",
+      "From 49,063 sentences, supervised extraction generated 213,479 triples (4.35/sentence), about 52% above the dataset-average confidence threshold; baseline generated 216,451 (4.41/sentence), about 55% confident.",
+      "Manual final-correctness analysis of 132 supervised triples found 0.763 classifier-element correctness, 0.820 normalizer correctness, 0.430 linker correctness, and 0.727 complete-triple correctness.",
+      "The authors report that 3 of 6 frames and 12 of 15 FEs represent novel candidate T-Box properties; supervised output had 97.4% relative gain in novel subject–object assertions versus pre-existing Italian DBpedia assertions."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0053-D-P013-TABLE-0001",
+        "page": 13,
+        "excerpt": "Supervised FE F1: 78.94 lenient and 69.96 strict; supervised frame F1: 83.60."
+      },
+      {
+        "span_id": "C0053-D-P017-TEXT-0002",
+        "page": 17,
+        "excerpt": "Out of 49,063 input sentences, we generated a total of 213,479 and 216,451 triples."
+      },
+      {
+        "span_id": "C0053-D-P019-TABLE-0003",
+        "page": 19,
+        "excerpt": "Classifier .763; Normalizer .820; Linker .430; All .727."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author-stated: extracts N-ary rather than binary relations, retaining multiple participants such as winner, loser, competition, and score.",
+      "Author-stated: simultaneously supports candidate T-Box extension and A-Box fact addition, with RDF/DBpedia integration.",
+      "Experimental: the supervised approach materially improves FE and frame F1 over the implemented rule baseline on the same gold set.",
+      "Author-stated: operates with shallow POS-level NLP rather than syntactic parsing or semantic-role labeling, and uses relatively low-cost crowdsourced supervision.",
+      "Review-level inference: provenance, RDF typing, URI linking, and confidence datasets make the output more auditable and directly consumable than unlinked text triples, although correctness still depends substantially on the linker."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0053-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "N-ary relation extraction... simultaneous T-Box and A-Box population... shallow NLP machinery... low-cost yet supervised machine learning."
+      },
+      {
+        "span_id": "C0053-D-P013-TABLE-0002",
+        "page": 13,
+        "excerpt": "Supervised results exceed baseline F1 in both FE settings and frame classification."
+      },
+      {
+        "span_id": "C0053-D-P011-TEXT-0003",
+        "page": 11,
+        "excerpt": "We add an extra instance type triple... as well as a provenance triple to indicate the original sentence."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author-stated: the implemented system is monolingual, closed-domain, and uses a small, hand-curated soccer frame repository, limiting present generality.",
+      "Experimental: entity linking is the principal error source; linker element correctness is 0.430 and can yield high-confidence but wrong assertions.",
+      "Author-stated: document-subject assignment relies on entity-centric documents and is not expected to perform well on general-purpose news.",
+      "Review-level inference: evaluation is narrow—one language, domain, selected five LUs, one KB chapter, and a 132-triple correctness sample—so the reported performance does not establish broad Text-to-KG effectiveness.",
+      "Author-stated: baseline random assignment for overlapping frames/FEs limits its comparability and highlights schema/type ambiguity rather than offering a strong alternative extractor."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0053-D-P020-TEXT-0001",
+        "page": 20,
+        "excerpt": "Our approach has been tested on the Italian language, a specific domain, and with a small frame repository."
+      },
+      {
+        "span_id": "C0053-D-P019-TEXT-0002",
+        "page": 19,
+        "excerpt": "Most of the errors involve the linker."
+      },
+      {
+        "span_id": "C0053-D-P011-TEXT-0003",
+        "page": 11,
+        "excerpt": "This assumption strongly depends on the corpus... will not perform well for general-purpose ones such as news articles."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "Frame coverage may be incomplete because a lexical unit can evoke additional frames not represented in the use-case repository.",
+      "Crowdsourcing does not eliminate human annotation effort; workers still create the training set and the repository is hand-curated.",
+      "Shallow NLP prioritizes precision but syntactic parsing could improve recall.",
+      "The system’s scope is Italian, soccer-specific, and based on a small frame repository; scaling requires language resources, suitable frame projection, DBpedia class mappings, training funds, and gazetteer adaptation.",
+      "T-Box/A-Box findings may differ on the much larger English Wikipedia/DBpedia chapter."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0053-D-P019-TEXT-0001",
+        "page": 19,
+        "excerpt": "The number of frames per LU in our use case repository may not be exhaustive."
+      },
+      {
+        "span_id": "C0053-D-P019-TEXT-0002",
+        "page": 19,
+        "excerpt": "Crowdsourcing still entails the manual effort needed to create the training set."
+      },
+      {
+        "span_id": "C0053-D-P021-TEXT-0003",
+        "page": 21,
+        "excerpt": "The T-Box and A-Box evaluation results may be proportionally different if obtained with English data."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed: handle lexical units as n-grams as well as unigrams.",
+      "Author-proposed: use ontology classes for n-grams at entity-linking time as additional features and match the gazetteer over whole sentences rather than tokens.",
+      "Author-proposed: use a sentence splitter to make one-sentence training examples and reduce training-set noise.",
+      "Author-proposed: evaluate entity-linking surface forms rather than only links, and include frame confidence in final confidence scores.",
+      "Author-proposed: develop property matching/ontology alignment to discover more mappings, then scale toward multilingual open information extraction and DBpedia/Wikidata deployment.",
+      "Review-level inference: improving or calibrating entity linking before classifier scoring is a high-priority route, because the reported linker is the weakest evaluated component and its high scores can propagate errors."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0053-D-P021-TEXT-0001",
+        "page": 21,
+        "excerpt": "LUs are handled as unigrams, but n-grams should be considered too... the inclusion of the frame confidence would further refine the final confidence score."
+      },
+      {
+        "span_id": "C0053-D-P017-TEXT-0002",
+        "page": 17,
+        "excerpt": "Our system would undeniably benefit from a property matching facility to discover more potential mappings."
+      },
+      {
+        "span_id": "C0053-D-P019-TEXT-0003",
+        "page": 19,
+        "excerpt": "The linker tends to assign a fairly high confidence to these matches... many assertions with undeserved high scores."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-stated: scalable multilingual open information extraction still requires POS/lemmatization data, LU-to-frame-repository projection, domain-specific ontology mappings, supervision resources, and gazetteer adaptation.",
+      "Author-stated: automated, reliable property matching from extracted frames/FEs to an existing KB ontology remains outside this work’s scope.",
+      "Author-stated: trustworthy KB augmentation requires better entity linking and confidence estimation; current high-confidence errors can be caused by incorrect links.",
+      "Review-level inference: the method leaves open how to validate, deduplicate, and safely accept large numbers of novel extracted assertions before KB publication, especially beyond entity-centric Wikipedia articles."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0053-D-P020-TEXT-0001",
+        "page": 20,
+        "excerpt": "We outline below the points that need to be addressed for scaling up to multilingual open information extraction."
+      },
+      {
+        "span_id": "C0053-D-P017-TEXT-0002",
+        "page": 17,
+        "excerpt": "A research contribution in ontology alignment is out of scope for this work."
+      },
+      {
+        "span_id": "C0053-D-P019-TEXT-0003",
+        "page": 19,
+        "excerpt": "This leads to many assertions with undeserved high scores."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that the codebase is free software and publicly available in the DBpedia Association GitHub repository (github.com/dbpedia/fact-extractor). It also states that outputs were incorporated into Italian DBpedia, queryable through its SPARQL endpoint and downloadable as standalone dumps. The LU ranking and 21 numerical-normalization rules are stated to be publicly available; the PDF does not provide a persistent archival identifier or explicit license in the text."
+}

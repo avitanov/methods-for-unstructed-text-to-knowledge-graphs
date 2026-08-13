@@ -1,0 +1,757 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0138",
+    "title": "DBpedia Spotlight: Shedding Light on the Web of Documents",
+    "pdf_path": "data/pdfs/C0138.pdf",
+    "authors": [
+      "Pablo N. Mendes",
+      "Max Jakob",
+      "Andrés García-Silva",
+      "Christian Bizer"
+    ],
+    "year": "not_reported",
+    "venue": "not_reported",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "DBpedia Spotlight automatically annotates text documents with DBpedia URIs to interlink the Web of Documents and Linked Open Data. It supports configuration through the DBpedia Ontology and prominence, topical pertinence, contextual ambiguity, and disambiguation-confidence measures; the paper evaluates it against three disambiguation baselines and six public annotation systems.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title block",
+      "span_id": "C0138-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Pablo N. Mendes, Max Jakob, Andrés García-Silva, Christian Bizer",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-02-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0138-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "we developed DBpedia Spotlight, a system for automatically annotating text documents with DBpedia URIs... configure the annotations... through the DBpedia Ontology and quality measures",
+      "confidence": "medium"
+    },
+    "problem_addressed-03-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0138-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The goal of DBpedia Spotlight is to provide an adaptable system to find and disambiguate natural language mentions of DBpedia resources.",
+      "confidence": "medium"
+    },
+    "problem_addressed-03-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0138-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Users can flexibly specify the domain of interest, as well as the desired coverage and error tolerance.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-04-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "2.2 Spotting Algorithm",
+      "span_id": "C0138-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The implementation used was the LingPipe Exact Dictionary-Based Chunker... [using] the Aho-Corasick string matching algorithm with longest case-insensitive match.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-05-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0138-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Annotations can be restricted to instances of specific classes... Alternatively, arbitrary SPARQL queries over the DBpedia knowledge base can be provided.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-05-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "4.1.1 Results",
+      "span_id": "C0138-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "The mixing weights were estimated through a small experiment using linear regression over held out training data.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-06-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "2. Approach",
+      "span_id": "C0138-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Our approach works in four-stages. The spotting stage... Candidate selection... The disambiguation stage... The annotation can be customized by users.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-07-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "2.1 Dataset and Notation",
+      "span_id": "C0138-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We pre-processed Wikipedia articles, extracting every wikilink... with surface form s as anchor text and resource r as link target.",
+      "confidence": "medium"
+    },
+    "methodology-description-08-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "2. Approach; 2.1 Dataset and Notation",
+      "span_id": "C0138-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Our approach works in four-stages... spotting... Candidate selection... disambiguation... annotation...",
+      "confidence": "medium"
+    },
+    "methodology-description-08-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "2.4 Disambiguation",
+      "span_id": "C0138-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "rank candidate resources according to the similarity score between their context vectors and the context surrounding the surface form.",
+      "confidence": "medium"
+    },
+    "methodology-description-08-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.2 Web Service",
+      "span_id": "C0138-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "implemented RESTful and SOAP web services... return HTML, XML, JSON or XHTML+RDFa documents",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-09-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0138-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Annotations can be restricted to instances of specific classes (or sets of classes) including subclasses. Alternatively, arbitrary SPARQL queries... can be provided.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-09-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.3 Lexicalization dataset",
+      "span_id": "C0138-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "The dataset... was encoded in RDF using the Lexvo vocabulary... Association scores... are attached to lexvo:label relationships through named graphs.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-10-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "2.1 Dataset and Notation",
+      "span_id": "C0138-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Before storage, the context paragraph was tokenized, stopworded and stemmed.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-10-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "2.2–2.4",
+      "span_id": "C0138-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "spotting... recognizes... phrases... Candidate selection... map[s] the spotted phrase to resources... disambiguation... decide[s] for the best choice.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-10-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "6. Conclusion",
+      "span_id": "C0138-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "It enables users to link text documents to the Linked Open Data cloud through the DBpedia interlinking hub.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-11-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0138-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "the user provides text fragments (documents, paragraphs, sentences) and wishes to identify URIs for resources mentioned within that text.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-12-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0138-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "text fragments (documents, paragraphs, sentences)",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-12-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "2. Approach",
+      "span_id": "C0138-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "The spotting stage recognizes in a sentence... The disambiguation stage... uses the context around the surface forms.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-13-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.2 Web Service",
+      "span_id": "C0138-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "These web services return HTML, XML, JSON or XHTML+RDFa documents where each DBpedia resource identified in the text is related to the text chunk where it was found.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-13-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Figure 2",
+      "span_id": "C0138-D-P005-PICTURE-0002",
+      "page": 5,
+      "excerpt": "<Resource URI=\"dbpedia:Michael_Jackson\" ... types=\"MusicalArtist,Artist,Person\" surfaceForm=\"Michael Jackson\" offset=\"9\" similarityScore=\"0.315...\" />",
+      "confidence": "medium"
+    },
+    "models_and_tools-14-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "2.2 Spotting Algorithm",
+      "span_id": "C0138-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "LingPipe Exact Dictionary-Based Chunker... Aho-Corasick string matching algorithm... LingPipe implementation based on Hidden Markov Models.",
+      "confidence": "medium"
+    },
+    "models_and_tools-14-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "2.1 Dataset and Notation",
+      "span_id": "C0138-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "The collection of occurrences for each resource was then stored as a document in a Lucene Index.",
+      "confidence": "medium"
+    },
+    "models_and_tools-14-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "2.4 Disambiguation",
+      "span_id": "C0138-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "we use cosine as the similarity measure.",
+      "confidence": "medium"
+    },
+    "datasets-15-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "2.1 Dataset and Notation",
+      "span_id": "C0138-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We utilize the graph of labels, redirects and disambiguations in DBpedia to extract a lexicon... We pre-processed Wikipedia articles, extracting every wikilink.",
+      "confidence": "medium"
+    },
+    "datasets-15-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.1 Disambiguation Evaluation",
+      "span_id": "C0138-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "randomly selected 155,000 wikilink samples... We used the remainder... (about 69 million) as DBpedia resource occurrences.",
+      "confidence": "medium"
+    },
+    "datasets-15-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.2 Annotation Evaluation",
+      "span_id": "C0138-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "30 randomly selected paragraphs from New York Times documents from 10 different categories... ratio of annotated to not-annotated tokens was 33%.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-16-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Table 1",
+      "span_id": "C0138-D-P006-TABLE-0001",
+      "page": 6,
+      "excerpt": "Disambiguation Approach | Accuracy",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-16-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.2.1 Results; Table 2",
+      "span_id": "C0138-D-P007-TABLE-0002",
+      "page": 7,
+      "excerpt": "precision-recall trade-off... Table 2: F1 scores for each of the approaches tested in the annotation evaluation.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-17-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.1 Disambiguation Evaluation",
+      "span_id": "C0138-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "we included three baseline methods: Random Baseline... Default Sense Baseline... Default Similarity uses TF*IDF term scoring.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-17-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.2 Annotation Evaluation",
+      "span_id": "C0138-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "OpenCalais, Zemanta, Ontos Semantic API, The Wiki Machine, Alchemy API and M&W’s wikifier.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-18-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.1 Disambiguation Evaluation",
+      "span_id": "C0138-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "all these instances have ambiguous surface forms... A spotted surface form... is given to the disambiguation function along with the paragraph that it was mentioned in.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-18-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.2 Annotation Evaluation; Figure 3",
+      "span_id": "C0138-D-P006-CAPTION-0002",
+      "page": 6,
+      "excerpt": "30 randomly selected paragraphs from New York Times documents from 10 different categories... DBpedia Spotlight with different configurations... in comparison with other systems.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-18-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.2.1 Results",
+      "span_id": "C0138-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "support (varying from 0 to 1000)... confidence (0.1 to 0.9)",
+      "confidence": "medium"
+    },
+    "main_results-19-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 1; 4.1.1 Results",
+      "span_id": "C0138-D-P006-TABLE-0001",
+      "page": 6,
+      "excerpt": "Baseline Random 17.77%; Baseline Default Sense 55.12%; Baseline TF*IDF 55.91%; DBpedia Spotlight TF*ICF 73.39%; DBpedia Spotlight Mixed 80.52%.",
+      "confidence": "medium"
+    },
+    "main_results-19-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 2",
+      "span_id": "C0138-D-P007-TABLE-0002",
+      "page": 7,
+      "excerpt": "DBpedia Spotlight (best configuration) 56.0%; DBpedia Spotlight (no configuration) 45.2%; The Wiki Machine 59.5%; Zemanta 39.1%.",
+      "confidence": "medium"
+    },
+    "main_results-19-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.2.1 Results",
+      "span_id": "C0138-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "The best F1-score of DBpedia Spotlight was reached with confidence value of 0.6.",
+      "confidence": "medium"
+    },
+    "strengths-20-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0138-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "our system attempts to annotate DBpedia resources of any of the 272 classes (more than 30 top level) in the DBpedia Ontology.",
+      "confidence": "medium"
+    },
+    "strengths-20-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "6. Conclusion",
+      "span_id": "C0138-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The main advantage of our system is its comprehensiveness and flexibility.",
+      "confidence": "medium"
+    },
+    "strengths-20-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Table 1",
+      "span_id": "C0138-D-P006-TABLE-0003",
+      "page": 6,
+      "excerpt": "DBpedia Spotlight TF*ICF 73.39%; DBpedia Spotlight Mixed 80.52%.",
+      "confidence": "medium"
+    },
+    "weaknesses-21-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.2 Spotting Algorithm",
+      "span_id": "C0138-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We use the extended set of labels in the lexicalization dataset to create a lexicon for spotting.",
+      "confidence": "medium"
+    },
+    "weaknesses-21-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2 Annotation Evaluation",
+      "span_id": "C0138-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "it is possible that the type of discourse and the annotation style of Wikipedia would bias the results in favor of systems trained with that kind of data.",
+      "confidence": "medium"
+    },
+    "weaknesses-21-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Table 2",
+      "span_id": "C0138-D-P007-TABLE-0003",
+      "page": 7,
+      "excerpt": "DBpedia Spotlight (best configuration) 56.0%; The Wiki Machine 59.5%.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-22-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "2.3 Candidate Selection",
+      "span_id": "C0138-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "we decided to employ minimal pre-filtering... Other approaches for candidate selection are within our plans for future work.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-22-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.1.1 Results",
+      "span_id": "C0138-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Further research is needed to carefully examine the contribution of each component to the final score.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-22-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.2 Annotation Evaluation",
+      "span_id": "C0138-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "it is possible that the type of discourse and the annotation style of Wikipedia would bias the results",
+      "confidence": "medium"
+    },
+    "possible_improvements-23-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "2.3 Candidate Selection",
+      "span_id": "C0138-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Other approaches for candidate selection are within our plans for future work.",
+      "confidence": "medium"
+    },
+    "possible_improvements-23-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "6. Conclusion",
+      "span_id": "C0138-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "In the future we plan to incorporate more knowledge from the Linked Open Data cloud in order to enhance the annotation algorithm.",
+      "confidence": "medium"
+    },
+    "possible_improvements-23-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Figure 2",
+      "span_id": "C0138-D-P005-PICTURE-0003",
+      "page": 5,
+      "excerpt": "Example XML fragment resulting from the annotation service.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-24-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.1.1 Results",
+      "span_id": "C0138-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "Further research is needed to carefully examine the contribution of each component to the final score.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-24-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.3 Candidate Selection",
+      "span_id": "C0138-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "Other approaches for candidate selection are within our plans for future work.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-24-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "6. Conclusion",
+      "span_id": "C0138-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "a tool to detect mentions of DBpedia resources in text",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-25-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0138-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The source code is publicly available under the Apache license V2, and the documentation is available at http://dbpedia.org/spotlight.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-25-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "3.3 Lexicalization dataset",
+      "span_id": "C0138-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "The dataset... was encoded in RDF... and is provided for download as a DBpedia dataset.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-25-03": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "4.2 Annotation Evaluation",
+      "span_id": "C0138-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "This corpus is available for download on the project homepage.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Automatically find natural-language mentions of DBpedia resources and disambiguate ambiguous surface forms to the correct DBpedia URI, so unstructured documents can be linked to the Web of Data. The system targets a broad set of DBpedia entity types and lets users trade annotation coverage against error tolerance.",
+  "methodology": {
+    "primary_family": "Rule-based NLP",
+    "secondary_families": [
+      "Ontology-constrained and schema-guided methods",
+      "Classical machine learning"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "weakly_supervised",
+    "description": "Execution pipeline: (1) build a DBpedia lexicalization lexicon from DBpedia labels, redirects, disambiguation pages, and Wikipedia wikilinks; tokenize, remove stopwords, and stem wikilink-context paragraphs, then index resource occurrence contexts in Lucene; (2) spot longest case-insensitive lexicon matches with LingPipe/Aho-Corasick, optionally excluding spots consisting only of selected parts of speech; (3) retrieve DBpedia candidate resources for each surface form from the lexicalization dataset, retaining minimal pre-filtering; (4) represent each resource by aggregated Wikipedia mention contexts in a TF×ICF vector-space model and rank candidates by cosine similarity to the mention paragraph; (5) optionally combine the contextual score with the surface-form prior using linear-regression-derived weights; (6) post-filter/configure annotations by DBpedia class hierarchy or SPARQL-selected resource set, support/prominence, topical pertinence, contextual ambiguity, and confidence; (7) return linked annotations through a Web application or REST/SOAP service in HTML, XML, JSON, or XHTML+RDFa."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "DBpedia is both the target knowledge base and a schema constraint: users may annotate only instances of specified DBpedia ontology classes (including subclasses), or use arbitrary SPARQL queries over DBpedia to define eligible resources. The lexicalization dataset is encoded in RDF with Lexvo labels and named-graph association scores.",
+    "evidence": [
+      {
+        "span_id": "C0138-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "Annotations can be restricted to instances of specific classes (or sets of classes) including subclasses. Alternatively, arbitrary SPARQL queries... can be provided."
+      },
+      {
+        "span_id": "C0138-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "The dataset... was encoded in RDF using the Lexvo vocabulary... Association scores... are attached to lexvo:label relationships through named graphs."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing",
+    "Entity and concept extraction",
+    "Entity resolution and linking",
+    "Graph construction"
+  ],
+  "input_output": {
+    "input_type": "Unstructured natural-language text fragments, with DBpedia/Wikipedia-derived lexical and contextual data used to construct the annotation index.",
+    "input_granularity": "Documents, paragraphs, or sentences for annotation; spotting is described at sentence level and disambiguation uses paragraph context.",
+    "output_representation": "Mention-level DBpedia URI annotations associated with text chunks; service serializations are HTML, XML, JSON, or XHTML+RDFa. Output records can include resource URI, surface form, character offset, DBpedia types, support, and similarity score."
+  },
+  "models_and_tools": [
+    "LingPipe Exact Dictionary-Based Chunker",
+    "Aho-Corasick longest case-insensitive matching",
+    "LingPipe Hidden-Markov-Model part-of-speech tagger",
+    "Lucene index",
+    "Vector Space Model with TF×ICF weighting",
+    "Cosine-similarity candidate ranking",
+    "Linear regression for the optional mixed prior/context score",
+    "RESTful and SOAP web services"
+  ],
+  "datasets": [
+    "DBpedia lexicalization dataset built from DBpedia labels, redirects, disambiguation pages, and Wikipedia wikilinks",
+    "Approximately 69 million Wikipedia-derived DBpedia resource occurrences for disambiguation context",
+    "155,000 randomly selected ambiguous Wikipedia wikilink samples held out for automatic disambiguation evaluation",
+    "Manually annotated news corpus: 30 randomly selected New York Times paragraphs from 10 categories; annotated-token ratio 33%"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Disambiguation accuracy",
+      "Annotation precision",
+      "Annotation recall",
+      "Annotation F1 score"
+    ],
+    "baselines": [
+      "Random Baseline: uniformly select a candidate resource",
+      "Default Sense Baseline: select the candidate with greatest P(r|s)",
+      "Default Similarity: TF×IDF term scoring",
+      "Public annotation-service comparisons: OpenCalais, Zemanta, Ontos Semantic API, The Wiki Machine, Alchemy API, and M&W's wikifier; OpenCalais+Naïve and Ontos+Naïve URI-conversion variants"
+    ],
+    "setting": "Two evaluations. First, evaluate disambiguation on 155,000 held-out ambiguous Wikipedia wikilinks, using the mention's paragraph and candidate surface form; compare random, prior/default-sense, TF×IDF, TF×ICF, and mixed scores. Second, evaluate whole-document annotation on a manually agreed gold standard of 30 New York Times paragraphs from 10 categories; sweep Spotlight confidence from 0.1 to 0.9 and support values 0, 100, 500, and 1,000, and compare precision/recall/F1 with public services."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "On 155,000 held-out ambiguous Wikipedia mentions, accuracy was 17.77% for random, 55.12% for default sense, 55.91% for TF×IDF, 73.39% for Spotlight TF×ICF, and 80.52% for Spotlight Mixed.",
+      "On the manually annotated news corpus, best annotation F1 was 56.0% for Spotlight, versus 45.2% for unconfigured Spotlight, 59.5% for The Wiki Machine, 39.1% for Zemanta, 16.7% for OpenCalais+Naïve, 14.7% for Alchemy, 10.6% for Ontos+Naïve, 6.7% for OpenCalais, and 1.5% for Ontos.",
+      "The best Spotlight annotation F1 was obtained at confidence 0.6. Increasing confidence and support increased precision at a cost to recall."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0138-D-P006-TABLE-0001",
+        "page": 6,
+        "excerpt": "Baseline Random 17.77%; Baseline Default Sense 55.12%; Baseline TF*IDF 55.91%; DBpedia Spotlight TF*ICF 73.39%; DBpedia Spotlight Mixed 80.52%."
+      },
+      {
+        "span_id": "C0138-D-P007-TABLE-0002",
+        "page": 7,
+        "excerpt": "DBpedia Spotlight (best configuration) 56.0%; DBpedia Spotlight (no configuration) 45.2%; The Wiki Machine 59.5%; Zemanta 39.1%."
+      },
+      {
+        "span_id": "C0138-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "The best F1-score of DBpedia Spotlight was reached with confidence value of 0.6."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author claim: broad coverage—rather than limiting annotations to people, organizations, and places, it attempts all 272 DBpedia ontology classes.",
+      "Author claim: configurable target-resource set and precision/recall behavior through ontology classes/SPARQL, support, pertinence, ambiguity, and confidence.",
+      "Experimental result: contextual TF×ICF markedly exceeds the reported random, prior-only, and TF×IDF disambiguation baselines on the held-out Wikipedia setting.",
+      "[Review inference] Its mention-level URI output directly supports the entity-extraction and entity-linking stages of a Text-to-KG pipeline, while retaining offsets and types useful for graph-population provenance."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0138-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "our system attempts to annotate DBpedia resources of any of the 272 classes (more than 30 top level) in the DBpedia Ontology."
+      },
+      {
+        "span_id": "C0138-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "The main advantage of our system is its comprehensiveness and flexibility."
+      },
+      {
+        "span_id": "C0138-D-P006-TABLE-0003",
+        "page": 6,
+        "excerpt": "DBpedia Spotlight TF*ICF 73.39%; DBpedia Spotlight Mixed 80.52%."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "[Review inference] Exact lexicon spotting is limited to surface forms represented in its DBpedia/Wikipedia-derived lexicalization data, so novel wording or missed variants are unlikely to be detected.",
+      "[Review inference] The system performs entity spotting and linking but does not extract relations, events, or new ontology/schema elements from text; further graph construction must be done by a downstream process.",
+      "[Review inference] The strongest disambiguation results use Wikipedia-derived contexts and links, while the whole-system news evaluation contains only 30 paragraphs; this limits the evidence for generalization across genres and domains.",
+      "[Review inference] The best F1 (56.0%) did not exceed The Wiki Machine's 59.5% on the reported news-corpus comparison, despite the system's configurability."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0138-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "We use the extended set of labels in the lexicalization dataset to create a lexicon for spotting."
+      },
+      {
+        "span_id": "C0138-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "it is possible that the type of discourse and the annotation style of Wikipedia would bias the results in favor of systems trained with that kind of data."
+      },
+      {
+        "span_id": "C0138-D-P007-TABLE-0003",
+        "page": 7,
+        "excerpt": "DBpedia Spotlight (best configuration) 56.0%; The Wiki Machine 59.5%."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "Candidate selection deliberately uses minimal pre-filtering to preserve generality and flexibility; the authors note that more candidate-selection approaches are future work.",
+      "The authors state that further research is needed to carefully examine how each component contributes to the mixed-score result.",
+      "The authors recognize that evaluation on Wikipedia may be biased by Wikipedia discourse and linking conventions, motivating their complementary manual news evaluation."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0138-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "we decided to employ minimal pre-filtering... Other approaches for candidate selection are within our plans for future work."
+      },
+      {
+        "span_id": "C0138-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "Further research is needed to carefully examine the contribution of each component to the final score."
+      },
+      {
+        "span_id": "C0138-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "it is possible that the type of discourse and the annotation style of Wikipedia would bias the results"
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed: investigate additional candidate-selection methods.",
+      "Author-proposed: incorporate more knowledge from the Linked Open Data cloud to enhance annotation.",
+      "[Review inference] Evaluate on larger, independently annotated, multi-domain corpora and report exact precision/recall values per selected configuration, enabling stronger comparison with other systems.",
+      "[Review inference] Extend the linked-entity output with relation/event extraction and explicit RDF triple creation to cover later Text-to-KG stages."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0138-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "Other approaches for candidate selection are within our plans for future work."
+      },
+      {
+        "span_id": "C0138-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "In the future we plan to incorporate more knowledge from the Linked Open Data cloud in order to enhance the annotation algorithm."
+      },
+      {
+        "span_id": "C0138-D-P005-PICTURE-0003",
+        "page": 5,
+        "excerpt": "Example XML fragment resulting from the annotation service."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-stated: determining the individual contribution of the prior and contextual components in the mixed disambiguation score.",
+      "Author-stated: improving candidate selection without sacrificing the intended generality and flexibility.",
+      "[Review inference] Robust entity linking when relevant mentions are absent from, or ambiguously represented in, the DBpedia/Wikipedia lexicalization source remains unresolved by this lexicon-based approach.",
+      "[Review inference] End-to-end transformation of text into relation-bearing, validated, and updated knowledge graphs is outside this paper's evaluated scope."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0138-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "Further research is needed to carefully examine the contribution of each component to the final score."
+      },
+      {
+        "span_id": "C0138-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "Other approaches for candidate selection are within our plans for future work."
+      },
+      {
+        "span_id": "C0138-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "a tool to detect mentions of DBpedia resources in text"
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that source code is publicly available under the Apache License V2 and that documentation is available from the DBpedia Spotlight project page. The lexicalization dataset is published as an RDF DBpedia dataset, and the manually annotated news corpus is stated to be downloadable from the project homepage. A Web service and Web application are described as publicly available."
+}

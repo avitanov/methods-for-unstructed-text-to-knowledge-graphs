@@ -1,0 +1,440 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0013",
+    "title": "Seq2KG: An End-to-End Neural Model for Domain Agnostic Knowledge Graph Construction from Text",
+    "authors": [
+      "Michael Stewart",
+      "Wei Liu"
+    ],
+    "year": "not_reported",
+    "venue": "not_reported",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "not_reported",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "pdf_path": null
+  },
+  "problem_addressed": "Traditional KGC from text relies on entity/relation linking to an existing knowledge base, but many domains lack a knowledge base, and important information held in phrases that are not standard named entities is lost, so there is a need for a domain-agnostic method that constructs true knowledge graphs (with node attributes) from text without assuming availability of an external knowledge base.",
+  "methodology": {
+    "primary_family": "End-to-end neural sequence labelling model (Seq2KG) that jointly performs triple extraction and entity typing as a multi-label sequence labelling task",
+    "secondary_families": [
+      "Rule-based pipeline triple extraction",
+      "Neural binary classification (filtering) model for triple validity"
+    ],
+    "system_type": "end_to_end",
+    "supervision_setting": "not_reported",
+    "description": "Seq2KG embeds an input sequence with BERT, passes it through one or more Bi-GRU layers, and jointly predicts (a) multi-label triple-membership tags for each token, indicating its role as head/relation/tail of zero or more triples, and (b) entity-type labels for head/tail tokens, using a joint categorical cross-entropy loss averaged across the two components; triples are reconstructed from contiguous spans sharing the same triple-membership label."
+  },
+  "ontology_or_schema_use": {
+    "status": "not_reported",
+    "value": null,
+    "evidence": []
+  },
+  "text_to_kg_stages": [
+    "Triple mapping",
+    "Triple filtering",
+    "BERT embedding",
+    "Bi-GRU sequence labelling for triple membership",
+    "Entity typing of head/tail nodes"
+  ],
+  "input_output": {
+    "input_type": "Unstructured natural language text (news articles/documents and single sentences)",
+    "input_granularity": "Document-level input split into sentences/tokens for training and evaluation of the End-to-End Seq2KG model",
+    "output_representation": "A set of (head, relation, tail) triples forming a knowledge graph, with head and tail nodes additionally labelled with entity type attributes"
+  },
+  "models_and_tools": [
+    "BERT",
+    "Bi-GRU",
+    "Redcoat"
+  ],
+  "datasets": [
+    "Catering Services (CS)",
+    "Automotive Engineering (AE)",
+    "BBN"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Strict Accuracy",
+      "Loose Macro",
+      "Loose Micro",
+      "Strict acc"
+    ],
+    "baselines": [
+      "Rule-based model",
+      "Filtering model"
+    ],
+    "setting": "Triple extraction is evaluated on CS, AE, and BBN using ESim."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Rule-based model achieved the highest ESim scores across datasets: 0.919 on CS, 0.897 on AE, and 0.849 on BBN.",
+      "End-to-End Seq2KG (no ET) achieved ESim of 0.879 on CS, 0.902 on AE (highest among all models on AE), and 0.797 on BBN, performing almost as well as the rule-based system without domain-specific rules.",
+      "Filtering model performed poorly across datasets, with ESim of 0.691 on CS, 0.197 on AE, and 0.427 on BBN.",
+      "End-to-End Seq2KG (ET) achieved ESim of 0.809 on the BBN dataset."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0013-D-P009-TABLE-0001",
+        "page": 9,
+        "excerpt": "Table 2: The results of each model's triple extraction performance on the three datasets according to the ESim metric. Each score is the average score of evaluating the same model 3 times.\n\n|                           | CS    | AE    |   BBN |\n|---------------------------|-------|-------|-------|\n| Rule-based                | 0.919 | 0.897 | 0.849 |\n| Filtering                 | 0.691 | 0.197 | 0.427 |\n| End-to-End Seq2KG (no ET) | 0.879 | 0.902 | 0.797 |\n| End-to-End Seq2KG (ET)    | -     | -     | 0.809 |"
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "The End-to-End Seq2KG model is domain agnostic, requiring no external knowledge base or hand-crafted rules, unlike prior pipeline and text-graph approaches restricted to specific domains.",
+      "Jointly learning entity typing alongside triple extraction does not negatively affect triple extraction performance, suggesting the approach could extend to predicting further node attributes.",
+      "Releases three high-quality manually annotated datasets and a novel annotation scheme enabling end-to-end training for KGC."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0013-D-P001-TEXT-0003",
+        "page": 1,
+        "excerpt": "Knowledge Graph Construction (KGC) from text unlocks information held within unstructured text and is critical to a wide range of downstream applications. General approaches to KGC from text are heavily reliant on the existence of knowledge bases, yet most domains do not even have an external knowledge base readily available. In many situations this results in information loss as a wealth of key information is held within 'non-entities'. Domain-specific approaches to KGC typically adopt unsupervised pipelines, using carefully crafted linguistic and statistical patterns to extract co-occurred noun phrases as triples, essentially constructing text graphs rather than true knowledge graphs. In this research, for the first time, in the same flavour as Collobert et al.'s seminal work of 'Natural language processing (almost) from scratch' in 2011, we propose a Seq2KG model attempting to achieve 'Knowledge graph construction (almost) from scratch' . An end-to-end Sequence to Knowledge Graph (Seq2KG) neural model jointly learns to generate triples and resolves entity types as a multi-label classification task through deep learning neural networks. In addition, a novel evaluation metric that takes both semantic and structural closeness into account is developed for measuring the performance of triple extraction. We show that our end-toend Seq2KG model performs on par with a state of the art rule-based system which outperformed other neural models and won the first prize of the first Knowledge Graph Contest in 2019. A new annotation scheme and three high-quality manually annotated datasets are available to help promote this direction of research."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Review inference: the End-to-End Seq2KG model could not be evaluated jointly with entity typing on the CS and AE datasets because those datasets lack entity type annotations, limiting the completeness of cross-domain evaluation."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0013-D-P009-TEXT-0004",
+        "page": 9,
+        "excerpt": "Table 2 displays the results of each of the three models on the CS, AE and BBN datasets according to the embedding similarity metric. Note that the End-to-End Seq2KG model was not evaluated on the CS or AE datasets as those datasets are not labelled with entity types."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The authors state that although the model is capable of learning entity typing as part of KGC, 'its performance could be improved.'"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0013-D-P009-TEXT-0008",
+        "page": 9,
+        "excerpt": "The results show that the model is certainly capable of learning to perform entity typing as part of the KGC process, although its performance could be improved. A notable finding is that learning to perform entity typing does not negatively affect the triple extraction performance, which suggests that it would be possible to also learn to predict other attributes directly from the text as well."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Other binary classifiers, such as support vector machines, could replace the feed-forward network in the filtering model.",
+      "It would be interesting to test the model's ability to predict structured relations as opposed to verb-based relations from text."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0013-D-P009-TEXT-0010",
+        "page": 9,
+        "excerpt": "As the first work of its kind, the paper presented here can be seen as a framework with substitutable components. Other binary classifiers can be used in the filtering model, such as support vector machines. Different methods can be applied to the joint loss function in the end-toend model, or the sequence labelling component could be replaced with other sequence labelling models such as the transformer (Vaswani et al. 2017). It would also be interesting to test the ability of the model to predict structured relations as opposed to verb-based relations from the text. More research into evaluation metrics is also needed; knowledge graph isomorphism or ontology mapping would be potential areas of interest."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "More research into knowledge graph evaluation metrics (e.g., knowledge graph isomorphism or ontology mapping) is still needed.",
+      "The ability of the model to predict structured (as opposed to verb-based) relations from text has not yet been tested.",
+      "The filtering model's reliance on greedy regular-expression-based candidate triple generation remains a practical bottleneck causing poor performance."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0013-D-P009-TEXT-0010",
+        "page": 9,
+        "excerpt": "As the first work of its kind, the paper presented here can be seen as a framework with substitutable components. Other binary classifiers can be used in the filtering model, such as support vector machines. Different methods can be applied to the joint loss function in the end-toend model, or the sequence labelling component could be replaced with other sequence labelling models such as the transformer (Vaswani et al. 2017). It would also be interesting to test the ability of the model to predict structured relations as opposed to verb-based relations from the text. More research into evaluation metrics is also needed; knowledge graph isomorphism or ontology mapping would be potential areas of interest."
+      },
+      {
+        "span_id": "C0013-D-P009-TEXT-0006",
+        "page": 9,
+        "excerpt": "The filtering model does not perform as well, however. It performs very poorly across all three datasets, especially on the automotive engineering news. There key reason for this phenomenon lies in its preliminary regular-expression based triple extraction method that builds the set of candidate triples. During training, the ground truth triples are appended to the set of candidate triples and are assigned a label of 1, indicating that they are correct. During evaluation, however, the ground truth triples are not known and the model must rely on the greedy triple extraction method to provide it with the correct triples alongside the incorrect ones. In practice it is exceedingly challenging to identify the correct triples using regular expression parsing, and so the model ends up predicting very few triples, hence receiving a low score. We attempted to use OpenIE instead, but it performed even worse due to the excessively long head and tail phrases."
+      }
+    ]
+  },
+  "code_and_data_availability": "The source code of each model and the three annotated datasets are publicly available on GitHub at https://github.com/Michael-Stewart-Webdev/Seq2KG.",
+  "analysis_confidence": "high",
+  "evidence_locations": {
+    "paper_metadata.authors-01": {
+      "claim": "Michael Stewart; Wei Liu",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P001-SECTION-0002",
+      "page": 1,
+      "excerpt": "Michael Stewart and Wei Liu",
+      "confidence": "high"
+    },
+    "paper_metadata.authors-02": {
+      "claim": "Michael Stewart; Wei Liu",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The University of Western Australia",
+      "confidence": "high"
+    },
+    "paper_metadata.authors-03": {
+      "claim": "Michael Stewart; Wei Liu",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "michael.stewart@research.uwa.edu.au, wei.liu@uwa.edu.au",
+      "confidence": "high"
+    },
+    "problem_addressed-01": {
+      "claim": "Traditional KGC from text relies on entity/relation linking to an existing knowledge base, but many domains lack a knowledge base, and important information held in phrases that are not standard named entities is lost, so there is a need for a domain-agnostic method that constructs true knowledge graphs (with node attributes) from text without assuming availability of an external knowledge base.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P001-TEXT-0006",
+      "page": 1,
+      "excerpt": "This traditional approach to constructing a knowledge graph from entities and relations linked to concepts in a knowledge base presents two key issues. Firstly, many domains feature entities that do not exist in a knowledge base (Chen et al. 2018), and often cannot be labelled using standard named entity classes. Secondly, a wealth of information is lost when important information is held within phrases that do not conform to a specific known entity class. Take the following as an example:",
+      "confidence": "high"
+    },
+    "problem_addressed-02": {
+      "claim": "Traditional KGC from text relies on entity/relation linking to an existing knowledge base, but many domains lack a knowledge base, and important information held in phrases that are not standard named entities is lost, so there is a need for a domain-agnostic method that constructs true knowledge graphs (with node attributes) from text without assuming availability of an external knowledge base.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P001-TEXT-0009",
+      "page": 1,
+      "excerpt": "We therefore argue that in order to provide a general, domain agnostic solution for KGC from text, it is beneficial to approach KGC without the assumption of a knowledge base. The head and tail of each triple should be comprised of any terms carrying important information, regardless of whether they are named entities or not. The attributes of each node (i.e. the entity type) as well as the relations can be determined through the text itself, alleviating the need for a knowledge base. These attributes serve to encapsulate the knowledge held within the text, differentiating our approach as true knowledge graph construction as opposed to text or data graph extraction. Our method is generalisable to a range of domains and excels when important information is held within 'non-entities' or when a domain-specific knowledge base is not available.",
+      "confidence": "high"
+    },
+    "methodology.primary_family-01": {
+      "claim": "End-to-end neural sequence labelling model (Seq2KG) that jointly performs triple extraction and entity typing as a multi-label sequence labelling task",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P002-TEXT-0018",
+      "page": 2,
+      "excerpt": "Then we present two neural models: a filtering model, and an end-to-end model. The end-to-end model takes text as a sequential input and jointly performs triple extraction and entity typing to determine node attributes, which is capable of turning a sequence into a knowledge graph (Seq2KG). The triples are considerably more fine-grained and applicable to a wide variety of domains when compared to named entity recognition.",
+      "confidence": "high"
+    },
+    "methodology.primary_family-02": {
+      "claim": "End-to-end neural sequence labelling model (Seq2KG) that jointly performs triple extraction and entity typing as a multi-label sequence labelling task",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P005-TEXT-0031",
+      "page": 5,
+      "excerpt": "The End-to-End Seq2KG model treats the task of KGC as a multi-label sequence labelling problem: given a sentence comprised of tokens, its goal is to label each token with its membership and role in zero or more triples, as well as its entity type(s). The set of triples for the sentence is then produced based on the triple membership labels assigned to each token by the model. This allows the model to generate a dynamic number of triples per sentence.",
+      "confidence": "high"
+    },
+    "methodology.secondary_families-01": {
+      "claim": "Rule-based pipeline triple extraction; Neural binary classification (filtering) model for triple validity",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P003-TEXT-0023",
+      "page": 3,
+      "excerpt": "The rule-based model, first introduced as a method for extracting triples from automotive and catering news datasets (Stewart, Enkhsaikhan, and Liu 2019), uses a pipeline-based approach in order to convert a document into a set of triples. It comprises seven distinct stages, as shown in Figure 2, each of which may be adjusted to suit a particular domain. This rule-based pipeline outperformed other neural models at the time and won the first prize of 2019 ICDM/ICBK Knowledge Graph Contest 2 . Therefore, we use it as a pseudo-upperbound to match other models' performance against. In other words, a neural model without domain restriction achieving similar or better performance than this rule-based model will be considered as the new state of the art.",
+      "confidence": "high"
+    },
+    "methodology.secondary_families-02": {
+      "claim": "Rule-based pipeline triple extraction; Neural binary classification (filtering) model for triple validity",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P004-TEXT-0015",
+      "page": 4,
+      "excerpt": "The filtering model, as shown in Figure 3, is a deep-learning based model that aims to take the output of an existing triple extraction system and identify the set of valid triples contained within. It accomplishes this by classifying each triple into one of two classes (valid and invalid) using a fully connected feed forward neural network, which can be replaced by any binary classifier. For example, if given the triples (Urus, revealed, twin-turbo 4.0-liter V8), (Urus, powered by, twin-turbo 4.0-liter V8 ) , the model should classify the first triple as invalid (i.e. class 0), and the second as valid (class 1). All of the triples labelled as valid by the model will form the set of output triples.",
+      "confidence": "high"
+    },
+    "methodology.system_type-01": {
+      "claim": "end_to_end",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P005-TEXT-0030",
+      "page": 5,
+      "excerpt": "The End-to-End Seq2KG model, as shown in Figure 4, aims to extract triples directly from the text and label each node with its corresponding entity type(s) via a neural network architecture. In contrast to the rule-based method and filtering method, the End-to-End Seq2KG model requires absolutely no feature engineering. It does not need to be tailored to a specific domain and is thereby domain agnostic. While it requires annotated training data, obtaining annotated data is preferable to carefully crafting rules for a potentially 'brittle' rule-based system. Moreover, the process of annotating data is a task that can be performed by anybody with knowledge of the domain, in contrast to the construction of rulebased systems which demand programming knowledge and expertise in natural language processing.",
+      "confidence": "high"
+    },
+    "methodology.description-01": {
+      "claim": "Seq2KG embeds an input sequence with BERT, passes it through one or more Bi-GRU layers, and jointly predicts (a) multi-label triple-membership tags for each token, indicating its role as head/relation/tail of zero or more triples, and (b) entity-type labels for head/tail tokens, using a joint categorical cross-entropy loss averaged across the two components; triples are reconstructed from contiguous spans sharing the same triple-membership label.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P005-TEXT-0031",
+      "page": 5,
+      "excerpt": "The End-to-End Seq2KG model treats the task of KGC as a multi-label sequence labelling problem: given a sentence comprised of tokens, its goal is to label each token with its membership and role in zero or more triples, as well as its entity type(s). The set of triples for the sentence is then produced based on the triple membership labels assigned to each token by the model. This allows the model to generate a dynamic number of triples per sentence.",
+      "confidence": "high"
+    },
+    "methodology.description-02": {
+      "claim": "Seq2KG embeds an input sequence with BERT, passes it through one or more Bi-GRU layers, and jointly predicts (a) multi-label triple-membership tags for each token, indicating its role as head/relation/tail of zero or more triples, and (b) entity-type labels for head/tail tokens, using a joint categorical cross-entropy loss averaged across the two components; triples are reconstructed from contiguous spans sharing the same triple-membership label.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "Hidden and output layers The input sequence is first embedded via BERT before being sent to both the triple prediction component and entity typing component. The embeddings pass through one or more Bi-GRU layers, each of which encodes the input sequence from left-to-right and right-to-left.",
+      "confidence": "high"
+    },
+    "methodology.description-03": {
+      "claim": "Seq2KG embeds an input sequence with BERT, passes it through one or more Bi-GRU layers, and jointly predicts (a) multi-label triple-membership tags for each token, indicating its role as head/relation/tail of zero or more triples, and (b) entity-type labels for head/tail tokens, using a joint categorical cross-entropy loss averaged across the two components; triples are reconstructed from contiguous spans sharing the same triple-membership label.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P006-TEXT-0014",
+      "page": 6,
+      "excerpt": "Here, y n ∈ { 0 , 1 } is the ground truth label of the class of index n , { y ′ n ∈ R | 0 ≤ y ′ n ≤ 1 } is the prediction score associated with the class of index n , and N is the set of labels. We then average the loss of each component. Given loss t is the loss of the triple extraction component, and loss e is the loss of the entity typing component:",
+      "confidence": "high"
+    },
+    "text_to_kg_stages-01": {
+      "claim": "Triple mapping; Triple filtering; BERT embedding; Bi-GRU sequence labelling for triple membership; Entity typing of head/tail nodes",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "Hidden and output layers The input sequence is first embedded via BERT before being sent to both the triple prediction component and entity typing component. The embeddings pass through one or more Bi-GRU layers, each of which encodes the input sequence from left-to-right and right-to-left.",
+      "confidence": "high"
+    },
+    "input_output.input_type-01": {
+      "claim": "Unstructured natural language text (news articles/documents and single sentences)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P001-TEXT-0003",
+      "page": 1,
+      "excerpt": "Knowledge Graph Construction (KGC) from text unlocks information held within unstructured text and is critical to a wide range of downstream applications. General approaches to KGC from text are heavily reliant on the existence of knowledge bases, yet most domains do not even have an external knowledge base readily available. In many situations this results in information loss as a wealth of key information is held within 'non-entities'. Domain-specific approaches to KGC typically adopt unsupervised pipelines, using carefully crafted linguistic and statistical patterns to extract co-occurred noun phrases as triples, essentially constructing text graphs rather than true knowledge graphs. In this research, for the first time, in the same flavour as Collobert et al.'s seminal work of 'Natural language processing (almost) from scratch' in 2011, we propose a Seq2KG model attempting to achieve 'Knowledge graph construction (almost) from scratch' . An end-to-end Sequence to Knowledge Graph (Seq2KG) neural model jointly learns to generate triples and resolves entity types as a multi-label classification task through deep learning neural networks. In addition, a novel evaluation metric that takes both semantic and structural closeness into account is developed for measuring the performance of triple extraction. We show that our end-toend Seq2KG model performs on par with a state of the art rule-based system which outperformed other neural models and won the first prize of the first Knowledge Graph Contest in 2019. A new annotation scheme and three high-quality manually annotated datasets are available to help promote this direction of research.",
+      "confidence": "high"
+    },
+    "input_output.input_type-02": {
+      "claim": "Unstructured natural language text (news articles/documents and single sentences)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "In this paper we introduce three datasets 7 : Catering Services (CS), Automotive Engineering (AE), and BBN . The CS and AE datasets contain news articles relating to the catering and automotive industries, respectively. The BBN dataset contains single sentences taken from Wall Street Journal articles.",
+      "confidence": "high"
+    },
+    "input_output.input_granularity-01": {
+      "claim": "Document-level input split into sentences/tokens for training and evaluation of the End-to-End Seq2KG model",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P008-TEXT-0008",
+      "page": 8,
+      "excerpt": "After parameter tuning we found that the best performance on the development set for both of our models were achieved with a hidden dimension size of 768, and 0.5 dropout prior to the final layer. The models were optimised using ADAM. The batch size was 5 for the filtering model and 10 for the End-to-End Seq2KG model. The filtering model and Endto-End Seq2KG models were trained with a learning rate of 0.00001 and 0.001, and max sequence length of 10 and 100, respectively. Documents were split into sentences when training and evaluating the End-to-End Seq2KG model in order to fit the max sequence length.",
+      "confidence": "high"
+    },
+    "input_output.output_representation-01": {
+      "claim": "A set of (head, relation, tail) triples forming a knowledge graph, with head and tail nodes additionally labelled with entity type attributes",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P003-TEXT-0010",
+      "page": 3,
+      "excerpt": "In addition, our End-to-End Seq2KG model also labels the entity types of the head and tails of each triple, assigning [ORGANISATION, ORGANIZATION/COMPANY] to Lamboghini , [PRODUCT, PRODUCT/CAR] to Urus , and so on. In this way it is able to capture knowledge directly from text without requiring an external knowledge base.",
+      "confidence": "high"
+    },
+    "input_output.output_representation-02": {
+      "claim": "A set of (head, relation, tail) triples forming a knowledge graph, with head and tail nodes additionally labelled with entity type attributes",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P006-TEXT-0023",
+      "page": 6,
+      "excerpt": "Using this data format a model can learn to predict both triple membership and entity types. For the triples, a model may learn to predict one or more labels per token which represent the membership of that token in a particular triple. These predictions can then be converted to a set of triples by searching for the heads, relations and tails of each triple using a simple algorithm: starting from n = 1 , find a contiguous sequence of tokens whose predicted labels contain head n , and repeat for rel n and tail n . These three sets of tokens form the first triple, and the process is repeated until no further triples are found or n > T , where T is an upper limit on the number of triples. The ideal value of T depends on the dataset; we found T = 10 to be sufficient for our evaluation datasets.",
+      "confidence": "high"
+    },
+    "models_and_tools-01": {
+      "claim": "BERT; Bi-GRU; Redcoat",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P007-TEXT-0006",
+      "page": 7,
+      "excerpt": "Each dataset was manually annotated using Redcoat (Stewart, Liu, and Cardell-Oliver 2019), a powerful web-based tool for labelling data for hierarchical entity typing. In contrast to other popular annotation tools such as BRAT (Stenetorp et al. 2012) and Amazon SageMaker Ground Truth 8 , Redcoat supports multi-label annotation, meaning a single token can be labelled with multiple categories. This was critical to our application as it allowed for many tokens to be the head, relation, and/or tail of multiple triples, as seen in Figure 5 where 4.0-liter V8 is both the tail of the first triple and the head of the second triple.",
+      "confidence": "high"
+    },
+    "models_and_tools-02": {
+      "claim": "BERT; Bi-GRU; Redcoat",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "Hidden and output layers The input sequence is first embedded via BERT before being sent to both the triple prediction component and entity typing component. The embeddings pass through one or more Bi-GRU layers, each of which encodes the input sequence from left-to-right and right-to-left.",
+      "confidence": "high"
+    },
+    "datasets-01": {
+      "claim": "Catering Services (CS); Automotive Engineering (AE); BBN",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "In this paper we introduce three datasets 7 : Catering Services (CS), Automotive Engineering (AE), and BBN . The CS and AE datasets contain news articles relating to the catering and automotive industries, respectively. The BBN dataset contains single sentences taken from Wall Street Journal articles.",
+      "confidence": "high"
+    },
+    "datasets-02": {
+      "claim": "Catering Services (CS); Automotive Engineering (AE); BBN",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "Table 1: A summary of the three datasets introduced in this paper.\n\n|      | # Documents   | # Documents   | # Documents   | Avg Tokens/doc   | Avg Tokens/doc   | Avg Tokens/doc   | Avg Triples/doc   | Avg Triples/doc   | Avg Triples/doc   | Avg Entities/doc   | Avg Entities/doc   | Avg Entities/doc   |\n|------|---------------|---------------|---------------|------------------|------------------|------------------|-------------------|-------------------|-------------------|--------------------|--------------------|--------------------|\n| Name | Train         | Dev           | Test          | Train            | Dev              | Test             | Train             | Dev               | Test              | Train              | Dev                | Test               |\n| CS   | 162           | 20            | 20            | 184.5            | 184.7            | 176.0            | 7.5               | 8.5               | 6.3               | -                  | -                  | -                  |\n| AE   | 646           | 81            | 81            | 217.2            | 206.3            | 210.1            | 7.3               | 7.3               | 7.6               | -                  | -                  | -                  |\n| BBN  | 1639          | 183           | 166           | 28.7             | 28.5             | 27.9             | 3.6               | 4.2               | 3.9               | 2.4                | 2.2                | 2.2                |",
+      "confidence": "high"
+    },
+    "evaluation.metrics-01": {
+      "claim": "Strict Accuracy; Loose Macro; Loose Micro; Strict acc",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P008-TEXT-0014",
+      "page": 8,
+      "excerpt": "To evaluate the ability of the joint model to perform entity typing alongside triple extraction, we use Strict Accuracy, Loose Macro, and Loose Micro score (Ling and Weld 2012). Given P is the set of predicted entity labels across each token of each head and each tail, and T is the ground truth labels of those same tokens:",
+      "confidence": "high"
+    },
+    "evaluation.metrics-02": {
+      "claim": "Strict Accuracy; Loose Macro; Loose Micro; Strict acc",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P009-TABLE-0002",
+      "page": 9,
+      "excerpt": "Table 3: The results of the End-to-End Seq2KG (ET) model's entity typing performance on the BBN dataset in terms of F1 Score. Each score is the average score of evaluating the same model 3 times.\n\n|                        |   Mi-f1 |   Ma-f1 |   Strict acc |\n|------------------------|---------|---------|--------------|\n| End-to-End Seq2KG (ET) |   0.588 |   0.654 |        0.654 |",
+      "confidence": "high"
+    },
+    "evaluation.baselines-01": {
+      "claim": "Rule-based model; Filtering model",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P009-TEXT-0009",
+      "page": 9,
+      "excerpt": "In this research, for the first time, in the same flavour as Collobert et al.'s seminal work of 'Natural language processing (almost) from scratch' in 2011, we proposed a Seq2KG model attempting to achieve 'Knowledge graph construction (almost) from scratch' . Through an end-to-end trainable model, Seq2KG jointly learns to generate triples and resolves entity types as a multi-label classification task through deep learning neural networks. The model training is enabled through a new annotation scheme we devised, and trained and tested on three quality annotated datasets. To ensure a fair and strict evaluation, we proposed a new evaluation that captures both graph-level structural information as well as word-level semantic information. The Seq2KG model outperforms a neural filtering model and on par with a state-of-the-art prize winning rule-based model which is domain specific with heavily hand-crafted rules.",
+      "confidence": "high"
+    },
+    "evaluation.setting-01": {
+      "claim": "Triple extraction is evaluated on CS, AE, and BBN using ESim.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P009-CAPTION-0001",
+      "page": 9,
+      "excerpt": "Table 2: The results of each model's triple extraction performance on the three datasets according to the ESim metric. Each score is the average score of evaluating the same model 3 times.",
+      "confidence": "high"
+    },
+    "evaluation.setting-02": {
+      "claim": "Triple extraction is evaluated on CS, AE, and BBN using ESim.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P009-TABLE-0001",
+      "page": 9,
+      "excerpt": "Table 2: The results of each model's triple extraction performance on the three datasets according to the ESim metric. Each score is the average score of evaluating the same model 3 times.\n\n|                           | CS    | AE    |   BBN |\n|---------------------------|-------|-------|-------|\n| Rule-based                | 0.919 | 0.897 | 0.849 |\n| Filtering                 | 0.691 | 0.197 | 0.427 |\n| End-to-End Seq2KG (no ET) | 0.879 | 0.902 | 0.797 |\n| End-to-End Seq2KG (ET)    | -     | -     | 0.809 |",
+      "confidence": "high"
+    },
+    "code_and_data_availability-01": {
+      "claim": "The source code of each model and the three annotated datasets are publicly available on GitHub at https://github.com/Michael-Stewart-Webdev/Seq2KG.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P003-TEXT-0012",
+      "page": 3,
+      "excerpt": "1 The source code of each model is available on GitHub: https://github.com/Michael-Stewart-Webdev/Seq2KG",
+      "confidence": "high"
+    },
+    "code_and_data_availability-02": {
+      "claim": "The source code of each model and the three annotated datasets are publicly available on GitHub at https://github.com/Michael-Stewart-Webdev/Seq2KG.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0013-D-P007-TEXT-0007",
+      "page": 7,
+      "excerpt": "7 The datasets are available on GitHub: https://github.com/Michael-Stewart-Webdev/Seq2KG",
+      "confidence": "high"
+    }
+  }
+}

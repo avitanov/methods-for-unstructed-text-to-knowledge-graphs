@@ -1,0 +1,758 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0047",
+    "title": "A Novel Cascade Binary Tagging Framework for Relational Triple Extraction",
+    "pdf_path": "data/pdfs/C0047.pdf",
+    "authors": [
+      "Zhepei Wei",
+      "Jianlin Su",
+      "Yue Wang",
+      "Yuan Tian",
+      "Yi Chang"
+    ],
+    "year": 2020,
+    "venue": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics (ACL 2020)",
+    "identifier": {
+      "status": "reported",
+      "value": "ACL 2020, pages 1476–1488",
+      "evidence": [
+        {
+          "span_id": "C0047-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics, pages 1476–1488."
+        }
+      ]
+    },
+    "abstract": "The paper introduces CasRel, a cascade binary-tagging framework for relational triple extraction from unstructured text. It treats each relation as a function mapping a subject to object(s), detects subjects first, then uses relation-specific object taggers. The authors report large F1 gains on NYT and WebNLG, including on overlapping-triple cases.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0047-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Zhepei Wei, Jianlin Su, Yue Wang, Yuan Tian, Yi Chang",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication header",
+      "span_id": "C0047-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics ... July 5 - 10, 2020.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication header",
+      "span_id": "C0047-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics, pages 1476–1488.",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Publication header",
+      "span_id": "C0047-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics, pages 1476–1488.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0047-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Instead of treating relations as discrete labels ... models relations as functions that map subjects to objects ... Experiments show ... 17.5 and 30.2 absolute gain in F1-score on ... NYT and WebNLG.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0047-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Extracting relational triples from unstructured text is crucial for large-scale knowledge graph construction ... overlapping triple problem where multiple relational triples in the same sentence share the same entities.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0047-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "the class distribution is highly imbalanced ... the classifier can be confused when the same entity participates in multiple valid relations (overlapping triples).",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "The CasRel Framework",
+      "span_id": "C0047-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "we directly model the triples and design a training objective right at the triple level.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Related Work",
+      "span_id": "C0047-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "Our framework is based on a training objective ... to learn both entities and relations through joint decoding.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.1 BERT Encoder",
+      "span_id": "C0047-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We employ a pre-trained BERT model ... to encode the context information.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.2 Cascade Decoder",
+      "span_id": "C0047-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "we instantiate them as binary taggers on top of a deep bidirectional Transformer BERT.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0047-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We implement the above idea in CasRel, an end-to-end cascade binary tagging framework.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "The CasRel Framework",
+      "span_id": "C0047-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "given annotated sentence xj from the training set D and a set of potentially overlapping triples Tj ... we aim to maximize the data likelihood of the training set D.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3 The CasRel Framework",
+      "span_id": "C0047-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "instead of learning relation classifiers f(s,o)→r, we learn relation-specific taggers fr(s)→o ... first identify all possible subjects ... then ... relation-specific taggers ... objects.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.1 BERT Encoder and 3.2 Cascade Decoder",
+      "span_id": "C0047-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The cascade decoder consists of two modules ... a subject tagger; and a set of relation-specific object taggers.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.2 Cascade Decoder",
+      "span_id": "C0047-D-P005-PICTURE-0003",
+      "page": 5,
+      "excerpt": "For each subject, we iteratively apply the same decoding process ... take the averaged vector representation between the start and end tokens of the k-th subject.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.2 Cascade Decoder",
+      "span_id": "C0047-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "it consists of a set of relation-specific object taggers ... for all possible relations.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "4.1 Experimental Setting",
+      "span_id": "C0047-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "NYT ... consists of 1.18M sentences with 24 predefined relation types. WebNLG ... contains 246 predefined relation types.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3 The CasRel Framework",
+      "span_id": "C0047-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The goal of relational triple extraction is to identify all possible (subject, relation, object) triples in a sentence.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0047-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "Extracting relational triples from unstructured text is crucial for large-scale knowledge graph construction.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3.1 BERT Encoder",
+      "span_id": "C0047-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "the input is a single text sentence instead of sentence pair ... We use WordPiece embeddings ... Each word ... will be tokenized to fine-grained tokens, i.e., sub-words.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.2 Cascade Decoder",
+      "span_id": "C0047-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "recognize all possible subjects in the input sentence ... detect the start and end position of subjects ... assigning each token a binary tag.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.2 Cascade Decoder",
+      "span_id": "C0047-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "object taggers will identify the corresponding object(s) for each detected subject.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3 The CasRel Framework",
+      "span_id": "C0047-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "identify all possible (subject, relation, object) triples in a sentence, where some triples may share the same entities as subjects or objects.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.1 BERT Encoder",
+      "span_id": "C0047-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We employ a pre-trained BERT model ... We use WordPiece embeddings ... to represent words in vector space.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.2 Experimental Result",
+      "span_id": "C0047-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "CasRelrandom ... all parameters of BERT are randomly initialized; CasRelLSTM ... LSTM-based structure ... with pre-trained Glove embedding; CasRel ... pre-trained BERT weights.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Appendix A Implementation Details",
+      "span_id": "C0047-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "batch size as 6; the learning rate is set to 1e−5 ... early stopping ... 12 ... blocks ... hidden state ... 768 ... BERT-Base, Cased ... 110M parameters.",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.1 Experimental Setting",
+      "span_id": "C0047-D-P006-TABLE-0001",
+      "page": 6,
+      "excerpt": "NYT contains 56195 sentences for training, 5000 sentences for validation, and 5000 sentences for test, and WebNLG contains 5019 ... 500 ... 703.",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Appendix C",
+      "span_id": "C0047-D-P012-TABLE-0002",
+      "page": 12,
+      "excerpt": "Relational triple extraction results ... ACE04 ... NYT10-HRL ... NYT11-HRL ... Wiki-KBP.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.1 Experimental Setting",
+      "span_id": "C0047-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "we report the standard micro Precision (Prec.), Recall (Rec.) and F1-score ... An extracted relational triple ... is regarded as correct only if the relation and the heads of both subject and object are all correct.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Appendix C",
+      "span_id": "C0047-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "The stricter but less popular one is Exact Match ... We adopt the Partial Match metric for ACE04, NYT10-HRL and NYT11-HRL, and adopt the Exact Match metric for Wiki-KBP.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.2 Experimental Result: Compared Methods",
+      "span_id": "C0047-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "We compare our model with ... NovelTagging ... CopyR ... GraphRel ... and CopyRRL.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.2 Experimental Result",
+      "span_id": "C0047-D-P007-TABLE-0002",
+      "page": 7,
+      "excerpt": "Table 2 lists NovelTagging, CopyROneDecoder, CopyRMultiDecoder, GraphRel1p, GraphRel2p, CopyRRL, CopyR*RL, and CasRel variants.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-03": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Appendix C",
+      "span_id": "C0047-D-P012-TABLE-0003",
+      "page": 12,
+      "excerpt": "Table 5 compares CasRel with 12 recent strong baselines across ACE04, NYT10-HRL, NYT11-HRL, and Wiki-KBP.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.1 Experimental Setting",
+      "span_id": "C0047-D-P006-TABLE-0001",
+      "page": 6,
+      "excerpt": "we split the sentences into three categories, namely, Normal, EntityPairOverlap (EPO) and SingleEntityOverlap (SEO).",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.2 Experimental Result",
+      "span_id": "C0047-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The reported results for the above baselines are directly copied from the original published literature.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Appendix A Implementation Details",
+      "span_id": "C0047-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "The hyper-parameters are determined on the validation set ... max length ... set to 100 words.",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.2 Experimental Result",
+      "span_id": "C0047-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "CasRel: NYT 89.7 / 89.5 / 89.6; WebNLG 93.4 / 90.1 / 91.8. CopyRRL F1: 72.1 and 61.6. CasRelrandom F1: 78.5 and 82.0; CasRelLSTM F1: 83.6 and 83.7.",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.2 Experimental Result: Main Results",
+      "span_id": "C0047-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "achieves encouraging 17.5% and 30.2% improvements in F1-score over the best state-of-the-art method ... on NYT and WebNLG datasets respectively.",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.2 Experimental Result",
+      "span_id": "C0047-D-P008-TABLE-0003",
+      "page": 8,
+      "excerpt": "For N≥5, CasRel is 83.7 on NYT and 90.9 on WebNLG; CopyR*RL is 45.9 and 55.7.",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction: contributions",
+      "span_id": "C0047-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We introduce ... a principled problem formulation ... addresses the overlapping triple problem by design ... instantiate ... a novel cascade binary tagging model on top of a Transformer encoder.",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2 Experimental Result",
+      "span_id": "C0047-D-P008-TABLE-0002",
+      "page": 8,
+      "excerpt": "the CasRel model achieves excellent performance over all five classes ... suffers the least from the increasing complexity of the input sentence.",
+      "confidence": "medium"
+    },
+    "strengths-23-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "The CasRel Framework",
+      "span_id": "C0047-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "we learn relation-specific taggers fr(s)→o ... instead of classifying relations for (subject, object) pairs.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.2 Cascade Decoder",
+      "span_id": "C0047-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "First, we detect subjects ... Then for each candidate subject, we check all possible relations ... object taggers ... for all possible relations.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2 Experimental Result: Compared Methods",
+      "span_id": "C0047-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The reported results for the above baselines are directly copied from the original published literature.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.1 Experimental Setting",
+      "span_id": "C0047-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "We use the datasets released by Zeng et al. (2018).",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.1 Experimental Setting, footnote 4",
+      "span_id": "C0047-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "Datasets such as ACE, Wiki-KBP have few overlapping triples in the sentences hence are not suitable for evaluating the performance of overlapping triple extraction.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Appendix C: Dataset Study",
+      "span_id": "C0047-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "the annotated triples are not always the ground truth, which may affect the evaluation of our model ... performance ... can only partially reflect the potential ... and probably underestimate the real value.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Appendix C: Dataset Study",
+      "span_id": "C0047-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "these two versions have been selectively adopted and preprocessed in many different ways ... lead to incomparable results if not specifying the version.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "3.2 Cascade Decoder",
+      "span_id": "C0047-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "First, we detect subjects ... Then for each candidate subject, we check all possible relations.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Appendix C: Dataset Study",
+      "span_id": "C0047-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "multi-word entities are common in real-world scenarios, so evaluating on a more proper dataset like NYT10-HRL (which also contains overlapping triples in test set) may better reveal the model’s real value.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Appendix C: Dataset Study",
+      "span_id": "C0047-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "The last two triples should have been annotated ... but were omitted, which will significantly affect the values of both precision and recall.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Appendix C",
+      "span_id": "C0047-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "it’s hard to use a unified metric to compare our model with existing models.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "3 The CasRel Framework",
+      "span_id": "C0047-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "The goal ... is to identify all possible ... triples in a sentence.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Abstract and footnote 1",
+      "span_id": "C0047-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The source code and data are released online. https://github.com/weizhepei/CasRel",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "4.1 Experimental Setting",
+      "span_id": "C0047-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "We use the datasets released by (Zeng et al., 2018).",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Extract relational triples (subject, relation, object) from individual unstructured natural-language sentences for knowledge-graph construction, with particular emphasis on sentences containing overlapping triples: entity-pair overlap (EPO) and single-entity overlap (SEO). The paper argues that entity-pair relation classification suffers from severe negative-pair imbalance and ambiguity when an entity participates in several relations.",
+  "methodology": {
+    "primary_family": "Joint entity-relation extraction (including joint triple extraction)",
+    "secondary_families": [
+      "Transformer encoder methods",
+      "Neural NLP pipelines"
+    ],
+    "system_type": "end_to_end",
+    "supervision_setting": "supervised",
+    "description": "CasRel reformulates relation extraction as subject-conditioned object tagging rather than classifying a relation for an entity pair. Given a labelled sentence, its triple-level likelihood is decomposed into p(subject | sentence) and, for every relation, p(object | subject, sentence), including a null object for relations not holding for that subject. Execution is: (1) WordPiece-tokenize and encode one sentence with a 12-layer BERT encoder; (2) two sigmoid binary classifiers tag every token as a possible subject start and end; (3) pair starts with their nearest admissible ends to form subject spans; (4) represent each subject by the average of its start-to-end encoder vectors; (5) for that subject, run all relation-specific binary object start/end taggers in parallel, conditioned by adding the subject vector to each token representation; (6) pair object boundaries and emit every detected (subject, relation, object) triple. Training maximizes the summed log likelihood of subject, relation-object, and null-object tags using Adam."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "No ontology or external KG schema is used to constrain decoding. The model assumes the fixed, predefined relation inventory of each dataset and creates one relation-specific object tagger per possible relation (24 relations for NYT; 246 for WebNLG).",
+    "evidence": [
+      {
+        "span_id": "C0047-D-P005-TEXT-0001",
+        "page": 5,
+        "excerpt": "it consists of a set of relation-specific object taggers ... for all possible relations."
+      },
+      {
+        "span_id": "C0047-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "NYT ... consists of 1.18M sentences with 24 predefined relation types. WebNLG ... contains 246 predefined relation types."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Entity and concept extraction",
+    "Relation and triple extraction",
+    "Graph construction"
+  ],
+  "input_output": {
+    "input_type": "A single unstructured natural-language sentence, represented as WordPiece subword tokens and encoded with BERT.",
+    "input_granularity": "Sentence-level input; token-level binary start/end tags decoded into subject and object spans.",
+    "output_representation": "A set of relational triples (subject span, predefined relation type, object span) extracted from each sentence; multiple, including overlapping, triples can be emitted."
+  },
+  "models_and_tools": [
+    "CasRel cascade binary tagging framework",
+    "BERT-Base, Cased (12 layers, hidden size 768, 110M parameters)",
+    "CasRelrandom ablation with randomly initialized BERT",
+    "CasRelLSTM ablation with pretrained GloVe embeddings",
+    "WordPiece tokenization",
+    "Adam optimizer",
+    "Early stopping"
+  ],
+  "datasets": [
+    "NYT dataset released by Zeng et al. (2018): 56,195 training, 5,000 validation, and 5,000 test sentences; 24 predefined relation types; originally produced by distant supervision.",
+    "WebNLG dataset adapted by Zeng et al. (2018): 5,019 training, 500 validation, and 703 test sentences; 246 predefined relation types; originally created for NLG.",
+    "Supplementary comparisons: ACE04, NYT10-HRL, NYT11-HRL, and Wiki-KBP."
+  ],
+  "evaluation": {
+    "metrics": [
+      "Micro-precision",
+      "Micro-recall",
+      "Micro-F1",
+      "Partial Match (supplementary datasets)",
+      "Exact Match (supplementary Wiki-KBP)"
+    ],
+    "baselines": [
+      "NovelTagging (Zheng et al., 2017)",
+      "CopyROneDecoder and CopyRMultiDecoder (Zeng et al., 2018)",
+      "GraphRel1p and GraphRel2p (Fu et al., 2019)",
+      "CopyRRL and the authors' CopyR*RL reimplementation (Zeng et al., 2019)",
+      "Supplementary: Chan and Roth; MultiR; DS-Joint; FCM; SPTree; CoType; Katiyar and Cardie; ReHession; HRL; PA-LSTM-CRF."
+    ],
+    "setting": "The main evaluation uses the Zeng et al. (2018) NYT and WebNLG splits, stratifying test sentences into Normal, EPO, and SEO overlap patterns and also by number of triples (N=1, 2, 3, 4, >=5). Baseline main-table values were copied from original publications except CopyR*RL, which the authors reimplemented. Hyperparameters were selected on validation data; the maximum input length was 100 words. Supplementary experiments compare 12 baselines on ACE04 (5-fold cross-validation), NYT10-HRL, NYT11-HRL, and Wiki-KBP under the specified partial/exact match protocols."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "On NYT, full CasRel obtained precision 89.7, recall 89.5, and F1 89.6; the strongest reported main-table baseline, CopyRRL, obtained F1 72.1, a 17.5-point absolute F1 gain.",
+      "On WebNLG, full CasRel obtained precision 93.4, recall 90.1, and F1 91.8; CopyRRL obtained F1 61.6, a 30.2-point absolute gain.",
+      "The randomly initialized-BERT variant scored F1 78.5/82.0 and the LSTM+GloVe variant 83.6/83.7 on NYT/WebNLG, respectively, indicating that the tagging framework itself was competitive while pretrained BERT added further gains.",
+      "In the high-complexity N>=5 subset, CasRel achieved F1 83.7 on NYT and 90.9 on WebNLG, versus the best displayed baseline values 45.9 and 55.7, respectively."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0047-D-P007-TABLE-0001",
+        "page": 7,
+        "excerpt": "CasRel: NYT 89.7 / 89.5 / 89.6; WebNLG 93.4 / 90.1 / 91.8. CopyRRL F1: 72.1 and 61.6. CasRelrandom F1: 78.5 and 82.0; CasRelLSTM F1: 83.6 and 83.7."
+      },
+      {
+        "span_id": "C0047-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "achieves encouraging 17.5% and 30.2% improvements in F1-score over the best state-of-the-art method ... on NYT and WebNLG datasets respectively."
+      },
+      {
+        "span_id": "C0047-D-P008-TABLE-0003",
+        "page": 8,
+        "excerpt": "For N≥5, CasRel is 83.7 on NYT and 90.9 on WebNLG; CopyR*RL is 45.9 and 55.7."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author contribution: a triple-level probabilistic formulation that models a relation as a subject-to-object mapping, designed to permit overlapping triples without assuming how triples share entities.",
+      "Author contribution: an end-to-end cascade decoder that combines BERT encoding, subject-span tagging, and relation-specific object tagging; it jointly identifies relation and object for each detected subject.",
+      "Experimental strength: the method achieved substantially higher reported F1 than the listed baselines on both main datasets and maintained strong results across Normal, EPO, SEO, and increasing numbers of triples.",
+      "Review-level inference: conditioning object extraction on each detected subject removes the need to first enumerate and classify all entity pairs, directly targeting the stated negative-pair and overlap ambiguities."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0047-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "We introduce ... a principled problem formulation ... addresses the overlapping triple problem by design ... instantiate ... a novel cascade binary tagging model on top of a Transformer encoder."
+      },
+      {
+        "span_id": "C0047-D-P008-TABLE-0002",
+        "page": 8,
+        "excerpt": "the CasRel model achieves excellent performance over all five classes ... suffers the least from the increasing complexity of the input sentence."
+      },
+      {
+        "span_id": "C0047-D-P003-TEXT-0003",
+        "page": 3,
+        "excerpt": "we learn relation-specific taggers fr(s)→o ... instead of classifying relations for (subject, object) pairs."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: output quality depends on the first-stage subject spans; because object decoding is run only for detected subjects, a missed or incorrectly bounded subject prevents all triples led by it from being recovered.",
+      "Review-level inference: the high-level decoder evaluates a separate object tagger for every relation for every detected subject, so inference and parameters grow with the fixed relation inventory and number of candidate subjects.",
+      "Evaluation limitation: the main NYT and WebNLG comparisons use datasets released/preprocessed by earlier work and most baseline figures are copied from their publications, so reported cross-model results should be interpreted within those dataset/metric settings.",
+      "Evaluation limitation: the paper reports per-pattern F1 but does not provide numerical confidence intervals, multiple random-seed variance, runtime, memory, or decoding-speed comparisons."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0047-D-P005-TEXT-0001",
+        "page": 5,
+        "excerpt": "First, we detect subjects ... Then for each candidate subject, we check all possible relations ... object taggers ... for all possible relations."
+      },
+      {
+        "span_id": "C0047-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "The reported results for the above baselines are directly copied from the original published literature."
+      },
+      {
+        "span_id": "C0047-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "We use the datasets released by Zeng et al. (2018)."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The authors state that ACE and Wiki-KBP contain few overlapping triples and are therefore unsuitable for evaluating the overlapping-triple problem.",
+      "For NYT11-HRL, manually annotated triples may omit relations actually expressed by the sentence; the authors say this affects measured precision and recall and can underestimate CasRel's value.",
+      "The authors caution that differently preprocessed NYT versions and their different annotation/test constructions produce incomparable results unless the version is specified."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0047-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "Datasets such as ACE, Wiki-KBP have few overlapping triples in the sentences hence are not suitable for evaluating the performance of overlapping triple extraction."
+      },
+      {
+        "span_id": "C0047-D-P013-TEXT-0002",
+        "page": 13,
+        "excerpt": "the annotated triples are not always the ground truth, which may affect the evaluation of our model ... performance ... can only partially reflect the potential ... and probably underestimate the real value."
+      },
+      {
+        "span_id": "C0047-D-P013-TEXT-0003",
+        "page": 13,
+        "excerpt": "these two versions have been selectively adopted and preprocessed in many different ways ... lead to incomparable results if not specifying the version."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Reviewer-proposed improvement: add a mechanism to jointly revisit subject spans using relation/object evidence, reducing the irreversible error path implied by the cascade.",
+      "Reviewer-proposed improvement: replace or augment the full per-relation tagger bank with scalable relation representations or schema-conditioned decoding for substantially larger relation inventories.",
+      "Reviewer-proposed improvement: report repeated-run variation, efficiency measures, and a unified re-evaluation of baselines on identical preprocessing and exact-match settings.",
+      "Author-suggested evaluation direction: evaluate on datasets that contain multi-word entities and overlapping triples, such as NYT10-HRL, rather than the ad-hoc NYT11-CopyR setting."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0047-D-P005-TEXT-0001",
+        "page": 5,
+        "excerpt": "First, we detect subjects ... Then for each candidate subject, we check all possible relations."
+      },
+      {
+        "span_id": "C0047-D-P013-TEXT-0002",
+        "page": 13,
+        "excerpt": "multi-word entities are common in real-world scenarios, so evaluating on a more proper dataset like NYT10-HRL (which also contains overlapping triples in test set) may better reveal the model’s real value."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Reviewer-level inference: robust extraction of all facts is still unresolved when gold data are incomplete or generated through distant supervision, because plausible unannotated triples are scored as errors.",
+      "Reviewer-level inference: how well the fixed-relation, sentence-level cascade generalizes to open relation inventories, document-level coreference, entity linking, and KG fusion/updating is unresolved by this paper; these stages are not evaluated.",
+      "Reviewer-level inference: fair performance comparison remains unresolved across relation-extraction papers using different corpus versions, preprocessing, and partial versus exact match definitions."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0047-D-P013-TEXT-0001",
+        "page": 13,
+        "excerpt": "The last two triples should have been annotated ... but were omitted, which will significantly affect the values of both precision and recall."
+      },
+      {
+        "span_id": "C0047-D-P012-TEXT-0002",
+        "page": 12,
+        "excerpt": "it’s hard to use a unified metric to compare our model with existing models."
+      },
+      {
+        "span_id": "C0047-D-P003-TEXT-0003",
+        "page": 3,
+        "excerpt": "The goal ... is to identify all possible ... triples in a sentence."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that source code and data are released online at https://github.com/weizhepei/CasRel. It also states that the main NYT and WebNLG data used were the versions released by Zeng et al. (2018)."
+}

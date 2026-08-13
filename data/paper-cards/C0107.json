@@ -1,0 +1,730 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0107",
+    "title": "OPTIMIZING SYNTACTIC-SEMANTIC RELATION EXTRACTION FOR THE KAZAKH LANGUAGE WITH TRANSFORMER ARCHITECTURES AND SYNTHETIC CORPORA",
+    "pdf_path": "data/pdfs/C0107.pdf",
+    "authors": [
+      "G. Bektemyssova",
+      "A. Sabdenov",
+      "R. Satybaldiyeva",
+      "A. Bykov",
+      "Nor'ashikin Binti Ali"
+    ],
+    "year": 2026,
+    "venue": "Herald of the Kazakh-British Technical University, Vol. 23, No. 2",
+    "identifier": {
+      "status": "reported",
+      "value": "https://doi.org/10.55452/1998-6688-2026-23-2-250-261",
+      "evidence": [
+        {
+          "span_id": "C0107-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "https://doi.org/10.55452/1998-6688-2026-23-2-250-261"
+        }
+      ]
+    },
+    "abstract": "The paper studies subject-predicate-object triple extraction for low-resource Kazakh. It generates additional training data, trains and tests XLM-RoBERTa for triple extraction, and reports an F1-score of 90.73%, arguing that synthetic-data augmentation can improve performance and support information-retrieval and knowledge-management applications.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Article header",
+      "span_id": "C0107-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Bektemyssova G.; Sabdenov A.; Satybaldiyeva R.; Bykov A.; Nor'ashikin Binti Ali.",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Journal header",
+      "span_id": "C0107-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Vol. 23, No. 2, 2026.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Journal header",
+      "span_id": "C0107-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "HERALD OF THE KAZAKH-BRITISH TECHNICAL UNIVERSITY; Vol. 23, No. 2, 2026.",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Article header",
+      "span_id": "C0107-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "https://doi.org/10.55452/1998-6688-2026-23-2-250-261",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0107-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The experimental setup included the generation of additional training data, followed by the training and testing of a model based on ... XLM-RoBERTa for triple extraction. The results show an F1-score of 90.73%.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0107-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Turkic languages, including Kazakh, remain underexplored ... agglutinative nature ... free word order ... limited availability of annotated corpora.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0107-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "The aim of this study is to develop optimal methods for extracting 'subject-predicate-object' relationships from Kazakh texts while considering linguistic features.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "This paper uses a combination of an optimized XLM-RoBERTa model and synthetic data generation methods.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "A classification layer was integrated to label tokens according to the BIO ... scheme.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P004-PICTURE-0001",
+      "page": 4,
+      "excerpt": "key stages of data processing: from input data and tokenization to predicting labels for each token using sequential labeling.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P004-PICTURE-0001",
+      "page": 4,
+      "excerpt": "key stages of data processing: from input data and tokenization to predicting labels for each token using sequential labeling.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "First, automatic filtering ... Second, a rule-based check ... Third, a manual expert review was conducted.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The entire synthetic data set was then combined with limited real data ... used to train the model.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "A classification layer was integrated to label tokens according to the BIO ... scheme.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The data generation process included ... Formation of queries ... Parallel generation of synthetic texts and corresponding annotations ... [then] combined with limited real data.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "A classification layer was integrated to label tokens according to the BIO ... scheme ... Dropout regularization ... cross-entropy loss.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "automatic filtering ... rule-based check ... manual expert review ... two native Kazakh speakers.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "label tokens according to the BIO ... scheme ... beginning, inside, or outside of a subject, predicate, or object.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "a rule-based check verified that each generated sentence contained exactly one consistent (S, P, O) triple.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "tokenization, stemming, lemmatization, TF-IDF matrix construction and Word2Vec. The stop-listing method was used ... morphological analysis was used to normalize words.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0107-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "for a given sentence S, the task is to extract a triplet (S, P, O), where S is the subject, P is the predicate, and O is the object.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Please generate 100 Kazakh sentences ... For each sentence, provide: The sentence in Kazakh. The English translation. The SPO triple annotation.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0107-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "for a given sentence S, the task is to extract a triplet (S, P, O).",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "label tokens according to the BIO ... scheme.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "enabling the classification of each word as the beginning, inside, or outside of a subject, predicate, or object.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "the surface forms of the components could be located in the sentence as contiguous spans.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "A classification layer ... BIO ... Dropout ... cross-entropy loss ... Batch size: 16; Learning speed: 5×10−5; Optimizer: Adam; Number of epochs: 10.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The model was trained on hardware using NVIDIA Tesla V100 GPU. The average training time was about 4 hours.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "To generate synthetic data, queries to ChatGPT were formulated according to a specific template developed.",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The resulting dataset consists of 10,000 sentences ... The ratio of real and synthetic data in the training sample was 1:2.",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "a randomly selected stratified subset covering no less than 50% of the synthetic sentences was checked.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Evaluation metrics: precision, recall, and F1-score.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Inter-annotator agreement ... Cohen’s κ = 0.86.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Discussion",
+      "span_id": "C0107-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "macro-F1 of 90.7% and a micro-F1 of 90.9%. The sentence-level exact-match score was 81.3%.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Results",
+      "span_id": "C0107-D-P006-TABLE-0001",
+      "page": 6,
+      "excerpt": "Rules; BiLSTM-CRF; BERT without synthetic data; BERT with synthetic data; XLM-RoBERTa.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Batch size: 16 ... Learning speed: 5×10−5 ... Adam ... Number of epochs: 10 ... Dropout ... 0.1.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The model was trained on hardware using NVIDIA Tesla V100 GPU. The average training time was about 4 hours. ... experiments were repeated several times.",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Results",
+      "span_id": "C0107-D-P006-TABLE-0001",
+      "page": 6,
+      "excerpt": "XLM-RoBERTa: Precision 92; Recall 89.5; F1-score 90.73. BERT with synthetic data: 83.5; 81.7; 82.6.",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Discussion",
+      "span_id": "C0107-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "F1-score of 91.4% for Subject, 89.2% for Predicate, and 91.6% for Object ... sentence-level exact-match score was 81.3%.",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "Cohen’s κ = 0.86 ... share of sentences fully conforming ... exceeded 90%.",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Results",
+      "span_id": "C0107-D-P006-TABLE-0001",
+      "page": 6,
+      "excerpt": "XLM-RoBERTa architecture achieved the highest performance overall, securing an F1-score of 90.73%.",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Materials and methods",
+      "span_id": "C0107-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "automatic filtering ... rule-based check ... manual expert review ... grammatical correctness ... semantic plausibility ... absence of cultural or topical bias.",
+      "confidence": "medium"
+    },
+    "strengths-23-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Discussion",
+      "span_id": "C0107-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "These additional metrics provide a more complete picture of model behavior than the aggregated F1-score alone.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Discussion",
+      "span_id": "C0107-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "difficulties arise when processing complex syntactic constructions, especially sentences containing nested structures such as participial and adverbial participial phrases.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Discussion",
+      "span_id": "C0107-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "boundary errors (approximately 41%) ... role confusion errors (about 28%) ... predicate identification errors (about 19%) ... remaining errors (approximately 12%) involve rare ... lexemes and proper nouns.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Discussion",
+      "span_id": "C0107-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "remain challenging for transformer-based models trained without explicit syntactic supervision.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Discussion",
+      "span_id": "C0107-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "fully resolving such ambiguities would require architectural modifications or additional linguistic supervision.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Discussion",
+      "span_id": "C0107-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "the primary objective ... without relying on language-specific preprocessing tools ... such tools were not included in the current pipeline.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Discussion",
+      "span_id": "C0107-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "further gains can be obtained by integrating a Kazakh-specific morphological analyzer and by augmenting the synthetic corpus with controlled variations of word order and analytical verb constructions.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Discussion",
+      "span_id": "C0107-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "future research should focus on integrating morphological analyzers ... expanding synthetic datasets ... and experimenting with other language models.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Conclusion",
+      "span_id": "C0107-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "Future work should focus on developing more advanced methods for generating synthetic data, fine-tuning large language models for the Kazakh language, and integrating language analyzers.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Discussion",
+      "span_id": "C0107-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "they do not explicitly model regional dialectal variations of the Kazakh language.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion",
+      "span_id": "C0107-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "the model still has a poor understanding of rare words and complex sentences, and the synthetic data needs to be improved.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Extract SPO triples from Kazakh unstructured text despite scarce annotated corpora, agglutinative morphology, and flexible word order. The objective is to optimize a transformer-based extractor by augmenting limited real training data with GPT-4-generated Kazakh examples.",
+  "methodology": {
+    "primary_family": "Transformer encoder methods",
+    "secondary_families": [
+      "Neural NLP pipelines"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "supervised",
+    "description": "Execution order: (1) prompt GPT-4/ChatGPT to generate Kazakh sentences, English translations, and SPO annotations; (2) automatically filter malformed sentences, repeated tokens, and invalid BIO spans; rule-check one contiguous SPO triple; manually review a stratified subset; (3) combine limited real data with 10,000 synthetic sentences at a real:synthetic ratio of 1:2; (4) tokenize and sequentially label tokens with an XLM-RoBERTa encoder plus classification layer, Softmax, cross-entropy loss, and dropout; (5) decode BIO labels as subject, predicate, and object spans and evaluate extraction. The paper additionally lists tokenization, stemming, lemmatization, TF-IDF, Word2Vec, stop-listing, and morphological analysis as preprocessing, but does not isolate their contribution."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "No ontology or external KG schema is used. The task schema is a fixed SPO relation with BIO token labels for subject, predicate, object, and outside tokens; validation requires exactly one consistent contiguous SPO triple per generated sentence.",
+    "evidence": [
+      {
+        "span_id": "C0107-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "label tokens according to the BIO ... scheme ... beginning, inside, or outside of a subject, predicate, or object."
+      },
+      {
+        "span_id": "C0107-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "a rule-based check verified that each generated sentence contained exactly one consistent (S, P, O) triple."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing",
+    "Entity and concept extraction",
+    "Relation and triple extraction"
+  ],
+  "input_output": {
+    "input_type": "Kazakh natural-language sentences; synthetic examples also include an English translation and SPO annotation during data creation.",
+    "input_granularity": "Sentence-level input; token-level sequence labeling within each sentence.",
+    "output_representation": "One subject-predicate-object triple represented through BIO labels over sentence tokens; output spans are subject, predicate, and object."
+  },
+  "models_and_tools": [
+    "XLM-RoBERTa encoder with token-classification layer",
+    "BERT baseline",
+    "BiLSTM-CRF baseline",
+    "Rules baseline",
+    "GPT-4/ChatGPT for synthetic data generation",
+    "BIO tagging",
+    "Softmax activation",
+    "Cross-entropy loss",
+    "Adam optimizer",
+    "NVIDIA Tesla V100 GPU"
+  ],
+  "datasets": [
+    "Combined Kazakh SPO training corpus comprising limited real data and 10,000 GPT-4-generated synthetic sentences",
+    "Synthetic:real training ratio 2:1 (equivalently real:synthetic 1:2)"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Precision",
+      "Recall",
+      "F1-score",
+      "Per-class F1 for Subject, Predicate, and Object",
+      "Macro-F1",
+      "Micro-F1",
+      "Sentence-level exact match",
+      "Synthetic-corpus quality metric Qa combining Linguistic Consistency Score and Error Rate Reduction",
+      "Cohen's kappa for expert-review agreement"
+    ],
+    "baselines": [
+      "Rules-based model",
+      "BiLSTM-CRF",
+      "BERT without synthetic data",
+      "BERT with synthetic data"
+    ],
+    "setting": "Models were trained for 10 epochs with batch size 16, learning rate 5×10^-5, Adam, and dropout 0.1 on an NVIDIA Tesla V100; average training time was about four hours and experiments were repeated several times. The paper does not report corpus provenance, train/dev/test sizes or split procedure."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Table 1 reports XLM-RoBERTa at 92.0% precision, 89.5% recall, and 90.73% F1—the highest listed result.",
+      "The next-best listed model, BERT with synthetic data, has 83.5% precision, 81.7% recall, and 82.6% F1; BERT without synthetic data has 74.9% F1, BiLSTM-CRF 71.2%, and rules 62.8%.",
+      "For XLM-RoBERTa on the combined corpus, the paper additionally reports Subject F1 91.4%, Predicate F1 89.2%, Object F1 91.6%, macro-F1 90.7%, micro-F1 90.9%, and sentence-level exact match 81.3%.",
+      "Synthetic-data review found over 90% of sentences conforming to Kazakh norms; agreement on a shared subsample was Cohen's kappa 0.86."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0107-D-P006-TABLE-0001",
+        "page": 6,
+        "excerpt": "XLM-RoBERTa: Precision 92; Recall 89.5; F1-score 90.73. BERT with synthetic data: 83.5; 81.7; 82.6."
+      },
+      {
+        "span_id": "C0107-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "F1-score of 91.4% for Subject, 89.2% for Predicate, and 91.6% for Object ... sentence-level exact-match score was 81.3%."
+      },
+      {
+        "span_id": "C0107-D-P005-TEXT-0003",
+        "page": 5,
+        "excerpt": "Cohen’s κ = 0.86 ... share of sentences fully conforming ... exceeded 90%."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author-stated strength: synthetic augmentation addresses the shortage of annotated Kazakh data and is associated with the highest reported XLM-RoBERTa score.",
+      "Author-stated strength: manual and rule-based validation of generated data checks grammar, SPO-span consistency, and cultural/topic bias before training.",
+      "Review-level inference: the combination of aggregate, class-level, and sentence exact-match metrics provides a more informative error picture than reporting a single F1 score, although the unspecified data split limits reproducibility."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0107-D-P006-TABLE-0001",
+        "page": 6,
+        "excerpt": "XLM-RoBERTa architecture achieved the highest performance overall, securing an F1-score of 90.73%."
+      },
+      {
+        "span_id": "C0107-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "automatic filtering ... rule-based check ... manual expert review ... grammatical correctness ... semantic plausibility ... absence of cultural or topical bias."
+      },
+      {
+        "span_id": "C0107-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "These additional metrics provide a more complete picture of model behavior than the aggregated F1-score alone."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author-stated weakness: complex nested participial and adverbial-participial constructions remain difficult and create ambiguity in SPO relations.",
+      "Author-stated weakness: subject-object inversion under flexible word order, rare lexemes, and compound/analytical verbs produce systematic errors.",
+      "Review-level inference: results are not independently reproducible or directly generalizable from the paper alone because the real-data source, exact split, test-set size, and released artifacts are not reported."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0107-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "difficulties arise when processing complex syntactic constructions, especially sentences containing nested structures such as participial and adverbial participial phrases."
+      },
+      {
+        "span_id": "C0107-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "boundary errors (approximately 41%) ... role confusion errors (about 28%) ... predicate identification errors (about 19%) ... remaining errors (approximately 12%) involve rare ... lexemes and proper nouns."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "No explicit syntactic supervision; nested structures remain ambiguous.",
+      "Flexible word order and subject-object inversion are not fully resolved.",
+      "Rare lexemes are limited in both real and synthetic data.",
+      "Language-specific morphological analyzers were excluded to isolate the contribution of synthetic data.",
+      "Synthetic data contain some language-model inaccuracies, do not model regional dialectal variation, and have uneven thematic distribution."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0107-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "remain challenging for transformer-based models trained without explicit syntactic supervision."
+      },
+      {
+        "span_id": "C0107-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "fully resolving such ambiguities would require architectural modifications or additional linguistic supervision."
+      },
+      {
+        "span_id": "C0107-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "the primary objective ... without relying on language-specific preprocessing tools ... such tools were not included in the current pipeline."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-stated: integrate a Kazakh-specific morphological analyzer.",
+      "Author-stated: augment synthetic data with controlled word-order variants, analytical verb constructions, rare lexemes, and broader lexical/syntactic and topical diversity.",
+      "Author-stated: use post-processing, Kazakh-trained generation models, or fine-tune LLMs for Kazakh; assess other generation algorithms.",
+      "Author-stated: extend the method to other linguistically similar underrepresented languages."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0107-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "further gains can be obtained by integrating a Kazakh-specific morphological analyzer and by augmenting the synthetic corpus with controlled variations of word order and analytical verb constructions."
+      },
+      {
+        "span_id": "C0107-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "future research should focus on integrating morphological analyzers ... expanding synthetic datasets ... and experimenting with other language models."
+      },
+      {
+        "span_id": "C0107-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "Future work should focus on developing more advanced methods for generating synthetic data, fine-tuning large language models for the Kazakh language, and integrating language analyzers."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-stated unresolved issue: robust SPO extraction for nested constructions and non-canonical Kazakh word order.",
+      "Author-stated unresolved issue: representation and processing of rare vocabulary, dialectal variation, and uneven topical coverage.",
+      "Review-level inference: whether reported improvements transfer to independently sourced real-world Kazakh text remains unresolved because the paper does not identify the real corpus or disclose its held-out evaluation partition."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0107-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "they do not explicitly model regional dialectal variations of the Kazakh language."
+      },
+      {
+        "span_id": "C0107-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "the model still has a poor understanding of rare words and complex sentences, and the synthetic data needs to be improved."
+      }
+    ]
+  },
+  "code_and_data_availability": "not_reported"
+}

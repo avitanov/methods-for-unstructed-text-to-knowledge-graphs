@@ -1,0 +1,942 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0106",
+    "title": "OPIEC: An Open Information Extraction Corpus",
+    "pdf_path": "data/pdfs/C0106.pdf",
+    "authors": [
+      "Kiril Gashteovski",
+      "Sebastian Wanner",
+      "Sven Hertling",
+      "Samuel Broscheit",
+      "Rainer Gemulla"
+    ],
+    "year": 2019,
+    "venue": "Automated Knowledge Base Construction (2019), Conference paper",
+    "identifier": {
+      "status": "reported",
+      "value": "arXiv:1904.12324v1",
+      "evidence": [
+        {
+          "span_id": "C0106-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "arXiv:1904.12324v1 [cs.CL] 28 Apr 2019."
+        }
+      ]
+    },
+    "abstract": "The paper releases, describes, and profiles OPIEC, a large open-information-extraction corpus derived from English Wikipedia. It contains more than 340 million open triples plus provenance, confidence, syntactic, semantic, spatial, and temporal metadata; comparisons with DBpedia and YAGO examine complementarity to existing knowledge bases.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0106-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Kiril Gashteovski; Sebastian Wanner; Sven Hertling; Samuel Broscheit; Rainer Gemulla.",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0106-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Automated Knowledge Base Construction (2019); arXiv:1904.12324v1 ... 28 Apr 2019.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0106-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Automated Knowledge Base Construction (2019)  Conference paper.",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0106-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "arXiv:1904.12324v1 [cs.CL] 28 Apr 2019.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0106-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We release, describe, and analyze an OIE corpus called OPIEC, which was extracted from the text of English Wikipedia.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-02": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0106-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "It is the largest OIE corpus publicly available to date (over 340M triples) and contains valuable metadata.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0106-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "OPIEC provides for each triple detailed provenance information, syntactic annotations ... semantic annotations ... entity annotations ... as well as confidence scores.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0106-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Along with the OPIEC corpus ... we release the codebase used to construct the corpus as well as a number of derived resources.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-03": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Conclusions",
+      "span_id": "C0106-D-P015-TEXT-0003",
+      "page": 15,
+      "excerpt": "We created OPIEC, a large open information extraction corpus extracted from Wikipedia.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3.2 NLP Pipeline; 3.3 The MinIE-SpaTe OIE System",
+      "span_id": "C0106-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We performed tokenization, sentence splitting, part-of-speech tagging ... dependency parsing. From each ... sentence, we extract triples using ... MinIE.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Appendix C.1 Temporal Annotations on Triples",
+      "span_id": "C0106-D-P022-TEXT-0002",
+      "page": 22,
+      "excerpt": "We use as raw input the input sentence, its corresponding dependency parse tree, the n-ary extraction by ClausIE, and the triple generated by MinIE.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.4 Postprocessing",
+      "span_id": "C0106-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "We filtered all triples with lemmatized relation “be” and different NER types for subject and object.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.4 Postprocessing",
+      "span_id": "C0106-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "We followed ReVerb and trained a logistic regression classifier ... Features were constructed based on an in-depth error analysis.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "5.1 Alignment With Knowledge Bases",
+      "span_id": "C0106-D-P012-TEXT-0003",
+      "page": 12,
+      "excerpt": "To align the OIE triples from OPIEC-Linked to YAGO or DBpedia, we make use of the distant supervision assumption.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3. Corpus Construction",
+      "span_id": "C0106-D-P004-PICTURE-0001",
+      "page": 4,
+      "excerpt": "Fig. 1 gives an overview of the pipeline that we used.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3.1–3.3",
+      "span_id": "C0106-D-P005-SECTION-0002",
+      "page": 5,
+      "excerpt": "Preprocessing is followed by an NLP pipeline and then MinIE-SpaTe triple extraction.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-03": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3.4 Postprocessing",
+      "span_id": "C0106-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "During postprocessing, we remove clearly wrong triples, annotate the remaining triples with a confidence score, and ensure that Wikipedia links are not broken up.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0106-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Open information extraction (OIE) systems extract relations and their arguments from natural language text in an unsupervised manner.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "3.4 Postprocessing",
+      "span_id": "C0106-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "We ... trained a logistic regression classifier. We used the labeled datasets provided by Gashteovski et al. [2017] as training data.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-03": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "5.1 Alignment With Knowledge Bases",
+      "span_id": "C0106-D-P012-TEXT-0003",
+      "page": 12,
+      "excerpt": "To align ... we make use of the distant supervision assumption.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3. Corpus Construction",
+      "span_id": "C0106-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "OPIEC was constructed from all the articles of the English Wikipedia dump of June 21, 2017.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.2–3.3",
+      "span_id": "C0106-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "We performed tokenization ... NER ... temporal tagging ... dependency parsing. From each ... sentence, we extract triples using ... MinIE.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.4 Postprocessing",
+      "span_id": "C0106-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "During postprocessing, we remove clearly wrong triples, annotate the remaining triples with a confidence score, and ensure that Wikipedia links are not broken up.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "2. Related OIE Corpora",
+      "span_id": "C0106-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Here we focus on large-scale OIE corpora, which do not make use of a predefined set of arguments and/or relations.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "2. Related OIE Corpora",
+      "span_id": "C0106-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "We did not perform automatic disambiguation in OPIEC, although we retained Wikipedia links when present.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.3 The MinIE-SpaTe OIE System",
+      "span_id": "C0106-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "We use the TIMEX3 format ... for representing the temporal information about the triple.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.1 Preprocessing",
+      "span_id": "C0106-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We used a modified version of WikiExtractor to extract the plain text from Wikipedia pages ... [and] retain internal Wikipedia links.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.2–3.3",
+      "span_id": "C0106-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "We performed ... named entity recognition ... dependency parsing. From each ... sentence, we extract triples using ... MinIE.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.4 Postprocessing",
+      "span_id": "C0106-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "We remove clearly wrong triples, annotate the remaining triples with a confidence score, and ensure that Wikipedia links are not broken up.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3. Corpus Construction",
+      "span_id": "C0106-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "OPIEC was constructed from all the articles of the English Wikipedia dump of June 21, 2017.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3.1 Preprocessing",
+      "span_id": "C0106-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "We used a modified version of WikiExtractor to extract the plain text from Wikipedia pages ... [that] retains internal Wikipedia links.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-03": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Appendix C.4 Precision of Spatio-Temporal Annotations",
+      "span_id": "C0106-D-P024-TEXT-0003",
+      "page": 24,
+      "excerpt": "We used the sample of 10k random sentences drawn from the New York Times corpus.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.1 Preprocessing",
+      "span_id": "C0106-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "The links are provided as additional metadata in the form of (span, target page) annotations.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.2–3.3",
+      "span_id": "C0106-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "We performed tokenization, sentence splitting ... From each of the resulting sentences, we extract triples.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0106-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The output of such systems is usually structured in the form of (subject, relation, object)-triples.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Table 1",
+      "span_id": "C0106-D-P003-TABLE-0002",
+      "page": 3,
+      "excerpt": "OPIEC 341.0; OPIEC-Clean 104.0; OPIEC-Linked 5.8 [triples, millions].",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-03": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Appendix B. Complete List of OPIEC Meta-Data",
+      "span_id": "C0106-D-P021-TABLE-0003",
+      "page": 21,
+      "excerpt": "Fields include Sentence, Polarity, Modality, Attribution, Quantities, Triple, Time, Space, Confidence score, Canonical links, and Extraction type.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3. Corpus Construction",
+      "span_id": "C0106-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We used Apache Spark ... to distribute corpus construction across a compute cluster.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.1–3.3",
+      "span_id": "C0106-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "We used a modified version of WikiExtractor ... CoreNLP, version 3.8.0 ... MinIE ... based on ClausIE.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.4 Postprocessing",
+      "span_id": "C0106-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "We ... trained a logistic regression classifier ... The most important features were selected using chi-square relevance tests.",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3. Corpus Construction",
+      "span_id": "C0106-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "OPIEC was constructed from all the articles of the English Wikipedia dump of June 21, 2017.",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4. Statistics",
+      "span_id": "C0106-D-P007-TABLE-0002",
+      "page": 7,
+      "excerpt": "Total triples (millions): OPIEC 341.0; OPIEC-Clean 104.0; OPIEC-Linked 5.8.",
+      "confidence": "medium"
+    },
+    "datasets-18-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.6 Precision and Confidence Score",
+      "span_id": "C0106-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "We took an independent random sample of triples (500 in total) from OPIEC and manually evaluated the correctness.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.6 Precision and Confidence Score",
+      "span_id": "C0106-D-P011-PICTURE-0001",
+      "page": 11,
+      "excerpt": "355 from the 500 triples (71%) were correctly extracted ... Pearson correlation of r = 0.95.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "5.1 Alignment With Knowledge Bases",
+      "span_id": "C0106-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "29.7% of the OIE triples in OPIEC-Linked have a KB hit in either DBpedia or YAGO.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Appendix C.4 Precision of Spatio-Temporal Annotations",
+      "span_id": "C0106-D-P024-TEXT-0003",
+      "page": 24,
+      "excerpt": "91/100 ... triple-level temporal; 80/100 ... argument-level temporal; ... 91/100 ... spatial ... and 82/100 ... argument level.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "2. Related OIE Corpora",
+      "span_id": "C0106-D-P003-TABLE-0001",
+      "page": 3,
+      "excerpt": "Available OIE corpora: ReVerb, ReVerb-Linked, PATTY (Wiki), WiseNet 2.0, DefIE, KB-Unify, OPIEC, OPIEC-Clean, OPIEC-Linked.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "5. Analysis",
+      "span_id": "C0106-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "We compare the information present in the OIE triples in OPIEC with ... DBpedia ... and YAGO.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-03": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Appendix C.4 Precision of Spatio-Temporal Annotations",
+      "span_id": "C0106-D-P024-TEXT-0003",
+      "page": 24,
+      "excerpt": "We selected 200 random triples and labeled whether the corresponding MinIE extraction ... was correctly extracted ... including 100 random but correctly extracted triples.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.6 Precision and Confidence Score",
+      "span_id": "C0106-D-P011-TEXT-0001",
+      "page": 11,
+      "excerpt": "We bucketized the triples by confidence score into ten equi-width intervals and calculated the precision within each interval.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "5.1 Alignment With Knowledge Bases",
+      "span_id": "C0106-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "We avoid this problem here by (1) restricting ourselves to the OPIEC-Linked corpus ... and (2) focusing on statistics that do not require a full disambiguation.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Appendix C.4 Precision of Spatio-Temporal Annotations",
+      "span_id": "C0106-D-P024-TEXT-0003",
+      "page": 24,
+      "excerpt": "From each subset, we selected 200 random triples ... [and] includ[ed] 100 random but correctly extracted triples.",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4. Statistics",
+      "span_id": "C0106-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "OPIEC total 341.0M; triples with semantic annotations 166.3 (49%); space OR time 111.3 (33%).",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "5.1 Alignment With Knowledge Bases",
+      "span_id": "C0106-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "29.7% ... have a KB hit ... Consequently, 70.3% of the linked triples do not have a KB hit.",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "5.3 Non-Aligned OIE Triples",
+      "span_id": "C0106-D-P015-TEXT-0003",
+      "page": 15,
+      "excerpt": "60% ... correctly extracted. In another sample of 100 high-confidence triples (score > 0.5), 80% were correctly extracted.",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "2. Related OIE Corpora",
+      "span_id": "C0106-D-P003-TABLE-0001",
+      "page": 3,
+      "excerpt": "OPIEC has 341.0M triples and provides confidence, provenance, syntactic, and semantic annotations, unlike the listed prior corpora.",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2 The OPIEC-Clean Corpus",
+      "span_id": "C0106-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "The OPIEC-Clean corpus is easier to work with than the full OPIEC corpus; it is targeted towards both downstream applications and research in automated knowledge base construction.",
+      "confidence": "medium"
+    },
+    "strengths-23-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.6 Precision and Confidence Score",
+      "span_id": "C0106-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "The confidence score is highly correlated to precision ... and thus provides useful information.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0106-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "A substantial fraction ... was not self-contained (e.g., because no anaphora resolution was performed) or overly specific.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.1 The OPIEC Corpus",
+      "span_id": "C0106-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "22% of the arguments in OPIEC are personal pronouns ... coreference resolution is important to further boost the recall of OIE systems.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.1 Alignment With Knowledge Bases",
+      "span_id": "C0106-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "About 42 distinct KB relations align on average with each open relation ... open relations should not be directly mapped to KB relations.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.1 The OPIEC Corpus",
+      "span_id": "C0106-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "The main reason for under-specificity is lack of coreference information.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "5.1 Alignment With Knowledge Bases",
+      "span_id": "C0106-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "The KB contains some relation between the corresponding entities, although not necessarily the one being mentioned.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Appendix C.4 Precision of Spatio-Temporal Annotations",
+      "span_id": "C0106-D-P024-TEXT-0003",
+      "page": 24,
+      "excerpt": "Common errors stem from incorrect spatio-temporal tags ... or incorrect dependency parses.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4.1 The OPIEC Corpus",
+      "span_id": "C0106-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "The large fraction of such triples shows that coreference resolution is important to further boost the recall of OIE systems.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4.1 The OPIEC Corpus",
+      "span_id": "C0106-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "The above difficulties make the OPIEC corpus a helpful resource for research on improving or reasoning with complex OIE extractions.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Appendix C.4 Precision of Spatio-Temporal Annotations",
+      "span_id": "C0106-D-P024-TEXT-0003",
+      "page": 24,
+      "excerpt": "Common errors stem from incorrect spatio-temporal tags ... or incorrect dependency parses.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.1 The OPIEC Corpus",
+      "span_id": "C0106-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "Coreference resolution in itself is a difficult problem.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5. Analysis",
+      "span_id": "C0106-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "The disambiguation of OIE triples w.r.t. a given knowledge base is in itself a difficult problem.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.3 Non-Aligned OIE Triples",
+      "span_id": "C0106-D-P015-TEXT-0003",
+      "page": 15,
+      "excerpt": "Not all these facts are correct, though, and disambiguation is a major challenge.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0106-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Along with the OPIEC corpus ... we release the codebase used to construct the corpus as well as a number of derived resources.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "3. Corpus Construction",
+      "span_id": "C0106-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "We release the entire codebase along with the actual OPIEC corpora.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-03": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0106-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "The OPIEC corpus is available at https://www.uni-mannheim.de/dws/research/resources/opiec/.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The work addresses the lack of a very large, richly annotated open-information-extraction resource for automated knowledge-base construction. It constructs and characterizes a Wikipedia-derived corpus, including cleaner and entity-linked subsets, and tests how its open facts overlap with DBpedia and YAGO. Author contributions: (1) release OPIEC and the OPIEC-Clean and OPIEC-Linked subcorpora; (2) build a scalable extraction pipeline with provenance, confidence, syntactic, factuality, spatial, and temporal metadata; (3) extend MinIE to MinIE-SpaTe; (4) profile corpus quality and analyze alignment/complementarity with DBpedia and YAGO; and (5) release construction code and derived relation-frequency resources.",
+  "methodology": {
+    "primary_family": "Linguistic and dependency-based extraction",
+    "secondary_families": [
+      "Rule-based NLP",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "weakly_supervised",
+    "description": "Execution-order architecture: (1) use a modified WikiExtractor on the 21 June 2017 English Wikipedia dump to produce plain text while preserving internal links as span-to-target annotations, and add a self-link for an article's first exact title mention; (2) run Stanford CoreNLP 3.8.0 for tokenization, sentence splitting, POS tagging, lemmatization, NER, temporal tagging, and dependency parsing; (3) run dependency/clause-based MinIE, based on ClausIE, to generate compact subject–relation–object triples; (4) extend it as MinIE-SpaTe, which transfers polarity, modality, attribution, quantities, and detected temporal/spatial context into annotations, using SUTime, NER, and dependency rules; (5) remove a recurring erroneous NER-type-mismatched “be” pattern, estimate extraction confidence with logistic regression, and repair split Wikipedia links; (6) retain all outputs as OPIEC, then filter clean entity/concept triples for OPIEC-Clean and doubly Wikipedia-linked triples for OPIEC-Linked; and (7) profile corpus characteristics and compare linked facts against DBpedia and YAGO using distant supervision. The method is a corpus-construction and analysis pipeline, rather than a trained end-to-end KG generator."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "No predefined ontology or relation schema constrains OPIEC extraction: it is open IE. Wikipedia page links provide golden entity disambiguation where present; OPIEC-Linked retains triples whose two arguments are linked. DBpedia and YAGO are used after extraction for distant-supervision alignment and comparative profiling, not as an extraction schema. Time is represented in TIMEX3 format.",
+    "evidence": [
+      {
+        "span_id": "C0106-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "Here we focus on large-scale OIE corpora, which do not make use of a predefined set of arguments and/or relations."
+      },
+      {
+        "span_id": "C0106-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "We did not perform automatic disambiguation in OPIEC, although we retained Wikipedia links when present."
+      },
+      {
+        "span_id": "C0106-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "We use the TIMEX3 format ... for representing the temporal information about the triple."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing",
+    "Entity and concept extraction",
+    "Entity typing",
+    "Entity resolution and linking",
+    "Relation and triple extraction",
+    "Graph construction",
+    "Knowledge fusion and deduplication",
+    "Graph validation and correction"
+  ],
+  "input_output": {
+    "input_type": "Full unstructured English Wikipedia article text, with retained internal Wikipedia hyperlinks; the appendix evaluation additionally uses sentences from the New York Times corpus.",
+    "input_granularity": "Corpus/article-level input is preprocessed and segmented; extraction is performed sentence by sentence. Wikipedia links are retained as document-level span and target-page annotations.",
+    "output_representation": "Open subject–relation–object triples with token-level linguistic information and rich attached metadata. OPIEC contains 341.0M triples; OPIEC-Clean contains 104.0M concept/entity-oriented triples; OPIEC-Linked contains 5.8M triples with golden Wikipedia links for both arguments. Metadata includes provenance, POS/lemmas/dependency parse, NER, confidence, polarity, modality, attribution, quantities, space, time, canonical links, and extraction type."
+  },
+  "models_and_tools": [
+    "Modified WikiExtractor",
+    "Apache Spark",
+    "Stanford CoreNLP 3.8.0",
+    "CoreNLP tokenization, sentence splitting, POS tagging, lemmatization, NER, temporal tagging, and dependency parser",
+    "MinIE (based on ClausIE)",
+    "MinIE-SpaTe extension",
+    "SUTime",
+    "Logistic regression confidence classifier with chi-square feature selection"
+  ],
+  "datasets": [
+    "English Wikipedia dump of 21 June 2017 (source corpus for OPIEC)",
+    "OPIEC: 341.0M triples",
+    "OPIEC-Clean: 104.0M triples after concept/entity-oriented filtering",
+    "OPIEC-Linked: 5.8M doubly Wikipedia-linked triples",
+    "Labelled MinIE datasets from Gashteovski et al. (2017) for the confidence classifier",
+    "Independent random sample of 500 OPIEC triples for manual extraction-correctness evaluation",
+    "New York Times corpus sample of 10,000 random sentences for spatio-temporal annotation evaluation",
+    "DBpedia and YAGO for knowledge-base alignment analysis"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Manual extraction correctness/precision: 355/500 (71%) OPIEC triples correctly extracted",
+      "Pearson correlation between confidence score and bucketed precision: r = 0.95",
+      "Knowledge-base hit rate: percentage of OPIEC-Linked triples for which DBpedia and/or YAGO contain a triple between the same linked entities",
+      "Top-100-relation DBpedia hit fraction: 16.8% average",
+      "Temporal date-fact YAGO hit rate: 36,262/645,525 (5.6%)",
+      "Manual correctness of non-aligned linked triples: 60/100; high-confidence score >0.5 sample: 80/100",
+      "Spatio-temporal annotation precision: temporal triple 91/100, temporal argument 80/100, spatial triple 91/100, spatial argument 82/100"
+    ],
+    "baselines": [
+      "Prior OIE corpora compared descriptively in Table 1: ReVerb, ReVerb-Linked, PATTY (Wiki), WiseNet 2.0, DefIE, and KB-Unify",
+      "DBpedia and YAGO are comparative knowledge bases for alignment/overlap analysis, not extraction-model baselines",
+      "MinIE without spatio-temporal annotations is the underlying reference extraction in Appendix C's annotation evaluation; only correctly extracted triples are evaluated for annotation correctness"
+    ],
+    "setting": "The paper evaluates the released corpus rather than reporting a train/test benchmark for a new learned extractor. It profiles full OPIEC and two filtered subsets; manually judges a random independent sample of 500 triples for extraction correctness and calibrates ten equal-width confidence-score buckets; uses gold human-provided Wikipedia links in OPIEC-Linked to align entity pairs against DBpedia/YAGO under a deliberately optimistic distant-supervision KB-hit definition; manually judges two 100-triple non-aligned samples; and evaluates MinIE-SpaTe annotations on four 100-item sets derived from 10,000 New York Times sentences."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "OPIEC has 341.0M triples, 104.9M unique arguments, and 63.9M unique relations; OPIEC-Clean has 104.0M triples; OPIEC-Linked has 5.8M triples.",
+      "About 49% of OPIEC triples carry at least one semantic annotation; 33% have space or time, 19% time, 18% space, and 17% quantities.",
+      "The manual OPIEC sample had 71% correct extractions (355/500); confidence scores track precision strongly (Pearson r=0.95).",
+      "Only 29.7% of OPIEC-Linked triples have a KB hit in DBpedia or YAGO; thus 70.3% have none under the paper's entity-pair hit definition. Across the 100 most frequent OPIEC-Clean relations, the mean DBpedia hit fraction is 16.8% and the mean number of aligned DBpedia relations is about 42.",
+      "For 645,525 linked OPIEC date facts, only 36,262 (5.6%) have an optimistic YAGO date hit. In sampled non-aligned triples, 60% are correct, rising to 80% for a 100-triple sample with score >0.5.",
+      "MinIE-SpaTe's manually assessed annotation precision is 91% for triple-level time, 80% for argument-level time, 91% for triple-level space, and 82% for argument-level space."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0106-D-P007-TABLE-0001",
+        "page": 7,
+        "excerpt": "OPIEC total 341.0M; triples with semantic annotations 166.3 (49%); space OR time 111.3 (33%)."
+      },
+      {
+        "span_id": "C0106-D-P012-TEXT-0002",
+        "page": 12,
+        "excerpt": "29.7% ... have a KB hit ... Consequently, 70.3% of the linked triples do not have a KB hit."
+      },
+      {
+        "span_id": "C0106-D-P015-TEXT-0003",
+        "page": 15,
+        "excerpt": "60% ... correctly extracted. In another sample of 100 high-confidence triples (score > 0.5), 80% were correctly extracted."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author-stated/experimental: very large released resource with 341M triples and substantially more metadata than the compared OIE corpora, including provenance, syntactic and semantic annotations, confidence, and retained human-authored Wikipedia links.",
+      "Author-stated/experimental: OPIEC-Clean makes a 104M-triple subset more suitable for downstream use by selecting concept/entity-oriented triples; it remains four times larger than the largest prior OIE corpus cited by the authors.",
+      "Author-stated/experimental: per-triple confidence is empirically useful, with 71% manual correctness in the 500-triple sample and r=0.95 correlation between score and bucketed precision.",
+      "Author-stated/experimental: space/time annotations preserve contextual information with 80–91% precision across the four appendix tests.",
+      "[Review inference] This is particularly useful as a Text-to-KG pipeline resource because it preserves provenance, confidence, entity-link evidence, and contextual annotations alongside open triples, enabling later filtering, linking, canonicalization, or validation rather than discarding extraction context."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0106-D-P003-TABLE-0001",
+        "page": 3,
+        "excerpt": "OPIEC has 341.0M triples and provides confidence, provenance, syntactic, and semantic annotations, unlike the listed prior corpora."
+      },
+      {
+        "span_id": "C0106-D-P009-TEXT-0002",
+        "page": 9,
+        "excerpt": "The OPIEC-Clean corpus is easier to work with than the full OPIEC corpus; it is targeted towards both downstream applications and research in automated knowledge base construction."
+      },
+      {
+        "span_id": "C0106-D-P011-TEXT-0003",
+        "page": 11,
+        "excerpt": "The confidence score is highly correlated to precision ... and thus provides useful information."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author-stated/experimental: raw OPIEC contains underspecified triples; 22% of its arguments are personal pronouns, and no anaphora resolution was performed.",
+      "Author-stated: raw extractions can be complex, overly specific, or malformed by parsing ambiguities; the full corpus is therefore more suited to research on improving/reasoning with complex OIE than directly to downstream tasks.",
+      "Author-stated/experimental: OPIEC does not automatically disambiguate entities; the much smaller OPIEC-Linked subset is only about 5.5% of OPIEC-Clean.",
+      "Author-stated/experimental: open relations are highly ambiguous and not directly mappable to KB relations; the top-100 relations average 42 DBpedia alignments, and a KB hit does not guarantee semantic equivalence.",
+      "[Review inference] The reported score estimates correctness of extraction rather than factual truth, so downstream KG population still requires fact verification, canonicalization, and relation normalization."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0106-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "A substantial fraction ... was not self-contained (e.g., because no anaphora resolution was performed) or overly specific."
+      },
+      {
+        "span_id": "C0106-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "22% of the arguments in OPIEC are personal pronouns ... coreference resolution is important to further boost the recall of OIE systems."
+      },
+      {
+        "span_id": "C0106-D-P013-TEXT-0003",
+        "page": 13,
+        "excerpt": "About 42 distinct KB relations align on average with each open relation ... open relations should not be directly mapped to KB relations."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "No anaphora/coreference resolution is performed; pronoun-, determiner-, and wh-pronoun arguments make many triples under-specified.",
+      "Entity mentions, especially works of art that resemble clauses, can yield incorrect extractions; a preliminary study attributes about 1% of OPIEC triples to this issue.",
+      "Complex argument phrases are difficult for downstream applications; making triples simpler can lose information.",
+      "Automatic entity disambiguation is deliberately not done because automated linkers introduce errors and restrict arguments to confidently linkable ones.",
+      "Knowledge-base comparisons are limited by open-relation ambiguity: a KB hit only establishes some relation between the linked entities, not necessarily the same relation or direction.",
+      "Spatio-temporal annotation errors arise from incorrect temporal/spatial tags and dependency parses."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0106-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "The main reason for under-specificity is lack of coreference information."
+      },
+      {
+        "span_id": "C0106-D-P012-TEXT-0002",
+        "page": 12,
+        "excerpt": "The KB contains some relation between the corresponding entities, although not necessarily the one being mentioned."
+      },
+      {
+        "span_id": "C0106-D-P024-TEXT-0003",
+        "page": 24,
+        "excerpt": "Common errors stem from incorrect spatio-temporal tags ... or incorrect dependency parses."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-stated direction: add coreference resolution to resolve underspecified pronoun-based triples and increase usable OIE recall.",
+      "Author-stated direction: improve handling/reasoning for complex OIE extractions and complex argument phrases.",
+      "Author-stated direction: address entity disambiguation, while balancing the error and coverage trade-off of automatic linkers.",
+      "[Review inference] Add relation canonicalization/schema alignment with semantic validation, because entity-pair KB hits are frequently non-equivalent and frequent open relations are polysemous.",
+      "[Review inference] Improve temporal/spatial tagging and dependency parsing, then rerun or correct annotations, targeting the concrete error sources reported in Appendix C."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0106-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "The large fraction of such triples shows that coreference resolution is important to further boost the recall of OIE systems."
+      },
+      {
+        "span_id": "C0106-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "The above difficulties make the OPIEC corpus a helpful resource for research on improving or reasoning with complex OIE extractions."
+      },
+      {
+        "span_id": "C0106-D-P024-TEXT-0003",
+        "page": 24,
+        "excerpt": "Common errors stem from incorrect spatio-temporal tags ... or incorrect dependency parses."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-stated: robust coreference resolution and interpretation of under-specified OIE triples remain necessary for better OIE recall and downstream use.",
+      "Author-stated: disambiguating open triples with respect to a knowledge base is difficult; only entity links are treated as golden in OPIEC-Linked.",
+      "Author-stated: determining true semantic equivalence between an open relation and a KB relation remains unresolved; open relations may be generic, specific, correlated, inverse, or semantically different.",
+      "Author-stated: harnessing non-aligned OIE facts has both potential and challenges because not all facts are correct and disambiguation is a major challenge.",
+      "[Review inference] Converting OPIEC's open triples into a consistently canonical, factually validated knowledge graph is outside this paper's pipeline and remains an end-to-end Text-to-KG problem."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0106-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "Coreference resolution in itself is a difficult problem."
+      },
+      {
+        "span_id": "C0106-D-P011-TEXT-0002",
+        "page": 11,
+        "excerpt": "The disambiguation of OIE triples w.r.t. a given knowledge base is in itself a difficult problem."
+      },
+      {
+        "span_id": "C0106-D-P015-TEXT-0003",
+        "page": 15,
+        "excerpt": "Not all these facts are correct, though, and disambiguation is a major challenge."
+      }
+    ]
+  },
+  "code_and_data_availability": "Reported as released: the OPIEC corpus, OPIEC-Clean, OPIEC-Linked, the entire corpus-construction codebase, and derived resources including open relations between argument entity types with frequencies. The paper gives the corpus page as https://www.uni-mannheim.de/dws/research/resources/opiec/. It does not provide a separate code-repository URL in the inspected PDF."
+}

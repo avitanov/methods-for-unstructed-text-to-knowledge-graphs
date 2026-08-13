@@ -1,0 +1,790 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0081",
+    "title": "Natural vs programming language in LLM knowledge graph construction",
+    "pdf_path": "data/manual-pdfs/C0081.pdf",
+    "authors": [
+      "Paolo Gajo",
+      "Alberto Barrón-Cedeño"
+    ],
+    "year": 2025,
+    "venue": "Information Processing and Management",
+    "identifier": {
+      "status": "reported",
+      "value": "doi:10.1016/j.ipm.2025.104195",
+      "evidence": [
+        {
+          "span_id": "C0081-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "https://doi.org/10.1016/j.ipm.2025.104195"
+        }
+      ]
+    },
+    "abstract": "The paper studies knowledge-graph construction with smaller open-weight LLMs. Eight 7–8B models, plus 1B, 3B, and 70B variants, are fine-tuned with LoRA on ADE, CoNLL04, and SciERC using natural-language or Python-like prompts, optionally including chain-of-thought rationales. Prompt language has limited impact after fine-tuning, rationale training generally decreases performance, and smaller fine-tuned models can outperform the much larger closed-source CodeKGC baseline.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Article metadata",
+      "span_id": "C0081-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Paolo Gajo, Alberto Barrón-Cedeño",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Article metadata",
+      "span_id": "C0081-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Information Processing and Management 62 (2025) 104195",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Article metadata",
+      "span_id": "C0081-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Information Processing and Management 62 (2025) 104195",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Article metadata",
+      "span_id": "C0081-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "https://doi.org/10.1016/j.ipm.2025.104195",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0081-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We choose a variety of models either pre-trained primarily on natural language or on code and fine-tune them on three datasets used for information extraction.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0081-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We tackle the task of RDF triple extraction from raw text with smaller, open-weight LLMs.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0081-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "We wish to verify whether LLMs pre-trained on code are better at structural reasoning.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0081-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We fine-tune said models using LoRA on three datasets for information extraction.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "4.2 Prompt details",
+      "span_id": "C0081-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "The KGC task is formatted as a code completion task, where the entity and relation classes of the triples can be mentioned explicitly.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "4.2 Prompt details",
+      "span_id": "C0081-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "During training, we provide the models with three examples in the prompt.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0081-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "KGC ... aims at addressing this issue by automating the extraction of structural information from raw text, usually in the form of RDF triples.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0081-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We fine-tune ... on three datasets for information extraction: ADE, CoNLL04, and SciERC.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4.1 Hyperparameters",
+      "span_id": "C0081-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "We apply a LoRA adapter with r, α = 16 ... each model has 42M trainable parameters. We fine-tune for 200 steps with a batch size of 8.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4.2 Prompt details",
+      "span_id": "C0081-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "We wish to compare natural language and code models by feeding them prompts formatted either as English instructions or as Python scripts.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4.3 Evaluation",
+      "span_id": "C0081-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "During inference, the models are given three examples from the training set and their responses are compared against the test set sample being evaluated.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "4.2 Prompt details",
+      "span_id": "C0081-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "Relations and entities can be represented as the classes Rel and Entity, and each relation and entity type can be represented as a sub-class.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Appendix A. Prompts and schemas",
+      "span_id": "C0081-D-P020-TEXT-0002",
+      "page": 20,
+      "excerpt": "The schema defines general classes for relations (Rel) and entities (Entity), along with classes specific to the dataset.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "2.2 Knowledge graph construction",
+      "span_id": "C0081-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "KGC ... entails extracting structural information from raw text in the form of RDF triples.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "4.3 Evaluation",
+      "span_id": "C0081-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "A triple [is] a true positive if and only if the whole triple matches the ground truth.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3. Data",
+      "span_id": "C0081-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "SciERC ... [is] used for entity, relation, and coreference classification.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3. Data",
+      "span_id": "C0081-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "ADE ... is a medical corpus ... CoNLL04 ... comprises news articles ... SciERC ... [is] in the domain of scientific literature.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "4.2 Prompt details",
+      "span_id": "C0081-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "For example, in a given input string S, the input text appears before the newline character.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "4.3 Evaluation",
+      "span_id": "C0081-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "the test set sample being evaluated",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "2.1 Knowledge graphs",
+      "span_id": "C0081-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "RDF triples ... in the format (entity1, relation, entity2).",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Table 6",
+      "span_id": "C0081-D-P011-TABLE-0002",
+      "page": 11,
+      "excerpt": "Extract([Triple(Disease(...), Rel(...), Drug(...))])",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Table 3",
+      "span_id": "C0081-D-P006-TABLE-0001",
+      "page": 6,
+      "excerpt": "List of the models used in this study.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.1 Hyperparameters",
+      "span_id": "C0081-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "The parameters being updated are then those belonging to the weight matrices B and A.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "5.7 Impact of model size",
+      "span_id": "C0081-D-P017-TEXT-0003",
+      "page": 17,
+      "excerpt": "We train Llama-3.1-70B ... by first quantizing them at 4-bit precision with the QLoRA approach.",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Table 1",
+      "span_id": "C0081-D-P005-TABLE-0001",
+      "page": 5,
+      "excerpt": "Instance counts are reported with a slash symbol (#train/#test) for the training and test sets.",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3. Data",
+      "span_id": "C0081-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "In order to conduct an appropriate comparison with CodeKGC, we use the same sub-sampled splits created by the CodeKGC authors.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.3 Evaluation",
+      "span_id": "C0081-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "We calculate precision, recall, and micro-F1 by considering a triple a true positive if and only if the whole triple matches the ground truth.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Table 11",
+      "span_id": "C0081-D-P018-TABLE-0002",
+      "page": 18,
+      "excerpt": "F1-measure ... averaged over five testing runs",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4 Models",
+      "span_id": "C0081-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "The ChatGPT models used in CodeKGC ... are text-davinci-002 and text-davinci-003.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Results and discussion",
+      "span_id": "C0081-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "The results for the instruction models tested without any fine-tuning are reported in Table 5.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.2 Prompt details",
+      "span_id": "C0081-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "During training, we provide the models with three examples in the prompt.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.3 Evaluation",
+      "span_id": "C0081-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "we evaluate each model directly on the test set, without running any inference for validation.",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0081-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "the selected lightweight LLMs outperform the much larger CodeKGC by as much as 15–20 absolute F1 points after fine-tuning.",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "5.1 Fine-tuned LLMs vs. CodeKGC",
+      "span_id": "C0081-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "Mistral-7B-Instruct-v0.3 obtains the top performance on ADE (0.812) ... and on CoNLL04 (0.705).",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "5.5 Rationale",
+      "span_id": "C0081-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "For all fine-tuned models but one ... including a rationale section ... leads to suboptimal performance.",
+      "confidence": "medium"
+    },
+    "main_results-22-04": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 9",
+      "span_id": "C0081-D-P016-TABLE-0004",
+      "page": 16,
+      "excerpt": "ADE ... Base 0.192 ± 0.118 ... Fine-Tuned 0.719 ± 0.074",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0081-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Using open-weight models is essential because only by having access to the weights can one analyze the behavior of a model.",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.1 Hyperparameters",
+      "span_id": "C0081-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "each model has 42M trainable parameters.",
+      "confidence": "medium"
+    },
+    "strengths-23-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.8 LoRA modules ablation",
+      "span_id": "C0081-D-P018-TABLE-0003",
+      "page": 18,
+      "excerpt": "Full LoRA ... 0.778 ± 0.011, 0.623 ± 0.011, 0.321 ± 0.012",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.3 Error analysis",
+      "span_id": "C0081-D-P011-TEXT-0001",
+      "page": 11,
+      "excerpt": "a non-trivial amount of predictions end up being evaluated as completely wrong just due to ... one special character.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.3 Error analysis",
+      "span_id": "C0081-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "the model links ‘eigenvectors’ to ‘submanifold’, which can be considered as a simplification of the two-hop annotation.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.3 Evaluation",
+      "span_id": "C0081-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "we evaluate each model directly on the test set, without running any inference for validation.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.2 Prompt details",
+      "span_id": "C0081-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "deepseek-coder-7b-base-v1.5 only has a context length of 4k tokens.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "5.7 Impact of model size",
+      "span_id": "C0081-D-P017-TEXT-0002",
+      "page": 17,
+      "excerpt": "Our available hardware did not allow us to LoRA-tune the 70B models at 16-bit or 8-bit precision.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "5.7 Impact of model size",
+      "span_id": "C0081-D-P018-TEXT-0003",
+      "page": 18,
+      "excerpt": "the 70B models probably have the potential to outperform the 8B models, but would require a larger amount of fine-tuning data.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "6 Conclusions and future work",
+      "span_id": "C0081-D-P019-TEXT-0001",
+      "page": 19,
+      "excerpt": "the bigger open-weight models could be fine-tuned with additional training steps on more data",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "6 Conclusions and future work",
+      "span_id": "C0081-D-P019-TEXT-0002",
+      "page": 19,
+      "excerpt": "even lighter models could be employed ... by modifying ... BERT-based state-of-the-art models for joint entity and relation extraction.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "5.3 Error analysis",
+      "span_id": "C0081-D-P012-TEXT-0003",
+      "page": 12,
+      "excerpt": "performance could be non-trivially increased by applying some very minor text post-processing",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "6 Conclusions and future work",
+      "span_id": "C0081-D-P019-TEXT-0001",
+      "page": 19,
+      "excerpt": "Future work could shed light on whether prompt-tuning models for the RDF triple extraction task with RAG-obtained information yields better results than simply pre-training the model.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.3 Error analysis",
+      "span_id": "C0081-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "These mistakes highlight the difficulty in having to predict which relations and entities to extract, along with their order within the triples.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.7 Impact of model size",
+      "span_id": "C0081-D-P018-TEXT-0003",
+      "page": 18,
+      "excerpt": "the 70B models probably have the potential to outperform the 8B models, but would require a larger amount of fine-tuning data.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0081-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Code: https://github.com/TinfFoil/natcode-llm-kgc",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Data availability",
+      "span_id": "C0081-D-P028-TEXT-0002",
+      "page": 28,
+      "excerpt": "The data has already been released by other researchers. The repo with the code is linked from the paper and we will release it.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The study addresses whether small, open-weight LLMs can perform RDF triple extraction for knowledge-graph construction as well as or better than larger closed-source models, and whether programming-language prompts improve structured extraction relative to natural-language prompts. It also examines the effects of chain-of-thought training and model size.",
+  "methodology": {
+    "primary_family": "Instruction-tuned or fine-tuned LLM methods",
+    "secondary_families": [
+      "Generative text-to-structure methods",
+      "Ontology-constrained and schema-guided methods",
+      "Zero-shot and few-shot LLM prompting"
+    ],
+    "system_type": "end_to_end",
+    "supervision_setting": "supervised",
+    "description": "The system treats KGC as generative RDF triple extraction. For each dataset, the authors construct prompts in either natural language or Python-like code, optionally adding rationale lists that explicitly enumerate candidate entities and relations. Models receive three in-context examples and generate triples for a target sentence. The main experiments apply LoRA adapters to decoder attention and MLP modules while freezing the base model, using 200 training steps, batch size 8, learning rate 2×10^-4, and 42M trainable parameters for the 7–8B models. The study evaluates 175 model/settings combinations, including natural-language and code-pretrained models, instruction-tuned and completion models, model-size variants, no-fine-tuning controls, a 70B QLoRA condition, an ICL-example ablation, training-step analysis, attention visualizations, and LoRA-module ablations. The output is parsed/evaluated as exact RDF triples; no separate entity-recognition, linking, or graph-validation module is reported."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The method uses dataset-specific entity and relation schemas rather than discovering an ontology. In code prompts, generic Rel, Entity, Triple, and Extract classes are combined with dataset-specific subclasses such as Adverse_effect, Drug, and Disease. The natural-language prompts also instruct the model to produce the target RDF-triple format. No external ontology, entity-linking knowledge base, or schema induction procedure is reported.",
+    "evidence": [
+      {
+        "span_id": "C0081-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "Relations and entities can be represented as the classes Rel and Entity, and each relation and entity type can be represented as a sub-class."
+      },
+      {
+        "span_id": "C0081-D-P020-TEXT-0002",
+        "page": 20,
+        "excerpt": "The schema defines general classes for relations (Rel) and entities (Entity), along with classes specific to the dataset."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Input sentence/document presentation to the LLM; no separate preprocessing stage is reported.",
+    "Entity and concept extraction through generative prediction of entity strings.",
+    "Entity typing through dataset-specific entity classes in the generated triples and code schema.",
+    "Relation and triple extraction as the central task.",
+    "Graph construction as RDF-style triples of the form (entity, relation, entity).",
+    "Coreference resolution is not separately solved or evaluated; SciERC contains coreference annotations, but the reported evaluation is exact triple extraction.",
+    "Entity resolution/linking, ontology discovery, knowledge fusion, deduplication, graph validation/correction, and graph updating are not reported as separate stages."
+  ],
+  "input_output": {
+    "input_type": "Unstructured natural-language text from medical case reports, news articles, and scientific literature.",
+    "input_granularity": "Primarily sentence-level or short text-instance inputs, with examples and target outputs formatted in prompts; the paper evaluates benchmark instances rather than complete documents or deployed graphs.",
+    "output_representation": "Exact RDF-style triples represented as ordered textual triples [subject, relation, object], with code-prompt variants wrapped in Python-like classes such as Extract([Triple(...)])."
+  },
+  "models_and_tools": [
+    "Mistral-7B-v0.3 and Mistral-7B-Instruct-v0.3",
+    "Llama-3.1-8B and Llama-3.1-8B-Instruct",
+    "Llama-3.2-1B/3B and instruction-tuned variants",
+    "Llama-3.1-70B and Llama-3.1-70B-Instruct",
+    "CodeQwen1.5-7B and CodeQwen1.5-7B-Chat",
+    "deepseek-coder-7b-base-v1.5 and deepseek-coder-7b-instruct-v1.5",
+    "LoRA; QLoRA and bitsandbytes for 70B models; AdamW optimizer; cross-entropy language-model loss"
+  ],
+  "datasets": [
+    "ADE: medical adverse-drug-effect corpus; CodeKGC subset, 2,562/300 documents and 4,087/452 entity/relation instances.",
+    "CoNLL04: news-domain relation-extraction corpus; 922/288 documents with five relation types and four entity types.",
+    "SciERC: scientific-literature corpus; 1,366/397 documents with six entity types, seven relation types, and coreference annotations.",
+    "The study uses the same sub-sampled train/test splits created for CodeKGC."
+  ],
+  "evaluation": {
+    "metrics": [
+      "Precision",
+      "Recall",
+      "Micro-F1",
+      "Per-relation F1",
+      "Exact triple match: a triple counts as correct only when subject, relation, and object all exactly match the gold triple.",
+      "Three testing runs averaged for the main model comparisons; five runs for the LoRA-module ablation."
+    ],
+    "baselines": [
+      "CodeKGC using text-davinci-002",
+      "CodeKGC using text-davinci-003",
+      "Instruction-tuned open-weight models evaluated without fine-tuning",
+      "Full fine-tuning and partial LoRA-module variants in the ablation study"
+    ],
+    "setting": "Supervised fine-tuning and inference on the CodeKGC sub-sampled train/test splits for ADE, CoNLL04, and SciERC. Training uses three randomly sampled in-context examples plus a target example, 200 steps, batch size 8, and no validation-based checkpoint selection. Each model is evaluated directly on the test set, generally in three repeated runs, using strict exact-triple matching. Additional experiments vary model size, prompt language, rationale use, number of ICL examples, training steps, and LoRA target modules."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Experimental result: the best fine-tuned models achieve micro-F1 0.812 on ADE, 0.705 on CoNLL04, and 0.396 on SciERC; the best ADE and CoNLL04 results are from Mistral-7B-Instruct-v0.3, while Mistral-7B-v0.3 obtains the best SciERC result.",
+      "Experimental result: compared with CodeKGC, the paper reports improvements of 17.4 F1 points on ADE, 19.7 on CoNLL04, and 15.5 on SciERC in the abstract; the discussion reports approximately 17, 20.9, and 14.9 points for the selected best comparisons.",
+      "Experimental result: prompt language has limited impact after fine-tuning; only 5 of 12 best results for code-pretrained LLMs use code prompts, and natural-language prompts are slightly better overall.",
+      "Experimental result: rationale/chain-of-thought training lowers performance for all fine-tuned models except one. For Mistral-7B-v0.3 on SciERC, the no-rationale score is 0.396 versus 0.357 with rationale.",
+      "Experimental result: fine-tuned 1B and 3B Llama models outperform the fine-tuned 70B Llama models under the same limited-data setup, while the 70B base model is stronger than smaller base models.",
+      "Experimental result: across all fine-tuned and base models, mean micro-F1 is 0.719 versus 0.192 on ADE, 0.582 versus 0.087 on CoNLL04, and 0.305 versus 0.032 on SciERC.",
+      "Review-level interpretation: the experiments support the claim that task-specific adaptation and output-format supervision mattered more than pre-training size or code specialization under this small-data regime."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0081-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "the selected lightweight LLMs outperform the much larger CodeKGC by as much as 15–20 absolute F1 points after fine-tuning."
+      },
+      {
+        "span_id": "C0081-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "Mistral-7B-Instruct-v0.3 obtains the top performance on ADE (0.812) ... and on CoNLL04 (0.705)."
+      },
+      {
+        "span_id": "C0081-D-P013-TEXT-0003",
+        "page": 13,
+        "excerpt": "For all fine-tuned models but one ... including a rationale section ... leads to suboptimal performance."
+      },
+      {
+        "span_id": "C0081-D-P016-TABLE-0004",
+        "page": 16,
+        "excerpt": "ADE ... Base 0.192 ± 0.118 ... Fine-Tuned 0.719 ± 0.074"
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author claim: the approach uses open-weight models, enabling inspection of model behavior and more stable reproducibility than changing online APIs.",
+      "Experimental strength: LoRA adaptation provides large gains with only 42M trainable parameters for 7–8B models and a small 200-step training budget.",
+      "Experimental strength: the study systematically varies prompt language, rationale use, model pre-training domain, model size, number of ICL examples, training steps, and LoRA modules.",
+      "Experimental strength: the strict exact-triple metric gives a conservative measure of simultaneous subject, relation, and object correctness.",
+      "Review-level interpretation: the common datasets and shared CodeKGC splits make the prompt and model-size comparisons internally coherent."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0081-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "Using open-weight models is essential because only by having access to the weights can one analyze the behavior of a model."
+      },
+      {
+        "span_id": "C0081-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "each model has 42M trainable parameters."
+      },
+      {
+        "span_id": "C0081-D-P018-TABLE-0003",
+        "page": 18,
+        "excerpt": "Full LoRA ... 0.778 ± 0.011, 0.623 ± 0.011, 0.321 ± 0.012"
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Experimental weakness: the approach predicts raw textual triples and does not report separate entity linking, coreference resolution, ontology discovery, graph validation, deduplication, or graph updating components.",
+      "Experimental weakness: the strict exact-match metric penalizes harmless punctuation, spacing, or adjective differences; the error analysis shows predictions that are semantically plausible but counted as wrong.",
+      "Experimental weakness: no validation-set model selection is performed, and most experiments use only 200 training steps and 1,600 observed training examples per setting.",
+      "Experimental weakness: performance is substantially lower on specialized SciERC than on ADE or CoNLL04, with errors involving technical relations, entity order, and long-distance/coreferential dependencies.",
+      "Review-level interpretation: comparisons are limited to three benchmark datasets and may not establish robustness for heterogeneous, document-level, multilingual, or production KG construction."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0081-D-P011-TEXT-0001",
+        "page": 11,
+        "excerpt": "a non-trivial amount of predictions end up being evaluated as completely wrong just due to ... one special character."
+      },
+      {
+        "span_id": "C0081-D-P011-TEXT-0002",
+        "page": 11,
+        "excerpt": "the model links ‘eigenvectors’ to ‘submanifold’, which can be considered as a simplification of the two-hop annotation."
+      },
+      {
+        "span_id": "C0081-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "we evaluate each model directly on the test set, without running any inference for validation."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The 70B models cannot be fairly fully explored because the available hardware did not permit 16-bit or 8-bit LoRA tuning; the 70B experiments therefore use 4-bit quantization.",
+      "The 4K context limit of deepseek-coder-7b-base-v1.5 prevents experiments with 15 or more ICL examples.",
+      "The limited 1,600-example training regime may be insufficient to steer 70B models and may explain why smaller models outperform them after fine-tuning.",
+      "The authors do not pursue additional 70B training because it would conflict with the goal of reducing compute requirements and was computationally infeasible.",
+      "The authors note that future work should test more data and training steps for larger models, lighter non-LLM models, and RAG-derived information during prompt training."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0081-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "deepseek-coder-7b-base-v1.5 only has a context length of 4k tokens."
+      },
+      {
+        "span_id": "C0081-D-P017-TEXT-0002",
+        "page": 17,
+        "excerpt": "Our available hardware did not allow us to LoRA-tune the 70B models at 16-bit or 8-bit precision."
+      },
+      {
+        "span_id": "C0081-D-P018-TEXT-0003",
+        "page": 18,
+        "excerpt": "the 70B models probably have the potential to outperform the 8B models, but would require a larger amount of fine-tuning data."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed improvement: fine-tune larger open-weight models with more training data and additional steps to determine whether they can eventually surpass smaller models.",
+      "Author-proposed improvement: investigate lighter models, including BERT-based joint entity-relation systems and latent graph inference.",
+      "Author-proposed improvement: study RAG-derived information during prompt training and compare it with domain-relevant pre-training.",
+      "Review-level inference: add robust normalization or relaxed matching for punctuation, modifiers, and equivalent entity spans, while reporting strict and normalized scores separately.",
+      "Review-level inference: add explicit coreference, entity-linking, schema validation, and graph-consistency checks before graph insertion."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0081-D-P019-TEXT-0001",
+        "page": 19,
+        "excerpt": "the bigger open-weight models could be fine-tuned with additional training steps on more data"
+      },
+      {
+        "span_id": "C0081-D-P019-TEXT-0002",
+        "page": 19,
+        "excerpt": "even lighter models could be employed ... by modifying ... BERT-based state-of-the-art models for joint entity and relation extraction."
+      },
+      {
+        "span_id": "C0081-D-P012-TEXT-0003",
+        "page": 12,
+        "excerpt": "performance could be non-trivially increased by applying some very minor text post-processing"
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Whether larger open-weight models can outperform smaller models when given sufficient domain-specific fine-tuning data remains unresolved.",
+      "The study does not resolve how to reliably extract technically complex relations and long-distance/coreferential dependencies in SciERC-like scientific text.",
+      "The effect of code versus natural-language prompting under larger datasets, different schemas, and broader domains remains unresolved.",
+      "The paper leaves open whether RAG-based domain information during prompt training is better than domain-relevant pre-training.",
+      "Exact triple generation remains vulnerable to entity-boundary, punctuation, entity-order, relation-direction, and semantically plausible but annotation-incompatible errors."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0081-D-P019-TEXT-0001",
+        "page": 19,
+        "excerpt": "Future work could shed light on whether prompt-tuning models for the RDF triple extraction task with RAG-obtained information yields better results than simply pre-training the model."
+      },
+      {
+        "span_id": "C0081-D-P011-TEXT-0002",
+        "page": 11,
+        "excerpt": "These mistakes highlight the difficulty in having to predict which relations and entities to extract, along with their order within the triples."
+      },
+      {
+        "span_id": "C0081-D-P018-TEXT-0003",
+        "page": 18,
+        "excerpt": "the 70B models probably have the potential to outperform the 8B models, but would require a larger amount of fine-tuning data."
+      }
+    ]
+  },
+  "code_and_data_availability": "Code repository: https://github.com/TinfFoil/natcode-llm-kgc. The paper states that the datasets were released by prior researchers and that the repository is linked from the paper; its data-availability statement says the code will be released."
+}

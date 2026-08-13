@@ -1,0 +1,888 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0151",
+    "title": "Learning to Link with Wikipedia",
+    "pdf_path": "data/batches/batch-05/C0151.pdf",
+    "authors": [
+      "David Milne",
+      "Ian H. Witten"
+    ],
+    "year": 2008,
+    "venue": "CIKM'08 (ACM Conference on Information and Knowledge Management), Napa Valley, California, USA",
+    "identifier": {
+      "status": "reported",
+      "value": "ISBN 978-1-59593-991-3",
+      "evidence": [
+        {
+          "span_id": "C0151-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "Copyright 2008 ACM 978-1-59593-991-3/08/10...$5.00."
+        }
+      ]
+    },
+    "abstract": "The paper presents a machine-learning wikification system that identifies important terms in unstructured documents and links them to the appropriate Wikipedia articles. It frames the linked concepts as structured knowledge for downstream tasks and reports approximately 75% precision and recall on Wikipedia and real-world documents.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title block",
+      "span_id": "C0151-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "David Milne; Ian H. Witten; Department of Computer Science, University of Waikato.",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication notice",
+      "span_id": "C0151-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "CIKM’08, October 26–30, 2008, Napa Valley, California, USA. Copyright 2008 ACM.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication notice",
+      "span_id": "C0151-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "CIKM’08, October 26–30, 2008, Napa Valley, California, USA.",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Publication notice",
+      "span_id": "C0151-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Copyright 2008 ACM 978-1-59593-991-3/08/10...$5.00.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0151-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Machine learning can be used to identify significant terms within unstructured text, and enrich it with links to the appropriate Wikipedia articles.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0151-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Topics mentioned in unstructured text can be automatically recognized and linked to the appropriate Wikipedia articles to explain them.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Examples and implications",
+      "span_id": "C0151-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "It can represent [documents] as graphs of the concepts they discuss.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3.1 A learning approach to disambiguation",
+      "span_id": "C0151-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "We have developed a machine-learning approach to disambiguation that uses the links found within Wikipedia articles for training.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "4.1 A machine-learning link detector",
+      "span_id": "C0151-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "These automatically identified Wikipedia articles provide training instances for a classifier.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "4.1 A machine-learning link detector",
+      "span_id": "C0151-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "Generality ... is the minimum depth at which it is located in Wikipedia’s category tree.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Examples and implications",
+      "span_id": "C0151-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "More formal reasoning can be made available by ... connecting to Wikipedia-derived ontologies such as DBPedia [and] Yago.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0151-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The two separate stages involved: link disambiguation and link detection.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "4.1 A machine-learning link detector",
+      "span_id": "C0151-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "The link detection process starts by gathering all n-grams ... All the remaining phrases are disambiguated ... [then] training instances for a classifier.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "3.1 A learning approach to disambiguation",
+      "span_id": "C0151-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "For every link, a Wikipedian has manually ... selected the correct destination ... millions of manually-defined ground truth examples to learn from.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "3.1 A learning approach to disambiguation",
+      "span_id": "C0151-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "500 [articles] for training; 100 for configuration, and a further 100 for final evaluation.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.1 A learning approach to disambiguation",
+      "span_id": "C0151-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The three features are used to train a classifier that can distinguish valid senses from irrelevant ones.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4.1 A machine-learning link detector",
+      "span_id": "C0151-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "The link detection process starts by gathering all n-grams ... All the remaining phrases are disambiguated using the classifier described in the previous section.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4.1 A machine-learning link detector",
+      "span_id": "C0151-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "The remaining features are based on the locations where topics are mentioned ... Frequency ... first occurrence ... last occurrence ... spread.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.1 A learning approach to disambiguation",
+      "span_id": "C0151-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Each candidate sense and context term is represented by a single Wikipedia article.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.1 A learning approach to disambiguation",
+      "span_id": "C0151-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "The Wikipedia Link-based Measure ... measures the semantic similarity of two Wikipedia pages by comparing their incoming and outgoing links.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "4.1 A machine-learning link detector",
+      "span_id": "C0151-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "We define the generality of a topic as the minimum depth at which it is located in Wikipedia’s category tree.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "4.1 A machine-learning link detector",
+      "span_id": "C0151-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "The link detection process starts by gathering all n-grams in the document.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0151-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "Recognized and linked to the appropriate Wikipedia articles.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Examples and implications",
+      "span_id": "C0151-D-P009-CAPTION-0003",
+      "page": 9,
+      "excerpt": "Topics and relations automatically extracted from the content of this paper; a link between two topics indicates ... significant relation.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0151-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Identify significant terms within unstructured text.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "4.3 Evaluation",
+      "span_id": "C0151-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The articles were then stripped of all markup and handed to the link detector.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-03": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "5.1 Experimental Data",
+      "span_id": "C0151-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "The test set ... is a subset of 50 documents from the AQUAINT text corpus: a collection of newswire stories.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "4.1 A machine-learning link detector",
+      "span_id": "C0151-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "The link detection process starts by gathering all n-grams in the document.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "4.1 A machine-learning link detector",
+      "span_id": "C0151-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "This results in a set of associations between terms in the document and the Wikipedia articles that describe them.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "4.1 A machine-learning link detector",
+      "span_id": "C0151-D-P005-CAPTION-0001",
+      "page": 5,
+      "excerpt": "Associating document phrases with appropriate Wikipedia articles.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Examples and implications",
+      "span_id": "C0151-D-P009-CAPTION-0002",
+      "page": 9,
+      "excerpt": "Topics and relations automatically extracted from the content of this paper.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.2 Configuration and attribute selection",
+      "span_id": "C0151-D-P004-TABLE-0001",
+      "page": 4,
+      "excerpt": "Performance of classifiers for disambiguation: Naïve Bayes, C4.5, Support Vector Machines, Feature selected C4.5, Bagged C4.5.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.2 Training and configuration",
+      "span_id": "C0151-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "The evaluation described in the next section uses bagged C4.5 in order to gain the best overall results.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "5.2 Participants and Tasks",
+      "span_id": "C0151-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "We turned to Mechanical Turk ... a crowd-sourcing service hosted by Amazon.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-04": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Acknowledgements",
+      "span_id": "C0151-D-P010-TEXT-0004",
+      "page": 10,
+      "excerpt": "We ... acknowledge the WEKA team for producing an excellent resource for machine learning.",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.1 A learning approach to disambiguation",
+      "span_id": "C0151-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "A version of Wikipedia ... released on November 20, 2007. It contains just under two million articles.",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.1 A learning approach to disambiguation",
+      "span_id": "C0151-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "700 articles were randomly selected ... 500 for training; 100 for configuration, and ... 100 for final evaluation.",
+      "confidence": "medium"
+    },
+    "datasets-18-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "5.1 Experimental Data",
+      "span_id": "C0151-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "The test set ... is a subset of 50 documents from the AQUAINT text corpus.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "3.3 Evaluation",
+      "span_id": "C0151-D-P004-TABLE-0001",
+      "page": 4,
+      "excerpt": "Performance of disambiguation algorithms over final test data: recall, precision, f-measure.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.3 Evaluation",
+      "span_id": "C0151-D-P007-TABLE-0002",
+      "page": 7,
+      "excerpt": "Performance of link detection algorithms: recall, precision, f-measure.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "5.3 Results",
+      "span_id": "C0151-D-P008-TABLE-0003",
+      "page": 8,
+      "excerpt": "Accuracy of the automatically detected links: correct; incorrect (wrong destination); incorrect (irrelevant and/or unhelpful); incorrect (unknown reason).",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "3.3 Evaluation",
+      "span_id": "C0151-D-P004-TABLE-0001",
+      "page": 4,
+      "excerpt": "Random sense; Most common sense; Medelyan et al. (2008); Most valid sense; All valid senses.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.3 Evaluation",
+      "span_id": "C0151-D-P007-TABLE-0002",
+      "page": 7,
+      "excerpt": "Wikify (estimate); Wikify (upper bound); New link detector.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "3.3 Evaluation",
+      "span_id": "C0151-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "11,000 anchors were gathered from 100 randomly selected articles and disambiguated automatically.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.3 Evaluation",
+      "span_id": "C0151-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "Ground truth was obtained by gathering the 9,300 topics that these articles were manually linked to.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "5.2 Participants and Tasks",
+      "span_id": "C0151-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "Each task was performed by three different people.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-04": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "5.3 Results",
+      "span_id": "C0151-D-P008-TEXT-0004",
+      "page": 8,
+      "excerpt": "We required that the majority (at least 3) of the participants identify a link before it was considered link-worthy.",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "3.3 Evaluation",
+      "span_id": "C0151-D-P004-TABLE-0001",
+      "page": 4,
+      "excerpt": "Most valid sense: recall 95.7, precision 98.4, f-measure 97.1; Medelyan et al. (2008): 92.3, 93.3, 92.9.",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.3 Evaluation",
+      "span_id": "C0151-D-P007-TABLE-0002",
+      "page": 7,
+      "excerpt": "New link detector: recall 73.8, precision 74.4, f-measure 74.1.",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "5.3 Results",
+      "span_id": "C0151-D-P008-TABLE-0003",
+      "page": 8,
+      "excerpt": "Precision is 76%; ... Recall is 73% ... F-measure is 75%.",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.3 Evaluation",
+      "span_id": "C0151-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The key differences ... are the use of machine learning and the weighting of context. These provide a 76% reduction in error rate.",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.3 Evaluation",
+      "span_id": "C0151-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "A distinct advantage of not requiring parsing of the text ... provides language independence ... much less training (500 articles vs. the entire Wikipedia).",
+      "confidence": "medium"
+    },
+    "strengths-23-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.3 Results",
+      "span_id": "C0151-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "Overall the figures are remarkably close to those obtained when the system was evaluated against Wikipedia articles.",
+      "confidence": "medium"
+    },
+    "strengths-23-04": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Abstract",
+      "span_id": "C0151-D-P001-TEXT-0004",
+      "page": 1,
+      "excerpt": "It can provide structured knowledge about any unstructured fragment of text.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.3 Evaluation",
+      "span_id": "C0151-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "There is a marked drop in performance between disambiguating links and detecting them ... deciding whether the link should be made at all [is] more subjective.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.3 Evaluation",
+      "span_id": "C0151-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "A limitation of this comparison is that the two link detection approaches were developed and evaluated on different versions of Wikipedia.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.1 Experimental Data",
+      "span_id": "C0151-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "The difference in size ... produced a classifier that identified very few link-worthy topics.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-04": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Examples and implications",
+      "span_id": "C0151-D-P009-TEXT-0004",
+      "page": 9,
+      "excerpt": "The graph isn’t perfect, since it is missing key concepts such as wikification and disambiguation.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.3 Evaluation",
+      "span_id": "C0151-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "A limitation of this comparison is that the two link detection approaches were developed and evaluated on different versions of Wikipedia.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "5.3 Results",
+      "span_id": "C0151-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "As is to be expected for subjective tasks, there was some disagreement between the evaluators.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Examples and implications",
+      "span_id": "C0151-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "The graph isn’t perfect, since it is missing key concepts such as wikification and disambiguation.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Examples and implications",
+      "span_id": "C0151-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "More formal reasoning can be made available by ... connecting to Wikipedia-derived ontologies such as DBPedia [and] Yago.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "5.1 Experimental Data",
+      "span_id": "C0151-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "We created a new training set by gathering all of the Wikipedia articles of the same length as the newswire stories.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "5.3 Results",
+      "span_id": "C0151-D-P008-TABLE-0003",
+      "page": 8,
+      "excerpt": "Incorrect (wrong destination) 0.9; incorrect (irrelevant and/or unhelpful) 19.8.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.2 Participants and Tasks",
+      "span_id": "C0151-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "Judging the helpfulness and relevance of a link is subjective.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusions",
+      "span_id": "C0151-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "Most [methods] have not been evaluated independently. Instead these methods are only evaluated extrinsically.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Examples and implications",
+      "span_id": "C0151-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "Figure 6 shows a sample of topics ... where a link between two topics indicates ... significant relation according to the Wikipedia link-based measure.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "5.3 Results",
+      "span_id": "C0151-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "The result is a new corpus containing only manually-verified links, which we have made available online ... www.nzdl.org/wikification.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Automatically wikify unstructured text: detect the terms/topics that merit links and disambiguate each to the intended Wikipedia article. The objective is to add explanatory cross-references and thereby transform plain text into an unambiguous, structured set or graph of Wikipedia concepts.",
+  "methodology": {
+    "primary_family": "Classical machine learning",
+    "secondary_families": [
+      "Ontology-constrained and schema-guided methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "supervised",
+    "description": "Execution pipeline: (1) obtain candidate n-grams from a document and retain those above a low Wikipedia link-probability threshold; (2) disambiguate candidate anchors to Wikipedia articles using a C4.5 classifier over sense commonness, weighted semantic relatedness to unambiguous context articles, and context quality; (3) merge phrase-to-article associations into candidate topics; (4) apply a bagged C4.5 link-detector classifier to select link-worthy topics using average/max link probability, relatedness, disambiguation confidence, category-tree generality, and mention frequency, first/last occurrence, and spread; (5) create links to selected Wikipedia topics. For illustrative graph construction, extracted topics are connected when their Wikipedia link-based relatedness is significant."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "Wikipedia is the controlled target vocabulary/knowledge base: candidate phrases are resolved to Wikipedia articles. Wikipedia anchor statistics supply priors and labels; incoming/outgoing link structure supplies semantic relatedness; its category hierarchy supplies a generality feature. The paper illustrates optional connection to DBpedia/YAGO for more formal reasoning, but does not use an externally specified ontology as a mandatory extraction schema.",
+    "evidence": [
+      {
+        "span_id": "C0151-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "Each candidate sense and context term is represented by a single Wikipedia article."
+      },
+      {
+        "span_id": "C0151-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "The Wikipedia Link-based Measure ... measures the semantic similarity of two Wikipedia pages by comparing their incoming and outgoing links."
+      },
+      {
+        "span_id": "C0151-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "We define the generality of a topic as the minimum depth at which it is located in Wikipedia’s category tree."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing",
+    "Entity and concept extraction",
+    "Entity resolution and linking",
+    "Graph construction"
+  ],
+  "input_output": {
+    "input_type": "Plain, unstructured natural-language documents; evaluated on Wikipedia article text with markup removed and on English newswire stories.",
+    "input_granularity": "Document-level processing over all n-grams and their document context; mention-level candidate anchors are aggregated to document topics.",
+    "output_representation": "Selected text-to-Wikipedia-article links (disambiguated concepts/topics); optionally, a document concept graph whose nodes are extracted Wikipedia topics and whose edges denote significant Wikipedia link-based relatedness."
+  },
+  "models_and_tools": [
+    "C4.5 decision-tree classifier",
+    "Bagged C4.5 classifier for final link detection",
+    "Naïve Bayes classifier (configuration comparison)",
+    "Support Vector Machines (configuration comparison)",
+    "Wikipedia Link-based Measure for semantic relatedness",
+    "Wikipedia anchor/link statistics and category tree",
+    "Amazon Mechanical Turk for human evaluation",
+    "WEKA"
+  ],
+  "datasets": [
+    "Wikipedia dump released 20 November 2007, just under two million articles",
+    "700 randomly selected Wikipedia articles with at least 50 links, excluding lists and disambiguation pages: 500 training, 100 configuration, 100 final disambiguation evaluation",
+    "Separate 100 Wikipedia articles with 9,300 manually linked topics for link-detection evaluation",
+    "AQUAINT: 50 Associated Press newswire stories of 250–300 words for out-of-Wikipedia evaluation",
+    "A length-matched, link-dense set of 500 Wikipedia articles for newswire classifier training",
+    "Manually verified/corrected corpus of wikified news articles"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Recall",
+      "Precision",
+      "F-measure",
+      "Error-rate reduction",
+      "Human majority-vote link correctness and error-category percentages",
+      "Training/testing time"
+    ],
+    "baselines": [
+      "Random-sense disambiguation",
+      "Most-common-sense disambiguation",
+      "Medelyan et al. (2008) commonness/relatedness heuristic",
+      "Mihalcea and Csomai (2007) Wikify link-probability detector, reported as estimated and perfect-disambiguation upper-bound combined performance"
+    ],
+    "setting": "Intrinsic disambiguation evaluation used 11,000 anchors from 100 held-out Wikipedia articles. Intrinsic link-detection evaluation used 100 new Wikipedia articles and 9,300 manually linked topics after removing markup. External evaluation used 50 short Associated Press AQUAINT stories: 449 proposed links were each judged by three Mechanical Turk workers; missing links were elicited from five workers per document, with at least three votes required; the corrected corpus supplied ground truth. Candidate-generation and classifier thresholds were configured on held-out Wikipedia articles."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Held-out Wikipedia disambiguation: strict most-valid-sense classifier achieved recall 95.7%, precision 98.4%, and F-measure 97.1%; selecting all valid senses gave 96.6%, 97.0%, and 96.8%, respectively. The Medelyan et al. baseline scored F=92.9%; authors report a 76% error-rate reduction for strict selection.",
+      "Held-out Wikipedia link detection: new detector scored recall 73.8%, precision 74.4%, F=74.1%, versus Wikify estimated 46.5%, 49.6%, F=48.0% and upper bound 53.4%, 55.9%, F=54.6%.",
+      "External AQUAINT human-corrected evaluation: precision 76%, recall 73%, F=75%; of proposed links 76.4% were correct, 0.9% had a wrong destination, 19.8% were irrelevant/unhelpful, and 2.9% had an unknown error reason.",
+      "The disambiguator trained in 13 minutes and tested in four minutes after a three-minute load; the link detector trained in 37 minutes and tested, including disambiguation, in eight minutes on the specified desktop."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0151-D-P004-TABLE-0001",
+        "page": 4,
+        "excerpt": "Most valid sense: recall 95.7, precision 98.4, f-measure 97.1; Medelyan et al. (2008): 92.3, 93.3, 92.9."
+      },
+      {
+        "span_id": "C0151-D-P007-TABLE-0002",
+        "page": 7,
+        "excerpt": "New link detector: recall 73.8, precision 74.4, f-measure 74.1."
+      },
+      {
+        "span_id": "C0151-D-P008-TABLE-0003",
+        "page": 8,
+        "excerpt": "Precision is 76%; ... Recall is 73% ... F-measure is 75%."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author-stated: learns from abundant human-created Wikipedia links and combines sense commonness, context-relatedness, and context quality rather than using a fixed heuristic.",
+      "Author-stated: avoids part-of-speech analysis and parsing the entire Wikipedia; uses only 500 training articles, is potentially language independent, and requires lower resources.",
+      "Experimental: high held-out disambiguation F=97.1% and consistent approximately 74–75% end-task performance on Wikipedia and independently human-judged newswire.",
+      "Review-level inference: mapping ambiguous textual mentions to Wikipedia identifiers makes the output directly usable as linked entities/concepts in a later Text-to-KG workflow, unlike an ungrounded keyword list."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0151-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "The key differences ... are the use of machine learning and the weighting of context. These provide a 76% reduction in error rate."
+      },
+      {
+        "span_id": "C0151-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "A distinct advantage of not requiring parsing of the text ... provides language independence ... much less training (500 articles vs. the entire Wikipedia)."
+      },
+      {
+        "span_id": "C0151-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "Overall the figures are remarkably close to those obtained when the system was evaluated against Wikipedia articles."
+      },
+      {
+        "span_id": "C0151-D-P001-TEXT-0004",
+        "page": 1,
+        "excerpt": "It can provide structured knowledge about any unstructured fragment of text."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author-reported: link detection is substantially harder and more subjective than disambiguation; performance drops from disambiguation to about F=74% for link detection.",
+      "Author-reported: the comparison with Wikify is limited because methods were developed and evaluated on different Wikipedia versions.",
+      "Author-reported: applying a classifier trained on longer encyclopedic articles to short newswire initially identified very few link-worthy topics, requiring a separately constructed length-matched training set.",
+      "Review-level inference: this is a Wikipedia-closed linking system; concepts absent from, or poorly represented in, that snapshot cannot be linked, and its target ontology/schema changes with Wikipedia."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0151-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "There is a marked drop in performance between disambiguating links and detecting them ... deciding whether the link should be made at all [is] more subjective."
+      },
+      {
+        "span_id": "C0151-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "A limitation of this comparison is that the two link detection approaches were developed and evaluated on different versions of Wikipedia."
+      },
+      {
+        "span_id": "C0151-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "The difference in size ... produced a classifier that identified very few link-worthy topics."
+      },
+      {
+        "span_id": "C0151-D-P009-TEXT-0004",
+        "page": 9,
+        "excerpt": "The graph isn’t perfect, since it is missing key concepts such as wikification and disambiguation."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "Whether to create a link is subjective; human evaluators disagreed, especially when identifying missing links.",
+      "The paper's Wikify comparison is not fully comparable because the systems use different Wikipedia versions; the combined Wikify score is estimated because the prior work did not report it.",
+      "The illustrative extracted graph is imperfect and misses key concepts.",
+      "The detector's training data must match document length/style: initial encyclopedic training performed poorly on short newswire."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0151-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "A limitation of this comparison is that the two link detection approaches were developed and evaluated on different versions of Wikipedia."
+      },
+      {
+        "span_id": "C0151-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "As is to be expected for subjective tasks, there was some disagreement between the evaluators."
+      },
+      {
+        "span_id": "C0151-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "The graph isn’t perfect, since it is missing key concepts such as wikification and disambiguation."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-stated/proposed: connect extracted Wikipedia concepts to Wikipedia-derived ontologies such as DBpedia and YAGO to enable more formal reasoning.",
+      "Author-stated: adapt/retrain on text with characteristics matching the deployment domain, as the authors did by constructing a short, link-dense Wikipedia training set for newswire.",
+      "Review-level inference: evaluate domain transfer and temporal robustness with a fixed target-KG snapshot and compatible baselines; this would address the paper's acknowledged cross-version comparison limitation.",
+      "Review-level inference: add calibration or a human-review path for low-confidence candidate selection, since most external errors were irrelevant/unhelpful links rather than wrong disambiguations."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0151-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "More formal reasoning can be made available by ... connecting to Wikipedia-derived ontologies such as DBPedia [and] Yago."
+      },
+      {
+        "span_id": "C0151-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "We created a new training set by gathering all of the Wikipedia articles of the same length as the newswire stories."
+      },
+      {
+        "span_id": "C0151-D-P008-TABLE-0003",
+        "page": 8,
+        "excerpt": "Incorrect (wrong destination) 0.9; incorrect (irrelevant and/or unhelpful) 19.8."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-stated: robustly deciding which mentioned concepts are sufficiently helpful, relevant, and important to link remains subjective.",
+      "Author-stated: many approaches that map text to Wikipedia topics have not been independently evaluated, instead receiving only extrinsic evaluation.",
+      "Review-level inference: the work demonstrates entity/concept linking and an illustrative relatedness graph, but does not resolve extraction of typed relations, attributes, events, coreference, fusion, validation, or graph updating required for comprehensive Text-to-KG construction."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0151-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "Judging the helpfulness and relevance of a link is subjective."
+      },
+      {
+        "span_id": "C0151-D-P009-TEXT-0002",
+        "page": 9,
+        "excerpt": "Most [methods] have not been evaluated independently. Instead these methods are only evaluated extrinsically."
+      },
+      {
+        "span_id": "C0151-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "Figure 6 shows a sample of topics ... where a link between two topics indicates ... significant relation according to the Wikipedia link-based measure."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that the manually verified and corrected corpus of wikified news articles was made available online at www.nzdl.org/wikification. No source-code release is reported in the paper."
+}

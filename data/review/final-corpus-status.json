@@ -1,0 +1,823 @@
+{
+  "retained_total": 115,
+  "accepted_paper_cards": 83,
+  "manual_pdf_required": 31,
+  "paper_card_manual_review": 1,
+  "unresolved_not_yet_batched": 0,
+  "accepted_percentage": 72.17,
+  "candidate_ids_by_state": {
+    "ACCEPTED_CARD": [
+      "C0001",
+      "C0003",
+      "C0004",
+      "C0005",
+      "C0006",
+      "C0007",
+      "C0008",
+      "C0012",
+      "C0013",
+      "C0014",
+      "C0015",
+      "C0016",
+      "C0017",
+      "C0018",
+      "C0019",
+      "C0021",
+      "C0022",
+      "C0023",
+      "C0024",
+      "C0025",
+      "C0026",
+      "C0027",
+      "C0028",
+      "C0029",
+      "C0030",
+      "C0031",
+      "C0032",
+      "C0033",
+      "C0034",
+      "C0035",
+      "C0036",
+      "C0037",
+      "C0038",
+      "C0039",
+      "C0040",
+      "C0041",
+      "C0042",
+      "C0043",
+      "C0047",
+      "C0049",
+      "C0050",
+      "C0052",
+      "C0053",
+      "C0055",
+      "C0066",
+      "C0070",
+      "C0073",
+      "C0074",
+      "C0076",
+      "C0078",
+      "C0081",
+      "C0082",
+      "C0087",
+      "C0089",
+      "C0093",
+      "C0094",
+      "C0095",
+      "C0096",
+      "C0097",
+      "C0101",
+      "C0102",
+      "C0104",
+      "C0106",
+      "C0107",
+      "C0116",
+      "C0122",
+      "C0125",
+      "C0126",
+      "C0133",
+      "C0137",
+      "C0138",
+      "C0140",
+      "C0143",
+      "C0146",
+      "C0150",
+      "C0151",
+      "C0152",
+      "C0153",
+      "C0154",
+      "C0155",
+      "C0158",
+      "C0160",
+      "C0162"
+    ],
+    "MANUAL_PDF_REQUIRED": [
+      "C0002",
+      "C0009",
+      "C0010",
+      "C0011",
+      "C0020",
+      "C0044",
+      "C0046",
+      "C0048",
+      "C0054",
+      "C0056",
+      "C0060",
+      "C0061",
+      "C0063",
+      "C0064",
+      "C0067",
+      "C0072",
+      "C0077",
+      "C0083",
+      "C0084",
+      "C0088",
+      "C0090",
+      "C0091",
+      "C0098",
+      "C0099",
+      "C0110",
+      "C0113",
+      "C0114",
+      "C0134",
+      "C0136",
+      "C0163",
+      "C0167"
+    ],
+    "PAPER_CARD_MANUAL_REVIEW": [
+      "C0169"
+    ]
+  },
+  "candidates": [
+    {
+      "candidate_id": "C0001",
+      "title": "A Comprehensive Survey on Automatic Knowledge Graph Construction",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0002",
+      "title": "A Survey on Extracting Knowledge Graphs by Employing Natural Language Processing",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required."
+    },
+    {
+      "candidate_id": "C0003",
+      "title": "Review of Automatic and Semi-Automatic Creation of Knowledge Graphs from Structured and Unstructured Data",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0004",
+      "title": "A Systematic Literature Review on RDF Triple Generation From Natural Language Texts",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0005",
+      "title": "Constructing Knowledge Graphs from Text Using Large Language Models: Scoping Review",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0006",
+      "title": "OpenIE-based Approach for Knowledge Graph Construction from Text",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0007",
+      "title": "Semi-automatic Knowledge Graph Construction by Relation Pattern Extraction",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0008",
+      "title": "From Text to Knowledge. Bridging the Gap with Probabilistic Graphical Models",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0009",
+      "title": "Research on Construction Method of Knowledge Graph of US Military Equipment Based on BiLSTM Model",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required."
+    },
+    {
+      "candidate_id": "C0010",
+      "title": "Building Knowledge Graph Using Pre-trained Language Model for Learning Entity-aware Relationships",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required."
+    },
+    {
+      "candidate_id": "C0011",
+      "title": "Span Level Model for the Construction of Scientific Knowledge Graph",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required."
+    },
+    {
+      "candidate_id": "C0012",
+      "title": "Joint Extraction of Entities and Relations Based on a Novel Graph Scheme",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0013",
+      "title": "Seq2KG: An End-to-End Neural Model for Domain Agnostic Knowledge Graph Construction from Text",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0014",
+      "title": "An Autoregressive Text-to-Graph Framework for Joint Entity and Relation Extraction",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0015",
+      "title": "LlmRe: A Zero-Shot Entity Relation Extraction Method Based on the Large Language Model",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0016",
+      "title": "Fine-Tuning Language Models for Triple Extraction with Data Augmentation",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0017",
+      "title": "CodeKGC: Code Language Model for Generative Knowledge Graph Construction",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0018",
+      "title": "iText2KG: Incremental Knowledge Graphs Construction Using Large Language Models",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0019",
+      "title": "Leveraging LLM for Automated Ontology Extraction and Knowledge Graph Generation",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0020",
+      "title": "A BERT-Assisted LLM Framework for Knowledge Graph Construction",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required."
+    },
+    {
+      "candidate_id": "C0021",
+      "title": "Prompt Me One More Time: A Two-Step Knowledge Extraction Pipeline with Ontology-Based Verification",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0022",
+      "title": "KnowledgeNet: A Benchmark Dataset for Knowledge Base Population",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0023",
+      "title": "Text2KGBench: A Benchmark for Ontology-Driven Knowledge Graph Generation from Text",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0024",
+      "title": "KGGen: Extracting Knowledge Graphs from Plain Text with Language Models",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0025",
+      "title": "Knowledge Vault: A Web-Scale Approach to Probabilistic Knowledge Fusion",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0026",
+      "title": "Identifying Relations for Open Information Extraction",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0027",
+      "title": "FEEL: Framework for the Integration of Entity Extraction and Linking Systems",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0028",
+      "title": "On Aligning OpenIE Extractions with Knowledge Bases: A Case Study",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0029",
+      "title": "MWO2KG and Echidna: Constructing and Exploring Knowledge Graphs from Maintenance Data",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0030",
+      "title": "Doc‐KG: Unstructured documents to knowledge graph construction, identification and validation with Wikidata",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0031",
+      "title": "Information extraction meets the Semantic Web: A survey",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0032",
+      "title": "KBPearl",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0033",
+      "title": "Exploiting lexical patterns for knowledge graph construction from unstructured text in Spanish",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0034",
+      "title": "ICDM 2019 Knowledge Graph Contest: Team UWA",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0035",
+      "title": "Automating Biomedical Knowledge Graph Construction For Context-Aware Scientific Inference",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0036",
+      "title": "Enhancing Domain-Independent Knowledge Graph Construction through OpenIE Cleaning and LLMs Validation",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0037",
+      "title": "Entity Linking: An Issue to Extract Corresponding Entity With Knowledge Base",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0038",
+      "title": "Incorporating contexts to open information extraction",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0039",
+      "title": "Knowledge graph population from news streams",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0040",
+      "title": "Semi-supervised generative open information extraction",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0041",
+      "title": "Named Entity Extraction for Knowledge Graphs: A Literature Overview",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0042",
+      "title": "KGen: a knowledge graph generator from biomedical scientific literature",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0043",
+      "title": "Relation Extraction with Matrix Factorization and Universal Schemas",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0044",
+      "title": "Chinese Triple Extraction Based on BERT Model",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required."
+    },
+    {
+      "candidate_id": "C0046",
+      "title": "Scalable Knowledge Graph Construction over Text using Deep Learning based Predicate Mapping",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required."
+    },
+    {
+      "candidate_id": "C0047",
+      "title": "A Novel Cascade Binary Tagging Framework for Relational Triple Extraction",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0048",
+      "title": "Constructing COVID-19 Knowledge Graph from A Large Corpus of Scientific Articles",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required."
+    },
+    {
+      "candidate_id": "C0049",
+      "title": "CTI-Thinker: an LLM-driven system for CTI knowledge graph construction and attack reasoning",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0050",
+      "title": "Entity linking for biomedical literature",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0052",
+      "title": "Knowledge Base Population: Successful Approaches and Challenges",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0053",
+      "title": "N-ary relation extraction for simultaneous T-Box and A-Box knowledge base augmentation",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0054",
+      "title": "Populating knowledge base with collective entity mentions: a graph-based approach",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required."
+    },
+    {
+      "candidate_id": "C0055",
+      "title": "Research on Domain-Specific Knowledge Graph Based on the RoBERTa-wwm-ext Pretraining Model",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0056",
+      "title": "Triplet-based knowledge mining using pretrained large language models",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required."
+    },
+    {
+      "candidate_id": "C0060",
+      "title": "Research on Knowledge Extraction Technology for Knowledge Graph Construction",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required."
+    },
+    {
+      "candidate_id": "C0061",
+      "title": "Dependency parsing based Chinese open relation extraction",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required."
+    },
+    {
+      "candidate_id": "C0063",
+      "title": "Simple ontologies for practical information extraction and advanced information extraction for practical ontologies",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Correct full paper required; the local 21-page issue extract is incomplete and must not be used for a Paper Card."
+    },
+    {
+      "candidate_id": "C0064",
+      "title": "Synthesizing constituents for knowledge organization and representation from historical travel records",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required."
+    },
+    {
+      "candidate_id": "C0066",
+      "title": "A Semantic Best-Effort Approach for Extracting Structured Discourse Graphs from Wikipedia",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0067",
+      "title": "Automatic Knowledge Graph Construction: A Report on the 2019 ICDM/ICBK Contest",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained."
+    },
+    {
+      "candidate_id": "C0070",
+      "title": "Coarse-to-fine Knowledge Graph Domain Adaptation based on Distantly-supervised Iterative Training",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0072",
+      "title": "Constructing Domain-Specific Knowledge Graphs from Unannotated Technical Texts using LLMs",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained."
+    },
+    {
+      "candidate_id": "C0073",
+      "title": "Entity Linking with a Knowledge Base: Issues, Techniques, and Solutions",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0074",
+      "title": "Extensive Benchmark of Frugal Encoder–Decoder Language Models for Datatype Properties Extraction and RDF Knowledge Graph Generation",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0076",
+      "title": "Importance sampling for unbiased on-demand evaluation of knowledge base population",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0077",
+      "title": "Joint entity-relation extraction: A key technique for knowledge graph construction&amp;mdash;A survey",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required."
+    },
+    {
+      "candidate_id": "C0078",
+      "title": "Large Language Models for Automatic Knowledge Graph Construction From Text Documents: a Materials Science Case Study",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0081",
+      "title": "Natural vs programming language in LLM knowledge graph construction",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0082",
+      "title": "OneRel:Joint Entity and Relation Extraction with One Module in One Step",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0083",
+      "title": "Unstructured to Structured: Building Knowledge Graphs from Documents for Web Applications",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained."
+    },
+    {
+      "candidate_id": "C0084",
+      "title": "WSD based Ontology Learning from Unstructured Text using Transformer",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained."
+    },
+    {
+      "candidate_id": "C0087",
+      "title": "Automated Construction and Growth of a Large Ontology",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0088",
+      "title": "A LLM-Based Approach for Semantic Extraction and Linking of RDF Triples from Unstructured Text",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained."
+    },
+    {
+      "candidate_id": "C0089",
+      "title": "A Method for Traditional Chinese Medicine Knowledge Graph Dynamic Construction",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0090",
+      "title": "A novel ship collision accident knowledge graph construction method based on ontology-constrained prompt engineering",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained."
+    },
+    {
+      "candidate_id": "C0091",
+      "title": "An ontology for maintenance activities and its application to data quality",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required."
+    },
+    {
+      "candidate_id": "C0093",
+      "title": "Confidence Estimation for Knowledge Base Population",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0094",
+      "title": "Distantly supervised Web relation extraction for knowledge base population",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0095",
+      "title": "Effective Modeling of Encoder-Decoder Architecture for Joint Entity and Relation Extraction",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0096",
+      "title": "Entity Disambiguation for Knowledge Base Population",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0097",
+      "title": "Entity extraction: From unstructured text to DBpedia RDF triples",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0098",
+      "title": "Frame-Based Ontology Population with PIKES",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained."
+    },
+    {
+      "candidate_id": "C0099",
+      "title": "Information extraction and knowledge graph construction from geoscience literature",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained."
+    },
+    {
+      "candidate_id": "C0101",
+      "title": "Knowledge graphs generation from cultural heritage texts: combining LLMs and ontological engineering for scholarly debates",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0102",
+      "title": "Laying the Groundwork for Knowledge Base Population: Nine Years of Linguistic Resources for TAC KBP",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0104",
+      "title": "Multi-Task Identification of Entities, Relations, and Coreference for Scientific Knowledge Graph Construction",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0106",
+      "title": "OPIEC: An Open Information Extraction Corpus",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0107",
+      "title": "OPTIMIZING SYNTACTIC-SEMANTIC RELATION EXTRACTION FOR THE KAZAKH LANGUAGE WITH TRANSFORMER ARCHITECTURES AND SYNTHETIC CORPORA",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0110",
+      "title": "Prompt2Graph: Leveraging LLMs to Construct Knowledge Graphs from Technical Manuals",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained."
+    },
+    {
+      "candidate_id": "C0113",
+      "title": "Semi-supervised ISA: A novel industrial knowledge graph construction method enhanced by the fault log corpus analysis and semi-supervised learning",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained."
+    },
+    {
+      "candidate_id": "C0114",
+      "title": "Towards automated financial market knowledge graph construction",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained."
+    },
+    {
+      "candidate_id": "C0116",
+      "title": "A HOLY QURAN ONTOLOGY CONSTRUCTION WITH SEMI¬ AUTOMATIC POPULATION",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0122",
+      "title": "A hybrid approach for extracting semantic relations from texts",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0125",
+      "title": "A Survey on Generative Knowledge Graph Construction",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0126",
+      "title": "Alzheimer’s Disease Knowledge Graph Enhances Knowledge Discovery and Disease Prediction",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0133",
+      "title": "Bootstrapped Self Training for Knowledge Base Population.",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0134",
+      "title": "Causal knowledge extraction from long text maintenance documents",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained."
+    },
+    {
+      "candidate_id": "C0136",
+      "title": "Chinese relation extraction for constructing satellite frequency and orbit knowledge graph: A survey",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained."
+    },
+    {
+      "candidate_id": "C0137",
+      "title": "Construction of a knowledge graph for framework material enabled by large language models and its application",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0138",
+      "title": "DBpedia spotlight",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0140",
+      "title": "DocOIE: A Document-level Context-Aware Dataset for OpenIE",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0143",
+      "title": "Extract, Define, Canonicalize: An LLM-based Framework for Knowledge Graph Construction",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0146",
+      "title": "Generative Knowledge Graph Construction: A Review",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0150",
+      "title": "Knowledge-Based Weak Supervision for Information Extraction of Overlapping Relations",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0151",
+      "title": "Learning to link with wikipedia",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0152",
+      "title": "LINDEN",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0153",
+      "title": "Llm-Tikg: Threat Intelligence Knowledge Graph Construction Utilizing Large Language Model",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0154",
+      "title": "LLM4Schema.org: Generating Schema.org Markups With Large Language Models",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0155",
+      "title": "LLMs for knowledge graph construction and reasoning: recent capabilities and future opportunities",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0158",
+      "title": "Open Relation Extraction and Grounding",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0160",
+      "title": "Question-Answer Extraction from Scientific Articles Using Knowledge Graphs and Large Language Models",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0162",
+      "title": "Relation-Faceted Graph Pooling with LLM Guidance for Dynamic Span-Aware Information Extraction",
+      "final_state": "ACCEPTED_CARD",
+      "reason": ""
+    },
+    {
+      "candidate_id": "C0163",
+      "title": "Research on Association Rule Mining and Knowledge Graph Construction for Low-Carbon Scheme Design in Transmission Line Passageways",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "No identity-validated legal public PDF was obtained after recorded/public-source attempts."
+    },
+    {
+      "candidate_id": "C0167",
+      "title": "Tackling representation, annotation and classification challenges for temporal knowledge base population",
+      "final_state": "MANUAL_PDF_REQUIRED",
+      "reason": "No identity-validated legal public PDF was obtained after recorded/public-source attempts."
+    },
+    {
+      "candidate_id": "C0169",
+      "title": "Text2Onto-Agent: An LLM Agent-Based End-to-End Automated Ontology Construction Method anda Case Study of Green Building Domain Modeling",
+      "final_state": "PAPER_CARD_MANUAL_REVIEW",
+      "reason": "Luna and the single quality-only Terra replacement did not pass content-quality validation."
+    }
+  ]
+}

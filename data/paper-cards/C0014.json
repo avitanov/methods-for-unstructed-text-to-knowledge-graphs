@@ -1,0 +1,938 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0014",
+    "title": "An Autoregressive Text-to-Graph Framework for Joint Entity and Relation Extraction",
+    "pdf_path": "data/batches/batch-02/C0014.pdf",
+    "authors": [
+      "Urchade Zaratiana",
+      "Nadi Tomeh",
+      "Pierre Holat",
+      "Thierry Charnois"
+    ],
+    "year": 2024,
+    "venue": "The Thirty-Eighth AAAI Conference on Artificial Intelligence (AAAI-24)",
+    "identifier": {
+      "status": "reported",
+      "value": "AAAI-24 proceedings, pp. 19477–19485",
+      "evidence": [
+        {
+          "span_id": "C0014-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "19477"
+        },
+        {
+          "span_id": "C0014-D-P009-TEXT-0002",
+          "page": 9,
+          "excerpt": "19485"
+        }
+      ]
+    },
+    "abstract": "The paper proposes ATG, a span-based conditional sequence-generation method for joint entity and relation extraction from unstructured text. A transformer encoder-decoder generates a linearized graph whose nodes are typed text spans and whose edges are relation triplets; a pointing mechanism selects from a dynamic vocabulary of spans, relation types, and special tokens to ground outputs in the source text. It is evaluated on CoNLL 2004, SciERC, and ACE 05, with competitive results.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0014-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Urchade Zaratiana, Nadi Tomeh, Pierre Holat, Thierry Charnois",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Copyright notice",
+      "span_id": "C0014-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Copyright © 2024, Association for the Advancement of Artificial Intelligence",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Page header",
+      "span_id": "C0014-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The Thirty-Eighth AAAI Conference on Artificial Intelligence (AAAI-24)",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Proceedings pagination",
+      "span_id": "C0014-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "19477",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-02": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Proceedings pagination",
+      "span_id": "C0014-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "19485",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0014-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "we propose a novel method for joint entity and relation extraction from unstructured text by framing it as a conditional sequence generation problem",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-02": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0014-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "It generates a linearized graph where nodes represent text spans and edges represent relation triplets.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0014-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "pipeline models ... independently trained and implemented entity recognition and relation extraction, often leading to error propagation",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0014-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "grounding the output in the input text",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-03": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Task Definition",
+      "span_id": "C0014-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "Our proposed model generates nodes and edges as a single sequence, effectively integrating both entity and relation extraction into a unified framework.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0014-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "framing it as a conditional sequence generation problem",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Task Definition",
+      "span_id": "C0014-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "generate a linearized graph representation",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0014-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "joint entity and relation extraction",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0014-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "autoregressive transformer encoder-decoder model that generates a linearized graph",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Constrained decoding",
+      "span_id": "C0014-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "it is also possible to incorporate domain knowledge into the prediction",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Task Definition",
+      "span_id": "C0014-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "generates nodes and edges as a single sequence",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0014-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "the prediction of entities and relations is intertwined",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Model Architecture — Decoder",
+      "span_id": "C0014-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "minimizing the negative log-likelihood of a reference sequence obtained by linearizing the reference IE graph",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Training with Sentence Augmentation",
+      "span_id": "C0014-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "randomly concatenating sentences from the training set",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Model Architecture / Figure 2",
+      "span_id": "C0014-D-P003-PICTURE-0001",
+      "page": 3,
+      "excerpt": "The Encoder takes in the input sequence X and generates representations of the tokens H and spans S. The Decoder then generates the next token",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Vocabulary Construction",
+      "span_id": "C0014-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "the vocabulary embedding matrix E is formed by stacking all span embeddings S, special token embeddings T, and relation type embeddings R",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Constrained decoding",
+      "span_id": "C0014-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "we prevent the repetition of already generated spans, and ... ensure the tail span is different from the head",
+      "confidence": "medium"
+    },
+    "methodology-description-11-04": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Training with Sentence Augmentation",
+      "span_id": "C0014-D-P004-TEXT-0004",
+      "page": 4,
+      "excerpt": "diverse and longer output sequence lengths, reducing the risk of premature generation of the <EOS> token",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Vocabulary Construction",
+      "span_id": "C0014-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "there is a Wtype for each entity types in a datasets",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Constrained decoding",
+      "span_id": "C0014-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "if the type of a head entity is PER and the tail entity is ORG, the relation can be constrained to be Work For",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Task Definition",
+      "span_id": "C0014-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Entity span ... starting and ending positions ... and entity type; Relation type ... between two entities",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Figure 1",
+      "span_id": "C0014-D-P002-CAPTION-0002",
+      "page": 2,
+      "excerpt": "graph consists of entities and relation triplets, which are generated sequentially",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Conclusion",
+      "span_id": "C0014-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "directly generating a linearized graph representation",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0014-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "joint entity and relation extraction from unstructured text",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Task Definition",
+      "span_id": "C0014-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Given an input text sequence x = {x1, x2, ..., xL}",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-03": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Experimental Setup — Datasets",
+      "span_id": "C0014-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "three benchmark English datasets",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Training with Sentence Augmentation",
+      "span_id": "C0014-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "randomly concatenating sentences from the training set",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Hyperparameter Settings",
+      "span_id": "C0014-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "The sentence augmentation hyperparameter B is set to 5.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-03": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Experimental Setup — Datasets",
+      "span_id": "C0014-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "a collection of documents from 500 AI paper abstracts",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Task Definition",
+      "span_id": "C0014-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Entity span ... (sj, ej, tj)",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Figure 1 caption",
+      "span_id": "C0014-D-P002-PICTURE-0002",
+      "page": 2,
+      "excerpt": "first producing entity spans ... followed by relation triplets",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-03": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Task Definition",
+      "span_id": "C0014-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "special tokens ... <SEP> ... or the <END> to stop the generation",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0014-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "transformer encoder-decoder architecture with pointing mechanism on a dynamic vocabulary of spans and relation types",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Constrained decoding",
+      "span_id": "C0014-D-P004-CAPTION-0002",
+      "page": 4,
+      "excerpt": "state-based decision process ... ensures the generation of a correct graph",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Hyperparameter Settings",
+      "span_id": "C0014-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "We use DeBERTa ... for Conll-04 and ACE 05 and SciBERT ... for SciERC",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-04": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Hyperparameter Settings",
+      "span_id": "C0014-D-P006-TEXT-0004",
+      "page": 6,
+      "excerpt": "70k steps using AdamW optimizer",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Experimental Setup — Datasets",
+      "span_id": "C0014-D-P005-TABLE-0001",
+      "page": 5,
+      "excerpt": "ACE05 7 6 10,051 2,424 2,050; CoNLL 04 4 5 922 231 288; SciERC 6 7 1,861 275 551",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Experimental Setup — Datasets",
+      "span_id": "C0014-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "ScIERC is a dataset that comes with entity, coreference, and relation annotations for a collection of documents from 500 AI paper abstracts.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Experimental Setup — Evaluation Metrics",
+      "span_id": "C0014-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "span-level evaluation requiring precise entity boundaries and type predictions",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Experimental Setup — Evaluation Metrics",
+      "span_id": "C0014-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Boundaries evaluation (REL) ... correct prediction of entity boundaries and relation types; Strict evaluation (REL+) additionally require accurate entity type prediction",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Experimental Setup — Evaluation Metrics",
+      "span_id": "C0014-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "We report the micro-averaged F1 score.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Experimental Setup — Baselines",
+      "span_id": "C0014-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "baseline ... separate into two categories: Span-based/table-filling and generative IE",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Main Results",
+      "span_id": "C0014-D-P006-TABLE-0002",
+      "page": 6,
+      "excerpt": "DYGIE++, Tab-Seq, PURE, PFN, UniRE, TablERT ... HySPA, TANL, ASP, UIE, LasUIE",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Hyperparameter Settings",
+      "span_id": "C0014-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "We train it for a maximum of 70k steps using AdamW optimizer",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Hyperparameter Settings",
+      "span_id": "C0014-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "The base learning rates are 3e-5 for the encoder, 7e-5 for the decoder, and 1e-4 for other projection layers.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Table 2 caption",
+      "span_id": "C0014-D-P006-TABLE-0003",
+      "page": 6,
+      "excerpt": "Italic scores use undirected evaluation for relation extraction and thus are not strictly comparable to our results.",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Main Results",
+      "span_id": "C0014-D-P006-TABLE-0001",
+      "page": 6,
+      "excerpt": "ATG ... SciERC 69.7 51.1 38.6; ACE 05 90.1 68.7 66.2; CoNLL 2004 90.5 78.5 78.5",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Main Results",
+      "span_id": "C0014-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "On the CoNLL 2004 dataset, ATG ... outperforming the second-best result by 2.2 in terms of REL+",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Ablation Studies",
+      "span_id": "C0014-D-P007-TABLE-0003",
+      "page": 7,
+      "excerpt": "Full 38.6 66.2 78.5 ... - Both 35.4 65.4 78.0; sorted ordering ... improvements of 4.7 and 4.9",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0014-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "pointing mechanism mitigates this issue by ensuring that ... entity spans, are directly tied to the input",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Figure 5 caption",
+      "span_id": "C0014-D-P005-PICTURE-0002",
+      "page": 5,
+      "excerpt": "shorter output sequence, richer (span-level) representation and fully controlled decoding",
+      "confidence": "medium"
+    },
+    "strengths-23-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Constrained decoding",
+      "span_id": "C0014-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "ensures that each step ... maintain[s] the well-formedness of the output",
+      "confidence": "medium"
+    },
+    "strengths-23-04": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Constrained decoding",
+      "span_id": "C0014-D-P004-TEXT-0004",
+      "page": 4,
+      "excerpt": "prevent the repetition of already generated spans ... tail span is different from the head",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Vocabulary size",
+      "span_id": "C0014-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "V = L × K × C + R + T",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Training with Sentence Augmentation",
+      "span_id": "C0014-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "model prematurely generates the <EOS> ... bias towards short sequences ... harm the recall",
+      "confidence": "medium"
+    },
+    "weaknesses-24-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Ablation Studies — Sequence ordering",
+      "span_id": "C0014-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "sorted ordering approach consistently outperforms the random one ... improvements of 4.7 and 4.9",
+      "confidence": "medium"
+    },
+    "weaknesses-24-04": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Experimental Setup — Evaluation Metrics",
+      "span_id": "C0014-D-P005-TEXT-0004",
+      "page": 5,
+      "excerpt": "For the NER task ... entity boundaries and type predictions ... relations ... relation types",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Training with Sentence Augmentation",
+      "span_id": "C0014-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "bias towards short sequences ... harm the recall of the tasks",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Interpretability Analysis — Learned Structure Embedding",
+      "span_id": "C0014-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "we do not have a clear interpretation of this phenomenon",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Main Results",
+      "span_id": "C0014-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "ASP ... operates under a relaxed, undirected relation evaluation, thereby limiting a fair comparison",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Vocabulary size",
+      "span_id": "C0014-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "V = L × K × C + R + T",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Constrained decoding",
+      "span_id": "C0014-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "possible to incorporate domain knowledge into the prediction",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Experimental Setup — Datasets",
+      "span_id": "C0014-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "ScIERC ... entity, coreference, and relation annotations",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-04": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Task Definition",
+      "span_id": "C0014-D-P002-TEXT-0004",
+      "page": 2,
+      "excerpt": "task of joint entity and relation extraction",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Vocabulary Construction",
+      "span_id": "C0014-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Wtype for each entity types in a datasets",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Experimental Setup — Datasets",
+      "span_id": "C0014-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "three benchmark English datasets for joint entity-relation extraction",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Constrained decoding",
+      "span_id": "C0014-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "constraints that preserve the well-formedness of the output graph",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0014-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Code is available at https://github.com/urchade/ATG.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Experimental Setup — Datasets",
+      "span_id": "C0014-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "We evaluated our model on three benchmark English datasets",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Jointly extract typed entity mentions and typed relations from unstructured text as an information-extraction graph, avoiding the error propagation of sequential entity-recognition and relation-classification pipelines and improving source-text grounding in generative extraction.",
+  "methodology": {
+    "primary_family": "Generative text-to-structure methods",
+    "secondary_families": [
+      "Joint entity-relation extraction (including joint triple extraction)",
+      "Transformer encoder methods",
+      "Ontology-constrained and schema-guided methods"
+    ],
+    "system_type": "joint",
+    "supervision_setting": "supervised",
+    "description": "ATG first encodes the input tokens with a transformer and enumerates bounded candidate spans. It computes each typed-span embedding from the encoder representations of the span boundaries, then forms a dynamic decoder vocabulary from these span embeddings plus learned relation-type and special-token embeddings. A causal transformer decoder autoregressively emits typed entity-span nodes, <SEP>, then head-span, tail-span, relation-type edge triplets, ending with <END>. Decoder inputs combine token, positional, and structural-role embeddings. Training maximizes the likelihood of a sorted or random graph linearization, with sentence-concatenation augmentation to reduce premature termination. At inference, a state-transition constrained decoder only permits valid graph sequences, prevents duplicate entities, prevents self-relations, and can restrict relations by entity-type/domain constraints."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The method uses a closed, dataset-provided schema of entity types and relation types: typed spans and relation types are decoder-vocabulary items. During constrained decoding, compatible relations may additionally be restricted using domain knowledge, illustrated by PER-to-ORG allowing Work_For on CoNLL 04. It does not discover an ontology or schema.",
+    "evidence": [
+      {
+        "span_id": "C0014-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "there is a Wtype for each entity types in a datasets"
+      },
+      {
+        "span_id": "C0014-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "if the type of a head entity is PER and the tail entity is ORG, the relation can be constrained to be Work For"
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Entity and concept extraction",
+    "Entity typing",
+    "Relation and triple extraction",
+    "Graph construction"
+  ],
+  "input_output": {
+    "input_type": "Unstructured English natural-language text tokenized as an input sequence; experimental inputs include newswire/news-related text, AI-paper abstracts, and ACE 05 multi-domain text.",
+    "input_granularity": "Primarily sentence-level input sequences; training augmentation concatenates 1 to B sentences, with B=5 in experiments. SciERC consists of paper abstracts.",
+    "output_representation": "A linearized information-extraction graph: typed entity nodes encoded as (start token index, end token index, entity type), followed after <SEP> by directed relation triplets encoded as head entity span, tail entity span, relation type, and terminated by <END>."
+  },
+  "models_and_tools": [
+    "ATG autoregressive transformer encoder-decoder",
+    "Dynamic vocabulary with typed-span embeddings, relation-type embeddings, and <START>/<SEP>/<END> embeddings",
+    "Causal transformer decoder with cross-attention, positional embeddings, and structural-role embeddings",
+    "Constrained state-transition decoding with nucleus sampling; greedy decoding performed best in the reported ablation",
+    "DeBERTa encoder for CoNLL 2004 and ACE 05",
+    "SciBERT encoder for SciERC",
+    "AdamW optimizer"
+  ],
+  "datasets": [
+    "ACE 05: 7 entity types, 6 relation types; 10,051 train / 2,424 dev / 2,050 test examples; diverse sources including newswire, online forums, and broadcast news.",
+    "CoNLL 2004: 4 entity types, 5 relation types; 922 train / 231 dev / 288 test examples; annotated newswire corpus.",
+    "SciERC: 6 entity types, 7 relation types; 1,861 train / 275 dev / 551 test examples; 500 AI-paper abstracts with entity, coreference, and relation annotations."
+  ],
+  "evaluation": {
+    "metrics": [
+      "Micro-averaged span-level Entity F1 (ENT), requiring exact entity boundaries and type.",
+      "Micro-averaged Relation F1 (REL), requiring correct entity boundaries and relation type.",
+      "Micro-averaged Strict Relation F1 (REL+), requiring correct entity boundaries, relation type, and entity types."
+    ],
+    "baselines": [
+      "Span/table methods: DyGIE++, Tab-Seq, PURE, PFN, UniRE, TablERT.",
+      "Generative IE methods: HySPA, TANL, ASP, UIE, LasUIE."
+    ],
+    "setting": "Supervised benchmark evaluation on ACE 05, CoNLL 2004, and SciERC. ATG was trained for at most 70k steps with AdamW; learning-rate warm-up lasts 10% of training then decays to zero, with base rates 3e-5 encoder, 7e-5 decoder, 1e-4 projection layers. Six decoder layers and sentence-augmentation B=5 were used. Results are compared from the literature; the paper explicitly flags ASP ACE 05 relation scores as undirected and thus not strictly comparable. Ablations vary decoder depth, sentence-augmentation size, nucleus top-p, positional/structural embeddings, and output ordering."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "SciERC: ATG achieved ENT/REL/REL+ F1 of 69.7/51.1/38.6, the highest reported values in Table 2; its REL+ is 0.2 above PFN (38.4) and 2.1 above UIE (36.5).",
+      "ACE 05: ATG achieved 90.1/68.7/66.2 ENT/REL/REL+ F1. These are competitive rather than best in the table; ASP's 70.5 REL+ uses undirected evaluation and is explicitly marked non-comparable.",
+      "CoNLL 2004: ATG achieved 90.5/78.5/78.5 ENT/REL/REL+ F1, with REL and REL+ highest in Table 2; its REL+ exceeds ASP's 76.3 by 2.2 points.",
+      "Ablation: removing both positional and structural embeddings reduced REL+ from 38.6 to 35.4 on SciERC, 66.2 to 65.4 on ACE 05, and 78.5 to 78.0 on CoNLL 2004. Sorted linearization outperformed random ordering by 4.7, 4.9, and 1.0 REL+ points on SciERC, ACE 05, and CoNLL 2004, respectively."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0014-D-P006-TABLE-0001",
+        "page": 6,
+        "excerpt": "ATG ... SciERC 69.7 51.1 38.6; ACE 05 90.1 68.7 66.2; CoNLL 2004 90.5 78.5 78.5"
+      },
+      {
+        "span_id": "C0014-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "On the CoNLL 2004 dataset, ATG ... outperforming the second-best result by 2.2 in terms of REL+"
+      },
+      {
+        "span_id": "C0014-D-P007-TABLE-0003",
+        "page": 7,
+        "excerpt": "Full 38.6 66.2 78.5 ... - Both 35.4 65.4 78.0; sorted ordering ... improvements of 4.7 and 4.9"
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author-stated: ATG directly generates graph structure using typed spans rather than plain-text serialization, producing shorter sequences and retaining span boundaries.",
+      "Author-stated: the pointing/dynamic-vocabulary mechanism explicitly grounds generated entity spans in the input and constrained decoding guarantees a well-formed output graph.",
+      "Review-level inference: The closed-vocabulary state machine makes invalid-format outputs, duplicate entity spans, and self-relations structurally preventable at decoding time, which is useful where a fixed entity/relation schema is available."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0014-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "pointing mechanism mitigates this issue by ensuring that ... entity spans, are directly tied to the input"
+      },
+      {
+        "span_id": "C0014-D-P005-PICTURE-0002",
+        "page": 5,
+        "excerpt": "shorter output sequence, richer (span-level) representation and fully controlled decoding"
+      },
+      {
+        "span_id": "C0014-D-P004-TEXT-0003",
+        "page": 4,
+        "excerpt": "ensures that each step ... maintain[s] the well-formedness of the output"
+      },
+      {
+        "span_id": "C0014-D-P004-TEXT-0004",
+        "page": 4,
+        "excerpt": "prevent the repetition of already generated spans ... tail span is different from the head"
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: ATG explicitly enumerates typed spans, so the dynamic vocabulary grows as L×K×C plus relation and special tokens; long inputs or large maximum spans/type inventories can increase decoding cost and make span-bound selection consequential.",
+      "Review-level inference: The method is evaluated on predefined entity and relation labels and relies on reference graph linearizations for training; its evidence does not establish performance for open-schema ontology discovery, entity linking, cross-document fusion, or graph updating.",
+      "Review-level inference: Autoregressive graph serialization creates an ordering dependence: random ordering was substantially worse on SciERC and ACE 05, and sentence augmentation was needed to mitigate premature end-token generation."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0014-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "V = L × K × C + R + T"
+      },
+      {
+        "span_id": "C0014-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "model prematurely generates the <EOS> ... bias towards short sequences ... harm the recall"
+      },
+      {
+        "span_id": "C0014-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "sorted ordering approach consistently outperforms the random one ... improvements of 4.7 and 4.9"
+      },
+      {
+        "span_id": "C0014-D-P005-TEXT-0004",
+        "page": 5,
+        "excerpt": "For the NER task ... entity boundaries and type predictions ... relations ... relation types"
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The authors report an observed premature-<EOS> / short-sequence bias that harms recall; they introduce sentence augmentation to counter it.",
+      "The authors state that they do not have a clear interpretation of the observed structure-embedding phenomenon.",
+      "The authors note that comparisons with ASP's ACE 05 results are limited because the reported ASP scores use relaxed undirected relation evaluation."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0014-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "bias towards short sequences ... harm the recall of the tasks"
+      },
+      {
+        "span_id": "C0014-D-P009-TEXT-0002",
+        "page": 9,
+        "excerpt": "we do not have a clear interpretation of this phenomenon"
+      },
+      {
+        "span_id": "C0014-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "ASP ... operates under a relaxed, undirected relation evaluation, thereby limiting a fair comparison"
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: Evaluate span-candidate pruning or adaptive span bounds to reduce the L×K×C dynamic-vocabulary burden on longer inputs, while measuring any recall loss.",
+      "Review-level inference: Extend the constrained decoder from dataset-specific labels to explicit, reusable ontology constraints and test robustness when schemas or domains change.",
+      "Review-level inference: Evaluate document-level and multi-document extensions that add the Text-to-KG stages absent from this paper's task evaluation, especially entity linking/coreference integration, fusion, and graph updating."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0014-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "V = L × K × C + R + T"
+      },
+      {
+        "span_id": "C0014-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "possible to incorporate domain knowledge into the prediction"
+      },
+      {
+        "span_id": "C0014-D-P005-TEXT-0003",
+        "page": 5,
+        "excerpt": "ScIERC ... entity, coreference, and relation annotations"
+      },
+      {
+        "span_id": "C0014-D-P002-TEXT-0004",
+        "page": 2,
+        "excerpt": "task of joint entity and relation extraction"
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: Whether ATG's span-based autoregressive decoding scales effectively to substantially longer text is unresolved by the reported sentence/abstract benchmark evaluation.",
+      "Review-level inference: Open-schema extraction and ontology/schema discovery remain unresolved because the reported vocabulary is built from dataset entity types and relation types.",
+      "Review-level inference: Knowledge fusion, entity resolution/linking, graph validation beyond output-format constraints, and graph updating are outside the paper's evaluated task."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0014-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "Wtype for each entity types in a datasets"
+      },
+      {
+        "span_id": "C0014-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "three benchmark English datasets for joint entity-relation extraction"
+      },
+      {
+        "span_id": "C0014-D-P004-TEXT-0003",
+        "page": 4,
+        "excerpt": "constraints that preserve the well-formedness of the output graph"
+      }
+    ]
+  },
+  "code_and_data_availability": "The abstract states that ATG code is available at https://github.com/urchade/ATG. The paper uses established benchmark datasets, but it does not state a separate project-hosted data release or a reproducibility package beyond the code link."
+}

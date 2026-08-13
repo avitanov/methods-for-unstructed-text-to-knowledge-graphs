@@ -1,0 +1,702 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0024",
+    "title": "KGGen: Extracting Knowledge Graphs from Plain Text with Language Models",
+    "pdf_path": "data/batches/batch-02/C0024.pdf",
+    "authors": [
+      "Belinda Mo",
+      "Kyssen Yu",
+      "Joshua Kazdan",
+      "Joan Cabezas",
+      "Proud Mpala",
+      "Lisa Yu",
+      "Chris Cundy",
+      "Charilaos Kanatsoulis",
+      "Sanmi Koyejo"
+    ],
+    "year": 2025,
+    "venue": "NeurIPS 2025",
+    "identifier": {
+      "status": "reported",
+      "value": "arXiv:2502.09956v2",
+      "evidence": [
+        {
+          "span_id": "C0024-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "arXiv:2502.09956v2 [cs.CL] 6 Nov 2025"
+        }
+      ]
+    },
+    "abstract": "Recent interest in building foundation models for knowledge graphs has highlighted a fundamental challenge: knowledge graph data is scarce. The best-known knowledge graphs are primarily human-labeled, created by pattern-matching, or extracted using early NLP techniques. While human-generated knowledge graphs are in short supply, automatically extracted ones are of questionable quality. We present KGGen, a novel text-to-knowledge-graph generator that uses language models to extract high-quality graphs from plain text with a novel entity resolution approach that clusters related entities, significantly reducing the sparsity problem that plagues existing extractors. Unlike other KG generators, KGGen clusters and de-duplicates related entities to reduce sparsity in extracted KGs. Along with KGGen, we release Measure of Information in Nodes and Edges (MINE), the first benchmark to test an extractor’s ability to produce a useful KG from plain text. We benchmark our new tool against leading existing generators such as Microsoft’s GraphRAG; we achieve comparable retrieval accuracy on the generated graphs and better information retention. Moreover, our graphs exhibit more concise and generalizable entities and relations. Our code is open-sourced at https://github.com/stair-lab/kg-gen/.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and authors",
+      "span_id": "C0024-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Belinda Mo, Kyssen Yu, Joshua Kazdan, Joan Cabezas, Proud Mpala, Lisa Yu, Chris Cundy, Charilaos Kanatsoulis, Sanmi Koyejo",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Header",
+      "span_id": "C0024-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "arXiv:2502.09956v2 [cs.CL] 6 Nov 2025; 39th Conference on Neural Information Processing Systems (NeurIPS 2025).",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Header",
+      "span_id": "C0024-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "39th Conference on Neural Information Processing Systems (NeurIPS 2025).",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Header",
+      "span_id": "C0024-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "arXiv:2502.09956v2 [cs.CL] 6 Nov 2025",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0024-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We present KGGen, a novel text-to-knowledge-graph generator that uses language models to extract high-quality graphs from plain text with a novel entity resolution approach that clusters related entities.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0024-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "They lack effective mechanisms for entity resolution and relation normalization. This leads to graphs with nearly as many unique relation types as edges, resulting in sparse, disconnected knowledge representations.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "KGGen: Knowledge Graphs From Plain Text",
+      "span_id": "C0024-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We rely on a multi-stage approach: extract entity and relations from each source text using an LLM, aggregate graphs across sources, and iteratively resolve duplicate entities and edges.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Prompts for KG Extraction",
+      "span_id": "C0024-D-P014-TEXT-0001",
+      "page": 14,
+      "excerpt": "The initial KG was extracted using the following two prompts passed as DSPy signature descriptions.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Entity and Edge Resolution",
+      "span_id": "C0024-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "Our resolution process employs a two-stage approach combining embedding-based clustering with LLM-based de-duplication.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "KGGen: Knowledge Graphs From Plain Text",
+      "span_id": "C0024-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The multi-stage approach is ordered as extraction, aggregation, and iterative resolution of duplicate entities and edges.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Prompts for KG Extraction",
+      "span_id": "C0024-D-P014-TEXT-0001",
+      "page": 14,
+      "excerpt": "The extraction prompts provide instructions for extracting entities and subject-predicate-object triples; no task-specific training or demonstration examples for KGGen are described.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Entity and Relation Extraction",
+      "span_id": "C0024-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The first step takes in source text and extracts a list of entities. Given the source text and entities list, the second step outputs a list of subject-predicate-object relations.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Entity and Edge Resolution",
+      "span_id": "C0024-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "We get the semantic embeddings of every item using S-BERT and cluster using k-means into clusters of 128 items.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Prompts for KG Extraction",
+      "span_id": "C0024-D-P014-TEXT-0001",
+      "page": 14,
+      "excerpt": "Extracted entities are subjects or objects.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Prompts for KG Extraction",
+      "span_id": "C0024-D-P014-TEXT-0002",
+      "page": 14,
+      "excerpt": "Extract subject-predicate-object triples from the source text. Subject and object must be from entities list.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "KGGen: Knowledge Graphs From Plain Text",
+      "span_id": "C0024-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Extract entity and relations from each source text, aggregate graphs across sources, and iteratively resolve duplicate entities and edges.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Qualitative Results",
+      "span_id": "C0024-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "We randomly selected 100 triples from each method and manually evaluated their validity.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Entity and Relation Extraction",
+      "span_id": "C0024-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The first stage takes unstructured text as input and produces an initial knowledge graph as extracted triples.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "MINE-1: Knowledge Retention",
+      "span_id": "C0024-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "MINE-1 consists of 100 articles, each accompanied by 15 facts; articles have a mean length of 592 words.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Efficiency and Cost Analysis",
+      "span_id": "C0024-D-P009-TABLE-0002",
+      "page": 9,
+      "excerpt": "Corpus Size (chars): 100, 1,000, 10,000, 100,000, 1,000,000.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0024-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "KGs consist of a set of subject-predicate-object triples.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "MINE-2: KG-Assisted RAG Description",
+      "span_id": "C0024-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Each relation is linked to a source text chunk during generation by KGGen and GraphRAG.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Entity and Relation Extraction",
+      "span_id": "C0024-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We use Google’s Gemini 2.0 Flash as the language model to provide structured output via DSPy signatures.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "MINE-1: Knowledge Retention",
+      "span_id": "C0024-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Both the 15 facts and all KG nodes are embedded using the all-MiniLM-L6-v2 model from SentenceTransformers.",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "MINE-1: Knowledge Retention",
+      "span_id": "C0024-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "MINE-1 consists of 100 articles, each accompanied by 15 facts that are known to be present in the article.",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "MINE-2: KG-Assisted RAG Description",
+      "span_id": "C0024-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "The RAG evaluation is based on the WikiQA dataset, which contains 20,400 questions based on 1,995 Wikipedia articles.",
+      "confidence": "medium"
+    },
+    "datasets-18-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Evaluation on Human-Annotated Data: SemEval-2010",
+      "span_id": "C0024-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "We randomly selected 100 sentences from the dataset, each containing two manually labeled target entities.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "MINE-1: Knowledge Retention",
+      "span_id": "C0024-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "The final MINE-1 score for a KG extractor is the percentage of the 15 facts scored as 1, averaged across all 100 articles.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Efficiency and Cost Analysis",
+      "span_id": "C0024-D-P009-TABLE-0002",
+      "page": 9,
+      "excerpt": "Table 3 presents the computational cost breakdown for processing the entire novel: total time, throughput, and cost.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Evaluations on MINE-1",
+      "span_id": "C0024-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "We use MINE to benchmark KGGen against leading existing methods of plain-text-to-KG extraction: OpenIE and GraphRAG.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "MINE-1: Knowledge Retention",
+      "span_id": "C0024-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "For each fact, the verifier retrieves the top-k most semantically similar nodes in the KG, then expands the result to include all nodes within two relations.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "MINE-2: KG-Assisted RAG Description",
+      "span_id": "C0024-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "The 10 triples with the highest combined scores are selected, and we further expand this set by appending 10 additional triples that fall within two hops.",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Evaluations on MINE-1",
+      "span_id": "C0024-D-P007-PICTURE-0001",
+      "page": 7,
+      "excerpt": "KGGen scored 66.07% on average, significantly outperforming GraphRAG 47.80% and OpenIE 29.84%.",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Generalization Across Language Models",
+      "span_id": "C0024-D-P007-TABLE-0002",
+      "page": 7,
+      "excerpt": "Claude Sonnet 3.5: 73%; GPT-4o: 66%; Gemini 2.0 Flash: 44%; valid triples: KGGen 98/100, GraphRAG 0/100, OpenIE 55/100.",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Efficiency and Cost Analysis",
+      "span_id": "C0024-D-P009-TABLE-0003",
+      "page": 9,
+      "excerpt": "For the complete novel (1M characters), KGGen achieved a 22.4% reduction in entities and 23% reduction in edges; total processing time was 551 seconds and cost was $0.84.",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Entity and Edge Resolution",
+      "span_id": "C0024-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Entity and edge resolution prevents the formation of sparse KGs.",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Qualitative Results",
+      "span_id": "C0024-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "KGGen consistently generates KGs that are informative and coherent, effectively capturing critical relationships and information from the articles.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Limitations and Future Work",
+      "span_id": "C0024-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "KGGen’s graphs still exhibit problems, like over or under de-duplication of entities and relations.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Limitations and Future Work",
+      "span_id": "C0024-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "Our benchmarks measure corpora of up to 5M tokens, which does not reflect the size of web-scale text.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "MINE-1: Knowledge Retention",
+      "span_id": "C0024-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "While LLM-based evaluation introduces potential biases, we validated its reliability by manually scoring 60 randomly selected fact-KG pairs.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Limitations and Future Work",
+      "span_id": "C0024-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "Further research into entity resolution could improve the quality of our KGs.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Limitations and Future Work",
+      "span_id": "C0024-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "Fields like medicine and finance require specialized domain knowledge that general-purpose LLMs may lack.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Limitations and Future Work",
+      "span_id": "C0024-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "Future expansions of our benchmark could focus on larger corpora to better measure the practicality of different extraction techniques.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Limitations and Future Work",
+      "span_id": "C0024-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "Future work could explore adaptive ontology integration to balance structure with completeness.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Limitations and Future Work",
+      "span_id": "C0024-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "Further research into entity resolution could improve the quality of our KGs.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Limitations and Future Work",
+      "span_id": "C0024-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "Future expansions of our benchmark could focus on larger corpora to better measure the practicality of different extraction techniques.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0024-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Our code is open-sourced at https://github.com/stair-lab/kg-gen/.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "NeurIPS Paper Checklist, item 5",
+      "span_id": "C0024-D-P019-TEXT-0002",
+      "page": 19,
+      "excerpt": "We will provide code in the supplementary material, and release all code publicly.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-03": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Prompts for KG Extraction",
+      "span_id": "C0024-D-P014-TEXT-0003",
+      "page": 14,
+      "excerpt": "This section provides the exact prompts used to extract KG’s from the text.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses the scarcity and incompleteness of useful knowledge graphs generated from unstructured text. Existing OpenIE and GraphRAG extraction methods are described as producing sparse, disconnected graphs because they lack effective entity resolution and relation normalization, which limits downstream retrieval and graph-embedding utility. KGGen aims to extract dense, information-preserving graphs with more reusable entities and relation types.",
+  "methodology": {
+    "primary_family": "Generative text-to-structure methods",
+    "secondary_families": [
+      "Zero-shot and few-shot LLM prompting",
+      "Hybrid NLP and LLM methods",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "zero_shot",
+    "description": "KGGen first prompts Gemini 2.0 Flash to extract entities from each text unit, then prompts it to extract subject-predicate-object triples whose subjects and objects must come from the entity list. It aggregates graphs across source texts using lowercase normalization and then resolves duplicate entities and edges. Resolution embeds items with S-BERT, clusters them with k-means into groups of 128, retrieves 16 semantically similar candidates using fused BM25 and embedding similarity, and asks an LLM to identify duplicates and select canonical aliases. The process repeats until each cluster is resolved."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "No domain ontology is used. KGGen imposes a lightweight schema through prompted structured output: entities are subjects or objects and relations are subject-predicate-object triples. The relation-resolution prompt constrains duplicate decisions to equivalent meanings and selects a canonical alias.",
+    "evidence": [
+      {
+        "span_id": "C0024-D-P014-TEXT-0001",
+        "page": 14,
+        "excerpt": "Extracted entities are subjects or objects."
+      },
+      {
+        "span_id": "C0024-D-P014-TEXT-0002",
+        "page": 14,
+        "excerpt": "Extract subject-predicate-object triples from the source text. Subject and object must be from entities list."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Entity and concept extraction",
+    "Relation and triple extraction",
+    "Graph construction",
+    "Knowledge fusion and aggregation",
+    "Entity resolution and linking",
+    "Knowledge deduplication",
+    "Relation normalization",
+    "Graph validation through triple-validity assessment"
+  ],
+  "input_output": {
+    "input_type": "Unstructured plain-text documents or text chunks",
+    "input_granularity": "Individual source-text units for extraction, aggregated across multiple documents or corpora; experiments include page-length articles, Wikipedia articles, sentences, and corpora up to 1M characters or 5M tokens.",
+    "output_representation": "A knowledge graph consisting of subject-predicate-object triples, with normalized and de-duplicated entity nodes and relation edges; relations retain links to their source text chunks for MINE-2 retrieval."
+  },
+  "models_and_tools": [
+    "Google Gemini 2.0 Flash",
+    "DSPy signatures and structured output",
+    "S-BERT embeddings",
+    "k-means clustering with cluster size 128",
+    "BM25 retrieval",
+    "all-MiniLM-L6-v2 via SentenceTransformers",
+    "Large language model for duplicate detection and canonical-alias selection",
+    "OpenIE baseline",
+    "Microsoft GraphRAG baseline"
+  ],
+  "datasets": [
+    "MINE-1: 100 LLM-generated, page-length articles with 15 manually verified facts per article",
+    "MINE-2: WikiQA-based benchmark using 20,400 questions from 1,995 Wikipedia articles",
+    "SemEval-2010 Task 8: 100 randomly selected sentences with manually labeled target entities",
+    "The Name of the Wind: scaling and cost analysis corpus up to 1M characters"
+  ],
+  "evaluation": {
+    "metrics": [
+      "MINE-1 fact-recovery percentage",
+      "MINE-2 answer containment accuracy judged by an LLM",
+      "Entity extraction accuracy on SemEval-2010 Task 8",
+      "Percentage of valid subject-predicate-object triples",
+      "Relation reuse: edges divided by unique relations",
+      "Entity, relation, and edge de-duplication ratios",
+      "Execution time, throughput, and API cost"
+    ],
+    "baselines": [
+      "OpenIE",
+      "Microsoft GraphRAG"
+    ],
+    "setting": "Comparative evaluation of KGGen against OpenIE and GraphRAG on MINE-1, with KGGen additionally evaluated across Claude Sonnet 3.5, GPT-4o, and Gemini 2.0 Flash; comparison on MINE-2 using WikiQA-based KG-assisted RAG; human-annotated entity evaluation on 100 SemEval-2010 sentences; qualitative validity assessment of 100 random triples per method; and scaling, efficiency, and cost analysis on The Name of the Wind. MINE-1 uses semantic retrieval, two-hop graph expansion, and LLM binary judgments; MINE-2 retrieves ten top triples plus ten two-hop neighbors and uses LLM-as-a-Judge."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "On MINE-1, KGGen achieved 66.07% average fact recovery, compared with 47.80% for GraphRAG and 29.84% for OpenIE.",
+      "Across foundation models on MINE-1, KGGen scored 73% with Claude Sonnet 3.5, 66% with GPT-4o, and 44% with Gemini 2.0 Flash.",
+      "For manually assessed triple validity, KGGen produced 98/100 valid triples, GraphRAG 0/100, and OpenIE 55/100.",
+      "On MINE-2, KGGen and GraphRAG performed comparably on WikiQA answer retrieval accuracy.",
+      "On SemEval-2010 Task 8, KGGen captured both annotated target entities in 96/100 sentences.",
+      "At 1M characters, KGGen reduced entities from 4,602 to 3,573, relations from 8,137 to 8,094, and edges from 3,180 to 2,448.",
+      "For the 1M-character corpus, KGGen required 551 seconds and cost $0.84, while GraphRAG required 2,319 seconds for extraction alone.",
+      "KGGen reused each relation type about ten times on average as corpus size increased, while GraphRAG reused relation types about twice on average."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0024-D-P007-PICTURE-0001",
+        "page": 7,
+        "excerpt": "KGGen scored 66.07% on average, significantly outperforming GraphRAG 47.80% and OpenIE 29.84%."
+      },
+      {
+        "span_id": "C0024-D-P007-TABLE-0002",
+        "page": 7,
+        "excerpt": "Claude Sonnet 3.5: 73%; GPT-4o: 66%; Gemini 2.0 Flash: 44%; valid triples: KGGen 98/100, GraphRAG 0/100, OpenIE 55/100."
+      },
+      {
+        "span_id": "C0024-D-P009-TABLE-0003",
+        "page": 9,
+        "excerpt": "For the complete novel (1M characters), KGGen achieved a 22.4% reduction in entities and 23% reduction in edges; total processing time was 551 seconds and cost was $0.84."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author-reported strength: entity and edge resolution reduces graph sparsity by clustering duplicate or synonymous items and selecting canonical representations.",
+      "Experimental strength: KGGen achieved higher MINE-1 information retention and substantially higher manually assessed triple validity than the evaluated baselines.",
+      "Experimental strength: the pipeline retained source-chunk links, enabling comparison on KG-assisted RAG.",
+      "Review-level interpretation: the explicit separation of extraction, aggregation, and resolution makes the system modular and makes the contribution of de-duplication measurable.",
+      "Review-level interpretation: the prompts and appendix provide a relatively transparent description of the structured extraction and resolution interfaces."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0024-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "Entity and edge resolution prevents the formation of sparse KGs."
+      },
+      {
+        "span_id": "C0024-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "KGGen consistently generates KGs that are informative and coherent, effectively capturing critical relationships and information from the articles."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author-reported weakness: entity and relation resolution can over-deduplicate or under-deduplicate items.",
+      "Author-reported weakness: the benchmarks only measure corpora up to 5M tokens and therefore do not represent web-scale knowledge-graph construction.",
+      "Author-reported weakness: general-purpose LLMs may lack specialized knowledge needed for high-quality extraction in medicine and finance.",
+      "Review-level interpretation: the evaluation depends substantially on LLM-based fact extraction, verification, answer synthesis, and judging, introducing possible evaluator and model biases acknowledged by the paper.",
+      "Review-level interpretation: the main quantitative comparisons use different external systems and do not establish superiority beyond the reported datasets and settings."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0024-D-P010-TEXT-0001",
+        "page": 10,
+        "excerpt": "KGGen’s graphs still exhibit problems, like over or under de-duplication of entities and relations."
+      },
+      {
+        "span_id": "C0024-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "Our benchmarks measure corpora of up to 5M tokens, which does not reflect the size of web-scale text."
+      },
+      {
+        "span_id": "C0024-D-P005-TEXT-0003",
+        "page": 5,
+        "excerpt": "While LLM-based evaluation introduces potential biases, we validated its reliability by manually scoring 60 randomly selected fact-KG pairs."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The entity-resolution stage may merge entities or relations that should remain distinct, or fail to merge duplicates that should be consolidated.",
+      "MINE benchmarks cover only up to 5M tokens and do not reflect web-scale corpora needed for a knowledge-graph foundation model.",
+      "Domain-specific extraction remains difficult because general-purpose LLMs may lack specialized medical or financial knowledge.",
+      "The authors suggest that domain-specific ontologies may be needed to improve extraction precision."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0024-D-P010-TEXT-0001",
+        "page": 10,
+        "excerpt": "Further research into entity resolution could improve the quality of our KGs."
+      },
+      {
+        "span_id": "C0024-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "Fields like medicine and finance require specialized domain knowledge that general-purpose LLMs may lack."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Develop more accurate entity and relation resolution methods to reduce over- and under-deduplication.",
+      "Extend MINE to larger corpora, including web-scale text, to better assess scalability and practicality.",
+      "Incorporate domain-specific ontologies for specialized domains such as medicine and finance.",
+      "Explore adaptive ontology integration to balance structural constraints with information completeness.",
+      "Review-level proposal: add evaluations that isolate extraction errors from LLM-based evaluator errors and test robustness across more domains and model providers."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0024-D-P010-TEXT-0001",
+        "page": 10,
+        "excerpt": "Future expansions of our benchmark could focus on larger corpora to better measure the practicality of different extraction techniques."
+      },
+      {
+        "span_id": "C0024-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "Future work could explore adaptive ontology integration to balance structure with completeness."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Reliable entity and relation resolution remains unresolved, particularly deciding when similar expressions denote the same or different entities or relations.",
+      "The field lacks benchmarks that adequately measure extraction quality at web scale.",
+      "Domain-specific knowledge extraction remains unresolved for settings where general-purpose LLM knowledge is insufficient.",
+      "Balancing graph concision and generalization against completeness and preservation of distinct concepts remains unresolved.",
+      "The paper does not establish whether KGGen maintains its reported quality and cost advantages on substantially larger or more diverse corpora."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0024-D-P010-TEXT-0001",
+        "page": 10,
+        "excerpt": "Further research into entity resolution could improve the quality of our KGs."
+      },
+      {
+        "span_id": "C0024-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "Future expansions of our benchmark could focus on larger corpora to better measure the practicality of different extraction techniques."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that KGGen is open-sourced at https://github.com/stair-lab/kg-gen/ and released as a Python library. It also states that the MINE benchmarks and code will be released publicly with the final paper/supplementary material. The appendix includes extraction, resolution, and evaluation prompts."
+}

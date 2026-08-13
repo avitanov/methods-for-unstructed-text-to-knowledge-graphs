@@ -1,0 +1,808 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0152",
+    "title": "LINDEN: Linking Named Entities with Knowledge Base via Semantic Knowledge",
+    "pdf_path": "data/batches/batch-05/C0152.pdf",
+    "authors": [
+      "Wei Shen",
+      "Jianyong Wang",
+      "Ping Luo",
+      "Min Wang"
+    ],
+    "year": 2012,
+    "venue": "Proceedings of the 21st International Conference on World Wide Web (WWW 2012)",
+    "identifier": {
+      "status": "reported",
+      "value": "DOI: 10.1145/2187836.2187898",
+      "evidence": [
+        {
+          "span_id": "C0152-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "DOI: 10.1145/2187836.2187898"
+        }
+      ]
+    },
+    "abstract": "LINDEN links named-entity mentions in text to real-world entities in a knowledge base that unifies Wikipedia and WordNet. It addresses ambiguity, textual inconsistency, and missing world knowledge by using semantic knowledge from Wikipedia and the knowledge-base taxonomy, and reports accuracy gains on two public entity-linking datasets.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0152-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Wei Shen, Jianyong Wang, Ping Luo, Min Wang",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication header",
+      "span_id": "C0152-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "WWW 2012, April 16–20, 2012, Lyon, France.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication header",
+      "span_id": "C0152-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "WWW 2012 – Session: Entity Linking; April 16–20, 2012, Lyon, France.",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Document metadata",
+      "span_id": "C0152-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "DOI: 10.1145/2187836.2187898",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0152-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "we propose LINDEN, a novel framework to link named entities in text with a knowledge base unifying Wikipedia and WordNet, by leveraging the rich semantic knowledge embedded in the Wikipedia and the taxonomy of the knowledge base.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0152-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "entity linking is the task to link the entity mention in text with the corresponding real world entity in the existing knowledge base... challenging due to name ambiguity, textual inconsistency, and lack of world knowledge",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "3. The LINDEN Framework and Notations",
+      "span_id": "C0152-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "entity linking is defined as the task to map a textual named entity mention m, already recognized in the unstructured text, to the corresponding real world entity e in the knowledge base. If the matching entity ... does not exist ... return NIL.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3. The LINDEN Framework and Notations",
+      "span_id": "C0152-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The knowledge base we adopt in this work is YAGO ... an open-domain ontology combining Wikipedia and WordNet ... it adopts the clean taxonomy of concepts from WordNet which can be made fully use of by our LINDEN.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "5.3 Semantic Similarity",
+      "span_id": "C0152-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "we propose a novel method to measure the semantic similarity between Wikipedia concepts based on the taxonomy of the knowledge base.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "5.5 Candidates Ranking",
+      "span_id": "C0152-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "To learn w, we use a max-margin technique based on the training data set ... usual SVM linear constraints.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "6. Unlinkable Mention Prediction",
+      "span_id": "C0152-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "we learn a threshold τ to validate the predicted entity etop ... otherwise we return NIL for m.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3. The LINDEN Framework and Notations",
+      "span_id": "C0152-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "we propose LINDEN, a framework to address this entity linking task with three modules ... Candidate Entity Generation; Named Entity Disambiguation; Unlinkable Mention Prediction.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "5.5 Candidates Ranking",
+      "span_id": "C0152-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "To learn w, we use a max-margin technique based on the training data set. Given the ground truth mapping entity e* for mention m...",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "7.2 Experimental results on the CZ data set",
+      "span_id": "C0152-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "The weight vector w and all parameters are tuned using 10-fold cross validation over the CZ data set.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3. The LINDEN Framework and Notations",
+      "span_id": "C0152-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "The features used in LINDEN are mainly based on the link probability LP(e|m), semantic associativity SA(e) ... semantic similarity SS(e) ... and global coherence GC(e) ... calculate a score w · Fm(e)",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "5.1 Semantic Network Construction",
+      "span_id": "C0152-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "we utilize the open source toolkit Wikipedia-Miner to detect the Wikipedia concepts appearing in the context.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "5.4–6",
+      "span_id": "C0152-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "the most likely assigned entity ... is considered as the candidate entity which has the maximum link probability ... If Scorem(etop) is greater than the learned threshold τ, we return etop ... otherwise ... NIL.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3. The LINDEN Framework and Notations",
+      "span_id": "C0152-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "YAGO ... combines Wikipedia and WordNet ... adopts the clean taxonomy of concepts from WordNet",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "5.1 Semantic Network Construction",
+      "span_id": "C0152-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "the taxonomy of concepts in YAGO also expresses the semantic relation between Wikipedia concepts ... we add the taxonomic relations among these detected context concepts and candidate entities as well.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3. The LINDEN Framework and Notations",
+      "span_id": "C0152-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "map a textual named entity mention ... to the corresponding real world entity ... in the knowledge base ... return NIL.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "7.2 Experimental results on the CZ data set",
+      "span_id": "C0152-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "we used a simple in-document coreference resolution method which is to map short surface form to longer surface form in the same document before generating candidate entities for mentions.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3. The LINDEN Framework and Notations",
+      "span_id": "C0152-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "a textual named entity mention m, already recognized in the unstructured text",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "5.1 Semantic Network Construction",
+      "span_id": "C0152-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "For the general textual document, we utilize ... Wikipedia-Miner ... For the Wikipedia document, we can identify the Wikipedia concepts ... by leveraging the characteristic of Wiki markup.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3. The LINDEN Framework and Notations",
+      "span_id": "C0152-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We process one document at a time, so we consider the entity mentions appearing in one document together.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3. The LINDEN Framework and Notations",
+      "span_id": "C0152-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "an entity is expressed as the entity name in the knowledge base ... give NIL as a special label denoting 'unlinkable'.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "5.5 Candidates Ranking",
+      "span_id": "C0152-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "rank the candidates according to their Scorem(e) and pick etop ... as the predicted mapping entity for mention m.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4. Candidate Entity Generation",
+      "span_id": "C0152-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "dictionary collected from four sources in Wikipedia (i.e., entity pages, redirect pages, disambiguation pages and hyperlinks in Wikipedia article)",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "5.2 Semantic Associativity",
+      "span_id": "C0152-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "we adopt the Wikipedia Link-based Measure (WLM) ... based on Wikipedia's hyperlink structure.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "5.5 Candidates Ranking",
+      "span_id": "C0152-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "we use a max-margin technique based on the training data set ... usual SVM linear constraints.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-04": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "7.3 Experimental results on the TAC-KBP2009 data set",
+      "span_id": "C0152-D-P010-TEXT-0004",
+      "page": 10,
+      "excerpt": "due to many spelling errors existing in the set of queries, we also try to correct them using the query spelling correction supplied by Google.",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "7.1–7.2 Experimental Results",
+      "span_id": "C0152-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "We downloaded the October 2010 version of Wikipedia and YAGO(1) of version 2009-w10-5 for our experiments.",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "7.2 Experimental results on the CZ data set",
+      "span_id": "C0152-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "we used the remaining 19 articles ... obtained 614 entity mentions ... 522 entity mentions ... manually linked ... and another 92 mentions are unlinkable.",
+      "confidence": "medium"
+    },
+    "datasets-18-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "7.3 Experimental results on the TAC-KBP2009 data set",
+      "span_id": "C0152-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "TAC-KBP2009 test data set consists of 3904 entity mentions ... 1675 ... aligned ... There are 2229 entity mentions which cannot be mapped",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "7.2 Experimental results on the CZ data set",
+      "span_id": "C0152-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "we adopted the evaluation measure Accuracy (Accu.) ... calculated as the number of correctly linked entity mentions divided by the total number of all mentions.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Table 3",
+      "span_id": "C0152-D-P009-TABLE-0002",
+      "page": 9,
+      "excerpt": "Table 3 reports # of total mentions, correctly linked #, and Accu. for All, Linkable, and Unlinkable.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "7.2 Experimental results on the CZ data set",
+      "span_id": "C0152-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "we implemented the algorithm of Cucerzan's system and evaluated it over the CZ data set.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "7.3 Experimental results on the TAC-KBP2009 data set",
+      "span_id": "C0152-D-P010-TABLE-0002",
+      "page": 10,
+      "excerpt": "The results of the top 4 systems which perform best in the track of TAC-KBP2009 are also shown in Table 5 for the purpose of comparison.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "7.2 Experimental results on the CZ data set",
+      "span_id": "C0152-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "The weight vector w and all parameters are tuned using 10-fold cross validation over the CZ data set.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "7.2 Experimental results on the CZ data set",
+      "span_id": "C0152-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "one of the MSNBC news articles is no longer available ... contents ... changed slightly ... we removed the entity mentions which did not appear",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "7.3 Experimental results on the TAC-KBP2009 data set",
+      "span_id": "C0152-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "we removed the feature of global coherence ... TAC-KBP2009 requires the systems ... to process the queries independently ... each of which has at most two mentions",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 3",
+      "span_id": "C0152-D-P009-TABLE-0001",
+      "page": 9,
+      "excerpt": "LINDEN: All 581, 0.9463; Linkable 493, 0.9444; Unlinkable 88, 0.9565. Cucerzan: 549, 0.8941; 466, 0.8927; 83, 0.9022.",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 4 and discussion",
+      "span_id": "C0152-D-P009-TABLE-0002",
+      "page": 9,
+      "excerpt": "LP 0.8811; LP+SA 0.9332; LP+SA+SS+GC 0.9463. The improvement achieved by adding semantic associativity ... is greater than ... the other two features.",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 5",
+      "span_id": "C0152-D-P010-TABLE-0003",
+      "page": 10,
+      "excerpt": "LINDEN 0.8432 overall, 0.7988 linkable, 0.8782 unlinkable; Rank 1 0.8217 overall.",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0152-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "LINDEN ... leverages the rich semantic information derived from Wikipedia and the taxonomy of the knowledge base",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion",
+      "span_id": "C0152-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "Empirical results show that LINDEN significantly outperforms the state-of-the-art methods in terms of accuracy. Moreover, all features adopted by LINDEN are quite effective.",
+      "confidence": "medium"
+    },
+    "strengths-23-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4. Candidate Entity Generation",
+      "span_id": "C0152-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "we use the following four structures of Wikipedia to build the dictionary about the surface forms of entities",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0152-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "It is assumed that the named entity recognition process has been completed",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.4 Global Coherence",
+      "span_id": "C0152-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "the assignment ... depends on all the other assignments ... difficult optimization problem ... we adopt ... calculate ... to the most likely assigned entities ... maximum link probability",
+      "confidence": "medium"
+    },
+    "weaknesses-24-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "7.2 Experimental results on the CZ data set",
+      "span_id": "C0152-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "the CZ data set we used ... is different from the original data set ... accuracy of 0.914 ... is not comparable",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0152-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "It is assumed that the named entity recognition process has been completed, and we focus on the task of linking the detected named entity mention",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "7.3 Experimental results on the TAC-KBP2009 data set",
+      "span_id": "C0152-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "we removed the feature of global coherence ... global coherence feature can hardly have any positive impacts",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "7.2 Experimental results on the CZ data set",
+      "span_id": "C0152-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "this result is not comparative with the result of our system",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-04": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "7.3 Experimental results on the TAC-KBP2009 data set",
+      "span_id": "C0152-D-P010-TEXT-0004",
+      "page": 10,
+      "excerpt": "we have to add some unlinkable mentions prediction strategies ... to directly use the ground truth annotation",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "5.4 Global Coherence",
+      "span_id": "C0152-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "the assignment of an entity to a mention depends on all the other assignments ... a difficult optimization problem",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Introduction",
+      "span_id": "C0152-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "It is assumed that the named entity recognition process has been completed",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "7.3 Experimental results on the TAC-KBP2009 data set",
+      "span_id": "C0152-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "the total 3904 entity mentions exist in 3688 documents each of which has at most two mentions",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "6. Unlinkable Mention Prediction",
+      "span_id": "C0152-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "the knowledge base contains all the matching entities ... in practice, this assumption fails in many cases without a doubt",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.4 Global Coherence",
+      "span_id": "C0152-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "the assignment of an entity to a mention depends on all the other assignments ... which makes this a difficult optimization problem",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "7.2 Experimental results on the CZ data set",
+      "span_id": "C0152-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "contents of these articles have changed slightly ... we removed the entity mentions which did not appear",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "7.1 Data sets",
+      "span_id": "C0152-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "we have to choose some test data sets available publicly ... The newswire data used by Cucerzan [6] ... is available ... The data set for TAC-KBP2009 is available for us",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "7.1 Data sets",
+      "span_id": "C0152-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "We downloaded the October 2010 version of Wikipedia and YAGO(1) of version 2009-w10-5 for our experiments.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Entity linking for knowledge-base population: map each already-recognized named-entity mention in unstructured text to its corresponding real-world entity in a knowledge base, or return NIL when no corresponding entity exists. The method specifically targets name ambiguity, name variation/textual inconsistency, and the inability of bag-of-words context overlap to capture semantic relations.",
+  "methodology": {
+    "primary_family": "Ontology-constrained and schema-guided methods",
+    "secondary_families": [
+      "Classical machine learning",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "supervised",
+    "description": "Execution pipeline: (1) take one document containing named-entity mentions detected beforehand; (2) construct/look up a Wikipedia-derived surface-form dictionary built from entity pages, redirects, disambiguation pages, and article hyperlinks, retaining target counts and pruning very-low-link-probability candidates; (3) recognize Wikipedia context concepts, using Wikipedia-Miner for general text or wiki markup for Wikipedia text; (4) construct a semantic network over context concepts and candidates using Wikipedia link relations/articles plus YAGO taxonomic relations; (5) compute link probability (LP), Wikipedia-link-based semantic associativity (SA), taxonomy-based semantic similarity (SS), and document-level global coherence (GC); (6) rank candidates with a learned linear max-margin/SVM weight vector; and (7) return the highest-scoring candidate only when it passes a learned threshold, otherwise NIL. GC approximates collective assignment by using the highest-LP candidate for each other mention."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "YAGO is the target knowledge base and supplies a clean WordNet-derived taxonomy. LINDEN adds taxonomic relations between context concepts and candidate entities to its semantic network and derives semantic similarity from their sets of superclasses. This is an ontology used for candidate disambiguation and linking, not ontology/schema discovery.",
+    "evidence": [
+      {
+        "span_id": "C0152-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "YAGO ... combines Wikipedia and WordNet ... adopts the clean taxonomy of concepts from WordNet"
+      },
+      {
+        "span_id": "C0152-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "the taxonomy of concepts in YAGO also expresses the semantic relation between Wikipedia concepts ... we add the taxonomic relations among these detected context concepts and candidate entities as well."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Entity resolution and linking",
+    "Coreference resolution"
+  ],
+  "input_output": {
+    "input_type": "An unstructured textual document with named-entity mentions already detected; Wikipedia text is also supported through its wiki markup.",
+    "input_granularity": "One document at a time; all detected named-entity mentions in that document are considered together, with document context concepts and optional document-level global coherence.",
+    "output_representation": "For each input named-entity mention, a ranked candidate entity represented by its YAGO/Wikipedia entity name, or the special NIL label for an unlinkable mention."
+  },
+  "models_and_tools": [
+    "YAGO knowledge base, combining Wikipedia and WordNet",
+    "Wikipedia surface-form dictionary from entity pages, redirects, disambiguation pages, and hyperlinks",
+    "Wikipedia-Miner for context-concept recognition in general text",
+    "Wikipedia Link-based Measure (WLM) for semantic associativity",
+    "Information-theoretic taxonomy similarity based on superclass sets",
+    "Linear max-margin/SVM ranking model",
+    "Learned NIL threshold",
+    "Google query spelling correction for the TAC-KBP2009 experiment"
+  ],
+  "datasets": [
+    "CZ (Cucerzan) newswire ground-truth dataset: 19 available MSNBC news articles; 614 mentions, 522 linkable and 92 unlinkable after the authors' adjustments",
+    "TAC-KBP2009 entity-linking test dataset: 3,904 mentions in 3,688 documents; 1,675 linkable and 2,229 unlinkable",
+    "October 2010 Wikipedia and YAGO(1) version 2009-w10-5 used as knowledge resources"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Accuracy (correctly linked entity mentions divided by all mentions)",
+      "Accuracy reported separately for all, linkable, and unlinkable mentions",
+      "Correctly linked mention count"
+    ],
+    "baselines": [
+      "The authors' implementation of Cucerzan's entity-linking system, evaluated on their adjusted CZ dataset",
+      "Top four ranked systems from TAC-KBP2009; the paper identifies Dredze et al.'s system as rank 3"
+    ],
+    "setting": "Two public entity-linking evaluations. Parameters and the ranking weight vector were tuned by 10-fold cross-validation separately on CZ and TAC-KBP2009. The CZ evaluation used a modified version of Cucerzan's data due to one unavailable article and changed article content; hence the published Cucerzan score is explicitly non-comparable and the authors reimplemented it. For TAC-KBP2009, queries were processed independently; GC was removed because documents had at most two mentions and the track prohibited leveraging knowledge across queries. The authors also imposed TAC knowledge-base membership before thresholding because LINDEN generated candidates from all Wikipedia."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "CZ: LINDEN achieved 581/614 accuracy 0.9463 overall, 493/522 accuracy 0.9444 for linkable mentions, and 88/92 accuracy 0.9565 for unlinkable mentions; the authors' Cucerzan implementation achieved 0.8941, 0.8927, and 0.9022 respectively.",
+      "CZ ablation: LP alone achieved 0.8811 overall; LP+SA 0.9332; LP+SA+SS 0.9430; all four features LP+SA+SS+GC achieved the best 0.9463. The authors interpret SA as particularly useful, while SS and GC add only slight incremental gains after LP+SA.",
+      "TAC-KBP2009: LINDEN achieved 0.8432 overall, 0.7988 linkable, and 0.8782 unlinkable accuracy, exceeding the Table 5 rank-1 system's 0.8217 overall accuracy. In this setting GC was omitted; LP+SA+SS was used.",
+      "TAC-KBP2009 ablation: LP=0.7964 overall, LP+SA=0.8345, LP+SS=0.8161, and LP+SA+SS=0.8432."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0152-D-P009-TABLE-0001",
+        "page": 9,
+        "excerpt": "LINDEN: All 581, 0.9463; Linkable 493, 0.9444; Unlinkable 88, 0.9565. Cucerzan: 549, 0.8941; 466, 0.8927; 83, 0.9022."
+      },
+      {
+        "span_id": "C0152-D-P009-TABLE-0002",
+        "page": 9,
+        "excerpt": "LP 0.8811; LP+SA 0.9332; LP+SA+SS+GC 0.9463. The improvement achieved by adding semantic associativity ... is greater than ... the other two features."
+      },
+      {
+        "span_id": "C0152-D-P010-TABLE-0003",
+        "page": 10,
+        "excerpt": "LINDEN 0.8432 overall, 0.7988 linkable, 0.8782 unlinkable; Rank 1 0.8217 overall."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author-stated contribution: combines Wikipedia semantic information and the YAGO/WordNet taxonomy rather than relying solely on contextual term co-occurrence.",
+      "Author-stated experimental finding: substantially higher accuracy than the authors' reimplemented Cucerzan baseline on the adjusted CZ data, and higher overall accuracy than the best TAC-KBP2009 system shown in Table 5.",
+      "Author-stated empirical finding: all four features are effective; semantic associativity provides the largest reported increment when added to link probability on both datasets.",
+      "Review-level inference: the surface-form dictionary draws on four complementary Wikipedia structures, which improves coverage of aliases, abbreviations, and ambiguous names before ranking."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0152-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "LINDEN ... leverages the rich semantic information derived from Wikipedia and the taxonomy of the knowledge base"
+      },
+      {
+        "span_id": "C0152-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "Empirical results show that LINDEN significantly outperforms the state-of-the-art methods in terms of accuracy. Moreover, all features adopted by LINDEN are quite effective."
+      },
+      {
+        "span_id": "C0152-D-P005-TEXT-0003",
+        "page": 5,
+        "excerpt": "we use the following four structures of Wikipedia to build the dictionary about the surface forms of entities"
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: LINDEN requires named-entity mentions to have been detected beforehand; it does not evaluate mention detection jointly with linking.",
+      "Review-level inference: its candidate coverage and semantic features depend on a Wikipedia/YAGO snapshot, so entities and aliases absent from that resource are necessarily routed to NIL or unavailable to the ranker.",
+      "Review-level inference: global coherence is not a jointly optimized collective assignment; it substitutes each other mention's maximum-link-probability candidate, so early local ambiguity can affect this feature.",
+      "Review-level inference: the reported CZ comparison has constrained external comparability because the authors modified the original dataset and implemented the baseline themselves."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0152-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "It is assumed that the named entity recognition process has been completed"
+      },
+      {
+        "span_id": "C0152-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "the assignment ... depends on all the other assignments ... difficult optimization problem ... we adopt ... calculate ... to the most likely assigned entities ... maximum link probability"
+      },
+      {
+        "span_id": "C0152-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "the CZ data set we used ... is different from the original data set ... accuracy of 0.914 ... is not comparable"
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The method assumes named-entity recognition has already been completed and focuses only on linking detected mentions.",
+      "For TAC-KBP2009, global coherence was removed because queries had to be processed independently and the documents contained at most two mentions, limiting the feature's expected benefit.",
+      "The original published Cucerzan result cannot be compared directly with the adjusted CZ evaluation because the available articles and mention set differ.",
+      "TAC-KBP2009's restricted knowledge base required an additional membership check because LINDEN's candidate generator used all Wikipedia information."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0152-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "It is assumed that the named entity recognition process has been completed, and we focus on the task of linking the detected named entity mention"
+      },
+      {
+        "span_id": "C0152-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "we removed the feature of global coherence ... global coherence feature can hardly have any positive impacts"
+      },
+      {
+        "span_id": "C0152-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "this result is not comparative with the result of our system"
+      },
+      {
+        "span_id": "C0152-D-P010-TEXT-0004",
+        "page": 10,
+        "excerpt": "we have to add some unlinkable mentions prediction strategies ... to directly use the ground truth annotation"
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: replace the maximum-link-probability approximation in global coherence with joint inference over all mention-to-entity assignments.",
+      "Review-level inference: integrate or jointly evaluate named-entity recognition, candidate generation, linking, and NIL prediction so error propagation and end-to-end performance are measured.",
+      "Review-level inference: evaluate candidate recall and threshold calibration explicitly, including more current and temporally varying knowledge-base snapshots.",
+      "Review-level inference: test on datasets with more multi-mention documents, where a collective coherence mechanism can be meaningfully assessed."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0152-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "the assignment of an entity to a mention depends on all the other assignments ... a difficult optimization problem"
+      },
+      {
+        "span_id": "C0152-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "It is assumed that the named entity recognition process has been completed"
+      },
+      {
+        "span_id": "C0152-D-P010-TEXT-0003",
+        "page": 10,
+        "excerpt": "the total 3904 entity mentions exist in 3688 documents each of which has at most two mentions"
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: robust entity linking for genuinely new or missing knowledge-base entities remains unresolved; LINDEN represents such cases only through NIL prediction.",
+      "Review-level inference: scalable, reliable collective linking remains unresolved when many mutually ambiguous mentions occur in the same document, since the paper uses an approximation rather than optimizing the coupled assignments.",
+      "Review-level inference: comparability across entity-linking studies remains unresolved when datasets, knowledge-base coverage, preprocessing, and treatment of unlinkable mentions differ."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0152-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "the knowledge base contains all the matching entities ... in practice, this assumption fails in many cases without a doubt"
+      },
+      {
+        "span_id": "C0152-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "the assignment of an entity to a mention depends on all the other assignments ... which makes this a difficult optimization problem"
+      },
+      {
+        "span_id": "C0152-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "contents of these articles have changed slightly ... we removed the entity mentions which did not appear"
+      }
+    ]
+  },
+  "code_and_data_availability": "Code availability is not reported in the paper. The paper describes CZ/Cucerzan newswire ground truth and TAC-KBP2009 as publicly available datasets and gives their URLs in footnotes; it also states that October 2010 Wikipedia and YAGO(1) 2009-w10-5 were downloaded for the experiments. No repository, implementation URL, or released derived dataset is reported."
+}

@@ -1,0 +1,839 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0042",
+    "title": "KGen: a knowledge graph generator from biomedical scientific literature",
+    "pdf_path": "data/pdfs/C0042.pdf",
+    "authors": [
+      "Anderson Rossanez",
+      "Julio Cesar dos Reis",
+      "Ricardo da Silva Torres",
+      "Hélène de Ribaupierre"
+    ],
+    "year": 2020,
+    "venue": "BMC Medical Informatics and Decision Making, 20(Suppl 4):314",
+    "identifier": {
+      "status": "reported",
+      "value": "https://doi.org/10.1186/s12911-020-01341-5",
+      "evidence": [
+        {
+          "span_id": "C0042-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "https://doi.org/10.1186/s12911-020-01341-5"
+        }
+      ]
+    },
+    "abstract": "The paper studies and evaluates KGen, a semi-automatic method for generating knowledge graphs from biomedical scientific texts. The method uses natural language processing to extract RDF triples, links entities and relations to concepts from biomedical ontologies through UMLS and NCBO BioPortal mappings, and generates ontology-linked graphs. It is evaluated on Alzheimer’s Disease abstracts using physician-created triples and qualitative physician assessment of generated graphs, together with a comparison of the proposed ontology-linking method against an earlier method. The reported results indicate that KGen extracts many triples, obtains ontology links, and can generate useful ontology-linked knowledge graphs.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author line",
+      "span_id": "C0042-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Anderson Rossanez, Julio Cesar dos Reis, Ricardo da Silva Torres and Hélène de Ribaupierre",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication history",
+      "span_id": "C0042-D-P023-TEXT-0001",
+      "page": 23,
+      "excerpt": "Received: 9 September 2020 Accepted: 17 November 2020 Published: 14 December 2020",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Header",
+      "span_id": "C0042-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Rossanez et al. BMC Med Inform Decis Mak 2020, 20(Suppl 4):314",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Header",
+      "span_id": "C0042-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "https://doi.org/10.1186/s12911-020-01341-5",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0042-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We study and evaluate a semi-automatic method that generates knowledge graphs (KGs) from biomedical texts in the scientific literature.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-02": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0042-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "We involve physicians to compare our extracted triples from their manual extraction via their analysis of the abstracts.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Background",
+      "span_id": "C0042-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The generation of KGs from unstructured text through a completely automated procedure is still an open research problem.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Background",
+      "span_id": "C0042-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Biomedical scientific texts ... may contain long and complex sentences containing implicit relations, abbreviations, and co-references to entities.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0042-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "A rule-based technique that extracts the main relation from a sentence, based on the main verb and its arguments.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Methods",
+      "span_id": "C0042-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We propose the use of the SRL technique to obtain the main relations ... in conjunction to a technique based on the dependency parsing output, to obtain secondary relations.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Ontology linking",
+      "span_id": "C0042-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "Entities and relations from a KG may be mapped to classes, properties, and attributes described in a computational ontology.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Implemented tool",
+      "span_id": "C0042-D-P014-TEXT-0003",
+      "page": 14,
+      "excerpt": "The Stanford neural co-reference model ... presents better results for texts written in English language.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Methods",
+      "span_id": "C0042-D-P005-CAPTION-0001",
+      "page": 5,
+      "excerpt": "The unstructured text (input) goes through four key steps. An ontology-linked knowledge graph is generated at the end.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Ontology linking",
+      "span_id": "C0042-D-P011-TEXT-0001",
+      "page": 11,
+      "excerpt": "NER requires models that are trained to find suitable entities.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Methods",
+      "span_id": "C0042-D-P005-CAPTION-0001",
+      "page": 5,
+      "excerpt": "The unstructured text (input) goes through four key steps. An ontology-linked knowledge graph is generated at the end.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Preprocessing",
+      "span_id": "C0042-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "The preprocessing step ... identifies sentences, resolves co-references, resolves abbreviations, and simplifies long sentences.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Triples extraction",
+      "span_id": "C0042-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "The triples extraction step ... requires two sub-steps: the first for extracting the main relations, and the second one for extracting secondary relations.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Ontology linking",
+      "span_id": "C0042-D-P011-TEXT-0001",
+      "page": 11,
+      "excerpt": "As we have all the CUIs for the UMLS-matched terms, we look for matches in a targeted biomedical ontology ... by performing SPARQL queries.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Ontology linking",
+      "span_id": "C0042-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "We chose to use NCIT as the target ontology in this example, as it is the ontology suggested by NCBO recommender service.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Graph generation",
+      "span_id": "C0042-D-P012-TEXT-0003",
+      "page": 12,
+      "excerpt": "New triples are created to bind the ontology mappings to their respective named entities and relations in the graph, through the owl:sameas predicate.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Preprocessing",
+      "span_id": "C0042-D-P006-PICTURE-0001",
+      "page": 6,
+      "excerpt": "The preprocessing step identifies sentences, resolves co-references, resolves abbreviations, and simplifies long sentences.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Triples extraction",
+      "span_id": "C0042-D-P008-PICTURE-0002",
+      "page": 8,
+      "excerpt": "The first [sub-step is] for extracting the main relations, and the second one for extracting secondary relations.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Graph generation",
+      "span_id": "C0042-D-P012-PICTURE-0003",
+      "page": 12,
+      "excerpt": "The final step ... takes as input the set of triples ... and the set of links ... to generate an ontology-linked KG.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0042-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "generating KGs from unstructured texts obtained from a set of abstracts taken from scientific papers on the Alzheimer’s Disease.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Background",
+      "span_id": "C0042-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "KGs are generated by first identifying sentences from within a chunk of unstructured text.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Experiment I",
+      "span_id": "C0042-D-P015-TEXT-0002",
+      "page": 15,
+      "excerpt": "each physician read three distinct abstracts (i.e., six distinct abstracts in total) ... We asked them to only take into account the conclusion section of the abstracts.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Background",
+      "span_id": "C0042-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "For each sentence ... our solution detects and extracts information in form of RDF triples, constituted of a subject, a predicate, and an object.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Graph generation",
+      "span_id": "C0042-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "a content is generated in Terse RDF Triple Language (Turtle) format.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Implemented tool",
+      "span_id": "C0042-D-P014-TEXT-0001",
+      "page": 14,
+      "excerpt": "Stanford CoreNLP is used for sentence splitting, co-reference resolution, tokenizing, PoS tagging, constituency parsing, and dependency parsing.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Implemented tool",
+      "span_id": "C0042-D-P014-TEXT-0002",
+      "page": 14,
+      "excerpt": "SENNA system is used to perform the SRL technique.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Implemented tool",
+      "span_id": "C0042-D-P014-TEXT-0003",
+      "page": 14,
+      "excerpt": "ScispaCy models are used ... to determine named entities, and to obtain UMLS CUIs.",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Experiment I",
+      "span_id": "C0042-D-P015-TEXT-0001",
+      "page": 15,
+      "excerpt": "six distinct abstracts ... extracted from medical papers related to Alzheimer’s disease, from the Neurology journal.",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Experiment II: ontology links",
+      "span_id": "C0042-D-P019-TEXT-0002",
+      "page": 19,
+      "excerpt": "The comparison of both methods used the same conclusions sub-sections of the abstracts used in Experiment I, labeled from A00 to A05.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Experiment I",
+      "span_id": "C0042-D-P016-TABLE-0001",
+      "page": 16,
+      "excerpt": "The Jaccard coefficient ranges between 0 and 1.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Experiment II: ontology links",
+      "span_id": "C0042-D-P019-TABLE-0002",
+      "page": 19,
+      "excerpt": "Amount of links found for the previous method ... and the new method.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Results",
+      "span_id": "C0042-D-P015-TEXT-0001",
+      "page": 15,
+      "excerpt": "The first experiment ... involved two physicians ... evaluating the quality of the triples extracted from biomedical texts.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Experiment II: ontology links",
+      "span_id": "C0042-D-P019-TEXT-0002",
+      "page": 19,
+      "excerpt": "we compared the ontology links obtained from the same unstructured input text ... against the updated linking method proposed and implemented in this work.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-03": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Extraction of triples analysis",
+      "span_id": "C0042-D-P016-TABLE-0003",
+      "page": 16,
+      "excerpt": "Number of triples extracted considering three distinct KGen configurations: semantic role labeling (SRL) only, SRL without reification form, and dependency parsing only.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Results and Experiment I",
+      "span_id": "C0042-D-P015-TEXT-0001",
+      "page": 15,
+      "excerpt": "Both physicians have more than 10 years of working experience ... each physician read three distinct abstracts ... six distinct abstracts in total.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Knowledge graph analysis",
+      "span_id": "C0042-D-P018-TEXT-0002",
+      "page": 18,
+      "excerpt": "Both subjects found such an interesting form to visually describe the sentences from the conclusion subsection of the abstracts.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Experiment II: ontology links",
+      "span_id": "C0042-D-P019-TEXT-0003",
+      "page": 19,
+      "excerpt": "The target ontology selected is NCIT, the same ontology from the examples in Section ... NCIT is the most suitable ontology, as it is suggested by NCBO recommender service.",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Extraction of triples analysis",
+      "span_id": "C0042-D-P015-TABLE-0001",
+      "page": 15,
+      "excerpt": "Experts: 9, 7, 12, 7, 10, 5; KGen: 32, 38, 62, 65, 59, 80.",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Extraction of triples analysis",
+      "span_id": "C0042-D-P017-TABLE-0002",
+      "page": 17,
+      "excerpt": "J(Man., KGen): 0.10, 0.04, 0.07, 0.02, 0.04, 0.05; SRL without reification: 0.40, 0.20, 0.31, 0.22, 0.18, 0.57.",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Experiment II: ontology links",
+      "span_id": "C0042-D-P020-TABLE-0003",
+      "page": 20,
+      "excerpt": "Previous method: 4, 3, 6, 5, 4, 6; New method: 6, 8, 11, 10, 9, 9.",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0042-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The technique derives secondary relations from the same sentence, seeking compositions, adjectives, and modifying relations.",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Discussion",
+      "span_id": "C0042-D-P019-TEXT-0002",
+      "page": 19,
+      "excerpt": "the semi-automatic nature of KGen approach enables to combine both the automatically extracted set of triples with the manually extraction.",
+      "confidence": "medium"
+    },
+    "strengths-23-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Discussion",
+      "span_id": "C0042-D-P021-TEXT-0003",
+      "page": 21,
+      "excerpt": "the method allows a domain specialist to review and manually change the intermediate artifacts.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Extraction of triples analysis",
+      "span_id": "C0042-D-P017-TABLE-0001",
+      "page": 17,
+      "excerpt": "The sets are not very similar, having a very little intersection.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Discussion",
+      "span_id": "C0042-D-P020-TEXT-0002",
+      "page": 20,
+      "excerpt": "Although the lack of a gold standard and a direct accuracy assessment is a limitation of our work.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Discussion",
+      "span_id": "C0042-D-P019-TEXT-0003",
+      "page": 19,
+      "excerpt": "diabetes mellitus represents a concept ... It is not supposed to be broken down as the result obtained by our technique.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Discussion",
+      "span_id": "C0042-D-P021-TEXT-0001",
+      "page": 21,
+      "excerpt": "Although the lack of a gold standard and a direct accuracy assessment is a limitation of our work.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Discussion",
+      "span_id": "C0042-D-P021-TEXT-0002",
+      "page": 21,
+      "excerpt": "the physicians did not directly verify the triples generated by KGen ... All the analyses were conducted by the authors.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Conclusion",
+      "span_id": "C0042-D-P022-TEXT-0003",
+      "page": 22,
+      "excerpt": "Future work involves the study and comparison of temporal KGs, i.e., ontology-linked KGs generated from scientific texts in different time stamps.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Knowledge graph analysis",
+      "span_id": "C0042-D-P019-TEXT-0001",
+      "page": 19,
+      "excerpt": "Representing such terms could enrich the knowledge representation ... they could also be considered in a SPARQL query.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Knowledge graph analysis",
+      "span_id": "C0042-D-P019-TEXT-0002",
+      "page": 19,
+      "excerpt": "this could be mitigated by incorporating a biomedical named entity recognizer (NER) ... Another option would be using a dependency parser trained in biomedical texts.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Discussion",
+      "span_id": "C0042-D-P020-TEXT-0003",
+      "page": 20,
+      "excerpt": "one possible direction to improve the results would be combining the results for both methods.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Background",
+      "span_id": "C0042-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The generation of KGs from unstructured text through a completely automated procedure is still an open research problem.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Discussion",
+      "span_id": "C0042-D-P021-TEXT-0002",
+      "page": 21,
+      "excerpt": "The language employed on scientific papers ... poses a great difficulty for techniques and tools involved in the method.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion",
+      "span_id": "C0042-D-P022-TEXT-0003",
+      "page": 22,
+      "excerpt": "Future work involves the study and comparison of temporal KGs.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Availability of data and materials",
+      "span_id": "C0042-D-P022-TEXT-0001",
+      "page": 22,
+      "excerpt": "All source code and data developed/used in this study are available at: https://github.com/rossanez/kgen",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses automated or semi-automated construction of ontology-linked knowledge graphs from unstructured biomedical scientific literature. The challenge is to identify biomedical entities and explicit or implicit relations in long, complex sentences containing abbreviations, coreferences, and domain-specific terminology, then represent the extracted knowledge as RDF triples and link it to biomedical ontologies.",
+  "methodology": {
+    "primary_family": "Rule-based NLP",
+    "secondary_families": [
+      "Linguistic and dependency-based extraction",
+      "Ontology-constrained and schema-guided methods",
+      "Neural NLP pipelines"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "supervised",
+    "description": "KGen is a modular four-step pipeline. First, preprocessing tokenizes and splits text into sentences, resolves coreferences and abbreviations, and simplifies long sentences. Second, semantic role labeling extracts main subject-predicate-object relations, while dependency parsing and rule-based transformations extract secondary relations involving compounds, modifiers, and noun structures. Third, biomedical named entities and lemmatized verbs are mapped to UMLS Concept Unique Identifiers, and SPARQL queries retrieve corresponding classes, properties, or attributes in a selected BioPortal ontology. Fourth, extracted triples are enriched with local URIs, rdfs:label links, and owl:sameAs mappings, then serialized in Turtle; Graphviz can optionally visualize the graph. Human experts may inspect or modify intermediate artifacts in the semi-automatic workflow."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "KGen uses biomedical ontologies as a target schema and links extracted entities and relations through a two-stage UMLS-to-target-ontology process. ScispaCy identifies biomedical entities and UMLS CUIs; lemmatized verbs are also mapped. SPARQL queries to the NCBO BioPortal endpoint retrieve mappings to a selected ontology, with NCIT used in the experiments because it was recommended by the NCBO recommender. Graph generation connects mapped resources to graph entities and predicates using owl:sameAs.",
+    "evidence": [
+      {
+        "span_id": "C0042-D-P011-TEXT-0001",
+        "page": 11,
+        "excerpt": "As we have all the CUIs for the UMLS-matched terms, we look for matches in a targeted biomedical ontology ... by performing SPARQL queries."
+      },
+      {
+        "span_id": "C0042-D-P011-TEXT-0002",
+        "page": 11,
+        "excerpt": "We chose to use NCIT as the target ontology in this example, as it is the ontology suggested by NCBO recommender service."
+      },
+      {
+        "span_id": "C0042-D-P012-TEXT-0003",
+        "page": 12,
+        "excerpt": "New triples are created to bind the ontology mappings to their respective named entities and relations in the graph, through the owl:sameas predicate."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing: tokenization and sentence splitting",
+    "Coreference resolution",
+    "Abbreviation identification and resolution",
+    "Sentence simplification",
+    "Entity and concept extraction",
+    "Entity typing or biomedical named-entity recognition",
+    "Relation and triple extraction using semantic role labeling",
+    "Secondary relation extraction using dependency parsing and rules",
+    "Entity and relation linking through UMLS and NCBO BioPortal",
+    "Ontology or schema alignment",
+    "Graph construction and triple enrichment",
+    "RDF/Turtle serialization",
+    "Optional graph visualization"
+  ],
+  "input_output": {
+    "input_type": "Unstructured biomedical scientific literature in natural-language text form, specifically scientific-paper abstracts and their conclusion subsections in the evaluation.",
+    "input_granularity": "Sentence-level processing within chunks of text; the evaluation uses conclusion sections of six biomedical paper abstracts, generally one or two short sentences.",
+    "output_representation": "An ontology-linked RDF knowledge graph represented as subject-predicate-object triples, serialized in Turtle. The graph uses local URIs, rdfs:label links to literals, and owl:sameAs links to ontology resources; an optional graphical representation maps triples to vertices and edges."
+  },
+  "models_and_tools": [
+    "Stanford CoreNLP for tokenization, sentence splitting, part-of-speech tagging, constituency parsing, dependency parsing, and coreference resolution",
+    "Stanford neural coreference model",
+    "iSimp for biomedical sentence simplification",
+    "ScispaCy abbreviation detection and biomedical named-entity/UMLS recognition",
+    "SENNA for semantic role labeling",
+    "NLTK VerbNet and PropBank readers and lemmatization",
+    "NCBO BioPortal SPARQL endpoint and recommender service",
+    "Raptor for RDF graph conversion",
+    "Graphviz for graph visualization",
+    "Python implementation with wrappers around external services"
+  ],
+  "datasets": [
+    "Six abstracts from biomedical papers related to Alzheimer’s Disease, labeled A00–A05, selected as the first six results for an Alzheimer’s Disease search in the Neurology journal search engine",
+    "Conclusion subsections of those six abstracts for triple extraction and ontology-linking experiments",
+    "UMLS and NCIT/BioPortal resources for biomedical concept and relation mapping"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Number of extracted triples per abstract",
+      "Jaccard similarity coefficient between manually extracted and KGen triple sets",
+      "Number of ontology links found",
+      "Counts of added, maintained, and removed links",
+      "Counts of identified terms, UMLS CUIs, and target-ontology links"
+    ],
+    "baselines": [
+      "Manual RDF-triple extraction by two physicians",
+      "Previous KGen ontology-linking method using NCBO BioPortal REST annotation APIs",
+      "KGen ablations/configurations using SRL only, SRL without reification, and dependency parsing only"
+    ],
+    "setting": "Two experiments were conducted on six Alzheimer’s Disease abstracts from Neurology. In Experiment I, two physicians with more than ten years of experience each manually extracted triples from three distinct abstracts, while KGen processed the same conclusion subsections. The paper reports counts, configuration comparisons, and Jaccard similarity between triple sets. Physicians also qualitatively assessed simplified graph visualizations without being told that KGen generated them. In Experiment II, the updated ScispaCy/UMLS/SPARQL linker was compared with the earlier NCBO REST-annotation linker on the same six abstract conclusions, using NCIT as target ontology."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "KGen extracted 32, 38, 62, 65, 59, and 80 triples for abstracts A00–A05, compared with 9, 7, 12, 7, 10, and 5 manually extracted triples, respectively (Table 1).",
+      "The full KGen triple-set Jaccard similarities with manual sets were 0.10, 0.04, 0.07, 0.02, 0.04, and 0.05 for A00–A05 (Table 3).",
+      "When KGen used SRL without the proposed reification form, Jaccard similarities increased to 0.40, 0.20, 0.31, 0.22, 0.18, and 0.57 (Table 4).",
+      "The updated ontology linker found 6, 8, 11, 10, 9, and 9 target-ontology links for A00–A05, compared with 4, 3, 6, 5, 4, and 6 for the previous method (Table 5).",
+      "The new linker identified 17, 17, 21, 21, 18, and 26 terms; UMLS CUIs were found for 11, 10, 14, 14, 11, and 18; target-ontology links were obtained for 6, 8, 11, 10, 9, and 9 terms (Table 7).",
+      "Combining the previous and new linking methods produced 8, 11, 12, 12, 11, and 13 links for A00–A05, exceeding either method alone in every abstract (Table 8).",
+      "The two physician reviewers considered the graph visualization useful, agreed that starting from the main verb represented principal information, and found decomposition into smaller concepts helpful for querying.",
+      "Review-level inference: the results support broad extraction coverage and improved ontology-link yield, but the low full-set Jaccard values and the small, non-gold-standard evaluation do not establish high precision or general effectiveness."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0042-D-P015-TABLE-0001",
+        "page": 15,
+        "excerpt": "Experts: 9, 7, 12, 7, 10, 5; KGen: 32, 38, 62, 65, 59, 80."
+      },
+      {
+        "span_id": "C0042-D-P017-TABLE-0002",
+        "page": 17,
+        "excerpt": "J(Man., KGen): 0.10, 0.04, 0.07, 0.02, 0.04, 0.05; SRL without reification: 0.40, 0.20, 0.31, 0.22, 0.18, 0.57."
+      },
+      {
+        "span_id": "C0042-D-P020-TABLE-0003",
+        "page": 20,
+        "excerpt": "Previous method: 4, 3, 6, 5, 4, 6; New method: 6, 8, 11, 10, 9, 9."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "The pipeline handles several difficult biomedical preprocessing phenomena: coreferences, abbreviations, and long coordinated sentences.",
+      "The method extracts both main verb-argument relations and secondary noun-modifier relations, producing a richer graph representation.",
+      "The UMLS intermediary mapping and SPARQL-based target-ontology lookup provide a common semantic grounding for comparing concepts across graphs.",
+      "The semi-automatic design permits expert review and modification of intermediate text, triples, ontology links, and RDF artifacts.",
+      "The tool is implemented and released with source code and study data.",
+      "Review-level inference: the modular pipeline makes individual components replaceable and exposes intermediate artifacts for debugging or adjudication."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0042-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "The technique derives secondary relations from the same sentence, seeking compositions, adjectives, and modifying relations."
+      },
+      {
+        "span_id": "C0042-D-P019-TEXT-0002",
+        "page": 19,
+        "excerpt": "the semi-automatic nature of KGen approach enables to combine both the automatically extracted set of triples with the manually extraction."
+      },
+      {
+        "span_id": "C0042-D-P021-TEXT-0003",
+        "page": 21,
+        "excerpt": "the method allows a domain specialist to review and manually change the intermediate artifacts."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "The generated full triple sets have low overlap with physician-created sets, and the method extracts substantially more triples than the manual references.",
+      "The evaluation lacks a biomedical gold standard and uses only two physicians and six abstracts, limiting direct accuracy assessment and generalizability.",
+      "Dependency parsing can incorrectly split multiword biomedical entities, illustrated by treating “diabetes mellitus” as separate concepts.",
+      "The pipeline depends on finite, domain-specific NLP models that may fail on named entities, part-of-speech tags, parses, punctuation, spelling, and ambiguous sentences.",
+      "Ontology-link coverage decreases across the UMLS and target-ontology mapping stages when terms lack CUIs or target-ontology matches.",
+      "The authors’ analysis notes that physicians did not directly verify KGen triples or compare them themselves; the comparisons were conducted by the authors.",
+      "Review-level inference: the multi-stage external-service dependency may make results sensitive to tool versions, endpoint availability, and ontology choice."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0042-D-P017-TABLE-0001",
+        "page": 17,
+        "excerpt": "The sets are not very similar, having a very little intersection."
+      },
+      {
+        "span_id": "C0042-D-P020-TEXT-0002",
+        "page": 20,
+        "excerpt": "Although the lack of a gold standard and a direct accuracy assessment is a limitation of our work."
+      },
+      {
+        "span_id": "C0042-D-P019-TEXT-0003",
+        "page": 19,
+        "excerpt": "diabetes mellitus represents a concept ... It is not supposed to be broken down as the result obtained by our technique."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "There is no established gold standard for evaluating triples extracted from unstructured biomedical text, so direct accuracy assessment was not possible.",
+      "The two physician evaluators were surgeons rather than Alzheimer’s Disease specialists; involving AD experts could strengthen the conclusions.",
+      "The physicians did not directly verify KGen’s triples or perform the comparisons against their manual triples; the authors conducted the analyses.",
+      "NLP tools may fail because of problematic scientific-language constructions, punctuation, spelling, ambiguous sentences, and limitations of finite training data.",
+      "The current models and tools may require timely updates as new biomedical entity names enter the vocabulary.",
+      "The current evaluation used a limited set of biomedical texts and tools; changing models and tools remains for future evaluations.",
+      "Fully automated generation remains an open challenge, motivating the semi-automatic method.",
+      "Future work includes temporal knowledge graphs generated from scientific texts at different timestamps."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0042-D-P021-TEXT-0001",
+        "page": 21,
+        "excerpt": "Although the lack of a gold standard and a direct accuracy assessment is a limitation of our work."
+      },
+      {
+        "span_id": "C0042-D-P021-TEXT-0002",
+        "page": 21,
+        "excerpt": "the physicians did not directly verify the triples generated by KGen ... All the analyses were conducted by the authors."
+      },
+      {
+        "span_id": "C0042-D-P022-TEXT-0003",
+        "page": 22,
+        "excerpt": "Future work involves the study and comparison of temporal KGs, i.e., ontology-linked KGs generated from scientific texts in different time stamps."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Add expert-oriented rules or triples to preserve adjectives and compounds discarded when larger concepts are decomposed.",
+      "Use a biomedical named-entity recognizer or a dependency parser trained on biomedical text to avoid splitting multiword biomedical concepts.",
+      "Combine links from the previous NCBO annotator method with links from the newer ScispaCy/UMLS/SPARQL method.",
+      "Search separately for identified terms with no UMLS CUI or no target-ontology annotation.",
+      "Use logical inference or machine-learning approaches to derive implicit relations and triples more similar to those produced by domain experts.",
+      "Use additional domain experts and create a stronger comparison baseline for ontology-linked KG extraction.",
+      "Use UMLS CUIs as a common ground for comparing graphs linked to different ontologies and potentially generate mappings to multiple ontologies.",
+      "Evaluate alternative NLP models and tools and investigate temporal knowledge graphs.",
+      "Review-level inference: future evaluations should use larger, independently annotated datasets and report precision, recall, and F1 for entities, relations, triples, and links where annotation permits."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0042-D-P019-TEXT-0001",
+        "page": 19,
+        "excerpt": "Representing such terms could enrich the knowledge representation ... they could also be considered in a SPARQL query."
+      },
+      {
+        "span_id": "C0042-D-P019-TEXT-0002",
+        "page": 19,
+        "excerpt": "this could be mitigated by incorporating a biomedical named entity recognizer (NER) ... Another option would be using a dependency parser trained in biomedical texts."
+      },
+      {
+        "span_id": "C0042-D-P020-TEXT-0003",
+        "page": 20,
+        "excerpt": "one possible direction to improve the results would be combining the results for both methods."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Fully automated and reliable generation of knowledge graphs from unstructured biomedical scientific literature remains open.",
+      "Reliable extraction of implicit relations requiring domain knowledge remains unresolved.",
+      "There is no generally accepted gold standard for evaluating biomedical text-to-triple extraction.",
+      "Robust handling of evolving biomedical vocabulary and newly introduced entity names remains unresolved.",
+      "Correct representation of multiword biomedical concepts and preservation of modifiers and compounds remains unresolved.",
+      "Ontology coverage and cross-ontology comparison remain incomplete when UMLS or target-ontology mappings are absent.",
+      "Temporal knowledge graphs that represent ontology-linked scientific knowledge across different timestamps remain a future research direction.",
+      "Review-level inference: the paper leaves unresolved how to calibrate extraction richness against factual correctness and how to evaluate graph usefulness independently of triple-count growth."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0042-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "The generation of KGs from unstructured text through a completely automated procedure is still an open research problem."
+      },
+      {
+        "span_id": "C0042-D-P021-TEXT-0002",
+        "page": 21,
+        "excerpt": "The language employed on scientific papers ... poses a great difficulty for techniques and tools involved in the method."
+      },
+      {
+        "span_id": "C0042-D-P022-TEXT-0003",
+        "page": 22,
+        "excerpt": "Future work involves the study and comparison of temporal KGs."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that all source code and data developed or used in the study are available at https://github.com/rossanez/kgen. The KGen software tool was implemented in Python and was available as of January 2020."
+}

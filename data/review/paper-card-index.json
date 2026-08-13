@@ -1,0 +1,693 @@
+[
+  {
+    "candidate_id": "C0001",
+    "title": "A Comprehensive Survey on Automatic Knowledge Graph Construction",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0001.json"
+  },
+  {
+    "candidate_id": "C0002",
+    "title": "A Survey on Extracting Knowledge Graphs by Employing Natural Language Processing",
+    "status": "MANUAL_PDF_REQUIRED",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0003",
+    "title": "Review of Automatic and Semi-Automatic Creation of Knowledge Graphs from Structured and Unstructured Data",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0003.json"
+  },
+  {
+    "candidate_id": "C0004",
+    "title": "A Systematic Literature Review on RDF Triple Generation From Natural Language Texts",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0004.json"
+  },
+  {
+    "candidate_id": "C0005",
+    "title": "Constructing Knowledge Graphs from Text Using Large Language Models: Scoping Review",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0005.json"
+  },
+  {
+    "candidate_id": "C0006",
+    "title": "OpenIE-based Approach for Knowledge Graph Construction from Text",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0006.json"
+  },
+  {
+    "candidate_id": "C0007",
+    "title": "Semi-automatic Knowledge Graph Construction by Relation Pattern Extraction",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0007.json"
+  },
+  {
+    "candidate_id": "C0008",
+    "title": "From Text to Knowledge. Bridging the Gap with Probabilistic Graphical Models",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0008.json"
+  },
+  {
+    "candidate_id": "C0009",
+    "title": "Research on Construction Method of Knowledge Graph of US Military Equipment Based on BiLSTM Model",
+    "status": "MANUAL_PDF_REQUIRED",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0010",
+    "title": "Building Knowledge Graph Using Pre-trained Language Model for Learning Entity-aware Relationships",
+    "status": "MANUAL_PDF_REQUIRED",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0011",
+    "title": "Span Level Model for the Construction of Scientific Knowledge Graph",
+    "status": "MANUAL_PDF_REQUIRED",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0012",
+    "title": "Joint Extraction of Entities and Relations Based on a Novel Graph Scheme",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0012.json"
+  },
+  {
+    "candidate_id": "C0013",
+    "title": "Seq2KG: An End-to-End Neural Model for Domain Agnostic Knowledge Graph Construction from Text",
+    "status": "ACCEPTED_EXISTING",
+    "card_path": "data/paper-cards/C0013.json"
+  },
+  {
+    "candidate_id": "C0014",
+    "title": "An Autoregressive Text-to-Graph Framework for Joint Entity and Relation Extraction",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0014.json"
+  },
+  {
+    "candidate_id": "C0015",
+    "title": "LlmRe: A Zero-Shot Entity Relation Extraction Method Based on the Large Language Model",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0015.json"
+  },
+  {
+    "candidate_id": "C0016",
+    "title": "Fine-Tuning Language Models for Triple Extraction with Data Augmentation",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0016.json"
+  },
+  {
+    "candidate_id": "C0017",
+    "title": "CodeKGC: Code Language Model for Generative Knowledge Graph Construction",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0017.json"
+  },
+  {
+    "candidate_id": "C0018",
+    "title": "iText2KG: Incremental Knowledge Graphs Construction Using Large Language Models",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0018.json"
+  },
+  {
+    "candidate_id": "C0019",
+    "title": "Leveraging LLM for Automated Ontology Extraction and Knowledge Graph Generation",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0019.json"
+  },
+  {
+    "candidate_id": "C0020",
+    "title": "A BERT-Assisted LLM Framework for Knowledge Graph Construction",
+    "status": "MANUAL_PDF_REQUIRED",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0021",
+    "title": "Prompt Me One More Time: A Two-Step Knowledge Extraction Pipeline with Ontology-Based Verification",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0021.json"
+  },
+  {
+    "candidate_id": "C0022",
+    "title": "KnowledgeNet: A Benchmark Dataset for Knowledge Base Population",
+    "status": "ACCEPTED_EXISTING",
+    "card_path": "data/paper-cards/C0022.json"
+  },
+  {
+    "candidate_id": "C0023",
+    "title": "Text2KGBench: A Benchmark for Ontology-Driven Knowledge Graph Generation from Text",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0023.json"
+  },
+  {
+    "candidate_id": "C0024",
+    "title": "KGGen: Extracting Knowledge Graphs from Plain Text with Language Models",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0024.json"
+  },
+  {
+    "candidate_id": "C0025",
+    "title": "Knowledge Vault: A Web-Scale Approach to Probabilistic Knowledge Fusion",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0025.json"
+  },
+  {
+    "candidate_id": "C0026",
+    "title": "Identifying Relations for Open Information Extraction",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0026.json"
+  },
+  {
+    "candidate_id": "C0027",
+    "title": "FEEL: Framework for the Integration of Entity Extraction and Linking Systems",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0027.json"
+  },
+  {
+    "candidate_id": "C0028",
+    "title": "On Aligning OpenIE Extractions with Knowledge Bases: A Case Study",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0028.json"
+  },
+  {
+    "candidate_id": "C0029",
+    "title": "MWO2KG and Echidna: Constructing and Exploring Knowledge Graphs from Maintenance Data",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0029.json"
+  },
+  {
+    "candidate_id": "C0030",
+    "title": "Doc‐KG: Unstructured documents to knowledge graph construction, identification and validation with Wikidata",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0030.json"
+  },
+  {
+    "candidate_id": "C0031",
+    "title": "Information extraction meets the Semantic Web: A survey",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0031.json"
+  },
+  {
+    "candidate_id": "C0032",
+    "title": "KBPearl",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0032.json"
+  },
+  {
+    "candidate_id": "C0033",
+    "title": "Exploiting lexical patterns for knowledge graph construction from unstructured text in Spanish",
+    "status": "ACCEPTED_EXISTING",
+    "card_path": "data/paper-cards/C0033.json"
+  },
+  {
+    "candidate_id": "C0034",
+    "title": "ICDM 2019 Knowledge Graph Contest: Team UWA",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0034.json"
+  },
+  {
+    "candidate_id": "C0035",
+    "title": "Automating Biomedical Knowledge Graph Construction For Context-Aware Scientific Inference",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0035.json"
+  },
+  {
+    "candidate_id": "C0036",
+    "title": "Enhancing Domain-Independent Knowledge Graph Construction through OpenIE Cleaning and LLMs Validation",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0036.json"
+  },
+  {
+    "candidate_id": "C0037",
+    "title": "Entity Linking: An Issue to Extract Corresponding Entity With Knowledge Base",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0037.json"
+  },
+  {
+    "candidate_id": "C0038",
+    "title": "Incorporating contexts to open information extraction",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0038.json"
+  },
+  {
+    "candidate_id": "C0039",
+    "title": "Knowledge graph population from news streams",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0039.json"
+  },
+  {
+    "candidate_id": "C0040",
+    "title": "Semi-supervised generative open information extraction",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0040.json"
+  },
+  {
+    "candidate_id": "C0041",
+    "title": "Named Entity Extraction for Knowledge Graphs: A Literature Overview",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0041.json"
+  },
+  {
+    "candidate_id": "C0042",
+    "title": "KGen: a knowledge graph generator from biomedical scientific literature",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0042.json"
+  },
+  {
+    "candidate_id": "C0043",
+    "title": "Relation Extraction with Matrix Factorization and Universal Schemas",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0043.json"
+  },
+  {
+    "candidate_id": "C0044",
+    "title": "Chinese Triple Extraction Based on BERT Model",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0046",
+    "title": "Scalable Knowledge Graph Construction over Text using Deep Learning based Predicate Mapping",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0047",
+    "title": "A Novel Cascade Binary Tagging Framework for Relational Triple Extraction",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0047.json"
+  },
+  {
+    "candidate_id": "C0048",
+    "title": "Constructing COVID-19 Knowledge Graph from A Large Corpus of Scientific Articles",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0049",
+    "title": "CTI-Thinker: an LLM-driven system for CTI knowledge graph construction and attack reasoning",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0049.json"
+  },
+  {
+    "candidate_id": "C0050",
+    "title": "Entity linking for biomedical literature",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0050.json"
+  },
+  {
+    "candidate_id": "C0052",
+    "title": "Knowledge Base Population: Successful Approaches and Challenges",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0052.json"
+  },
+  {
+    "candidate_id": "C0053",
+    "title": "N-ary relation extraction for simultaneous T-Box and A-Box knowledge base augmentation",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0053.json"
+  },
+  {
+    "candidate_id": "C0054",
+    "title": "Populating knowledge base with collective entity mentions: a graph-based approach",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0055",
+    "title": "Research on Domain-Specific Knowledge Graph Based on the RoBERTa-wwm-ext Pretraining Model",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0055.json"
+  },
+  {
+    "candidate_id": "C0056",
+    "title": "Triplet-based knowledge mining using pretrained large language models",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0060",
+    "title": "Research on Knowledge Extraction Technology for Knowledge Graph Construction",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0061",
+    "title": "Dependency parsing based Chinese open relation extraction",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0063",
+    "title": "Simple ontologies for practical information extraction and advanced information extraction for practical ontologies",
+    "status": "NEEDS_MANUAL_REVIEW",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0064",
+    "title": "Synthesizing constituents for knowledge organization and representation from historical travel records",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0066",
+    "title": "A Semantic Best-Effort Approach for Extracting Structured Discourse Graphs from Wikipedia",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0066.json"
+  },
+  {
+    "candidate_id": "C0067",
+    "title": "Automatic Knowledge Graph Construction: A Report on the 2019 ICDM/ICBK Contest",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0070",
+    "title": "Coarse-to-fine Knowledge Graph Domain Adaptation based on Distantly-supervised Iterative Training",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0070.json"
+  },
+  {
+    "candidate_id": "C0072",
+    "title": "Constructing Domain-Specific Knowledge Graphs from Unannotated Technical Texts using LLMs",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0073",
+    "title": "Entity Linking with a Knowledge Base: Issues, Techniques, and Solutions",
+    "status": "ACCEPTED_LUNA_RECOVERED",
+    "card_path": "data/paper-cards/C0073.json"
+  },
+  {
+    "candidate_id": "C0074",
+    "title": "Extensive Benchmark of Frugal Encoder–Decoder Language Models for Datatype Properties Extraction and RDF Knowledge Graph Generation",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0074.json"
+  },
+  {
+    "candidate_id": "C0076",
+    "title": "Importance sampling for unbiased on-demand evaluation of knowledge base population",
+    "status": "ACCEPTED_EXISTING",
+    "card_path": "data/paper-cards/C0076.json"
+  },
+  {
+    "candidate_id": "C0077",
+    "title": "Joint entity-relation extraction: A key technique for knowledge graph construction&amp;mdash;A survey",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0078",
+    "title": "Large Language Models for Automatic Knowledge Graph Construction From Text Documents: a Materials Science Case Study",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0078.json"
+  },
+  {
+    "candidate_id": "C0081",
+    "title": "Natural vs programming language in LLM knowledge graph construction",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0081.json"
+  },
+  {
+    "candidate_id": "C0082",
+    "title": "OneRel:Joint Entity and Relation Extraction with One Module in One Step",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0082.json"
+  },
+  {
+    "candidate_id": "C0083",
+    "title": "Unstructured to Structured: Building Knowledge Graphs from Documents for Web Applications",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0084",
+    "title": "WSD based Ontology Learning from Unstructured Text using Transformer",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0087",
+    "title": "Automated Construction and Growth of a Large Ontology",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0087.json"
+  },
+  {
+    "candidate_id": "C0088",
+    "title": "A LLM-Based Approach for Semantic Extraction and Linking of RDF Triples from Unstructured Text",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0089",
+    "title": "A Method for Traditional Chinese Medicine Knowledge Graph Dynamic Construction",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0089.json"
+  },
+  {
+    "candidate_id": "C0090",
+    "title": "A novel ship collision accident knowledge graph construction method based on ontology-constrained prompt engineering",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0091",
+    "title": "An ontology for maintenance activities and its application to data quality",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0093",
+    "title": "Confidence Estimation for Knowledge Base Population",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0093.json"
+  },
+  {
+    "candidate_id": "C0094",
+    "title": "Distantly supervised Web relation extraction for knowledge base population",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0094.json"
+  },
+  {
+    "candidate_id": "C0095",
+    "title": "Effective Modeling of Encoder-Decoder Architecture for Joint Entity and Relation Extraction",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0095.json"
+  },
+  {
+    "candidate_id": "C0096",
+    "title": "Entity Disambiguation for Knowledge Base Population",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0096.json"
+  },
+  {
+    "candidate_id": "C0097",
+    "title": "Entity extraction: From unstructured text to DBpedia RDF triples",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0097.json"
+  },
+  {
+    "candidate_id": "C0098",
+    "title": "Frame-Based Ontology Population with PIKES",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0099",
+    "title": "Information extraction and knowledge graph construction from geoscience literature",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0101",
+    "title": "Knowledge graphs generation from cultural heritage texts: combining LLMs and ontological engineering for scholarly debates",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0101.json"
+  },
+  {
+    "candidate_id": "C0102",
+    "title": "Laying the Groundwork for Knowledge Base Population: Nine Years of Linguistic Resources for TAC KBP",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0102.json"
+  },
+  {
+    "candidate_id": "C0104",
+    "title": "Multi-Task Identification of Entities, Relations, and Coreference for Scientific Knowledge Graph Construction",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0104.json"
+  },
+  {
+    "candidate_id": "C0106",
+    "title": "OPIEC: An Open Information Extraction Corpus",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0106.json"
+  },
+  {
+    "candidate_id": "C0107",
+    "title": "OPTIMIZING SYNTACTIC-SEMANTIC RELATION EXTRACTION FOR THE KAZAKH LANGUAGE WITH TRANSFORMER ARCHITECTURES AND SYNTHETIC CORPORA",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0107.json"
+  },
+  {
+    "candidate_id": "C0110",
+    "title": "Prompt2Graph: Leveraging LLMs to Construct Knowledge Graphs from Technical Manuals",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0113",
+    "title": "Semi-supervised ISA: A novel industrial knowledge graph construction method enhanced by the fault log corpus analysis and semi-supervised learning",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0114",
+    "title": "Towards automated financial market knowledge graph construction",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0116",
+    "title": "A HOLY QURAN ONTOLOGY CONSTRUCTION WITH SEMI¬ AUTOMATIC POPULATION",
+    "status": "ACCEPTED_LUNA_RECOVERED",
+    "card_path": "data/paper-cards/C0116.json"
+  },
+  {
+    "candidate_id": "C0122",
+    "title": "A hybrid approach for extracting semantic relations from texts",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0122.json"
+  },
+  {
+    "candidate_id": "C0125",
+    "title": "A Survey on Generative Knowledge Graph Construction",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0125.json"
+  },
+  {
+    "candidate_id": "C0126",
+    "title": "Alzheimer’s Disease Knowledge Graph Enhances Knowledge Discovery and Disease Prediction",
+    "status": "ACCEPTED_EXISTING",
+    "card_path": "data/paper-cards/C0126.json"
+  },
+  {
+    "candidate_id": "C0133",
+    "title": "Bootstrapped Self Training for Knowledge Base Population.",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0133.json"
+  },
+  {
+    "candidate_id": "C0134",
+    "title": "Causal knowledge extraction from long text maintenance documents",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0136",
+    "title": "Chinese relation extraction for constructing satellite frequency and orbit knowledge graph: A survey",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0137",
+    "title": "Construction of a knowledge graph for framework material enabled by large language models and its application",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0137.json"
+  },
+  {
+    "candidate_id": "C0138",
+    "title": "DBpedia spotlight",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0138.json"
+  },
+  {
+    "candidate_id": "C0140",
+    "title": "DocOIE: A Document-level Context-Aware Dataset for OpenIE",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0140.json"
+  },
+  {
+    "candidate_id": "C0143",
+    "title": "Extract, Define, Canonicalize: An LLM-based Framework for Knowledge Graph Construction",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0143.json"
+  },
+  {
+    "candidate_id": "C0146",
+    "title": "Generative Knowledge Graph Construction: A Review",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0146.json"
+  },
+  {
+    "candidate_id": "C0150",
+    "title": "Knowledge-Based Weak Supervision for Information Extraction of Overlapping Relations",
+    "status": "ACCEPTED_TERRA",
+    "card_path": "data/paper-cards/C0150.json"
+  },
+  {
+    "candidate_id": "C0151",
+    "title": "Learning to link with wikipedia",
+    "status": "ACCEPTED_EXISTING",
+    "card_path": "data/paper-cards/C0151.json"
+  },
+  {
+    "candidate_id": "C0152",
+    "title": "LINDEN",
+    "status": "ACCEPTED_EXISTING",
+    "card_path": "data/paper-cards/C0152.json"
+  },
+  {
+    "candidate_id": "C0153",
+    "title": "Llm-Tikg: Threat Intelligence Knowledge Graph Construction Utilizing Large Language Model",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0153.json"
+  },
+  {
+    "candidate_id": "C0154",
+    "title": "LLM4Schema.org: Generating Schema.org Markups With Large Language Models",
+    "status": "ACCEPTED_EXISTING",
+    "card_path": "data/paper-cards/C0154.json"
+  },
+  {
+    "candidate_id": "C0155",
+    "title": "LLMs for knowledge graph construction and reasoning: recent capabilities and future opportunities",
+    "status": "ACCEPTED_EXISTING",
+    "card_path": "data/paper-cards/C0155.json"
+  },
+  {
+    "candidate_id": "C0158",
+    "title": "Open Relation Extraction and Grounding",
+    "status": "ACCEPTED_EXISTING",
+    "card_path": "data/paper-cards/C0158.json"
+  },
+  {
+    "candidate_id": "C0160",
+    "title": "Question-Answer Extraction from Scientific Articles Using Knowledge Graphs and Large Language Models",
+    "status": "ACCEPTED_LUNA",
+    "card_path": "data/paper-cards/C0160.json"
+  },
+  {
+    "candidate_id": "C0162",
+    "title": "Relation-Faceted Graph Pooling with LLM Guidance for Dynamic Span-Aware Information Extraction",
+    "status": "ACCEPTED_EXISTING",
+    "card_path": "data/paper-cards/C0162.json"
+  },
+  {
+    "candidate_id": "C0163",
+    "title": "Research on Association Rule Mining and Knowledge Graph Construction for Low-Carbon Scheme Design in Transmission Line Passageways",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0167",
+    "title": "Tackling representation, annotation and classification challenges for temporal knowledge base population",
+    "status": "NOT_PROCESSED_NO_PDF",
+    "card_path": ""
+  },
+  {
+    "candidate_id": "C0169",
+    "title": "Text2Onto-Agent: An LLM Agent-Based End-to-End Automated Ontology Construction Method anda Case Study of Green Building Domain Modeling",
+    "status": "PAPER_CARD_MANUAL_REVIEW",
+    "card_path": "",
+    "reason": "Luna and the single quality-only Terra replacement did not pass content-quality validation."
+  }
+]

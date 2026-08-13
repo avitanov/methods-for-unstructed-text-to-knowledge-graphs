@@ -1,0 +1,763 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0023",
+    "title": "Text2KGBench: A Benchmark for Ontology-Driven Knowledge Graph Generation from Text",
+    "pdf_path": "data/batches/batch-02/C0023.pdf",
+    "authors": [
+      "Nandana Mihindukulasooriya",
+      "Sanju Tiwari",
+      "Carlos F. Enguix",
+      "Kusum Lata"
+    ],
+    "year": 2023,
+    "venue": "not_reported",
+    "identifier": {
+      "status": "reported",
+      "value": "DOI: 10.5281/zenodo.7916716",
+      "evidence": [
+        {
+          "span_id": "C0023-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "DOI: https://doi.org/10.5281/zenodo.7916716"
+        }
+      ]
+    },
+    "abstract": "Text2KGBench is a benchmark for evaluating language models that generate knowledge-graph facts from natural-language sentences under ontology guidance. Given an ontology and sentences, systems must extract faithful facts while using the ontology's concepts, relations, and domain/range constraints. It provides Wikidata-TekGen (10 ontologies; 13,474 sentences) and DBpedia-WebNLG (19 ontologies; 4,860 sentences), seven metrics for extraction, ontology conformance, and hallucination, and Vicuna-13B and Alpaca-LoRA-13B prompted baselines.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0023-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Nandana Mihindukulasooriya; Sanju Tiwari; Carlos F. Enguix; and Kusum Lata.",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0023-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The paper refers to the second Text2KG workshop at ESWC 2023 and describes the presented benchmark and baselines in that context.",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-03-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0023-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "DOI: https://doi.org/10.5281/zenodo.7916716",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0023-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We present Text2KGBench, a benchmark to evaluate the capabilities of language models to generate KGs from natural language text guided by an ontology.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "2 Task Description",
+      "span_id": "C0023-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We define the task as a fact extraction task guided by an ontology.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "2 Task Description",
+      "span_id": "C0023-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The system should be faithful to the input sentence... [and] should not hallucinate i.e. it should not introduce new or fake entities/relations.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "2 Task Description",
+      "span_id": "C0023-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The ontology defines the concepts of interest, a set of defined relations with their canonical names, domain and range constraints for the relations.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0023-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "We provide results for two baselines... with in-context learning... [and] a baseline automatic prompt generator from ontologies.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "2 Task Description",
+      "span_id": "C0023-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Post-processing and validation are also crucial for extracting the correct triples and cleaning them by removing implausible triples.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Figure 2 and 2 Task Description",
+      "span_id": "C0023-D-P005-PICTURE-0001",
+      "page": 5,
+      "excerpt": "The illustrated LLM receives an instruction, verbalized ontology, example(s), and a test sentence, then directly outputs relation(subject, object) triples.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "5.2 Automatic Prompt Generation",
+      "span_id": "C0023-D-P011-TEXT-0001",
+      "page": 11,
+      "excerpt": "The examples are taken from the training data for each of the datasets based on their similarity to the test sentence.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "5.2 Automatic Prompt Generation",
+      "span_id": "C0023-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "Our baseline prompt consists of... (a) Instruction, (b) Ontology description, (c) Demonstrative examples, and (d) Test sentence.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "5.2 Automatic Prompt Generation",
+      "span_id": "C0023-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "We have used sentence similarities using Sentence Transformers (SBERT) with the T5-XXL model.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4 Evaluation Metrics",
+      "span_id": "C0023-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "The LLM will produce a textual output that can be parsed into a set of triples, which we call LLM output triples.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "2 Task Description",
+      "span_id": "C0023-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The ontology defines the concepts of interest, a set of defined relations with their canonical names, domain and range constraints.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "4 Evaluation Metrics",
+      "span_id": "C0023-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "In this version, a triple is considered to be conforming to the ontology if the relation is one of the canonical relations listed in the ontology.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "2 Task Description",
+      "span_id": "C0023-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "We are using simpler language-oriented verbalizations and triple formats for presenting the information to an LLM.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "2 Task Description",
+      "span_id": "C0023-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The goal is to construct prompts to instruct the model to extract facts relevant to the ontology. Such extracted facts can be further validated and post-processed to create a knowledge graph.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "2 Task Description",
+      "span_id": "C0023-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "There are three main inputs to the task: Ontology... Text Corpus... Examples.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "5.2 Automatic Prompt Generation",
+      "span_id": "C0023-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "Our baseline prompt consists of... Instruction, Ontology description, Demonstrative examples, and Test sentence.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.1 Wikidata-TekGen Dataset",
+      "span_id": "C0023-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "We generated 13,474 sentence - triple(s) alignments.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "5.2 Automatic Prompt Generation",
+      "span_id": "C0023-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "The prompt contains the test sentence from which we want to extract the facts complying with the ontology.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "5.2 Automatic Prompt Generation",
+      "span_id": "C0023-D-P011-TEXT-0001",
+      "page": 11,
+      "excerpt": "Throughout the prompt, we use the relation(subject, object) notation for representing relations and expect the model to follow the notation in the output.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "2 Task Description",
+      "span_id": "C0023-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "In this version of Text2KGBench, we are not evaluating a system’s ability to process RDF/OWL syntax.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "5.1 Baseline LLM Models",
+      "span_id": "C0023-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "We obtained the LlaMA 13B LLM model... and applied Vicuna weights from FastChat as delta weights.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "5.1 Baseline LLM Models",
+      "span_id": "C0023-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "Alpaca-LoRA is fine-tuned using Low-Rank Adaptation... by freezing the pre-trained model weights and injecting trainable rank decomposition matrices.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "5.2 Automatic Prompt Generation",
+      "span_id": "C0023-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "We have used sentence similarities using Sentence Transformers (SBERT) with the T5-XXL model.",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0023-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Wikidata-TekGen with 10 ontologies and 13,474 sentences and... DBpedia-WebNLG with 19 ontologies and 4,860 sentences.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.1 Wikidata-TekGen Dataset",
+      "span_id": "C0023-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "[The authors] created another test set with 939 verified sentence-triple alignments... [and] generated 174 unseen sentences.",
+      "confidence": "medium"
+    },
+    "datasets-17-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.2 DBpedia-WebNLG Dataset",
+      "span_id": "C0023-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "We generated 4,860 sentence - triple(s) alignments using WebNLG data and divided into train and test splits.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0023-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We define seven evaluation metrics to measure fact extraction performance, ontology conformance, and hallucinations by LLMs.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4 Evaluation Metrics",
+      "span_id": "C0023-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "Fact Extraction Accuracy: This is measured using Precision (P), Recall (R), and F1 scores by comparing LLM output triples to the ground truth triples.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4 Evaluation Metrics",
+      "span_id": "C0023-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "We calculate three hallucination metrics, subject hallucination (SH), relation hallucination (RH), and object hallucination (OH).",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0023-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "We provide results for two baselines using open-source LLMs, including Vicuna-13B and Alpaca-LoRA-13B with in-context learning.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "5.3 Evaluation Results",
+      "span_id": "C0023-D-P011-TEXT-0001",
+      "page": 11,
+      "excerpt": "We run inferences for automatically generated prompts for both Wikidata-TekGen and DBpedia-WebNLG corpora and calculate the metrics discussed in Section 4.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4 Evaluation Metrics",
+      "span_id": "C0023-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "To avoid false negatives, we follow a locally closed approach by only considering the relations that are part of the ground truth.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "5.3 Evaluation Results",
+      "span_id": "C0023-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "Three different settings in Wikidata-TekGen dataset: all test cases (All), manually validated and cleaned subset (selected), and unseen sentences (Unseen).",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "5.3 Evaluation Results",
+      "span_id": "C0023-D-P012-TABLE-0001",
+      "page": 12,
+      "excerpt": "Table 2 reports aggregate P, R, F1, OC, SH, RH, and OH for Vicuna and Alpaca-LoRA on every dataset/variant.",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "5.3 Evaluation Results",
+      "span_id": "C0023-D-P012-TABLE-0002",
+      "page": 12,
+      "excerpt": "Table 3 reports Wikidata-TekGen Vicuna all-test ontology-level results, including F1=0.24 for Military and F1=0.66 for Space.",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0023-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "We define seven metrics... and provide evaluation scripts... all generated prompts, similarities, and LLM responses for further analysis.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.1 Wikidata-TekGen Dataset",
+      "span_id": "C0023-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "Because the TekGen corpus is generated using distant supervision, it can have noise and some incorrect alignments.",
+      "confidence": "medium"
+    },
+    "strengths-22-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.3 Evaluation Results",
+      "span_id": "C0023-D-P012-TABLE-0003",
+      "page": 12,
+      "excerpt": "Vicuna all-test F1 is 0.24 for Military and 0.66 for Space.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4 Evaluation Metrics",
+      "span_id": "C0023-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "This can be further extended to validate other restrictions such as domain, range or other ontological axioms.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4 Evaluation Metrics",
+      "span_id": "C0023-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "Because the set of triples are not exhaustive for a given sentence, to avoid false negatives, we follow a locally closed approach.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.3 Evaluation Results",
+      "span_id": "C0023-D-P012-TABLE-0003",
+      "page": 12,
+      "excerpt": "Aggregate F1 values range from 0.22 to 0.38, while OC values range from 0.83 to 0.93.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "7 Conclusion and Future Work — Limitations",
+      "span_id": "C0023-D-P014-TEXT-0001",
+      "page": 14,
+      "excerpt": "We have only considered smaller-sized ontologies by design to cater for the token size limitations of LLMs.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "7 Conclusion and Future Work — Limitations",
+      "span_id": "C0023-D-P014-TEXT-0002",
+      "page": 14,
+      "excerpt": "We have separated the OWL/RDF representations of KGs by verbalizing ontologies and triples.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "5.3 Evaluation Results",
+      "span_id": "C0023-D-P012-TEXT-0003",
+      "page": 12,
+      "excerpt": "An in-depth analysis of the results is out of scope of this paper due to space limitations.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "7 Conclusion and Future Work — Limitations",
+      "span_id": "C0023-D-P014-TEXT-0001",
+      "page": 14,
+      "excerpt": "Future versions... will require systems to automatically select the portion of the ontology or the set of axioms that are relevant to the given input text.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4 Evaluation Metrics",
+      "span_id": "C0023-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "This can be further extended to validate other restrictions such as domain, range or other ontological axioms.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "7 Conclusion and Future Work — Future Work",
+      "span_id": "C0023-D-P015-TEXT-0003",
+      "page": 15,
+      "excerpt": "We would like to further extend our benchmark considering different bias variables... and create contrastive test cases to verify the fairness of LLMs.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.3 Evaluation Results",
+      "span_id": "C0023-D-P012-TEXT-0001",
+      "page": 12,
+      "excerpt": "As we have used LLM models as is without any fine-tuning, prompt tuning or semantic validation, we believe there is a large room for improvements.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "2 Task Description",
+      "span_id": "C0023-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Validation of the generated triples is another open research area which can use linguistic approaches to detect hallucinations and reasoning-based approaches to validate... consistency with the ontology.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.1 Wikidata-TekGen Dataset",
+      "span_id": "C0023-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "Because the TekGen corpus is generated using distant supervision, it can have noise and some incorrect alignments.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0023-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Source Repo: https://github.com/cenguix/Text2KGBench; DOI: https://doi.org/10.5281/zenodo.7916716; License: Creative Commons Attribution (CC BY 4.0).",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "7 Conclusion and Future Work — Resource Availability Statement",
+      "span_id": "C0023-D-P015-TEXT-0002",
+      "page": 15,
+      "excerpt": "Text2KGBench dataset is available from zenodo, and the code... evaluation scripts, baselines, LLM outputs, evaluation results are available from Github.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses the lack of an evaluation benchmark for extracting sentence-grounded KG facts with an explicit ontology as input. It evaluates whether language models can select canonical ontology relations, extract facts faithful to a sentence rather than model pretraining knowledge, and avoid fabricated subjects, relations, or objects.",
+  "methodology": {
+    "primary_family": "Ontology-constrained and schema-guided methods",
+    "secondary_families": [
+      "Zero-shot and few-shot LLM prompting",
+      "Generative text-to-structure methods",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "end_to_end",
+    "supervision_setting": "few_shot",
+    "description": "Text2KGBench specifies ontology-guided sentence-level fact extraction. For each case, a prompt combines: (1) a fixed instruction to output only triples, (2) a verbalized ontology listing concepts and canonical relations with domain/range signatures, (3) a similarity-selected training demonstration with its aligned triples, and (4) the test sentence. The decoder-only instruction-tuned LLM directly generates triples in relation(subject, object) notation. The benchmark parses these as output triples and evaluates exact fact extraction, use of ontology relations, and hallucinated subject/relation/object terms. The authors' baseline retrieves demonstrations using SBERT with T5-XXL sentence embeddings."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "Ontology is a required task input and prompt context. It specifies concepts, canonical relation names, and relation domain/range constraints. The current conformance metric checks whether the output relation name is in the ontology; the paper notes that validation could later extend to domain/range and other axioms. Ontologies are verbalized rather than supplied as direct RDF/OWL syntax.",
+    "evidence": [
+      {
+        "span_id": "C0023-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "The ontology defines the concepts of interest, a set of defined relations with their canonical names, domain and range constraints."
+      },
+      {
+        "span_id": "C0023-D-P009-TEXT-0002",
+        "page": 9,
+        "excerpt": "In this version, a triple is considered to be conforming to the ontology if the relation is one of the canonical relations listed in the ontology."
+      },
+      {
+        "span_id": "C0023-D-P004-TEXT-0003",
+        "page": 4,
+        "excerpt": "We are using simpler language-oriented verbalizations and triple formats for presenting the information to an LLM."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Relation and triple extraction",
+    "Graph construction",
+    "Graph validation and correction"
+  ],
+  "input_output": {
+    "input_type": "A natural-language sentence, its associated ontology verbalization (concepts and relation signatures), a fixed extraction instruction, and one or more sentence-to-triple demonstrations from training data.",
+    "input_granularity": "Sentence-level: each benchmark alignment pairs one natural-language sentence with one or more triples; baseline prompting processes each test sentence separately.",
+    "output_representation": "A textual set of ontology-aligned triples written in relation(subject, object) notation. The benchmark treats the parsed text as LLM output triples; it does not evaluate direct RDF/OWL serialization in this version."
+  },
+  "models_and_tools": [
+    "Vicuna-13B baseline: LLaMA-13B with Vicuna/FastChat delta weights",
+    "Alpaca-LoRA-13B baseline: LLaMA base model adapted with Low-Rank Adaptation",
+    "Automatic prompt generator",
+    "Sentence Transformers (SBERT) with T5-XXL for nearest demonstration selection",
+    "scikit-learn for stratified randomized train/validation/test folds",
+    "Evaluation scripts that parse output triples and calculate seven metrics"
+  ],
+  "datasets": [
+    "Wikidata-TekGen: 10 manually formulated Wikidata-derived ontologies and 13,474 sentence–triple alignments; splits include all test cases, a manually cleaned/verified 939-alignment test subset, and 174 author-invented unseen sentences.",
+    "DBpedia-WebNLG: 19 ontologies derived from WebNLG categories and 4,860 sentence–triple alignments from WebNLG 3.0 English 3triples; train/test splitting prevents the same fact appearing in both.",
+    "Source corpora: TekGen (distantly supervised Wikidata triple–Wikipedia sentence alignments) and WebNLG 3.0 English."
+  ],
+  "evaluation": {
+    "metrics": [
+      "Triple-level Precision (P): correct output triples divided by output triples",
+      "Triple-level Recall (R): correct output triples divided by gold triples",
+      "F1: harmonic mean of P and R",
+      "Ontology Conformance (OC): proportion of output triples whose relation is a canonical ontology relation",
+      "Subject Hallucination (SH): subject terms absent from the test sentence or ontology concepts, after stemming",
+      "Relation Hallucination (RH): relation absent from ontology relations, using exact matching",
+      "Object Hallucination (OH): object terms absent from the test sentence or ontology concepts, after stemming"
+    ],
+    "baselines": [
+      "Vicuna-13B with automatically generated ontology-guided in-context prompts",
+      "Alpaca-LoRA-13B with automatically generated ontology-guided in-context prompts"
+    ],
+    "setting": "The authors run inference on automatically generated prompts over Wikidata-TekGen and DBpedia-WebNLG, aggregate results across 10 and 19 ontologies respectively, and report P/R/F1, OC, SH/RH/OH. Wikidata-TekGen is evaluated in All, Selected (manually validated), and Unseen variants. The evaluation uses exact comparison of generated and gold triples, but applies a locally closed approach that considers only relations appearing in the gold truth to reduce false negatives because sentence triple sets are non-exhaustive."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Wikidata-TekGen, Vicuna-13B: All P=0.38, R=0.34, F1=0.35, OC=0.83, SH=0.17, RH=0.17, OH=0.17; Selected P=0.42, R=0.39, F1=0.38, OC=0.84, SH=0.11, RH=0.16, OH=0.14; Unseen P=0.32, R=0.32, F1=0.32, OC=0.86, SH=0.07, RH=0.14, OH=0.14.",
+      "Wikidata-TekGen, Alpaca-LoRA-13B: All P=0.32, R=0.26, F1=0.27, OC=0.87, SH=0.18, RH=0.13, OH=0.17; Selected P=0.33, R=0.27, F1=0.28, OC=0.87, SH=0.12, RH=0.13, OH=0.17; Unseen P=0.22, R=0.22, F1=0.22, OC=0.86, SH=0.09, RH=0.14, OH=0.26.",
+      "DBpedia-WebNLG, Vicuna-13B: P=0.34, R=0.27, F1=0.30, OC=0.93, SH=0.12, RH=0.07, OH=0.28. Alpaca-LoRA-13B: P=0.32, R=0.23, F1=0.25, OC=0.91, SH=0.16, RH=0.09, OH=0.38.",
+      "For Vicuna-13B on all Wikidata-TekGen cases, ontology-level F1 ranges from 0.24 (Military) to 0.66 (Space); OC ranges from 0.59 (Culture) to 0.94 (Music)."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0023-D-P012-TABLE-0001",
+        "page": 12,
+        "excerpt": "Table 2 reports aggregate P, R, F1, OC, SH, RH, and OH for Vicuna and Alpaca-LoRA on every dataset/variant."
+      },
+      {
+        "span_id": "C0023-D-P012-TABLE-0002",
+        "page": 12,
+        "excerpt": "Table 3 reports Wikidata-TekGen Vicuna all-test ontology-level results, including F1=0.24 for Military and F1=0.66 for Space."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author contribution: the benchmark operationalizes ontology-guided fact extraction with datasets, seven metrics, evaluation scripts, baseline prompts, responses, and results, covering extraction accuracy, canonical-relation conformance, and three hallucination types.",
+      "[Review inference] Separating cleaned and author-invented unseen Wikidata-TekGen test variants makes benchmark noise and possible pretraining-data exposure visible rather than relying only on distant-supervision alignments.",
+      "[Review inference] Providing ontology-specific results demonstrates that aggregate scores can conceal substantial variation by ontology (e.g., Vicuna all-test F1 from 0.24 to 0.66)."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0023-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "We define seven metrics... and provide evaluation scripts... all generated prompts, similarities, and LLM responses for further analysis."
+      },
+      {
+        "span_id": "C0023-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "Because the TekGen corpus is generated using distant supervision, it can have noise and some incorrect alignments."
+      },
+      {
+        "span_id": "C0023-D-P012-TABLE-0003",
+        "page": 12,
+        "excerpt": "Vicuna all-test F1 is 0.24 for Military and 0.66 for Space."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "[Review inference] The benchmark's current OC metric validates only whether a relation name is canonical; therefore a high OC score does not establish that the output satisfies declared domain/range constraints or other ontology axioms.",
+      "[Review inference] The locally closed triple-matching protocol can under-penalize sentence-supported triples whose relations are absent from non-exhaustive gold annotations, so its precision/recall values are scoped to the supplied gold relation set.",
+      "[Review inference] Baseline accuracy is modest despite high ontology conformance: the reported F1 values are 0.22–0.38 while OC is 0.83–0.93, showing that canonical relation selection alone is insufficient for correct fact extraction.",
+      "[Review inference] The reported baselines are limited to two 13B open-source instruction-tuned models with prompt-based inference; results do not establish performance for fine-tuned systems, direct RDF/OWL processing, or commercial models."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0023-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "This can be further extended to validate other restrictions such as domain, range or other ontological axioms."
+      },
+      {
+        "span_id": "C0023-D-P009-TEXT-0002",
+        "page": 9,
+        "excerpt": "Because the set of triples are not exhaustive for a given sentence, to avoid false negatives, we follow a locally closed approach."
+      },
+      {
+        "span_id": "C0023-D-P012-TABLE-0003",
+        "page": 12,
+        "excerpt": "Aggregate F1 values range from 0.22 to 0.38, while OC values range from 0.83 to 0.93."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The current version deliberately uses only small ontologies because of LLM token-size limits; it does not cover larger practical ontologies such as those in medicine.",
+      "The benchmark verbalizes ontologies and triples rather than testing direct RDF/OWL representations or a deep understanding of OWL semantics.",
+      "The paper does not provide an in-depth analysis of baseline result capabilities and limitations because of space limitations.",
+      "The hallucination calculation can produce false positives when an LLM expands acronyms or aliases, such as generating 'North Atlantic Treaty Organization' for 'NATO' in the sentence."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0023-D-P014-TEXT-0001",
+        "page": 14,
+        "excerpt": "We have only considered smaller-sized ontologies by design to cater for the token size limitations of LLMs."
+      },
+      {
+        "span_id": "C0023-D-P014-TEXT-0002",
+        "page": 14,
+        "excerpt": "We have separated the OWL/RDF representations of KGs by verbalizing ontologies and triples."
+      },
+      {
+        "span_id": "C0023-D-P012-TEXT-0003",
+        "page": 12,
+        "excerpt": "An in-depth analysis of the results is out of scope of this paper due to space limitations."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed: add cases with larger ontologies and develop systems that select the ontology fragment or axioms relevant to an input text.",
+      "Author-proposed: evaluate direct RDF/OWL handling without pre/post-processing and exploit longer-context LLM capabilities.",
+      "Author-proposed: extend ontology conformance beyond relation-name membership to validate domain, range, and other ontological axioms.",
+      "Author-proposed: account for acronyms and aliases in hallucination calculations.",
+      "Author-proposed: add contrastive bias/fairness tests across gender, race/ethnicity, geographic location, and other variables; add semantic-reasoning cases; and compare open-source baselines with ChatGPT and GPT-4."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0023-D-P014-TEXT-0001",
+        "page": 14,
+        "excerpt": "Future versions... will require systems to automatically select the portion of the ontology or the set of axioms that are relevant to the given input text."
+      },
+      {
+        "span_id": "C0023-D-P009-TEXT-0002",
+        "page": 9,
+        "excerpt": "This can be further extended to validate other restrictions such as domain, range or other ontological axioms."
+      },
+      {
+        "span_id": "C0023-D-P015-TEXT-0003",
+        "page": 15,
+        "excerpt": "We would like to further extend our benchmark considering different bias variables... and create contrastive test cases to verify the fairness of LLMs."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-stated unresolved problem: robustly extracting correct, sentence-faithful ontology-aligned facts remains open; the authors report substantial room for improvement without fine-tuning, prompt tuning, or semantic validation.",
+      "Author-stated unresolved problem: validating and cleaning generated triples, including detecting hallucinations through linguistic and reasoning-based methods consistent with the ontology, is an open research area.",
+      "[Review inference] Scaling ontology-guided prompting to large, axiom-rich ontologies while retaining relevant context and evaluating semantic conformance remains unresolved.",
+      "[Review inference] Reliable evaluation of faithful KG extraction is still constrained by noisy/non-exhaustive distant-supervision alignments and surface-form issues such as acronyms and aliases."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0023-D-P012-TEXT-0001",
+        "page": 12,
+        "excerpt": "As we have used LLM models as is without any fine-tuning, prompt tuning or semantic validation, we believe there is a large room for improvements."
+      },
+      {
+        "span_id": "C0023-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "Validation of the generated triples is another open research area which can use linguistic approaches to detect hallucinations and reasoning-based approaches to validate... consistency with the ontology."
+      },
+      {
+        "span_id": "C0023-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "Because the TekGen corpus is generated using distant supervision, it can have noise and some incorrect alignments."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that the Text2KGBench dataset is available on Zenodo (record 7916716) and that GitHub provides benchmark-generation code, evaluation scripts, baselines, LLM outputs, and evaluation results. It also identifies TekGen and WebNLG as the raw datasets. The resource is licensed CC BY 4.0."
+}

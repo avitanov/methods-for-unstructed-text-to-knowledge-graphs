@@ -1,0 +1,847 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0074",
+    "title": "Extensive Benchmark of Frugal Encoder–Decoder Language Models for Datatype Properties Extraction and RDF Knowledge Graph Generation",
+    "pdf_path": "data/manual-pdfs/C0074.pdf",
+    "authors": [
+      "Ringwald Célian",
+      "Gandon Fabien",
+      "Faron Catherine",
+      "Michel Franck",
+      "Abi Akl Hanna"
+    ],
+    "year": "not_reported",
+    "venue": "Semantic Web",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The article benchmarks five encoder-decoder pretrained language models—BART, T5, CodeT5, FlanT5, and PileT5—fine-tuned for restricted relation extraction that generates facts from text. It evaluates 13 output linearizations, including RDF standard syntaxes, for triple validity, extraction performance, training behavior, and resource use, and identifies Turtle Light as a quick and robust syntax for learning the task.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and authors",
+      "span_id": "C0074-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Ringwald Célian; Gandon Fabien; Faron Catherine; Michel Franck; Abi Akl Hanna.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-02-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Page header",
+      "span_id": "C0074-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Semantic Web 0 (0) 1.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-03-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0074-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "This article focuses on the fine-tuning and linearization process to generate facts extracted from text... challenged five encoder-decoder models... on 13 linearization variations... Our benchmark covers the validity of the produced triples, the model’s performance, the training behaviour and the resources needed.",
+      "confidence": "medium"
+    },
+    "problem_addressed-04-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0074-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "How does the choice of a linearization syntax impact the generation of RDF triples representing datatype properties for different pre-trained language models?",
+      "confidence": "medium"
+    },
+    "problem_addressed-04-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Related Works—Positioning",
+      "span_id": "C0074-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The goal is to determine the optimal model and syntax for extracting relations most effectively and at minimal cost, while maintaining the highest expressivity.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-05-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0074-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Encoder-decoder models can solve extraction as a translation task, offering the option to produce linearised graphs from natural language directly.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-05-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Methodological Framework—Overview of the Approach",
+      "span_id": "C0074-D-P004-CAPTION-0002",
+      "page": 4,
+      "excerpt": "Overview of our pipeline: from dataset construction to relation extraction evaluation... corpora are finally split... used to fine-tune five SLMs.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-06-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Dataset and Ground Truth",
+      "span_id": "C0074-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "We first considered a maximal SHACL shape... and we only keep the graphs valid against this shape... In a second step we keep only the triples whose values can be found in the Wikipedia abstract.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-06-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Experimental set-up—Fine-Tuning Details",
+      "span_id": "C0074-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "For each standard RDF syntax, we developed a specific parser and integrated the metrics we present below.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-06-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Evaluation of Specific Model Capacities",
+      "span_id": "C0074-D-P018-TEXT-0003",
+      "page": 18,
+      "excerpt": "Two potential solutions can be considered to address the syntactic errors produced by our models... constrained decoding... [and] CodeT5... automatically correct malformed textual sequences.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-07-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0074-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Our goal is to learn a pattern-based extractor leveraging generative PLM: E_Db: W × S → G; (t,s) ↦ g.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-07-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Task definition",
+      "span_id": "C0074-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "K is used to train a model expected to predict, from an abstract w, a graph ĝ valid against s*.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-08-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Methodological Framework—Overview of the Approach",
+      "span_id": "C0074-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The obtained corpora are finally split into 5 independent folds... used to fine-tune five SLMs.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-08-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Experimental set-up—Fine-Tuning Details",
+      "span_id": "C0074-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "5-fold cross-validation based on 5 000 examples... 4 000 training examples... and 1 000 test examples.",
+      "confidence": "medium"
+    },
+    "methodology-description-09-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Methodological Framework—Overview of the Approach",
+      "span_id": "C0074-D-P004-PICTURE-0001",
+      "page": 4,
+      "excerpt": "This subset is then filtered... values... mentioned in the corresponding Wikipedia abstracts... comply with a predetermined SHACL shape... triples are then ordered... URIs are URL-encoded and cleaned... linearized... split into 5 independent folds... fine-tune five SLMs.",
+      "confidence": "medium"
+    },
+    "methodology-description-09-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Experimental set-up—Fine-Tuning Details",
+      "span_id": "C0074-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "for BART: “$entity_URI : $Abstract”; for the T5 models family: “Translate English to $Syntax: [$entity_URI] $Abstract”.",
+      "confidence": "medium"
+    },
+    "methodology-description-09-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Evaluation of Specific Model Capacities",
+      "span_id": "C0074-D-P019-TEXT-0003",
+      "page": 19,
+      "excerpt": "We extended this package to support the BART and T5 models... reused our fine-tuned model Bvtf1 and adapted the EBNF grammar... to manage the proposed Turtle Light syntax.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-10-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0074-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The usage of constraints (e.g., with SHACL or ShEx) can help formalise both the extraction/learning set target and the validation of the produced output.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-10-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Dataset and Ground Truth",
+      "span_id": "C0074-D-P006-PICTURE-0002",
+      "page": 6,
+      "excerpt": "a maximal SHACL shape (s*) targeting class dbo:Person... specifying which property is mandatory and which one is optional.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-10-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Evaluation Metrics",
+      "span_id": "C0074-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "we define the rate of SHACL-Validated Triples R_SVT.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-11-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Methodological Framework—Overview of the Approach",
+      "span_id": "C0074-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "values... mentioned in the corresponding Wikipedia abstracts... triples are then ordered... URIs are URL-encoded and cleaned... linearized... evaluation of the relation extraction.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-11-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Experimental set-up—Fine-Tuning Details and Evaluation Metrics",
+      "span_id": "C0074-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "we controlled token consistency during the evaluation with a typographic checker and cleaner... rate of Parsed Triples... rate of Correct Subject... rate of SHACL-Validated Triples.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-11-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "CodeT5 Coding Capacities",
+      "span_id": "C0074-D-P020-TEXT-0003",
+      "page": 20,
+      "excerpt": "tested the model on four artificially corrupted versions... omitted prefixes, misplaced delimiters, invalid datatype annotations, and missing brackets.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-12-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Task definition",
+      "span_id": "C0074-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "the set W of Wikipedia abstracts associated with the set G of DBpedia graphs describing... the same resources.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-12-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Experimental set-up—Fine-Tuning Details",
+      "span_id": "C0074-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "where $Abstract is a Wikipedia abstract... and $entity_URI the URI of the entity in DBpedia.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-13-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Task definition",
+      "span_id": "C0074-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "predict, from an abstract w, a graph ĝ.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-13-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Experimental set-up—Fine-Tuning Details",
+      "span_id": "C0074-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "“$entity_URI : $Abstract”... “Translate English to $Syntax: [$entity_URI] $Abstract”.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-14-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "RDF Syntaxes and Alternative Linearizations",
+      "span_id": "C0074-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "Our benchmark considers 13 syntaxes belonging to three distinct categories.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-14-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "RDF Syntaxes and Alternative Linearizations",
+      "span_id": "C0074-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "The second category includes the 4 W3C RDF syntaxes... XML-RDF... N-Triples... Turtle... JSON-LD.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-14-03": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Dataset and Ground Truth",
+      "span_id": "C0074-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "The 7 datatype properties we are focusing on are associated with 13 832 distinct values.",
+      "confidence": "medium"
+    },
+    "models_and_tools-15-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Benchmarking frugal Encoder-Decoders",
+      "span_id": "C0074-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "we extended our benchmark by integrating three other T5-based models: FlanT5... PileT5... and CodeT5... These models follow the encoder-decoder transformer architecture.",
+      "confidence": "medium"
+    },
+    "models_and_tools-15-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Benchmarking frugal Encoder-Decoders",
+      "span_id": "C0074-D-P011-TABLE-0002",
+      "page": 11,
+      "excerpt": "BART 140M; T5 220M; CodeT5 220M; FlanT5 248M; PileT5 248M.",
+      "confidence": "medium"
+    },
+    "models_and_tools-15-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Experimental set-up—Fine-Tuning Details",
+      "span_id": "C0074-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "Our code is based on a fork of REBEL which we extended and adapted to our task... published under an open license.",
+      "confidence": "medium"
+    },
+    "datasets-16-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Methodological Framework—Overview of the Approach",
+      "span_id": "C0074-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Our pipeline takes as input a DBpedia dump... values... mentioned in the corresponding Wikipedia abstracts... comply with a predetermined SHACL shape.",
+      "confidence": "medium"
+    },
+    "datasets-16-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Dataset and Ground Truth",
+      "span_id": "C0074-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "Our ground truth D is randomly sampled... D contains 6000 entities described by 28M triples.",
+      "confidence": "medium"
+    },
+    "datasets-16-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Experimental set-up—Fine-Tuning Details",
+      "span_id": "C0074-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "5-fold cross-validation based on 5 000 examples... 4 000 training examples... 1 000 test examples... 250 disjoint examples... used for the evaluation.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-17-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Evaluation Metrics",
+      "span_id": "C0074-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "This is measured by the rate of Parsed Triples RPT... rate of Correct Subject RCS... rate of SHACL-Validated Triples RSVT.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-17-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Evaluation Metrics",
+      "span_id": "C0074-D-P014-TEXT-0002",
+      "page": 14,
+      "excerpt": "we also compute the macro measures (P+, R+, F1+)... BLEU score... Gg = RPT × RCS × RSVT × F1+ × 100.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-17-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Evaluation Metrics",
+      "span_id": "C0074-D-P014-TEXT-0003",
+      "page": 14,
+      "excerpt": "we also monitored the training time Tt (in minutes) and the carbon footprint Cc (emissions of CO2-equivalents in g).",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-18-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Task definition",
+      "span_id": "C0074-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We denote by M this original model, and baseline: w ↦ ĝ, ĝ |= s* and w |= ĝ.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-18-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Robustness of the Models to Prompt Noise",
+      "span_id": "C0074-D-P022-TABLE-0002",
+      "page": 22,
+      "excerpt": "Impact of context variations on BART and T5 performances: Baseline, ReOrder, MaskedEntities, NoEntity/NoEntities, and NoInstruct.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-19-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Experimental set-up—Fine-Tuning Details",
+      "span_id": "C0074-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "BART... inverse square root scheduler... 0.00005. For T5... Adafactor... 0.001... 1000 warm-up steps... early stop... patience of 5... single GPU.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-19-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Experimental set-up—Fine-Tuning Details",
+      "span_id": "C0074-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "5-fold cross-validation based on 5 000 examples... rotative splits.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-19-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Evaluation Metrics",
+      "span_id": "C0074-D-P014-TEXT-0003",
+      "page": 14,
+      "excerpt": "As our experimental framework is trained on 10-folds for each configuration, all the metric computed are averaged.",
+      "confidence": "medium"
+    },
+    "main_results-20-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Results tables",
+      "span_id": "C0074-D-P024-TABLE-0001",
+      "page": 24,
+      "excerpt": "T5vj: RPT 1.00, RCS 1.00, RSVT 1.00, F1+ 95.63 ± 8.1, BLEU 1, Cc 0.252, Tt 137.362, Gg 96; Bvt1f: F1+ 94.54 ± 7.3, Cc 0.035, Tt 26.801, Gg 95.",
+      "confidence": "medium"
+    },
+    "main_results-20-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Results and Discussions",
+      "span_id": "C0074-D-P018-TEXT-0002",
+      "page": 18,
+      "excerpt": "BART generally writes syntactically better triples than T5... codeT5 is in third place... FlanT5 and pileT5 are unable to solve our task... Bvtf1... offers good performances at a low cost.",
+      "confidence": "medium"
+    },
+    "main_results-20-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Constrained Decoding Based on Grammar",
+      "span_id": "C0074-D-P019-TEXT-0003",
+      "page": 19,
+      "excerpt": "approximately 250 ms per token... about six times slower than unconstrained decoding... outputs were often incomplete and syntactically incorrect.",
+      "confidence": "medium"
+    },
+    "strengths-21-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Abstract",
+      "span_id": "C0074-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Our benchmark covers the validity of the produced triples, the model’s performance, the training behaviour and the resources needed.",
+      "confidence": "medium"
+    },
+    "strengths-21-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Dataset and Ground Truth",
+      "span_id": "C0074-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "we only keep the graphs valid against this shape... keep only the triples whose values can be found in the Wikipedia abstract.",
+      "confidence": "medium"
+    },
+    "strengths-21-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion",
+      "span_id": "C0074-D-P023-TEXT-0003",
+      "page": 23,
+      "excerpt": "the finetuning of BART models using the inline factorised Turtle Light (Bvtf1) is a good tradeoff between efficiency and frugality.",
+      "confidence": "medium"
+    },
+    "weaknesses-22-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Robustness of the Models to Prompt Noise",
+      "span_id": "C0074-D-P021-TABLE-0001",
+      "page": 21,
+      "excerpt": "A recurrent limitation... inability to infer entity URIs autonomously... omitting the entity entirely yields better performance than masking it.",
+      "confidence": "medium"
+    },
+    "weaknesses-22-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Results and Discussions",
+      "span_id": "C0074-D-P016-TEXT-0002",
+      "page": 16,
+      "excerpt": "high values of lev... generally related to the generation of incomplete, truncated or empty sequences.",
+      "confidence": "medium"
+    },
+    "weaknesses-22-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion",
+      "span_id": "C0074-D-P023-TEXT-0003",
+      "page": 23,
+      "excerpt": "models can repair structure but occasionally corrupt values or omit facts.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-23-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Conclusion",
+      "span_id": "C0074-D-P023-TEXT-0001",
+      "page": 23,
+      "excerpt": "In future work, we will focus on systematizing the task proposed at a Knowledge base scale, notably by extending our proposal to Shape containing both data and object properties.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-23-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Constrained Decoding Based on Grammar",
+      "span_id": "C0074-D-P019-TEXT-0002",
+      "page": 19,
+      "excerpt": "none of our tests yielded conclusive results... substantial increase in inference time... outputs were often incomplete and syntactically incorrect.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-23-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "CodeT5 Coding Capacities",
+      "span_id": "C0074-D-P020-TEXT-0003",
+      "page": 20,
+      "excerpt": "the pretrained CodeT5 model is not capable of handling RDF data or understanding the specific syntactic conventions of Turtle.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Conclusion",
+      "span_id": "C0074-D-P023-TEXT-0001",
+      "page": 23,
+      "excerpt": "In future work, we will focus on systematizing the task proposed at a Knowledge base scale... extending... to Shape containing both data and object properties.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Discussion",
+      "span_id": "C0074-D-P023-TEXT-0002",
+      "page": 23,
+      "excerpt": "models are producing parsable triples and can still be further finetuned using explicit examples of refinement.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Constrained Decoding Based on Grammar",
+      "span_id": "C0074-D-P019-TEXT-0003",
+      "page": 19,
+      "excerpt": "it remains to be verified whether similar benefits can be achieved for small language models.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Dataset and Ground Truth",
+      "span_id": "C0074-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "two problems are pointed out: the values in a triple do not necessarily appear in the corresponding text, and conversely, the facts in the text may not have counterpart triples in the knowledge base.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Robustness of the Models to Prompt Noise",
+      "span_id": "C0074-D-P021-TEXT-0002",
+      "page": 21,
+      "excerpt": "their inability to infer entity URIs autonomously, even when the extracted relations are correct.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion",
+      "span_id": "C0074-D-P023-TEXT-0003",
+      "page": 23,
+      "excerpt": "extending our proposal to Shape containing both data and object properties.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-26-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0074-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The produced material is made open and reusable under an open license: the extension of the 12ShadesofRDF Github repository as well as the complete experimental results.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-26-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Experimental set-up—Fine-Tuning Details",
+      "span_id": "C0074-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "Our code is based on a fork of REBEL which we extended and adapted to our task. It is published under an open license.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Determine how RDF output linearization affects fine-tuned frugal encoder-decoder models for extracting datatype-property facts from Wikipedia abstracts and directly generating RDF graphs for DBpedia dbo:Person resources. The paper specifically seeks the model/syntax trade-off that maximizes extraction quality and expressivity while minimizing cost.",
+  "methodology": {
+    "primary_family": "Generative text-to-structure methods",
+    "secondary_families": [
+      "Instruction-tuned or fine-tuned LLM methods",
+      "Ontology-constrained and schema-guided methods",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "end_to_end",
+    "supervision_setting": "supervised",
+    "description": "The method treats restricted relation extraction as supervised sequence-to-sequence translation from a Wikipedia abstract plus the target DBpedia entity URI to a linearized RDF graph. Pipeline order: (1) obtain a DBpedia dump and matching Wikipedia abstracts; (2) select dbo:Person datatype triples; (3) retain graph descriptions valid against a maximal SHACL shape and retain only triples whose values occur in the paired abstract; (4) order triples with rdf:type first and URL-encode/clean URIs; (5) serialize each graph in 13 alternatives—list/tags and factorized versions, RDF/XML, N-Triples, Turtle, JSON-LD, Turtle Light variants, and Turtle Ultra Light—with vocabulary extensions for W3C syntaxes; (6) make cross-validation splits; (7) fine-tune BART, T5, CodeT5, FlanT5, and PileT5 base models using model-specific prompts; (8) parse generated output and measure RDF validity, SHACL validity, subject correctness, extraction quality, learning dynamics, training time, and CO2. Supplementary experiments test EBNF grammar-constrained decoding, CodeT5-based refinement, and robustness to reordered/masked/no-URI/no-instruction prompts. No entity linking, coreference resolution, or joint entity-relation extraction module is described; the supplied entity URI identifies the graph subject."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "A maximal SHACL NodeShape targeting dbo:Person constrains dataset creation, required/optional datatype properties, and validation. It includes rdf:type, rdfs:label, dbo:birthDate or dbo:birthYear, dbo:deathDate, dbo:deathYear, dbo:alias, and dbo:birthName with datatype/cardinality constraints. Outputs are evaluated by their rate of SHACL-valid parsed triples. The shape is a predefined schema constraint, not ontology discovery.",
+    "evidence": [
+      {
+        "span_id": "C0074-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "The usage of constraints (e.g., with SHACL or ShEx) can help formalise both the extraction/learning set target and the validation of the produced output."
+      },
+      {
+        "span_id": "C0074-D-P006-PICTURE-0002",
+        "page": 6,
+        "excerpt": "a maximal SHACL shape (s*) targeting class dbo:Person... specifying which property is mandatory and which one is optional."
+      },
+      {
+        "span_id": "C0074-D-P013-TEXT-0003",
+        "page": 13,
+        "excerpt": "we define the rate of SHACL-Validated Triples R_SVT."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing: filter DBpedia–Wikipedia pairs by value occurrence in abstracts; order triples; URL-encode and clean URIs; typographically clean prediction/reference outputs",
+    "Entity typing: generate rdf:type dbo:Person as part of the output graph",
+    "Relation and triple extraction: generate datatype-property RDF triples from Wikipedia abstracts",
+    "Graph construction: directly generate linearized RDF graphs/serializations",
+    "Graph validation and correction: parse generated triples; measure SHACL validity; supplementary constrained decoding and CodeT5 refinement experiments"
+  ],
+  "input_output": {
+    "input_type": "English Wikipedia abstracts paired with a DBpedia entity URI; training labels are DBpedia graphs containing selected dbo:Person datatype properties.",
+    "input_granularity": "One entity-level Wikipedia abstract at a time, with the target entity URI in the input prompt.",
+    "output_representation": "A set of RDF triples/graph describing one dbo:Person entity and its datatype properties, generated as one of 13 textual linearizations: list, tags, factorized list/tags, RDF/XML, N-Triples, Turtle, JSON-LD, Turtle Light variants, or Turtle Ultra Light. The target properties are rdf:type, rdfs:label, dbo:birthYear, dbo:birthDate, dbo:deathYear, dbo:deathDate, dbo:birthName, and dbo:alias."
+  },
+  "models_and_tools": [
+    "Fine-tuned base encoder-decoder models: BART (140M parameters), T5 (220M), CodeT5 (220M), FlanT5 (248M), and PileT5 (248M)",
+    "Model prompts: BART uses '$entity_URI : $Abstract'; T5-family models use 'Translate English to $Syntax: [$entity_URI] $Abstract'",
+    "Code base: open-licensed fork of REBEL, extended for the task; syntax-specific parsers and typographic checker/cleaner",
+    "RDFlib for deterministic triple-ordering issue handling; SHACL/ShapeVOWL for target-shape representation; CodeCarbon for CO2-equivalent measurements",
+    "Supplementary tools: transformers-CFG extended for BART/T5 EBNF-constrained decoding; pretrained and fine-tuned CodeT5 tested as RDF syntax refiners"
+  ],
+  "datasets": [
+    "Custom ground-truth dataset D sampled from DBpedia Snapshot 2022-09 and paired Wikipedia abstracts",
+    "Scope: 6,000 dbo:Person entities, reported as described by 28M triples; selected target properties have 13,832 distinct values",
+    "Data quality processing: retain only DBpedia graphs valid against the maximal SHACL shape and only triples whose values are present in the matched Wikipedia abstract",
+    "Evaluation/training split: 5,000 examples in rotating 5-fold cross-validation (4,000 train and 1,000 test per fold), plus 250 disjoint evaluation examples"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Parsed-triples rate RPT = parsed generated outputs / generated outputs",
+      "Correct-subject rate RCS = outputs containing the target URI / parsed outputs",
+      "SHACL-validated-triples rate RSVT = valid parsed outputs / parsed outputs",
+      "Strict micro precision, recall, F1 (F1−) and macro per-property precision, recall, F1 (P+, R+, F1+)",
+      "BLEU for similarity of string datatype values; Levenshtein edit distance for non-parsable RDF output",
+      "Global grade Gg = RPT × RCS × RSVT × F1+ × 100",
+      "Training behavior: velocity, stability, and divergence, monitored for RPT and F1− at saturation threshold 0.9",
+      "Resources: training time in minutes and CodeCarbon CO2-equivalent grams"
+    ],
+    "baselines": [
+      "Within-study comparison across all model–linearization configurations (five encoder-decoder models and 13 syntax variants); the original model M is defined as predicting an SHACL-valid graph from an abstract",
+      "Context robustness baselines for BART Bvt1f and T5 T5vt1f: baseline inputs versus reordered sentences, masked entity URI, no entity URI, and (for T5) no instruction",
+      "No external state-of-the-art method baseline is reported as evaluated in the main benchmark"
+    ],
+    "setting": "Controlled supervised benchmark over 13 output syntaxes and five base-size encoder-decoder models. Models are fine-tuned on a single GPU: Tesla V100-SXM2-32GB for BART and NVIDIA A100 80GB PCIe for T5-family models. BART uses inverse-square-root scheduling with initial learning rate 0.00005; T5-family models use Adafactor with 0.001. All use 1,000 warm-up steps and early stopping patience 5. The paper states 5-fold data cross-validation, while metric averaging is described as over 10 folds for each configuration; this inconsistency should be checked before using the aggregate results in a final review."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Best global-grade configuration: T5 with vocabulary extension and JSON-LD (T5vj): RPT=1.00, RCS=1.00, RSVT=1.00, macro F1+=95.63±8.1, macro precision=100.00, macro recall=94.37, BLEU=1.00, Gg=96; it required 137.362 minutes and 0.252 g CO2-equivalent.",
+      "Best reported frugal compromise: BART with vocabulary extension, one-line factorized Turtle Light (Bvt1f): RPT=RCS=RSVT=1.00, macro F1+=94.54±7.3, Gg=95, 26.801 minutes, and 0.035 g CO2-equivalent. The conclusion calls it a good efficiency/frugality trade-off.",
+      "BART factorized tags (Bvgf) had macro F1+=95.47±8.1 and Gg=95 with 29.149 minutes/0.042g; BART Turtle Ultra Light (Bvu) had macro F1+=95.25±6.7 and Gg=95 with 42.000 minutes/0.056g.",
+      "BART and T5 were the strongest model families; CodeT5 was third despite no Wikipedia pretraining. FlanT5 and PileT5 were unable to solve the task reliably; for Turtle Ultra Light their RPT values were 0.95 and 0.59, respectively.",
+      "Output syntax is decisive: Turtle Ultra Light was robust across models, W3C syntaxes were generally poorer, and factorization plus one-line writing improved Turtle Light. Light syntax can greatly reduce output length; for BART, one-line factorized Turtle Light required 121 tokens for the longest 7-property target versus 541 with JSON-LD.",
+      "Grammar-constrained decoding was unsuccessful in this setting: about 250 ms/token, roughly six times unconstrained decoding, with incomplete and syntactically invalid output. Fine-tuned CodeT5 partially corrected malformed Turtle Light but reduced triple count and sometimes changed factual values or omitted facts.",
+      "Prompt robustness: reordered sentences preserved or slightly improved macro F1+ for Bvt1f (78.22 baseline; 80.23 reordered) and T5vt1f (68.84; 73.67), but removing/masking the entity makes RCS zero; removing T5's instruction reduced macro F1+ to 54.78 and Gg to zero."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0074-D-P024-TABLE-0001",
+        "page": 24,
+        "excerpt": "T5vj: RPT 1.00, RCS 1.00, RSVT 1.00, F1+ 95.63 ± 8.1, BLEU 1, Cc 0.252, Tt 137.362, Gg 96; Bvt1f: F1+ 94.54 ± 7.3, Cc 0.035, Tt 26.801, Gg 95."
+      },
+      {
+        "span_id": "C0074-D-P018-TEXT-0002",
+        "page": 18,
+        "excerpt": "BART generally writes syntactically better triples than T5... codeT5 is in third place... FlanT5 and pileT5 are unable to solve our task... Bvtf1... offers good performances at a low cost."
+      },
+      {
+        "span_id": "C0074-D-P019-TEXT-0003",
+        "page": 19,
+        "excerpt": "approximately 250 ms per token... about six times slower than unconstrained decoding... outputs were often incomplete and syntactically incorrect."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author-reported: comprehensive controlled benchmark crossing five relatively small encoder-decoder models with 13 RDF/graph linearizations, assessing validity, extraction quality, training behavior, time, and carbon footprint.",
+      "Author-reported: target labels are quality filtered by a maximal SHACL shape and by checking that values occur in the paired Wikipedia abstract, directly addressing distant-supervision mismatch.",
+      "Author-reported: uses syntax-aware parsing, subject-copy, SHACL-validity, strict macro property metrics, string BLEU, and resource measures rather than F1 alone.",
+      "Author-reported: yields an implementable high-quality/frugal configuration, BART + one-line factorized Turtle Light, with fully parsed, correct-subject, SHACL-valid outputs and Gg 95.",
+      "[Review-level inference] The focused, closed dbo:Person datatype-property schema makes the empirical comparison especially useful for choosing serialization and model configurations in similarly constrained RDF population tasks."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0074-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "Our benchmark covers the validity of the produced triples, the model’s performance, the training behaviour and the resources needed."
+      },
+      {
+        "span_id": "C0074-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "we only keep the graphs valid against this shape... keep only the triples whose values can be found in the Wikipedia abstract."
+      },
+      {
+        "span_id": "C0074-D-P023-TEXT-0003",
+        "page": 23,
+        "excerpt": "the finetuning of BART models using the inline factorised Turtle Light (Bvtf1) is a good tradeoff between efficiency and frugality."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author-reported: the task is restricted to datatype properties for dbo:Person and a small fixed target shape; it does not demonstrate general open-domain or object-property graph construction.",
+      "Author-reported: models depend on a supplied target entity URI; masking or omitting it yields RCS=0, so they cannot autonomously identify the graph subject.",
+      "Author-reported: syntactic correctness remains a bottleneck; malformed outputs can arise from omitted/misplaced syntax tokens, truncation, or empty/incomplete sequences.",
+      "Author-reported: constrained grammar decoding was slow and ineffective here; CodeT5 refinement could make syntactic repairs but at the cost of missing facts or corrupted values.",
+      "[Review-level inference] Because labels are retained only when DBpedia values are literally found in the abstract and the output schema is constrained, the reported scores should not be interpreted as performance on extracting all facts expressed in unrestricted text."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0074-D-P021-TABLE-0001",
+        "page": 21,
+        "excerpt": "A recurrent limitation... inability to infer entity URIs autonomously... omitting the entity entirely yields better performance than masking it."
+      },
+      {
+        "span_id": "C0074-D-P016-TEXT-0002",
+        "page": 16,
+        "excerpt": "high values of lev... generally related to the generation of incomplete, truncated or empty sequences."
+      },
+      {
+        "span_id": "C0074-D-P023-TEXT-0003",
+        "page": 23,
+        "excerpt": "models can repair structure but occasionally corrupt values or omit facts."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The benchmark is restricted to a predefined maximal SHACL shape for dbo:Person datatype properties; future work is needed to extend it to shapes containing both data and object properties at knowledge-base scale.",
+      "The models cannot reliably infer the subject entity URI when it is masked or absent from the prompt.",
+      "Constrained decoding with the available library did not work in the experimental setting: it substantially increased inference time and often produced incomplete/invalid output.",
+      "Direct pretrained CodeT5 did not understand RDF/Turtle conventions sufficiently to fix simple errors; fine-tuned CodeT5 only partially repaired errors and could alter values or omit information.",
+      "The authors note that formal comparison of some metrics is limited where FlanT5/PileT5 configurations never reach saturation."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0074-D-P023-TEXT-0001",
+        "page": 23,
+        "excerpt": "In future work, we will focus on systematizing the task proposed at a Knowledge base scale, notably by extending our proposal to Shape containing both data and object properties."
+      },
+      {
+        "span_id": "C0074-D-P019-TEXT-0002",
+        "page": 19,
+        "excerpt": "none of our tests yielded conclusive results... substantial increase in inference time... outputs were often incomplete and syntactically incorrect."
+      },
+      {
+        "span_id": "C0074-D-P020-TEXT-0003",
+        "page": 20,
+        "excerpt": "the pretrained CodeT5 model is not capable of handling RDF data or understanding the specific syntactic conventions of Turtle."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed: extend the approach from the restricted dbo:Person datatype shape to knowledge-base-scale shapes that contain both datatype and object properties.",
+      "Author-proposed: further fine-tune code-oriented models using explicit refinement examples to improve RDF syntax repair.",
+      "Author-proposed/conditional: verify whether grammar-constrained decoding can benefit small language models with a more effective implementation, while addressing its inference cost and complex-grammar failures.",
+      "[Review-level inference] Evaluate on multiple entity classes, relations involving entities, and held-out temporal/domain sources to establish transfer beyond the fixed person schema and value-in-text filtering.",
+      "[Review-level inference] Add a subject-identification/linking component or evaluate models without a gold entity URI, since subject copying is required for successful RCS."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0074-D-P023-TEXT-0001",
+        "page": 23,
+        "excerpt": "In future work, we will focus on systematizing the task proposed at a Knowledge base scale... extending... to Shape containing both data and object properties."
+      },
+      {
+        "span_id": "C0074-D-P023-TEXT-0002",
+        "page": 23,
+        "excerpt": "models are producing parsable triples and can still be further finetuned using explicit examples of refinement."
+      },
+      {
+        "span_id": "C0074-D-P019-TEXT-0003",
+        "page": 19,
+        "excerpt": "it remains to be verified whether similar benefits can be achieved for small language models."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Whether results on this constrained, datatype-only dbo:Person extraction task transfer to knowledge-base-scale RDF generation with object properties and broader shapes.",
+      "How to obtain syntactically valid structured output from small encoder-decoder models without costly/ineffective constrained decoding or semantic damage during post-generation correction.",
+      "How to infer or link the correct graph subject without providing its entity URI in the input.",
+      "How to handle the quality/completeness mismatch between DBpedia triples and text outside the paper's filtering setup.",
+      "[Review-level inference] The paper does not resolve coreference, entity linking, or cross-document entity resolution, which would be needed for a complete open-text-to-KG pipeline."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0074-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "two problems are pointed out: the values in a triple do not necessarily appear in the corresponding text, and conversely, the facts in the text may not have counterpart triples in the knowledge base."
+      },
+      {
+        "span_id": "C0074-D-P021-TEXT-0002",
+        "page": 21,
+        "excerpt": "their inability to infer entity URIs autonomously, even when the extracted relations are correct."
+      },
+      {
+        "span_id": "C0074-D-P023-TEXT-0003",
+        "page": 23,
+        "excerpt": "extending our proposal to Shape containing both data and object properties."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that the extended 12ShadesOfRDF GitHub repository and complete experimental results are openly available under an open license. Code is based on and extends a fork of REBEL. Listed links: github.com/datalogism/12ShadesOfRDFSyntax; wandb.ai/celian-ringwald/12ShadesOfRDFExtension; wandb.ai/celian-ringwald/12ShadesOfRDF."
+}

@@ -1,0 +1,918 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0038",
+    "title": "Incorporating Contexts to Open Information Extraction",
+    "pdf_path": "data/manual-pdfs/C0038.pdf",
+    "authors": [
+      "Dong Kuicai"
+    ],
+    "year": 2024,
+    "venue": "Nanyang Technological University, Doctor of Philosophy thesis",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The thesis studies open information extraction (OpenIE): extracting open-form structured relational tuples from unstructured open-domain text. It develops four context-oriented contributions: DocOIE/DocIE for document-context-aware extraction; SMiLe-OIE, which fuses dependency and constituency syntax through GCNs and multi-view learning; Chunk-OIE, which uses Sentence as Chunk sequence (SaC) and chunk dependencies; and SpecTup, a semantic-and-syntactic post-processor for tuple-level speculation detection. The work frames these outputs as useful for knowledge-base/knowledge-graph construction and other downstream tasks.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0038-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "INCORPORATING CONTEXTS TO OPEN INFORMATION EXTRACTION ... DONG KUICAI",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0038-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "A thesis submitted to the Nanyang Technological University ... Doctor of Philosophy ... 2024",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0038-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "A thesis submitted to the Nanyang Technological University in partial fulfillment of the requirements for the degree of Doctor of Philosophy.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0038-D-P021-TEXT-0001",
+      "page": 21,
+      "excerpt": "OpenIE is a critical NLP task that aims to extract structured relational tuples from unstructured open-domain text.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-02": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0038-D-P021-TEXT-0002",
+      "page": 21,
+      "excerpt": "The key theme of our approaches is to utilize various types of context to improve OpenIE.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-03": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0038-D-P022-TEXT-0003",
+      "page": 22,
+      "excerpt": "Finally, we propose and study a new research task to examine the reliability of OpenIE, by linking speculation detection and OpenIE.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0038-D-P021-TEXT-0001",
+      "page": 21,
+      "excerpt": "OpenIE aims to extract succinct but meaningful entities/relations in open form. As a result, the format of relations and subject/objects of the extracted tuples are more flexible, making it challenging to evaluate.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "1.1.1 What is essential?",
+      "span_id": "C0038-D-P030-TEXT-0002",
+      "page": 30,
+      "excerpt": "OpenIE methodologies have been conducted to facilitate the creation of of Knowledge Bases (KB) or Knowledge Graphs (KG).",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-03": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "6.1 Introduction",
+      "span_id": "C0038-D-P117-TEXT-0003",
+      "page": 117,
+      "excerpt": "Downstream applications like knowledge base population typically only require factual tuples, not speculative ones.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0038-D-P021-TEXT-0001",
+      "page": 21,
+      "excerpt": "we present a neural OpenIE system named DocIE",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "7.1 Conclusion",
+      "span_id": "C0038-D-P114-TEXT-0002",
+      "page": 114,
+      "excerpt": "Chunk-OIE, a simple end-to-end BERT-based model by leveraging SaC and chunk-level dependencies",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-03": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "6.5.1 Experiment Setup",
+      "span_id": "C0038-D-P128-TEXT-0003",
+      "page": 128,
+      "excerpt": "We tokenize and encode input sentence tokens using bert-base-uncased.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.4 DocIE Model",
+      "span_id": "C0038-D-P071-PICTURE-0001",
+      "page": 71,
+      "excerpt": "DocIE mainly consists of two parts: source-context encoder, and encoder-decoder.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "4.4.3 Experimental Setups",
+      "span_id": "C0038-D-P089-TEXT-0002",
+      "page": 89,
+      "excerpt": "we obtain the constituency annotations through Stanford CoreNLP and the dependency annotations through spaCy.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "6.1 Introduction",
+      "span_id": "C0038-D-P117-TEXT-0003",
+      "page": 117,
+      "excerpt": "we propose a new research task for OpenIE that focuses on tuple-level speculation detection.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3.4 DocIE Model",
+      "span_id": "C0038-D-P071-TEXT-0001",
+      "page": 71,
+      "excerpt": "DocIE mainly consists of two parts: source-context encoder, and encoder-decoder.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "5.3.5 Main Results",
+      "span_id": "C0038-D-P112-TABLE-0002",
+      "page": 112,
+      "excerpt": "Chunk-OIE models with ◦ are trained in two stages, while those with • are trained end-to-end.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-03": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "6.3 Task Formulation",
+      "span_id": "C0038-D-P123-TEXT-0003",
+      "page": 123,
+      "excerpt": "it is more meaningful and practical to formulate speculation detection as a post-processing task.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "1.1.2 What are the challenges?",
+      "span_id": "C0038-D-P030-TEXT-0001",
+      "page": 30,
+      "excerpt": "existing neural OpenIE systems rely on unsupervised or distant-supervised extraction strategies in model learning.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "3.5.2 DocIE Against Baselines",
+      "span_id": "C0038-D-P074-TEXT-0002",
+      "page": 74,
+      "excerpt": "DocIE is trained by pseudo labels produced by traditional OpenIE models which do not consider document-level context.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-03": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "4.4.1 Dataset",
+      "span_id": "C0038-D-P089-TEXT-0003",
+      "page": 89,
+      "excerpt": "we follow Kolluru et al. to convert bootstrapped OpenIE4 tuples as labels for distant supervised model training.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-04": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "6.5.1 Experiment Setup",
+      "span_id": "C0038-D-P127-TEXT-0004",
+      "page": 127,
+      "excerpt": "we only use tuples from the LSOIE dataset as inputs to the proposed tuple-level speculation detection model.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.4 DocIE Model",
+      "span_id": "C0038-D-P071-PICTURE-0001",
+      "page": 71,
+      "excerpt": "our encoder consists of (i) bottom blocks which take the concatenation of source sentence and context sentences as input, and (ii) top blocks which take only the representation of the source sentence.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.4 DocIE Model",
+      "span_id": "C0038-D-P072-TEXT-0002",
+      "page": 72,
+      "excerpt": "The encoder-decoder generation module follows CopyAttention which casts OpenIE task as a sequence-to-sequence generation task with copying mechanism.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4.4.5–4.5",
+      "span_id": "C0038-D-P090-TEXT-0003",
+      "page": 90,
+      "excerpt": "SMiLe-OIE which combines heterogeneous syntactic information through multi-view learning.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "1.1 Motivation",
+      "span_id": "C0038-D-P026-TEXT-0001",
+      "page": 26,
+      "excerpt": "OpenIE is not restricted to extract information from a set of pre-defined relation/entity types.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "1.1.1 What is essential?",
+      "span_id": "C0038-D-P027-TEXT-0002",
+      "page": 27,
+      "excerpt": "certain methodologies are designed to map any OpenIE tuple to a designated KB schema.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "6.2.1 Annotation",
+      "span_id": "C0038-D-P096-TEXT-0003",
+      "page": 96,
+      "excerpt": "LSOIE defines n-ary tuples, in the form of (ARG0, Relation, ARG1, ... , ARGn).",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "1.1 Motivation",
+      "span_id": "C0038-D-P025-TABLE-0001",
+      "page": 25,
+      "excerpt": "The extracted tuples have either binary or n-ary relations. Binary tuple is in (Subject; Relation; Object) format.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "4.4.3 Experimental Setups",
+      "span_id": "C0038-D-P089-TEXT-0002",
+      "page": 89,
+      "excerpt": "We collect all verbs from the sentences ... through spaCy POS tagger. In addition, we obtain the constituency annotations through Stanford CoreNLP and the dependency annotations through spaCy.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "6.1 Introduction",
+      "span_id": "C0038-D-P117-TEXT-0003",
+      "page": 117,
+      "excerpt": "we expect an OpenIE model to indicate whether an extracted tuple is speculative or not.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0038-D-P021-TEXT-0001",
+      "page": 21,
+      "excerpt": "extract structured relational tuples from unstructured open-domain text.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3.4 DocIE Model",
+      "span_id": "C0038-D-P071-TEXT-0002",
+      "page": 71,
+      "excerpt": "Given source sentence si, we regard its surrounding sentences ... as contextual sentences.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-03": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "6.3 Task Formulation",
+      "span_id": "C0038-D-P123-TEXT-0003",
+      "page": 123,
+      "excerpt": "the inputs are the source sentence ... and a set of relational tuples ... extracted from this sentence.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.4 DocIE Model",
+      "span_id": "C0038-D-P071-TEXT-0001",
+      "page": 71,
+      "excerpt": "t represents the context window size. The larger t is, the more document-level context ci covers.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.5.3 Impact of Context Window Size",
+      "span_id": "C0038-D-P075-TEXT-0002",
+      "page": 75,
+      "excerpt": "the optimal window size for healthcare domain is 5, and the number is 4 for transportation.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-03": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "5.4 Summary",
+      "span_id": "C0038-D-P113-TEXT-0003",
+      "page": 113,
+      "excerpt": "Sentence as Chunk sequence (SaC) as an intermediate layer for OpenIE tuple extraction.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "1.1 Motivation",
+      "span_id": "C0038-D-P025-TEXT-0001",
+      "page": 25,
+      "excerpt": "Binary tuple is in (Subject; Relation; Object) format, while n-ary tuple is in (ARG0; Relation; ARG1; ... ; ARGn) format.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "6.3 Task Formulation",
+      "span_id": "C0038-D-P123-TEXT-0002",
+      "page": 123,
+      "excerpt": "the task of tuple-level speculation detection is to predict whether a tuple ti is speculative.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-03": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "6.4.3 Speculation Detection",
+      "span_id": "C0038-D-P126-TEXT-0003",
+      "page": 126,
+      "excerpt": "For the multi-class classification task ... 7 classes (non-speculative and the six modal auxiliary verbs).",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.4 DocIE Model",
+      "span_id": "C0038-D-P072-TEXT-0001",
+      "page": 72,
+      "excerpt": "we use BERT as the bottom blocks to perform semantic interactions between source sentence s and context c.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.4.3 Experimental Setups",
+      "span_id": "C0038-D-P089-TEXT-0002",
+      "page": 89,
+      "excerpt": "We build and run our system with Pytorch 1.9.0 and AllenNLP 0.9.0 framework.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "6.4.2–6.5.1",
+      "span_id": "C0038-D-P127-TEXT-0003",
+      "page": 127,
+      "excerpt": "we devise a strategy to embed each dependency relation as a vector and aggregate the corresponding neighbouring nodes together.",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.5.6 Summary",
+      "span_id": "C0038-D-P073-TEXT-0001",
+      "page": 73,
+      "excerpt": "we manually annotate 800 sentences from 80 documents in two domains (Healthcare and Transportation) to form a DocOIE dataset for evaluation.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.4.1 Dataset",
+      "span_id": "C0038-D-P089-TABLE-0002",
+      "page": 89,
+      "excerpt": "LSOIE-wiki-train ... 19,591 sentences, 45,890 tuples; LSOIE-sci-train ... 38,826 sentences, 80,271 tuples; CaRB-test ... 1,282 sentences, 5,263 tuples.",
+      "confidence": "medium"
+    },
+    "datasets-17-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "5.3.4 Pre-trained Chunking Model",
+      "span_id": "C0038-D-P111-TEXT-0003",
+      "page": 111,
+      "excerpt": "CoNLL-2000 ... annotates 8,936 / 2,012 sentences for Train/Test sets. Open Information Annotation (OIA) v1.1 ... contains 12,543 / 2,002 / 2,077 examples for Train / Development / Test sets.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.4.4 Evaluation",
+      "span_id": "C0038-D-P090-TEXT-0001",
+      "page": 90,
+      "excerpt": "Both scoring functions report F1 score based on precision and recall computed by tuples matching. Each tuple extracted is associated with a confidence value ... report the area under P-R curve (AUC).",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "5.3.4 Pre-trained Chunking Model",
+      "span_id": "C0038-D-P111-TEXT-0002",
+      "page": 111,
+      "excerpt": "We report Precision / Recall / F1 for both chunk-boundary detection and chunk type classification.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "6.5.1 Experiment Setup",
+      "span_id": "C0038-D-P127-TEXT-0003",
+      "page": 127,
+      "excerpt": "We use Precision, Recall, and F1 measures for evaluation ... Macro-averaged scores ... Positive scores ... Recall by difficulty.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "3.5 Experiments",
+      "span_id": "C0038-D-P074-TEXT-0001",
+      "page": 74,
+      "excerpt": "We evaluate DocIE and compare its results with two baseline neural OpenIE models, CopyAttention+BERT and IMoJIE.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.4.2 Baselines for Comparison",
+      "span_id": "C0038-D-P090-TEXT-0002",
+      "page": 90,
+      "excerpt": "We build baselines that utilize syntactic information, based on BERT.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-03": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "6.5.2 Baselines",
+      "span_id": "C0038-D-P128-TEXT-0003",
+      "page": 128,
+      "excerpt": "we have designed four sets of methods to compare: (i) only semantic representations, (ii) only syntactic representations, (iii) both semantic and syntactic representations, and (iv) keywords matching.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "3.5.3 Impact of Context Window Size",
+      "span_id": "C0038-D-P075-PICTURE-0001",
+      "page": 75,
+      "excerpt": "We evaluated the range from 1 to 6 and plot F1 scores against window size changes.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.4.3 Experimental Setups",
+      "span_id": "C0038-D-P090-TEXT-0002",
+      "page": 90,
+      "excerpt": "all baselines mentioned above are implemented to extract n-ary tuples on LSOIE-wiki and LSOIE-sci datasets, and binary tuples on CaRB dataset.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "6.5.1 Experiment Setup",
+      "span_id": "C0038-D-P127-TEXT-0003",
+      "page": 127,
+      "excerpt": "we have 38,823 sentences and 79,128 tuples for training ... 11,339 sentences and 22,038 tuples for testing.",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "3.5.2 DocIE Against Baselines",
+      "span_id": "C0038-D-P074-TABLE-0001",
+      "page": 74,
+      "excerpt": "DocIE w transformer: Healthcare AUC 47.4, Prec 74.4, Rec 51.3, F1 60.8; Transportation AUC 38.5, Prec 56.0, Rec 57.5, F1 56.9.",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.4 Experiments",
+      "span_id": "C0038-D-P090-TABLE-0002",
+      "page": 90,
+      "excerpt": "SMiLe-OIE: LSOIE-wiki F1 51.73 AUC 50.88; LSOIE-sci F1 60.51 AUC 57.22; CaRB F1 53.76 AUC 34.92.",
+      "confidence": "medium"
+    },
+    "main_results-21-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "5.3.5 Main Results",
+      "span_id": "C0038-D-P112-TABLE-0003",
+      "page": 112,
+      "excerpt": "Chunk-OIE (OIA-SP) and Chunk-OIE (CoNLL) ... p-values ... 0.0021 and 0.0027, indicating both results are significant at p < 0.01.",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.5.2–3.5.3",
+      "span_id": "C0038-D-P075-TEXT-0001",
+      "page": 75,
+      "excerpt": "DocIE w transformer achieves the best AUC and F1 in both domains.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.5 Summary",
+      "span_id": "C0038-D-P093-TEXT-0002",
+      "page": 93,
+      "excerpt": "leveraging syntactic information can benefit OpenIE task significantly, and multi-view learning can effectively guide the heterogeneous syntactic information fusion.",
+      "confidence": "medium"
+    },
+    "strengths-22-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.3.5 Main Results",
+      "span_id": "C0038-D-P112-TEXT-0003",
+      "page": 112,
+      "excerpt": "Chunk-OIE surpasses its token-level counterpart BERT+Dep-GCN on all the four datasets.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.5.2 DocIE Against Baselines",
+      "span_id": "C0038-D-P075-TEXT-0001",
+      "page": 75,
+      "excerpt": "The potential of utilizing document-level context is yet to be fully realized.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.5.5 Error Analysis",
+      "span_id": "C0038-D-P077-TEXT-0002",
+      "page": 77,
+      "excerpt": "Incompleteness ... 28% ... Incorrect Boundary: 27% ... Redundant Extractions: 15% ... Grammatical Errors: 13%.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.3.5 Main Results",
+      "span_id": "C0038-D-P113-TEXT-0003",
+      "page": 113,
+      "excerpt": "SaC treats chunks with coordination ... as a single unit, resulting in poor scores in such cases.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "3.5.2–3.5.3",
+      "span_id": "C0038-D-P075-TEXT-0001",
+      "page": 75,
+      "excerpt": "DocIE is trained by pseudo labels produced by traditional OpenIE models which do not consider document-level context.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "3.5.3 Impact of Context Window Size",
+      "span_id": "C0038-D-P075-TEXT-0002",
+      "page": 75,
+      "excerpt": "a large window size might introduce noise and dominate source representation learning.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "7.2.1 Future Work",
+      "span_id": "C0038-D-P139-TEXT-0003",
+      "page": 139,
+      "excerpt": "the existing OpenIE datasets and models lack the capability to efficiently process this type of semi-structured information.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "7.2.1 Future Work",
+      "span_id": "C0038-D-P139-TEXT-0001",
+      "page": 139,
+      "excerpt": "our ultimate goal is to extend OpenIE to encompass other modalities, including images, videos, speech, and more.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "7.2.2 Future Work",
+      "span_id": "C0038-D-P140-TEXT-0002",
+      "page": 140,
+      "excerpt": "the creation of high-quality human-annotated benchmarks or datasets becomes imperative.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "7.2.3 Future Work",
+      "span_id": "C0038-D-P141-TEXT-0003",
+      "page": 141,
+      "excerpt": "we envision OpenIE evolving into a fundamental pre-training objective for a universal approach to IE.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "1.1.2 What are the challenges",
+      "span_id": "C0038-D-P029-TEXT-0001",
+      "page": 29,
+      "excerpt": "it is difficult to design a standardized and comprehensive guideline for annotation.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "6.5.3 Main Results",
+      "span_id": "C0038-D-P129-TEXT-0002",
+      "page": 129,
+      "excerpt": "the F1 of speculative class is only 62.6, leaving a big room for future investigation.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "7.2.2 Future Work",
+      "span_id": "C0038-D-P140-TEXT-0003",
+      "page": 140,
+      "excerpt": "For robust and effective multilingual OpenIE systems, a more diverse and extensive dataset is essential.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Improve the accuracy, contextual interpretation, efficiency, and reliability of open-domain relational-tuple extraction. The thesis identifies flexible open-form tuple representations, difficult evaluation, insufficient gold training data, sentence-only extraction, underused syntax, token-level span granularity, and speculative/non-factual tuples as central problems. It treats OpenIE tuples as candidate structured facts usable for KB/KG construction, but does not itself implement a complete knowledge-graph construction system.",
+  "methodology": {
+    "primary_family": "Neural NLP pipelines",
+    "secondary_families": [
+      "Transformer encoder methods",
+      "Generative text-to-structure methods",
+      "Linguistic and dependency-based extraction",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "not_reported",
+    "description": "The thesis contributes four complementary context-aware OpenIE methods. (1) DocIE: for each source sentence, concatenate neighbouring document sentences with segment embeddings; BERT bottom blocks model source-context interactions, top Transformer blocks retain source-token representations, and a CopyAttention-style LSTM decoder with attention/copying generates relational tuples. (2) SMiLe-OIE: convert dependency trees and flattened constituency trees into word-node graphs; encode BERT token representations plus relation indicators using dependency and constituency GCNs; fuse the two views using auxiliary intra-view and inter-view multi-view losses; predict BIO-style argument/relation tags for n-ary tuples. (3) Chunk-OIE: represent a sentence as a sequence of chunks (SaC), encode chunk type and chunk-level dependency structure with BERT and a dependency GCN, and learn chunking and OpenIE extraction in either two stages or end-to-end multi-task training. (4) SpecTup/OIE-Spec: after tuples are extracted, mark tuple relation tokens, encode sentence semantics with BERT, aggregate one-hop dependency neighbours of the relation using a relation-aware GCN, concatenate semantic and syntactic representations, and classify each tuple as speculative/non-speculative (optionally one of six modal classes). No entity linking, coreference resolution, canonicalization, graph fusion, or graph materialization is performed by these proposed systems."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "Open-schema extraction: OpenIE is explicitly not restricted to predefined relation/entity types or an ontology. Outputs are open-form binary or n-ary tuples. Existing KB schemas are discussed only as downstream mappings from OpenIE tuples, not as constraints used by the proposed models.",
+    "evidence": [
+      {
+        "span_id": "C0038-D-P026-TEXT-0001",
+        "page": 26,
+        "excerpt": "OpenIE is not restricted to extract information from a set of pre-defined relation/entity types."
+      },
+      {
+        "span_id": "C0038-D-P027-TEXT-0002",
+        "page": 27,
+        "excerpt": "certain methodologies are designed to map any OpenIE tuple to a designated KB schema."
+      },
+      {
+        "span_id": "C0038-D-P096-TEXT-0003",
+        "page": 96,
+        "excerpt": "LSOIE defines n-ary tuples, in the form of (ARG0, Relation, ARG1, ... , ARGn)."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing (sentence segmentation, tokenization, POS tagging, dependency and constituency parsing, chunking)",
+    "Entity and concept extraction (open-form argument spans)",
+    "Relation and triple extraction (binary and n-ary relational tuples)",
+    "Graph validation and correction (tuple-level speculation/reliability classification)"
+  ],
+  "input_output": {
+    "input_type": "English unstructured open-domain natural-language text: source sentences, optionally surrounding document sentences; SpecTup additionally receives an extracted relational tuple aligned to its source sentence.",
+    "input_granularity": "Primarily sentence level. DocIE uses a source sentence plus a symmetric local document-context window; Chunk-OIE operates on chunks; SMiLe-OIE and SpecTup operate on tokens and parse-graph neighbourhoods. Document context is evaluated with 4–5 neighbouring sentences on each side depending on domain.",
+    "output_representation": "Open-form relational tuples: binary (subject, relation, object) or n-ary (ARG0, Relation, ARG1, …, ARGn). SpecTup outputs a binary speculation label or a seven-way label (non-speculative plus six modal-auxiliary categories) for an input tuple. The thesis does not serialize or construct a complete KG."
+  },
+  "models_and_tools": [
+    "DocIE: BERT source-context encoder; top Transformer blocks; CopyAttention-style attention-and-copy LSTM decoder",
+    "SMiLe-OIE: BERT; relation indicator embedding; dependency GCN; constituency GCN; multi-view learning; BIO tagging",
+    "Chunk-OIE: BERT; SaC chunk/type embeddings; chunk-level dependency GCN; multi-task chunking/OpenIE objective",
+    "SpecTup: bert-base-uncased; tuple-relation embedding; relation-aware GCN over a dependency subgraph; softmax classifier",
+    "PyTorch 1.9.0; AllenNLP 0.9.0; spaCy and spaCy-transformers; Stanford CoreNLP"
+  ],
+  "datasets": [
+    "DocOIE: 800 expert-annotated source sentences from 80 documents in Healthcare and Transportation; 2,122 relational tuples; used to evaluate document-context-aware extraction",
+    "DocOIE pseudo-label training corpus: tuples generated by ReVerb, OpenIE4, and their fallback combinations",
+    "LSOIE Wiki and Science: QA-SRL 2.0-derived n-ary OpenIE data; used for SMiLe-OIE, Chunk-OIE, and SpecTup",
+    "CaRB: crowdsourced binary OpenIE benchmark; used for testing",
+    "BenchIE: fact-synset OpenIE benchmark; used for Chunk-OIE evaluation",
+    "CoNLL-2000 and OIA v1.1: chunking data used to train/evaluate SaC chunking"
+  ],
+  "evaluation": {
+    "metrics": [
+      "OpenIE: precision, recall, F1, and area under the precision-recall curve (AUC)",
+      "LSOIE evaluation in SMiLe-OIE: exact tuple matching of relations and arguments; CaRB: default lexical partial tuple matching",
+      "BenchIE: precision, recall, F1 against fact synsets",
+      "Chunking: exact-boundary precision/recall/F1 and exact-boundary-plus-type F1",
+      "SpecTup: macro precision/recall/F1, positive-class precision/recall/F1, and speculative-tuple recall by easy/medium/hard difficulty"
+    ],
+    "baselines": [
+      "DocIE: ReVerb, OpenIE4, Rev+Oie4, Oie4+Rev, CopyAttention+BERT, IMoJIE, and DocIE without top Transformer",
+      "SMiLe-OIE: GloVe+BiLSTM, GloVe+BiLSTM+CRF, BERT, CopyAttention, IMoJIE, CIGL-OIE+IGL-CA, BERT+Dep-GCN, BERT+Const-GCN, and graph-fusion variants",
+      "Chunk-OIE: CopyAttention, IMoJIE, CIGL-OIE, BERT, BERT+Dep-GCN, SMiLe-OIE, SpanOIE, OIE@OIA, and SaC variants",
+      "SpecTup: modal-keyword and enriched-keyword matching, semantic-only BERT variants, syntactic-only full/subgraph variants, and semantic-plus-syntactic variants"
+    ],
+    "setting": "Evaluation spans four related studies. DocIE evaluates document-context extraction on DocOIE Healthcare and Transportation using CaRB scoring, with context-window ablation from 1 to 6. SMiLe-OIE trains/evaluates on LSOIE Wiki/Science and tests on CaRB, using reimplementations for n-ary settings where necessary. Chunk-OIE evaluates LSOIE Wiki/Science, CaRB, and BenchIE; compares two-stage and end-to-end training, SaC choices, and ablations. SpecTup combines LSOIE Wiki and Science subsets after removing repeats: 38,823 sentences/79,128 tuples for training and 11,339/22,038 for testing; results average three random seeds."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "DocIE with top Transformer achieved the best DocOIE results: Healthcare AUC 47.4, precision 74.4, recall 51.3, F1 60.8; Transportation AUC 38.5, precision 56.0, recall 57.5, F1 56.9. The no-top-Transformer variant was second best in both domains.",
+      "SMiLe-OIE achieved F1/AUC of 51.73/50.88 on LSOIE-Wiki, 60.51/57.22 on LSOIE-Science, and 53.76/34.92 on CaRB. It outperformed the listed baselines on both LSOIE subsets but not CIGL-OIE+IGL-CA on CaRB AUC.",
+      "Chunk-OIE variants using CoNLL or OIA simple phrases gave the strongest results across LSOIE and BenchIE. End-to-end CoNLL reached 52.8/50.5 F1/AUC on LSOIE-Wiki and 61.5/59.7 on LSOIE-Science; end-to-end OIA-SP reached BenchIE F1 27.2 (precision 42.4, recall 20.1). The reported improvements of OIA-SP and CoNLL over the token baseline were significant at p<0.01.",
+      "SpecTup achieved macro P/R/F1 80.7/77.5/79.0 and speculative-positive P/R/F1 66.9/58.9/62.6; it had recall 100.0/67.2/40.9 for easy/medium/hard speculative cases. The authors state it outperformed all reported baselines, while noting substantial room for improvement in positive-class F1."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0038-D-P074-TABLE-0001",
+        "page": 74,
+        "excerpt": "DocIE w transformer: Healthcare AUC 47.4, Prec 74.4, Rec 51.3, F1 60.8; Transportation AUC 38.5, Prec 56.0, Rec 57.5, F1 56.9."
+      },
+      {
+        "span_id": "C0038-D-P090-TABLE-0002",
+        "page": 90,
+        "excerpt": "SMiLe-OIE: LSOIE-wiki F1 51.73 AUC 50.88; LSOIE-sci F1 60.51 AUC 57.22; CaRB F1 53.76 AUC 34.92."
+      },
+      {
+        "span_id": "C0038-D-P112-TABLE-0003",
+        "page": 112,
+        "excerpt": "Chunk-OIE (OIA-SP) and Chunk-OIE (CoNLL) ... p-values ... 0.0021 and 0.0027, indicating both results are significant at p < 0.01."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author-reported: document context improved OpenIE over all tested sentence-level systems on two domain-specific DocOIE evaluations.",
+      "Author-reported: SMiLe-OIE integrates complementary dependency and constituency syntax; both syntax types and their multi-view fusion improved results in ablations and comparisons.",
+      "Author-reported: Chunk-OIE uses a simpler chunk-level representation yet achieved strong or state-of-the-art results on several OpenIE datasets, with significant improvements over its token-level counterpart.",
+      "Author-reported: SpecTup addresses tuple-level rather than sentence-level uncertainty and substantially improves hard-case recall relative to keyword matching.",
+      "Review-level inference: the four contributions cover complementary extraction-quality concerns—discourse context, syntax, unit granularity, and factuality—so they can inform different points in a Text-to-KG pipeline rather than representing mutually exclusive KG builders."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0038-D-P075-TEXT-0001",
+        "page": 75,
+        "excerpt": "DocIE w transformer achieves the best AUC and F1 in both domains."
+      },
+      {
+        "span_id": "C0038-D-P093-TEXT-0002",
+        "page": 93,
+        "excerpt": "leveraging syntactic information can benefit OpenIE task significantly, and multi-view learning can effectively guide the heterogeneous syntactic information fusion."
+      },
+      {
+        "span_id": "C0038-D-P112-TEXT-0003",
+        "page": 112,
+        "excerpt": "Chunk-OIE surpasses its token-level counterpart BERT+Dep-GCN on all the four datasets."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author-reported: DocIE still relies on sentence-level pseudo labels from traditional extractors, so the document-context potential is not fully realized; it also exhibits incomplete, incorrect-boundary, redundant, and grammatical tuple errors.",
+      "Author-reported: Chunk-OIE handles coordinated chunks such as “Lily and Jimmy” as one unit and consequently scores poorly on such cases; performance on CaRB is comparable rather than uniformly best.",
+      "Author-reported: SpecTup's positive speculative-class F1 is 62.6, and hard speculative cases have only 40.9 recall.",
+      "Review-level inference: because the thesis evaluates tuple extraction and tuple reliability rather than entity canonicalization, linking, fusion, or graph serialization, an additional KG-construction layer is required before its outputs become a coherent knowledge graph."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0038-D-P075-TEXT-0001",
+        "page": 75,
+        "excerpt": "The potential of utilizing document-level context is yet to be fully realized."
+      },
+      {
+        "span_id": "C0038-D-P077-TEXT-0002",
+        "page": 77,
+        "excerpt": "Incompleteness ... 28% ... Incorrect Boundary: 27% ... Redundant Extractions: 15% ... Grammatical Errors: 13%."
+      },
+      {
+        "span_id": "C0038-D-P113-TEXT-0003",
+        "page": 113,
+        "excerpt": "SaC treats chunks with coordination ... as a single unit, resulting in poor scores in such cases."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "DocIE is trained with pseudo labels generated by traditional OpenIE models that lack document-level context, limiting the extent to which context can be learned.",
+      "Large context windows can introduce noise and dominate source-representation learning.",
+      "Existing OpenIE datasets and models do not efficiently process semi-structured text such as tables, lists, and equations.",
+      "OpenIE is predominantly English-focused; multilingual benchmarks remain scarce and existing BenchIE multilingual instances are small.",
+      "Back-translation-based multilingual corpora may be unreliable and biased."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0038-D-P075-TEXT-0001",
+        "page": 75,
+        "excerpt": "DocIE is trained by pseudo labels produced by traditional OpenIE models which do not consider document-level context."
+      },
+      {
+        "span_id": "C0038-D-P075-TEXT-0002",
+        "page": 75,
+        "excerpt": "a large window size might introduce noise and dominate source representation learning."
+      },
+      {
+        "span_id": "C0038-D-P139-TEXT-0003",
+        "page": 139,
+        "excerpt": "the existing OpenIE datasets and models lack the capability to efficiently process this type of semi-structured information."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed: develop neural OpenIE for semi-structured text and ultimately multimodal sources, enabling cross-modal knowledge fusion and reasoning.",
+      "Author-proposed: create larger, high-quality human-annotated multilingual benchmarks spanning widely used and minor languages.",
+      "Author-proposed: use OpenIE as a pre-training objective to support a more unified information-extraction model across NER, relation extraction, keyphrase extraction, and SRL.",
+      "Review-level inference: train document-context-aware extraction with document-context-aware gold or higher-quality labels, then integrate tuple validation with entity linking/canonicalization and provenance-aware graph construction."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0038-D-P139-TEXT-0001",
+        "page": 139,
+        "excerpt": "our ultimate goal is to extend OpenIE to encompass other modalities, including images, videos, speech, and more."
+      },
+      {
+        "span_id": "C0038-D-P140-TEXT-0002",
+        "page": 140,
+        "excerpt": "the creation of high-quality human-annotated benchmarks or datasets becomes imperative."
+      },
+      {
+        "span_id": "C0038-D-P141-TEXT-0003",
+        "page": 141,
+        "excerpt": "we envision OpenIE evolving into a fundamental pre-training objective for a universal approach to IE."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-stated: standardized and comprehensive OpenIE annotation/evaluation remains difficult because one fact can have multiple acceptable tuple forms.",
+      "Author-stated: reliable extraction of speculative tuples remains unresolved, especially hard cases whose modal label is absent from the source sentence.",
+      "Author-stated: robust extraction from semi-structured, multilingual, and multimodal sources requires new datasets and methods.",
+      "Review-level inference: producing KG-ready facts still requires unresolved downstream handling of entity identity, relation canonicalization/schema mapping, deduplication, provenance, and graph-level consistency; these functions are discussed as applications but not solved by the proposed methods."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0038-D-P029-TEXT-0001",
+        "page": 29,
+        "excerpt": "it is difficult to design a standardized and comprehensive guideline for annotation."
+      },
+      {
+        "span_id": "C0038-D-P129-TEXT-0002",
+        "page": 129,
+        "excerpt": "the F1 of speculative class is only 62.6, leaving a big room for future investigation."
+      },
+      {
+        "span_id": "C0038-D-P140-TEXT-0003",
+        "page": 140,
+        "excerpt": "For robust and effective multilingual OpenIE systems, a more diverse and extensive dataset is essential."
+      }
+    ]
+  },
+  "code_and_data_availability": "not_reported"
+}

@@ -1,0 +1,864 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0087",
+    "title": "Automated Construction and Growth of a Large Ontology",
+    "pdf_path": "data/manual-pdfs/C0087.pdf",
+    "authors": [
+      "Fabian M. Suchanek"
+    ],
+    "year": 2009,
+    "venue": "Doctoral thesis, Saarland University, Faculties of Natural Sciences and Technology",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "This thesis presents an automated ontology-construction and growth architecture: YAGO as a high-coverage, high-accuracy core ontology; LEILA for extracting knowledge from natural-language text; and SOFIE for assessing plausibility and integrating extracted facts into YAGO, yielding an ever-growing, reconciled ontology.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0087-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Automated Construction and Growth of a Large Ontology — Fabian M. Suchanek.",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0087-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Saarbrücken, Germany, 2009-01-12.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0087-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Thesis for obtaining the title of Doctor of Engineering of the Faculties of Natural Sciences and Technology of Saarland University.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0087-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The proposed approach consists of three contributions: a core ontology, YAGO; a tool for information extraction, LEILA; and an integration mechanism, SOFIE.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "3.1.1 Problem Statement",
+      "span_id": "C0087-D-P039-TEXT-0001",
+      "page": 39,
+      "excerpt": "We aim for a domain-independent ontology... constructed automatically... [and] an ontology of high accuracy.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "5.1.1 Problem statement",
+      "span_id": "C0087-D-P085-TEXT-0002",
+      "page": 85,
+      "excerpt": "Gathering knowledge for an ontology is different from pure information extraction... words have to be disambiguated to entities.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "5.1.3 Contribution",
+      "span_id": "C0087-D-P092-TEXT-0001",
+      "page": 92,
+      "excerpt": "SOFIE casts the task of information extraction into a logical reasoning problem... word disambiguation, pattern matching, and rule-based reasoning on the ontology all become part of one unified framework.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "4.1.3 Contribution",
+      "span_id": "C0087-D-P064-TEXT-0001",
+      "page": 64,
+      "excerpt": "LEILA uses a link-grammar representation... counterexamples... [and] statistical learning (namely SVMs and kNN classifiers).",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.2 Construction of YAGO",
+      "span_id": "C0087-D-P046-TEXT-0002",
+      "page": 46,
+      "excerpt": "Different information extraction methods are applied to Wikipedia to extract candidate entities and candidate facts... Then, quality control techniques are applied.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0087-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Together, they form an integrative architecture, which does not only gather new facts, but also reconcile them with the existing facts.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "5.3.3 SOFIE Algorithm",
+      "span_id": "C0087-D-P113-TEXT-0002",
+      "page": 113,
+      "excerpt": "Run Adapted LEILA... producing textual facts F′; Compute True Hypotheses... with R, F ∪ F′.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "3.4 Conclusion",
+      "span_id": "C0087-D-P060-TEXT-0001",
+      "page": 60,
+      "excerpt": "A one-time manual effort was necessary to bootstrap the extraction. We identified and defined attributes and relations for the infoboxes and... category heuristics.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "4.2.2 Algorithm",
+      "span_id": "C0087-D-P067-TEXT-0002",
+      "page": 67,
+      "excerpt": "LEILA expects a function that decides [whether a pair is an] Example... Counterexample... Candidate...",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-03": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "5.4.2.2 Large Scale Experiment—Discussion",
+      "span_id": "C0087-D-P127-TEXT-0003",
+      "page": 127,
+      "excerpt": "This axiomatic information still has to be provided by hand.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.2 Construction of YAGO",
+      "span_id": "C0087-D-P046-TEXT-0001",
+      "page": 46,
+      "excerpt": "The construction of the YAGO ontology takes place in two stages: First... extract candidate entities and candidate facts... Then, quality control techniques are applied.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4.2.2 Algorithm",
+      "span_id": "C0087-D-P068-TEXT-0002",
+      "page": 68,
+      "excerpt": "LEILA’s core algorithm proceeds in three phases: Discovery... Training... Testing.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "5.3.3 SOFIE Algorithm",
+      "span_id": "C0087-D-P113-TEXT-0003",
+      "page": 113,
+      "excerpt": "Based on the ontological and the textual facts, the algorithm engenders hypotheses and computes their truth values.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.1.3 Contribution",
+      "span_id": "C0087-D-P042-TEXT-0001",
+      "page": 42,
+      "excerpt": "The facts from Wikipedia are combined with the taxonomic structure of WordNet.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.2.2 Quality Control",
+      "span_id": "C0087-D-P051-TEXT-0002",
+      "page": 51,
+      "excerpt": "Type Checking eliminates... facts that do not respect the domain and range constraints of their relation.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "5.2.2 Rules",
+      "span_id": "C0087-D-P097-TEXT-0003",
+      "page": 97,
+      "excerpt": "The pattern comes into play only if the two entities are of the correct type.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.2.2 Quality Control",
+      "span_id": "C0087-D-P051-SECTION-0001",
+      "page": 51,
+      "excerpt": "Canonicalization makes each fact and each entity reference unique... Type Checking eliminates... facts that do not respect the domain and range constraints.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "4.2.2 Algorithm",
+      "span_id": "C0087-D-P068-TEXT-0002",
+      "page": 68,
+      "excerpt": "An optional anaphora resolution... replaces a third person pronoun by the subject of the preceding sentence.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "5.3.3 SOFIE Algorithm",
+      "span_id": "C0087-D-P113-TEXT-0003",
+      "page": 113,
+      "excerpt": "The true hypotheses can be accepted as new members of the ontology... [and] a later run of SOFIE would adopt the expresses facts from the previous run.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3.1.4.2 Wikipedia",
+      "span_id": "C0087-D-P044-TEXT-0001",
+      "page": 44,
+      "excerpt": "Each Wikipedia article has an unstructured, natural language part... [and] some Wikipedia articles also have an infobox.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "5.3.1 Adaptation of LEILA",
+      "span_id": "C0087-D-P101-TEXT-0002",
+      "page": 101,
+      "excerpt": "We aim to process also information that is not in the form of natural language sentences. This includes... Wikipedia infoboxes as well as HTML-tables.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.2.1 Information Extraction",
+      "span_id": "C0087-D-P046-TEXT-0001",
+      "page": 46,
+      "excerpt": "Each Wikipedia page title is a candidate to become an individual in YAGO.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "4.1.4 Linguistic Analysis",
+      "span_id": "C0087-D-P065-TEXT-0002",
+      "page": 65,
+      "excerpt": "A pattern is a linkage in which two words have been replaced by placeholders.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-03": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "5.3.1 Adaptation of LEILA",
+      "span_id": "C0087-D-P103-TEXT-0003",
+      "page": 103,
+      "excerpt": "Find Patterns input: Document d; Maximal pattern length k (default: 6).",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.2.3 Storage and Export Formats",
+      "span_id": "C0087-D-P053-TEXT-0001",
+      "page": 53,
+      "excerpt": "We maintain a folder for each relation... With each fact, we store the estimated accuracy as a value between 0 and 1.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.2.3.2 Export Formats",
+      "span_id": "C0087-D-P053-TEXT-0002",
+      "page": 53,
+      "excerpt": "FACTS(factId, arg1, relation, arg2, accuracy).",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-03": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "4.4 Conclusion",
+      "span_id": "C0087-D-P083-TEXT-0003",
+      "page": 83,
+      "excerpt": "LEILA cannot produce ontological facts directly. First, LEILA only extracts words, not entities.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.2.1.1 Infobox Harvesting",
+      "span_id": "C0087-D-P046-TEXT-0001",
+      "page": 46,
+      "excerpt": "For YAGO, we have identified 170 highly frequent attributes. For each... we have manually designed a target relation with domain and range.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.2.4.3 Feature Model for the SVM Classifier",
+      "span_id": "C0087-D-P076-TEXT-0002",
+      "page": 76,
+      "excerpt": "We used SVMLight with its default parameters.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "5.4 Experiments",
+      "span_id": "C0087-D-P114-TEXT-0003",
+      "page": 114,
+      "excerpt": "The experiments were run on a standard desktop machine... We used the PostgreSQL Database system.",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.1.4.2 Wikipedia",
+      "span_id": "C0087-D-P044-TEXT-0001",
+      "page": 44,
+      "excerpt": "We used the XML dump of Wikipedia as of September 2008. It is approximately 18 Gigabytes large.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.3.1 Setup—Corpora",
+      "span_id": "C0087-D-P076-TEXT-0002",
+      "page": 76,
+      "excerpt": "Wikicomposers... 872 HTML documents... Wikigeneral... 78141 HTML documents... Googlecomposers... 492 HTML documents.",
+      "confidence": "medium"
+    },
+    "datasets-17-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "5.4.2.2 Large Scale Experiment—Corpus",
+      "span_id": "C0087-D-P124-TEXT-0003",
+      "page": 124,
+      "excerpt": "We picked 400 US Senators at random from YAGO... This resulted in 3440 HTML files.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "3.3.1 Precision—Evaluation Setup",
+      "span_id": "C0087-D-P055-TEXT-0001",
+      "page": 55,
+      "excerpt": "13 judges participated in the evaluation and evaluated a total number of 5200 facts.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.3.1 Setup—Metrics",
+      "span_id": "C0087-D-P078-TEXT-0002",
+      "page": 78,
+      "excerpt": "precision, recall, and their harmonic mean F1 can be computed as...",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "5.4.1.1 Controlled Experiments—Metrics",
+      "span_id": "C0087-D-P115-TEXT-0003",
+      "page": 115,
+      "excerpt": "We use the standard precision and recall metrics.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "3.3.1 Precision—Comparison",
+      "span_id": "C0087-D-P057-TEXT-0001",
+      "page": 57,
+      "excerpt": "It is difficult to compare YAGO to other information extraction approaches, because the approaches usually differ in the choice of relations and... sources.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.3.1 Setup—Competitors",
+      "span_id": "C0087-D-P077-TEXT-0002",
+      "page": 77,
+      "excerpt": "Our competitors... TextToOnto... Snowball... CV-system.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-03": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "5.4.3.1 SOFIE Setting",
+      "span_id": "C0087-D-P127-TEXT-0003",
+      "page": 127,
+      "excerpt": "We compared the FMS* Algorithm... to Johnson's Algorithm and to the simple greedy Algorithm.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "3.3.1 Precision—Evaluation Setup",
+      "span_id": "C0087-D-P055-TEXT-0001",
+      "page": 55,
+      "excerpt": "Our evaluation compared YAGO against the ground truth of Wikipedia.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.3.1 Setup—Competitors",
+      "span_id": "C0087-D-P077-TEXT-0002",
+      "page": 77,
+      "excerpt": "We ran LEILA on the corpora and the target relations that our competitors have been tested on by their authors.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "5.4 Experiments",
+      "span_id": "C0087-D-P114-TEXT-0003",
+      "page": 114,
+      "excerpt": "For all experiments, we used the weight W = 100... w = 1... and ε = 0.1.",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "3.3.1 Precision",
+      "span_id": "C0087-D-P056-TABLE-0001",
+      "page": 56,
+      "excerpt": "WordNetLinker... 95.11911% ± 4.564%; InfoboxType... 95.08927% ± 4.186%.",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.3.2.2 Results with different competitors",
+      "span_id": "C0087-D-P081-TABLE-0002",
+      "page": 81,
+      "excerpt": "LEILA(kNN) F1 48.30% versus Text2Onto 3.10% and TextToOnto 7.53%; on Snowball, LEILA(kNN) F1 64.06% versus Snowball 31.72%.",
+      "confidence": "medium"
+    },
+    "main_results-21-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "5.4.2.2 Large Scale Experiment",
+      "span_id": "C0087-D-P125-TABLE-0003",
+      "page": 125,
+      "excerpt": "Total: # Output pairs 744; # Correct pairs 673; Precision 90.45%.",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Abstract",
+      "span_id": "C0087-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Together, they form an integrative architecture... [that] reconcile[s] them with the existing facts.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.2.2 Quality Control",
+      "span_id": "C0087-D-P051-TEXT-0002",
+      "page": 51,
+      "excerpt": "Canonicalization makes each fact and each entity reference unique... Type Checking eliminates... facts that do not respect the domain and range constraints.",
+      "confidence": "medium"
+    },
+    "strengths-22-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.1.3 Contribution",
+      "span_id": "C0087-D-P092-TEXT-0003",
+      "page": 92,
+      "excerpt": "SOFIE will automatically re-consider the disambiguation if more evidence for another meaning becomes apparent.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.4 Conclusion",
+      "span_id": "C0087-D-P060-TEXT-0001",
+      "page": 60,
+      "excerpt": "A one-time manual effort was necessary to bootstrap the extraction.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.4 Conclusion",
+      "span_id": "C0087-D-P083-TEXT-0002",
+      "page": 83,
+      "excerpt": "LEILA shows weak performance when applied to inhomogeneous texts (such as random Internet documents).",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.4.2.2 Large Scale Experiment",
+      "span_id": "C0087-D-P125-TABLE-0003",
+      "page": 125,
+      "excerpt": "Total [processing time]: 15:50 hours.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "3.4 Conclusion",
+      "span_id": "C0087-D-P060-TEXT-0001",
+      "page": 60,
+      "excerpt": "YAGO cannot know more than what is available in the infoboxes and categories of Wikipedia.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.4 Conclusion",
+      "span_id": "C0087-D-P083-TEXT-0002",
+      "page": 83,
+      "excerpt": "LEILA only extracts words, not entities... LEILA requires counterexamples... [and] shows weak performance... [on] random Internet documents.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "5.4.2.2 Large Scale Experiment—Discussion",
+      "span_id": "C0087-D-P127-TEXT-0003",
+      "page": 127,
+      "excerpt": "The current model does not allow quantifiers on the rules... This axiomatic information still has to be provided by hand.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "7 Conclusion—Outlook",
+      "span_id": "C0087-D-P147-TEXT-0001",
+      "page": 147,
+      "excerpt": "Ways could be found to discover relations automatically... New sources... New models... New reasoning mechanisms... [and] new ways of combining existing knowledge.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "5.5 Conclusion—Discussion",
+      "span_id": "C0087-D-P129-TEXT-0002",
+      "page": 129,
+      "excerpt": "Other types of textual facts are conceivable, such as facts about the co-occurrences of entities, facts about the topic of the document or facts concerning the style or language of the document.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "5.4.2.1 Controlled Experiments—Discussion",
+      "span_id": "C0087-D-P124-TEXT-0003",
+      "page": 124,
+      "excerpt": "This problem could be addressed... [with] linguistic analysis... anaphora resolution and noun phrase resolution... [or] temporal reasoning.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.4.2.2 Large Scale Experiment—Discussion",
+      "span_id": "C0087-D-P127-TEXT-0001",
+      "page": 127,
+      "excerpt": "One option would be to add a rule saying that a pattern can only express a single relation. This... would also prohibit using the same pattern for both the birth date and the birth place.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.4.2.1 Controlled Experiments—Discussion",
+      "span_id": "C0087-D-P124-TEXT-0002",
+      "page": 124,
+      "excerpt": "Pattern matching systems often have difficulties establishing the connection... [and] anaphora resolution and noun phrase resolution... could help.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "7 Conclusion—Outlook",
+      "span_id": "C0087-D-P147-TEXT-0003",
+      "page": 147,
+      "excerpt": "Ways could be found to discover relations automatically, so that they do not have to be provided by hand.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "4.2.1 Preprocessing",
+      "span_id": "C0087-D-P066-TEXT-0001",
+      "page": 66,
+      "excerpt": "All tools mentioned here are available as Java Tools at http://mpii.de/~suchanek/downloads/javatools.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "3.2.3.2 Export Formats",
+      "span_id": "C0087-D-P053-TEXT-0002",
+      "page": 53,
+      "excerpt": "We provide software to load YAGO into an Oracle, Postgres, or MySQL database.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-03": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "7 Conclusion—Outlook",
+      "span_id": "C0087-D-P147-TEXT-0003",
+      "page": 147,
+      "excerpt": "We plan to make the code toolkit of YAGO, LEILA and SOFIE publicly available.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Automatically construct and continuously expand a domain-independent ontology containing individuals, a hierarchical class taxonomy, relations, and factual assertions, while minimizing human effort and maintaining high accuracy. The central Text-to-KG problem is turning Wikipedia and arbitrary natural-language/Web documents into canonical ontological facts that can be reconciled with an existing knowledge base.",
+  "methodology": {
+    "primary_family": "Validation, correction, and knowledge-fusion methods",
+    "secondary_families": [
+      "Rule-based NLP",
+      "Linguistic and dependency-based extraction",
+      "Classical machine learning",
+      "Ontology-constrained and schema-guided methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "weakly_supervised",
+    "description": "Execution-order architecture: (1) construct YAGO from the September 2008 English Wikipedia XML dump and WordNet: parse Wikipedia pages; harvest infoboxes using a manually specified attribute-to-relation map with domain/range constraints; derive types and facts from category patterns; map category heads to WordNet synsets; resolve redirects, normalize values/names, deduplicate, and type-check candidates; export reified facts with witnesses. (2) LEILA preprocesses limited-scope text (encoding/format cleanup, sentence detection, date/number normalization, stemming), parses sentences with Link Grammar, optionally resolves third-person pronouns to the preceding sentence subject, induces positive and negative relation patterns from seed examples/counterexamples, generalizes them with adaptive kNN or SVM, and emits candidate binary relation pairs. (3) SOFIE adapts LEILA into a faster surface-pattern generator for arbitrary Web, Wikipedia, tables, categories, infoboxes, and note-like text; represents pattern occurrences and document-level word-in-context disambiguation priors as textual facts; creates hypotheses for entity senses, pattern-to-relation meanings, and canonical facts; grounds ontology/text rules; and selects a consistent, sparse set of true hypotheses through weighted MAX-SAT using FMS* plus dominating-unit-clause propagation. Accepted facts and optionally learned pattern meanings are added to YAGO for later runs."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "YAGO is both the target ontology and SOFIE's background knowledge. Its schema supplies classes, taxonomy, relation domains/ranges, functional-relation constraints, types, means links, and reified witness/provenance relations. Wikipedia infobox attributes and category regular expressions are manually mapped to defined YAGO relations; WordNet provides the upper taxonomy and synsets. SOFIE enforces schema constraints during inference, including domain/range checks and functionality, and supports RDFS-compatible export.",
+    "evidence": [
+      {
+        "span_id": "C0087-D-P042-TEXT-0001",
+        "page": 42,
+        "excerpt": "The facts from Wikipedia are combined with the taxonomic structure of WordNet."
+      },
+      {
+        "span_id": "C0087-D-P051-TEXT-0002",
+        "page": 51,
+        "excerpt": "Type Checking eliminates... facts that do not respect the domain and range constraints of their relation."
+      },
+      {
+        "span_id": "C0087-D-P097-TEXT-0003",
+        "page": 97,
+        "excerpt": "The pattern comes into play only if the two entities are of the correct type."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing: character and format cleanup, sentence detection, date/number normalization, stemming, tokenization",
+    "Entity and concept extraction: Wikipedia page titles, links, names, proper names, numbers, dates, and WordNet synsets",
+    "Entity typing: Wikipedia categories/infobox types plus WordNet hierarchy; domain/range and type-coherence checks",
+    "Coreference resolution: optional conservative third-person-pronoun replacement in LEILA",
+    "Entity resolution and linking: Wikipedia redirect resolution, canonical identifiers, WordNet linking, and SOFIE document-level word-sense disambiguation",
+    "Relation and triple extraction: infobox/category mappings, LEILA patterns, and SOFIE surface/sesquiary patterns",
+    "Ontology or schema discovery: category-to-WordNet class mapping and defined YAGO relation/schema construction",
+    "Graph construction: YAGO reification graph and canonical fact creation",
+    "Knowledge fusion and deduplication: reconciliation with YAGO, duplicate removal, precision preference, hypothesis integration",
+    "Graph validation and correction: reductive/inductive/type-coherence checks; SOFIE weighted logical constraints",
+    "Graph updating: accept SOFIE true hypotheses as new ontology members and reuse learned expresses facts in later runs"
+  ],
+  "input_output": {
+    "input_type": "Semi-structured Wikipedia XML/HTML markup (infoboxes, category pages, redirects, links, article text), WordNet, limited-scope HTML/text corpora, and arbitrary unstructured Web HTML documents; SOFIE can also process tables, categories, and note-form text.",
+    "input_granularity": "Wikipedia dump/article/page, infobox row and category string for YAGO; sentence and pair of words/mentions for LEILA; document-level word-in-context plus token windows (binary patterns default maximum length 6; sesquiary patterns default maximum length 3) for SOFIE.",
+    "output_representation": "Canonical YAGO ontological facts/triples in a reification graph, including n-ary facts, relation domain/range-compatible entities or literals, estimated accuracy, and provenance/witness facts; exports include XML, relational database tuples FACTS(factId,arg1,relation,arg2,accuracy), and RDFS. LEILA alone outputs non-canonical word pairs; SOFIE outputs canonicalized, accepted ontological hypotheses/facts and optionally pattern-to-relation facts."
+  },
+  "models_and_tools": [
+    "YAGO extraction: XML-dump parser; manually designed attribute map (170 frequent infobox attributes) and category-map regular expressions; Wikipedia redirect resolution; WordNet synset linker; reductive, inductive, and type-coherence checking; RDFS-compatible reification.",
+    "LEILA: Link Grammar Parser; Unicode/HTML preprocessing tools; PlingStemmer; optional conservative anaphora resolution; link-grammar pattern features (bridge plus placeholder contexts); adaptive kNN and SVM classifiers implemented with SVMlight default parameters.",
+    "SOFIE: adapted surface-pattern and sesquiary-pattern LEILA; bag-of-words disambiguation prior over YAGO meanings; weighted MAX-SAT formulation; FMS/FMS* greedy solver with DUC propagation and on-demand clause generation; PostgreSQL for experiments."
+  ],
+  "datasets": [
+    "YAGO construction sources: English Wikipedia XML dump from September 2008 (approximately 18 GB) and WordNet 3.0 noun synsets.",
+    "LEILA corpora: Wikicomposers (872 HTML documents); Wikigeography (313); Wikigeneral (78,141 random Wikipedia HTML documents); Googlecomposers (492 Web documents); Snowball headquarters subcorpus (150 text documents); Lonely Planet corpus used for comparison (1,880 files).",
+    "SOFIE semi-structured experiments: 100 random Wikipedia newspaper articles, seeded with 10 instances each for hasLanguage, ownedBy, and newspaperFoundedOnDate; 1,000 random Wikipedia articles of at least 10 kB for 14 frequent YAGO relations.",
+    "SOFIE Web experiments: 150 Snowball newspaper articles with 120 organizations; 3,440 non-Wikipedia HTML biographies retrieved for 400 randomly selected US senators (up to 10 biographies per senator)."
+  ],
+  "evaluation": {
+    "metrics": [
+      "Manual fact correctness/precision with Wilson confidence intervals for YAGO; 5,200 heuristic-derived facts assessed by 13 judges.",
+      "LEILA: precision, recall, F1; Ideal Metric for functional relations; Relaxed Ideal Metric for non-right-unique type relation; 95% confidence intervals.",
+      "SOFIE: manually constructed ground truth and standard precision/recall for controlled Wikipedia experiments; Ideal Metric precision/recall for headquarters extraction; manual precision-only assessment for large-scale Wikipedia and biography corpora; weighted MAX-SAT unsatisfied-clause counts/weight and approximation ratio for FMS* evaluation."
+    ],
+    "baselines": [
+      "YAGO: informational comparisons to Espresso, LEILA, taxonomy induction, KnowItAll/KnowItNow, TextRunner, KYLIN, KOG, Ponzetto et al., and Alice; direct cross-system score comparisons are explicitly limited by task/source differences.",
+      "LEILA: TextToOnto, Text2Onto, Snowball, and the Cimiano–Völker context-vector (CV) system.",
+      "SOFIE: Snowball for the headquarters corpus; Johnson's weighted MAX-SAT algorithm, a simple greedy algorithm, and all-true/all-false assignments for MAX-SAT benchmarks."
+    ],
+    "setting": "YAGO precision was manually judged against the corresponding Wikipedia snippets, rather than an independent external ground truth. LEILA was evaluated on manually extracted ideal pairs from corpora and run on competitors' reported corpora/target relations to reduce tuning unfairness. SOFIE used YAGO background facts and rules with W=100 for inviolable clauses, w=1 for violable clauses, and ε=0.1 for Ockham's Razor; controlled experiments used manually compiled ground truth and seeded relation instances. Large-scale evaluations generally report precision only because complete ground truth was infeasible."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "YAGO contains about 2 million entities and more than 19 million ontological facts; its manual evaluation reports 74 of 90 heuristics above 95% precision, including WordNetLinker at 95.11911% ± 4.564%, and the thesis characterizes overall accuracy as 95%.",
+      "LEILA on Wikicomposers type extraction achieved F1 45.03% (SVM) and 48.30% (kNN), versus Text2Onto 3.10% and TextToOnto 7.53%; on the Snowball headquarters corpus it achieved F1 63.81%/64.06% standard metric versus Snowball 31.72%. On the Lonely Planet CV comparison, LEILA F1 was 18.75%/19.26%, below CV-system 31.83%.",
+      "SOFIE on the 100-newspaper corpus using binary patterns reached precision/recall of 100%/97.75% for foundedOnDate, 96.55%/62.22% for hasLanguage, and 100%/85.96% for ownedBy.",
+      "SOFIE's random-1,000-Wikipedia-article evaluation produced 273 outputs, 238 correct, for 87.18% total precision. On 3,440 senator-biography HTML files it produced 744 outputs, 673 correct, for 90.45% total precision; diedIn was poor at 13.79% (4/29).",
+      "On the controlled Snowball headquarters corpus, SOFIE with the inverse functional relation attained 91.30% Ideal-Metric precision and 31.08% recall, versus Snowball's 56.69% precision and 30.89% recall in the reported comparison. FMS* left 241 violable clauses unsatisfied versus Johnson's 2,357 on the SOFIE biography setting, with no inviolable clauses unsatisfied for either."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0087-D-P056-TABLE-0001",
+        "page": 56,
+        "excerpt": "WordNetLinker... 95.11911% ± 4.564%; InfoboxType... 95.08927% ± 4.186%."
+      },
+      {
+        "span_id": "C0087-D-P081-TABLE-0002",
+        "page": 81,
+        "excerpt": "LEILA(kNN) F1 48.30% versus Text2Onto 3.10% and TextToOnto 7.53%; on Snowball, LEILA(kNN) F1 64.06% versus Snowball 31.72%."
+      },
+      {
+        "span_id": "C0087-D-P125-TABLE-0003",
+        "page": 125,
+        "excerpt": "Total: # Output pairs 744; # Correct pairs 673; Precision 90.45%."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: The architecture covers an unusually broad Text-to-KG chain—from semi-structured extraction and ontology construction through text extraction, canonicalization, logical validation, fusion, and updating—rather than stopping at non-canonical relation pairs.",
+      "Review-level inference: Defined relation schemas, domain/range/type/functionality constraints, canonical IDs, and provenance make extracted facts usable as a maintained knowledge graph and provide interpretable quality controls.",
+      "Review-level inference: The evidence supports high precision in several settings, especially curated/semi-structured data and canonical headquarters extraction, while evaluations also expose cases where recall or precision drops; this is more informative than a single aggregate score.",
+      "Review-level inference: SOFIE's unified hypotheses allow evidence from disambiguation, patterns, existing facts, and constraints to interact, enabling reconsideration rather than irrevocable isolated decisions."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0087-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "Together, they form an integrative architecture... [that] reconcile[s] them with the existing facts."
+      },
+      {
+        "span_id": "C0087-D-P051-TEXT-0002",
+        "page": 51,
+        "excerpt": "Canonicalization makes each fact and each entity reference unique... Type Checking eliminates... facts that do not respect the domain and range constraints."
+      },
+      {
+        "span_id": "C0087-D-P092-TEXT-0003",
+        "page": 92,
+        "excerpt": "SOFIE will automatically re-consider the disambiguation if more evidence for another meaning becomes apparent."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: The approach depends on manually supplied schema mappings, category heuristics, seed facts/counterexamples, and axiomatic constraints; therefore portability and coverage are constrained by knowledge-engineering effort.",
+      "Review-level inference: Results are source- and relation-sensitive: LEILA degrades on heterogeneous Web corpora, and SOFIE's precision is weak for diedIn when patterns and constraints are insufficiently discriminative.",
+      "Review-level inference: The weighted MAX-SAT formulation is computationally nontrivial and uses an approximate solver; large-scale biography processing required 15 hours 50 minutes on the reported desktop hardware.",
+      "Review-level inference: YAGO source coverage is bounded by what can be extracted from Wikipedia infoboxes/categories, so high precision does not establish ontology completeness."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0087-D-P060-TEXT-0001",
+        "page": 60,
+        "excerpt": "A one-time manual effort was necessary to bootstrap the extraction."
+      },
+      {
+        "span_id": "C0087-D-P083-TEXT-0002",
+        "page": 83,
+        "excerpt": "LEILA shows weak performance when applied to inhomogeneous texts (such as random Internet documents)."
+      },
+      {
+        "span_id": "C0087-D-P125-TABLE-0003",
+        "page": 125,
+        "excerpt": "Total [processing time]: 15:50 hours."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "YAGO's extraction mechanisms are tailored to Wikipedia and WordNet; its content is limited to what could be extracted from Wikipedia infoboxes and categories.",
+      "LEILA extracts words rather than canonical entities, needs a disambiguation process to produce ontological facts, requires counterexamples for each target relation, and performs weakly on inhomogeneous random Internet text.",
+      "SOFIE's surface-pattern adaptation omits LEILA's deep linguistic analysis for throughput and non-sentential input; this harms difficult wording, pronoun/noun-phrase references, and relation connections across a document.",
+      "SOFIE does not resolve many references, has no quantifiers in its current MAX-SAT rule model, requires hand-provided axiomatic information, and can prematurely accept erroneous pattern meanings in batches before counterevidence arrives."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0087-D-P060-TEXT-0001",
+        "page": 60,
+        "excerpt": "YAGO cannot know more than what is available in the infoboxes and categories of Wikipedia."
+      },
+      {
+        "span_id": "C0087-D-P083-TEXT-0002",
+        "page": 83,
+        "excerpt": "LEILA only extracts words, not entities... LEILA requires counterexamples... [and] shows weak performance... [on] random Internet documents."
+      },
+      {
+        "span_id": "C0087-D-P127-TEXT-0003",
+        "page": 127,
+        "excerpt": "The current model does not allow quantifiers on the rules... This axiomatic information still has to be provided by hand."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-stated: Discover relations automatically rather than requiring them by hand; acquire knowledge from new sources; develop new extraction models, reasoning mechanisms, and ways to combine existing knowledge.",
+      "Author-stated: For SOFIE, add richer textual facts (co-occurrence, document topic, style/language), source-specific information such as defining noun phrases, alternative pattern representations, and probabilistic, fuzzy-logic, or Markov-logic inference.",
+      "Author-stated: Improve unstructured-document recall using linguistic processing, anaphora and noun-phrase resolution; use document-topic/sesquiary strategies cautiously; exploit redundancy across documents; and add temporal reasoning.",
+      "Review-level inference: Future implementations could separate reliability calibration and relation-specific error analysis from global precision, because reported performance varies sharply by relation and corpus."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0087-D-P147-TEXT-0001",
+        "page": 147,
+        "excerpt": "Ways could be found to discover relations automatically... New sources... New models... New reasoning mechanisms... [and] new ways of combining existing knowledge."
+      },
+      {
+        "span_id": "C0087-D-P129-TEXT-0002",
+        "page": 129,
+        "excerpt": "Other types of textual facts are conceivable, such as facts about the co-occurrences of entities, facts about the topic of the document or facts concerning the style or language of the document."
+      },
+      {
+        "span_id": "C0087-D-P124-TEXT-0003",
+        "page": 124,
+        "excerpt": "This problem could be addressed... [with] linguistic analysis... anaphora resolution and noun phrase resolution... [or] temporal reasoning."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-stated: Automatically discovering relations and expanding beyond the initial knowledge sources remain open problems.",
+      "Author-stated: Canonical entity disambiguation and reference resolution in heterogeneous, arbitrary Web documents remain unresolved, particularly for ambiguous names, pronouns, family names, and descriptive noun phrases.",
+      "Author-stated: Selecting the correct relation for a pattern that can coincide with multiple relations remains unresolved; enforcing a single relation per pattern would fix some errors but wrongly prohibit valid type-dependent reuse.",
+      "Author-stated: Scalable, expressive reasoning with quantified/temporal constraints and incomplete/noisy ontology types remains unresolved.",
+      "Review-level inference: The paper's evaluations leave open how the architecture generalizes to modern domains, languages, extraction schemas, and independently verified ground truth, because all reported sources and methods are from the paper's 2009 setting."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0087-D-P127-TEXT-0001",
+        "page": 127,
+        "excerpt": "One option would be to add a rule saying that a pattern can only express a single relation. This... would also prohibit using the same pattern for both the birth date and the birth place."
+      },
+      {
+        "span_id": "C0087-D-P124-TEXT-0002",
+        "page": 124,
+        "excerpt": "Pattern matching systems often have difficulties establishing the connection... [and] anaphora resolution and noun phrase resolution... could help."
+      },
+      {
+        "span_id": "C0087-D-P147-TEXT-0003",
+        "page": 147,
+        "excerpt": "Ways could be found to discover relations automatically, so that they do not have to be provided by hand."
+      }
+    ]
+  },
+  "code_and_data_availability": "The thesis states that preprocessing tools were available as Java Tools at an MPII download URL and that YAGO conversion/loading software is provided; it also states an intention to make the YAGO, LEILA, and SOFIE code toolkit publicly available. The PDF does not provide a repository, license, persistent code archive, or reproducible release for the full experimental corpora."
+}

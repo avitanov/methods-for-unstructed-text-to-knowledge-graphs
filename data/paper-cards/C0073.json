@@ -1,0 +1,826 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0073",
+    "title": "Entity Linking with a Knowledge Base: Issues, Techniques, and Solutions",
+    "pdf_path": "data/manual-pdfs/C0073.pdf",
+    "authors": [
+      "Wei Shen",
+      "Jianyong Wang",
+      "Jiawei Han"
+    ],
+    "year": "not_reported",
+    "venue": "not_reported",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The paper surveys entity linking, the task of linking entity mentions in text with corresponding entities in a knowledge base. It identifies name variation and entity ambiguity as central challenges, reviews major approaches, and discusses applications, evaluation, and future directions.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0073-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Wei Shen, Jianyong Wang, Senior Member, IEEE, and Jiawei Han, Fellow, IEEE",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-02-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0073-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Entity linking is the task to link entity mentions in text with their corresponding entities in a knowledge base. ... this survey, we present a thorough overview and analysis of the main approaches to entity linking, and discuss various applications, the evaluation of entity linking systems, and future directions.",
+      "confidence": "medium"
+    },
+    "problem_addressed-03-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "1.2 Task Description",
+      "span_id": "C0073-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Given a knowledge base containing a set of entities E and a text collection in which a set of named entity mentions M are identified in advance, the goal of entity linking is to map each textual entity mention m ∈ M to its corresponding entity e ∈ E.",
+      "confidence": "medium"
+    },
+    "problem_addressed-03-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Overview of entity-linking modules",
+      "span_id": "C0073-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "Generally speaking, a typical entity linking system consists of the following three modules: Candidate Entity Generation, Candidate Entity Ranking, and Unlinkable Mention Prediction.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-04-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Abstract and outline",
+      "span_id": "C0073-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "In this survey, we present a thorough overview and analysis of the main approaches to entity linking, and discuss various applications, the evaluation of entity linking systems, and future directions.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-05-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "2 Candidate Entity Generation",
+      "span_id": "C0073-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "Approaches to candidate entity generation are mainly based on string comparison between the surface form of the entity mention and the name of the entity existing in a knowledge base.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-05-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.2 Supervised Ranking Methods",
+      "span_id": "C0073-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "Supervised ranking methods use the annotated data set to “learn” how to assign the proper mapping entity to each entity mention.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-05-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.2.4 Graph Based Approaches",
+      "span_id": "C0073-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "They built a mention-entity graph ... and an entity-entity edge ... weighted by the Wikipedia hyperlink structure based coherence.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-06-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Overview of entity-linking modules",
+      "span_id": "C0073-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "A typical entity linking system consists of the following three modules: Candidate Entity Generation, Candidate Entity Ranking, and Unlinkable Mention Prediction.",
+      "confidence": "medium"
+    },
+    "methodology-description-08-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Overview of entity-linking modules",
+      "span_id": "C0073-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Candidate Entity Generation ... retrieve a candidate entity set Em ... Candidate Entity Ranking ... rank the candidate entities ... Unlinkable Mention Prediction ... return NIL for mention m.",
+      "confidence": "medium"
+    },
+    "methodology-description-08-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "2 Candidate Entity Generation",
+      "span_id": "C0073-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "We review the main approaches that have been applied for generating the candidate entity set Em.",
+      "confidence": "medium"
+    },
+    "methodology-description-08-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.2 Supervised Ranking Methods",
+      "span_id": "C0073-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "Most entity linking systems that leverage the learning to rank framework ... utilize the ranking SVM framework.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-09-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "1.4 Preliminaries",
+      "span_id": "C0073-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Knowledge bases provide the information about the world’s entities ..., their semantic categories ..., and the mutual relationships between entities.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-09-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "1.4 Preliminaries",
+      "span_id": "C0073-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "YAGO ... adopts the clean taxonomy of concepts from WordNet ... including the Is-A hierarchy ... as well as non-taxonomic relations between entities.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-09-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "2.1 Name Dictionary Based Techniques",
+      "span_id": "C0073-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "The structure of Wikipedia provides a set of useful features for generating candidate entities, such as entity pages, redirect pages, disambiguation pages, bold phrases from the first paragraphs, and hyperlinks.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-10-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "1.2 Task Description",
+      "span_id": "C0073-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Typically, the task of entity linking is preceded by a named entity recognition stage, during which boundaries of named entities in text are identified.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-10-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Overview of entity-linking modules",
+      "span_id": "C0073-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "Candidate Entity Generation ... Candidate Entity Ranking ... Unlinkable Mention Prediction.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-10-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "1.3.1 Information Extraction",
+      "span_id": "C0073-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "Linking them with a knowledge base is a good way to disambiguate and fine-grained typing them, which is essential for their further exploitation.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-11-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "1.2 Task Description",
+      "span_id": "C0073-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "the text collection in which a set of named entity mentions M are identified in advance",
+      "confidence": "medium"
+    },
+    "input_output-input_type-11-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "5.2 Entity Linking Data Sets",
+      "span_id": "C0073-D-P016-TEXT-0002",
+      "page": 16,
+      "excerpt": "most of the current entity linking systems ... focus on ... unstructured documents (such as news articles and blogs).",
+      "confidence": "medium"
+    },
+    "input_output-input_type-11-03": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Future directions",
+      "span_id": "C0073-D-P017-TEXT-0003",
+      "page": 17,
+      "excerpt": "entity mentions may also appear in other types of data ... such as Web tables, Web lists, and tweets.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-12-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "1.2 Task Description",
+      "span_id": "C0073-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "a named entity mention m is a token sequence in text which potentially refers to some named entity",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-12-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.1.2 Context-Dependent Features",
+      "span_id": "C0073-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "the context ... means not only the textual context around the entity mention, but also other entity mentions which need to be linked in the same document.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-13-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "1.2 Task Description",
+      "span_id": "C0073-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "if the matching entity e for entity mention m does not exist in the knowledge base ... an entity linking system should label m as NIL.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-13-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Overview of entity-linking modules",
+      "span_id": "C0073-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "retrieve a candidate entity set Em ... rank the candidate entities ... return NIL for mention m.",
+      "confidence": "medium"
+    },
+    "models_and_tools-14-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "2.1 Name Dictionary Based Techniques",
+      "span_id": "C0073-D-P006-TABLE-0001",
+      "page": 6,
+      "excerpt": "A part of the name dictionary D ... Microsoft, Michael Jordan, Hewlett-Packard Company, HP, and Bill Hewlett are mapped to candidate entities.",
+      "confidence": "medium"
+    },
+    "models_and_tools-14-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.2.2 Learning to Rank Methods",
+      "span_id": "C0073-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "Most entity linking systems that leverage the learning to rank framework ... utilize the ranking SVM framework.",
+      "confidence": "medium"
+    },
+    "models_and_tools-14-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.2.4 Graph Based Approaches",
+      "span_id": "C0073-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "They proposed a graph based representation, called Referent Graph ... and utilized a purely collective inference algorithm.",
+      "confidence": "medium"
+    },
+    "datasets-15-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "5.2 Entity Linking Data Sets",
+      "span_id": "C0073-D-P016-TEXT-0001",
+      "page": 16,
+      "excerpt": "The Knowledge Base Population (KBP) track conducted as part of NIST Text Analysis Conference ... provided benchmark data sets.",
+      "confidence": "medium"
+    },
+    "datasets-15-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.2.4 Graph Based Approaches",
+      "span_id": "C0073-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "The experimental results show that ... achieves 81.8% accuracy over their own CoNLL data set.",
+      "confidence": "medium"
+    },
+    "datasets-15-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Future directions",
+      "span_id": "C0073-D-P017-TEXT-0003",
+      "page": 17,
+      "excerpt": "Google’s Wikilinks Corpus ... contains over 40 million disambiguated mentions within over 10 million Web pages.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-16-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "5.1 Evaluation Measures",
+      "span_id": "C0073-D-P015-TEXT-0001",
+      "page": 15,
+      "excerpt": "The assessment of entity linking systems is usually performed in terms of evaluation measures, such as precision, recall, F1-measure, and accuracy.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-16-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "5.1 Evaluation Measures",
+      "span_id": "C0073-D-P016-TEXT-0002",
+      "page": 16,
+      "excerpt": "Accuracy is calculated as the number of correctly linked entity mentions divided by the total number of all entity mentions.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-16-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Future directions",
+      "span_id": "C0073-D-P017-TEXT-0003",
+      "page": 17,
+      "excerpt": "most work on entity linking lacks an analysis of computational complexity, and they usually do not evaluate the efficiency and scalability of their systems.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-17-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "6 Future Directions and Conclusions",
+      "span_id": "C0073-D-P016-TEXT-0001",
+      "page": 16,
+      "excerpt": "it is currently unclear which techniques and systems are the current state-of-the-art, as these systems all differ along multiple dimensions and are evaluated over different data sets.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-17-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "3.3.1 VSM Based Methods",
+      "span_id": "C0073-D-P014-TEXT-0002",
+      "page": 14,
+      "excerpt": "This system ... achieves competitive performance ... on the TAC-KBP2010 data set.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-17-03": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "3.2.4 Graph Based Approaches",
+      "span_id": "C0073-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "it outperforms the collective entity linking system ... and the approach of Cucerzan.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-18-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "5.1 Evaluation Measures",
+      "span_id": "C0073-D-P016-TEXT-0001",
+      "page": 16,
+      "excerpt": "For many entity linking systems ... entity mentions that should be linked are given as the input of these systems ... researchers usually use accuracy.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-18-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "5.2 Entity Linking Data Sets",
+      "span_id": "C0073-D-P016-TEXT-0002",
+      "page": 16,
+      "excerpt": "The TAC-KBP track requires the systems who participate in the track to process entity mentions independently from one to another.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-18-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "6 Future Directions and Conclusions",
+      "span_id": "C0073-D-P016-TEXT-0003",
+      "page": 16,
+      "excerpt": "A single entity linking system typically performs very differently for different data sets and domains.",
+      "confidence": "medium"
+    },
+    "main_results-19-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Overview of entity-linking modules",
+      "span_id": "C0073-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "A typical entity linking system consists of ... Candidate Entity Generation, Candidate Entity Ranking, and Unlinkable Mention Prediction.",
+      "confidence": "medium"
+    },
+    "main_results-19-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "3.2.2 Learning to Rank Methods",
+      "span_id": "C0073-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "LINDEN ... achieves 84.3% accuracy over the TAC-KBP2009 data set.",
+      "confidence": "medium"
+    },
+    "main_results-19-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "3.2.4 Graph Based Approaches",
+      "span_id": "C0073-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "achieves 81.8% accuracy over their own CoNLL data set.",
+      "confidence": "medium"
+    },
+    "strengths-20-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Abstract",
+      "span_id": "C0073-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "we present a thorough overview and analysis of the main approaches to entity linking, and discuss various applications, the evaluation of entity linking systems, and future directions.",
+      "confidence": "medium"
+    },
+    "strengths-20-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "1.2 Task Description",
+      "span_id": "C0073-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "entity linking is different from entity coreference resolution, word sense disambiguation, and record linkage.",
+      "confidence": "medium"
+    },
+    "strengths-20-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "6 Future Directions and Conclusions",
+      "span_id": "C0073-D-P016-TEXT-0003",
+      "page": 16,
+      "excerpt": "we have presented a comprehensive survey for entity linking.",
+      "confidence": "medium"
+    },
+    "weaknesses-21-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.1.3 Discussion: Features",
+      "span_id": "C0073-D-P011-TEXT-0001",
+      "page": 11,
+      "excerpt": "there are very few studies that compare the effectiveness of the various features presented here.",
+      "confidence": "medium"
+    },
+    "weaknesses-21-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.2.3 Probabilistic Methods",
+      "span_id": "C0073-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "the optimization of this model is shown to be NP-hard ... even the approximate solution ... has high computational costs and is time-consuming.",
+      "confidence": "medium"
+    },
+    "weaknesses-21-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "6 Future Directions and Conclusions",
+      "span_id": "C0073-D-P016-TEXT-0003",
+      "page": 16,
+      "excerpt": "Supervised techniques require many annotated training examples and the task of annotating examples is costly.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-22-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "6 Future Directions and Conclusions",
+      "span_id": "C0073-D-P016-TEXT-0001",
+      "page": 16,
+      "excerpt": "most of the current entity linking systems focus on ... unstructured documents ... Web tables, Web lists, and tweets ... still much room for further improvement.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-22-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Future directions",
+      "span_id": "C0073-D-P017-TEXT-0002",
+      "page": 17,
+      "excerpt": "most work on entity linking lacks an analysis of computational complexity, and they usually do not evaluate the efficiency and scalability of their systems.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-22-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Future directions",
+      "span_id": "C0073-D-P017-TEXT-0003",
+      "page": 17,
+      "excerpt": "the overall linking accuracy was not high (about 70%) and there is potentially much space for substantial improvement.",
+      "confidence": "medium"
+    },
+    "possible_improvements-23-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Future directions",
+      "span_id": "C0073-D-P017-TEXT-0001",
+      "page": 17,
+      "excerpt": "it is very meaningful and necessary to develop specific techniques to deal with linking entities in them ... a repository of benchmark data sets ... should be made available.",
+      "confidence": "medium"
+    },
+    "possible_improvements-23-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Future directions",
+      "span_id": "C0073-D-P017-TEXT-0002",
+      "page": 17,
+      "excerpt": "a promising direction for future research is to devise techniques that can substantially improve the efficiency and scalability while remaining the high accuracy.",
+      "confidence": "medium"
+    },
+    "possible_improvements-23-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Future directions",
+      "span_id": "C0073-D-P017-TEXT-0003",
+      "page": 17,
+      "excerpt": "domain-specific entity linking ... makes domain-specific entity linking important.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-24-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "6 Future Directions and Conclusions",
+      "span_id": "C0073-D-P016-TEXT-0001",
+      "page": 16,
+      "excerpt": "it is currently unclear which techniques and systems are the current state-of-the-art.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-24-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Future directions",
+      "span_id": "C0073-D-P017-TEXT-0002",
+      "page": 17,
+      "excerpt": "for real-time and large-scale applications, efficiency and scalability are significantly important and essential.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-24-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "1.2 Task Description",
+      "span_id": "C0073-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "It is possible that some entity mention in text does not have its corresponding entity record in the given knowledge base.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-25-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "5.2 Entity Linking Data Sets",
+      "span_id": "C0073-D-P016-TEXT-0001",
+      "page": 16,
+      "excerpt": "Some researchers ... have manually annotated some data sets and made them publicly available.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-25-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Future directions",
+      "span_id": "C0073-D-P017-TEXT-0002",
+      "page": 17,
+      "excerpt": "a large scale entity linking data set (i.e., Google’s Wikilinks Corpus) ... has been released publicly.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The survey addresses how to map ambiguous and variably expressed named-entity mentions in English natural-language text to the correct entities in an existing knowledge base, including identifying mentions that have no corresponding knowledge-base record. The objective is to organize and analyze candidate generation, candidate ranking, unlinkable-mention prediction, applications, features, and evaluation.",
+  "methodology": {
+    "primary_family": "Validation, correction, and knowledge-fusion methods",
+    "secondary_families": [
+      "Rule-based NLP",
+      "Linguistic and dependency-based extraction",
+      "Classical machine learning",
+      "Neural NLP pipelines",
+      "Joint entity-relation extraction",
+      "Ontology-constrained and schema-guided methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "not_reported",
+    "description": "This is a survey rather than a single trained system. It defines entity linking over an input text collection with preidentified named-entity mentions and a knowledge base containing entities, types, names, and relations. The surveyed pipeline first generates candidate entities using name dictionaries, local-document surface-form expansion, or search engines; ranks candidates using string, popularity, type, textual-context, semantic, topical-coherence, probabilistic, graph, information-retrieval, or supervised-learning evidence; and finally predicts NIL for mentions that are not linkable. The review also covers joint NER-linking, collective document or user-level linking, model combination, crowdsourcing, and domain-specific linking. Reported supervised approaches include binary classifiers, ranking SVMs, Ranking Perceptron, ListNet, probabilistic models, and graph-based collective inference; unsupervised approaches include vector-space and information-retrieval ranking."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The surveyed systems use existing knowledge bases and their schemas or semantic resources, including Wikipedia, YAGO, DBpedia, Freebase, WordNet, DBpedia/YAGO taxonomies, entity types, categories, relations, aliases, redirects, disambiguation pages, hyperlinks, and infobox attributes. These resources support candidate generation, type compatibility, semantic similarity, topical coherence, and linking decisions; the survey does not propose a new ontology.",
+    "evidence": [
+      {
+        "span_id": "C0073-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "Knowledge bases provide the information about the world’s entities ..., their semantic categories ..., and the mutual relationships between entities."
+      },
+      {
+        "span_id": "C0073-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "YAGO ... adopts the clean taxonomy of concepts from WordNet ... including the Is-A hierarchy ... as well as non-taxonomic relations between entities."
+      },
+      {
+        "span_id": "C0073-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "The structure of Wikipedia provides a set of useful features for generating candidate entities, such as entity pages, redirect pages, disambiguation pages, bold phrases from the first paragraphs, and hyperlinks."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing and named-entity mention detection are assumed or performed before linking; NER is explicitly outside the survey’s main scope.",
+    "Entity and concept extraction / entity typing through NER tools and knowledge-base type information.",
+    "Candidate entity generation from exact or partial name matching, aliases, redirects, disambiguation pages, bold phrases, hyperlinks, local-document expansions, spelling correction, and search engines.",
+    "Entity resolution and linking by ranking candidate entities using name similarity, popularity, type compatibility, context similarity, semantic relatedness, topical coherence, probabilistic models, graphs, or information retrieval.",
+    "Coreference-related clustering is discussed as a related problem; the survey distinguishes it from knowledge-base entity linking.",
+    "Unlinkable-mention prediction and NIL assignment.",
+    "Knowledge-base population and information-extraction integration are discussed as downstream uses of linked entities.",
+    "Joint NER and entity linking, collective linking, graph-based inference, crowdsourced correction, and model combination are surveyed as extensions."
+  ],
+  "input_output": {
+    "input_type": "English natural-language Web text, including unstructured documents, news articles, blogs, tweets, Web tables, Web lists, textual extractions, queries, and text associated with information-extraction outputs.",
+    "input_granularity": "A token sequence representing an entity mention, usually within a document; systems may use a local context window, the entire document, other mentions in the same document, or cross-tweet user context.",
+    "output_representation": "For each mention, a linked knowledge-base entity identifier or entity record; if no matching entity exists, the special NIL label. Intermediate outputs include candidate entity sets, ranking scores, entity types, and graph or collective assignments."
+  },
+  "models_and_tools": [
+    "Wikipedia name dictionaries using page titles, redirects, disambiguation pages, bold phrases, and hyperlink anchor text",
+    "YAGO, DBpedia, Freebase, WordNet, Wikipedia, and associated taxonomies, categories, infoboxes, and hyperlink graphs",
+    "NER tools cited by the survey: Stanford NER, OpenNLP, LingPipe, CiceroLite, WRATS",
+    "String matching, spelling correction, metaphone, Lucene spellchecker, and search-engine APIs",
+    "SVM, logistic regression, Naive Bayes, k-nearest neighbors, ranking SVM, Ranking Perceptron, ListNet, and learning-to-rank models",
+    "Vector Space Model, TF-IDF, cosine/Dice/Jaccard similarity, KL-divergence language-model retrieval, topic models, and semantic-relatedness measures",
+    "Probabilistic graphical models, generative entity-mention models, Markov logic networks, and crowdsourcing-based probabilistic reasoning",
+    "Referent Graph, mention-entity graphs, PageRank-like collective inference, hill climbing, linear-program relaxation, greedy inference, message passing, majority voting, and weighted model combination"
+  ],
+  "datasets": [
+    "TAC-KBP2009, TAC-KBP2010, and TAC-KBP2011 benchmark tracks",
+    "CoNLL entity-linking data set",
+    "IITB data set",
+    "Manually annotated entity-linking data sets reported by the surveyed systems",
+    "News-article data set used by an unsupervised vector-space system",
+    "Google Wikilinks Corpus: over 40 million disambiguated mentions in over 10 million Web pages, as described by the survey",
+    "Application-specific data involving tweets, Web tables, Web lists, textual extractions, product catalogs, geographic tweets, gene mentions, and bibliographic networks"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Precision",
+      "Recall",
+      "F1-measure",
+      "Accuracy",
+      "Candidate-generation recall or coverage is discussed qualitatively",
+      "Efficiency, computational complexity, and scalability are identified as important but commonly unreported evaluation dimensions"
+    ],
+    "baselines": [
+      "Candidate-ranking methods based on supervised binary classification, learning to rank, probabilistic models, graph-based collective inference, vector-space similarity, and information retrieval",
+      "LINDEN, collective annotation, Referent Graph, KAURI, model-combination systems, and other TAC-KBP participating systems as compared in the survey",
+      "The survey emphasizes that reported systems use different data sets and settings, so results are not directly comparable across all methods"
+    ],
+    "setting": "The paper is a survey and performs no new unified experiment. It reports results from heterogeneous benchmark and application settings. Some systems receive entity mentions as input, while TAC-KBP requires independent processing of mentions and therefore prevents exploiting document-level topical coherence; other evaluations use news articles, Web text, tweets, tables, lists, and large-scale textual extractions."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "The survey organizes entity linking into candidate entity generation, candidate entity ranking, and unlinkable mention prediction.",
+      "It reports that candidate ranking uses complementary context-independent and context-dependent evidence, including name similarity, entity popularity, type compatibility, textual context, and coherence between linked entities.",
+      "Supervised ranking generally performs better for candidate ranking than unsupervised approaches in the surveyed results, but overall performance is also strongly affected by candidate generation and NIL prediction.",
+      "Reported examples include LINDEN with 84.3% accuracy on TAC-KBP2009, Ranking Perceptron/ListNet with up to 86% accuracy on TAC-KBP2009, a graph-based method with 81.8% accuracy on CoNLL, and an ensemble with 79.4% accuracy on TAC-KBP2010.",
+      "The survey reports a 15.1% accuracy improvement for a supervised acronym-expansion method over prior acronym-expansion methods, 83.8% accuracy for automatically generated annotation on TAC-KBP2009, and 86.1% after instance selection on TAC-KBP2010.",
+      "A large-scale system linking 15 million textual extractions is reported to achieve about 70% overall linking accuracy, indicating remaining difficulty at Web scale.",
+      "The authors conclude that there is no clear universal state-of-the-art because methods differ in data, domains, and modules."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0073-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "A typical entity linking system consists of ... Candidate Entity Generation, Candidate Entity Ranking, and Unlinkable Mention Prediction."
+      },
+      {
+        "span_id": "C0073-D-P012-TEXT-0002",
+        "page": 12,
+        "excerpt": "LINDEN ... achieves 84.3% accuracy over the TAC-KBP2009 data set."
+      },
+      {
+        "span_id": "C0073-D-P013-TEXT-0003",
+        "page": 13,
+        "excerpt": "achieves 81.8% accuracy over their own CoNLL data set."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Provides a structured survey of the three principal entity-linking modules and their techniques.",
+      "Explains how knowledge-base resources, lexical variation, context, entity popularity, semantic types, and collective coherence contribute to linking decisions.",
+      "Covers supervised, unsupervised, probabilistic, graph-based, information-retrieval, ensemble, crowdsourcing, and joint NER-linking approaches.",
+      "Explicitly distinguishes entity linking from coreference resolution, word-sense disambiguation, and record linkage.",
+      "Connects entity linking to information extraction, knowledge-base population, information retrieval, content analysis, question answering, and information integration.",
+      "Discusses evaluation measures, benchmark data sets, computational concerns, and future research directions."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0073-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "we present a thorough overview and analysis of the main approaches to entity linking, and discuss various applications, the evaluation of entity linking systems, and future directions."
+      },
+      {
+        "span_id": "C0073-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "entity linking is different from entity coreference resolution, word sense disambiguation, and record linkage."
+      },
+      {
+        "span_id": "C0073-D-P016-TEXT-0003",
+        "page": 16,
+        "excerpt": "we have presented a comprehensive survey for entity linking."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "The survey does not provide a new unified implementation or controlled comparison across methods.",
+      "The reviewed methods are highly data- and domain-dependent, making universal ranking of techniques difficult.",
+      "Collective coherence methods can be computationally expensive because their optimization is reported as NP-hard.",
+      "Candidate-generation errors can prevent the correct entity from being ranked, while NIL prediction is often ignored or handled with simple thresholds.",
+      "Many approaches depend on manually annotated training data, which is costly and time-consuming.",
+      "The survey notes that few studies compare feature effectiveness across data sets and that some robust features perform poorly on other data sets.",
+      "TAC-KBP’s independent-mention setting limits evaluation of methods that rely on document-level topical coherence."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0073-D-P011-TEXT-0001",
+        "page": 11,
+        "excerpt": "there are very few studies that compare the effectiveness of the various features presented here."
+      },
+      {
+        "span_id": "C0073-D-P012-TEXT-0002",
+        "page": 12,
+        "excerpt": "the optimization of this model is shown to be NP-hard ... even the approximate solution ... has high computational costs and is time-consuming."
+      },
+      {
+        "span_id": "C0073-D-P016-TEXT-0003",
+        "page": 16,
+        "excerpt": "Supervised techniques require many annotated training examples and the task of annotating examples is costly."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "Most systems focus on entity mentions in unstructured documents such as news articles and blogs, while Web tables, Web lists, and tweets need more specialized treatment.",
+      "A repository of benchmark data sets covering diverse input types was not yet available and is needed for development and evaluation.",
+      "Most work lacks computational-complexity analysis and does not evaluate efficiency or scalability.",
+      "Large-scale linking remains difficult: a cited system over 15 million textual extractions achieved only about 70% accuracy.",
+      "Domain-specific entity linking for biomedicine, entertainment, products, finance, tourism, and other areas requires further study because domain knowledge bases may differ from general-purpose knowledge bases.",
+      "More research is needed to combine entity-linking research with efficient record-linkage techniques and to better understand the problem."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0073-D-P016-TEXT-0001",
+        "page": 16,
+        "excerpt": "most of the current entity linking systems focus on ... unstructured documents ... Web tables, Web lists, and tweets ... still much room for further improvement."
+      },
+      {
+        "span_id": "C0073-D-P017-TEXT-0002",
+        "page": 17,
+        "excerpt": "most work on entity linking lacks an analysis of computational complexity, and they usually do not evaluate the efficiency and scalability of their systems."
+      },
+      {
+        "span_id": "C0073-D-P017-TEXT-0003",
+        "page": 17,
+        "excerpt": "the overall linking accuracy was not high (about 70%) and there is potentially much space for substantial improvement."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Develop input-specific methods and benchmark repositories for Web tables, Web lists, tweets, and other non-document data.",
+      "Improve efficiency and scalability while preserving accuracy, using speed-up techniques from record linkage where appropriate.",
+      "Build domain-specific entity-linking methods for specialized knowledge bases and domains.",
+      "Use the Google Wikilinks Corpus and other large-scale resources to train and evaluate scalable systems.",
+      "Improve candidate generation, NIL prediction, feature selection, collective inference, and model combination through data- and domain-aware design.",
+      "Review-level inference: future systems should report module-level ablations and standardized cross-domain evaluations so that gains from candidate generation, ranking, and NIL prediction can be separated."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0073-D-P017-TEXT-0001",
+        "page": 17,
+        "excerpt": "it is very meaningful and necessary to develop specific techniques to deal with linking entities in them ... a repository of benchmark data sets ... should be made available."
+      },
+      {
+        "span_id": "C0073-D-P017-TEXT-0002",
+        "page": 17,
+        "excerpt": "a promising direction for future research is to devise techniques that can substantially improve the efficiency and scalability while remaining the high accuracy."
+      },
+      {
+        "span_id": "C0073-D-P017-TEXT-0003",
+        "page": 17,
+        "excerpt": "domain-specific entity linking ... makes domain-specific entity linking important."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "No universally best entity-linking technique or system has been established across data sets and domains.",
+      "How to link mentions in short, noisy, semi-structured, or weak-context inputs remains unresolved.",
+      "Efficiency and scalability for real-time and Web-scale applications remain unresolved.",
+      "NIL detection and knowledge-base incompleteness remain difficult, especially when mentions have no corresponding record.",
+      "Domain adaptation to specialized knowledge bases and domain structures remains incomplete.",
+      "The interaction among candidate generation, ranking, and unlinkable-mention prediction is not fully understood or standardized.",
+      "Review-level inference: robust comparisons require shared data, splits, metrics, and reporting of computational cost, which the surveyed literature lacks."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0073-D-P016-TEXT-0001",
+        "page": 16,
+        "excerpt": "it is currently unclear which techniques and systems are the current state-of-the-art."
+      },
+      {
+        "span_id": "C0073-D-P017-TEXT-0002",
+        "page": 17,
+        "excerpt": "for real-time and large-scale applications, efficiency and scalability are significantly important and essential."
+      },
+      {
+        "span_id": "C0073-D-P002-TEXT-0003",
+        "page": 2,
+        "excerpt": "It is possible that some entity mention in text does not have its corresponding entity record in the given knowledge base."
+      }
+    ]
+  },
+  "code_and_data_availability": "The survey states that manually annotated data sets and TAC-KBP benchmark data sets are publicly available, and describes Google’s Wikilinks Corpus as publicly released. No source-code repository or code release for this survey is reported in the PDF."
+}

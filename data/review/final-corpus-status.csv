@@ -1,0 +1,116 @@
+candidate_id,title,final_state,reason
+C0001,A Comprehensive Survey on Automatic Knowledge Graph Construction,ACCEPTED_CARD,
+C0002,A Survey on Extracting Knowledge Graphs by Employing Natural Language Processing,MANUAL_PDF_REQUIRED,Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required.
+C0003,Review of Automatic and Semi-Automatic Creation of Knowledge Graphs from Structured and Unstructured Data,ACCEPTED_CARD,
+C0004,A Systematic Literature Review on RDF Triple Generation From Natural Language Texts,ACCEPTED_CARD,
+C0005,Constructing Knowledge Graphs from Text Using Large Language Models: Scoping Review,ACCEPTED_CARD,
+C0006,OpenIE-based Approach for Knowledge Graph Construction from Text,ACCEPTED_CARD,
+C0007,Semi-automatic Knowledge Graph Construction by Relation Pattern Extraction,ACCEPTED_CARD,
+C0008,From Text to Knowledge. Bridging the Gap with Probabilistic Graphical Models,ACCEPTED_CARD,
+C0009,Research on Construction Method of Knowledge Graph of US Military Equipment Based on BiLSTM Model,MANUAL_PDF_REQUIRED,Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required.
+C0010,Building Knowledge Graph Using Pre-trained Language Model for Learning Entity-aware Relationships,MANUAL_PDF_REQUIRED,Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required.
+C0011,Span Level Model for the Construction of Scientific Knowledge Graph,MANUAL_PDF_REQUIRED,Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required.
+C0012,Joint Extraction of Entities and Relations Based on a Novel Graph Scheme,ACCEPTED_CARD,
+C0013,Seq2KG: An End-to-End Neural Model for Domain Agnostic Knowledge Graph Construction from Text,ACCEPTED_CARD,
+C0014,An Autoregressive Text-to-Graph Framework for Joint Entity and Relation Extraction,ACCEPTED_CARD,
+C0015,LlmRe: A Zero-Shot Entity Relation Extraction Method Based on the Large Language Model,ACCEPTED_CARD,
+C0016,Fine-Tuning Language Models for Triple Extraction with Data Augmentation,ACCEPTED_CARD,
+C0017,CodeKGC: Code Language Model for Generative Knowledge Graph Construction,ACCEPTED_CARD,
+C0018,iText2KG: Incremental Knowledge Graphs Construction Using Large Language Models,ACCEPTED_CARD,
+C0019,Leveraging LLM for Automated Ontology Extraction and Knowledge Graph Generation,ACCEPTED_CARD,
+C0020,A BERT-Assisted LLM Framework for Knowledge Graph Construction,MANUAL_PDF_REQUIRED,Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required.
+C0021,Prompt Me One More Time: A Two-Step Knowledge Extraction Pipeline with Ontology-Based Verification,ACCEPTED_CARD,
+C0022,KnowledgeNet: A Benchmark Dataset for Knowledge Base Population,ACCEPTED_CARD,
+C0023,Text2KGBench: A Benchmark for Ontology-Driven Knowledge Graph Generation from Text,ACCEPTED_CARD,
+C0024,KGGen: Extracting Knowledge Graphs from Plain Text with Language Models,ACCEPTED_CARD,
+C0025,Knowledge Vault: A Web-Scale Approach to Probabilistic Knowledge Fusion,ACCEPTED_CARD,
+C0026,Identifying Relations for Open Information Extraction,ACCEPTED_CARD,
+C0027,FEEL: Framework for the Integration of Entity Extraction and Linking Systems,ACCEPTED_CARD,
+C0028,On Aligning OpenIE Extractions with Knowledge Bases: A Case Study,ACCEPTED_CARD,
+C0029,MWO2KG and Echidna: Constructing and Exploring Knowledge Graphs from Maintenance Data,ACCEPTED_CARD,
+C0030,"Doc‐KG: Unstructured documents to knowledge graph construction, identification and validation with Wikidata",ACCEPTED_CARD,
+C0031,Information extraction meets the Semantic Web: A survey,ACCEPTED_CARD,
+C0032,KBPearl,ACCEPTED_CARD,
+C0033,Exploiting lexical patterns for knowledge graph construction from unstructured text in Spanish,ACCEPTED_CARD,
+C0034,ICDM 2019 Knowledge Graph Contest: Team UWA,ACCEPTED_CARD,
+C0035,Automating Biomedical Knowledge Graph Construction For Context-Aware Scientific Inference,ACCEPTED_CARD,
+C0036,Enhancing Domain-Independent Knowledge Graph Construction through OpenIE Cleaning and LLMs Validation,ACCEPTED_CARD,
+C0037,Entity Linking: An Issue to Extract Corresponding Entity With Knowledge Base,ACCEPTED_CARD,
+C0038,Incorporating contexts to open information extraction,ACCEPTED_CARD,
+C0039,Knowledge graph population from news streams,ACCEPTED_CARD,
+C0040,Semi-supervised generative open information extraction,ACCEPTED_CARD,
+C0041,Named Entity Extraction for Knowledge Graphs: A Literature Overview,ACCEPTED_CARD,
+C0042,KGen: a knowledge graph generator from biomedical scientific literature,ACCEPTED_CARD,
+C0043,Relation Extraction with Matrix Factorization and Universal Schemas,ACCEPTED_CARD,
+C0044,Chinese Triple Extraction Based on BERT Model,MANUAL_PDF_REQUIRED,Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required.
+C0046,Scalable Knowledge Graph Construction over Text using Deep Learning based Predicate Mapping,MANUAL_PDF_REQUIRED,Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required.
+C0047,A Novel Cascade Binary Tagging Framework for Relational Triple Extraction,ACCEPTED_CARD,
+C0048,Constructing COVID-19 Knowledge Graph from A Large Corpus of Scientific Articles,MANUAL_PDF_REQUIRED,Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required.
+C0049,CTI-Thinker: an LLM-driven system for CTI knowledge graph construction and attack reasoning,ACCEPTED_CARD,
+C0050,Entity linking for biomedical literature,ACCEPTED_CARD,
+C0052,Knowledge Base Population: Successful Approaches and Challenges,ACCEPTED_CARD,
+C0053,N-ary relation extraction for simultaneous T-Box and A-Box knowledge base augmentation,ACCEPTED_CARD,
+C0054,Populating knowledge base with collective entity mentions: a graph-based approach,MANUAL_PDF_REQUIRED,Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required.
+C0055,Research on Domain-Specific Knowledge Graph Based on the RoBERTa-wwm-ext Pretraining Model,ACCEPTED_CARD,
+C0056,Triplet-based knowledge mining using pretrained large language models,MANUAL_PDF_REQUIRED,Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required.
+C0060,Research on Knowledge Extraction Technology for Knowledge Graph Construction,MANUAL_PDF_REQUIRED,Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required.
+C0061,Dependency parsing based Chinese open relation extraction,MANUAL_PDF_REQUIRED,Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required.
+C0063,Simple ontologies for practical information extraction and advanced information extraction for practical ontologies,MANUAL_PDF_REQUIRED,Correct full paper required; the local 21-page issue extract is incomplete and must not be used for a Paper Card.
+C0064,Synthesizing constituents for knowledge organization and representation from historical travel records,MANUAL_PDF_REQUIRED,Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required.
+C0066,A Semantic Best-Effort Approach for Extracting Structured Discourse Graphs from Wikipedia,ACCEPTED_CARD,
+C0067,Automatic Knowledge Graph Construction: A Report on the 2019 ICDM/ICBK Contest,MANUAL_PDF_REQUIRED,Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained.
+C0070,Coarse-to-fine Knowledge Graph Domain Adaptation based on Distantly-supervised Iterative Training,ACCEPTED_CARD,
+C0072,Constructing Domain-Specific Knowledge Graphs from Unannotated Technical Texts using LLMs,MANUAL_PDF_REQUIRED,Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained.
+C0073,"Entity Linking with a Knowledge Base: Issues, Techniques, and Solutions",ACCEPTED_CARD,
+C0074,Extensive Benchmark of Frugal Encoder–Decoder Language Models for Datatype Properties Extraction and RDF Knowledge Graph Generation,ACCEPTED_CARD,
+C0076,Importance sampling for unbiased on-demand evaluation of knowledge base population,ACCEPTED_CARD,
+C0077,Joint entity-relation extraction: A key technique for knowledge graph construction&amp;mdash;A survey,MANUAL_PDF_REQUIRED,Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required.
+C0078,Large Language Models for Automatic Knowledge Graph Construction From Text Documents: a Materials Science Case Study,ACCEPTED_CARD,
+C0081,Natural vs programming language in LLM knowledge graph construction,ACCEPTED_CARD,
+C0082,OneRel:Joint Entity and Relation Extraction with One Module in One Step,ACCEPTED_CARD,
+C0083,Unstructured to Structured: Building Knowledge Graphs from Documents for Web Applications,MANUAL_PDF_REQUIRED,Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained.
+C0084,WSD based Ontology Learning from Unstructured Text using Transformer,MANUAL_PDF_REQUIRED,Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained.
+C0087,Automated Construction and Growth of a Large Ontology,ACCEPTED_CARD,
+C0088,A LLM-Based Approach for Semantic Extraction and Linking of RDF Triples from Unstructured Text,MANUAL_PDF_REQUIRED,Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained.
+C0089,A Method for Traditional Chinese Medicine Knowledge Graph Dynamic Construction,ACCEPTED_CARD,
+C0090,A novel ship collision accident knowledge graph construction method based on ontology-constrained prompt engineering,MANUAL_PDF_REQUIRED,Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained.
+C0091,An ontology for maintenance activities and its application to data quality,MANUAL_PDF_REQUIRED,Legal public acquisition routes exhausted in prior passes; manual PDF acquisition remains required.
+C0093,Confidence Estimation for Knowledge Base Population,ACCEPTED_CARD,
+C0094,Distantly supervised Web relation extraction for knowledge base population,ACCEPTED_CARD,
+C0095,Effective Modeling of Encoder-Decoder Architecture for Joint Entity and Relation Extraction,ACCEPTED_CARD,
+C0096,Entity Disambiguation for Knowledge Base Population,ACCEPTED_CARD,
+C0097,Entity extraction: From unstructured text to DBpedia RDF triples,ACCEPTED_CARD,
+C0098,Frame-Based Ontology Population with PIKES,MANUAL_PDF_REQUIRED,Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained.
+C0099,Information extraction and knowledge graph construction from geoscience literature,MANUAL_PDF_REQUIRED,Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained.
+C0101,Knowledge graphs generation from cultural heritage texts: combining LLMs and ontological engineering for scholarly debates,ACCEPTED_CARD,
+C0102,Laying the Groundwork for Knowledge Base Population: Nine Years of Linguistic Resources for TAC KBP,ACCEPTED_CARD,
+C0104,"Multi-Task Identification of Entities, Relations, and Coreference for Scientific Knowledge Graph Construction",ACCEPTED_CARD,
+C0106,OPIEC: An Open Information Extraction Corpus,ACCEPTED_CARD,
+C0107,OPTIMIZING SYNTACTIC-SEMANTIC RELATION EXTRACTION FOR THE KAZAKH LANGUAGE WITH TRANSFORMER ARCHITECTURES AND SYNTHETIC CORPORA,ACCEPTED_CARD,
+C0110,Prompt2Graph: Leveraging LLMs to Construct Knowledge Graphs from Technical Manuals,MANUAL_PDF_REQUIRED,Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained.
+C0113,Semi-supervised ISA: A novel industrial knowledge graph construction method enhanced by the fault log corpus analysis and semi-supervised learning,MANUAL_PDF_REQUIRED,Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained.
+C0114,Towards automated financial market knowledge graph construction,MANUAL_PDF_REQUIRED,Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained.
+C0116,A HOLY QURAN ONTOLOGY CONSTRUCTION WITH SEMI¬ AUTOMATIC POPULATION,ACCEPTED_CARD,
+C0122,A hybrid approach for extracting semantic relations from texts,ACCEPTED_CARD,
+C0125,A Survey on Generative Knowledge Graph Construction,ACCEPTED_CARD,
+C0126,Alzheimer’s Disease Knowledge Graph Enhances Knowledge Discovery and Disease Prediction,ACCEPTED_CARD,
+C0133,Bootstrapped Self Training for Knowledge Base Population.,ACCEPTED_CARD,
+C0134,Causal knowledge extraction from long text maintenance documents,MANUAL_PDF_REQUIRED,Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained.
+C0136,Chinese relation extraction for constructing satellite frequency and orbit knowledge graph: A survey,MANUAL_PDF_REQUIRED,Tried recorded/public metadata URLs and OpenAlex OA locations; no identity-validated public PDF was obtained.
+C0137,Construction of a knowledge graph for framework material enabled by large language models and its application,ACCEPTED_CARD,
+C0138,DBpedia spotlight,ACCEPTED_CARD,
+C0140,DocOIE: A Document-level Context-Aware Dataset for OpenIE,ACCEPTED_CARD,
+C0143,"Extract, Define, Canonicalize: An LLM-based Framework for Knowledge Graph Construction",ACCEPTED_CARD,
+C0146,Generative Knowledge Graph Construction: A Review,ACCEPTED_CARD,
+C0150,Knowledge-Based Weak Supervision for Information Extraction of Overlapping Relations,ACCEPTED_CARD,
+C0151,Learning to link with wikipedia,ACCEPTED_CARD,
+C0152,LINDEN,ACCEPTED_CARD,
+C0153,Llm-Tikg: Threat Intelligence Knowledge Graph Construction Utilizing Large Language Model,ACCEPTED_CARD,
+C0154,LLM4Schema.org: Generating Schema.org Markups With Large Language Models,ACCEPTED_CARD,
+C0155,LLMs for knowledge graph construction and reasoning: recent capabilities and future opportunities,ACCEPTED_CARD,
+C0158,Open Relation Extraction and Grounding,ACCEPTED_CARD,
+C0160,Question-Answer Extraction from Scientific Articles Using Knowledge Graphs and Large Language Models,ACCEPTED_CARD,
+C0162,Relation-Faceted Graph Pooling with LLM Guidance for Dynamic Span-Aware Information Extraction,ACCEPTED_CARD,
+C0163,Research on Association Rule Mining and Knowledge Graph Construction for Low-Carbon Scheme Design in Transmission Line Passageways,MANUAL_PDF_REQUIRED,No identity-validated legal public PDF was obtained after recorded/public-source attempts.
+C0167,"Tackling representation, annotation and classification challenges for temporal knowledge base population",MANUAL_PDF_REQUIRED,No identity-validated legal public PDF was obtained after recorded/public-source attempts.
+C0169,Text2Onto-Agent: An LLM Agent-Based End-to-End Automated Ontology Construction Method anda Case Study of Green Building Domain Modeling,PAPER_CARD_MANUAL_REVIEW,Luna and the single quality-only Terra replacement did not pass content-quality validation.

@@ -1,0 +1,732 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0082",
+    "title": "OneRel: Joint Entity and Relation Extraction with One Module in One Step",
+    "pdf_path": "data/pdfs/C0082.pdf",
+    "authors": [
+      "Yu-Ming Shang",
+      "Heyan Huang",
+      "Xian-Ling Mao"
+    ],
+    "year": 2022,
+    "venue": "AAAI Conference on Artificial Intelligence proceedings copyright notice",
+    "identifier": {
+      "status": "reported",
+      "value": "arXiv:2203.05412v2",
+      "evidence": [
+        {
+          "span_id": "C0082-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "arXiv:2203.05412v2 [cs.CL] 17 Mar 2022"
+        }
+      ]
+    },
+    "abstract": "Joint entity and relation extraction is an essential task in natural language processing and knowledge graph construction. Existing approaches usually decompose the joint extraction task into several basic modules or processing steps to make it easy to conduct. However, such a paradigm ignores the fact that the three elements of a triple are interdependent and indivisible. Therefore, previous joint methods suffer from cascading errors and redundant information. To address these issues, this paper proposes OneRel, a joint entity and relation extraction model that casts joint extraction as a fine-grained triple classification problem. The model consists of a scoring-based classifier and a relation-specific horns tagging strategy. The classifier evaluates whether a token pair and a relation belong to a factual triple, while the tagging strategy supports decoding. Experiments on two widely used datasets report better performance than the state-of-the-art baselines, including on overlapping patterns and multiple triples. evidence:[{",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0082-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Yu-Ming Shang, Heyan Huang, Xian-Ling Mao",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Front matter",
+      "span_id": "C0082-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "arXiv:2203.05412v2 [cs.CL] 17 Mar 2022",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Front matter",
+      "span_id": "C0082-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Copyright © 2022, Association for the Advancement of Artificial Intelligence (www.aaai.org). All rights reserved.",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Front matter",
+      "span_id": "C0082-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "arXiv:2203.05412v2 [cs.CL] 17 Mar 2022",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0082-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We propose a novel joint entity and relation extraction model, named OneRel, which casts joint extraction as a fine-grained triple classification problem.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0082-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Traditional pipeline approaches treat entity recognition and relation classification as two separate sub-tasks... and are susceptible for the problem of error propagation.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0082-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "The triple (Bionico, Country, Mexico) can be directly identified by judging its correctness.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0082-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We propose a novel joint entity and relation extraction model, named OneRel, which is capable of extracting all triples from unstructured text with one module in one step.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Scoring-based Classifier",
+      "span_id": "C0082-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "For an input sentence, we employ a pre-trained BERT as sentence encoder to capture the d-dimensional token embedding.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Task Definition",
+      "span_id": "C0082-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Given a sentence ... and K predefined relations R, the purpose ... is to identify all possible triples.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0082-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "OneRel ... accomplishes the joint extraction task from the perspective of triple classification.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Scoring-based Classifier",
+      "span_id": "C0082-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "g(wi,rk,wj) denotes the gold tag obtained from annotations.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Relation Specific Horns Tagging",
+      "span_id": "C0082-D-P003-PICTURE-0001",
+      "page": 3,
+      "excerpt": "Four types of tags are used in our tagging strategy: (1) HB-TB ... (2) HB-TE ... (3) HE-TE ... (4) -.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Scoring-based Classifier",
+      "span_id": "C0082-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "We employ a pre-trained BERT as sentence encoder... the final score function of our method is defined as ... Finally, we feed the score vector ... into a softmax function to predict corresponding tags.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Decoding",
+      "span_id": "C0082-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "For each relation, the spans of head entities are spliced from HB-TE to HE-TE; the spans of tail entities are spliced from HB-TB to HB-TE; and two paired entities share the same HB-TE.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Task Definition",
+      "span_id": "C0082-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Given a sentence S ... and K predefined relations R ... identify all possible triples.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Task Definition",
+      "span_id": "C0082-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The purpose of joint entity and relation extraction is to identify all possible triples T={(hi,ri,ti)}.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Decoding",
+      "span_id": "C0082-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The spans of head entities are spliced ... the spans of tail entities are spliced ... and two paired entities share the same HB-TE.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Task Definition",
+      "span_id": "C0082-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Given a sentence S={w1,w2,...,wL} with L tokens ...",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Task Definition",
+      "span_id": "C0082-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Given a sentence S={w1,w2,...,wL} with L tokens...",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Experimental Settings",
+      "span_id": "C0082-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "the max sequence length is set to 100.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Task Definition",
+      "span_id": "C0082-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "identify all possible triples T={(hi,ri,ti)}Ni=1 in S, where hi,ti are the head entity and tail entity composed of several consecutive tokens.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Relation Specific Horns Tagging",
+      "span_id": "C0082-D-P003-PICTURE-0002",
+      "page": 3,
+      "excerpt": "We maintain a three-dimensional matrix ML×K×L to store the classification results.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Scoring-based Classifier",
+      "span_id": "C0082-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We employ a pre-trained BERT ... The new definition brings ... benefits ... modeling asymmetric relations.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Implementation Details",
+      "span_id": "C0082-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "For the pre-trained BERT, we reuse the base cased English model released by Huggingface, which contains 12 Transformer blocks and the hidden size d is 768.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Topology Structure of Relations",
+      "span_id": "C0082-D-P007-PICTURE-0003",
+      "page": 7,
+      "excerpt": "we visualize the relation representations of NYT by the t-SNE ... algorithm.",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Datasets and Evaluation Metrics",
+      "span_id": "C0082-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "we evaluate our model and all baselines on two widely used datasets: NYT ... and WebNLG.",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Datasets and Evaluation Metrics",
+      "span_id": "C0082-D-P005-TABLE-0002",
+      "page": 5,
+      "excerpt": "NYT*: 56,195, 4,999, 5,000, 24; WebNLG*: 5,019, 500, 703, 171; NYT: 56,195, 5,000, 5,000, 24; WebNLG: 5,019, 500, 703, 216.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Datasets and Evaluation Metrics",
+      "span_id": "C0082-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Three standard evaluation metrics are used in our experiments, i.e., micro Precision, Recall and F1-score.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Datasets and Evaluation Metrics",
+      "span_id": "C0082-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "we adopt Partial Match for NYT* and WebNLG* ... and use Exact Match for NYT and WebNLG.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Model Efficiency",
+      "span_id": "C0082-D-P007-TABLE-0003",
+      "page": 7,
+      "excerpt": "Training Time (s) means the time required to train one epoch, Inference Time (ms) is the time to predict triples of one sentence.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Baselines",
+      "span_id": "C0082-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We compare our model with ten state-of-the-art baselines: GraphRel, RSAN, MHSA, CasRel, TPLinker, SPN, CGT, CasDE, RIFRE, PRGC.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Baselines",
+      "span_id": "C0082-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "OneRel− is the model that replaces the classifier of OneRel with f(wi,rk,wj)=W[ei;rk;ej]+b.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Implementation Details and Baselines",
+      "span_id": "C0082-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We tune our model on the valid set and use grid search to adjust important hyper-parameters.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Baselines",
+      "span_id": "C0082-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "For fair comparison, the reported results for all baselines are directly from the original literature. We also conduct ablation test.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Results on Different Sub-tasks",
+      "span_id": "C0082-D-P006-TABLE-0003",
+      "page": 6,
+      "excerpt": "We further explore the performance of OneRel on different sub-tasks, i.e., entity pair recognition and relation classification.",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Main Results",
+      "span_id": "C0082-D-P006-TABLE-0001",
+      "page": 6,
+      "excerpt": "OneRel 92.8 92.9 92.8; 94.1 94.4 94.3; 93.2 92.6 92.9; 91.8 90.3 91.0.",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Detailed Results on Complex Scenarios",
+      "span_id": "C0082-D-P006-TABLE-0002",
+      "page": 6,
+      "excerpt": "our OneRel achieves the best F1-score on 13 of the 18 subsets, especially for the most complex cases HTO and N≥5.",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Model Efficiency",
+      "span_id": "C0082-D-P007-TABLE-0003",
+      "page": 7,
+      "excerpt": "NYT*: TPLinker 1592 46.2 91.9; OneRel 1195 41.5 92.9. WebNLG*: TPLinker 599 40.1 91.9; OneRel 88 45 94.3.",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction and Contributions",
+      "span_id": "C0082-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "head entity, relation and tail entity are simultaneously fed into one classification module ... only one-step classification is used.",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Relation Specific Horns Tagging",
+      "span_id": "C0082-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "the sparsity of M ensures the simplicity and efficiency of triple elements decoding.",
+      "confidence": "medium"
+    },
+    "strengths-23-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Detailed Results on Complex Scenarios",
+      "span_id": "C0082-D-P006-TABLE-0003",
+      "page": 6,
+      "excerpt": "our OneRel achieves the best F1-score on 13 of the 18 subsets, especially for the most complex cases HTO and N≥5.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Task Definition",
+      "span_id": "C0082-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Given a sentence ... and K predefined relations ... identify all possible triples.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Scoring-based Classifier",
+      "span_id": "C0082-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "using (ei,rk,ej) as input means the model needs performing at least L×K×L calculations.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Model Efficiency",
+      "span_id": "C0082-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "Although the theoretical complexity of the two models is O(KL²)...",
+      "confidence": "medium"
+    },
+    "weaknesses-24-04": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Baselines",
+      "span_id": "C0082-D-P005-TEXT-0004",
+      "page": 5,
+      "excerpt": "the reported results for all baselines are directly from the original literature.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Conclusion",
+      "span_id": "C0082-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "To improve the efficiency of the model, we design a simplified version of HOLE as the score function. We will next try to design a more efficient and powerful score function.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Conclusion",
+      "span_id": "C0082-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "We would like to explore the idea of triple classification in other information extraction problems, such as event extraction.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Task Definition",
+      "span_id": "C0082-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Given a sentence ... and K predefined relations...",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Conclusion",
+      "span_id": "C0082-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "To improve the efficiency of the model ... design a more efficient and powerful score function.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion",
+      "span_id": "C0082-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "We will next try to design a more efficient and powerful score function.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion",
+      "span_id": "C0082-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "We would like to explore the idea of triple classification in other information extraction problems, such as event extraction.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Datasets and Evaluation Metrics",
+      "span_id": "C0082-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "we evaluate our model and all baselines on two widely used datasets: NYT ... and WebNLG.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Implementation Details",
+      "span_id": "C0082-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "https://huggingface.co/bert-base-cased",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses joint extraction of head entities, relations, and tail entities from unstructured text. It targets cascading errors caused by serial multi-module methods and redundant or incorrectly assembled triples caused by separately recognizing entities and relations. The objective is to identify all triples with one module in one step by classifying token-pair/relation combinations jointly.",
+  "methodology": {
+    "primary_family": "Joint entity-relation extraction",
+    "secondary_families": [
+      "Transformer encoder methods",
+      "Ontology-constrained and schema-guided methods"
+    ],
+    "system_type": "joint",
+    "supervision_setting": "supervised",
+    "description": "OneRel formulates joint extraction as fine-grained triple classification. For every ordered token pair and predefined relation, a scoring-based classifier predicts one of four tags: HB-TB, HB-TE, HE-TE, or -. The model uses BERT token representations, a nonlinear projection of token-pair representations, relation representations, dropout, and softmax classification. Rel-Spec Horns Tagging marks boundary-token combinations for paired head and tail entities. Decoding splices head and tail spans from the boundary tags and reconstructs triples. The score function computes all relation scores for a token pair in parallel. The execution pipeline is: tokenize a sentence; encode tokens with pretrained BERT; enumerate token-pair/relation combinations; score and classify them; obtain the sparse relation-specific tag matrix; decode entity spans and relations from HB-TB, HB-TE, and HE-TE tags; output triples."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The model uses a predefined relation inventory supplied by each dataset; it does not discover an ontology or construct an ontology. The relation-specific matrix is an internal extraction representation, not an external KG schema.",
+    "evidence": [
+      {
+        "span_id": "C0082-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "Given a sentence S ... and K predefined relations R ... identify all possible triples."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Entity and concept extraction",
+    "Relation and triple extraction"
+  ],
+  "input_output": {
+    "input_type": "Unstructured natural-language sentences",
+    "input_granularity": "Sentence-level",
+    "output_representation": "A set of head-relation-tail triples, with multi-token entity spans recovered from relation-specific boundary tags."
+  },
+  "models_and_tools": [
+    "Pretrained BERT-base-cased encoder from Hugging Face, with 12 Transformer blocks and hidden size 768",
+    "Scoring-based classifier using a nonlinear concatenation projection, relation representations, dropout, and softmax",
+    "Rel-Spec Horns Tagging and its decoding algorithm",
+    "Adam optimizer",
+    "t-SNE visualization for relation representations"
+  ],
+  "datasets": [
+    "NYT: 56,195 train, 4,999/5,000 validation, 5,000 test; 24 relations",
+    "WebNLG: 5,019 train, 500 validation, 703 test; 171 relations for WebNLG* and 216 for WebNLG",
+    "NYT* and WebNLG* use last-word entity annotation and Partial Match evaluation; NYT and WebNLG use whole-span annotation and Exact Match evaluation"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Micro precision",
+      "Micro recall",
+      "F1-score",
+      "Partial Match for NYT* and WebNLG*: relation and last words of head and tail must be correct",
+      "Exact Match for NYT and WebNLG: whole head and tail spans and relation must be correct",
+      "Training time per epoch and inference time per sentence in the efficiency comparison"
+    ],
+    "baselines": [
+      "GraphRel",
+      "RSAN",
+      "MHSA",
+      "CasRel",
+      "TPLinker",
+      "SPN",
+      "CGT",
+      "CasDE",
+      "RIFRE",
+      "PRGC",
+      "OneRel− ablation model"
+    ],
+    "setting": "Supervised benchmark evaluation on NYT and WebNLG, including Partial Match and Exact Match comparisons, subsets grouped by overlap pattern and number of triples, subtask analysis, an ablation comparison, relation-representation visualization, and training/inference efficiency comparison with TPLinker. Baseline values are taken from the original literature."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "On Table 2, OneRel obtains NYT* Partial Match P/R/F1 = 92.8/92.9/92.8, WebNLG* Partial Match = 94.1/94.4/94.3, NYT Exact Match = 93.2/92.6/92.9, and WebNLG Exact Match = 91.8/90.3/91.0.",
+      "OneRel has the best F1-score among the compared systems on all four dataset/evaluation settings in Table 2. It exceeds PRGC by 1.3 F1 on WebNLG* and 2.5 F1 on WebNLG, and exceeds TPLinker by 0.9, 2.4, 0.9, and 4.3 F1 on NYT*, WebNLG*, NYT, and WebNLG, respectively.",
+      "On the 18 overlap/triple-count subsets in Table 3, OneRel has the best F1 on 13 subsets; it reports HTO F1 = 90.8 on NYT* and 94.9 on WebNLG*, and N≥5 F1 = 94.2 and 94.5, respectively.",
+      "In Table 5, OneRel versus TPLinker has training time/inference time/F1 of 1195 seconds/41.5 ms/92.9 on NYT* and 88 seconds/45 ms/94.3 on WebNLG*; TPLinker has 1592/46.2/91.9 and 599/40.1/91.9, respectively.",
+      "The authors interpret the relation t-SNE visualization as showing clustered topology consistent with relation semantics and suggesting learned relation correlations."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0082-D-P006-TABLE-0001",
+        "page": 6,
+        "excerpt": "OneRel 92.8 92.9 92.8; 94.1 94.4 94.3; 93.2 92.6 92.9; 91.8 90.3 91.0."
+      },
+      {
+        "span_id": "C0082-D-P006-TABLE-0002",
+        "page": 6,
+        "excerpt": "our OneRel achieves the best F1-score on 13 of the 18 subsets, especially for the most complex cases HTO and N≥5."
+      },
+      {
+        "span_id": "C0082-D-P007-TABLE-0003",
+        "page": 7,
+        "excerpt": "NYT*: TPLinker 1592 46.2 91.9; OneRel 1195 41.5 92.9. WebNLG*: TPLinker 599 40.1 91.9; OneRel 88 45 94.3."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Unifies entity and relation extraction in one classification module and one step.",
+      "Jointly scores token pairs and relations, allowing triple elements to be modeled together.",
+      "Rel-Spec Horns Tagging is sparse and supports decoding of overlapping triples, including difficult HTO cases.",
+      "The classifier processes all K relations for a token pair in parallel and has fewer processing steps than TPLinker in the described implementation.",
+      "The paper evaluates both standard settings and complex overlap/multiple-triple subsets, and includes ablation and efficiency analyses."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0082-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "head entity, relation and tail entity are simultaneously fed into one classification module ... only one-step classification is used."
+      },
+      {
+        "span_id": "C0082-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "the sparsity of M ensures the simplicity and efficiency of triple elements decoding."
+      },
+      {
+        "span_id": "C0082-D-P006-TABLE-0003",
+        "page": 6,
+        "excerpt": "our OneRel achieves the best F1-score on 13 of the 18 subsets, especially for the most complex cases HTO and N≥5."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: the method requires a predefined relation set and supervised gold tags, so it does not address ontology discovery or schema adaptation.",
+      "Review-level inference: the paper formulates the input as a single sentence and evaluates sentence-level extraction; it does not cover document-level coreference, entity linking, graph fusion, graph validation, or graph updating.",
+      "Review-level inference: the scoring tensor has theoretical complexity O(KL²), so cost can increase with relation-inventory size and sentence length.",
+      "The reported baselines are taken from prior literature, so cross-method comparisons depend on the compatibility of the cited experimental settings."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0082-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "Given a sentence ... and K predefined relations ... identify all possible triples."
+      },
+      {
+        "span_id": "C0082-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "using (ei,rk,ej) as input means the model needs performing at least L×K×L calculations."
+      },
+      {
+        "span_id": "C0082-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "Although the theoretical complexity of the two models is O(KL²)..."
+      },
+      {
+        "span_id": "C0082-D-P005-TEXT-0004",
+        "page": 5,
+        "excerpt": "the reported results for all baselines are directly from the original literature."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The authors identify further efficiency improvement as future work, specifically designing a more efficient and powerful score function.",
+      "The authors propose exploring triple classification for other information-extraction problems, such as event extraction."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0082-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "To improve the efficiency of the model, we design a simplified version of HOLE as the score function. We will next try to design a more efficient and powerful score function."
+      },
+      {
+        "span_id": "C0082-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "We would like to explore the idea of triple classification in other information extraction problems, such as event extraction."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: extend the sentence-level extractor with document-level coreference resolution and entity linking before or after triple decoding.",
+      "Review-level inference: add ontology/schema constraints and graph-level validation, deduplication, and updating so the extracted triples can populate a maintained knowledge graph.",
+      "Review-level inference: reduce O(KL²) cost using relation pruning, sparse token-pair selection, span pruning, or more efficient score functions, consistent with the authors' stated future direction."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0082-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "Given a sentence ... and K predefined relations..."
+      },
+      {
+        "span_id": "C0082-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "To improve the efficiency of the model ... design a more efficient and powerful score function."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: the paper leaves broader document-level Text-to-KG issues unresolved, including cross-sentence relations, coreference, entity resolution/linking, graph fusion, graph validation, and graph updating.",
+      "Review-level inference: efficient extraction under substantially longer inputs or much larger relation inventories remains unresolved; the paper explicitly identifies score-function efficiency as future work.",
+      "Review-level inference: extending the triple-classification paradigm beyond entity-relation extraction, including event extraction, remains open."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0082-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "We will next try to design a more efficient and powerful score function."
+      },
+      {
+        "span_id": "C0082-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "We would like to explore the idea of triple classification in other information extraction problems, such as event extraction."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper reports use of public NYT and WebNLG datasets and identifies the Hugging Face bert-base-cased model URL. No OneRel source-code repository or explicit code-release statement is provided in the PDF."
+}

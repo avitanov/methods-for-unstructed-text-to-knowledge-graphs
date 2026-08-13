@@ -1,0 +1,470 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0076",
+    "title": "Importance sampling for unbiased on-demand evaluation of knowledge base population",
+    "authors": [
+      "Arun Tejasvi Chaganty",
+      "Ashwin Pradeep Paranjape",
+      "Percy Liang",
+      "Christopher D. Manning"
+    ],
+    "year": "not_reported",
+    "venue": "not_reported",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "Knowledge base population (KBP) systems take in a large document corpus and extract entities and their relations. Thus far, KBP evaluation has relied on judgements on the pooled predictions of existing systems. We show that this evaluation is problematic: when a new system predicts a previously unseen relation, it is penalized even if it is correct. This leads to significant bias against new systems, which counterproductively discourages innovation in the field. Our first contribution is a new importance-sampling based evaluation which corrects for this bias by annotating a new system's predictions on-demand via crowdsourcing. We show this eliminates bias and reduces variance using data from the 2015 TAC KBP task. Our second contribution is an implementation of our method made publicly available as an online KBP evaluation service.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "pdf_path": null
+  },
+  "problem_addressed": "Traditional KBP evaluation relies on pooled predictions from existing systems; a new system that predicts a previously unseen (but correct) relation is penalized because it is missing from the pool, creating a systematic 'pooling bias' against new/innovative systems and discouraging progress in the field.",
+  "methodology": {
+    "primary_family": "Importance-sampling based on-demand evaluation methodology",
+    "secondary_families": [
+      "Crowdsourcing-based annotation",
+      "Monte Carlo / simple estimators",
+      "Joint importance-weighted estimators"
+    ],
+    "system_type": "not_reported",
+    "supervision_setting": "not_reported",
+    "description": "The paper proposes 'on-demand evaluation', which lazily constructs an evaluation dataset by annotating predictions from new KBP systems only when they are underrepresented in the current labeled pool. Using importance sampling, joint precision and recall estimators combine samples drawn independently from each system's predictions (weighted via mixing weights w_ij) with a sample of true instances (Y_0) to produce unbiased score estimates while minimizing crowdsourcing annotation cost, and an adaptive sampling scheme determines how many new labels are required for each newly submitted system."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "Relations are triples (SUBJECT, PREDICATE, OBJECT, PROVENANCE) where PREDICATE belongs to a specified schema; the TAC KBP guidelines specify a total of 65 predicates (including inverses) such as per:title or org:founded_on.",
+    "evidence": [
+      {
+        "span_id": "C0076-D-P002-TEXT-0074",
+        "page": 2,
+        "excerpt": "In knowledge base population, each relation is a triple (SUBJECT, PREDICATE, OBJECT) where SUBJECT and OBJECT are some globally unique entity identifiers (e.g. Wikipedia page titles) and PREDICATE belongm to a specified schema. 1 A KBP system returns an output in the form of relation instances (SUBJECT, PREDICATE, OBJECT, PROVENANCE), where PROVENANCE is a description of where exactly in the document corpus the relation was found. In the example shown in Figure 1, CARRIE FISHER and DEBBIE REYNOLDS are identified as the subject and object, respectively, of the predicate CHILD OF, and the whole sentence is provided as provenance. The provenance also identifies that CARRIE FISHER is referenced by Fisher within the sentence. Note that the same relation can be expressed in multiple sentences across the document corpus; each of these is a different relation instance."
+      },
+      {
+        "span_id": "C0076-D-P002-TEXT-0076",
+        "page": 2,
+        "excerpt": "1 The TAC KBP guidelines specify a total of 65 predicates (including inverses) such as per:title or org:founded on , etc. Subject entities can be people, organizations, geopolitical entities, while object entities also include dates, numbers and arbitrary string-values like job titles."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "entity identification/linking",
+    "relation extraction",
+    "provenance identification",
+    "crowdsourced relation/entity labeling"
+  ],
+  "input_output": {
+    "input_type": "Large unstructured text document corpus (e.g., TAC KBP newswire documents)",
+    "input_granularity": "Document-level, with sentence/mention-level provenance for relation instances",
+    "output_representation": "Relation instances represented as (SUBJECT, PREDICATE, OBJECT, PROVENANCE) tuples, with subject/object as globally unique entity identifiers (e.g. Wikipedia page titles) and provenance identifying document location and mention"
+  },
+  "models_and_tools": [
+    "Stanford CoreNLP",
+    "Illinois Wikifier",
+    "logistic classifier (L)",
+    "neural network classifier (N)"
+  ],
+  "datasets": "not_reported",
+  "evaluation": {
+    "metrics": [
+      "Precision",
+      "Recall"
+    ],
+    "baselines": "not_reported",
+    "setting": "Simulated experiments using held-out TAC KBP 2015 evaluation data (treated as exhaustively annotated) comparing pooled, simple, and joint estimators, plus a live pilot of the on-demand evaluation service on three relation extraction systems run against the TAC KBP 2016 document corpus."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Adaptive sample selection combined with joint estimation can reduce the number of labeled annotations required by an order of magnitude relative to a fixed sampling scheme (Figure 4e)"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0076-D-P001-TEXT-0040",
+        "page": 1,
+        "excerpt": "The key finding of this paper contradicts this assumption and shows that the pooling bias is actually significant, and it penalizes newly developed systems by 2% F 1 on average (Section 3). Novel improvements, which typically increase scores by less than 1% F 1 on existing datasets, are therefore likely to be clouded by pooling bias during development. Worse, the bias is larger for a system which predicts qualitatively different relations systematically missing from the pool. Of course, systems participating in the TAC KBP evaluation do not suffer from pooling bias, but this requires researchers to wait a year to get credible feedback on new ideas."
+      },
+      {
+        "span_id": "C0076-D-P003-TABLE-0001",
+        "page": 3,
+        "excerpt": "|          | Median bias   | Median bias   | Median bias   |\n|----------|---------------|---------------|---------------|\n|          | Precision     | Recall        | Macro F 1     |\n| Official | 17.93%        | 17.00%        | 15.51%        |\n| anydoc   | 2.34%         | 1.93%         | 2.05%         |"
+      },
+      {
+        "span_id": "C0076-D-P008-TEXT-0005",
+        "page": 8,
+        "excerpt": "We repeat the above simulated experiment 500 times and compare the estimated precision and recall with their true values (Figure 4). The simulations once again highlights that the pooled methodology is biased, while the simple and joint estimators are not. Furthermore, the joint estimators significantly reduce variance relative to the simple estimators: the median 90% confidence intervals reduce from 0.14 to 0.06 precision and from 0.14 to 0.08 for recall."
+      },
+      {
+        "span_id": "C0076-D-P007-TABLE-0001",
+        "page": 7,
+        "excerpt": "| Sys.   | P                    | R                    | F 1                  |\n|--------|----------------------|----------------------|----------------------|\n|        | TAC                  | KBP evaluation       | KBP evaluation       |\n| P      | 47.6%                | 11.0%                | 17.9%                |\n| P+L    | 35.5%                | 18.4%                | 24.2%                |\n| P+L+N  | 26.3%                | 27.0%                | 26.6%                |\n|        | On-demand evaluation | On-demand evaluation | On-demand evaluation |\n| P      | 74.7%                | 5.8%                 | 10.8%                |\n| P+L    | 54.7%                | 7.6%                 | 13.3%                |\n| P+L+N  | 34.0%                | 9.8%                 | 15.2%                |"
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Eliminates pooling bias and reduces variance in KBP evaluation using importance-sampling based estimators (validated on TAC KBP 2015 data)",
+      "Cost-effective: labeling relation instances from system predictions costs an order of magnitude less (~$0.18) than exhaustive annotation (~$1.60 per instance)",
+      "Publicly available online evaluation service allowing researchers to obtain on-demand feedback without waiting for annual shared-task cycles"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0076-D-P001-TEXT-0006",
+        "page": 1,
+        "excerpt": "Knowledge base population (KBP) systems take in a large document corpus and extract entities and their relations. Thus far, KBP evaluation has relied on judgements on the pooled predictions of existing systems. We show that this evaluation is problematic: when a new system predicts a previously unseen relation, it is penalized even if it is correct. This leads to significant bias against new systems, which counterproductively discourages innovation in the field. Our first contribution is a new importance-sampling based evaluation which corrects for this bias by annotating a new system's predictions ondemand via crowdsourcing. We show this eliminates bias and reduces variance using data from the 2015 TAC KBP task. Our second contribution is an implementation of our method made publicly available as an online KBP evaluation service. We pilot the service by testing diverse state-ofthe-art systems on the TAC KBP 2016 corpus and obtain accurate scores in a cost effective manner."
+      },
+      {
+        "span_id": "C0076-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "Pooling bias is fundamentally a sampling bias problem where relation instances from new systems are underrepresented in the evaluation dataset. We could of course sidestep the problem by exhaustively annotating the entire document corpus, by annotating all mentions of entities and checking relations between all pairs of mentions. However, that would be a laborious and prohibitively expensive task: using the interfaces we've developed (Section 6), it costs about $15 to annotate a single document by non-expert crowdworkers, resulting in an estimated cost of at least $1,350,000 for a reasonably large corpus of 90,000 documents (Dang, 2016). The annotation effort would cost significantly more with expert annotators. In contrast, labeling relation instances from system predictions can be an order of magnitude cheaper than finding them in documents: using our interfaces, it costs only about $0.18 to verify each relation instance compared to $1.60 per instance extracted through exhaustive annotations."
+      },
+      {
+        "span_id": "C0076-D-P002-TEXT-0003",
+        "page": 2,
+        "excerpt": "Finally, our third contribution is an implementation of our framework as a publicly available evaluation service at https://kbpo.stanford. edu , where researchers can have their own KBP systems evaluated. The data collected through the evaluation process could even be valuable for relation extraction, entity linking and coreference, and will also be made publicly available through the website. We evaluate three systems on the 2016 TAC KBP corpus for about $150 each (a fraction of the cost of official evaluation). We believe the public availability of this service will speed the pace of progress in developing KBP systems."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Determining the optimal mixing weights w_ij for the joint estimator is acknowledged to be a hard problem, so a heuristic approximation is used instead of an optimal solution",
+      "Sampling from the true set of correct instances Y is inherently difficult since Y cannot be enumerated, requiring a proxy assumption (uniform distribution of relations across documents) that may not hold exactly"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0076-D-P005-TEXT-0006",
+        "page": 5,
+        "excerpt": "It is a hard problem to determine what the optimal mixing weights w ij should be. However, we can formally verify that if X i and X j are disjoint, then w ij = 0 minimizes the variance of π i , and if X i = X j , then w ij ∝ n j is optimal. This motivates the following heuristic choice which interpolates between these two extremes: w ij ∝ n j ∑ x ∈X p j ( x ) p i ( x ) ."
+      },
+      {
+        "span_id": "C0076-D-P006-TEXT-0007",
+        "page": 6,
+        "excerpt": "Sampling from the set of true instances Y is difficult because we can't even enumerate the elements of Y . As a proxy, we assume that relations are identically distributed across documents and have crowdworkers annotate a random subset of documents for relations using an interface we developed (Figure 4b). Crowdworkers begin by identifying every mention span in a document. For each mention, they are asked to identify its type, canonical mention within the document and associated Wikipedia page if possible. They are then presented with a separate interface to label predicates between pairs of mentions within a sentence that were identified earlier."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "It is a hard problem to determine what the optimal mixing weights w_ij should be; a heuristic choice is used instead",
+      "Sampling from the set of true instances Y is difficult because the elements of Y cannot even be enumerated, requiring an assumption that relations are identically distributed across documents",
+      "Simply providing better evaluation scores is only part of the solution; better datasets are also necessary, and existing datasets likely still exhibit bias against novel systems"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0076-D-P005-TEXT-0006",
+        "page": 5,
+        "excerpt": "It is a hard problem to determine what the optimal mixing weights w ij should be. However, we can formally verify that if X i and X j are disjoint, then w ij = 0 minimizes the variance of π i , and if X i = X j , then w ij ∝ n j is optimal. This motivates the following heuristic choice which interpolates between these two extremes: w ij ∝ n j ∑ x ∈X p j ( x ) p i ( x ) ."
+      },
+      {
+        "span_id": "C0076-D-P006-TEXT-0007",
+        "page": 6,
+        "excerpt": "Sampling from the set of true instances Y is difficult because we can't even enumerate the elements of Y . As a proxy, we assume that relations are identically distributed across documents and have crowdworkers annotate a random subset of documents for relations using an interface we developed (Figure 4b). Crowdworkers begin by identifying every mention span in a document. For each mention, they are asked to identify its type, canonical mention within the document and associated Wikipedia page if possible. They are then presented with a separate interface to label predicates between pairs of mentions within a sentence that were identified earlier."
+      },
+      {
+        "span_id": "C0076-D-P009-TEXT-0006",
+        "page": 9,
+        "excerpt": "Of course, simply providing better evaluation scores is only part of the solution and it is clear that better datasets are also necessary. However, the very same difficulties in scale that make evaluating KBP difficult also make it hard to collect a high quality dataset for the task. As a result, existing datasets (Angeli et al., 2014; Adel et al., 2016) have relied on the output of existing systems, making it likely that they exhibit the same biases against novel systems that we've discussed in this paper. We believe that providing a fair and standardized evaluation platform as a service allows researchers to exploit such datasets and while still being able to accurately measure their performance on the knowledge base population task."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Adapting the on-demand/importance-sampling evaluation ideas to other hard-to-evaluate NLP tasks such as summarization or dialogue that have a generation component",
+      "Further study of alternative sampling distributions p_i for selecting evaluation entities, as outlined for future analysis in the supplementary appendix"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0076-D-P009-TEXT-0007",
+        "page": 9,
+        "excerpt": "There are many other tasks in NLP that are even harder to evaluate than KBP. Existing evaluation metrics for tasks with a generation componentsuch as summarization or dialogue-leave much to be desired. We believe that adapting the ideas of this paper to those tasks is a fruitful direction, as progress of a research community is strongly tied to the fidelity of evaluation."
+      },
+      {
+        "span_id": "C0076-D-P006-TEXT-0005",
+        "page": 6,
+        "excerpt": "Identifying a reasonable distribution p i is an important implementation decision that depends on what one wishes to evaluate. Our goal for the ondemand evaluation service we have implemented is to ensure that KBP systems are fairly evaluated on diverse subjects and predicates, while at the same time, ensuring that entities with multiple relations are represented to measure completeness of knowledge base entries. As a result, we propose a distribution that is inversely proportional to the frequency of the subject and predicate and is proportional to the number of unique relations identified for an entity (to measure knowledge base completeness). See Appendix A in the supplementary material for an analysis of this distribution and a study of other potential choices."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Existing large KBP datasets still rely on outputs of existing systems and are likely to exhibit the same pooling biases against novel systems discussed in the paper"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0076-D-P009-TEXT-0005",
+        "page": 9,
+        "excerpt": "Over the last ten years of the TAC KBP task, the gap between human and system performance has barely narrowed despite the community's best efforts: top automated systems score less than 36% F 1 while human annotators score more than 60%. In this paper, we've shown that the current evaluation methodology may be a contributing factor because of its bias against novel system improvements. The new on-demand framework proposed in this work addresses this problem by obtaining human assessments of new system output through crowdsourcing. The framework is made economically feasible by carefully sampling output to be assessed and correcting for sample bias through importance sampling."
+      },
+      {
+        "span_id": "C0076-D-P009-TEXT-0006",
+        "page": 9,
+        "excerpt": "Of course, simply providing better evaluation scores is only part of the solution and it is clear that better datasets are also necessary. However, the very same difficulties in scale that make evaluating KBP difficult also make it hard to collect a high quality dataset for the task. As a result, existing datasets (Angeli et al., 2014; Adel et al., 2016) have relied on the output of existing systems, making it likely that they exhibit the same biases against novel systems that we've discussed in this paper. We believe that providing a fair and standardized evaluation platform as a service allows researchers to exploit such datasets and while still being able to accurately measure their performance on the knowledge base population task."
+      }
+    ]
+  },
+  "code_and_data_availability": "The framework is implemented as a publicly available online evaluation service at https://kbpo.stanford.edu, where researchers can have their own KBP systems evaluated; data collected through the evaluation process will also be made publicly available through the website.",
+  "analysis_confidence": "medium",
+  "evidence_locations": {
+    "paper_metadata.authors-01": {
+      "claim": "Arun Tejasvi Chaganty; Ashwin Pradeep Paranjape; Percy Liang; Christopher D. Manning",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Arun Tejasvi Chaganty ∗ and Ashwin Pradeep Paranjape ∗ and Percy Liang",
+      "confidence": "medium"
+    },
+    "paper_metadata.authors-02": {
+      "claim": "Arun Tejasvi Chaganty; Ashwin Pradeep Paranjape; Percy Liang; Christopher D. Manning",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P001-SECTION-0002",
+      "page": 1,
+      "excerpt": "Christopher D. Manning",
+      "confidence": "medium"
+    },
+    "paper_metadata.abstract-01": {
+      "claim": "Knowledge base population (KBP) systems take in a large document corpus and extract entities and their relations. Thus far, KBP evaluation has relied on judgements on the pooled predictions of existing systems. We show that this evaluation is problematic: when a new system predicts a previously unseen relation, it is penalized even if it is correct. This leads to significant bias against new systems, which counterproductively discourages innovation in the field. Our first contribution is a new importance-sampling based evaluation which corrects for this bias by annotating a new system's predictions on-demand via crowdsourcing. We show this eliminates bias and reduces variance using data from the 2015 TAC KBP task. Our second contribution is an implementation of our method made publicly available as an online KBP evaluation service.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P001-TEXT-0006",
+      "page": 1,
+      "excerpt": "Knowledge base population (KBP) systems take in a large document corpus and extract entities and their relations. Thus far, KBP evaluation has relied on judgements on the pooled predictions of existing systems. We show that this evaluation is problematic: when a new system predicts a previously unseen relation, it is penalized even if it is correct. This leads to significant bias against new systems, which counterproductively discourages innovation in the field. Our first contribution is a new importance-sampling based evaluation which corrects for this bias by annotating a new system's predictions ondemand via crowdsourcing. We show this eliminates bias and reduces variance using data from the 2015 TAC KBP task. Our second contribution is an implementation of our method made publicly available as an online KBP evaluation service. We pilot the service by testing diverse state-ofthe-art systems on the TAC KBP 2016 corpus and obtain accurate scores in a cost effective manner.",
+      "confidence": "medium"
+    },
+    "problem_addressed-01": {
+      "claim": "Traditional KBP evaluation relies on pooled predictions from existing systems; a new system that predicts a previously unseen (but correct) relation is penalized because it is missing from the pool, creating a systematic 'pooling bias' against new/innovative systems and discouraging progress in the field.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P001-TEXT-0006",
+      "page": 1,
+      "excerpt": "Knowledge base population (KBP) systems take in a large document corpus and extract entities and their relations. Thus far, KBP evaluation has relied on judgements on the pooled predictions of existing systems. We show that this evaluation is problematic: when a new system predicts a previously unseen relation, it is penalized even if it is correct. This leads to significant bias against new systems, which counterproductively discourages innovation in the field. Our first contribution is a new importance-sampling based evaluation which corrects for this bias by annotating a new system's predictions ondemand via crowdsourcing. We show this eliminates bias and reduces variance using data from the 2015 TAC KBP task. Our second contribution is an implementation of our method made publicly available as an online KBP evaluation service. We pilot the service by testing diverse state-ofthe-art systems on the TAC KBP 2016 corpus and obtain accurate scores in a cost effective manner.",
+      "confidence": "medium"
+    },
+    "problem_addressed-02": {
+      "claim": "Traditional KBP evaluation relies on pooled predictions from existing systems; a new system that predicts a previously unseen (but correct) relation is penalized because it is missing from the pool, creating a systematic 'pooling bias' against new/innovative systems and discouraging progress in the field.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P001-TEXT-0039",
+      "page": 1,
+      "excerpt": "Evaluating these systems remains a challenge as it is not economically feasible to exhaustively annotate every possible candidate relation from a sufficiently large corpus. As a result, a poolingbased methodology is used in practice to construct datasets, similar to them methodology used in information retrieval (Jones and Rijsbergen, 1975; Harman, 1993). For instance, at the annual NIST TAC KBP evaluation, all relations predicted by participating systems are pooled together, annotated and released as a dataset for researchers to develop and evaluate their systems on. However, during development, if a new system predicts a previously unseen relation it is considered to be wrong even if it is correct. The discrepancy between a system's true score and the score on the pooled dataset is called pooling bias and is typically assumed to be insignificant in practice (Zobel, 1998).",
+      "confidence": "medium"
+    },
+    "problem_addressed-03": {
+      "claim": "Traditional KBP evaluation relies on pooled predictions from existing systems; a new system that predicts a previously unseen (but correct) relation is penalized because it is missing from the pool, creating a systematic 'pooling bias' against new/innovative systems and discouraging progress in the field.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P001-TEXT-0040",
+      "page": 1,
+      "excerpt": "The key finding of this paper contradicts this assumption and shows that the pooling bias is actually significant, and it penalizes newly developed systems by 2% F 1 on average (Section 3). Novel improvements, which typically increase scores by less than 1% F 1 on existing datasets, are therefore likely to be clouded by pooling bias during development. Worse, the bias is larger for a system which predicts qualitatively different relations systematically missing from the pool. Of course, systems participating in the TAC KBP evaluation do not suffer from pooling bias, but this requires researchers to wait a year to get credible feedback on new ideas.",
+      "confidence": "medium"
+    },
+    "methodology.primary_family-01": {
+      "claim": "Importance-sampling based on-demand evaluation methodology",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P001-TEXT-0006",
+      "page": 1,
+      "excerpt": "Knowledge base population (KBP) systems take in a large document corpus and extract entities and their relations. Thus far, KBP evaluation has relied on judgements on the pooled predictions of existing systems. We show that this evaluation is problematic: when a new system predicts a previously unseen relation, it is penalized even if it is correct. This leads to significant bias against new systems, which counterproductively discourages innovation in the field. Our first contribution is a new importance-sampling based evaluation which corrects for this bias by annotating a new system's predictions ondemand via crowdsourcing. We show this eliminates bias and reduces variance using data from the 2015 TAC KBP task. Our second contribution is an implementation of our method made publicly available as an online KBP evaluation service. We pilot the service by testing diverse state-ofthe-art systems on the TAC KBP 2016 corpus and obtain accurate scores in a cost effective manner.",
+      "confidence": "medium"
+    },
+    "methodology.primary_family-02": {
+      "claim": "Importance-sampling based on-demand evaluation methodology",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "We propose a new paradigm called on-demand evaluation which takes a lazy approach to dataset construction by annotating predictions from systems only when they are underrepresented , thus correcting for pooling bias as it arises. In this section, we'll formalize the problem solved by ondemand evaluation independent of KBP and describe a cost-effective solution that allows us to accurately estimate evaluation scores without bias using importance sampling. We'll then instantiate the framework for KBP in Section 5.",
+      "confidence": "medium"
+    },
+    "methodology.secondary_families-01": {
+      "claim": "Crowdsourcing-based annotation; Monte Carlo / simple estimators; Joint importance-weighted estimators",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Our second contribution, described in Section 4, addresses this bias through a new evaluation methodology, on-demand evaluation , which avoids pooling bias by querying crowdworkers, while minimizing cost by leveraging previous systems' predictions when possible. We then compute the new system's score based on the predictions of past systems using importance weighting. As more systems are evaluated, the marginal cost of evaluating a new system decreases. We show how the on-demand evaluation methodology can be applied to knowledge base population in Section 5. Through a simulated experiment on evaluation data released through the TAC KBP 2015 Slot Validation track, we show that we are able to obtain unbiased estimates of a new systems score's while significantly reducing variance.",
+      "confidence": "medium"
+    },
+    "methodology.secondary_families-02": {
+      "claim": "Crowdsourcing-based annotation; Monte Carlo / simple estimators; Joint importance-weighted estimators",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P004-TEXT-0007",
+      "page": 4,
+      "excerpt": "Wecan estimate each π i and r i independently with simple Monte Carlo integration. Let ˆ X 1 , . . . , ˆ X m be multi-sets of n 1 , . . . , n j i.i.d. samples from X 1 , . . . , X m respectively, and let ˆ Y 0 be a multiset of n 0 samples drawn from Y . Then, the simple estimators for precision and recall are:",
+      "confidence": "medium"
+    },
+    "methodology.secondary_families-03": {
+      "claim": "Crowdsourcing-based annotation; Monte Carlo / simple estimators; Joint importance-weighted estimators",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P004-TEXT-0010",
+      "page": 4,
+      "excerpt": "On-demand evaluation with the joint estimator works as follows: First ˆ Y 0 is randomly sampled from Y once when the evaluation framework is launched. For every new set of predictions X m submitted for evaluation, the minimum number of samples n m required to accurately evaluate X m is calculated based on the current evaluation data, ˆ Y 0 and ˆ X 1 , . . . , ˆ X m -1 . Then, the set ˆ X m is added to the evaluation data by evaluating f ( x ) on n m samples drawn from X m . Finally, estimates π i and r i are updated for each system i = 1 , . . . , m using the joint estimators that will be defined next. In the rest of this section, we will answer the following three questions:",
+      "confidence": "medium"
+    },
+    "methodology.description-01": {
+      "claim": "The paper proposes 'on-demand evaluation', which lazily constructs an evaluation dataset by annotating predictions from new KBP systems only when they are underrepresented in the current labeled pool. Using importance sampling, joint precision and recall estimators combine samples drawn independently from each system's predictions (weighted via mixing weights w_ij) with a sample of true instances (Y_0) to produce unbiased score estimates while minimizing crowdsourcing annotation cost, and an adaptive sampling scheme determines how many new labels are required for each newly submitted system.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "We propose a new paradigm called on-demand evaluation which takes a lazy approach to dataset construction by annotating predictions from systems only when they are underrepresented , thus correcting for pooling bias as it arises. In this section, we'll formalize the problem solved by ondemand evaluation independent of KBP and describe a cost-effective solution that allows us to accurately estimate evaluation scores without bias using importance sampling. We'll then instantiate the framework for KBP in Section 5.",
+      "confidence": "medium"
+    },
+    "methodology.description-02": {
+      "claim": "The paper proposes 'on-demand evaluation', which lazily constructs an evaluation dataset by annotating predictions from new KBP systems only when they are underrepresented in the current labeled pool. Using importance sampling, joint precision and recall estimators combine samples drawn independently from each system's predictions (weighted via mixing weights w_ij) with a sample of true instances (Y_0) to produce unbiased score estimates while minimizing crowdsourcing annotation cost, and an adaptive sampling scheme determines how many new labels are required for each newly submitted system.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P004-TEXT-0010",
+      "page": 4,
+      "excerpt": "On-demand evaluation with the joint estimator works as follows: First ˆ Y 0 is randomly sampled from Y once when the evaluation framework is launched. For every new set of predictions X m submitted for evaluation, the minimum number of samples n m required to accurately evaluate X m is calculated based on the current evaluation data, ˆ Y 0 and ˆ X 1 , . . . , ˆ X m -1 . Then, the set ˆ X m is added to the evaluation data by evaluating f ( x ) on n m samples drawn from X m . Finally, estimates π i and r i are updated for each system i = 1 , . . . , m using the joint estimators that will be defined next. In the rest of this section, we will answer the following three questions:",
+      "confidence": "medium"
+    },
+    "methodology.description-03": {
+      "claim": "The paper proposes 'on-demand evaluation', which lazily constructs an evaluation dataset by annotating predictions from new KBP systems only when they are underrepresented in the current labeled pool. Using importance sampling, joint precision and recall estimators combine samples drawn independently from each system's predictions (weighted via mixing weights w_ij) with a sample of true instances (Y_0) to produce unbiased score estimates while minimizing crowdsourcing annotation cost, and an adaptive sampling scheme determines how many new labels are required for each newly submitted system.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We note that q i ( x ) not only significantly differs between systems, but also changes as new systems are added to the evaluation pool. Unfortunately, the standard importance sampling procedure requires us to draw and use samples from each distribution q i ( x ) independently and thus can not effectively reuse samples drawn from different distributions. To this end, we introduce a practical refinement to the importance sampling procedure: we independently draw n j samples according to p j ( x ) from each of the m systems independently and then numerically integrate over these samples using the weights w ij to 'mix' them appropriately to produce and unbiased estimate of π i while reducing variance. Formally, we define the joint precision estimator :",
+      "confidence": "medium"
+    },
+    "methodology.description-04": {
+      "claim": "The paper proposes 'on-demand evaluation', which lazily constructs an evaluation dataset by annotating predictions from new KBP systems only when they are underrepresented in the current labeled pool. Using importance sampling, joint precision and recall estimators combine samples drawn independently from each system's predictions (weighted via mixing weights w_ij) with a sample of true instances (Y_0) to produce unbiased score estimates while minimizing crowdsourcing annotation cost, and an adaptive sampling scheme determines how many new labels are required for each newly submitted system.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P004-TEXT-0007",
+      "page": 4,
+      "excerpt": "Wecan estimate each π i and r i independently with simple Monte Carlo integration. Let ˆ X 1 , . . . , ˆ X m be multi-sets of n 1 , . . . , n j i.i.d. samples from X 1 , . . . , X m respectively, and let ˆ Y 0 be a multiset of n 0 samples drawn from Y . Then, the simple estimators for precision and recall are:",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-01": {
+      "claim": "entity identification/linking; relation extraction; provenance identification; crowdsourced relation/entity labeling",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P002-TEXT-0074",
+      "page": 2,
+      "excerpt": "In knowledge base population, each relation is a triple (SUBJECT, PREDICATE, OBJECT) where SUBJECT and OBJECT are some globally unique entity identifiers (e.g. Wikipedia page titles) and PREDICATE belongm to a specified schema. 1 A KBP system returns an output in the form of relation instances (SUBJECT, PREDICATE, OBJECT, PROVENANCE), where PROVENANCE is a description of where exactly in the document corpus the relation was found. In the example shown in Figure 1, CARRIE FISHER and DEBBIE REYNOLDS are identified as the subject and object, respectively, of the predicate CHILD OF, and the whole sentence is provided as provenance. The provenance also identifies that CARRIE FISHER is referenced by Fisher within the sentence. Note that the same relation can be expressed in multiple sentences across the document corpus; each of these is a different relation instance.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-02": {
+      "claim": "entity identification/linking; relation extraction; provenance identification; crowdsourced relation/entity labeling",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P006-TEXT-0006",
+      "page": 6,
+      "excerpt": "We label predicted relation instances by presenting the instance's provenance to crowdworkers and asking them to identify if a relation holds between the identified subject and object mentions (Figure 4a). Crowdworkers are also asked to link the subject and object mentions to their canonical mentions within the document and to pages on Wikipedia, if possible, for entity linking. On average, we find that crowdworkers are able to perform this task in about 20 seconds, corresponding to about $0.05 per instance. We requested 5 crowdworkers to annotate a small set of 200 relation instances from the 2015 TAC-KBP corpus and measured a substantial inter-annotator agreement with a Fleiss' kappa of 0.61 with 3 crowdworkers and 0.62 with 5. Consequently, we take a majority vote over 3 workers in subsequent experiments.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-03": {
+      "claim": "entity identification/linking; relation extraction; provenance identification; crowdsourced relation/entity labeling",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P006-TEXT-0007",
+      "page": 6,
+      "excerpt": "Sampling from the set of true instances Y is difficult because we can't even enumerate the elements of Y . As a proxy, we assume that relations are identically distributed across documents and have crowdworkers annotate a random subset of documents for relations using an interface we developed (Figure 4b). Crowdworkers begin by identifying every mention span in a document. For each mention, they are asked to identify its type, canonical mention within the document and associated Wikipedia page if possible. They are then presented with a separate interface to label predicates between pairs of mentions within a sentence that were identified earlier.",
+      "confidence": "medium"
+    },
+    "input_output.input_type-01": {
+      "claim": "Large unstructured text document corpus (e.g., TAC KBP newswire documents)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P001-TEXT-0007",
+      "page": 1,
+      "excerpt": "Harnessing the wealth of information present in unstructured text online has been a long standing goal for the natural language processing community. In particular, knowledge base population seeks to automatically construct a knowledge base consisting of relations between entities from a document corpus. Knowledge bases have found many applications including question answering (Berant et al., 2013; Fader et al., 2014;",
+      "confidence": "medium"
+    },
+    "input_output.input_type-02": {
+      "claim": "Large unstructured text document corpus (e.g., TAC KBP newswire documents)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P008-TEXT-0007",
+      "page": 8,
+      "excerpt": "We have implemented the on-demand evaluation framework described here as an evaluation service to which researchers can submit their own system predictions. As a pilot of the service, we evaluated three relation extraction systems that also participated in the official 2016 TAC KBP competition. Each system uses Stanford CoreNLP (Manning et al., 2014) to identify entities, the Illinois Wikifier (Ratinov et al., 2011) to perform entity linking and a combination of a rule-based system (P), a logistic classifier (L), and a neural network classifier (N) for relation extraction. We used 15,000 Newswire documents from the 2016 TAC KBP evaluation as our document corpus. In total, 100 documents were exhaustively annotated for about $2,000 and 500 instances from each system were labeled for about $150 each. Evaluating all three system only took about 2 hours.",
+      "confidence": "medium"
+    },
+    "input_output.input_granularity-01": {
+      "claim": "Document-level, with sentence/mention-level provenance for relation instances",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P002-TEXT-0074",
+      "page": 2,
+      "excerpt": "In knowledge base population, each relation is a triple (SUBJECT, PREDICATE, OBJECT) where SUBJECT and OBJECT are some globally unique entity identifiers (e.g. Wikipedia page titles) and PREDICATE belongm to a specified schema. 1 A KBP system returns an output in the form of relation instances (SUBJECT, PREDICATE, OBJECT, PROVENANCE), where PROVENANCE is a description of where exactly in the document corpus the relation was found. In the example shown in Figure 1, CARRIE FISHER and DEBBIE REYNOLDS are identified as the subject and object, respectively, of the predicate CHILD OF, and the whole sentence is provided as provenance. The provenance also identifies that CARRIE FISHER is referenced by Fisher within the sentence. Note that the same relation can be expressed in multiple sentences across the document corpus; each of these is a different relation instance.",
+      "confidence": "medium"
+    },
+    "input_output.output_representation-01": {
+      "claim": "Relation instances represented as (SUBJECT, PREDICATE, OBJECT, PROVENANCE) tuples, with subject/object as globally unique entity identifiers (e.g. Wikipedia page titles) and provenance identifying document location and mention",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P002-TEXT-0074",
+      "page": 2,
+      "excerpt": "In knowledge base population, each relation is a triple (SUBJECT, PREDICATE, OBJECT) where SUBJECT and OBJECT are some globally unique entity identifiers (e.g. Wikipedia page titles) and PREDICATE belongm to a specified schema. 1 A KBP system returns an output in the form of relation instances (SUBJECT, PREDICATE, OBJECT, PROVENANCE), where PROVENANCE is a description of where exactly in the document corpus the relation was found. In the example shown in Figure 1, CARRIE FISHER and DEBBIE REYNOLDS are identified as the subject and object, respectively, of the predicate CHILD OF, and the whole sentence is provided as provenance. The provenance also identifies that CARRIE FISHER is referenced by Fisher within the sentence. Note that the same relation can be expressed in multiple sentences across the document corpus; each of these is a different relation instance.",
+      "confidence": "medium"
+    },
+    "models_and_tools-01": {
+      "claim": "Stanford CoreNLP; Illinois Wikifier; logistic classifier (L); neural network classifier (N)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P008-TEXT-0007",
+      "page": 8,
+      "excerpt": "We have implemented the on-demand evaluation framework described here as an evaluation service to which researchers can submit their own system predictions. As a pilot of the service, we evaluated three relation extraction systems that also participated in the official 2016 TAC KBP competition. Each system uses Stanford CoreNLP (Manning et al., 2014) to identify entities, the Illinois Wikifier (Ratinov et al., 2011) to perform entity linking and a combination of a rule-based system (P), a logistic classifier (L), and a neural network classifier (N) for relation extraction. We used 15,000 Newswire documents from the 2016 TAC KBP evaluation as our document corpus. In total, 100 documents were exhaustively annotated for about $2,000 and 500 instances from each system were labeled for about $150 each. Evaluating all three system only took about 2 hours.",
+      "confidence": "medium"
+    },
+    "evaluation.metrics-01": {
+      "claim": "Precision; Recall",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P003-TABLE-0001",
+      "page": 3,
+      "excerpt": "|          | Median bias   | Median bias   | Median bias   |\n|----------|---------------|---------------|---------------|\n|          | Precision     | Recall        | Macro F 1     |\n| Official | 17.93%        | 17.00%        | 15.51%        |\n| anydoc   | 2.34%         | 1.93%         | 2.05%         |",
+      "confidence": "medium"
+    },
+    "evaluation.metrics-02": {
+      "claim": "Precision; Recall",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P003-TEXT-0021",
+      "page": 3,
+      "excerpt": "Results. Figure 3 shows the results of measuring pooling bias on the TAC KBP 2015 evaluation on the F 1 metric using the official and anydoc scores. 45 We observe that even with lenient anydoc heuristic, the median bias (2.05% F 1 ) is much larger than largest difference between adjacently ranked systems (1.5% F 1 ). This experiment shows that pooling evaluation is significantly and systematically biased against systems that make novel predictions!",
+      "confidence": "medium"
+    },
+    "evaluation.setting-01": {
+      "claim": "Simulated experiments using held-out TAC KBP 2015 evaluation data (treated as exhaustively annotated) comparing pooled, simple, and joint estimators, plus a live pilot of the on-demand evaluation service on three relation extraction systems run against the TAC KBP 2016 document corpus.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P008-TEXT-0004",
+      "page": 8,
+      "excerpt": "Once again, we use the labeled system predictions from the TAC KBP 2015 evaluation and treat them as an exhaustively annotated dataset. To evaluate the pooling methodology we construct an evaluation dataset using instances found by human annotators and labeled instances pooled from 9 randomly chosen teams (i.e. half the total number of participating teams), and use this dataset to evaluate the remaining 9 teams. On average, the pooled evaluation dataset contains between 5,000 and 6,000 labeled instances and evaluates 34 different systems (since each team may have submitted multiple systems). Next, we evaluated sets of 9 randomly chosen teams with our proposed simple and joint estimators using a total of 5,000 samples: about 150 of these samples are drawn from Y , i.e. the full TAC KBP 2015 evaluation data, and 150 samples from each of the systems being evaluated.",
+      "confidence": "medium"
+    },
+    "evaluation.setting-02": {
+      "claim": "Simulated experiments using held-out TAC KBP 2015 evaluation data (treated as exhaustively annotated) comparing pooled, simple, and joint estimators, plus a live pilot of the on-demand evaluation service on three relation extraction systems run against the TAC KBP 2016 document corpus.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P008-TEXT-0007",
+      "page": 8,
+      "excerpt": "We have implemented the on-demand evaluation framework described here as an evaluation service to which researchers can submit their own system predictions. As a pilot of the service, we evaluated three relation extraction systems that also participated in the official 2016 TAC KBP competition. Each system uses Stanford CoreNLP (Manning et al., 2014) to identify entities, the Illinois Wikifier (Ratinov et al., 2011) to perform entity linking and a combination of a rule-based system (P), a logistic classifier (L), and a neural network classifier (N) for relation extraction. We used 15,000 Newswire documents from the 2016 TAC KBP evaluation as our document corpus. In total, 100 documents were exhaustively annotated for about $2,000 and 500 instances from each system were labeled for about $150 each. Evaluating all three system only took about 2 hours.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-01": {
+      "claim": "The framework is implemented as a publicly available online evaluation service at https://kbpo.stanford.edu, where researchers can have their own KBP systems evaluated; data collected through the evaluation process will also be made publicly available through the website.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0076-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "Finally, our third contribution is an implementation of our framework as a publicly available evaluation service at https://kbpo.stanford. edu , where researchers can have their own KBP systems evaluated. The data collected through the evaluation process could even be valuable for relation extraction, entity linking and coreference, and will also be made publicly available through the website. We evaluate three systems on the 2016 TAC KBP corpus for about $150 each (a fraction of the cost of official evaluation). We believe the public availability of this service will speed the pace of progress in developing KBP systems.",
+      "confidence": "medium"
+    }
+  }
+}

@@ -1,0 +1,661 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0093",
+    "title": "Confidence Estimation for Knowledge Base Population",
+    "pdf_path": "data/manual-pdfs/C0093.pdf",
+    "authors": [
+      "Xiang Li",
+      "Ralph Grishman"
+    ],
+    "year": 2013,
+    "venue": "Proceedings of Recent Advances in Natural Language Processing (RANLP 2013)",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "Information extraction systems automatically extract structured information from machine-readable documents, such as newswire, web, and multimedia. Despite significant improvement, the performance is far from perfect. Hence, it is useful to accurately estimate confidence in the correctness of the extracted information. Using the Knowledge Base Population Slot Filling task as a case study, we propose a confidence estimation model based on the Maximum Entropy framework, obtaining an average precision of 83.5%, Pearson coefficient of 54.2%, and 2.3% absolute improvement in F-measure score through a weighted voting strategy.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0093-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Confidence Estimation for Knowledge Base Population; Xiang Li; Ralph Grishman.",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication footer",
+      "span_id": "C0093-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of Recent Advances in Natural Language Processing ... 7-13 September 2013.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication footer",
+      "span_id": "C0093-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of Recent Advances in Natural Language Processing, pages 396–401.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0093-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We propose a confidence estimation model based on the Maximum Entropy framework, obtaining an average precision of 83.5%, Pearson coefficient of 54.2%, and 2.3% absolute improvement in F-measure score through a weighted voting strategy.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0093-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We require comparable confidence values from disparate machine learning models or different slot filling strategies.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0093-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "We use the Maximum Entropy (MaxEnt) framework ... to automatically predict the correctness of KBP SF intermediate responses.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "4 Confidence Estimation Model",
+      "span_id": "C0093-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Our confidence estimation model is based on the Maximum Entropy (MaxEnt) framework, a probabilistic model able to incorporate all features into a uniform model by assigning weights automatically.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.2 Baseline System Description",
+      "span_id": "C0093-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Our pipelines consist of two that use hand-coded patterns, two pattern-based slot fillers ... one based on name coreference, and one distant-supervision based pipeline.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "4 Confidence Estimation Model",
+      "span_id": "C0093-D-P003-TABLE-0002",
+      "page": 3,
+      "excerpt": "Local features include the length of shortest dependency path between Q and R in S; the shortest dependency path between Q and R in S; and tri-gram context window associated with part-of-speech tags.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "5.1.2 Weighted Voting System",
+      "span_id": "C0093-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "Those intermediate responses with confidences that are lower than τ would be eliminated ... [the system] sums all the weights of the intermediate responses that support this response entity.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3.2 Baseline System Description",
+      "span_id": "C0093-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Our SF system starts by retrieving relevant documents ... [then] applies a two-stage process ... Answer Extraction ... and Response Combination.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "5 Experiments",
+      "span_id": "C0093-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "We trained our CE model and measured the confidence values through a 10-fold cross-validation ... [it] assigns the probability of each intermediate response being correct as confidence.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "5.1.3 Results",
+      "span_id": "C0093-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The responses were judged based only on the answer string, ignoring the document ID.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.2 Baseline System Description",
+      "span_id": "C0093-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Answer extraction begins with document pre-processing, such as part-of-speech tagging, name tagging, and coreference resolution. Then it uses a set of 6 SF pipelines operating in parallel.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4 Confidence Estimation Model",
+      "span_id": "C0093-D-P003-TABLE-0002",
+      "page": 3,
+      "excerpt": "We implement a mix of binary and real-valued features ... incorporating four categories of features: Response Features, Pipeline Features, Local Features, [and] Global Features.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "5.1.2 Weighted Voting System",
+      "span_id": "C0093-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "For a single-valued slot ... it returns the response with the highest weight ... while it returns all non-redundant responses ... for the list-valued slots.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.1 Task Definition",
+      "span_id": "C0093-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The task defines a total of 42 slots, 26 for person entities and 16 for organization entities. Some slots are single-valued ... while the other slots ... are list-valued.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.2 Baseline System Description",
+      "span_id": "C0093-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Answer extraction begins with document pre-processing, such as part-of-speech tagging, name tagging, and coreference resolution.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.2 Baseline System Description",
+      "span_id": "C0093-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Response Combination validates answers and eliminates redundant answers to aggregate all intermediate responses into final slot fills.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "5.1.2 Weighted Voting System",
+      "span_id": "C0093-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "Those intermediate responses with confidences that are lower than τ would be eliminated.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3.1 Task Definition",
+      "span_id": "C0093-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The Slot Filling task at KBP2012 provides a large collection of 3.7 million newswire articles and web texts as the source corpus, and an initial KB derived from the Wikipedia infoboxes.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.1 Task Definition",
+      "span_id": "C0093-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Given a list of person (PER) and organization (ORG) entity names ('queries'), SF systems retrieve the documents about these entities in the corpus.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "4 Confidence Estimation Model",
+      "span_id": "C0093-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "S represents the Sentence that supports the correctness [of the response].",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.1 Task Definition",
+      "span_id": "C0093-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Along with each slot fill, the system should also provide the ID of the document that justifies this fill.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "5.1.1 Baseline Voting System",
+      "span_id": "C0093-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "A response entity ... is a unique response tuple in the form <Query ID, Slot Name, Response Fill>.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.2 Baseline System Description",
+      "span_id": "C0093-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Our pipelines consist of two that use hand-coded patterns, two pattern-based slot fillers ... one based on name coreference, and one distant-supervision based pipeline.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4 Confidence Estimation Model",
+      "span_id": "C0093-D-P003-TABLE-0002",
+      "page": 3,
+      "excerpt": "Features include pipeline precision/recall/fmeasure, shortest dependency path, NE margin, n-gram, conditional probabilities, and mutual information.",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "5 Experiments",
+      "span_id": "C0093-D-P003-TABLE-0001",
+      "page": 3,
+      "excerpt": "We have collected and merged the previous three years' KBP SF evaluation data ... a total of 280 queries ... 31878 intermediate responses generated by 6 different pipelines.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.1 Task Definition",
+      "span_id": "C0093-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "The Slot Filling task at KBP2012 provides a large collection of 3.7 million newswire articles and web texts as the source corpus.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "5.1.3 Results",
+      "span_id": "C0093-D-P004-TABLE-0001",
+      "page": 4,
+      "excerpt": "Baseline: Precision 0.351, Recall 0.246, F-measure 0.289; Weighted: 0.441, 0.241, 0.312 ... 99.8% confidence level according to the Wilcoxon Matched-Pairs Signed-Ranks Significance Test.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "5.2 Evaluation",
+      "span_id": "C0093-D-P005-TABLE-0002",
+      "page": 5,
+      "excerpt": "The first method is Pearson's r ... The second method is average precision ... RANKED: Avg. Prec 0.835; Pearson's r 0.542.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "5.1.1 Baseline Voting System",
+      "span_id": "C0093-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "This voting system simply counts the frequencies ... In this basic voting system, each intermediate response contributes equally.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "5.2 Evaluation",
+      "span_id": "C0093-D-P005-TABLE-0002",
+      "page": 5,
+      "excerpt": "RANDOM assigns confidence values uniformly at random between 0 and 1; WORST CASE ranks all incorrect responses above all correct ones.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "5 Experiments",
+      "span_id": "C0093-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "We trained our CE model and measured the confidence values through a 10-fold cross-validation, so that each fold randomly contains 14 person queries and 14 organization queries.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "5.1.3 Results",
+      "span_id": "C0093-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The weighted voting system (with τ = 0, η = 0.17) ... responses were judged based only on the answer string, ignoring the document ID.",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "5.1.3 Results",
+      "span_id": "C0093-D-P004-TABLE-0001",
+      "page": 4,
+      "excerpt": "Baseline 0.351 / 0.246 / 0.289; Weighted 0.441 / 0.241 / 0.312 ... Precision obtains 9.0% absolute improvement with only a small loss of 0.5% in Recall.",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "5.2 Evaluation",
+      "span_id": "C0093-D-P005-TABLE-0002",
+      "page": 5,
+      "excerpt": "RANKED 0.835, 0.542; RANDOM 0.525, 0.001; WORST CASE 0.330 ... slot response length and response doc num are the best predictors of correctness.",
+      "confidence": "medium"
+    },
+    "main_results-21-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "5.1.3 Results",
+      "span_id": "C0093-D-P004-CAPTION-0003",
+      "page": 4,
+      "excerpt": "When τ is raised, Precision continuously increases to around 1, while Recall gradually decreases to 0.",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.2 Evaluation",
+      "span_id": "C0093-D-P005-TABLE-0001",
+      "page": 5,
+      "excerpt": "RANKED: Avg. Prec 0.835; Pearson's r 0.542.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.1.3 Results",
+      "span_id": "C0093-D-P004-TABLE-0002",
+      "page": 4,
+      "excerpt": "The weighted voting system achieves 2.3% absolute improvement in F-measure ... Precision obtains 9.0% absolute improvement with only a small loss of 0.5% in Recall.",
+      "confidence": "medium"
+    },
+    "strengths-22-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4 Confidence Estimation Model",
+      "span_id": "C0093-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "We implement a mix of binary and real-valued features from different aspects ... Response Features, Pipeline Features, Local Features, [and] Global Features.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.2 Baseline System Description",
+      "span_id": "C0093-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We use a slot filling system ... [with] 6 SF pipelines operating in parallel.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.1.3 Results",
+      "span_id": "C0093-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The responses were judged based only on the answer string, ignoring the document ID.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.1.3 Results",
+      "span_id": "C0093-D-P004-PICTURE-0003",
+      "page": 4,
+      "excerpt": "When τ is raised, Precision continuously increases to around 1, while Recall gradually decreases to 0.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "6 Conclusion",
+      "span_id": "C0093-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "In the future, further experiments are planned to investigate more elaborate models, explore more interesting feature sets, and study the contribution of each feature through a more detailed and thorough analysis.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "5.1.3 Results",
+      "span_id": "C0093-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The responses were judged based only on the answer string, ignoring the document ID.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "6 Conclusion",
+      "span_id": "C0093-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "Further experiments are planned to investigate more elaborate models, explore more interesting feature sets, and study the contribution of each feature through a more detailed and thorough analysis.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.1.3 Results",
+      "span_id": "C0093-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The responses were judged based only on the answer string, ignoring the document ID.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.1.3 Results",
+      "span_id": "C0093-D-P004-PICTURE-0003",
+      "page": 4,
+      "excerpt": "When τ is raised, Precision continuously increases to around 1, while Recall gradually decreases to 0.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses unreliable intermediate outputs from multi-pipeline Knowledge Base Population (KBP) slot filling. It estimates each extracted slot fill's probability of correctness so heterogeneous pipeline outputs can be comparably re-ranked, filtered, and aggregated into more accurate KB population results.",
+  "methodology": {
+    "primary_family": "Classical machine learning",
+    "secondary_families": [
+      "Validation, correction, and knowledge-fusion methods",
+      "Rule-based NLP",
+      "Linguistic and dependency-based extraction"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "supervised",
+    "description": "Execution order: (1) retrieve documents matching a person or organization query name, optionally using query expansion; (2) preprocess retrieved text with POS tagging, name tagging, and coreference resolution; (3) run six parallel slot-filling pipelines—two hand-coded-pattern systems, two semi-automatically bootstrapped pattern systems, one name-coreference system, and one distant-supervision system—to produce intermediate query-slot-response fills; (4) compute a MaxEnt correctness probability for every intermediate response from response, pipeline, local-sentence, and global corpus features; (5) remove low-confidence responses and perform weighted response voting, summing supporting probabilities for each response entity; (6) select the highest-weight response for single-valued slots and all non-redundant fills for list-valued slots, then optionally suppress final fills below a final-confidence threshold. The confidence layer is trained/evaluated using ten-fold cross-validation over prior TAC KBP slot-filling evaluation data."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The task supplies a predefined KBP slot schema: 42 slots (26 person and 16 organization), with single-valued and list-valued constraints. The method populates these predefined attributes rather than discovering an ontology or schema.",
+    "evidence": [
+      {
+        "span_id": "C0093-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "The task defines a total of 42 slots, 26 for person entities and 16 for organization entities. Some slots are single-valued ... while the other slots ... are list-valued."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing",
+    "Entity and concept extraction",
+    "Coreference resolution",
+    "Relation and triple extraction",
+    "Graph construction",
+    "Knowledge fusion and deduplication",
+    "Graph validation and correction"
+  ],
+  "input_output": {
+    "input_type": "Newswire and web-document corpus, plus person and organization entity queries and an initial KB derived from Wikipedia infoboxes.",
+    "input_granularity": "Corpus documents are retrieved per person/organization query; answer-extraction evidence is a supporting sentence containing the query and response, with document-level global co-occurrence features.",
+    "output_representation": "Slot-fill response tuples <Query ID, Slot Name, Response Fill>, each accompanied by a supporting document ID; final output is one best fill for a single-valued slot or a non-redundant list of fills for a list-valued slot, with confidence scores."
+  },
+  "models_and_tools": [
+    "Maximum Entropy (MaxEnt) confidence-estimation model",
+    "Six parallel KBP slot-filling pipelines: two hand-coded-pattern, two bootstrapped-pattern, one name-coreference, and one distant-supervision pipeline",
+    "Document retrieval with query-name match or query expansion",
+    "POS tagging, name tagging, and coreference resolution",
+    "Shortest dependency-path, named-entity-margin, POS trigram, corpus co-occurrence, conditional-probability, and PMI features",
+    "Plurality-voting baseline and confidence-weighted voting"
+  ],
+  "datasets": [
+    "Merged TAC KBP Slot Filling evaluation data from 2010, 2011, and 2012: 280 total queries and 31,878 intermediate responses",
+    "TAC KBP 2012 source corpus: 3.7 million newswire articles and web texts; initial KB derived from Wikipedia infoboxes"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Slot-filling precision",
+      "Recall",
+      "F-measure",
+      "Average precision of confidence-ranked intermediate responses",
+      "Pearson's r correlation between confidence and binary correctness",
+      "Wilcoxon Matched-Pairs Signed-Ranks Significance Test (99.8% confidence for F-measure gain)"
+    ],
+    "baselines": [
+      "Basic plurality-voting response-combination system, in which each intermediate response contributes equally",
+      "Random confidence values sampled uniformly from 0 to 1",
+      "Worst-case confidence ranking that places incorrect responses above correct responses"
+    ],
+    "setting": "Ten-fold cross-validation on merged KBP 2010–2012 data. Each fold contains 14 person and 14 organization queries and their intermediate responses; the MaxEnt model trains on nine folds and scores the remaining fold. Voting comparison uses τ=0 and η=0.17, with response correctness judged by answer string while ignoring document ID. Confidence-ranking evaluation uses all intermediate responses."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "The MaxEnt confidence estimator achieved average precision 0.835 and Pearson's r 0.542 when ranking intermediate slot-filling responses; random confidence gave average precision 0.525 and r=0.001, while the worst-case ranking had average precision 0.330.",
+      "Confidence-weighted voting improved final slot-filling F-measure from 0.289 to 0.312 (+0.023 absolute) and precision from 0.351 to 0.441 (+0.090), while recall decreased from 0.246 to 0.241 (-0.005).",
+      "Raising the intermediate-response threshold increased precision toward about 1 while recall declined toward 0; confidence intervals with higher scores consistently had greater final-fill precision.",
+      "Among separately applied features, slot-response length and response-document count were the best correctness predictors; dependency-path length was also significant, whereas NE margin contributed minimally."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0093-D-P004-TABLE-0001",
+        "page": 4,
+        "excerpt": "Baseline 0.351 / 0.246 / 0.289; Weighted 0.441 / 0.241 / 0.312 ... Precision obtains 9.0% absolute improvement with only a small loss of 0.5% in Recall."
+      },
+      {
+        "span_id": "C0093-D-P005-TABLE-0002",
+        "page": 5,
+        "excerpt": "RANKED 0.835, 0.542; RANDOM 0.525, 0.001; WORST CASE 0.330 ... slot response length and response doc num are the best predictors of correctness."
+      },
+      {
+        "span_id": "C0093-D-P004-CAPTION-0003",
+        "page": 4,
+        "excerpt": "When τ is raised, Precision continuously increases to around 1, while Recall gradually decreases to 0."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author/experimental result: The method produces confidence scores that correlate substantially with response correctness (average precision 0.835; Pearson's r 0.542), enabling useful ranking of intermediate slot fills.",
+      "Author/experimental result: Integrating those scores into weighted voting improves the evaluated KBP slot-filling F-measure by 2.3 absolute points and precision by 9.0 points, with only a 0.5-point recall loss.",
+      "Review-level inference: The method is practical for heterogeneous legacy extraction pipelines because it uses pipeline-agnostic response, context, corpus, and prior-pipeline-performance features to calibrate and aggregate their outputs rather than replacing the extractors."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0093-D-P005-TABLE-0001",
+        "page": 5,
+        "excerpt": "RANKED: Avg. Prec 0.835; Pearson's r 0.542."
+      },
+      {
+        "span_id": "C0093-D-P004-TABLE-0002",
+        "page": 4,
+        "excerpt": "The weighted voting system achieves 2.3% absolute improvement in F-measure ... Precision obtains 9.0% absolute improvement with only a small loss of 0.5% in Recall."
+      },
+      {
+        "span_id": "C0093-D-P003-TEXT-0003",
+        "page": 3,
+        "excerpt": "We implement a mix of binary and real-valued features from different aspects ... Response Features, Pipeline Features, Local Features, [and] Global Features."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: The contribution of weighted voting is only evaluated over the authors' own six-pipeline slot-filling system and merged historical KBP evaluation data; the paper does not provide evidence that the confidence model transfers to other extraction architectures, domains, or schemas.",
+      "Review-level inference: The final scoring comparison ignores supporting-document ID, so it does not measure whether the confidence layer improves provenance correctness required by the original KBP task.",
+      "Review-level inference: Precision rises by filtering as the confidence threshold increases, but recall falls toward zero; threshold selection therefore remains an application-dependent precision–recall trade-off."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0093-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "We use a slot filling system ... [with] 6 SF pipelines operating in parallel."
+      },
+      {
+        "span_id": "C0093-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "The responses were judged based only on the answer string, ignoring the document ID."
+      },
+      {
+        "span_id": "C0093-D-P004-PICTURE-0003",
+        "page": 4,
+        "excerpt": "When τ is raised, Precision continuously increases to around 1, while Recall gradually decreases to 0."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "not_reported",
+    "value": null,
+    "evidence": []
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed improvement: evaluate more elaborate confidence-estimation models.",
+      "Author-proposed improvement: explore additional feature sets.",
+      "Author-proposed improvement: conduct a more detailed and thorough feature-contribution analysis.",
+      "Review-level inference: Evaluate calibration and transfer across independent KBP systems, domains, and schemas, and assess correctness of the required provenance document ID in addition to answer-string correctness."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0093-D-P005-TEXT-0001",
+        "page": 5,
+        "excerpt": "In the future, further experiments are planned to investigate more elaborate models, explore more interesting feature sets, and study the contribution of each feature through a more detailed and thorough analysis."
+      },
+      {
+        "span_id": "C0093-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "The responses were judged based only on the answer string, ignoring the document ID."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-stated open work: determining whether more elaborate models and feature sets improve confidence estimation, and isolating individual feature contributions through fuller analysis.",
+      "Review-level inference: Robust confidence calibration for extraction outputs from new pipelines, domains, and schemas remains unresolved by this single-system, cross-validation evaluation.",
+      "Review-level inference: How to jointly optimize confidence thresholds for both answer quality and provenance correctness remains unresolved; the paper reports an answer-string evaluation and a threshold-driven precision–recall trade-off."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0093-D-P005-TEXT-0001",
+        "page": 5,
+        "excerpt": "Further experiments are planned to investigate more elaborate models, explore more interesting feature sets, and study the contribution of each feature through a more detailed and thorough analysis."
+      },
+      {
+        "span_id": "C0093-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "The responses were judged based only on the answer string, ignoring the document ID."
+      },
+      {
+        "span_id": "C0093-D-P004-PICTURE-0003",
+        "page": 4,
+        "excerpt": "When τ is raised, Precision continuously increases to around 1, while Recall gradually decreases to 0."
+      }
+    ]
+  },
+  "code_and_data_availability": "not_reported"
+}

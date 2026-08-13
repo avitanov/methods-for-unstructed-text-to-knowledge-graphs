@@ -1,0 +1,854 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0055",
+    "title": "Research on Domain-Specific Knowledge Graph Based on the RoBERTa-wwm-ext Pretraining Model",
+    "pdf_path": "data/batches/batch-03/C0055.pdf",
+    "authors": [
+      "Xingli Liu",
+      "Wei Zhao",
+      "Haiqun Ma"
+    ],
+    "year": 2022,
+    "venue": "Computational Intelligence and Neuroscience",
+    "identifier": {
+      "status": "reported",
+      "value": "DOI: 10.1155/2022/8656013; Article ID 8656013",
+      "evidence": [
+        {
+          "span_id": "C0055-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "Article ID 8656013; https://doi.org/10.1155/2022/8656013"
+        }
+      ]
+    },
+    "abstract": "The study addresses domain-specific knowledge graph construction from information to knowledge. It proposes a deep-learning approach using RoBERTa-wwm-ext to extract entities and relationships from open-source intelligence, together with a knowledge-fusion framework based on longest-common-attribute entity alignment, text-similarity algorithms, and classification algorithms. The named entity recognition model reaches an overall F1 of 83.07%; the RoBERTa-wwm-ext relation extraction model improves over recurrent-neural-network models by approximately 20%–30%; and longest-common-subsequence attribute similarity produces the best entity-alignment results overall.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Front matter",
+      "span_id": "C0055-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Xingli Liu, Wei Zhao, and Haiqun Ma",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Front matter",
+      "span_id": "C0055-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Volume 2022, Article ID 8656013; Published 12 October 2022",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Front matter",
+      "span_id": "C0055-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Hindawi Computational Intelligence and Neuroscience",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Front matter",
+      "span_id": "C0055-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Article ID 8656013; https://doi.org/10.1155/2022/8656013",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0055-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We propose the deep learning algorithm to extract entities and relationship from open-source intelligence by the RoBERTa-wwm-ext pretraining model and a knowledge fusion framework based on the longest common attribute entity alignment technology.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0055-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Ambiguity, difficult links, data sparsity in special fields, and other problems hinder the application task effect based on the domain-specific knowledge graph.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Related Work",
+      "span_id": "C0055-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "This study refines the data granularity of the knowledge graph in the military field and extracts open-source military information through the deep learning technology.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3.2 Knowledge Extraction",
+      "span_id": "C0055-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "This article mainly studies knowledge extraction from unstructured text data and uses a pretraining model to vectorize text data to enhance knowledge.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Figure 1 and Sections 3.2–3.3",
+      "span_id": "C0055-D-P004-PICTURE-0001",
+      "page": 4,
+      "excerpt": "The architecture contains separate data preprocessing, named entity recognition, relation extraction, knowledge fusion, storage, and visualization stages.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3 Key Technology",
+      "span_id": "C0055-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "The ontology of the graph is divided into 9 entity types ... and the relationship is divided into 5 types.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.3 Knowledge Fusion",
+      "span_id": "C0055-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "The knowledge fusion framework uses attribute similarity algorithms and machine learning algorithms to classify candidate entity pairs.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Figure 1",
+      "span_id": "C0055-D-P004-PICTURE-0001",
+      "page": 4,
+      "excerpt": "Data preprocessing feeds knowledge extraction; knowledge extraction feeds knowledge fusion; knowledge fusion feeds knowledge storage and visualization.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "3.1.2 Data Annotation",
+      "span_id": "C0055-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The entity annotation adopts the BIO annotation method.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "4.1.3 Entity Alignment Dataset",
+      "span_id": "C0055-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "1324 prealigned entity pairs were obtained by random sampling and manual alignment.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Figure 1 and 3.2.2–3.2.3",
+      "span_id": "C0055-D-P004-PICTURE-0001",
+      "page": 4,
+      "excerpt": "The technical architecture shows RoBERTa-wwm encoding with BiLSTM and CRF for entities, and RoBERTa-wwm encoding with fully connected and softmax layers for relations.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.3.1 Knowledge Fusion Framework",
+      "span_id": "C0055-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "The data come from two parts, namely, the result of knowledge extraction and the external knowledge base, corresponding to two stages of knowledge fusion.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Figure 5",
+      "span_id": "C0055-D-P006-PICTURE-0003",
+      "page": 6,
+      "excerpt": "The framework includes ontology matching, candidate entity pair generation, entity alignment, attribute merging, and knowledge fusion.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3 Key Technology",
+      "span_id": "C0055-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The ontology of the graph is divided into 9 entity types ... and the relationship is divided into 5 types: country, collaboration, activity, equipment, and NULL.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.3.1 Knowledge Fusion Framework",
+      "span_id": "C0055-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "The structured and semistructured data ... [are organized] into unified knowledge triples, through manual ontology matching and entity classification.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Figure 1",
+      "span_id": "C0055-D-P004-PICTURE-0001",
+      "page": 4,
+      "excerpt": "Data preprocessing consists of data collection, cleaning, and annotation; knowledge extraction consists of named entity recognition and relation extraction; the final stage is storage and visualization.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Figure 5",
+      "span_id": "C0055-D-P006-PICTURE-0002",
+      "page": 6,
+      "excerpt": "Knowledge fusion includes ontology matching, candidate entity pairs, entity alignment, and attribute merging.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.3 Knowledge Fusion",
+      "span_id": "C0055-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "In the second stage, based on the constructed knowledge graph, knowledge fusion is carried out with the external knowledge base to realize the expansion and update of knowledge.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3.1.1 Data Collection",
+      "span_id": "C0055-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The data mainly come from open-source military news. Crawler technology is used to collect unstructured text information in the global military, military forums, and military modules in various news platforms.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3.1.1 Data Collection",
+      "span_id": "C0055-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The external knowledge base ... comes from ... OpenKG.CN ... [and] the US military knowledge base ... [plus] Weapon Encyclopedia and Wikipedia.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.1.2 Data Annotation",
+      "span_id": "C0055-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Relation annotation is based on entity annotation. We segment the text data with entity annotations in units of sentences.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "4.1.3 Entity Alignment Dataset",
+      "span_id": "C0055-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "These entity pairs contain a total of 28447 attribute triples.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Figure 1",
+      "span_id": "C0055-D-P004-PICTURE-0001",
+      "page": 4,
+      "excerpt": "The output path is knowledge triples, Neo4j database, and knowledge graph visualization.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.3.1 Knowledge Fusion Framework",
+      "span_id": "C0055-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "The data ... [are organized] into unified knowledge triples.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.2.1–3.2.3",
+      "span_id": "C0055-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The named entity recognition model has pretrained-model, BiLSTM, and CRF layers; the relation extraction model has a text encoding layer, fully connected layer, and multiclassifier layer.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.3.2 Entity Alignment",
+      "span_id": "C0055-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The attribute similarity algorithm adopts ... SimHash, edit distance, longest common subsequence, and BERT word embedding. The classification algorithm adopts ... SVM, decision tree, logistic regression, and naive Bayes.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.4.3 Entity Alignment Experiment Results",
+      "span_id": "C0055-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "The entity alignment experiment in this study is based on the scikit-learn and bert4keras framework.",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.1 Datasets",
+      "span_id": "C0055-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "The experimental datasets ... are divided into three parts: named entity recognition, relation extraction, and entity alignment.",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.1.1 Named Entity Recognition Dataset",
+      "span_id": "C0055-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The dataset contains 9 types of entity labels, including a total of 53,295 entity labels and 14 MB of text data.",
+      "confidence": "medium"
+    },
+    "datasets-18-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.1.2–4.1.3",
+      "span_id": "C0055-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "The relation extraction dataset contains ... 2251 pieces of data ... [and] 2648 entity pairs are formed for alignment experiments.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.3 Evaluation Metrics",
+      "span_id": "C0055-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "This experiment uses three indicators of precision, recall, and F1 value to evaluate the reliability of the model.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.4.1 Named Entity Recognition Experiment Results",
+      "span_id": "C0055-D-P008-TABLE-0001",
+      "page": 8,
+      "excerpt": "Comparative models include BiLSTM + CRF, IDCNN, BERT + BiLSTM + CRF, and BERT-wwm-ext + BiLSTM + CRF.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.4.2 Relation Extraction Experiment Results",
+      "span_id": "C0055-D-P009-TABLE-0002",
+      "page": 9,
+      "excerpt": "Comparative models include BERT, BERT-wwm-ext, BiGRU-ATT, and BiLSTM-ATT.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-03": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.4.3 Entity Alignment Experiment Results",
+      "span_id": "C0055-D-P010-TABLE-0003",
+      "page": 10,
+      "excerpt": "The comparison combines SimHash, edit distance, LCS, and word embedding with SVM, decision tree, logistic regression, and naive Bayes.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.4.1–4.4.2",
+      "span_id": "C0055-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "The named entity recognition ... test set ... [and] relation extraction ... 1800 text data for model training and 451 text data for testing.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.1.3 Entity Alignment Dataset",
+      "span_id": "C0055-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The prealigned entities are scrambled ... to form 50% positive and 50% negative samples.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.3 Evaluation Metrics",
+      "span_id": "C0055-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "This experiment uses three indicators of precision, recall, and F1 value.",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.4.1 Named Entity Recognition Experiment Results",
+      "span_id": "C0055-D-P009-TABLE-0001",
+      "page": 9,
+      "excerpt": "RoBERTa-wwm-ext + BiLSTM + CRF: Precision 81.11, Recall 85.13, F1 83.07.",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.4.2 Relation Extraction Experiment Results",
+      "span_id": "C0055-D-P010-TABLE-0002",
+      "page": 10,
+      "excerpt": "RoBERTa-wwm-ext: 97.32 precision, 97.87 recall, 97.57 F1; BERT-wwm-ext: 98.11 precision, 98.14 recall, 98.13 F1.",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.4.3 Entity Alignment Experiment Results",
+      "span_id": "C0055-D-P010-TABLE-0003",
+      "page": 10,
+      "excerpt": "LCS + LR: 99.80 precision, 99.81 recall, 99.81 F1.",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Discussion",
+      "span_id": "C0055-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "Most of the previous research ... focused on knowledge extraction, but this research not only studies knowledge extraction but also studies knowledge fusion.",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.2.1–3.2.3",
+      "span_id": "C0055-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "RoBERTa-wwm-ext ... obtain[s] text vectors with semantic features and encode[s] the text.",
+      "confidence": "medium"
+    },
+    "strengths-23-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Table 12 and Discussion",
+      "span_id": "C0055-D-P010-TABLE-0003",
+      "page": 10,
+      "excerpt": "The combination of longest common subsequence similarity and logistic regression achieved the best results.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.4.1 Named Entity Recognition Experiment Results",
+      "span_id": "C0055-D-P009-TABLE-0001",
+      "page": 9,
+      "excerpt": "BAS F1 49.50; RAD F1 49.75; MIS F1 55.26; AIR F1 57.44.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Discussion",
+      "span_id": "C0055-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "The study uses the manual annotation method ... which increases a lot of labor costs.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Discussion of relation extraction",
+      "span_id": "C0055-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "The dataset used for the experiment contains fewer relationship types, which may lead to a high effect on the experiment.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-04": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Discussion",
+      "span_id": "C0055-D-P010-TEXT-0004",
+      "page": 10,
+      "excerpt": "A large amount of text similarity between entity attributes needs to be calculated ... [leading] to the low computational efficiency.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Discussion",
+      "span_id": "C0055-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "This study uses the manual annotation method ... which increases a lot of labor costs.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Discussion",
+      "span_id": "C0055-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "The data distribution of each label ... is unbalanced, resulting in poor recognition of some labels.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Discussion",
+      "span_id": "C0055-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "A large amount of text similarity between entity attributes needs to be calculated ... [causing] low computational efficiency.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-04": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Discussion of relation extraction",
+      "span_id": "C0055-D-P009-TEXT-0004",
+      "page": 9,
+      "excerpt": "The dataset used for the experiment contains fewer relationship types, which may lead to a high effect on the experiment.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Discussion",
+      "span_id": "C0055-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "Semiautomatic annotation methods will be considered ... annotating a small number of correct seed data and using the seed data to iteratively annotate most of the data.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Discussion and Conclusion",
+      "span_id": "C0055-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "The model training dataset and the architecture of the model will be improved to improve the effect of entity extraction.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Discussion of relation extraction",
+      "span_id": "C0055-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "In the future, the relationship type of the dataset will be increased to further verify the effect of the model.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-04": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Discussion and Conclusion",
+      "span_id": "C0055-D-P010-TEXT-0004",
+      "page": 10,
+      "excerpt": "A domain synonym dictionary and a stop word dictionary will be added ... to improve computational efficiency.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Discussion",
+      "span_id": "C0055-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "There are also some limitations ... manual annotation ... unbalanced ... and low computational efficiency.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion",
+      "span_id": "C0055-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "The recognition effect of some labels ... is not good ... [and] the current knowledge fusion framework has low computational efficiency.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Data Availability",
+      "span_id": "C0055-D-P011-TEXT-0001",
+      "page": 11,
+      "excerpt": "The data supporting the findings of this study are available within the article.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper seeks an effective and reliable way to construct a domain-specific military knowledge graph from heterogeneous, largely unstructured open-source intelligence, addressing ambiguity, limited data, difficult entity linking, knowledge redundancy, and the need to fuse newly extracted knowledge with existing knowledge bases.",
+  "methodology": {
+    "primary_family": "Transformer encoder methods",
+    "secondary_families": [
+      "Neural NLP pipelines",
+      "Ontology-constrained and schema-guided methods",
+      "Validation, correction, and knowledge-fusion methods",
+      "Classical machine learning"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "supervised",
+    "description": "The method is a sequential military Text-to-KG pipeline. Open-source military news and related semi-structured sources are collected, cleaned, and manually annotated. RoBERTa-wwm-ext encodes Chinese text; a BiLSTM-CRF performs BIO named-entity recognition; and a RoBERTa-wwm-ext plus fully connected softmax classifier predicts relations for entity pairs. Extracted knowledge is organized into ontology-compatible triples, matched with external knowledge bases, filtered into candidate entity pairs, aligned using longest-common-attribute similarity and a binary classifier, merged, stored in Neo4j, and visualized. A second fusion stage supports knowledge expansion and updating."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The paper defines a military ontology with nine entity types—country, aircraft, ship, missile, water area, aircraft carrier, military base, radar, and island—and five relation labels: country, collaboration, activity, equipment, and NULL. External data are manually ontology-matched and entity-classified before fusion.",
+    "evidence": [
+      {
+        "span_id": "C0055-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "The ontology of the graph is divided into 9 entity types ... and the relationship is divided into 5 types: country, collaboration, activity, equipment, and NULL."
+      },
+      {
+        "span_id": "C0055-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "The structured and semistructured data ... [are organized] into unified knowledge triples, through manual ontology matching and entity classification."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing: collection and cleaning of open-source military text",
+    "Entity and concept extraction",
+    "Entity typing using BIO labels",
+    "Relation and triple extraction",
+    "Ontology/schema definition and matching",
+    "Entity resolution and linking through paired entity alignment",
+    "Knowledge fusion and deduplication through attribute merging",
+    "Graph construction and knowledge storage",
+    "Graph visualization",
+    "Knowledge updating and expansion"
+  ],
+  "input_output": {
+    "input_type": "Unstructured Chinese military-intelligence text, mainly open-source military news, military forums, and military sections of news platforms; external structured and semi-structured military knowledge-base data are also used for fusion.",
+    "input_granularity": "Sentence-level text for named-entity recognition and relation extraction; entity pairs with attribute triples for entity alignment.",
+    "output_representation": "Typed entities, classified relations, knowledge triples, aligned/merged entities, and a military knowledge graph stored in a Neo4j database and visualized."
+  },
+  "models_and_tools": [
+    "RoBERTa-wwm-ext Chinese pretrained transformer",
+    "BiLSTM",
+    "Conditional Random Field (CRF)",
+    "Fully connected layer and softmax relation classifier",
+    "SimHash",
+    "Edit distance",
+    "Longest common subsequence (LCS)",
+    "BERT word embedding",
+    "Support vector machine (SVM)",
+    "Decision tree",
+    "Logistic regression",
+    "Naive Bayes",
+    "scikit-learn",
+    "bert4keras",
+    "Neo4j"
+  ],
+  "datasets": [
+    "Named-entity recognition dataset: manually annotated military-intelligence text with 9 entity types, 53,295 entity labels, and 14 MB of text; training size 10.3 MB and test size 3.2 MB",
+    "Relation-extraction dataset: 2,251 examples with five relation labels; 1,800 training examples and 451 test examples",
+    "Entity-alignment dataset: 2,648 entity pairs, constructed from 1,324 prealigned pairs and negative sampling; 28,447 attribute triples; data from an open-source military weapon/equipment knowledge graph and a weapons encyclopedia",
+    "External sources: OpenKG.CN, the Heilongjiang University military knowledge base, Weapon Encyclopedia, and Wikipedia"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Precision",
+      "Recall",
+      "F1 score"
+    ],
+    "baselines": [
+      "BiLSTM + CRF",
+      "IDCNN",
+      "BERT + BiLSTM + CRF",
+      "BERT-wwm-ext + BiLSTM + CRF",
+      "BERT",
+      "BERT-wwm-ext",
+      "BiGRU-ATT",
+      "BiLSTM-ATT",
+      "SimHash + SVM/decision tree/logistic regression/naive Bayes",
+      "Edit distance + SVM/decision tree/logistic regression/naive Bayes",
+      "LCS + SVM/decision tree/logistic regression/naive Bayes",
+      "BERT word embedding + SVM/decision tree/logistic regression/naive Bayes"
+    ],
+    "setting": "Separate test-set evaluations were conducted for named-entity recognition and relation extraction, with precision/recall/F1 comparisons against neural and BERT-family baselines. Entity alignment was evaluated on 2,648 balanced positive/negative entity pairs using combinations of four similarity methods and four classifiers. The paper reports no cross-domain evaluation, ablation study, statistical significance test, or end-to-end graph-quality evaluation."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "RoBERTa-wwm-ext + BiLSTM + CRF achieved overall named-entity recognition precision 81.11%, recall 85.13%, and F1 83.07% (Table 9).",
+      "The named-entity recognition model had highly variable per-label F1: NAT 89.68%, PLA 77.55%, VES 68.07%, MIS 55.26%, WAT 63.52%, AIR 57.44%, BAS 49.50%, RAD 49.75%, and ISL 62.72% (Table 8).",
+      "RoBERTa-wwm-ext relation extraction achieved overall precision 97.32%, recall 97.87%, and F1 97.57% (Tables 10 and 11). BERT-wwm-ext was higher at F1 98.13%, while BiGRU-ATT and BiLSTM-ATT scored 75.74% and 67.47%, respectively (Table 11).",
+      "For entity alignment, LCS plus logistic regression achieved the best reported result: precision 99.80%, recall 99.81%, and F1 99.81% (Table 12).",
+      "The paper reports that the RoBERTa-based relation extractor improves over recurrent-neural-network baselines by approximately 20%–30%, but this comparison spans the reported models and datasets within the paper and is not independently normalized across external studies."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0055-D-P009-TABLE-0001",
+        "page": 9,
+        "excerpt": "RoBERTa-wwm-ext + BiLSTM + CRF: Precision 81.11, Recall 85.13, F1 83.07."
+      },
+      {
+        "span_id": "C0055-D-P010-TABLE-0002",
+        "page": 10,
+        "excerpt": "RoBERTa-wwm-ext: 97.32 precision, 97.87 recall, 97.57 F1; BERT-wwm-ext: 98.11 precision, 98.14 recall, 98.13 F1."
+      },
+      {
+        "span_id": "C0055-D-P010-TABLE-0003",
+        "page": 10,
+        "excerpt": "LCS + LR: 99.80 precision, 99.81 recall, 99.81 F1."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "The pipeline covers both knowledge extraction and knowledge fusion, whereas the paper characterizes much prior military-domain work as concentrating mainly on extraction.",
+      "The transformer encoder supplies contextual text representations to both entity and relation extraction components.",
+      "The explicitly defined military ontology and relation inventory make the extraction task schema-guided and operationally connected to graph construction.",
+      "The alignment comparison systematically tests four similarity functions against four classifiers rather than reporting only one fusion configuration.",
+      "Review-level interpretation: the modular pipeline is comparatively easy to diagnose because extraction and alignment are evaluated separately."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0055-D-P010-TEXT-0001",
+        "page": 10,
+        "excerpt": "Most of the previous research ... focused on knowledge extraction, but this research not only studies knowledge extraction but also studies knowledge fusion."
+      },
+      {
+        "span_id": "C0055-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "RoBERTa-wwm-ext ... obtain[s] text vectors with semantic features and encode[s] the text."
+      },
+      {
+        "span_id": "C0055-D-P010-TABLE-0003",
+        "page": 10,
+        "excerpt": "The combination of longest common subsequence similarity and logistic regression achieved the best results."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Named-entity performance is poor for several minority entity types, including BAS F1 49.50%, RAD F1 49.75%, MIS F1 55.26%, and AIR F1 57.44%.",
+      "The data are manually annotated, increasing labor cost and limiting scalability.",
+      "The relation inventory contains only five labels, which the authors note may inflate the experimental effect and limits coverage of military relations.",
+      "The entity-alignment framework requires extensive pairwise attribute-similarity computation and therefore has low computational efficiency.",
+      "Review-level interpretation: the study evaluates component extraction and pair alignment, but does not report end-to-end graph completeness, correctness, downstream utility, or generalization to another military subdomain."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0055-D-P009-TABLE-0001",
+        "page": 9,
+        "excerpt": "BAS F1 49.50; RAD F1 49.75; MIS F1 55.26; AIR F1 57.44."
+      },
+      {
+        "span_id": "C0055-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "The study uses the manual annotation method ... which increases a lot of labor costs."
+      },
+      {
+        "span_id": "C0055-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "The dataset used for the experiment contains fewer relationship types, which may lead to a high effect on the experiment."
+      },
+      {
+        "span_id": "C0055-D-P010-TEXT-0004",
+        "page": 10,
+        "excerpt": "A large amount of text similarity between entity attributes needs to be calculated ... [leading] to the low computational efficiency."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "Manual annotation of the named-entity and relation-extraction datasets incurs substantial labor cost.",
+      "Some entity labels have poor recognition because their annotated data are scarce and the label distribution is unbalanced.",
+      "The knowledge-fusion stage has low computational efficiency because many attribute-text similarities must be calculated.",
+      "The relation dataset contains relatively few relationship types, which may make the experimental effect appear high."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0055-D-P010-TEXT-0001",
+        "page": 10,
+        "excerpt": "This study uses the manual annotation method ... which increases a lot of labor costs."
+      },
+      {
+        "span_id": "C0055-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "The data distribution of each label ... is unbalanced, resulting in poor recognition of some labels."
+      },
+      {
+        "span_id": "C0055-D-P010-TEXT-0003",
+        "page": 10,
+        "excerpt": "A large amount of text similarity between entity attributes needs to be calculated ... [causing] low computational efficiency."
+      },
+      {
+        "span_id": "C0055-D-P009-TEXT-0004",
+        "page": 9,
+        "excerpt": "The dataset used for the experiment contains fewer relationship types, which may lead to a high effect on the experiment."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Use semi-automatic annotation: annotate a small set of correct seed data and iteratively label more data.",
+      "Increase and rebalance the entity-label datasets and improve the model architecture and training data.",
+      "Increase the number of relation types to test the model more thoroughly.",
+      "Add a domain synonym dictionary and stop-word dictionary to reduce text-similarity calculations and improve fusion efficiency."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0055-D-P010-TEXT-0001",
+        "page": 10,
+        "excerpt": "Semiautomatic annotation methods will be considered ... annotating a small number of correct seed data and using the seed data to iteratively annotate most of the data."
+      },
+      {
+        "span_id": "C0055-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "The model training dataset and the architecture of the model will be improved to improve the effect of entity extraction."
+      },
+      {
+        "span_id": "C0055-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "In the future, the relationship type of the dataset will be increased to further verify the effect of the model."
+      },
+      {
+        "span_id": "C0055-D-P010-TEXT-0004",
+        "page": 10,
+        "excerpt": "A domain synonym dictionary and a stop word dictionary will be added ... to improve computational efficiency."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "How to obtain scalable, less labor-intensive annotation for low-resource military entities and relations remains unresolved.",
+      "How to improve recognition of rare and imbalanced entity types remains unresolved.",
+      "How to extend the relation ontology beyond five labels without losing reliability remains unresolved.",
+      "How to reduce the computational cost of large-scale attribute-based entity alignment remains unresolved.",
+      "Review-level inference: the paper leaves open whether the modular system can maintain high accuracy when applied to new military sources, domains, or heterogeneous graph schemas."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0055-D-P010-TEXT-0001",
+        "page": 10,
+        "excerpt": "There are also some limitations ... manual annotation ... unbalanced ... and low computational efficiency."
+      },
+      {
+        "span_id": "C0055-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "The recognition effect of some labels ... is not good ... [and] the current knowledge fusion framework has low computational efficiency."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that data supporting the findings are available within the article. No code repository or external dataset release is reported."
+}

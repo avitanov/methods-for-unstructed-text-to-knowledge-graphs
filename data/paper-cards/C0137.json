@@ -1,0 +1,780 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0137",
+    "title": "Construction of a knowledge graph for framework material enabled by large language models and its application",
+    "pdf_path": "data/pdfs/C0137.pdf",
+    "authors": [
+      "Xuefeng Bai",
+      "Song He",
+      "Yi Li",
+      "Yabo Xie",
+      "Xin Zhang",
+      "Wenli Du",
+      "Jian-Rong Li"
+    ],
+    "year": 2025,
+    "venue": "npj Computational Materials, volume 11, article 51",
+    "identifier": {
+      "status": "reported",
+      "value": "https://doi.org/10.1038/s41524-025-01540-6",
+      "evidence": [
+        {
+          "span_id": "C0137-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "https://doi.org/10.1038/s41524-025-01540-6"
+        }
+      ]
+    },
+    "abstract": "The study uses large language models to build KG-FM, a framework-material knowledge graph spanning synthesis, properties, applications, and related information for MOFs, COFs, and HOFs. It analyzes more than 100,000 articles, reports 2.53 million nodes and 4.01 million relationships, and evaluates KG-augmented question answering; Qwen2-KG is reported to achieve 91.67% accuracy with source information.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Article header",
+      "span_id": "C0137-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Xuefeng Bai, Song He, Yi Li, Yabo Xie, Xin Zhang, Wenli Du & Jian-Rong Li",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Article header",
+      "span_id": "C0137-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "npj Computational Materials | (2025)11:51",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Article header",
+      "span_id": "C0137-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "npj Computational Materials | (2025)11:51",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Article header",
+      "span_id": "C0137-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "https://doi.org/10.1038/s41524-025-01540-6",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0137-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "by utilizing the natural language processing capabilities of large language models (LLMs), we have established a comprehensive knowledge graph (KG-FM).",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-02": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0137-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "constructed through the analysis of over 100,000 articles, resulting in 2.53 million nodes and 4.01 million relationships.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0137-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Despite their broad potential application, FMs have not yet benefited from a comprehensive knowledge graph.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0137-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "This process typically demands significant human effort, since researchers must meticulously sort through a vast array of fragmented and unstructured information within the literature.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Methods — Abstract information extraction",
+      "span_id": "C0137-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Information extraction from the abstracts was carried out by converting the text into a JSON format with logical relations using Qwen2-72B. The task and output format for Qwen2-72B were defined in the prompt.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Methods — Abstract information extraction",
+      "span_id": "C0137-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "converting the text into a JSON format with logical relations using Qwen2-72B. The task and output format ... were defined in the prompt.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Results — Preparation of knowledge graph",
+      "span_id": "C0137-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "LLM effectively recognizes critical elements ... in the digest and converts them into a structured JSON format using customized prompts.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Results — Construction of knowledge graph",
+      "span_id": "C0137-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "the generated JSON files are first converted into Cypher queries to import the data into the knowledge graph.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Results — Preparation of knowledge graph",
+      "span_id": "C0137-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The framework’s process comprises data preprocessing, entity and relationship recognition using LLMs, knowledge graph construction, and the application of the knowledge graph.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Methods — Abstract information extraction",
+      "span_id": "C0137-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The task and output format for Qwen2-72B were defined in the prompt.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Results — Preparation of knowledge graph",
+      "span_id": "C0137-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "Qwen2 LLM ... identifying key information and organizing it into nodes and relationships ... using customized prompts.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Methods — Collecting information of relevant literature",
+      "span_id": "C0137-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The abstracts and publication details ... of the retrieved papers were exported from Web of Science. The exported information is saved in TXT files as text.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Methods — Knowledge graph construction and usage",
+      "span_id": "C0137-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Through the Python interface, the publication information and the JSON files generated by the LLM were imported into Neo4j.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Methods — Integration of LLMs with the knowledge graph",
+      "span_id": "C0137-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "1. Generate Cypher Query ... 2. Execute Query and Retrieve Data ... 3. Formulate Answer.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Methods — Abstract information extraction",
+      "span_id": "C0137-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "converting the text into a JSON format with logical relations using Qwen2-72B. The task and output format ... were defined in the prompt.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Results — Construction of knowledge graph",
+      "span_id": "C0137-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "linked to the nodes parsed by Qwen through manually defined relationships, such as “Derived from”, “Published in (Journal)”, “Published at (Date)”.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Results — Preparation of knowledge graph",
+      "span_id": "C0137-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The framework’s process comprises data preprocessing, entity and relationship recognition using LLMs, knowledge graph construction.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Results — Preparation of knowledge graph",
+      "span_id": "C0137-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "we manually reviewed 100 results extracted by LLM.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Methods — Collecting information of relevant literature",
+      "span_id": "C0137-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The abstracts and publication details (including DOI, authors, publication date, and journal information ... ) of the retrieved papers were exported from Web of Science.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Methods — Abstract information extraction",
+      "span_id": "C0137-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Information extraction from the abstracts was carried out by converting the text into a JSON format with logical relations.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Results — Preparation of knowledge graph",
+      "span_id": "C0137-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "we retrieve and collected more than 100,000 published academic literature.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Results — Preparation of knowledge graph",
+      "span_id": "C0137-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "organizing it into nodes and relationships, which are then saved in a JSON file.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Results — Construction of knowledge graph",
+      "span_id": "C0137-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "The structured data is then linked to the nodes parsed by Qwen through manually defined relationships.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Methods — Versions and usage of large language models",
+      "span_id": "C0137-D-P002-TABLE-0001",
+      "page": 2,
+      "excerpt": "Qwen: Qwen2-72B-Instruct; Llama: Meta-Llama-3-70B-Instruct; GLM: glm-4-9b-chat; Copilot; GPT-4.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Methods — Knowledge graph construction and usage",
+      "span_id": "C0137-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "The knowledge graph was constructed using the Neo4j software. Through the Python interface ... imported into Neo4j.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Methods — Knowledge graph construction and usage",
+      "span_id": "C0137-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "The version of Neo4j we used in this study is 5.12.0.",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Methods — Collecting information of relevant literature",
+      "span_id": "C0137-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "relevant journal articles on MOFs, COFs, and HOFs published before May 8, 2024, were retrieved from the Web of Science database.",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Results — Preparation of knowledge graph",
+      "span_id": "C0137-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "we manually reviewed 100 results extracted by LLM.",
+      "confidence": "medium"
+    },
+    "datasets-18-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Methods — Evaluation of LLMs combined with knowledge graphs",
+      "span_id": "C0137-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "we designed a test set consisting of 150 questions related to framework materials.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Methods — Abstract information extraction",
+      "span_id": "C0137-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Only accurate and comprehensive relationships are considered correct (True Positive, TP).",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Results — Preparation of knowledge graph",
+      "span_id": "C0137-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "the model achieved a TP rate of 98% ... with a FN rate of 2% ... The F1 score is 0.9898.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Results — Applications of knowledge graph",
+      "span_id": "C0137-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "The evaluation criteria for the accuracy of the responses were determined by two domain experts, who judged the correctness and relevance of the answers.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Results — Applications of knowledge graph",
+      "span_id": "C0137-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "tested the response accuracy of different general-purpose models as well as open-source models combined with knowledge graphs against this set (Table 3).",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Results — Applications of knowledge graph",
+      "span_id": "C0137-D-P005-TABLE-0002",
+      "page": 5,
+      "excerpt": "Qwen2-KG, GLM4-KG, Llama3-KG, Qwen2, GLM4, Llama3, GPT4, Copilot.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Methods — Evaluation of LLMs combined with knowledge graphs",
+      "span_id": "C0137-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "an LLM’s answer was considered correct (True) only if it matched the standard answer; otherwise, it was marked as incorrect (False).",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Results — Applications of knowledge graph",
+      "span_id": "C0137-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "The evaluation criteria ... were determined by two domain experts, who judged the correctness and relevance of the answers.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Results — Applications of knowledge graph",
+      "span_id": "C0137-D-P006-CAPTION-0003",
+      "page": 6,
+      "excerpt": "The CoT thinking process that enhances LLMs without and with knowledge graphs is used for industrial SO2 adsorbent design.",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Results — Preparation of knowledge graph",
+      "span_id": "C0137-D-P003-TABLE-0001",
+      "page": 3,
+      "excerpt": "The knowledge graph, built from over 100,000 academic papers, encompasses over 2.53 million entities (nodes) and 4.01 million relationships, as detailed in Table 2.",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Results — Preparation of knowledge graph",
+      "span_id": "C0137-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "the model achieved a TP rate of 98% ... with a FN rate of 2% ... The F1 score is 0.9898.",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Results — Applications of knowledge graph",
+      "span_id": "C0137-D-P005-TABLE-0003",
+      "page": 5,
+      "excerpt": "Qwen2-KG 91.67%; GLM4-KG 80.67%; Llama3-KG 88.33%; Qwen2 14.33%; GLM4 5.67%; Llama3 8.00%; GPT4 33.33%; Copilot 31.33%.",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Results — Construction of knowledge graph",
+      "span_id": "C0137-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The knowledge graph ... includes information about their properties, structures, applications, performance, and related reports.",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Results — Preparation of knowledge graph",
+      "span_id": "C0137-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "the model achieved a TP rate of 98% ... The F1 score is 0.9898.",
+      "confidence": "medium"
+    },
+    "strengths-23-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Results — Applications of knowledge graph",
+      "span_id": "C0137-D-P005-TABLE-0003",
+      "page": 5,
+      "excerpt": "Qwen2-KG 91.67%; Qwen2 14.33%; GLM4-KG 80.67%; GLM4 5.67%; Llama3-KG 88.33%; Llama3 8.00%.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Methods — Abstract information extraction",
+      "span_id": "C0137-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Information extraction from the abstracts was carried out by converting the text into a JSON format with logical relations using Qwen2-72B.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Results — Preparation of knowledge graph",
+      "span_id": "C0137-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "we manually reviewed 100 results extracted by LLM.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Methods — Evaluation of LLMs combined with knowledge graphs",
+      "span_id": "C0137-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "we designed a test set consisting of 150 questions related to framework materials.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Results — Applications of knowledge graph",
+      "span_id": "C0137-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "CoT techniques heavily rely on background knowledge. In the absence of sufficient background knowledge, even a well-structured reasoning process cannot yield good answers.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Results — Applications of knowledge graph",
+      "span_id": "C0137-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "the original text’s abstract does not mention the term BUT-55 specifically, but rather refers to it in the range of BUT-53 to BUT-58.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Results — Applications of knowledge graph",
+      "span_id": "C0137-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "In the future, integrating KG with CoT’s thinking process may further enhance its ability for scientific discovery.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Methods — Abstract information extraction",
+      "span_id": "C0137-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Information extraction from the abstracts was carried out by converting the text into a JSON format with logical relations using Qwen2-72B.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Methods — Evaluation of LLMs combined with knowledge graphs",
+      "span_id": "C0137-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "we designed a test set consisting of 150 questions related to framework materials.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Results — Construction of knowledge graph",
+      "span_id": "C0137-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "linked to the nodes parsed by Qwen through manually defined relationships.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Methods — Knowledge graph construction and usage",
+      "span_id": "C0137-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The code can be accessed at https://github.com/MontageBai/KGFM.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Methods — Evaluation of LLMs combined with knowledge graphs",
+      "span_id": "C0137-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Both the questions and their reference answers can be accessed at https://github.com/MontageBai/KGFM.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-03": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Data availability and Code availability",
+      "span_id": "C0137-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "The data that supports the findings ... are available at https://github.com/MontageBai/KGFM from the corresponding author upon reasonable request. The code ... is available at https://github.com/MontageBai/KGFM.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Framework-material research is dispersed across a very large, fragmented literature, while no comprehensive FM knowledge graph had been constructed. Manual conversion of unstructured literature into connected domain knowledge is labor-intensive; the study aims to automate construction of a KG covering MOFs, COFs, and HOFs and use it for retrieval, mining, and more accurate, source-grounded LLM question answering.",
+  "methodology": {
+    "primary_family": "Zero-shot and few-shot LLM prompting (without task-specific model training)",
+    "secondary_families": [
+      "Ontology-constrained and schema-guided methods",
+      "Generative text-to-structure methods",
+      "Hybrid NLP and LLM methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "zero_shot",
+    "description": "The paper presents KG-FM, a high-throughput Text-to-KG pipeline and a KG-augmented QA application. Execution order: (1) retrieve Web of Science records on MOF, COF, and HOF before 8 May 2024 and export abstracts plus bibliographic metadata as TXT; (2) prompt Qwen2-72B-Instruct to transform each abstract into structured JSON nodes and logical relations, with prompts defining tasks and output format; (3) manually inspect 100 LLM outputs; (4) convert JSON to Cypher and import it, along with title/DOI metadata and manually defined publication relations, into Neo4j 5.12.0; (5) query the graph directly or use a three-step RAG-style application that generates Cypher from a question, executes it over Neo4j, and formulates an answer from retrieved KG data. The study's central contributions are the large KG-FM resource, prompt-based abstract-to-JSON extraction, Neo4j graph construction, and evaluation/demonstration of KG-supported LLM retrieval and chain-of-thought material-screening reasoning."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The paper uses a prompt-specified JSON output structure with logical relations, then maps the resulting nodes and relationships to Neo4j. It additionally defines publication/provenance relations manually, including “Derived from”, “Published in (Journal)”, and “Published at (Date)”. It does not report use of a formal external ontology or a formal ontology-learning procedure.",
+    "evidence": [
+      {
+        "span_id": "C0137-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "converting the text into a JSON format with logical relations using Qwen2-72B. The task and output format ... were defined in the prompt."
+      },
+      {
+        "span_id": "C0137-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "linked to the nodes parsed by Qwen through manually defined relationships, such as “Derived from”, “Published in (Journal)”, “Published at (Date)”."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing",
+    "Entity and concept extraction",
+    "Relation and triple extraction",
+    "Graph construction",
+    "Graph validation and correction"
+  ],
+  "input_output": {
+    "input_type": "Web of Science bibliographic records: unstructured academic-paper abstracts for MOF, COF, and HOF literature, supplemented with structured publication metadata including DOI, authors, publication date, journal, and title.",
+    "input_granularity": "One scientific-paper abstract at a time for LLM extraction; more than 100,000 retrieved journal articles in the final corpus.",
+    "output_representation": "Prompt-generated structured JSON containing extracted nodes and relationships; Cypher queries; and a Neo4j property-graph knowledge graph (KG-FM) with material, property, structure, synthesis, application, report, and publication/provenance information."
+  },
+  "models_and_tools": [
+    "Qwen2-72B-Instruct for abstract extraction and Qwen2-KG QA",
+    "Meta-Llama-3-70B-Instruct",
+    "glm-4-9b-chat (GLM4)",
+    "GPT-4",
+    "Microsoft Copilot",
+    "Neo4j 5.12.0",
+    "Python",
+    "Neo4j Docker",
+    "Cypher"
+  ],
+  "datasets": [
+    "Web of Science corpus of MOF, COF, and HOF articles published before 8 May 2024; more than 100,000 articles",
+    "Manual sample of 100 LLM-extracted abstract results",
+    "150-question framework-material QA test set with reference answers"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Abstract extraction: true-positive rate for accurate and comprehensive information extraction; false-negative rate; F1 score",
+      "QA: manually judged answer accuracy/correctness; standard error"
+    ],
+    "baselines": [
+      "Qwen2 without KG",
+      "GLM4 without KG",
+      "Llama3 without KG",
+      "GPT4 without KG",
+      "Copilot without KG",
+      "GLM4-KG",
+      "Llama3-KG"
+    ],
+    "setting": "Extraction quality was assessed by manual review of 100 LLM outputs, treating an extraction as a true positive only when relations were accurate and comprehensive. QA was evaluated on 150 framework-material questions and reference answers available in the project repository; two domain experts manually judged answers correct only when they supplied accurate information without misleading content. The paper also gives qualitative retrieval, mining, and CoT screening demonstrations (BUT-55 and industrial SO2 adsorbent design)."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "KG-FM built from more than 100,000 articles contains more than 2.53 million nodes and 4.01 million relationships. Table 2 reports MOF/COF/HOF literature counts of 68,400/21,776/15,203; nodes of 1,351,477/553,888/628,341; and relationships of 2,439,563/809,375/757,736.",
+      "On manual review of 100 abstract extractions, the authors report 98% true-positive rate, 2% false-negative rate, and F1=0.9898 for accurate and comprehensive information extraction.",
+      "On the 150-question QA set, Table 3 reports Qwen2-KG 91.67% accuracy (standard error 0.47%); GLM4-KG 80.67% (0.94%); Llama3-KG 88.33% (1.41%); versus Qwen2 14.33%, GLM4 5.67%, Llama3 8.00%, GPT4 33.33%, and Copilot 31.33%. The text separately reports Qwen2-KG as 91.67 ± 0.94%, which conflicts with the table's stated standard error.",
+      "Qualitatively, the KG-enabled Qwen2 retrieves and answers BUT-55 structure/property questions through Cypher when the material name is not explicitly in the source abstract, and the KG context enables a more reasonable SO2 adsorbent recommendation in the reported CoT demonstration."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0137-D-P003-TABLE-0001",
+        "page": 3,
+        "excerpt": "The knowledge graph, built from over 100,000 academic papers, encompasses over 2.53 million entities (nodes) and 4.01 million relationships, as detailed in Table 2."
+      },
+      {
+        "span_id": "C0137-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "the model achieved a TP rate of 98% ... with a FN rate of 2% ... The F1 score is 0.9898."
+      },
+      {
+        "span_id": "C0137-D-P005-TABLE-0003",
+        "page": 5,
+        "excerpt": "Qwen2-KG 91.67%; GLM4-KG 80.67%; Llama3-KG 88.33%; Qwen2 14.33%; GLM4 5.67%; Llama3 8.00%; GPT4 33.33%; Copilot 31.33%."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author-supported: provides a documented, high-throughput pipeline from abstracts to a large domain-specific graph, retaining publication metadata and source links.",
+      "Experimental: manual extraction assessment reports high relation-extraction quality (98% TP; F1 0.9898) on the inspected 100-output sample.",
+      "Experimental: KG augmentation substantially improves reported QA accuracy for the tested Qwen2, GLM4, and Llama3 models on the same 150-question test set.",
+      "Review-level inference: the separate JSON, Cypher, and Neo4j stages make intermediate structured outputs inspectable and enable direct graph queries in addition to natural-language QA."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0137-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "The knowledge graph ... includes information about their properties, structures, applications, performance, and related reports."
+      },
+      {
+        "span_id": "C0137-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "the model achieved a TP rate of 98% ... The F1 score is 0.9898."
+      },
+      {
+        "span_id": "C0137-D-P005-TABLE-0003",
+        "page": 5,
+        "excerpt": "Qwen2-KG 91.67%; Qwen2 14.33%; GLM4-KG 80.67%; GLM4 5.67%; Llama3-KG 88.33%; Llama3 8.00%."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: extraction is limited to abstracts, so experimental detail, methods, caveats, and information present only in full text are systematically outside the reported extraction input.",
+      "Review-level inference: the extraction evaluation manually reviews only 100 outputs and reports no held-out, independently annotated corpus or inter-annotator agreement, limiting the precision of quality claims for a graph built from more than 100,000 papers.",
+      "Review-level inference: the QA evaluation is manual and limited to 150 in-domain questions; it does not report retrieval metrics, error categories, question sampling protocol, or a blind adjudication process.",
+      "Review-level inference: prompt definitions are referenced only through supplementary figures, and manual relationship definitions influence graph semantics, which may make replication and transfer to another domain dependent on unreported design choices."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0137-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "Information extraction from the abstracts was carried out by converting the text into a JSON format with logical relations using Qwen2-72B."
+      },
+      {
+        "span_id": "C0137-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "we manually reviewed 100 results extracted by LLM."
+      },
+      {
+        "span_id": "C0137-D-P002-TEXT-0003",
+        "page": 2,
+        "excerpt": "we designed a test set consisting of 150 questions related to framework materials."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The authors state that chain-of-thought techniques heavily rely on background knowledge and that, without sufficient background knowledge, even structured reasoning cannot produce good answers.",
+      "In the BUT-55 example, the authors attribute general-purpose LLM failure to the material name not appearing explicitly in the source abstract, which refers instead to a BUT-53 to BUT-58 range."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0137-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "CoT techniques heavily rely on background knowledge. In the absence of sufficient background knowledge, even a well-structured reasoning process cannot yield good answers."
+      },
+      {
+        "span_id": "C0137-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "the original text’s abstract does not mention the term BUT-55 specifically, but rather refers to it in the range of BUT-53 to BUT-58."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed: introduce KG answers before CoT reasoning and further integrate KG with CoT to enhance scientific-discovery capability.",
+      "Review-level inference: extend extraction beyond abstracts and evaluate node/relation correctness against a larger, independently annotated benchmark with relation-level error analysis.",
+      "Review-level inference: add automated provenance checks, schema/constraint validation, and systematic evaluation of Cypher generation and retrieval separately from answer generation."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0137-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "In the future, integrating KG with CoT’s thinking process may further enhance its ability for scientific discovery."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: reliable extraction of complete, context-sensitive scientific claims remains unresolved when the system processes abstracts rather than full papers.",
+      "Review-level inference: scalability of manual graph-quality assurance and maintenance as new framework-material literature appears is unresolved; the paper does not report a graph-updating or ongoing validation process.",
+      "Review-level inference: whether the QA gains generalize beyond the authors' 150-question FM test set, or remain robust to incorrect/ambiguous graph content and generated Cypher queries, is unresolved.",
+      "Review-level inference: formal ontology alignment, entity normalization across synonyms/material aliases, and reproducible semantic governance of the large graph are not evaluated in the paper."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0137-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "Information extraction from the abstracts was carried out by converting the text into a JSON format with logical relations using Qwen2-72B."
+      },
+      {
+        "span_id": "C0137-D-P002-TEXT-0002",
+        "page": 2,
+        "excerpt": "we designed a test set consisting of 150 questions related to framework materials."
+      },
+      {
+        "span_id": "C0137-D-P003-TEXT-0003",
+        "page": 3,
+        "excerpt": "linked to the nodes parsed by Qwen through manually defined relationships."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that code is available at https://github.com/MontageBai/KGFM. The data supporting the findings are stated to be available from the corresponding author upon reasonable request via the same GitHub location; the 150 QA questions and reference answers are also stated to be accessible there."
+}

@@ -1,0 +1,820 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0104",
+    "title": "Multi-Task Identification of Entities, Relations, and Coreference for Scientific Knowledge Graph Construction",
+    "pdf_path": "data/pdfs/C0104.pdf",
+    "authors": [
+      "Yi Luan",
+      "Luheng He",
+      "Mari Ostendorf",
+      "Hannaneh Hajishirzi"
+    ],
+    "year": 2018,
+    "venue": "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing (EMNLP 2018)",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The paper introduces SciERC, a dataset with entity, relation, and coreference annotations for scientific articles, and SciIE, a unified multi-task framework with shared span representations. It argues that joint prediction reduces cascading errors, uses coreference to support cross-sentence information, outperforms prior scientific information-extraction models without domain-specific features, and supports scientific knowledge-graph construction.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title block",
+      "span_id": "C0104-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Yi Luan; Luheng He; Mari Ostendorf; Hannaneh Hajishirzi, University of Washington.",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication footer",
+      "span_id": "C0104-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication footer",
+      "span_id": "C0104-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing, pages 3219–3232.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0104-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We introduce a multi-task setup of identifying and classifying entities, relations, and coreference clusters in scientific articles... Experiments show that our multi-task model outperforms previous models in scientific information extraction without using any domain-specific features.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0104-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Organizing scientific information into structured knowledge bases requires information extraction (IE) about scientific entities and their relationships.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0104-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "Most relation extraction systems are designed for within-sentence relations. However, extracting information from scientific articles requires extracting relations across sentences.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-03": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0104-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "Our unified model is a multi-task setup that shares parameters across low-level tasks, making predictions by leveraging context across the document through coreference links.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0104-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We develop a unified learning model for extracting scientific entities, relations, and coreference resolution... avoiding cascading errors between tasks by jointly modeling all spans and span-span relations.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Model",
+      "span_id": "C0104-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "All three tasks of entity recognition, relation extraction, and coreference resolution are treated as multinomial classification problems with shared span representations.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "4.3 Scoring Architecture",
+      "span_id": "C0104-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We use feedforward neural networks (FFNNs) over shared span representations g to compute a set of span and pairwise span scores.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "5 Knowledge Graph Construction",
+      "span_id": "C0104-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "We first apply the SciIE model over single documents and then integrate the entities and relations across multiple documents.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "4 Model",
+      "span_id": "C0104-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "We develop a unified framework... to identify and classify scientific entities, relations, and coreference resolution across sentences.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "4.2 Model Definition",
+      "span_id": "C0104-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The model loss function is defined as a weighted sum of the negative log-likelihood loss of all three tasks.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "3 Dataset",
+      "span_id": "C0104-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Our dataset (called SciERC) includes annotations for scientific entities, their relations, and coreference clusters for 500 scientific abstracts.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "4.2 Model Definition",
+      "span_id": "C0104-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "E*, R*, and C* are gold structures of the entity types, relations, and coreference, respectively.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4 Model; Figure 2",
+      "span_id": "C0104-D-P003-PICTURE-0001",
+      "page": 3,
+      "excerpt": "All three tasks... are treated as classification problems on top of shared span representations.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4.3 Scoring Architecture",
+      "span_id": "C0104-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "For a span si, its vector representation gi is constructed by concatenating si's left and right end points from the BiLSTM outputs, an attention-based soft 'headword,' and embedded span width features.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4.4 Inference and Pruning",
+      "span_id": "C0104-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "We use beam pruning to reduce the number of pairwise span factors from O(n4) to O(n2) at both training and test time.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-04": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "5 Knowledge Graph Construction",
+      "span_id": "C0104-D-P006-TEXT-0004",
+      "page": 6,
+      "excerpt": "We link all entities that belong to the same coreference cluster to replace generic terms with any other non-generic term in the cluster... replace all the entities in the cluster with the entity that has the longest string.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3 Dataset — Annotation Scheme",
+      "span_id": "C0104-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "We define six types for annotating scientific entities... and seven relation types (Compare, Part-of, Conjunction, Evaluate-for, Feature-of, Used-for, Hyponym-Of).",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "5 Knowledge Graph Construction",
+      "span_id": "C0104-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Nodes in the knowledge graph correspond to scientific entities. Edges correspond to scientific relations between pairs of entities. The edges are typed according to the relation types defined in Section 3.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "4.1 Problem Definition",
+      "span_id": "C0104-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The output contains three structures: the entity types E for all spans S, the relations R for all pair of spans S × S, and the coreference links C for all spans in S.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "5 Knowledge Graph Construction",
+      "span_id": "C0104-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "We first apply the SciIE model over single documents and then integrate the entities and relations across multiple documents.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "6.2 Implementation details",
+      "span_id": "C0104-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "We replace all acronyms with their corresponding full name and normalize all the plural terms with their singular counterparts.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3 Dataset",
+      "span_id": "C0104-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Our dataset... includes annotations... for 500 scientific abstracts. These abstracts are taken from 12 AI conference/workshop proceedings.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "4.1 Problem Definition",
+      "span_id": "C0104-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "The input is a document represented as a sequence of words D = {w1, . . . , wn}.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "4.1 Problem Definition",
+      "span_id": "C0104-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "We derive S = {s1, . . . , sN}, the set of all possible within-sentence word sequence spans... relations R for all pair of spans S × S, and the coreference links C for all spans in S.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "4 Model",
+      "span_id": "C0104-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "Sentence-level tasks can benefit from information propagated from coreference resolution across sentences.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "4.1 Problem Definition",
+      "span_id": "C0104-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The output contains three structures: the entity types E... the relations R... and the coreference links C.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "5 Knowledge Graph Construction",
+      "span_id": "C0104-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Nodes in the knowledge graph correspond to scientific entities. Edges correspond to scientific relations between pairs of entities.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-03": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "5 Knowledge Graph Construction — Assigning edges",
+      "span_id": "C0104-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "We assign edges between entities by selecting the most frequent relation type.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3 Dataset",
+      "span_id": "C0104-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Following annotation guidelines... and using the BRAT interface... our annotators perform a greedy annotation for spans.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "6.2 Implementation details",
+      "span_id": "C0104-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "We use a 1 layer BiLSTM with 200-dimensional hidden layers. All the FFNNs have 2 hidden layers of 150 dimensions each.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "6.2 Implementation details",
+      "span_id": "C0104-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "We model spans up to 8 words. For beam pruning, we use λC = 0.3 for coreference resolution and λR = 0.4 for relation extraction.",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3 Dataset; Table 1",
+      "span_id": "C0104-D-P003-TABLE-0001",
+      "page": 3,
+      "excerpt": "SciERC... includes annotations... for 500 scientific abstracts... #Entities 8089, #Relations 4716, #Coref links 2752, #Coref clusters 1023.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "6 Experimental Setup",
+      "span_id": "C0104-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "We evaluate our unified framework SciIE on SciERC and SemEval 17. The knowledge graph for scientific community analysis is built using the Semantic Scholar Corpus (110k abstracts in total).",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "3 Dataset — Human Agreements",
+      "span_id": "C0104-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The kappa score for annotating entities is 76.9%, relation extraction is 67.8% and coreference is 63.8%.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "6.1 Baselines; Table 2",
+      "span_id": "C0104-D-P007-TABLE-0002",
+      "page": 7,
+      "excerpt": "For coreference resolution, we report the average P/R/F1 of MUC, B3, and CEAFφ4 scores.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "7.2 Knowledge Graph Analysis; Figure 8",
+      "span_id": "C0104-D-P008-CAPTION-0003",
+      "page": 8,
+      "excerpt": "Precision/pseudo-recall curves for human evaluation... The AUC is 0.751 with coreference, and 0.695 without.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "6.1 Baselines",
+      "span_id": "C0104-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "We compare our model with... LSTM+CRF... LSTM+CRF+ELMo... E2E Rel... E2E Rel(Pipeline)... E2E Rel+ELMo... E2E Coref.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "6.1 Baselines",
+      "span_id": "C0104-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "In the SemEval task, we compare our model SciIE with the best reported system in the SemEval leaderboard... We also compare with the state of the art on keyphrase extraction (Luan et al., 2017b).",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "7.1 IE Results; Table 2",
+      "span_id": "C0104-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "Table 2 compares the result of our model with baselines on the three tasks: entity recognition, relation extraction, and coreference resolution.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "7.1 IE Results; Table 3",
+      "span_id": "C0104-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "We evaluate the effect of multi-task learning in each of the three tasks... Table 3 reports the results for individual tasks when additional tasks are included in the learning objective function.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "7.2 Knowledge Graph Analysis",
+      "span_id": "C0104-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "We randomly select 10 frequent scientific entities... leading to 1.5k relation triples... We ask four domain experts to annotate each of these extracted relations.",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "7.1 IE Results; Table 2",
+      "span_id": "C0104-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "SciIE test: entity F1 64.2; relation F1 39.3; coreference F1 48.2.",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "7.1 IE Results; Table 3",
+      "span_id": "C0104-D-P008-TABLE-0002",
+      "page": 8,
+      "excerpt": "Multi Task (SciIE): 68.1 entity, 39.5 relation, 58.0 coref; Single Task: 65.7, 37.9, 55.3.",
+      "confidence": "medium"
+    },
+    "main_results-21-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "7.1 IE Results; Table 4",
+      "span_id": "C0104-D-P008-TABLE-0003",
+      "page": 8,
+      "excerpt": "SciIE: span identification F1 58.6; keyphrase extraction F1 46.0; relation extraction F1 27.8; overall F1 44.7.",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "7.1 IE Results",
+      "span_id": "C0104-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "We observe that performance improves with each added task in the objective.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "7.2 Knowledge Graph Analysis; Figure 8",
+      "span_id": "C0104-D-P008-CAPTION-0002",
+      "page": 8,
+      "excerpt": "The precision of both systems is high (above 84% for both systems), but the system with coreference links has significantly higher recall.",
+      "confidence": "medium"
+    },
+    "strengths-22-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "7.1 IE Results",
+      "span_id": "C0104-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "This confirms the benefit of our model in enumerating spans (rather than BIO tagging in state-of-the-art systems).",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "7.1 IE Results",
+      "span_id": "C0104-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "We still observe a large gap between human-level performance and a machine learning system.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "7.1 IE Results",
+      "span_id": "C0104-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "We observe less gain compared to the SciERC dataset mainly because there are no coreference links, and the relation types are not comprehensive.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "5 Knowledge Graph Construction",
+      "span_id": "C0104-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "We assign nodes in the knowledge graph by selecting the most frequent entities... and merge in any remaining entities for which a frequent entity is a substring.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "7.1 IE Results",
+      "span_id": "C0104-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "We still observe a large gap between human-level performance and a machine learning system.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "7.1 IE Results",
+      "span_id": "C0104-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "We observe less gain compared to the SciERC dataset mainly because there are no coreference links, and the relation types are not comprehensive.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "7.2 Knowledge Graph Analysis",
+      "span_id": "C0104-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "Since it is not feasible to compute the actual recall of the systems, we compute the pseudo-recall... based on the output of both systems.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "8 Conclusion",
+      "span_id": "C0104-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "Future work includes improving the performance using semi-supervised techniques and providing in-domain features. We also plan to extend our multi-task framework to information extraction tasks in other domains.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "5 Knowledge Graph Construction",
+      "span_id": "C0104-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Phrases are heuristically normalized... We replace all the entities in the cluster with the entity that has the longest string.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "8 Conclusion",
+      "span_id": "C0104-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "We still observe a large gap between the performance of our model and human performance, confirming the challenges of scientific IE.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "7.2 Knowledge Graph Analysis",
+      "span_id": "C0104-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "Since it is not feasible to compute the actual recall of the systems, we compute the pseudo-recall.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5 Knowledge Graph Construction",
+      "span_id": "C0104-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "The SciIE model extracts entities, their relations, and coreference clusters within one document.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Introduction footnote",
+      "span_id": "C0104-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Data and code are publicly available at: http://nlp.cs.washington.edu/sciIE/",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "3 Dataset",
+      "span_id": "C0104-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "Our dataset is publicly available at: http://nlp.cs.washington.edu/sciIE/.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Scientific literature needs to be organized into structured knowledge bases, but scientific entity/relation extraction is costly and existing information-extraction pipelines suffer cascading errors and primarily model within-sentence relations. The objective is to jointly identify scientific entities, typed relations, and coreference clusters so cross-sentence relations can contribute to a denser scientific knowledge graph.",
+  "methodology": {
+    "primary_family": "Joint entity-relation extraction",
+    "secondary_families": [
+      "Neural NLP pipelines",
+      "Knowledge fusion and graph construction"
+    ],
+    "system_type": "joint",
+    "supervision_setting": "supervised",
+    "description": "SciIE enumerates candidate within-sentence spans up to a maximum width, encodes the document with a one-layer BiLSTM, and constructs each span vector from its endpoint representations, attention-based soft headword, and span-width embedding. Task-specific FFNNs score entity labels, relation mentions, coreference mentions, relation pairs, and coreference pairs while sharing span representations. It jointly optimizes weighted entity, relation, and marginalized coreference losses. Beam pruning retains relation and coreference candidate spans, then the model outputs entity types, within-sentence typed relations, and antecedent links. For graph construction, it processes each abstract, uses coreference clusters to replace generic mentions and selects the longest cluster string, normalizes acronyms/plurals, retains frequent entities as nodes, merges substring variants, and assigns each entity-pair edge its most frequent relation type across the corpus."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "Uses a fixed task schema rather than an external ontology: six entity categories (Task, Method, Metric, Material, Other-ScientificTerm, Generic) and seven typed relations (Compare, Part-of, Conjunction, Evaluate-for, Feature-of, Used-for, Hyponym-Of). These types define graph node/edge semantics.",
+    "evidence": [
+      {
+        "span_id": "C0104-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "We define six types for annotating scientific entities... and seven relation types (Compare, Part-of, Conjunction, Evaluate-for, Feature-of, Used-for, Hyponym-Of)."
+      },
+      {
+        "span_id": "C0104-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "Nodes in the knowledge graph correspond to scientific entities. Edges correspond to scientific relations between pairs of entities. The edges are typed according to the relation types defined in Section 3."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Entity and concept extraction",
+    "Entity typing",
+    "Coreference resolution",
+    "Relation and triple extraction",
+    "Graph construction",
+    "Knowledge fusion and deduplication"
+  ],
+  "input_output": {
+    "input_type": "Unstructured natural-language scientific article abstracts (AI conference/workshop proceedings); the model input is a document represented as a sequence of words.",
+    "input_granularity": "Document-level abstracts; candidate entities and relations are spans and within-sentence span pairs, while coreference links connect mentions across sentences.",
+    "output_representation": "Typed entity spans, typed within-sentence relations, and coreference clusters; aggregated as a scientific knowledge graph whose nodes are normalized scientific entities and whose directed/symmetric typed edges are the most frequent extracted relations between entity pairs."
+  },
+  "models_and_tools": [
+    "Scientific Information Extractor (SciIE) unified multi-task model",
+    "One-layer BiLSTM with 200-dimensional hidden layers",
+    "Task-specific two-hidden-layer FFNN scorers with shared span representations",
+    "Attention-based soft-headword span representation and span-width embeddings",
+    "Beam pruning for relation and coreference candidate spans",
+    "BRAT annotation interface",
+    "Acronym expansion and plural-to-singular normalization heuristics for graph construction"
+  ],
+  "datasets": [
+    "SciERC: 500 annotated scientific abstracts from 12 AI conference/workshop proceedings; 8,089 entities, 4,716 relations, 2,752 coreference links, and 1,023 coreference clusters",
+    "SemEval 2017 Task 10 scientific information-extraction dataset",
+    "Semantic Scholar Corpus: 110,000 AI-conference abstracts used to construct and analyze the knowledge graph"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Precision, recall, and F1 for entity recognition and relation extraction",
+      "Average precision/recall/F1 across MUC, B3, and CEAFφ4 for coreference resolution",
+      "Precision versus pseudo-recall curves and AUC for human evaluation of the constructed knowledge graph",
+      "Cohen's kappa agreement for a subset of dataset annotations"
+    ],
+    "baselines": [
+      "LSTM+CRF",
+      "LSTM+CRF+ELMo",
+      "E2E Rel (Miwa and Bansal, 2016)",
+      "E2E Rel (Pipeline)",
+      "E2E Rel+ELMo",
+      "E2E Coref (Lee et al., 2017) combined with ELMo",
+      "Best reported SemEval 2017 leaderboard system",
+      "Luan et al. (2017b) semi-supervised neural keyphrase-extraction model"
+    ],
+    "setting": "SciIE is evaluated on development and test sets for SciERC entity recognition, relation extraction, and coreference resolution, and on SemEval 2017 Task 10 for span identification, keyphrase extraction, relation extraction, and overall score. An ablation compares single-task training with adding the other task losses. For graph quality, four domain experts annotate relation triples involving ten randomly selected frequent entities (about 1,500 triples) and compare graphs built with versus without coreference links; recall is approximated by pseudo-recall because complete recall is infeasible."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "On SciERC test, SciIE attained entity P/R/F1 of 67.2/61.5/64.2, relation P/R/F1 of 47.6/33.5/39.3, and coreference P/R/F1 of 52.0/44.9/48.2; the coreference score is the average of MUC, B3, and CEAFφ4.",
+      "On SciERC development, SciIE achieved entity F1 68.1, relation F1 39.5, and coreference F1 58.0; these exceeded the displayed baselines for each task.",
+      "The ablation on SciERC development found multi-task F1 68.1/39.5/58.0 for entity/relation/coreference versus single-task 65.7/37.9/55.3; adding coreference to relation extraction raised relation F1 from 37.9 to 39.5.",
+      "On SemEval 2017 Task 10, SciIE scored F1 58.6 for span identification, 46.0 for keyphrase extraction, 27.8 for relation extraction, and 44.7 overall; the displayed best SemEval scores were 55, 44, 28, and 43, respectively.",
+      "In graph human evaluation, the graph using coreference had AUC 0.751 versus 0.695 without coreference; both variants had precision above 84%, while the coreference variant had higher pseudo-recall."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0104-D-P007-TABLE-0001",
+        "page": 7,
+        "excerpt": "SciIE test: entity F1 64.2; relation F1 39.3; coreference F1 48.2."
+      },
+      {
+        "span_id": "C0104-D-P008-TABLE-0002",
+        "page": 8,
+        "excerpt": "Multi Task (SciIE): 68.1 entity, 39.5 relation, 58.0 coref; Single Task: 65.7, 37.9, 55.3."
+      },
+      {
+        "span_id": "C0104-D-P008-TABLE-0003",
+        "page": 8,
+        "excerpt": "SciIE: span identification F1 58.6; keyphrase extraction F1 46.0; relation extraction F1 27.8; overall F1 44.7."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Experimental finding: joint shared-span training improved all three SciERC tasks over the single-task ablation and the listed baselines.",
+      "Experimental finding: coreference-aware graph construction improved human-evaluation AUC (0.751 versus 0.695) and pseudo-recall while both graph variants retained precision above 84%.",
+      "Review-level inference: jointly modeling coreference with entity/relation extraction is particularly useful for document-level scientific Text-to-KG because it converts otherwise generic cross-sentence mentions into normalized graph entities.",
+      "Review-level inference: exhaustive span enumeration enables overlapping scientific spans and avoids the fixed BIO-tagging boundary constraint, which is consistent with the stronger SemEval span-identification result."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0104-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "We observe that performance improves with each added task in the objective."
+      },
+      {
+        "span_id": "C0104-D-P008-CAPTION-0002",
+        "page": 8,
+        "excerpt": "The precision of both systems is high (above 84% for both systems), but the system with coreference links has significantly higher recall."
+      },
+      {
+        "span_id": "C0104-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "This confirms the benefit of our model in enumerating spans (rather than BIO tagging in state-of-the-art systems)."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author-stated limitation: there remains a large gap between model and human performance on scientific information extraction.",
+      "Author-stated limitation: the SemEval 2017 relation-extraction gain is smaller because that dataset lacks coreference links and has less comprehensive relation types.",
+      "Review-level inference: relation extraction remains the weakest of the three evaluated SciERC components by test F1 (39.3), so downstream graph edges are likely more error-prone than entity spans or coreference links.",
+      "Review-level inference: graph entity consolidation relies on surface-form heuristics (acronym replacement, singularization, longest cluster string, frequency and substring merging), rather than learned or ontology-based entity linking; this may not resolve semantic aliases not captured by those heuristics."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0104-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "We still observe a large gap between human-level performance and a machine learning system."
+      },
+      {
+        "span_id": "C0104-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "We observe less gain compared to the SciERC dataset mainly because there are no coreference links, and the relation types are not comprehensive."
+      },
+      {
+        "span_id": "C0104-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "We assign nodes in the knowledge graph by selecting the most frequent entities... and merge in any remaining entities for which a frequent entity is a substring."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "A large gap remains between the model's performance and human performance, confirming scientific information extraction is still challenging.",
+      "SemEval 2017 yields less improvement than SciERC because it lacks coreference links and its relation types are not comprehensive.",
+      "Actual recall of the graph systems cannot feasibly be computed; the graph evaluation therefore uses pseudo-recall based on outputs from both systems."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0104-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "We still observe a large gap between human-level performance and a machine learning system."
+      },
+      {
+        "span_id": "C0104-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "We observe less gain compared to the SciERC dataset mainly because there are no coreference links, and the relation types are not comprehensive."
+      },
+      {
+        "span_id": "C0104-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "Since it is not feasible to compute the actual recall of the systems, we compute the pseudo-recall... based on the output of both systems."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed: improve performance with semi-supervised techniques.",
+      "Author-proposed: provide in-domain features.",
+      "Author-proposed: extend the multi-task framework to information-extraction tasks in other domains.",
+      "Review-level inference: replace or complement heuristic entity normalization with explicit entity resolution/linking and evaluate its effect on graph correctness."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0104-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "Future work includes improving the performance using semi-supervised techniques and providing in-domain features. We also plan to extend our multi-task framework to information extraction tasks in other domains."
+      },
+      {
+        "span_id": "C0104-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "Phrases are heuristically normalized... We replace all the entities in the cluster with the entity that has the longest string."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-stated unresolved problem: achieving human-level scientific entity, relation, and coreference extraction remains open.",
+      "Author-stated unresolved problem: accurately evaluating complete graph recall remains unresolved in the reported human-evaluation setup.",
+      "Review-level inference: robust cross-document entity resolution beyond coreference within one document remains unresolved by this system's reported graph-construction procedure."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0104-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "We still observe a large gap between the performance of our model and human performance, confirming the challenges of scientific IE."
+      },
+      {
+        "span_id": "C0104-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "Since it is not feasible to compute the actual recall of the systems, we compute the pseudo-recall."
+      },
+      {
+        "span_id": "C0104-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "The SciIE model extracts entities, their relations, and coreference clusters within one document."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that both data and code are publicly available at http://nlp.cs.washington.edu/sciIE/. The SciERC dataset is also stated to be publicly available there. The paper acknowledges use of the Semantic Scholar Corpus, but does not provide a separate reproducibility package or license in the PDF."
+}

@@ -1,0 +1,589 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0022",
+    "title": "KnowledgeNet: A Benchmark Dataset for Knowledge Base Population",
+    "authors": [
+      "Filipe Mesquita",
+      "Matteo Cannaviccio",
+      "Jordan Schmidek",
+      "Paramita Mirza",
+      "Denilson Barbosa"
+    ],
+    "year": "not_reported",
+    "venue": "not_reported",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "KnowledgeNet is a benchmark dataset for the task of automatically populating a knowledge base (Wikidata) with facts expressed in natural language text on the web. KnowledgeNet provides text exhaustively annotated with facts, thus enabling the holistic end-to-end evaluation of knowledge base population systems as a whole, unlike previous benchmarks that are more suitable for the evaluation of individual subcomponents (e.g., entity linking, relation extraction). We discuss five baseline approaches, where the best approach achieves an F1 score of 0.50, significantly outperforming a traditional approach by 79% (0.28). However, our best baseline is far from reaching human performance (0.82), indicating our dataset is challenging.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "pdf_path": null
+  },
+  "problem_addressed": "The paper addresses the lack of a benchmark dataset supporting holistic end-to-end evaluation of Knowledge Base Population (KBP) systems, since prior datasets/evaluations (e.g., TAC) are non-exhaustive, hard to reproduce, or suited only for evaluating individual subcomponents (entity linking, relation extraction) rather than the full KBP pipeline, and traditional pipeline systems suffer from error propagation.",
+  "methodology": {
+    "primary_family": "Benchmark dataset construction with a human-annotation framework, paired with pipeline-based supervised neural relation extraction baselines (NER + coreference resolution + entity linking + BiLSTM relation classifier)",
+    "secondary_families": [
+      "human-in-the-loop annotation framework"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "not_reported",
+    "description": "KnowledgeNet is built via a four-step annotation framework (fetch sentences, detect mentions, classify facts, link entities) that produces (subject; property; object) triples linked to the Wikidata knowledge base (KB). Baseline KBP systems follow a pipeline architecture: they split documents into sentences, detect entity mentions using a named entity recognizer (NER) and pronoun gazetteers, resolve coreference chains, and link mentions to Wikidata entities, mirroring prior KBP pipelines that use NER, entity linking, and relation extraction in sequence."
+  },
+  "ontology_or_schema_use": {
+    "status": "not_reported",
+    "value": null,
+    "evidence": []
+  },
+  "text_to_kg_stages": [
+    "sentence splitting/fetching",
+    "named entity recognition / mention detection",
+    "coreference resolution",
+    "entity linking to Wikidata",
+    "candidate fact generation",
+    "relation extraction / fact classification"
+  ],
+  "input_output": {
+    "input_type": "Natural language text on the web, specifically DBpedia abstracts (first paragraphs of Wikipedia pages) and short biographical texts about a person or organization collected via the Diffbot Knowledge Graph",
+    "input_granularity": "Sentence-level annotation (facts annotated per sentence), with document-level context used for entity linking and coreference resolution",
+    "output_representation": "(subject; property; object) fact triples where subject and object are linked to Wikidata entities"
+  },
+  "models_and_tools": [
+    "BiLSTM network",
+    "Diffbot Entity Linker"
+  ],
+  "datasets": [
+    "KnowledgeNet",
+    "TAC",
+    "TACRED",
+    "FewRel",
+    "DocRED",
+    "GoogleRE",
+    "T-REx",
+    "Wikidata"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Maximum Recall"
+    ],
+    "baselines": [
+      "Human performance"
+    ],
+    "setting": "Held-out test set comprising 20% of documents (fifth fold of a five-fold round-robin split); folds 1-3 used for training and fold 4 for development/validation. Evaluation performed under two perspectives: text evaluation (overlap of subject/object text spans with ground truth) and link evaluation (match of subject/object entity links with ground truth)."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Baseline 5 (best baseline) achieves F1=0.69 (Text evaluation) and F1=0.50 (Link evaluation), significantly outperforming Baseline 1 (traditional pipeline, F1=0.52 Text / F1=0.28 Link) by 79% in link F1 (Table 3)",
+      "Human performance F1=0.88 (Text evaluation) and F1=0.82 (Link evaluation), far exceeding the best baseline (Table 3)",
+      "Maximum recall for Baseline 5 is 0.90 (Text evaluation) and 0.59 (Link evaluation), indicating error propagation still limits recall (Table 4)"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0022-D-P008-TABLE-0001",
+        "page": 8,
+        "excerpt": "Table 3: The performance of our baseline approaches is well below human performance.\n\n| System     | Text evaluation   | Text evaluation   | Text evaluation   | Link evaluation   | Link evaluation   | Link evaluation   |\n|------------|-------------------|-------------------|-------------------|-------------------|-------------------|-------------------|\n|            | P                 | R                 | F1                | P                 | R                 | F1                |\n| Baseline 1 | 0.44              | 0.64              | 0.52              | 0.31              | 0.26              | 0.28              |\n| Baseline 2 | 0.49              | 0.64              | 0.55              | 0.37              | 0.32              | 0.34              |\n| Baseline 3 | 0.47              | 0.66              | 0.55              | 0.35              | 0.37              | 0.36              |\n| Baseline 4 | 0.60              | 0.65              | 0.62              | 0.51              | 0.48              | 0.49              |\n| Baseline 5 | 0.68              | 0.70              | 0.69              | 0.53              | 0.48              | 0.50              |\n| Human      | 0.88              | 0.88              | 0.88              | 0.81              | 0.84              | 0.82              |"
+      },
+      {
+        "span_id": "C0022-D-P009-TABLE-0001",
+        "page": 9,
+        "excerpt": "Table 4: The relation extraction component's recall is limited by error propagation. Maximum recall is the recall of the candidate facts used as input for the relation extraction component on the dev set.\n\n| System     |   Text evaluation Maximum Recall |   Link evaluation Maximum Recall |\n|------------|----------------------------------|----------------------------------|\n| Baseline 1 |                             0.80 |                             0.33 |\n| Baseline 2 |                             0.80 |                             0.37 |\n| Baseline 3 |                             0.80 |                             0.37 |\n| Baseline 4 |                             0.90 |                             0.59 |\n| Baseline 5 |                             0.90 |                             0.59 |"
+      },
+      {
+        "span_id": "C0022-D-P008-TEXT-0014",
+        "page": 8,
+        "excerpt": "We introduce KnowledgeNet, an end-to-end benchmark dataset for populating Wikidata with facts expressed in natural language text on the web. We build KnowledgeNet using a new multistep framework that helps human annotators to produce high-quality annotations efficiently. We also introduce five baseline systems and evaluate their performance. Our best baseline outperforms a traditional pipeline approach by 79% (F1 score of 0.50 vs. 0.28). Human performance is significantly higher (0.82), indicating that KnowledgeNet can support further research to close this gap."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Provides exhaustive annotation of facts in sentences, enabling true precision/recall measurement unlike prior non-exhaustive datasets",
+      "Supports automated, reproducible end-to-end evaluation of KBP systems at any time, unlike manual, once-a-year TAC evaluations",
+      "Annotation framework focuses only on named entities and limits sentences per property, enabling incremental annotation of new properties",
+      "Framework produces higher quality annotations than individual annotators (32% of annotator mistakes traced to dataset errors)"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0022-D-P001-TEXT-0012",
+        "page": 1,
+        "excerpt": "KnowledgeNet's main goal is to evaluate the overall task of KBP rather than evaluating its subcomponents in separate. We refer to this type of evaluation as end-to-end . The dataset supports the end-to-end evaluation of KBP systems by exhaustively annotating all facts in a sentence. For instance, the dataset contains all RESIDENCE facts (two) from the sentence 'He settled at Br¨ unn, in Moravia, and lived about 1756'. This allows our evaluation to assess precision and recall of RESIDENCE facts extracted from this sentence."
+      },
+      {
+        "span_id": "C0022-D-P001-TEXT-0013",
+        "page": 1,
+        "excerpt": "A popular initiative to evaluate KBP is the Text Analysis Conference, or TAC (Getman et al., 2018). TAC evaluations are performed manually and are hard to reproduce for new systems. Unlike TAC, KnowledgeNet employs an automated and reproducible way to evaluate KBP systems at any time, rather than once a year. We hope a faster evaluation cycle will accelerate the rate of improvement for KBP."
+      },
+      {
+        "span_id": "C0022-D-P003-TEXT-0003",
+        "page": 3,
+        "excerpt": "Annotating every sentence with facts for all properties is also detrimental to the incremental nature of KnowledgeNet. Adding one property to the dataset would require an annotator to reannotate every sentence in the dataset. In contrast, our framework selects a limited set of sentences to be annotated for a particular property. The remaining sentences are ignored during annotation and evaluation. As a consequence, our annotation framework allows incremental annotation of new properties and is better suited for the goal of annotating 100,000 facts for 100 properties."
+      },
+      {
+        "span_id": "C0022-D-P008-TEXT-0011",
+        "page": 8,
+        "excerpt": "A closer look at the annotator's mistakes shows that 32% of the mistakes are due to incorrect annotations in KnowledgeNet (i.e., the annotator is actually correct). The remaining mistakes (68%) are mostly due to the annotator entering an incorrect fact (30%) or missing a link on a correct fact (18%). These results show that our annotation framework produces significantly better annotations than individual annotators working without our framework."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "First release is comparable in size to other benchmarks (e.g., ACE 2005) but may be insufficient to train data-hungry models",
+      "Framework currently only annotates facts when subject and object are explicitly mentioned by name or pronoun within a single sentence, limiting cross-document reasoning facts",
+      "Best baseline performance (F1=0.50 link) remains far below human performance (0.82), showing the dataset/task remains very challenging",
+      "Error propagation significantly limits recall even in the best baseline (maximum link recall only 0.59)"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0022-D-P005-TEXT-0009",
+        "page": 5,
+        "excerpt": "Our first release is comparable to other benchmarks in size (e.g., ACE 2005), but it is perhaps insufficient to train data-hungry models. This is by design. Most organizations do not have the resources to produce tens of thousands of examples for each property of interest. As we expand the number of properties to achieve our goal of annotating 100,000 facts, we expect to keep the number of facts per property to around a thousand. In this way, we hope to promote approaches that can learn from multiple properties, requiring less annotations per property. We also hope to promote approaches using KnowledgeNet together with semisupervised or unsupervised datasets for training."
+      },
+      {
+        "span_id": "C0022-D-P005-TEXT-0010",
+        "page": 5,
+        "excerpt": "Another limitation of our first release is the focus on individual sentences. Currently, our framework can only annotate a fact when the subject and the object are explicitly mentioned by a name or pronoun in a sentence. Others have reported that the majority of facts fall into this category. For example, the authors of DocRED report that 41% of facts require reasoning over multiple sentences in a document (Yao et al., 2019). This indicates that a fact's subject and object are mentioned by their full name in a single sentence 59% of the time. The percentage of facts that can be annotated in KnowledgeNet is significantly higher than 59%. This is because our framework can also annotate facts that require resolving (partial) names and pronouns referring to full names in other sentences. These facts are particularly common in our document collection."
+      },
+      {
+        "span_id": "C0022-D-P008-TEXT-0014",
+        "page": 8,
+        "excerpt": "We introduce KnowledgeNet, an end-to-end benchmark dataset for populating Wikidata with facts expressed in natural language text on the web. We build KnowledgeNet using a new multistep framework that helps human annotators to produce high-quality annotations efficiently. We also introduce five baseline systems and evaluate their performance. Our best baseline outperforms a traditional pipeline approach by 79% (F1 score of 0.50 vs. 0.28). Human performance is significantly higher (0.82), indicating that KnowledgeNet can support further research to close this gap."
+      },
+      {
+        "span_id": "C0022-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "Our experiments show that the traditional pipeline approach for KB population is notably limited by error propagation. Performance gains achieved by our best baseline are mainly due to more candidates being passed along to the final pipeline component (relation extraction), allowing this component to fix errors made by previous components. A closer inspection reveals that even our best baseline is fairly limited by error propagation and can only achieve a maximum recall of 0.59. These results indicate that end-to-end models might be a promising alternative to the traditional pipeline approach."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The first release, while comparable in size to benchmarks like ACE 2005, is perhaps insufficient to train data-hungry models; this is by design due to limited annotation resources",
+      "The framework currently can only annotate a fact when subject and object are explicitly mentioned by name or pronoun in a sentence, limiting handling of facts requiring reasoning over multiple sentences"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0022-D-P005-TEXT-0009",
+        "page": 5,
+        "excerpt": "Our first release is comparable to other benchmarks in size (e.g., ACE 2005), but it is perhaps insufficient to train data-hungry models. This is by design. Most organizations do not have the resources to produce tens of thousands of examples for each property of interest. As we expand the number of properties to achieve our goal of annotating 100,000 facts, we expect to keep the number of facts per property to around a thousand. In this way, we hope to promote approaches that can learn from multiple properties, requiring less annotations per property. We also hope to promote approaches using KnowledgeNet together with semisupervised or unsupervised datasets for training."
+      },
+      {
+        "span_id": "C0022-D-P005-TEXT-0010",
+        "page": 5,
+        "excerpt": "Another limitation of our first release is the focus on individual sentences. Currently, our framework can only annotate a fact when the subject and the object are explicitly mentioned by a name or pronoun in a sentence. Others have reported that the majority of facts fall into this category. For example, the authors of DocRED report that 41% of facts require reasoning over multiple sentences in a document (Yao et al., 2019). This indicates that a fact's subject and object are mentioned by their full name in a single sentence 59% of the time. The percentage of facts that can be annotated in KnowledgeNet is significantly higher than 59%. This is because our framework can also annotate facts that require resolving (partial) names and pronouns referring to full names in other sentences. These facts are particularly common in our document collection."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Expand the dataset to annotate 100,000 facts across 100 properties",
+      "Promote approaches that can learn from multiple properties, requiring fewer annotations per property",
+      "Promote approaches combining KnowledgeNet with semi-supervised or unsupervised datasets for training",
+      "Pursue end-to-end models as a promising alternative to the traditional pipeline approach to reduce error propagation"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0022-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "scale. Our goal for the coming years is to annotate 100,000 facts for 100 properties . To accomplish this goal, we propose a new framework for annotating facts with high accuracy and low effort."
+      },
+      {
+        "span_id": "C0022-D-P005-TEXT-0009",
+        "page": 5,
+        "excerpt": "Our first release is comparable to other benchmarks in size (e.g., ACE 2005), but it is perhaps insufficient to train data-hungry models. This is by design. Most organizations do not have the resources to produce tens of thousands of examples for each property of interest. As we expand the number of properties to achieve our goal of annotating 100,000 facts, we expect to keep the number of facts per property to around a thousand. In this way, we hope to promote approaches that can learn from multiple properties, requiring less annotations per property. We also hope to promote approaches using KnowledgeNet together with semisupervised or unsupervised datasets for training."
+      },
+      {
+        "span_id": "C0022-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "Our experiments show that the traditional pipeline approach for KB population is notably limited by error propagation. Performance gains achieved by our best baseline are mainly due to more candidates being passed along to the final pipeline component (relation extraction), allowing this component to fix errors made by previous components. A closer inspection reveals that even our best baseline is fairly limited by error propagation and can only achieve a maximum recall of 0.59. These results indicate that end-to-end models might be a promising alternative to the traditional pipeline approach."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Error propagation in pipeline systems continues to cap maximum recall (0.59 for link evaluation) even in the best baseline",
+      "Qualifier extraction (temporal qualifiers like IS CURRENT, START TIME, END TIME) shows promising preliminary results but remains out-of-scope and unresolved in this work"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0022-D-P008-TEXT-0014",
+        "page": 8,
+        "excerpt": "We introduce KnowledgeNet, an end-to-end benchmark dataset for populating Wikidata with facts expressed in natural language text on the web. We build KnowledgeNet using a new multistep framework that helps human annotators to produce high-quality annotations efficiently. We also introduce five baseline systems and evaluate their performance. Our best baseline outperforms a traditional pipeline approach by 79% (F1 score of 0.50 vs. 0.28). Human performance is significantly higher (0.82), indicating that KnowledgeNet can support further research to close this gap."
+      },
+      {
+        "span_id": "C0022-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "Our experiments show that the traditional pipeline approach for KB population is notably limited by error propagation. Performance gains achieved by our best baseline are mainly due to more candidates being passed along to the final pipeline component (relation extraction), allowing this component to fix errors made by previous components. A closer inspection reveals that even our best baseline is fairly limited by error propagation and can only achieve a maximum recall of 0.59. These results indicate that end-to-end models might be a promising alternative to the traditional pipeline approach."
+      },
+      {
+        "span_id": "C0022-D-P010-TEXT-0016",
+        "page": 10,
+        "excerpt": "This release contains 4,518 facts annotated with three temporal qualifiers : IS CURRENT, START TIME and END TIME. We use one of our baseline system to obtain facts to be annotated with qualifiers, along with the the sentence where each fact was found. Given a fact and a sentence, human annotators must decide the value of a qualifier ( true or false for IS CURRENT or a time expression for START TIME, END TIME). A third option unclear can be chosen in the case of uncertainty. To be included in the dataset, each fact must be annotated by two annotators in agreement. While preliminary experiments show promising results for qualifier extraction, they are out-of-scope of this work."
+      }
+    ]
+  },
+  "code_and_data_availability": "The KnowledgeNet dataset and baselines are publicly available at https://github.com/diffbot/knowledge-net",
+  "analysis_confidence": "high",
+  "evidence_locations": {
+    "paper_metadata.authors-01": {
+      "claim": "Filipe Mesquita; Matteo Cannaviccio; Jordan Schmidek; Paramita Mirza; Denilson Barbosa",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P001-SECTION-0002",
+      "page": 1,
+      "excerpt": "Filipe Mesquita, Matteo Cannaviccio, Jordan Schmidek, Paramita Mirza",
+      "confidence": "high"
+    },
+    "paper_metadata.authors-02": {
+      "claim": "Filipe Mesquita; Matteo Cannaviccio; Jordan Schmidek; Paramita Mirza; Denilson Barbosa",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P001-SECTION-0005",
+      "page": 1,
+      "excerpt": "Denilson Barbosa",
+      "confidence": "high"
+    },
+    "paper_metadata.abstract-01": {
+      "claim": "KnowledgeNet is a benchmark dataset for the task of automatically populating a knowledge base (Wikidata) with facts expressed in natural language text on the web. KnowledgeNet provides text exhaustively annotated with facts, thus enabling the holistic end-to-end evaluation of knowledge base population systems as a whole, unlike previous benchmarks that are more suitable for the evaluation of individual subcomponents (e.g., entity linking, relation extraction). We discuss five baseline approaches, where the best approach achieves an F1 score of 0.50, significantly outperforming a traditional approach by 79% (0.28). However, our best baseline is far from reaching human performance (0.82), indicating our dataset is challenging.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P001-TEXT-0003",
+      "page": 1,
+      "excerpt": "KnowledgeNet is a benchmark dataset for the task of automatically populating a knowledge base (Wikidata) with facts expressed in natural language text on the web. KnowledgeNet provides text exhaustively annotated with facts, thus enabling the holistic end-to-end evaluation of knowledge base population systems as a whole, unlike previous benchmarks that are more suitable for the evaluation of individual subcomponents (e.g., entity linking, relation extraction). We discuss five baseline approaches, where the best approach achieves an F1 score of 0.50, significantly outperforming a traditional approach by 79% (0.28). However, our best baseline is far from reaching human performance (0.82), indicating our dataset is challenging. The KnowledgeNet dataset and baselines are available at https://github.",
+      "confidence": "high"
+    },
+    "problem_addressed-01": {
+      "claim": "The paper addresses the lack of a benchmark dataset supporting holistic end-to-end evaluation of Knowledge Base Population (KBP) systems, since prior datasets/evaluations (e.g., TAC) are non-exhaustive, hard to reproduce, or suited only for evaluating individual subcomponents (entity linking, relation extraction) rather than the full KBP pipeline, and traditional pipeline systems suffer from error propagation.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P001-TEXT-0006",
+      "page": 1,
+      "excerpt": "KB population (KBP) is the task of automatically augmenting a KB with new facts. Traditionally, KBP has been tackled with datasets for individual components to be arranged in a pipeline, typically: (1) entity discovery and linking (Ji et al., 2017; Shen et al., 2015) and (2) relation extraction (Angeli et al., 2015; Zhang et al., 2017). Entity discovery and linking seeks to recognize and disambiguate proper names in text that refer to entities (e.g., people, organizations and locations) by linking them to a reference KB. Relation extrac-",
+      "confidence": "high"
+    },
+    "problem_addressed-02": {
+      "claim": "The paper addresses the lack of a benchmark dataset supporting holistic end-to-end evaluation of Knowledge Base Population (KBP) systems, since prior datasets/evaluations (e.g., TAC) are non-exhaustive, hard to reproduce, or suited only for evaluating individual subcomponents (entity linking, relation extraction) rather than the full KBP pipeline, and traditional pipeline systems suffer from error propagation.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P002-TEXT-0004",
+      "page": 2,
+      "excerpt": "The main shortcoming of pipeline systems is error propagation. Mistakes made by components in the beginning of the pipeline are propagated to the final output of the system, negatively affecting the overall precision and recall. For instance, our experiments show that the pipeline employed by Stanford's TAC 2015 winning system can achieve a maximum recall of 0.32 in KnowledgeNet 3 .",
+      "confidence": "high"
+    },
+    "problem_addressed-03": {
+      "claim": "The paper addresses the lack of a benchmark dataset supporting holistic end-to-end evaluation of Knowledge Base Population (KBP) systems, since prior datasets/evaluations (e.g., TAC) are non-exhaustive, hard to reproduce, or suited only for evaluating individual subcomponents (entity linking, relation extraction) rather than the full KBP pipeline, and traditional pipeline systems suffer from error propagation.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P002-TEXT-0006",
+      "page": 2,
+      "excerpt": "TAC is a series of evaluation workshops organized as several tracks by NIST (Getman et al., 2018). The Cold Start track provides an end-to-end evaluation of KBP systems, while other tracks focus on subtasks (e.g., entity disambiguation and linking). The Cold Start track is the current standard to evaluate KBP systems. To compete in this track, participants have a limited time window to submit the results of their KBP systems. After this window, the systems are evaluated by pooling facts extracted by the contestants. Despite its effectiveness for running a contest, this methodology has been shown to be biased against new systems, which are not part of the pooling (Chaganty et al., 2017). TAC also manually evaluates a system's 'justification', a span of text provided as evidence for a fact. A correct fact with an incorrect justification is considered invalid. Therefore, reproducing TAC's evaluation for new systems is challenging.",
+      "confidence": "high"
+    },
+    "methodology.primary_family-01": {
+      "claim": "Benchmark dataset construction with a human-annotation framework, paired with pipeline-based supervised neural relation extraction baselines (NER + coreference resolution + entity linking + BiLSTM relation classifier)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The dataset has been generated by multiple annotators using a new multi-step framework. We conjecture our framework can help annotators produce higher quality annotations by allowing them to focus on one small, more specific task at a time. The annotation consists of four different steps: (1) fetch sentences, (2) detect mentions, (3) classify facts and (4) link entities.",
+      "confidence": "high"
+    },
+    "methodology.primary_family-02": {
+      "claim": "Benchmark dataset construction with a human-annotation framework, paired with pipeline-based supervised neural relation extraction baselines (NER + coreference resolution + entity linking + BiLSTM relation classifier)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Figure 2 illustrates the architecture shared by our five baseline approaches. We start by splitting a given document into sentences. For each sentence, we detect entity mentions using a named entity recognizer (NER) and a gazetteer for pronoun mentions and their type (e.g., person, organizations, location). We also detect coreference chains, that is, groups of mentions within a document that refer to the same entity. Figure 2 illustrates how coreference chains help disambiguate pronouns and partial names by clustering them together with the full name of an entity. Finally, we link these coreference chains to Wikidata entities.",
+      "confidence": "high"
+    },
+    "methodology.primary_family-03": {
+      "claim": "Benchmark dataset construction with a human-annotation framework, paired with pipeline-based supervised neural relation extraction baselines (NER + coreference resolution + entity linking + BiLSTM relation classifier)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "For relation extraction we implement a standard BiLSTM network with two 500-dimensional hidden layers. We use spaCy pre-trained word embeddings (size 300) concatenated with additional features illustrated in Figure 3. The output of the BiLSTM network is concatenated with features from Wikidata (Features 9-10).",
+      "confidence": "high"
+    },
+    "methodology.secondary_families-01": {
+      "claim": "human-in-the-loop annotation framework",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The dataset has been generated by multiple annotators using a new multi-step framework. We conjecture our framework can help annotators produce higher quality annotations by allowing them to focus on one small, more specific task at a time. The annotation consists of four different steps: (1) fetch sentences, (2) detect mentions, (3) classify facts and (4) link entities.",
+      "confidence": "high"
+    },
+    "methodology.secondary_families-02": {
+      "claim": "human-in-the-loop annotation framework",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P007-TEXT-0216",
+      "page": 7,
+      "excerpt": "Baseline 5. Our final baseline seeks to improve the relation extraction component by employing BERT's pre-trained representations (Devlin et al., 2018) in addition to all other features. To produce a contextual representation for every word, we learn a linear weighted combination of BERT's 12 layers, following Peters et al. (2019).",
+      "confidence": "high"
+    },
+    "methodology.system_type-01": {
+      "claim": "pipeline",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Figure 2 illustrates the architecture shared by our five baseline approaches. We start by splitting a given document into sentences. For each sentence, we detect entity mentions using a named entity recognizer (NER) and a gazetteer for pronoun mentions and their type (e.g., person, organizations, location). We also detect coreference chains, that is, groups of mentions within a document that refer to the same entity. Figure 2 illustrates how coreference chains help disambiguate pronouns and partial names by clustering them together with the full name of an entity. Finally, we link these coreference chains to Wikidata entities.",
+      "confidence": "high"
+    },
+    "methodology.system_type-02": {
+      "claim": "pipeline",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P007-TEXT-0212",
+      "page": 7,
+      "excerpt": "Baseline 1. Our first baseline is a standard pipeline approach inspired by the TAC 2015 Cold Start winning system (Angeli et al., 2015). It generates candidate mentions by using NER and the pronoun gazetteers. For mentions of the correct type (e.g., person for the property SPOUSE), the system then links these mentions using an entity linking system. The relation extraction component uses features 1-4.",
+      "confidence": "high"
+    },
+    "methodology.description-01": {
+      "claim": "KnowledgeNet is built via a four-step annotation framework (fetch sentences, detect mentions, classify facts, link entities) that produces (subject; property; object) triples linked to the Wikidata knowledge base (KB). Baseline KBP systems follow a pipeline architecture: they split documents into sentences, detect entity mentions using a named entity recognizer (NER) and pronoun gazetteers, resolve coreference chains, and link mentions to Wikidata entities, mirroring prior KBP pipelines that use NER, entity linking, and relation extraction in sequence.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The dataset has been generated by multiple annotators using a new multi-step framework. We conjecture our framework can help annotators produce higher quality annotations by allowing them to focus on one small, more specific task at a time. The annotation consists of four different steps: (1) fetch sentences, (2) detect mentions, (3) classify facts and (4) link entities.",
+      "confidence": "high"
+    },
+    "methodology.description-02": {
+      "claim": "KnowledgeNet is built via a four-step annotation framework (fetch sentences, detect mentions, classify facts, link entities) that produces (subject; property; object) triples linked to the Wikidata knowledge base (KB). Baseline KBP systems follow a pipeline architecture: they split documents into sentences, detect entity mentions using a named entity recognizer (NER) and pronoun gazetteers, resolve coreference chains, and link mentions to Wikidata entities, mirroring prior KBP pipelines that use NER, entity linking, and relation extraction in sequence.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P001-TEXT-0010",
+      "page": 1,
+      "excerpt": "KnowledgeNet is a benchmark dataset for populating a KB (Wikidata) with facts expressed in natural language on the web. KnowledgeNet facts are of the form ( subject ; property; object ), where subject and object are linked to Wikidata. For instance, the dataset contains text expressing the fact ( Gennaro Basile 1 ; RESIDENCE; Moravia 2 ), in the passage:",
+      "confidence": "high"
+    },
+    "methodology.description-03": {
+      "claim": "KnowledgeNet is built via a four-step annotation framework (fetch sentences, detect mentions, classify facts, link entities) that produces (subject; property; object) triples linked to the Wikidata knowledge base (KB). Baseline KBP systems follow a pipeline architecture: they split documents into sentences, detect entity mentions using a named entity recognizer (NER) and pronoun gazetteers, resolve coreference chains, and link mentions to Wikidata entities, mirroring prior KBP pipelines that use NER, entity linking, and relation extraction in sequence.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Figure 2 illustrates the architecture shared by our five baseline approaches. We start by splitting a given document into sentences. For each sentence, we detect entity mentions using a named entity recognizer (NER) and a gazetteer for pronoun mentions and their type (e.g., person, organizations, location). We also detect coreference chains, that is, groups of mentions within a document that refer to the same entity. Figure 2 illustrates how coreference chains help disambiguate pronouns and partial names by clustering them together with the full name of an entity. Finally, we link these coreference chains to Wikidata entities.",
+      "confidence": "high"
+    },
+    "methodology.description-04": {
+      "claim": "KnowledgeNet is built via a four-step annotation framework (fetch sentences, detect mentions, classify facts, link entities) that produces (subject; property; object) triples linked to the Wikidata knowledge base (KB). Baseline KBP systems follow a pipeline architecture: they split documents into sentences, detect entity mentions using a named entity recognizer (NER) and pronoun gazetteers, resolve coreference chains, and link mentions to Wikidata entities, mirroring prior KBP pipelines that use NER, entity linking, and relation extraction in sequence.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "KBP has traditionally been tackled with pipeline systems. For instance, Stanford's TAC 2015 winning system employs the following pipeline: named entity recognition (NER) → entity linking → relation extraction (Angeli et al., 2015). Stanford's latest TAC system continues to use the same pipeline architecture with one additional component: coreference resolution (Chaganty et al., 2017).",
+      "confidence": "high"
+    },
+    "text_to_kg_stages-01": {
+      "claim": "sentence splitting/fetching; named entity recognition / mention detection; coreference resolution; entity linking to Wikidata; candidate fact generation; relation extraction / fact classification",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Figure 2 illustrates the architecture shared by our five baseline approaches. We start by splitting a given document into sentences. For each sentence, we detect entity mentions using a named entity recognizer (NER) and a gazetteer for pronoun mentions and their type (e.g., person, organizations, location). We also detect coreference chains, that is, groups of mentions within a document that refer to the same entity. Figure 2 illustrates how coreference chains help disambiguate pronouns and partial names by clustering them together with the full name of an entity. Finally, we link these coreference chains to Wikidata entities.",
+      "confidence": "high"
+    },
+    "text_to_kg_stages-02": {
+      "claim": "sentence splitting/fetching; named entity recognition / mention detection; coreference resolution; entity linking to Wikidata; candidate fact generation; relation extraction / fact classification",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "Next, we produce candidate facts by considering pair of mentions from the same sentence, as illustrated in Figure 2. The relation extraction component makes the final decision on whether a candidate fact is expressed by the text.",
+      "confidence": "high"
+    },
+    "text_to_kg_stages-03": {
+      "claim": "sentence splitting/fetching; named entity recognition / mention detection; coreference resolution; entity linking to Wikidata; candidate fact generation; relation extraction / fact classification",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The dataset has been generated by multiple annotators using a new multi-step framework. We conjecture our framework can help annotators produce higher quality annotations by allowing them to focus on one small, more specific task at a time. The annotation consists of four different steps: (1) fetch sentences, (2) detect mentions, (3) classify facts and (4) link entities.",
+      "confidence": "high"
+    },
+    "input_output.input_type-01": {
+      "claim": "Natural language text on the web, specifically DBpedia abstracts (first paragraphs of Wikipedia pages) and short biographical texts about a person or organization collected via the Diffbot Knowledge Graph",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P003-TEXT-0005",
+      "page": 3,
+      "excerpt": "This section discusses the first release of KnowledgeNet and our annotation framework. The documents in this first release are either DBpedia abstracts (i.e., first paragraphs of a Wikipedia page) or short biographical texts about a person or organization from the web. These web texts were collected using the Diffbot Knowledge Graph 6 .",
+      "confidence": "high"
+    },
+    "input_output.input_granularity-01": {
+      "claim": "Sentence-level annotation (facts annotated per sentence), with document-level context used for entity linking and coreference resolution",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "Our annotation framework (Section 3.1) is inspired by ACE's framework but tailored towards KBP. First, we only annotate mentions that refer to named entities. Second, while our annotation is exhaustive, we focus on annotating sentences rather than documents, eliminating the need to annotate every fact described in the entire document. Such a requirement creates a significant imbalance in the number of annotations per property. For instance, the most popular property from ACE has 1,400 annotated facts, while the majority of properties from ACE have less than 300 annotated facts. This might explain why most relation extraction evaluations use only 6 properties from ACE.",
+      "confidence": "high"
+    },
+    "input_output.input_granularity-02": {
+      "claim": "Sentence-level annotation (facts annotated per sentence), with document-level context used for entity linking and coreference resolution",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P005-TEXT-0006",
+      "page": 5,
+      "excerpt": "Step 4: Link entities. Finally, we ask annotators to link every mention involved in a fact to a single Wikidata entity. In this step, annotators can read the entire document and resolve mentions (e.g., pronouns) that refer to names in other sentences. Every mention is annotated by at least two annotators. When there is disagreement, we ask other annotators to join in the process until consensus is reached. In total, excluding the properties having literal objects (Table 2) we can assign a link to both subject and object for 52% of the facts.",
+      "confidence": "high"
+    },
+    "input_output.output_representation-01": {
+      "claim": "(subject; property; object) fact triples where subject and object are linked to Wikidata entities",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P001-TEXT-0010",
+      "page": 1,
+      "excerpt": "KnowledgeNet is a benchmark dataset for populating a KB (Wikidata) with facts expressed in natural language on the web. KnowledgeNet facts are of the form ( subject ; property; object ), where subject and object are linked to Wikidata. For instance, the dataset contains text expressing the fact ( Gennaro Basile 1 ; RESIDENCE; Moravia 2 ), in the passage:",
+      "confidence": "high"
+    },
+    "models_and_tools-01": {
+      "claim": "BiLSTM network; Diffbot Entity Linker",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "All our baseline systems follow the same architecture (Figure 2). We use spaCy 7 for the NLP pipeline (sentence splitting, tokenization, POS tagging, dependency parsing, NER), Hugging Face's coreference resolution system 8 , and the Diffbot Entity Linker 9 for entity linking.",
+      "confidence": "high"
+    },
+    "models_and_tools-02": {
+      "claim": "BiLSTM network; Diffbot Entity Linker",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "For relation extraction we implement a standard BiLSTM network with two 500-dimensional hidden layers. We use spaCy pre-trained word embeddings (size 300) concatenated with additional features illustrated in Figure 3. The output of the BiLSTM network is concatenated with features from Wikidata (Features 9-10).",
+      "confidence": "high"
+    },
+    "models_and_tools-03": {
+      "claim": "BiLSTM network; Diffbot Entity Linker",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P007-TEXT-0216",
+      "page": 7,
+      "excerpt": "Baseline 5. Our final baseline seeks to improve the relation extraction component by employing BERT's pre-trained representations (Devlin et al., 2018) in addition to all other features. To produce a contextual representation for every word, we learn a linear weighted combination of BERT's 12 layers, following Peters et al. (2019).",
+      "confidence": "high"
+    },
+    "datasets-01": {
+      "claim": "KnowledgeNet; TAC; TACRED; FewRel; DocRED; GoogleRE; T-REx; Wikidata",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P003-TABLE-0001",
+      "page": 3,
+      "excerpt": "Table 1: A dataset comparison according to our criteria for a desirable KBP benchmark dataset. 'Exhaus. anno. sentences' shows the number of exhaustively annotated sentences. 'New KB facts annotated' shows the percentage of annotated facts that can be found in the reference KB. Most datasets contain only facts with no links to a reference KB (100% new facts) or contain only facts that exist in the KB (0% new facts).\n\n| Dataset                 | KnowledgeNet   | ACE    | TAC    | TACRED   | FewRel   | DocRED   | GoogleRE   | T-REx   |\n|-------------------------|----------------|--------|--------|----------|----------|----------|------------|---------|\n| Human annotation        | yes            | yes    | yes    | yes      | yes      | yes      | yes        | no      |\n| Exhaustive annotation   | yes            | yes    | no     | no       | no       | no       | no         | no      |\n| Exhaus. anno. sentences | 9,000          | 11,000 | N/A    | N/A      | N/A      | N/A      | N/A        | N/A     |\n| Text span annotation    | yes            | yes    | no     | yes      | yes      | yes      | no         | yes     |\n| Links to reference KB   | yes            | yes    | yes    | no       | yes      | no       | yes        | yes     |\n| Cross-sentence facts    | yes            | yes    | yes    | no       | no       | yes      | yes        | yes     |\n| Annotated facts         | 13,000         | 8,000  | 84,000 | 22,000   | 56,000   | 56,000   | 40,000     | 11M     |\n| Properties              | 15             | 18     | 41     | 41       | 100      | 96       | 5          | 353     |\n| New KB facts annotated  | 77%            | 100%   | 100%   | 100%     | 0%       | 100%     | 0%         | 0%      |",
+      "confidence": "high"
+    },
+    "datasets-02": {
+      "claim": "KnowledgeNet; TAC; TACRED; FewRel; DocRED; GoogleRE; T-REx; Wikidata",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P001-TEXT-0010",
+      "page": 1,
+      "excerpt": "KnowledgeNet is a benchmark dataset for populating a KB (Wikidata) with facts expressed in natural language on the web. KnowledgeNet facts are of the form ( subject ; property; object ), where subject and object are linked to Wikidata. For instance, the dataset contains text expressing the fact ( Gennaro Basile 1 ; RESIDENCE; Moravia 2 ), in the passage:",
+      "confidence": "high"
+    },
+    "evaluation.metrics-01": {
+      "claim": "Maximum Recall",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P008-TEXT-0004",
+      "page": 8,
+      "excerpt": "Table 3 presents the performance of our baseline systems compared to the human performance. We report precision ( P ), recall ( R ) and F-score ( F 1 ):",
+      "confidence": "high"
+    },
+    "evaluation.metrics-02": {
+      "claim": "Maximum Recall",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P009-CAPTION-0001",
+      "page": 9,
+      "excerpt": "Table 4: The relation extraction component's recall is limited by error propagation. Maximum recall is the recall of the candidate facts used as input for the relation extraction component on the dev set.",
+      "confidence": "high"
+    },
+    "evaluation.baselines-01": {
+      "claim": "Human performance",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P007-TEXT-0212",
+      "page": 7,
+      "excerpt": "Baseline 1. Our first baseline is a standard pipeline approach inspired by the TAC 2015 Cold Start winning system (Angeli et al., 2015). It generates candidate mentions by using NER and the pronoun gazetteers. For mentions of the correct type (e.g., person for the property SPOUSE), the system then links these mentions using an entity linking system. The relation extraction component uses features 1-4.",
+      "confidence": "high"
+    },
+    "evaluation.baselines-02": {
+      "claim": "Human performance",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P007-TEXT-0213",
+      "page": 7,
+      "excerpt": "Baseline 2. Our second baseline adds coreference resolution. This baseline is inspired by Stanford's TAC 2017 system (Chaganty et al., 2017). We leverage coreference chains to both increase the number of candidate mentions linked to KB entities (e.g., pronouns) as well as to introduce additional features. This model uses features 1-8.",
+      "confidence": "high"
+    },
+    "evaluation.baselines-03": {
+      "claim": "Human performance",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P007-TEXT-0216",
+      "page": 7,
+      "excerpt": "Baseline 5. Our final baseline seeks to improve the relation extraction component by employing BERT's pre-trained representations (Devlin et al., 2018) in addition to all other features. To produce a contextual representation for every word, we learn a linear weighted combination of BERT's 12 layers, following Peters et al. (2019).",
+      "confidence": "high"
+    },
+    "evaluation.baselines-04": {
+      "claim": "Human performance",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P008-TABLE-0001",
+      "page": 8,
+      "excerpt": "Table 3: The performance of our baseline approaches is well below human performance.\n\n| System     | Text evaluation   | Text evaluation   | Text evaluation   | Link evaluation   | Link evaluation   | Link evaluation   |\n|------------|-------------------|-------------------|-------------------|-------------------|-------------------|-------------------|\n|            | P                 | R                 | F1                | P                 | R                 | F1                |\n| Baseline 1 | 0.44              | 0.64              | 0.52              | 0.31              | 0.26              | 0.28              |\n| Baseline 2 | 0.49              | 0.64              | 0.55              | 0.37              | 0.32              | 0.34              |\n| Baseline 3 | 0.47              | 0.66              | 0.55              | 0.35              | 0.37              | 0.36              |\n| Baseline 4 | 0.60              | 0.65              | 0.62              | 0.51              | 0.48              | 0.49              |\n| Baseline 5 | 0.68              | 0.70              | 0.69              | 0.53              | 0.48              | 0.50              |\n| Human      | 0.88              | 0.88              | 0.88              | 0.81              | 0.84              | 0.82              |",
+      "confidence": "high"
+    },
+    "evaluation.setting-01": {
+      "claim": "Held-out test set comprising 20% of documents (fifth fold of a five-fold round-robin split); folds 1-3 used for training and fold 4 for development/validation. Evaluation performed under two perspectives: text evaluation (overlap of subject/object text spans with ground truth) and link evaluation (match of subject/object entity links with ground truth).",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Holdout test set. We split the documents into five folds in a round-robin manner, keeping the fifth fold (20% of the dataset) as the test set. To preserve the integrity of the results, we will release the test set without annotations and will provide a service through which others can evaluate their KBP systems. In our experiments, we used folds 1-3 for training and fold 4 for development and validation, including hyperparameter tuning.",
+      "confidence": "high"
+    },
+    "evaluation.setting-02": {
+      "claim": "Held-out test set comprising 20% of documents (fifth fold of a five-fold round-robin split); folds 1-3 used for training and fold 4 for development/validation. Evaluation performed under two perspectives: text evaluation (overlap of subject/object text spans with ground truth) and link evaluation (match of subject/object entity links with ground truth).",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P008-TEXT-0006",
+      "page": 8,
+      "excerpt": "We evaluate our baseline systems from two perspectives. The text evaluation deems an extracted fact correct when the text spans of the subject and object overlap with the text spans of a ground truth fact. The link evaluation deems an extracted fact correct when the links of the subject and object match the links of a ground truth fact. In the link evaluation, we consider only facts where both the subject and object links are present.",
+      "confidence": "high"
+    },
+    "code_and_data_availability-01": {
+      "claim": "The KnowledgeNet dataset and baselines are publicly available at https://github.com/diffbot/knowledge-net",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P001-TEXT-0003",
+      "page": 1,
+      "excerpt": "KnowledgeNet is a benchmark dataset for the task of automatically populating a knowledge base (Wikidata) with facts expressed in natural language text on the web. KnowledgeNet provides text exhaustively annotated with facts, thus enabling the holistic end-to-end evaluation of knowledge base population systems as a whole, unlike previous benchmarks that are more suitable for the evaluation of individual subcomponents (e.g., entity linking, relation extraction). We discuss five baseline approaches, where the best approach achieves an F1 score of 0.50, significantly outperforming a traditional approach by 79% (0.28). However, our best baseline is far from reaching human performance (0.82), indicating our dataset is challenging. The KnowledgeNet dataset and baselines are available at https://github.",
+      "confidence": "high"
+    },
+    "code_and_data_availability-02": {
+      "claim": "The KnowledgeNet dataset and baselines are publicly available at https://github.com/diffbot/knowledge-net",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0022-D-P001-TEXT-0004",
+      "page": 1,
+      "excerpt": "com/diffbot/knowledge-net",
+      "confidence": "high"
+    }
+  }
+}

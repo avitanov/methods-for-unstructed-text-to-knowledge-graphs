@@ -1,0 +1,722 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0122",
+    "title": "A hybrid approach for extracting semantic relations from texts",
+    "pdf_path": "data/manual-pdfs/C0122.pdf",
+    "authors": [
+      "Lucia Specia",
+      "Enrico Motta"
+    ],
+    "year": 2006,
+    "venue": "Proceedings of the 2nd Workshop on Ontology Learning and Population: Bridging the Gap between Text and Knowledge",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The paper presents a hybrid relation-extraction pipeline combining parsing, POS tagging, named-entity recognition, pattern-based classification, word-sense disambiguation, a domain ontology, a knowledge base, and lexical databases. It targets semantic-Web annotation and supports ontology population and ontology learning.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title block",
+      "span_id": "C0122-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Lucia Specia and Enrico Motta",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication footer",
+      "span_id": "C0122-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the 2nd Workshop on Ontology Learning and Population, pages 57–64, Sydney, July 2006.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication footer",
+      "span_id": "C0122-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the 2nd Workshop on Ontology Learning and Population, pages 57–64.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0122-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We present an approach for extracting relations from texts that exploits linguistic and empirical strategies, by means of a pipeline method.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0122-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "the goal of the relation extraction approach presented here is to extract relational knowledge about entities, i.e., to identify the semantic relations between pairs of entities in the input texts.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "3 A hybrid approach for relation extraction",
+      "span_id": "C0122-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "The main goal of this approach is to provide rich semantic annotations for the Semantic Web.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3 A hybrid approach for relation extraction",
+      "span_id": "C0122-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The core strategy consists of mapping linguistic components with some syntactic relationship (a linguistic triple) into their corresponding semantic components.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3.2 Identifying linguistic triples",
+      "span_id": "C0122-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "We use Minipar... [which] produces functional relations... including subject and object relations with respect to a verb.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3 A hybrid approach for relation extraction",
+      "span_id": "C0122-D-P002-PICTURE-0001",
+      "page": 2,
+      "excerpt": "Architecture includes POS + Lemmatizer, Linguistic Component, RSS with Ontology + KB + WordNet, ESpotter++, Pattern-based classification, and WSD module.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.4 Identifying new relations",
+      "span_id": "C0122-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "The classification model... is an unsupervised corpus-based module... [using] a WordNet-based semantic similarity measure.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0122-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "a pipeline method involving a parser, part-of-speech tagger, named entity recognition system, pattern-based classification and word sense disambiguation models",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "3.4 Identifying new relations",
+      "span_id": "C0122-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "an unsupervised corpus-based module which takes as examples a small set of relevant SVO patterns, called seed patterns",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "3.5 Disambiguating relations",
+      "span_id": "C0122-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "SenseLearner is supervised WSD system... after being trained on a small data set.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3 A hybrid approach for relation extraction",
+      "span_id": "C0122-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "It employs knowledge-based and (supervised and unsupervised) corpus-based techniques.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.2 Identifying linguistic triples",
+      "span_id": "C0122-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "the intermediate representation provided by both GATE and Minipar consists of triples of the type: <noun_phrase, verbal_expression, noun_phrase>.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.3 Identifying entities and relations",
+      "span_id": "C0122-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "If there is no possible mapping for the term, the pattern-based classification model is triggered... if there is more than one possible mapping, the disambiguation model is called.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.1 Context and resources",
+      "span_id": "C0122-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The domain Ontology used (KMi-basic-portal-ontology) was designed based on the AKT reference ontology... The instantiations of concepts in this ontology are stored in the knowledge base (KB) KMi-basic-portal-kb.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Applying RSS to map entities and relations",
+      "span_id": "C0122-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "it checks whether the relation... matches any already existent relation... or... possible relations for the classes (and superclasses) of the two instances in the domain ontology.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.2 Identifying linguistic triples",
+      "span_id": "C0122-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The linguistic component uses... tokenizer, sentence splitter, part-of-speech tagger, morphological analyzer and VP chunker.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.4 Identifying new relations",
+      "span_id": "C0122-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "we are also interested... in the form of new types of relations for known or new entities.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3 A hybrid approach for relation extraction",
+      "span_id": "C0122-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "Ontology learning: new relations between existent concepts are identified, and can be used as a first step to extend an existent ontology.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3.1 Context and resources",
+      "span_id": "C0122-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The input to our experiments consists of electronic Newsletter Texts. These are short texts describing news... related to members of a research group: projects, publications, events, awards, etc.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.1 Context and resources",
+      "span_id": "C0122-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "These are short texts describing news...",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.2 Identifying linguistic triples",
+      "span_id": "C0122-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "the intermediate representation... consists of triples of the type: <noun_phrase, verbal_expression, noun_phrase>.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Applying RSS to map entities and relations",
+      "span_id": "C0122-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "If the matching attempt results in Case (1) with only one conceptual relation, then the triple can be formalized into a semantic annotation.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.6 Example of extracted relations",
+      "span_id": "C0122-D-P007-PICTURE-0002",
+      "page": 7,
+      "excerpt": "(def-instance Enrico-Motta kmi-academic-staff-member ((works-in knowledge-media-institute) (award-from european-commission) (award-for NeOn) ...))",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0122-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "pipeline method involving a parser, part-of-speech tagger, named entity recognition system, pattern-based classification and word sense disambiguation models",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Strategies for mapping terms",
+      "span_id": "C0122-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "A hybrid scheme combining three metrics is used: jaro-Winkler, jlevelDistance a wlevelDistance.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.5 Disambiguating relations",
+      "span_id": "C0122-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "we choose one relation by using the word sense disambiguation (WSD) system SenseLearner.",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.1 Context and resources",
+      "span_id": "C0122-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The input to our experiments consists of electronic Newsletter Texts.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.5 Disambiguating relations",
+      "span_id": "C0122-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "two default models for verbs, which were trained on a corpus containing 200,000 content words of journalistic texts tagged with their WordNet senses.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4 Conclusions and future work",
+      "span_id": "C0122-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "We will then carry experiments with our corpus of newsletters in order to evaluate the approach.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "3.4 Identifying new relations",
+      "span_id": "C0122-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "A threshold of 0.90 for this score was used here to classify two patterns as similar.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-19-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4 Conclusions and future work",
+      "span_id": "C0122-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "Currently we are concluding the integration... We will then carry experiments with our corpus of newsletters... Subsequently, we will incorporate the architecture to a semantic web portal and accomplish an extrinsic evaluation.",
+      "confidence": "medium"
+    },
+    "main_results-20-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4 Conclusions and future work",
+      "span_id": "C0122-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "We will then carry experiments with our corpus of newsletters in order to evaluate the approach.",
+      "confidence": "medium"
+    },
+    "main_results-20-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "3.6 Example of extracted relations",
+      "span_id": "C0122-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The mapped relation “works-in”... already existed in the KB. The new relations... are the ones referring to the award received from the “European Commission”... for three projects: “NeOn”, “XMEDIA”, and “OK”.",
+      "confidence": "medium"
+    },
+    "main_results-20-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "3.4 Identifying new relations",
+      "span_id": "C0122-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "A threshold of 0.90 for this score was used here to classify two patterns as similar.",
+      "confidence": "medium"
+    },
+    "strengths-21-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3 A hybrid approach for relation extraction",
+      "span_id": "C0122-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "It employs knowledge-based and (supervised and unsupervised) corpus-based techniques.",
+      "confidence": "medium"
+    },
+    "strengths-21-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.2 Identifying linguistic triples",
+      "span_id": "C0122-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "This allows capturing some implicit relations, such as indirect objects and long distance dependence relations.",
+      "confidence": "medium"
+    },
+    "strengths-21-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Applying RSS to map entities and relations",
+      "span_id": "C0122-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "If the matching attempt results in Case (1) with only one conceptual relation, then the triple can be formalized into a semantic annotation.",
+      "confidence": "medium"
+    },
+    "weaknesses-22-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.2 Identifying linguistic triples",
+      "span_id": "C0122-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Jape patterns are based on shallow syntactic information only, and therefore they are not able to capture certain potentially relevant triples.",
+      "confidence": "medium"
+    },
+    "weaknesses-22-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.3 Identifying entities and relations",
+      "span_id": "C0122-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "if ESpotter++ is not able to identify the types of the entities, the process is aborted and no annotation is produced.",
+      "confidence": "medium"
+    },
+    "weaknesses-22-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4 Conclusions and future work",
+      "span_id": "C0122-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "We will then carry experiments with our corpus of newsletters in order to evaluate the approach.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-23-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "3.2 Identifying linguistic triples",
+      "span_id": "C0122-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Jape patterns are based on shallow syntactic information only... [and] are not able to capture certain potentially relevant triples.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-23-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "3.4 Identifying new relations",
+      "span_id": "C0122-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "The pattern matching strategy has proved to be an efficient way to extract semantic relations, but in general has the drawback of requiring the possible relations to be previously defined.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-23-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "3.5 Disambiguating relations",
+      "span_id": "C0122-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "there is not such a corpus for our domain, we use one of the default training models.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4 Conclusions and future work",
+      "span_id": "C0122-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "Currently we are concluding the integration... We will then carry experiments... Subsequently, we will incorporate the architecture to a semantic web portal and accomplish an extrinsic evaluation.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "3 A hybrid approach for relation extraction",
+      "span_id": "C0122-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "A subsequent step to lift relations between instances to an adequate level of abstraction may be necessary.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.5 Disambiguating relations",
+      "span_id": "C0122-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "The ambiguity arising when more than one possible relation exists for a pair of entities is a problem neglected in most of the current work on relation extraction.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "3 A hybrid approach for relation extraction",
+      "span_id": "C0122-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "A subsequent step to lift relations between instances to an adequate level of abstraction may be necessary.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4 Conclusions and future work",
+      "span_id": "C0122-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "We will then carry experiments with our corpus of newsletters in order to evaluate the approach.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-26-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "3.1 Context and resources",
+      "span_id": "C0122-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The input to our experiments consists of electronic Newsletter Texts... http://news.kmi.open.ac.uk/kmiplanet/",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-26-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "4 Conclusions and future work",
+      "span_id": "C0122-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "Currently we are concluding the integration of the several modules composing our architecture.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Automatically identify semantic relations between pairs of known or new entities in raw text and convert them into semantic annotations; relations may already exist in the knowledge base, be permitted by the domain ontology, or be previously unpredicted. The stated applications are semantic-Web metadata enrichment, ontology population, and ontology learning.",
+  "methodology": {
+    "primary_family": "Linguistic and dependency-based extraction",
+    "secondary_families": [
+      "Rule-based NLP",
+      "Classical machine learning",
+      "Ontology-constrained and schema-guided methods",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "weakly_supervised",
+    "description": "Execution order: (1) GATE-based tokenization, sentence splitting, POS tagging, morphological analysis, VP chunking, lemmatization, and JAPE grammar identify shallow linguistic triples; Minipar complements these with functional/dependency relations and both are normalized as <noun phrase, verbal expression, noun phrase>. (2) RSS attempts exact and string-similarity entity-to-KB-instance mappings, preferring a substring match when multiple candidates remain; it maps verbs to KB/ontology relations using exact matching, string similarity, an Aqualog-derived mapping lexicon, and WordNet synonyms. (3) For unmapped/new terms, ESpotter++ assigns ontology classes; RSS then tests possible ontology relations between classes. (4) A unique compatible relation yields a semantic annotation and adds a generalized class-relation-class pattern. (5) Multiple compatible relations invoke SenseLearner WSD; no compatible relation invokes an unsupervised WordNet-similarity pattern classifier seeded by user-derived and manually defined patterns. Newly accepted patterns are added to the pattern repository. Review-level inference: the paper describes a modular, cascaded decision procedure rather than a jointly trained extractor."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The KMi-basic-portal-ontology, based on the AKT reference ontology, constrains entity classes and allowable relations. Its instances are stored in KMi-basic-portal-kb. RSS checks existing KB relations and ontology-permitted relations between the classes/superclasses of entity instances; accepted annotations can represent existing relations, new ontology-predicted relations, or new relation patterns. New entities must be typed to generic ontology classes before relation analysis continues.",
+    "evidence": [
+      {
+        "span_id": "C0122-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "The domain Ontology used (KMi-basic-portal-ontology) was designed based on the AKT reference ontology... The instantiations of concepts in this ontology are stored in the knowledge base (KB) KMi-basic-portal-kb."
+      },
+      {
+        "span_id": "C0122-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "it checks whether the relation... matches any already existent relation... or... possible relations for the classes (and superclasses) of the two instances in the domain ontology."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing: tokenization, sentence splitting, POS tagging, morphological analysis, VP chunking, and lemmatization.",
+    "Entity and concept extraction: noun phrases in linguistic triples and ESpotter++ recognition of new entities.",
+    "Entity typing: ESpotter++ assigns generic domain-ontology classes such as person, organization, event, publication, location, project, research area, and technology.",
+    "Entity resolution and linking: exact KB lookup, string similarity, substring preference, and mappings to KB instances.",
+    "Relation and triple extraction: linguistic triples are mapped to ontology triples; new relevant relations are recognized through pattern classification.",
+    "Graph construction: formal semantic annotations create instance/relation assertions and generalized patterns.",
+    "Ontology or schema discovery: unpredicted relevant relations can be found and used as a first step toward ontology extension.",
+    "Graph updating: accepted new triples/patterns are added to the pattern repository; annotations can add new instances and relations."
+  ],
+  "input_output": {
+    "input_type": "English electronic newsletter text from the Knowledge Media Institute (KMi), containing news about research-group members, projects, publications, events, and awards.",
+    "input_granularity": "Short document/newsletter input; processing derives sentence-level linguistic triples consisting of two noun phrases and a verbal expression.",
+    "output_representation": "Semantic annotations/ontology triples connecting KB instances or new typed instances, plus generalized class-relation-class patterns. An example is a def-instance representation with relations such as works-in, award-from, and award-for."
+  },
+  "models_and_tools": [
+    "GATE: tokenizer, sentence splitter, POS tagger, morphological analyzer, VP chunker.",
+    "JAPE grammar for shallow linguistic-triple identification.",
+    "Minipar parser for functional relations, including subjects, objects, indirect objects, and long-distance dependencies.",
+    "Aqualog Relation Similarity Service (RSS) adapted for ontology-triple mapping.",
+    "ESpotter++, an extension of ESpotter named-entity recognition using gazetteers and patterns.",
+    "WordNet, used for relation synonyms and WordNet-based semantic similarity.",
+    "String similarity metrics: Jaro-Winkler, jlevelDistance, and wlevelDistance.",
+    "Aqualog user-choice mapping lexicon.",
+    "Unsupervised pattern-based classifier based on Stevenson (2004), using seed patterns and a 0.90 similarity threshold.",
+    "SenseLearner supervised word-sense disambiguation with a default verb model."
+  ],
+  "datasets": [
+    "KMi electronic Newsletter Texts corpus: English short news texts about Knowledge Media Institute members, projects, publications, events, and awards.",
+    "SenseLearner default verb models were trained on a journalistic corpus with 200,000 content words tagged with WordNet senses; this is a component-training resource, not an evaluation dataset for the proposed system."
+  ],
+  "evaluation": {
+    "metrics": [
+      "No quantitative evaluation metric, score, precision, recall, F1, accuracy, or coverage result is reported for the proposed approach; the authors state that experiments are future work.",
+      "A 0.90 WordNet-based semantic-similarity threshold is reported for classifying patterns as similar; it is a decision threshold, not an evaluation metric."
+    ],
+    "baselines": "not_reported",
+    "setting": "No completed intrinsic or extrinsic evaluation is reported. The paper presents illustrative newsletter examples. Planned evaluation comprises experiments on the newsletter corpus followed by an extrinsic evaluation after integration into a semantic-Web portal."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "No quantitative experimental results for the proposed approach are reported; evaluation is explicitly future work.",
+      "The paper illustrates output for Enrico Motta: an existing works-in relation and new award-from/award-for relations involving the European Commission and the NeOn, XMEDIA, and OK projects.",
+      "The pattern classifier uses a WordNet semantic-similarity decision threshold of 0.90; the paper does not report accuracy or other outcome statistics for that threshold."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0122-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "We will then carry experiments with our corpus of newsletters in order to evaluate the approach."
+      },
+      {
+        "span_id": "C0122-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "The mapped relation “works-in”... already existed in the KB. The new relations... are the ones referring to the award received from the “European Commission”... for three projects: “NeOn”, “XMEDIA”, and “OK”."
+      },
+      {
+        "span_id": "C0122-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "A threshold of 0.90 for this score was used here to classify two patterns as similar."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author claim: the architecture combines knowledge-based, supervised, and unsupervised corpus-based techniques to cover direct ontology mappings, new entities, ambiguity, and unpredicted relations in a fully automated annotation process.",
+      "Author claim: Minipar complements shallow JAPE patterns by enabling some implicit, indirect-object, and long-distance-dependency triples.",
+      "Review-level inference: ontology/KB constraints and a unique-relation requirement offer explicit structural control over accepted semantic annotations, rather than accepting every surface relation."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0122-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "It employs knowledge-based and (supervised and unsupervised) corpus-based techniques."
+      },
+      {
+        "span_id": "C0122-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "This allows capturing some implicit relations, such as indirect objects and long distance dependence relations."
+      },
+      {
+        "span_id": "C0122-D-P005-TEXT-0003",
+        "page": 5,
+        "excerpt": "If the matching attempt results in Case (1) with only one conceptual relation, then the triple can be formalized into a semantic annotation."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author-reported limitation: shallow JAPE patterns alone cannot capture certain potentially relevant triples.",
+      "Author-reported limitation: if ESpotter++ cannot type the entities, processing aborts and no annotation is produced.",
+      "Review-level inference: the proposed full system lacks reported empirical metrics, comparative baselines, and completed evaluation, so effectiveness and coverage claims cannot be assessed from this paper.",
+      "Review-level inference: relation discovery depends on ontology-compatible classes, WordNet, seed patterns, similarity thresholds, and a domain-specific KB, which may limit portability beyond the KMi domain."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0122-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "Jape patterns are based on shallow syntactic information only, and therefore they are not able to capture certain potentially relevant triples."
+      },
+      {
+        "span_id": "C0122-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "if ESpotter++ is not able to identify the types of the entities, the process is aborted and no annotation is produced."
+      },
+      {
+        "span_id": "C0122-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "We will then carry experiments with our corpus of newsletters in order to evaluate the approach."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "Shallow JAPE patterns cannot capture certain potentially relevant triples, motivating use of Minipar.",
+      "Pattern matching generally requires possible relations to be previously defined; the authors introduce pattern-based classification to address this.",
+      "The system cannot produce an annotation when entity types are not recognized by ESpotter++ or are outside the domain ontology.",
+      "A domain-specific sense-tagged corpus is unavailable, so the WSD component uses a default journalistic-domain model rather than a model trained for this domain."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0122-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "Jape patterns are based on shallow syntactic information only... [and] are not able to capture certain potentially relevant triples."
+      },
+      {
+        "span_id": "C0122-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "The pattern matching strategy has proved to be an efficient way to extract semantic relations, but in general has the drawback of requiring the possible relations to be previously defined."
+      },
+      {
+        "span_id": "C0122-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "there is not such a corpus for our domain, we use one of the default training models."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed: complete integration of the modules and evaluate the approach on the newsletter corpus.",
+      "Author-proposed: integrate the architecture into a semantic-Web portal and conduct extrinsic evaluation in that application.",
+      "Author-proposed: after extracting instance-level relations for ontology learning, lift them to an appropriate abstraction level.",
+      "Review-level inference: evaluate each fallback branch (RSS, ESpotter++, pattern classifier, WSD) with precision/recall/F1 and error analysis, including the impact of the 0.90 threshold and default WSD model."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0122-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "Currently we are concluding the integration... We will then carry experiments... Subsequently, we will incorporate the architecture to a semantic web portal and accomplish an extrinsic evaluation."
+      },
+      {
+        "span_id": "C0122-D-P002-TEXT-0002",
+        "page": 2,
+        "excerpt": "A subsequent step to lift relations between instances to an adequate level of abstraction may be necessary."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-reported: selecting the correct relation when several ontology-compatible relations exist remains an ambiguity problem addressed through WSD rather than evaluated here.",
+      "Author-reported: determining the appropriate abstraction level for lifting extracted instance relations to concepts remains a subsequent ontology-learning step.",
+      "Review-level inference: generalization to domains without a compatible ontology/KB, entity gazetteers, manually defined seed patterns, or a sense-tagged corpus is unresolved in this paper.",
+      "Review-level inference: the accuracy, coverage, and downstream value of the complete integrated pipeline remain unresolved because evaluation had not yet been conducted."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0122-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "The ambiguity arising when more than one possible relation exists for a pair of entities is a problem neglected in most of the current work on relation extraction."
+      },
+      {
+        "span_id": "C0122-D-P002-TEXT-0002",
+        "page": 2,
+        "excerpt": "A subsequent step to lift relations between instances to an adequate level of abstraction may be necessary."
+      },
+      {
+        "span_id": "C0122-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "We will then carry experiments with our corpus of newsletters in order to evaluate the approach."
+      }
+    ]
+  },
+  "code_and_data_availability": "No code or downloadable dataset release is reported in the paper. It identifies the newsletter input source as http://news.kmi.open.ac.uk/kmiplanet/ and names the KMi ontology/KB, but does not state an archival release, license, or implementation availability."
+}

@@ -1,0 +1,752 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0150",
+    "title": "Knowledge-Based Weak Supervision for Information Extraction of Overlapping Relations",
+    "pdf_path": "data/manual-pdfs/C0150.pdf",
+    "authors": [
+      "Raphael Hoffmann",
+      "Congle Zhang",
+      "Xiao Ling",
+      "Luke Zettlemoyer",
+      "Daniel S. Weld"
+    ],
+    "year": 2011,
+    "venue": "Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics (ACL 2011)",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The paper presents MULTIR, a knowledge-based weak-supervision, multi-instance learning approach for extracting overlapping relations. It combines sentence-level extraction with corpus-level aggregation, learns from Freebase matched to New York Times text, and reports accuracy gains and fast execution at aggregate and sentence levels.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title block",
+      "span_id": "C0150-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Raphael Hoffmann, Congle Zhang, Xiao Ling, Luke Zettlemoyer, Daniel S. Weld",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication footer",
+      "span_id": "C0150-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics ... June 19-24, 2011.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication footer",
+      "span_id": "C0150-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics, pages 541–550",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0150-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "This paper presents a novel approach for multi-instance learning with overlapping relations that combines a sentence-level extraction model with a simple, corpus-level component for aggregating the individual facts.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0150-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "multi-instance learning algorithms ... assume relations are disjoint — for example they cannot extract the pair Founded(Jobs, Apple) and CEO-of(Jobs, Apple).",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0150-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "18.3% of the weak supervision facts in Freebase that match sentences in the NY Times 2007 corpus have overlapping relations.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3 Modeling Overlapping Relations",
+      "span_id": "C0150-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "We define an undirected graphical model that allows joint reasoning about aggregate (corpus-level) and sentence-level extraction decisions.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "4 Learning",
+      "span_id": "C0150-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "leading to a Perceptron-style additive ... parameter update scheme ... adapted for our specific model.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.2 A Joint, Conditional Extraction Model",
+      "span_id": "C0150-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "a joint distribution over all of the extraction random variables ... sentence level predictions as well as global factors for aggregating these choices.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "4 Learning",
+      "span_id": "C0150-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "uses facts from a database (e.g., Freebase) as supervision for the aggregate-level variables Y^r.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3.3 Discussion",
+      "span_id": "C0150-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "This model was designed to provide a joint approach where extraction decisions are almost entirely driven by sentence-level reasoning.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "2 Weak Supervision from a Database",
+      "span_id": "C0150-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The knowledge-based weakly supervised learning problem takes as input ... a training corpus ... relation names, and ... ground facts ... As output the learner produces an extraction model.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.1–3.2 Modeling Overlapping Relations",
+      "span_id": "C0150-D-P003-PICTURE-0001",
+      "page": 3,
+      "excerpt": "There is one Boolean output variable Y^r for each relation name ... Including this set of binary random variables enables our model to extract overlapping relations.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4 Learning",
+      "span_id": "C0150-D-P004-PICTURE-0002",
+      "page": 4,
+      "excerpt": "We then compute the features for these assignments and do a simple additive update.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "5 Inference",
+      "span_id": "C0150-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "The running time is O(|R||S|). This greedy search guarantees each fact is extracted at least once and allows any additional extractions that increase the overall probability.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "4 Learning",
+      "span_id": "C0150-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "we use a procedure, relVector(e1, e2) to return a bit vector whose jth bit is one if r_j(e1, e2) ∈ Δ.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "6.1 Data Generation",
+      "span_id": "C0150-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "these phrases were matched to the names of Freebase entities ... R [is] the set of relations names used in the facts of Δ.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "6.1 Data Generation",
+      "span_id": "C0150-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "The data was first tagged with the Stanford NER system ... these phrases were matched to the names of Freebase entities.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "2 Weak Supervision from a Database",
+      "span_id": "C0150-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "The task of aggregate extraction ... should produce a set of ground facts, I, such that each fact r(e) ∈ I is expressed somewhere in the corpus.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "6.1 Data Generation",
+      "span_id": "C0150-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "define Σ to be set of NY Times sentences with two matched phrases ... Δ to be the set of Freebase facts whose arguments ... were mentioned in a sentence in Σ.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "2 Weak Supervision from a Database",
+      "span_id": "C0150-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "we restrict our attention to binary relations. Furthermore, we assume that both entity mentions appear as noun phrases in a single sentence.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.1 Random Variables",
+      "span_id": "C0150-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "Let S(e1,e2) ⊂ Σ be the set of sentences which contain mentions of both of the entities.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "2 Weak Supervision from a Database",
+      "span_id": "C0150-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Sentential extraction ... also produces a function, Γ : I → P(Σ), which identifies, for each r(e) ∈ I, the set of sentences ... that contain a mention describing r(e).",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.1 Random Variables",
+      "span_id": "C0150-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "There is one Boolean output variable Y^r for each relation name r ∈ R, which represents whether the ground fact r(e) is true.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.2 A Joint, Conditional Extraction Model",
+      "span_id": "C0150-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "We use a conditional probability model that defines a joint distribution over all of the extraction random variables.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "6.2 Features and Initialization",
+      "span_id": "C0150-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "lexical, part of speech, named entity, and dependency tree path properties ... as computed with the Malt dependency parser ... and OpenNLP POS tagger.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "7.1 Aggregate Extraction",
+      "span_id": "C0150-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "SOLO R, a reimplementation of their algorithm, which we built in Factorie.",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "6.1 Data Generation",
+      "span_id": "C0150-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We used the same data sets as Riedel et al. (2010) for weak supervision.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "6.3 Evaluation Metrics",
+      "span_id": "C0150-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "sampling a set of 1000 sentences from S^e ∪ S^F and manually labeling the correct extraction decision",
+      "confidence": "medium"
+    },
+    "datasets-17-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "7.3 Relation-Specific Performance",
+      "span_id": "C0150-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "For each r, we sample 100 sentences from both S^M and S^F and manually check accuracy.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "6.3–6.4 Evaluation Metrics",
+      "span_id": "C0150-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "we compute aggregate precision and recall by comparing Δ^e with Δ ... We then report precision and recall for each system on this set of sampled sentences.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "7.2 Sentential Extraction",
+      "span_id": "C0150-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "MULTIR reaches 72.4% precision and 51.9% recall, for an F1 score of 60.5%.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "7.1 Aggregate Extraction",
+      "span_id": "C0150-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "The systems include the original results reported by Riedel et al. (2010) ... We also compare with SOLO R, a reimplementation of their algorithm.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "7.4 Overlapping Relations",
+      "span_id": "C0150-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "Training MULTIR on this data simulates effects of conflicting supervision that can come from not modeling overlaps.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "6.2–6.3 Features and Initialization / Evaluation Metrics",
+      "span_id": "C0150-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We used T = 50 iterations, which performed best in development experiments.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "6.3 Evaluation Metrics",
+      "span_id": "C0150-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "This metric is easily computed but underestimates extraction accuracy because Freebase is incomplete.",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "7.1 Aggregate Extraction",
+      "span_id": "C0150-D-P006-PICTURE-0001",
+      "page": 6,
+      "excerpt": "extends the highest recall achieved, from 20% to 25%, with little loss in precision.",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "7.2 and 7.4",
+      "span_id": "C0150-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "MULTIR reaches 72.4% precision and 51.9% recall, for an F1 score of 60.5% ... reduction in F1 score from 60.5% to 40.3%.",
+      "confidence": "medium"
+    },
+    "main_results-21-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "7.5 Running Time",
+      "span_id": "C0150-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "our approach required approximately one minute to train and less than one second to test",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0150-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "MULTIR also produces accurate sentence-level predictions, decoding individual sentences as well as making corpus-level extractions.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "7.6 Discussion",
+      "span_id": "C0150-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "aggregating strong sentence-level evidence with a simple deterministic OR that models overlapping relations is more effective, and also enables training of a sentence extractor that runs with no aggregate information.",
+      "confidence": "medium"
+    },
+    "strengths-22-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "2 Weak Supervision from a Database",
+      "span_id": "C0150-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "Γ : I → P(Σ) ... identifies, for each r(e) ∈ I, the set of sentences ... that contain a mention describing r(e).",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "7.3 Relation-Specific Performance",
+      "span_id": "C0150-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "Precision is high for the majority of relations but recall is consistently lower.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "7.4 Overlapping Relations",
+      "span_id": "C0150-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "almost none of the administrative division matches are true ones, and we cannot accurately learn an extractor.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "2 Weak Supervision from a Database",
+      "span_id": "C0150-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "we assume that there is an oracle which can identify all entity mentions ... [but] doesn't normalize or disambiguate these mentions.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "6.3 Evaluation Metrics",
+      "span_id": "C0150-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "underestimates extraction accuracy because Freebase is incomplete and some true relations in Δ^e will be marked wrong.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "6.3 Evaluation Metrics",
+      "span_id": "C0150-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "can overestimate the actual recall, since we did not manually check the much larger set of sentences where no approach predicted extractions.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "7.3–7.4",
+      "span_id": "C0150-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "The Freebase matches are highly skewed in quantity and can be low quality for some relations.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "9 Conclusion",
+      "span_id": "C0150-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "By joining two or more Freebase tables, we can generate many more matches and learn more relations.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "9 Conclusion",
+      "span_id": "C0150-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "we would like to add type reasoning about entities and selectional preference constraints for relations.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "9 Conclusion",
+      "span_id": "C0150-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "interested in applying the overall learning approaches to other tasks ... such as coreference and named entity classification.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "9 Conclusion",
+      "span_id": "C0150-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "Our early progress suggests many interesting directions ... refine our model in order to improve precision.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "7.4 Overlapping Relations",
+      "span_id": "C0150-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "the precision increases 12 points but recall drops 26 points, for an overall reduction in F1 score from 60.5% to 40.3%.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "6.3 Evaluation Metrics",
+      "span_id": "C0150-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "only a small percentage (approximately 3%) of sentences match facts in Freebase",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "9 Conclusion",
+      "span_id": "C0150-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "The source code of our system, its output, and all data annotations are available at http://cs.uw.edu/homes/raphaelh/mr.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Learn relation extractors from a structured database and unstructured text without manually labelled sentences, while overcoming noisy heuristic database-text matches and the incorrect assumption that one entity pair can have only one relation. The target is binary relation extraction from New York Times sentences, including overlapping Freebase relations for the same entity pair.",
+  "methodology": {
+    "primary_family": "Classical machine learning",
+    "secondary_families": [
+      "Joint entity-relation extraction (including joint triple extraction)",
+      "Ontology-constrained and schema-guided methods"
+    ],
+    "system_type": "joint",
+    "supervision_setting": "weakly_supervised",
+    "description": "MULTIR groups all sentences containing an entity pair. For every candidate relation it creates a Boolean corpus-level fact variable Y^r, so multiple relations may simultaneously be true; each sentence has a latent label Z_i in the relation set plus none. Relation-sensitive lexical, POS, named-entity, and dependency-path features score sentence labels. Deterministic OR join factors require every positive aggregate fact to be expressed by at least one sentence. Weak labels are relation bit-vectors obtained from Freebase facts for matched entity pairs. Training uses online, Viterbi-approximated hidden-variable perceptron updates: compare an unconstrained best assignment with the best latent sentence assignment consistent with database labels and update their feature difference. At prediction, unconstrained sentence labels are independently selected and induce aggregate facts; label-constrained training inference is reduced to weighted edge cover and greedily approximated in O(|R|·|S|). This is relation extraction rather than joint entity-and-relation extraction: entity mentions and their matching to Freebase are preprocessing inputs."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "Freebase supplies the closed inventory of relation names R and atomic binary facts Δ used as weak aggregate labels. Its entity names are also used to match detected text phrases. The paper does not perform ontology discovery; Freebase is an external schema/knowledge-base constraint for supervision and output relation labels.",
+    "evidence": [
+      {
+        "span_id": "C0150-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "we use a procedure, relVector(e1, e2) to return a bit vector whose jth bit is one if r_j(e1, e2) ∈ Δ."
+      },
+      {
+        "span_id": "C0150-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "these phrases were matched to the names of Freebase entities ... R [is] the set of relations names used in the facts of Δ."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing",
+    "Entity and concept extraction",
+    "Entity resolution and linking",
+    "Relation and triple extraction",
+    "Graph construction"
+  ],
+  "input_output": {
+    "input_type": "Unstructured New York Times news-text sentences, preprocessed into sentences containing two phrases matched to Freebase entities; training additionally uses Freebase binary facts and relation names.",
+    "input_granularity": "Sentence-level relation mentions grouped as a bag/set of all sentences that co-mention an entity pair; the model assumes both entity mentions are noun phrases in one sentence.",
+    "output_representation": "Canonical binary ground relation facts r(e1,e2) over Freebase relation names; for sentential extraction, a mapping Γ from each extracted fact to the set of corpus sentences that express it. Multiple relation facts may share the same entity pair."
+  },
+  "models_and_tools": [
+    "MULTIR undirected conditional graphical model with deterministic OR join factors",
+    "Hidden-variable, Viterbi-approximated online structured perceptron learning",
+    "Exact weighted bipartite matching/edge-cover formulation and greedy approximate inference",
+    "Stanford NER",
+    "Malt dependency parser",
+    "OpenNLP POS tagger",
+    "Factorie (used to implement the SOLOr baseline)"
+  ],
+  "datasets": [
+    "New York Times 2005–2006 corpus for training",
+    "New York Times 2007 corpus for testing",
+    "Freebase facts and entity names for weak supervision",
+    "A manually labelled sample of 1,000 sentences from extracted/matched sentence sets for sentential evaluation",
+    "Per-relation manual samples of 100 sentences from each of the MULTIR-extracted and Freebase-matched sets for the ten most frequent relations"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Aggregate precision and recall against Freebase facts",
+      "Aggregate precision–recall curves",
+      "Manual sentential precision and recall; sentential precision–recall curve",
+      "F1 for the highest sentential recall point",
+      "Estimated relation-specific precision and recall from manually checked samples",
+      "Training and test running time"
+    ],
+    "baselines": [
+      "Riedel et al. (2010) multi-instance learning approach (its originally reported aggregate curve)",
+      "SOLOr, the authors' reimplementation of Riedel et al. (2010)",
+      "A restricted MULTIR training condition that creates a separate training example for each true relation, simulating supervision that does not model overlapping relations"
+    ],
+    "setting": "The authors follow Riedel et al. (2010) for weak-supervision data generation, features, and aggregate evaluation. They train with 50 iterations, selected in development experiments. Aggregate evaluation compares extracted relations with Freebase and is acknowledged to underestimate accuracy because the knowledge base is incomplete. Sentential performance is manually assessed on a 1,000-sentence sample; relation-specific estimates manually inspect 100 sampled sentences from each of two sets per relation. The paper notes that this sampled sentential design can overestimate recall because unpredicted sentences are not manually checked."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "MULTIR achieved competitive or higher aggregate precision over nearly all recall levels and extended maximum aggregate recall from 20% to 25% with little precision loss versus the compared Riedel approach.",
+      "At the highest reported sentential-recall point, MULTIR achieved 72.4% precision, 51.9% recall, and F1=60.5%; its sentential precision–recall curve had higher recall than SOLOr while retaining high precision.",
+      "When overlap was not modeled in the restricted training condition, average precision increased by 12 points but recall fell by 26 points and F1 fell from 60.5% to 40.3%.",
+      "MULTIR required about one minute to train and under one second to test, compared with about six hours training and four hours testing for the Riedel et al. approach on the stated NY Times splits, excluding preprocessing."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0150-D-P006-PICTURE-0001",
+        "page": 6,
+        "excerpt": "extends the highest recall achieved, from 20% to 25%, with little loss in precision."
+      },
+      {
+        "span_id": "C0150-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "MULTIR reaches 72.4% precision and 51.9% recall, for an F1 score of 60.5% ... reduction in F1 score from 60.5% to 40.3%."
+      },
+      {
+        "span_id": "C0150-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "our approach required approximately one minute to train and less than one second to test"
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author claim: Unlike the compared multi-instance model, the separate Boolean aggregate variables permit overlapping relations for one entity pair while retaining sentence-level predictions.",
+      "Experimental result: It improves recall at aggregate and sentential levels relative to the reimplemented comparator and provides a direct sentence justification for extracted facts.",
+      "Experimental result: The deterministic-OR decomposition gives markedly faster training and test time in the reported comparison.",
+      "Review-level inference: The output is especially useful for knowledge-base population because each canonical relation fact can be associated with supporting source sentences rather than only a corpus-level label."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0150-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "MULTIR also produces accurate sentence-level predictions, decoding individual sentences as well as making corpus-level extractions."
+      },
+      {
+        "span_id": "C0150-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "aggregating strong sentence-level evidence with a simple deterministic OR that models overlapping relations is more effective, and also enables training of a sentence extractor that runs with no aggregate information."
+      },
+      {
+        "span_id": "C0150-D-P002-TEXT-0003",
+        "page": 2,
+        "excerpt": "Γ : I → P(Σ) ... identifies, for each r(e) ∈ I, the set of sentences ... that contain a mention describing r(e)."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author-reported empirical observation: Relation-specific recall is consistently low and performance is best only where there are sufficiently many true weak-supervision matches.",
+      "Author-reported empirical observation: Some relation overlaps produce nearly all false weak labels; the administrative-divisions relation could not be learned accurately.",
+      "Review-level inference: The approach depends on upstream named-entity recognition and string/name matching to Freebase, while the model assumes an oracle for entity mentions and does not normalize or disambiguate them itself.",
+      "Review-level inference: The model is limited to binary relations with both entity mentions appearing as noun phrases in one sentence; it therefore does not address cross-sentence, n-ary, or event extraction in this paper."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0150-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "Precision is high for the majority of relations but recall is consistently lower."
+      },
+      {
+        "span_id": "C0150-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "almost none of the administrative division matches are true ones, and we cannot accurately learn an extractor."
+      },
+      {
+        "span_id": "C0150-D-P002-TEXT-0003",
+        "page": 2,
+        "excerpt": "we assume that there is an oracle which can identify all entity mentions ... [but] doesn't normalize or disambiguate these mentions."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "Freebase incompleteness makes aggregate evaluation against its facts underestimate true extraction accuracy.",
+      "The manual sentential evaluation can overestimate actual recall because the much larger set of sentences where no system predicted an extraction was not manually checked.",
+      "Weak supervision matches are highly skewed and can have very low quality for some relations; the administrative-divisions example cannot be accurately learned under its overlap/noise conditions."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0150-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "underestimates extraction accuracy because Freebase is incomplete and some true relations in Δ^e will be marked wrong."
+      },
+      {
+        "span_id": "C0150-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "can overestimate the actual recall, since we did not manually check the much larger set of sentences where no approach predicted extractions."
+      },
+      {
+        "span_id": "C0150-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "The Freebase matches are highly skewed in quantity and can be low quality for some relations."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed improvement: Join two or more Freebase tables to generate more matches and learn more relations.",
+      "Author-proposed improvement: Add entity type reasoning and selectional-preference constraints to improve precision.",
+      "Author-proposed extension: Apply the weak-supervision learning approach to coreference and named-entity classification.",
+      "Review-level inference: Replace the assumed oracle/string matching with a jointly evaluated entity-linking component and propagate linking uncertainty into relation extraction."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0150-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "By joining two or more Freebase tables, we can generate many more matches and learn more relations."
+      },
+      {
+        "span_id": "C0150-D-P009-TEXT-0002",
+        "page": 9,
+        "excerpt": "we would like to add type reasoning about entities and selectional preference constraints for relations."
+      },
+      {
+        "span_id": "C0150-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "interested in applying the overall learning approaches to other tasks ... such as coreference and named entity classification."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-identified: How to improve precision, expand supervision coverage by joining Freebase tables, and incorporate entity type and selectional-preference reasoning remains open.",
+      "Author-identified: Extending the weakly supervised learning framework beyond relation extraction to coreference and named-entity classification remains future work.",
+      "Review-level inference: Robust estimation when database facts are incomplete and when overlapping relation labels are strongly confounded remains unresolved; the paper's aggregate metric and administrative-divisions result expose both issues.",
+      "Review-level inference: Generalization beyond within-sentence binary relations and evaluation with complete gold standards are not resolved by this study."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0150-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "Our early progress suggests many interesting directions ... refine our model in order to improve precision."
+      },
+      {
+        "span_id": "C0150-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "the precision increases 12 points but recall drops 26 points, for an overall reduction in F1 score from 60.5% to 40.3%."
+      },
+      {
+        "span_id": "C0150-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "only a small percentage (approximately 3%) of sentences match facts in Freebase"
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that source code, system output, and all data annotations are available at http://cs.uw.edu/homes/raphaelh/mr. Current accessibility was not checked."
+}

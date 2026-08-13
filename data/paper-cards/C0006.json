@@ -1,0 +1,774 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0006",
+    "title": "OpenIE-based Approach for Knowledge Graph construction from text",
+    "pdf_path": "data/batches/batch-02/C0006.pdf",
+    "authors": [
+      "Jose L. Martinez-Rodriguez",
+      "Ivan Lopez-Arevalo",
+      "Ana B. Rios-Alvarado"
+    ],
+    "year": 2018,
+    "venue": "Expert Systems With Applications (preprint submitted)",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The paper proposes construction of knowledge graphs from English plain text using binary OpenIE relations. It combines named-entity extraction and linking, grammatical noun-phrase association, semantic-role analysis, predicate-sense linking, and n-ary RDF representation to create coherent RDF facts.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0006-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Jose L. Martinez-Rodriguez, Ivan Lopez-Arevalo, Ana B. Rios-Alvarado",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0006-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Preprint submitted to Expert Systems With Applications ... June 18, 2018",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0006-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Preprint submitted to Expert Systems With Applications",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0006-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "we propose an approach to generate KGs using binary relations produced by an OpenIE approach ... strategies for favoring the extraction and linking of named entities ... association with grammatical units ... RDF triples",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0006-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "REL approaches based on OpenIE present some issues regarding the recognition of entities, properties and the representation of binary relations.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0006-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "we propose an approach based on OpenIE relations for the construction of KGs from plain text in English.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3. Proposed method",
+      "span_id": "C0006-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "we integrate SRL for the detection of predicates, arguments and the roles produced by relation mentions ... leveraged in the RDF representation.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3.2. Preprocessing",
+      "span_id": "C0006-D-P007-PICTURE-0002",
+      "page": 7,
+      "excerpt": "The workflow contains preprocessing, EEL, NP-Assoc, RE, Automatic SRL, Order & Selection, RDF preparation, and storing.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.3. Entity Extraction and Linking",
+      "span_id": "C0006-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "we use a natural approach to resolve such overlaps ... majority voting scheme ... duplicate entities are removed from the final list.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.7.2. Property selection",
+      "span_id": "C0006-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "The Premon KG provides resources associated to SRL predicate models and arguments ... a SPARQL query ... find the resource whose label is denoted by that sense.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3. Proposed method",
+      "span_id": "C0006-D-P007-PICTURE-0001",
+      "page": 7,
+      "excerpt": "Overview of the proposed method: Acquisition, Plain text, Preprocessing, EEL/RE, NP-Assoc/Automatic SRL, Order & Selection, RDF preparation, Storing.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0006-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "OpenIE-based approaches obtain propositions ... with no restriction of a domain and without requiring training data.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3. Proposed method",
+      "span_id": "C0006-D-P007-PICTURE-0001",
+      "page": 7,
+      "excerpt": "Figure 3 gives the workflow from Web data through acquisition, preprocessing, EEL, RE, NP-Assoc, SRL, RDF preparation and storing.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.3. Entity Extraction and Linking",
+      "span_id": "C0006-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "The strategy integrates output from EEL systems, resolves overlaps, applies majority voting, and removes duplicates.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.8. RDF preparation",
+      "span_id": "C0006-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "results are integrated to produce RDF triples organized into a named graph; the serialization format is TriG.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.7.2. Property selection",
+      "span_id": "C0006-D-P012-TEXT-0001",
+      "page": 12,
+      "excerpt": "The Premon KG provides resources associated to SRL predicate models and arguments ... every resource is identified by an IRI.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.8. RDF preparation",
+      "span_id": "C0006-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "The RDF example declares pmn, rdf, dbr, dcterms, nif, rdfs and event namespaces; an event is typed by pmn:pb215-diagnose.01 and linked with gold:agent and gold:patient.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.2. Preprocessing",
+      "span_id": "C0006-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "sentence segmentation, Part-Of-Speech tagging, and syntax tree parsing are applied over plain text; filtering excludes unlikely sentences.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.3. Entity Extraction and Linking",
+      "span_id": "C0006-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "The EEL strategy invokes systems, integrates their outputs, filters overlaps by maximal match and voting, and removes duplicates.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.8. RDF preparation",
+      "span_id": "C0006-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "the final step is to put all data together for creating RDF triples in a persistent format.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "4. Implementation details—Acquisition",
+      "span_id": "C0006-D-P014-TEXT-0001",
+      "page": 14,
+      "excerpt": "documents extracted from webpages provided by IT news ... Webpages were processed by the Jericho parser for cleaning and obtaining the plain text.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "4. Implementation details—EEL",
+      "span_id": "C0006-D-P014-TEXT-0001",
+      "page": 14,
+      "excerpt": "we use as input parameters the segmented sentences as input text (one for request).",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "5.1. Dataset",
+      "span_id": "C0006-D-P015-TEXT-0002",
+      "page": 15,
+      "excerpt": "a sample of 605 IT news webpages ... EEL and RE steps with 100 randomly selected sentences ... representation ... complete set of downloaded webpages.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.8. RDF preparation",
+      "span_id": "C0006-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "The example represents an event typed pmn:pb215-diagnose.01, gold:agent and gold:patient, dcterms:isPartOf entity links, nif:isString source sentence, and rdfs:comment relation.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "4. Implementation details—RDF preparation",
+      "span_id": "C0006-D-P015-TEXT-0002",
+      "page": 15,
+      "excerpt": "an event consists of a predicate and its arguments (Agent and Patient), which are represented by an n-ary reification model using the TriG format.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4. Implementation details—Acquisition and Preprocessing",
+      "span_id": "C0006-D-P014-TEXT-0001",
+      "page": 14,
+      "excerpt": "Webpages were processed by the Jericho parser ... NLP tasks ... performed through the Stanford CoreNLP tool; using data models for English.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4. Implementation details—EEL",
+      "span_id": "C0006-D-P014-TEXT-0002",
+      "page": 14,
+      "excerpt": "three EEL systems were selected ... DBpedia Spotlight, Babelfy, and TagMe ... confidence values ... 0.35, 0.01, and 0.06.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4. Implementation details—RE, Automatic SRL, Order & Selection",
+      "span_id": "C0006-D-P015-TEXT-0003",
+      "page": 15,
+      "excerpt": "ClausIE using default parameters ... Mate-Tools ... CoNLL2009 models for English ... implemented a Jena module ... SPARQL 1.1 syntax.",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4. Implementation details—Acquisition",
+      "span_id": "C0006-D-P014-TEXT-0001",
+      "page": 14,
+      "excerpt": "Nine RSS providers ... A total of 605 webpage links were collected ... a total of 605 documents were downloaded ... 12015 segmented sentences.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "5.1. Dataset",
+      "span_id": "C0006-D-P015-TEXT-0002",
+      "page": 15,
+      "excerpt": "a sample of 605 IT news webpages ... EEL and RE steps with 100 randomly selected sentences ... representation ... complete set.",
+      "confidence": "medium"
+    },
+    "datasets-17-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "5.3. EEL evaluation",
+      "span_id": "C0006-D-P016-TEXT-0003",
+      "page": 16,
+      "excerpt": "the testing sample has in average 24.27 words and 614 named entities linked to DBpedia.",
+      "confidence": "medium"
+    },
+    "datasets-17-04": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "5.5.2. Qualitative analysis",
+      "span_id": "C0006-D-P018-TEXT-0004",
+      "page": 18,
+      "excerpt": "evaluation was performed by 4 students ... every judge evaluated 50 events (consisting of four triples each).",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "5.2. Metrics",
+      "span_id": "C0006-D-P015-TEXT-0001",
+      "page": 15,
+      "excerpt": "standard IE metrics (e.g., precision, recall, F–measure) were applied and ... a Kappa-based metric for measuring the inter-rater agreement.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "5.5.1 and 5.5.2",
+      "span_id": "C0006-D-P018-TABLE-0002",
+      "page": 18,
+      "excerpt": "Table 5 reports RDF counts; Table 7 reports overall agreement and Kappa for subject, predicate, object, relation, and triple.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "5.3. EEL evaluation",
+      "span_id": "C0006-D-P016-TABLE-0001",
+      "page": 16,
+      "excerpt": "Table 3 compares Babelfy, Spotlight, Tagme, and Our system.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "5.4. RE evaluation",
+      "span_id": "C0006-D-P017-TABLE-0002",
+      "page": 17,
+      "excerpt": "Table 4 compares Stanford OIE, OIE4, and ClausIE.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-03": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "5.5.2 Qualitative analysis",
+      "span_id": "C0006-D-P018-TABLE-0003",
+      "page": 18,
+      "excerpt": "Comparison of the whole approach against a baseline version (without association of NPs and entities).",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "5. Evaluation",
+      "span_id": "C0006-D-P015-TEXT-0001",
+      "page": 15,
+      "excerpt": "we follow an a posteriori assessment ... output is finally verified by human judges ... tests ... 8GB RAM, Processor Intel core i5 (2.7Ghz), and OS X Yosemite.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "5.3. EEL evaluation",
+      "span_id": "C0006-D-P016-TEXT-0002",
+      "page": 16,
+      "excerpt": "a successful extraction case is when both a mention of an entity and its identifier from a KG are correctly identified (exact matching).",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "5.5.2 Qualitative analysis",
+      "span_id": "C0006-D-P018-TEXT-0003",
+      "page": 18,
+      "excerpt": "4 students ... every judge evaluated 50 events (consisting of four triples each) ... Agent, predicate, Patient, and the semantic relation.",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "5.3. EEL evaluation",
+      "span_id": "C0006-D-P016-TABLE-0001",
+      "page": 16,
+      "excerpt": "Our system: P 0.8139, R 0.9643, F1 0.8827, # Ent. 731; Tagme F1 0.8305; Spotlight P 0.8560 and F1 0.6566.",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "5.4. RE evaluation",
+      "span_id": "C0006-D-P017-TABLE-0002",
+      "page": 17,
+      "excerpt": "Stanford OIE: 0.255/0.467/0.330; OIE4: 0.461/0.782/0.580; ClausIE: 0.638/0.620/0.628.",
+      "confidence": "medium"
+    },
+    "main_results-21-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "5.5 RDF representation evaluation",
+      "span_id": "C0006-D-P018-TABLE-0003",
+      "page": 18,
+      "excerpt": "Table 5 reports 12015 sentences, 103401 EEL, 41190 RE, 12686 RE-represented, 89486 RDF statements; Table 6 median triple precision is 0.51; Table 8 baseline triple precision is 0.26.",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.3. EEL evaluation—Discussion",
+      "span_id": "C0006-D-P016-TABLE-0001",
+      "page": 16,
+      "excerpt": "These results demonstrate that our strategy provides better performance in terms of the F1 measure.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.5.2 Qualitative analysis—Discussion",
+      "span_id": "C0006-D-P018-TABLE-0002",
+      "page": 18,
+      "excerpt": "the association of NPs and entities helps to preserve the coherence at the representation of RDF triples.",
+      "confidence": "medium"
+    },
+    "strengths-22-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.8. RDF preparation",
+      "span_id": "C0006-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "The representation retains agent, patient, entity memberships, the source sentence, and the OpenIE relation comment.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.5.1 Quantitative analysis—Discussion",
+      "span_id": "C0006-D-P017-TEXT-0001",
+      "page": 17,
+      "excerpt": "only those relations containing resources (named entities) in subject and object are represented in RDF ... literal values ... are not within the focus of this work.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Table 5",
+      "span_id": "C0006-D-P018-TABLE-0002",
+      "page": 18,
+      "excerpt": "RE is 41190 while RE-represented is 12686.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.7.1 Entity selection",
+      "span_id": "C0006-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "when none of the roles were identified ... it is assumed that the subject performs the role of Agent and the object as Patient.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "5. Evaluation",
+      "span_id": "C0006-D-P015-TEXT-0001",
+      "page": 15,
+      "excerpt": "there are no standard criteria for assessing a particular data representation output ... lack of gold standard datasets.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4. Implementation details—Acquisition",
+      "span_id": "C0006-D-P014-TEXT-0002",
+      "page": 14,
+      "excerpt": "the input text of the proposed method must be properly written in terms of correct and coherent ideas.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "5.5.2 Qualitative analysis",
+      "span_id": "C0006-D-P019-TEXT-0003",
+      "page": 19,
+      "excerpt": "other aspects influencing agreement are Text-based, System-based, and Human-based.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "6. Conclusions—Future work",
+      "span_id": "C0006-D-P019-TEXT-0001",
+      "page": 19,
+      "excerpt": "support applications in areas such as information retrieval, information extraction, and question answering ... intermediate structures for the construction of direct (non-reified) binary relations ... evaluate ... different domains and types of documents.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "5.5.1 Quantitative analysis—Discussion",
+      "span_id": "C0006-D-P017-TEXT-0002",
+      "page": 17,
+      "excerpt": "only those relations containing resources (named entities) in subject and object are represented in RDF.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.5.2 Qualitative analysis—Scenario",
+      "span_id": "C0006-D-P017-TEXT-0001",
+      "page": 17,
+      "excerpt": "there are no standard criteria defined for such a manual evaluation.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.5.2 Qualitative analysis",
+      "span_id": "C0006-D-P018-TABLE-0002",
+      "page": 18,
+      "excerpt": "Kappa: Subject 0.4533, Object 0.3133, Triple 0.3800.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4. Implementation details—Acquisition",
+      "span_id": "C0006-D-P014-TEXT-0003",
+      "page": 14,
+      "excerpt": "more domains and types of documents (not only webpage contents) are within the interest of our future work.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Transform unstructured English text into a Knowledge Graph/RDF representation while addressing sparse or inconsistent entity linking, choosing subject/object entities in OpenIE relations, linking relation phrases to identifiers, and representing relation context that a single RDF triple would omit.",
+  "methodology": {
+    "primary_family": "Linguistic and dependency-based extraction",
+    "secondary_families": [
+      "Rule-based NLP",
+      "Ontology-constrained and schema-guided methods",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "not_reported",
+    "description": "Execution-order pipeline: (1) acquire IT-news webpages and clean them to plain text; (2) Stanford CoreNLP performs sentence segmentation, POS tagging, constituency parsing, and filters sentences to 5–25 words with an NP–verb–NP pattern; (3) invoke DBpedia Spotlight, Babelfy, and TagMe for entity mentions and DBpedia-linked IRIs, then resolve overlaps by maximal match, choose conflicting links by majority vote, and deduplicate; (4) associate selected entities with constituency-tree noun phrases by surface-form matching; (5) extract binary relations using ClausIE; (6) run Mate-Tools SRL to match the OpenIE predicate to PropBank senses and identify Agent/A0 and Patient/A1; (7) when SRL is partial or absent, use rule-based nearest-entity and subject/object fallbacks; (8) query Premon by predicate sense to obtain an IRI; (9) create event-centred n-ary RDF/TriG named graphs with agent, patient, NP memberships, sentence provenance, and relation comment; optionally store them in a graph store."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "Uses Semantic Web RDF and named graphs; DBpedia supplies entity IRIs; PropBank predicate senses are mapped to Premon IRIs through SPARQL; Gold vocabulary represents agent/patient roles, dcterms:isPartOf represents entity membership in noun-phrase resources, and NIF preserves sentence context. It does not map predicates to a domain ontology property; it models them as event types in an n-ary representation.",
+    "evidence": [
+      {
+        "span_id": "C0006-D-P012-TEXT-0001",
+        "page": 12,
+        "excerpt": "The Premon KG provides resources associated to SRL predicate models and arguments ... every resource is identified by an IRI."
+      },
+      {
+        "span_id": "C0006-D-P013-TEXT-0002",
+        "page": 13,
+        "excerpt": "The RDF example declares pmn, rdf, dbr, dcterms, nif, rdfs and event namespaces; an event is typed by pmn:pb215-diagnose.01 and linked with gold:agent and gold:patient."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing",
+    "Entity and concept extraction",
+    "Entity resolution and linking",
+    "Relation and triple extraction",
+    "Graph construction",
+    "Knowledge fusion and deduplication"
+  ],
+  "input_output": {
+    "input_type": "English plain text extracted from IT-news webpages (with webpage HTML cleaned before processing).",
+    "input_granularity": "Web documents are processed as segmented sentences; entity-linking and relation-extraction evaluations use 100 randomly selected sentences, while RDF generation uses all sentences from 605 documents.",
+    "output_representation": "Event-centred n-ary RDF triples in TriG, organized in named graphs. Each event is typed with a Premon/PropBank predicate-sense IRI, linked to agent and patient NP resources, whose constituent DBpedia entities use dcterms:isPartOf; the graph retains the source sentence using NIF and relation text as rdfs:comment."
+  },
+  "models_and_tools": [
+    "Java application",
+    "Jericho parser",
+    "Stanford CoreNLP English models",
+    "DBpedia Spotlight (confidence 0.35)",
+    "Babelfy (confidence 0.01)",
+    "TagMe (confidence 0.06)",
+    "ClausIE with default parameters and CC option",
+    "Mate-Tools/MatePlus with English CoNLL2009 models",
+    "PropBank",
+    "Premon KG SPARQL endpoint",
+    "Apache Jena with SPARQL 1.1",
+    "TriG",
+    "OpenLink Virtuoso (optional storage example)"
+  ],
+  "datasets": [
+    "Author-collected IT-news webpage corpus: 605 webpages from nine RSS providers, 12,015 segmented sentences after preprocessing.",
+    "EEL/RE test sample: 100 randomly selected IT-news sentences; EEL sample averaged 24.27 words and had 614 named entities linked to DBpedia.",
+    "RDF quantitative evaluation: complete 605-document corpus / 12,015 sentences.",
+    "RDF qualitative evaluation: 50 events, each containing four triples, judged by four IT-engineering-college students."
+  ],
+  "evaluation": {
+    "metrics": [
+      "Precision",
+      "Recall",
+      "F1 (harmonic mean with beta=1)",
+      "Free-marginal multi-rater Kappa",
+      "Overall inter-rater agreement",
+      "RDF counts: entities, extracted relations, RDF-represented relations/events, RDF statements"
+    ],
+    "baselines": [
+      "EEL: Babelfy, DBpedia Spotlight, and TagMe individual systems.",
+      "OpenIE relation extraction: Stanford OIE and OIE4, compared with ClausIE.",
+      "RDF coherence: ablated version of the authors' system without noun-phrase/entity association."
+    ],
+    "setting": "EEL and relation extraction were manually evaluated by a human annotator against exact entity mention-plus-IRI matches and relation correctness on separately sampled 100-sentence subsets. The full corpus was used for RDF production statistics. For RDF quality, four IT-college students with at least intermediate English and familiarity with RDF roles judged 50 sampled events each; each event comprised four triples and was assessed for agent/subject, predicate, patient/object, semantic relation, and whole triple. Reported machine: 8GB RAM, Intel Core i5 2.7GHz, OS X Yosemite."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "On 100 IT-news sentences, the EEL integration obtained P=0.8139, R=0.9643, F1=0.8827 and 731 entities; TagMe obtained F1=0.8305, Spotlight F1=0.6566, and Babelfy F1=0.6242. Spotlight had the highest precision (0.8560) but lowest recall (0.5325).",
+      "On 100 IT-news sentences, ClausIE obtained P=0.638, R=0.620, F1=0.628 for relation extraction, versus OIE4 F1=0.580 and Stanford OIE F1=0.330.",
+      "Across 12,015 sentences, the pipeline produced 103,401 linked entities, 41,190 extracted relations, 12,686 RDF-represented events/relations, and 89,486 RDF statements.",
+      "For 50 manually judged RDF events, median precision was 0.72 for subject/agent, 0.89 predicate, 0.64 object/patient, 0.82 semantic relation, and 0.51 complete triple. The NP-association ablation changed these to 0.50, 0.90, 0.46, 0.80, and 0.26, respectively.",
+      "Inter-rater Kappa was 0.4533 subject, 0.6466 predicate, 0.3133 object, 0.7000 relation, and 0.3800 triple."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0006-D-P016-TABLE-0001",
+        "page": 16,
+        "excerpt": "Our system: P 0.8139, R 0.9643, F1 0.8827, # Ent. 731; Tagme F1 0.8305; Spotlight P 0.8560 and F1 0.6566."
+      },
+      {
+        "span_id": "C0006-D-P017-TABLE-0002",
+        "page": 17,
+        "excerpt": "Stanford OIE: 0.255/0.467/0.330; OIE4: 0.461/0.782/0.580; ClausIE: 0.638/0.620/0.628."
+      },
+      {
+        "span_id": "C0006-D-P018-TABLE-0003",
+        "page": 18,
+        "excerpt": "Table 5 reports 12015 sentences, 103401 EEL, 41190 RE, 12686 RE-represented, 89486 RDF statements; Table 6 median triple precision is 0.51; Table 8 baseline triple precision is 0.26."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author-reported: combining EEL systems improves F1 relative to each individual evaluated EEL tool (0.8827 versus the best individual 0.8305).",
+      "Author-reported: noun-phrase/entity association improves judged RDF subject, object, relation, and complete-triple precision over the no-NP-association ablation.",
+      "Review-level inference: the event-centred n-ary representation retains multiple linked entities, semantic roles, original sentence context, and relation text, making provenance and contextual qualifiers more explicit than a bare binary triple.",
+      "Review-level inference: the modular pipeline permits replacement of the chosen OpenIE, EEL, SRL, or storage tool without changing the stated RDF-preparation logic."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0006-D-P016-TABLE-0001",
+        "page": 16,
+        "excerpt": "These results demonstrate that our strategy provides better performance in terms of the F1 measure."
+      },
+      {
+        "span_id": "C0006-D-P018-TABLE-0002",
+        "page": 18,
+        "excerpt": "the association of NPs and entities helps to preserve the coherence at the representation of RDF triples."
+      },
+      {
+        "span_id": "C0006-D-P013-TEXT-0003",
+        "page": 13,
+        "excerpt": "The representation retains agent, patient, entity memberships, the source sentence, and the OpenIE relation comment."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author-reported: only relations whose subject and object contain named-entity resources are represented; literal-valued RDF objects are outside the method's focus.",
+      "Author-reported: less than one third of extracted relations were represented in RDF on the full corpus (12,686 of 41,190), due to this entity-resource requirement.",
+      "Review-level inference: end-to-end quality is bounded by dependent external tools (entity linking, ClausIE, SRL, and predicate-sense mapping), so an upstream extraction or linking error can propagate into the RDF graph.",
+      "Review-level inference: heuristic fallbacks that assign nearest entities and assume subject=Agent/object=Patient when SRL is incomplete can be unreliable for syntactically complex, passive, or semantically atypical sentences.",
+      "Review-level inference: evaluation is limited to author-collected IT-news text and small manual samples; its results do not establish generality to other domains, genres, or noisy text."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0006-D-P017-TEXT-0001",
+        "page": 17,
+        "excerpt": "only those relations containing resources (named entities) in subject and object are represented in RDF ... literal values ... are not within the focus of this work."
+      },
+      {
+        "span_id": "C0006-D-P018-TABLE-0002",
+        "page": 18,
+        "excerpt": "RE is 41190 while RE-represented is 12686."
+      },
+      {
+        "span_id": "C0006-D-P011-TEXT-0003",
+        "page": 11,
+        "excerpt": "when none of the roles were identified ... it is assumed that the subject performs the role of Agent and the object as Patient."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "No standard criteria or gold-standard dataset is available for evaluating Relation Extraction and Linking / RDF representation; the authors therefore use an a posteriori human assessment.",
+      "The method focuses on relations involving named-entity resources in both subject and object, not literal object values.",
+      "The pipeline requires input text that is properly written with correct and coherent ideas; IT-news webpages are selected partly for this quality.",
+      "Human judgments can be affected by text ambiguity, system extraction errors, and evaluators' unfamiliarity with the concepts."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0006-D-P015-TEXT-0001",
+        "page": 15,
+        "excerpt": "there are no standard criteria for assessing a particular data representation output ... lack of gold standard datasets."
+      },
+      {
+        "span_id": "C0006-D-P014-TEXT-0002",
+        "page": 14,
+        "excerpt": "the input text of the proposed method must be properly written in terms of correct and coherent ideas."
+      },
+      {
+        "span_id": "C0006-D-P019-TEXT-0003",
+        "page": 19,
+        "excerpt": "other aspects influencing agreement are Text-based, System-based, and Human-based."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed: use the represented information for information retrieval, information extraction, and question answering.",
+      "Author-proposed: use the representation as intermediate structure for construction of direct, non-reified binary relations.",
+      "Author-proposed: evaluate across different domains and document types beyond webpage content.",
+      "Review-level inference: add an explicit literal and attribute extraction path so information need not be discarded when one relation argument lacks a linked named-entity resource.",
+      "Review-level inference: replace or augment nearest-entity role fallbacks with stronger semantic constraints and evaluate errors by pipeline stage."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0006-D-P019-TEXT-0001",
+        "page": 19,
+        "excerpt": "support applications in areas such as information retrieval, information extraction, and question answering ... intermediate structures for the construction of direct (non-reified) binary relations ... evaluate ... different domains and types of documents."
+      },
+      {
+        "span_id": "C0006-D-P017-TEXT-0002",
+        "page": 17,
+        "excerpt": "only those relations containing resources (named entities) in subject and object are represented in RDF."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-reported: REL/RDF quality evaluation lacks gold standards and standard manual-evaluation criteria.",
+      "Author-reported: differences in human judgment remain substantial, particularly for subject/object and complete-triple correctness (Kappa 0.4533, 0.3133, and 0.3800 respectively).",
+      "Review-level inference: robust graph construction from noisy, informal, or non-webpage text remains unresolved because the evaluated method deliberately selects well-written IT-news content and filters sentence structures.",
+      "Review-level inference: open-domain predicate alignment remains unresolved when a PropBank/Premon event type is not the same as an application-specific ontology property; this paper models the predicate as an event type rather than demonstrating domain-property alignment."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0006-D-P017-TEXT-0001",
+        "page": 17,
+        "excerpt": "there are no standard criteria defined for such a manual evaluation."
+      },
+      {
+        "span_id": "C0006-D-P018-TABLE-0002",
+        "page": 18,
+        "excerpt": "Kappa: Subject 0.4533, Object 0.3133, Triple 0.3800."
+      },
+      {
+        "span_id": "C0006-D-P014-TEXT-0003",
+        "page": 14,
+        "excerpt": "more domains and types of documents (not only webpage contents) are within the interest of our future work."
+      }
+    ]
+  },
+  "code_and_data_availability": "not_reported"
+}

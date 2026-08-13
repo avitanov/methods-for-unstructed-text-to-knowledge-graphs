@@ -1,0 +1,841 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0140",
+    "title": "DocOIE: A Document-level Context-Aware Dataset for OpenIE",
+    "pdf_path": "data/pdfs/C0140.pdf",
+    "authors": [
+      "Kuicai Dong",
+      "Yilin Zhao",
+      "Aixin Sun",
+      "Jung-Jae Kim",
+      "Xiaoli Li"
+    ],
+    "year": 2021,
+    "venue": "Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021",
+    "identifier": {
+      "status": "reported",
+      "value": "ACL-IJCNLP 2021, pages 2377–2389",
+      "evidence": [
+        {
+          "span_id": "C0140-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "pages 2377–2389"
+        }
+      ]
+    },
+    "abstract": "Open Information Extraction (OpenIE) aims to extract structured relational tuples (subject, relation, object) from sentences. Existing solutions perform extraction at sentence level, without referring to any additional contextual information. The paper introduces DocOIE, an expert-annotated document-level context-aware OpenIE dataset containing 800 sentences from 80 documents in healthcare and transportation domains, and proposes DocIE, a document-level context-aware OpenIE model. DocIE uses pre-trained BERT to encode source sentences with document context, segment tags to distinguish source and context, and additional transformer encoder layers for the source sentence. Experiments show that incorporating document-level context improves OpenIE performance.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0140-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Kuicai Dong, Yilin Zhao, Aixin Sun, Jung-Jae Kim, Xiaoli Li",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication information",
+      "span_id": "C0140-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication information",
+      "span_id": "C0140-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021, pages 2377–2389",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Publication information",
+      "span_id": "C0140-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "pages 2377–2389",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0140-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Open Information Extraction (OpenIE) aims to extract structured relational tuples (subject, relation, object) from sentences... We propose DocIE, a document-level context-aware OpenIE model. Our experimental results demonstrate that incorporating document-level context is helpful in improving OpenIE performance.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0140-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Current OpenIE methods mainly focus on extracting tuples at sentence level. However, in many NLP scenarios, sentences exist as part of a document rather than standalone.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0140-D-P001-PICTURE-0002",
+      "page": 1,
+      "excerpt": "Context sentences suggest that data transfers shall be considered as a noun phrase... Context sentence S4 includes an explicit cue to the relationship between the two terms and may thus help split them.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0140-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "DocIE encodes a source sentence with its contextual information by using pre-trained BERT.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Related Work",
+      "span_id": "C0140-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Neural OpenIE models extract tuples in an end-to-end manner.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "DocIE Model",
+      "span_id": "C0140-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The encoder-decoder framework represents a variable length input sequence in the encoder and uses it in the decoder to generate output sequence.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Related Work",
+      "span_id": "C0140-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Neural OpenIE models extract tuples in an end-to-end manner, not requiring prior syntactic or semantic analysis.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Related Work",
+      "span_id": "C0140-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Neural OpenIE models need a large number of training samples... A common practice... is to use tuples automatically extracted by traditional systems as training data.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Pseudo Label by Bootstrapping",
+      "span_id": "C0140-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "We generate pseudo labels by bootstrapping with traditional OpenIE models.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "DocIE Model",
+      "span_id": "C0140-D-P007-PICTURE-0001",
+      "page": 7,
+      "excerpt": "DocIE mainly consists of two parts: source-context encoder, and encoder-decoder.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Source-Context Encoder",
+      "span_id": "C0140-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "Bottom blocks... take the concatenation of source sentence and context sentences as input, and top blocks... take only the representation of the source sentence.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Encoder-Decoder",
+      "span_id": "C0140-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "Additional copying mechanism... helps copy words directly from the input sentence to the output tuples.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0140-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Open Information Extraction (OpenIE) aims to extract structured relational tuples (subject, relation, object) from sentences.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0140-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "The OpenIE system is fully domain-independent, and does not need input from users.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Patent Document Collection",
+      "span_id": "C0140-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We clean these documents by removing non-textual components in them.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Document-level Context",
+      "span_id": "C0140-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "Given source sentence si, we regard its surrounding sentences... as contextual sentences.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Encoder-Decoder",
+      "span_id": "C0140-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "The encoder-decoder framework... uses it in the decoder to generate output sequence.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Patent Document Collection",
+      "span_id": "C0140-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We choose to collect patent documents from PatFT. Each patent document elaborates one specific invention.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Document-level Context",
+      "span_id": "C0140-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "The source sentence si is the input sentence that relational tuples are extracted from. Given source sentence si, we regard its surrounding sentences... as contextual sentences.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0140-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "OpenIE aims to extract structured relational tuples (subject, relation, object) from sentences.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0140-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "DocOIE consists of 2,122 relational tuples from 800 annotated sentences.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Pseudo Label by Bootstrapping",
+      "span_id": "C0140-D-P006-TABLE-0001",
+      "page": 6,
+      "excerpt": "Reverb, Stanford, Clausie, OpenIE4, OpenIE5, Rev+Oie4, Oie4+Rev",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "DocIE Model",
+      "span_id": "C0140-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "In our implementation, we use BERT as the bottom blocks... On top of the BERT blocks, we add Transformer as top blocks.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Implementation",
+      "span_id": "C0140-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "We implement DocIE using the AllenNLP framework in Pytorch 1.4.",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0140-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We manually annotate 800 sentences from 80 documents in two domains (Healthcare and Transportation) to form a DocOIE dataset.",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "DocOIE Dataset",
+      "span_id": "C0140-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "Training dataset contains 2,400 documents from the two domains... All sentences from these documents are used to bootstrap pseudo labels.",
+      "confidence": "medium"
+    },
+    "datasets-18-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Patent Document Collection",
+      "span_id": "C0140-D-P004-TABLE-0003",
+      "page": 4,
+      "excerpt": "42,514 healthcare documents and 32,256 transportation documents were collected before sampling and cleaning.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Annotation Consistency Measurement",
+      "span_id": "C0140-D-P005-TABLE-0001",
+      "page": 5,
+      "excerpt": "The two experts reach high-level agreement in annotations with an average F1 of 89.9%.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Pseudo Label by Bootstrapping",
+      "span_id": "C0140-D-P006-TABLE-0002",
+      "page": 6,
+      "excerpt": "AUC, Prec, Rec, F1",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Error Analysis",
+      "span_id": "C0140-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "Incompleteness... Incorrect Boundary... Redundant Extractions... Grammatical Errors",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Pseudo Label by Bootstrapping",
+      "span_id": "C0140-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "We evaluate the models by using CaRB scorer... Reverb, Clausie, Stanford OpenIE, OpenIE4 and OpenIE5.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "DocIE Against Baselines",
+      "span_id": "C0140-D-P008-TABLE-0002",
+      "page": 8,
+      "excerpt": "Rev+Oie4, Oie4+Rev, CopyAttention+BERT, IMOJIE, DocIE w/o transformer, DocIE w transformer",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Pseudo Label by Bootstrapping",
+      "span_id": "C0140-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "Table 6 reports the performance of five independent OpenIE models... and two combinations of Reverb and OpenIE4.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "DocIE Against Baselines",
+      "span_id": "C0140-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "The context window size of DocIE is set to 5 for healthcare domain and 4 for transportation domain.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Error Analysis",
+      "span_id": "C0140-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "We examine tuples extracted by DocIE from 50 randomly selected sentences in DocOIE.",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "DocIE Against Baselines",
+      "span_id": "C0140-D-P008-TABLE-0001",
+      "page": 8,
+      "excerpt": "DocIE w transformer: Healthcare AUC 47.4, Prec 74.4, Rec 51.3, F1 60.8; Transportation AUC 38.5, Prec 56.0, Rec 57.5, F1 56.9.",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "DocIE Against Baselines",
+      "span_id": "C0140-D-P008-TABLE-0002",
+      "page": 8,
+      "excerpt": "CopyAttention+BERT: Healthcare AUC 46.8, F1 59.8; Transportation AUC 38.3, F1 56.1.",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Annotation Consistency Measurement",
+      "span_id": "C0140-D-P005-TABLE-0003",
+      "page": 5,
+      "excerpt": "Average 87.7 precision, 92.2 recall, 89.9 F1.",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0140-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "DocOIE consists of 2,122 relational tuples from 800 annotated sentences, with their document-level contexts.",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "DocIE Against Baselines",
+      "span_id": "C0140-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "DocIE w transformer achieves the best AUC and F1 in both domains.",
+      "confidence": "medium"
+    },
+    "strengths-23-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Patent Document Collection",
+      "span_id": "C0140-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "The documents contain rich syntactic structures.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Error Analysis",
+      "span_id": "C0140-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "Incompleteness: In 28% sentences... Incorrect Boundary: 27% extractions... Redundant Extractions: 15% sentences... Grammatical Errors: 13% extractions.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "DocIE Against Baselines",
+      "span_id": "C0140-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "DocIE is trained by pseudo labels produced by traditional OpenIE models which do not consider document-level context.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Document Type Selection",
+      "span_id": "C0140-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "We focus on formally written documents and leave it for future work to explore other kinds of documents.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "DocIE Against Baselines",
+      "span_id": "C0140-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "The potential of utilizing document-level context is yet to be fully realized.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Conclusion",
+      "span_id": "C0140-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "Our future works are in two main directions. One is to research on more effective context-aware OpenIE models, and the other is to investigate the possibility of not relying on pseudo labels.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Tuple-level Analysis",
+      "span_id": "C0140-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "Co-reference is not annotated in DocOIE.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-04": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Document Type Selection",
+      "span_id": "C0140-D-P004-TEXT-0004",
+      "page": 4,
+      "excerpt": "We focus on formally written documents and leave it for future work to explore other kinds of documents.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Conclusion",
+      "span_id": "C0140-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "One is to research on more effective context-aware OpenIE models, and the other is to investigate the possibility of not relying on pseudo labels.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Tuple-level Analysis",
+      "span_id": "C0140-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "The main reason for under-specificity is the lack of co-reference information.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Document Type Selection",
+      "span_id": "C0140-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "We focus on formally written documents and leave it for future work to explore other kinds of documents.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Error Analysis",
+      "span_id": "C0140-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "We identify the following major error types. (i) Incompleteness... (ii) Incorrect Boundary... (iii) Redundant Extractions... (iv) Grammatical Errors.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "DocIE Against Baselines",
+      "span_id": "C0140-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "The potential of utilizing document-level context is yet to be fully realized.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Impact of Context Window Size",
+      "span_id": "C0140-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "Small window size might not provide sufficient context, and a large window size might introduce noise and dominate source representation learning.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-04": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Tuple-level Analysis",
+      "span_id": "C0140-D-P005-TEXT-0004",
+      "page": 5,
+      "excerpt": "The main reason for under-specificity is the lack of co-reference information.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0140-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Both the DocOIE dataset and DocIE model are available online.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Related Work",
+      "span_id": "C0140-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "https://github.com/daviddongkc/DocOIE",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-03": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Related Work",
+      "span_id": "C0140-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "To ensure reproducibility, as part of the DocOIE dataset, we also release the document IDs that are used for generating the pseudo labels.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses the lack of document-level context in existing sentence-level OpenIE systems and datasets. Without surrounding sentences, OpenIE may misinterpret part-of-speech and syntactic ambiguities, miss contextual information, or produce incorrect tuple boundaries. The objective is to create a context-aware benchmark and model that use surrounding document sentences to improve relational tuple extraction.",
+  "methodology": {
+    "primary_family": "Transformer encoder methods",
+    "secondary_families": [
+      "Neural NLP pipelines",
+      "Generative text-to-structure methods"
+    ],
+    "system_type": "end_to_end",
+    "supervision_setting": "weakly_supervised",
+    "description": "DocIE treats a document as a source sentence plus a symmetric window of surrounding context sentences. It concatenates source and context representations with trainable word and segment embeddings, uses bottom BERT blocks to model semantic interactions, keeps only the source representation, and applies additional top transformer blocks. A CopyAttention-style encoder-decoder then generates variable-length relational tuples, using a copying mechanism because tuple arguments and relations are usually input sub-spans. The training data are pseudo-labeled by traditional OpenIE systems selected on the expert-annotated DocOIE evaluation set."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "No domain ontology or fixed relation schema is used. The task is open-domain extraction of relational tuples represented as subject, relation, and object.",
+    "evidence": [
+      {
+        "span_id": "C0140-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "Open Information Extraction (OpenIE) aims to extract structured relational tuples (subject, relation, object) from sentences."
+      },
+      {
+        "span_id": "C0140-D-P002-TEXT-0002",
+        "page": 2,
+        "excerpt": "The OpenIE system is fully domain-independent, and does not need input from users."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing and sentence/document context selection",
+    "Relation and triple extraction",
+    "Graph-ready tuple generation"
+  ],
+  "input_output": {
+    "input_type": "Unstructured natural-language patent text",
+    "input_granularity": "A source sentence together with a configurable window of surrounding sentences from the same document; training uses full document collections for pseudo-label generation.",
+    "output_representation": "Open relational tuples in (subject, relation, object) form; these tuples are directly usable as graph facts but the paper does not construct a complete knowledge graph."
+  },
+  "models_and_tools": [
+    "DocIE",
+    "BERT",
+    "top Transformer encoder",
+    "CopyAttention encoder-decoder",
+    "Reverb",
+    "Stanford OpenIE",
+    "Clausie",
+    "OpenIE4",
+    "OpenIE5",
+    "CopyAttention+BERT",
+    "IMOJIE",
+    "AllenNLP",
+    "PyTorch 1.4"
+  ],
+  "datasets": [
+    "DocOIE evaluation dataset: 800 expert-annotated sentences from 80 patent documents, 40 healthcare and 40 transportation, containing 2,122 relational tuples",
+    "DocOIE training dataset: 2,400 patent documents, 1,200 per domain, used for pseudo-label bootstrapping",
+    "PatFT patent corpus"
+  ],
+  "evaluation": {
+    "metrics": [
+      "CaRB scorer metrics: AUC, precision, recall, and F1",
+      "Annotation consistency: tuple-level precision, recall, and F1",
+      "Error-analysis percentages for incompleteness, incorrect boundaries, redundant extractions, and grammatical errors",
+      "Context-window comparison using F1"
+    ],
+    "baselines": [
+      "Reverb",
+      "Stanford OpenIE",
+      "Clausie",
+      "OpenIE4",
+      "OpenIE5",
+      "Reverb + OpenIE4 combinations",
+      "CopyAttention+BERT",
+      "IMOJIE",
+      "DocIE without the top transformer layer"
+    ],
+    "setting": "Evaluation is performed on the DocOIE expert-annotated evaluation dataset using the CaRB scorer. Traditional systems are evaluated directly; neural baselines are trained with alternative pseudo-label sets generated by traditional OpenIE systems. DocIE uses context window size 5 for healthcare and 4 for transportation. The paper also evaluates window sizes 1–6 and conducts a qualitative case study plus error analysis on 50 randomly selected sentences."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "DocIE with the top transformer achieved the best reported AUC and F1 in both domains: healthcare AUC 47.4 and F1 60.8; transportation AUC 38.5 and F1 56.9.",
+      "DocIE without the top transformer was second best in both domains: healthcare AUC 47.1 and F1 60.3; transportation AUC 38.5 and F1 56.4.",
+      "Against the strongest sentence-level neural baseline CopyAttention+BERT, DocIE with transformer improved F1 by 1.0 point in healthcare (60.8 vs. 59.8) and 0.8 point in transportation (56.9 vs. 56.1).",
+      "Annotation consistency between the two experts was 89.9 average F1, with precision 87.7 and recall 92.2.",
+      "The context-window study found optimal window size 5 for healthcare and 4 for transportation; larger windows may introduce noise."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0140-D-P008-TABLE-0001",
+        "page": 8,
+        "excerpt": "DocIE w transformer: Healthcare AUC 47.4, Prec 74.4, Rec 51.3, F1 60.8; Transportation AUC 38.5, Prec 56.0, Rec 57.5, F1 56.9."
+      },
+      {
+        "span_id": "C0140-D-P008-TABLE-0002",
+        "page": 8,
+        "excerpt": "CopyAttention+BERT: Healthcare AUC 46.8, F1 59.8; Transportation AUC 38.3, F1 56.1."
+      },
+      {
+        "span_id": "C0140-D-P005-TABLE-0003",
+        "page": 5,
+        "excerpt": "Average 87.7 precision, 92.2 recall, 89.9 F1."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author claim: DocOIE provides document-level context and 800 expert-annotated sentences, substantially expanding expert-annotated OpenIE evaluation data relative to the datasets summarized by the authors.",
+      "Experimental result: DocIE with document context outperformed the evaluated sentence-level systems on the reported AUC and F1 metrics in both domains.",
+      "Review-level inference: The benchmark exposes context-dependent ambiguities and includes both domain diversity and document-level context, making it suitable for testing context-aware extraction."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0140-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "DocOIE consists of 2,122 relational tuples from 800 annotated sentences, with their document-level contexts."
+      },
+      {
+        "span_id": "C0140-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "DocIE w transformer achieves the best AUC and F1 in both domains."
+      },
+      {
+        "span_id": "C0140-D-P004-TEXT-0003",
+        "page": 4,
+        "excerpt": "The documents contain rich syntactic structures."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Experimental result: DocIE fails to cover at least one key phrase in 28% of the sampled sentences.",
+      "Experimental result: 27% of extractions have incorrect argument or relation boundaries, 15% of sentences contain redundant extractions, and 13% of extractions contain grammatical errors.",
+      "Author-reported weakness: DocIE is trained using pseudo labels produced by traditional sentence-level OpenIE models that do not use document context.",
+      "Review-level inference: The evaluation corpus is restricted to formally written patent documents in healthcare and transportation, so transfer to other document types is not established in this paper.",
+      "Review-level inference: The model outputs tuples but does not perform entity linking, ontology alignment, graph construction, validation, or updating."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0140-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "Incompleteness: In 28% sentences... Incorrect Boundary: 27% extractions... Redundant Extractions: 15% sentences... Grammatical Errors: 13% extractions."
+      },
+      {
+        "span_id": "C0140-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "DocIE is trained by pseudo labels produced by traditional OpenIE models which do not consider document-level context."
+      },
+      {
+        "span_id": "C0140-D-P004-TEXT-0003",
+        "page": 4,
+        "excerpt": "We focus on formally written documents and leave it for future work to explore other kinds of documents."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The authors state that the potential of using document-level context is not fully realized because DocIE relies on pseudo labels generated by traditional OpenIE models without document-level context.",
+      "The authors identify future work on more effective context-aware OpenIE models and on avoiding reliance on pseudo labels.",
+      "The authors leave exploration of other kinds of documents beyond formal patent documents for future work.",
+      "The authors note that co-reference is not annotated in DocOIE."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0140-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "The potential of utilizing document-level context is yet to be fully realized."
+      },
+      {
+        "span_id": "C0140-D-P009-TEXT-0002",
+        "page": 9,
+        "excerpt": "Our future works are in two main directions. One is to research on more effective context-aware OpenIE models, and the other is to investigate the possibility of not relying on pseudo labels."
+      },
+      {
+        "span_id": "C0140-D-P005-TEXT-0003",
+        "page": 5,
+        "excerpt": "Co-reference is not annotated in DocOIE."
+      },
+      {
+        "span_id": "C0140-D-P004-TEXT-0004",
+        "page": 4,
+        "excerpt": "We focus on formally written documents and leave it for future work to explore other kinds of documents."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed improvement: develop more effective context-aware OpenIE models.",
+      "Author-proposed improvement: investigate training approaches that do not rely on pseudo labels from sentence-level traditional OpenIE systems.",
+      "Review-level inference: add explicit coreference annotation or a coreference-aware extraction component, because the paper identifies under-specified arguments caused by missing coreference information.",
+      "Review-level inference: evaluate on additional document types and domains beyond formal patents in healthcare and transportation.",
+      "Review-level inference: add downstream graph-oriented evaluation for linking, deduplication, schema alignment, and graph construction."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0140-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "One is to research on more effective context-aware OpenIE models, and the other is to investigate the possibility of not relying on pseudo labels."
+      },
+      {
+        "span_id": "C0140-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "The main reason for under-specificity is the lack of co-reference information."
+      },
+      {
+        "span_id": "C0140-D-P004-TEXT-0003",
+        "page": 4,
+        "excerpt": "We focus on formally written documents and leave it for future work to explore other kinds of documents."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Context-aware OpenIE still has unresolved incompleteness, boundary errors, redundant extractions, and grammatical errors.",
+      "The paper leaves unresolved how to train context-aware neural OpenIE without pseudo labels generated by context-free traditional systems.",
+      "The appropriate amount of context remains domain-dependent: the reported optimal windows are different for healthcare and transportation, while overly large windows may add noise.",
+      "Document-level coreference and under-specified arguments remain unresolved because coreference is not annotated in DocOIE.",
+      "The paper does not address later Text-to-KG stages such as entity linking, ontology/schema alignment, knowledge fusion, graph validation, or graph updating."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0140-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "We identify the following major error types. (i) Incompleteness... (ii) Incorrect Boundary... (iii) Redundant Extractions... (iv) Grammatical Errors."
+      },
+      {
+        "span_id": "C0140-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "The potential of utilizing document-level context is yet to be fully realized."
+      },
+      {
+        "span_id": "C0140-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "Small window size might not provide sufficient context, and a large window size might introduce noise and dominate source representation learning."
+      },
+      {
+        "span_id": "C0140-D-P005-TEXT-0004",
+        "page": 5,
+        "excerpt": "The main reason for under-specificity is the lack of co-reference information."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that both the DocOIE dataset and DocIE model are available online. It provides a GitHub repository link: https://github.com/daviddongkc/DocOIE. The paper also provides document IDs for reproducing pseudo-label generation; source patent documents are to be collected from PatFT."
+}

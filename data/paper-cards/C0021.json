@@ -1,0 +1,793 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0021",
+    "title": "Prompt Me One More Time: A Two-Step Knowledge Extraction Pipeline with Ontology-Based Verification",
+    "pdf_path": "data/batches/batch-02/C0021.pdf",
+    "authors": [
+      "Alla Chepurova",
+      "Yuri Kuratov",
+      "Aydar Bulatov",
+      "Mikhail Burtsev"
+    ],
+    "year": 2024,
+    "venue": "Proceedings of TextGraphs-17: Graph-based Methods for Natural Language Processing",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The study proposes a two-step LLM pipeline for extending Wikidata: first extract triplet candidates, then refine and link entities and relations to canonical KG names, and finally verify triples with Wikidata relation constraints. It compares the pipeline with a model fine-tuned on machine-generated data and reports better performance on natural data.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title block",
+      "span_id": "C0021-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Alla Chepurova; Yuri Kuratov; Aydar Bulatov; Mikhail Burtsev.",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication header",
+      "span_id": "C0021-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "August 15, 2024 ©2024 Association for Computational Linguistics.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication header",
+      "span_id": "C0021-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of TextGraphs-17: Graph-based Methods for Natural Language Processing, pages 61–77.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0021-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We propose a two-step pipeline that includes the initial extraction of entity candidates, followed by their refinement and linkage to the canonical entities and relations of the knowledge graph. Finally, we utilize Wikidata relation constraints to select only verified triplets.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0021-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Keeping such a resource up-to-date requires significant manual curation. Populating knowledge graphs with information extracted from texts presents a promising solution.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0021-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "We propose a novel two-step pipeline, which includes 1) LLM to extract entity candidates; 2) LLM to refine triplets by linking exact names of entities and relations...; 3) ontology-based triplets verification.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "2.2 Extraction of triplet candidates",
+      "span_id": "C0021-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "We benchmarked OpenAI gpt-3.5-turbo on triplet extraction with in-context examples.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Appendix A: Prompts",
+      "span_id": "C0021-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "For a few-shot prompting with in-context examples, we utilized several crafted examples from a training split of the Wiki-cIE Code dataset.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "2 Methods",
+      "span_id": "C0021-D-P002-CAPTION-0001",
+      "page": 2,
+      "excerpt": "First, we perform a prompt-based triplet extraction from input text with LLM... retrieve canonical names... refine triplets. Finally, the refined output is verified with KG ontology.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "2.4 Ontology-based verification",
+      "span_id": "C0021-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "A triplet is considered valid if the hierarchical types of both the subject and object align with the types specified in the relation constraints.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "2 Methods",
+      "span_id": "C0021-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "To extract triplets from texts, we propose a multi-step pipeline... The first step... candidate triplets extraction... the second step... refines these candidates... Finally, we verify the refined triplets.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "2 Methods",
+      "span_id": "C0021-D-P002-PICTURE-0002",
+      "page": 2,
+      "excerpt": "The diagram orders LLM triplet extraction, entity/relation index retrieval, LLM triplet refinement, and ontology filtering.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "2.2 Extraction of triplet candidates",
+      "span_id": "C0021-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "In the prompt, we described the essence of the task and used three examples from the train split from the Wiki-cIE Code dataset for demonstration.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Appendix A: Prompts",
+      "span_id": "C0021-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "We used different combinations of such examples in three launches, and 3 different sets of examples were taken for each launch.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "2 Methods",
+      "span_id": "C0021-D-P002-CAPTION-0001",
+      "page": 2,
+      "excerpt": "The output from this step is a list of triplets in JSON format with possibly inaccurate entity and relation names. Then, we retrieve canonical names... use them in an LLM prompt to refine triplets. Finally, the refined output is verified with KG ontology.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "2.3 Refinement of triplet candidates",
+      "span_id": "C0021-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "The FAISS index was used to retrieve canonical names... The index was built using pre-trained Contriever embeddings... Based on the top-5 retrieved exact names... [the LLM chooses] names that fit the context.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "2.4 Ontology-based verification",
+      "span_id": "C0021-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "We used subject... and value... constraints of the extracted relation... A triplet is considered valid if the hierarchical types of both the subject and object align with the types specified in the relation constraints.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "2.4 Ontology-based verification",
+      "span_id": "C0021-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "After both stages of prompting, output triplets underwent an automated check on semantics and property constraints available in Wikidata KG.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.1 Proposed pipeline improves LLM KG extension performance",
+      "span_id": "C0021-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "Providing ontologies in the second prompt would make it unreasonably large, so we used filtering in the post-processing step to retain a higher precision score.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Appendix B: Ontology queries",
+      "span_id": "C0021-D-P015-TEXT-0003",
+      "page": 15,
+      "excerpt": "We scraped relation constraints... in advance... To retrieve the subclass hierarchy of a specific entity, the following SPARQL query was used.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0021-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Knowledge Extraction, or Triplet Extraction is a crucial task towards automatically constructing large-scale KGs.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "2 Methods",
+      "span_id": "C0021-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "The first step... candidate triplets extraction... the second step... refines these candidates based on similar entities and relations... Finally, we verify the refined triplets and filter out those that are not consistent with the KG ontology.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "2.4 Ontology-based verification",
+      "span_id": "C0021-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "The validity of the logical structure of extracted information was ensured.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0021-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "[The pipeline extends] Wikidata by extracting triplets from texts with the aid of Large Language Models.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Appendix D: Natural language dataset",
+      "span_id": "C0021-D-P016-TEXT-0002",
+      "page": 16,
+      "excerpt": "We manually sampled 100 paragraphs from Wikipedia that were relevant to WikicIE-test-small.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Appendix A.1: System prompts",
+      "span_id": "C0021-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "You will be provided with the text entitled \"Text:\". You are expected to output only the list of identified triplets in a JSON format.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Appendix D: Natural language dataset",
+      "span_id": "C0021-D-P016-TEXT-0002",
+      "page": 16,
+      "excerpt": "We manually sampled 100 paragraphs from Wikipedia.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "2 Methods",
+      "span_id": "C0021-D-P002-CAPTION-0001",
+      "page": 2,
+      "excerpt": "The output from this step is a list of triplets in JSON format... the refined output is verified with KG ontology to ensure consistency.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Appendix A.1: System prompts",
+      "span_id": "C0021-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "Each triplet should have fields \"subject\", \"relation\", and \"object\".",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "2.2 Extraction of triplet candidates",
+      "span_id": "C0021-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "We benchmarked OpenAI gpt-3.5-turbo on triplet extraction with in-context examples.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "2.3 Refinement of triplet candidates",
+      "span_id": "C0021-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "The FAISS index was used to retrieve canonical names... The index was built using pre-trained Contriever embeddings.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "2.4 Ontology-based verification",
+      "span_id": "C0021-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "Classes... were extracted from Wikidata Query Service (WDQS) by querying \"instance of\" (P31) and \"subclass of\" (P279).",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "2.1 Datasets",
+      "span_id": "C0021-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Therefore, we used a higher quality SynthIE... dataset.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "2.2 Extraction of triplet candidates",
+      "span_id": "C0021-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "We... used three examples from the train split from the Wiki-cIE Code dataset.",
+      "confidence": "medium"
+    },
+    "datasets-17-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.2 Synthetic data is not a cure-all",
+      "span_id": "C0021-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "We selected 100 random samples from the WikicIE-test-small... [and] manually added similar texts in natural language about these entities from Wikipedia paragraphs.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "3.1 Proposed pipeline improves LLM KG extension performance",
+      "span_id": "C0021-D-P005-TABLE-0001",
+      "page": 5,
+      "excerpt": "Metrics (SynthIE-text-small): F1, Precision, Recall; report mean and std of three runs with different in-context examples.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "3.2 Synthetic data is not a cure-all",
+      "span_id": "C0021-D-P005-TABLE-0002",
+      "page": 5,
+      "excerpt": "Natural Language corpora columns are Precision, # Correct, and IoU.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Appendix D: Natural language dataset",
+      "span_id": "C0021-D-P016-TEXT-0003",
+      "page": 16,
+      "excerpt": "Precision was computed as the total number of valid triplets divided by the total number of predicted triplets across all samples.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "3.2 Synthetic data is not a cure-all",
+      "span_id": "C0021-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "Table 2 demonstrates the score of the entire proposed pipeline compared to SynthIE T5-large, the best-reported model trained on SynthIE dataset.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Table 2",
+      "span_id": "C0021-D-P005-TABLE-0002",
+      "page": 5,
+      "excerpt": "SynthIE T5-large... results were obtained by the model fine-tuned on the dataset.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "3.1 Proposed pipeline improves LLM KG extension performance",
+      "span_id": "C0021-D-P005-TABLE-0001",
+      "page": 5,
+      "excerpt": "Full pipeline; no verification; no refinement; no in-context examples. We report mean and std of three runs with different in-context examples.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "3.2 Synthetic data is not a cure-all",
+      "span_id": "C0021-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Both LM trained on the synthetic data and our LLM-based pipeline generated triplets based on these texts. Then, LM’s and LLM’s outputs were subjected to human evaluation.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Appendix D: Natural language dataset",
+      "span_id": "C0021-D-P016-TEXT-0003",
+      "page": 16,
+      "excerpt": "Each triplet was independently labeled by the three authors... deemed correct... if at least two... reached a consensus.",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "3.1 Proposed pipeline improves LLM KG extension performance",
+      "span_id": "C0021-D-P005-TABLE-0001",
+      "page": 5,
+      "excerpt": "Full pipeline: F1 0.55±0.01, Precision 0.59±0.03, Recall 0.52±0.005; no in-context examples: 0.16, 0.65, 0.09.",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "3.2 Synthetic data is not a cure-all",
+      "span_id": "C0021-D-P005-TABLE-0002",
+      "page": 5,
+      "excerpt": "Prompt me one more time: natural-language precision 0.74, # Correct 187; SynthIE T5-large: precision 0.55, # Correct 201; IoU 0.08.",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0021-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Using these methods can be advantageous because it eliminates the need for training or fine-tuning models.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Table 1",
+      "span_id": "C0021-D-P005-TABLE-0002",
+      "page": 5,
+      "excerpt": "No refinement: recall 0.44±0.006; Full pipeline: recall 0.52±0.005. No verification: precision 0.55±0.03; Full pipeline: precision 0.59±0.03.",
+      "confidence": "medium"
+    },
+    "strengths-22-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Table 2",
+      "span_id": "C0021-D-P005-TABLE-0003",
+      "page": 5,
+      "excerpt": "Natural Language corpora precision is 0.74 for the proposed approach and 0.55 for SynthIE T5-large.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.3 Refinement of triplet candidates",
+      "span_id": "C0021-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Based on the top-5 retrieved exact names... we define the task of choosing the names that fit the context.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.4 Ontology-based verification",
+      "span_id": "C0021-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "A triplet is considered valid if the hierarchical types of both the subject and object align with the types specified in the relation constraints.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Table 2",
+      "span_id": "C0021-D-P005-TABLE-0003",
+      "page": 5,
+      "excerpt": "SynthIE-text-small F1 is 0.55±0.01 for the proposed method and 0.88 for SynthIE T5-large.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Limitations: Fine-tuning Overhead",
+      "span_id": "C0021-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "Models directly fine-tuned for specific graphs and datasets may still outperform our approach.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Limitations: Domain Specifics and Prompt Sensitivity",
+      "span_id": "C0021-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "The effectiveness of the proposed pipeline may vary depending on the domain... The domain adaptation may require manual intervention... Our experiments have revealed the considerable influence that prompt quality exerts on the overall performance.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Appendix C: Examples inconsistencies in synthetic dataset",
+      "span_id": "C0021-D-P015-TEXT-0003",
+      "page": 15,
+      "excerpt": "Such samples introduce bias through LLM training and LLM in-context demonstration, resulting in skewed quality estimation for both methods.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4 Conclusions and Future work",
+      "span_id": "C0021-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "Further research may focus on fine-tuning embeddings for this task and the use of additional information from Wikidata, e.g. entities from node neighborhood... entity or relation textual description.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "3.2 Synthetic data is not a cure-all",
+      "span_id": "C0021-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Their predictions may be combined, yielding further improvements in the pipeline performance.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4 Conclusions and Future work",
+      "span_id": "C0021-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "The creation of smaller, yet higher quality benchmarks for LLM based on texts expressed in natural language could resolve challenges of dataset collection... and eliminate a bias introduced by synthetic generation.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.1 Datasets",
+      "span_id": "C0021-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Gathering datasets for the triplet extraction task is both time-consuming and costly... only sparse or noisy datasets are available.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Limitations: Domain Specifics",
+      "span_id": "C0021-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Particularly challenging is dealing with texts that are significantly different from the pre-training domain.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Appendix D: Natural language dataset",
+      "span_id": "C0021-D-P016-TEXT-0003",
+      "page": 16,
+      "excerpt": "Precision was computed as the total number of valid triplets divided by the total number of predicted triplets across all samples.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "How to extend Wikidata from unstructured text with accurate, canonical Wikidata triples without training a separate extractor for each evolving KG or ontology. The work targets error-prone entity/relation normalization and LLM hallucinations after extraction.",
+  "methodology": {
+    "primary_family": "Zero-shot and few-shot LLM prompting",
+    "secondary_families": [
+      "Generative text-to-structure methods",
+      "Ontology-constrained and schema-guided methods",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "few_shot",
+    "description": "Execution pipeline: (1) prompt gpt-3.5-turbo to emit JSON subject–relation–object candidate triples from text, using in-context examples; (2) use a FAISS dense-retrieval index built from pretrained Contriever embeddings to retrieve the top five similar canonical Wikidata names for every candidate subject, relation, and object; (3) prompt the LLM again to choose context-appropriate canonical names only from each retrieved list and output refined JSON triples; (4) query Wikidata type hierarchies and apply the extracted relation's subject and value constraints, retaining a triple only when subject and object hierarchy types align with those constraints."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "Wikidata supplies the target KG ontology, canonical entity and relation names, subject/value property constraints, and P31 ('instance of') and P279 ('subclass of') type hierarchies. Verification is post-processing: it filters triples inconsistent with relation constraints; the ontology is not supplied in the refinement prompt because that would make it unreasonably large.",
+    "evidence": [
+      {
+        "span_id": "C0021-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "After both stages of prompting, output triplets underwent an automated check on semantics and property constraints available in Wikidata KG."
+      },
+      {
+        "span_id": "C0021-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "Providing ontologies in the second prompt would make it unreasonably large, so we used filtering in the post-processing step to retain a higher precision score."
+      },
+      {
+        "span_id": "C0021-D-P015-TEXT-0003",
+        "page": 15,
+        "excerpt": "We scraped relation constraints... in advance... To retrieve the subclass hierarchy of a specific entity, the following SPARQL query was used."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Entity and concept extraction",
+    "Entity resolution and linking",
+    "Relation and triple extraction",
+    "Graph construction",
+    "Graph validation and correction"
+  ],
+  "input_output": {
+    "input_type": "Unstructured natural-language text, including SynthIE synthetic texts and manually sampled Wikipedia paragraphs.",
+    "input_granularity": "Individual text instances/short passages; the natural-language evaluation uses paragraphs, while prompts accept a single item labelled 'Text'.",
+    "output_representation": "A JSON list of verified subject–relation–object triples whose names are canonical Wikidata entity and relation names; triples failing ontology consistency checks are removed."
+  },
+  "models_and_tools": [
+    "OpenAI gpt-3.5-turbo-0125",
+    "Few-shot in-context prompts",
+    "FAISS similarity index",
+    "Pretrained Contriever embeddings",
+    "Wikidata",
+    "Wikidata Query Service (WDQS)",
+    "SPARQL queries over P31 and P279"
+  ],
+  "datasets": [
+    "SynthIE-text-small",
+    "Wiki-cIE Code training split (source of in-context examples)",
+    "WikicIE-test-small (100 random samples used to select matched Wikipedia paragraphs)",
+    "Natural Language corpora: 100 manually sampled Wikipedia paragraphs"
+  ],
+  "evaluation": {
+    "metrics": [
+      "F1",
+      "Precision",
+      "Recall",
+      "Mean and standard deviation over three runs with different in-context examples",
+      "Human-evaluated precision",
+      "Number of correct triples",
+      "Intersection over union (IoU) of correct triples between models"
+    ],
+    "baselines": [
+      "SynthIE T5-large, reported as the best-reported model trained on SynthIE and fine-tuned on SynthIE-text-small"
+    ],
+    "setting": "Ablation study on SynthIE-text-small compares the full pipeline with removal of verification, refinement, and in-context examples; results use three runs with different in-context example sets. The main comparison evaluates the full pipeline and SynthIE T5-large on SynthIE-text-small, then uses human evaluation on 100 matched natural-language Wikipedia paragraphs. Three paper authors independently label predicted triples as text-consistent; a triple is correct when at least two agree. Natural-language correctness includes facts explicitly stated, implied, or readily derivable without additional knowledge."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "On SynthIE-text-small, the full pipeline achieved F1 0.55±0.01, precision 0.59±0.03, and recall 0.52±0.005.",
+      "Removing verification gave F1 0.53±0.01, precision 0.55±0.03, recall 0.52±0.005; removing refinement gave F1 0.51±0.01, precision 0.60±0.03, recall 0.44±0.006. Without in-context examples, F1 was 0.16, precision 0.65, recall 0.09.",
+      "On SynthIE-text-small, fine-tuned SynthIE T5-large scored F1 0.88, precision 0.87, recall 0.88, versus the proposed pipeline's 0.55/0.59/0.52.",
+      "On the human-evaluated natural-language corpus, the proposed method had precision 0.74 with 187 correct triples, versus 0.55 and 201 for SynthIE T5-large; correct-triple IoU was 0.08."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0021-D-P005-TABLE-0001",
+        "page": 5,
+        "excerpt": "Full pipeline: F1 0.55±0.01, Precision 0.59±0.03, Recall 0.52±0.005; no in-context examples: 0.16, 0.65, 0.09."
+      },
+      {
+        "span_id": "C0021-D-P005-TABLE-0002",
+        "page": 5,
+        "excerpt": "Prompt me one more time: natural-language precision 0.74, # Correct 187; SynthIE T5-large: precision 0.55, # Correct 201; IoU 0.08."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "The pipeline requires no task-specific fine-tuning and can normalize open-text extractions to canonical Wikidata names through retrieval plus a second prompt.",
+      "Refinement materially improves recall in the reported ablation (0.44 without refinement to 0.52 full pipeline), while ontology filtering improves precision after refinement (0.55 without verification to 0.59 full pipeline).",
+      "The method has higher human-evaluated precision than the fine-tuned SynthIE baseline on the paper's matched natural-language Wikipedia set (0.74 versus 0.55)."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0021-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "Using these methods can be advantageous because it eliminates the need for training or fine-tuning models."
+      },
+      {
+        "span_id": "C0021-D-P005-TABLE-0002",
+        "page": 5,
+        "excerpt": "No refinement: recall 0.44±0.006; Full pipeline: recall 0.52±0.005. No verification: precision 0.55±0.03; Full pipeline: precision 0.59±0.03."
+      },
+      {
+        "span_id": "C0021-D-P005-TABLE-0003",
+        "page": 5,
+        "excerpt": "Natural Language corpora precision is 0.74 for the proposed approach and 0.55 for SynthIE T5-large."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "REVIEW-LEVEL INFERENCE (not an author claim): Candidate normalization is constrained to the retriever's top-five names; therefore, a correct Wikidata entity or relation absent from that shortlist cannot be selected in the second prompting step.",
+      "REVIEW-LEVEL INFERENCE (not an author claim): The ontology check tests type compatibility, so it can reject ill-typed triples but does not by itself establish that a type-compatible triple is textually entailed.",
+      "The pipeline has markedly lower synthetic-data F1 than the fine-tuned SynthIE T5-large baseline (0.55 versus 0.88), and the authors note that specialized fine-tuned models may outperform it in narrow domains with adequate resources."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0021-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "Based on the top-5 retrieved exact names... we define the task of choosing the names that fit the context."
+      },
+      {
+        "span_id": "C0021-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "A triplet is considered valid if the hierarchical types of both the subject and object align with the types specified in the relation constraints."
+      },
+      {
+        "span_id": "C0021-D-P005-TABLE-0003",
+        "page": 5,
+        "excerpt": "SynthIE-text-small F1 is 0.55±0.01 for the proposed method and 0.88 for SynthIE T5-large."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "Fine-tuned models for a specific graph or dataset may outperform the prompting pipeline when the domain is sufficiently narrow and computational resources are available.",
+      "Effectiveness may vary by source-text and KG domain; texts far from the model's pre-training domain can require manual domain adaptation, such as adding domain-specific in-context examples.",
+      "Pipeline performance is considerably sensitive to prompt quality and prompt selection, particularly when transferring to new domains.",
+      "The authors also identify annotation/text inconsistencies in SynthIE that can bias training, in-context demonstrations, and quality estimates."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0021-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "Models directly fine-tuned for specific graphs and datasets may still outperform our approach."
+      },
+      {
+        "span_id": "C0021-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "The effectiveness of the proposed pipeline may vary depending on the domain... The domain adaptation may require manual intervention... Our experiments have revealed the considerable influence that prompt quality exerts on the overall performance."
+      },
+      {
+        "span_id": "C0021-D-P015-TEXT-0003",
+        "page": 15,
+        "excerpt": "Such samples introduce bias through LLM training and LLM in-context demonstration, resulting in skewed quality estimation for both methods."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Authors propose improving the retrieval-augmented refinement stage by fine-tuning embeddings for the task and using additional Wikidata information, such as entity node neighborhoods and entity or relation descriptions.",
+      "Authors propose combining the two models' predictions because their correct predictions overlap little (IoU 0.08).",
+      "Authors propose smaller, higher-quality natural-language LLM benchmarks to reduce cost and synthetic-generation bias.",
+      "REVIEW-LEVEL INFERENCE (not an author claim): Evaluate the verifier against text entailment or manually labelled factuality, in addition to ontology compatibility, to distinguish logically well-typed hallucinations from supported extracted facts."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0021-D-P005-TEXT-0001",
+        "page": 5,
+        "excerpt": "Further research may focus on fine-tuning embeddings for this task and the use of additional information from Wikidata, e.g. entities from node neighborhood... entity or relation textual description."
+      },
+      {
+        "span_id": "C0021-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "Their predictions may be combined, yielding further improvements in the pipeline performance."
+      },
+      {
+        "span_id": "C0021-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "The creation of smaller, yet higher quality benchmarks for LLM based on texts expressed in natural language could resolve challenges of dataset collection... and eliminate a bias introduced by synthetic generation."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Reliable, scalable evaluation data for Wikidata triple extraction remains unresolved: the paper describes existing distant/synthetic datasets as sparse, noisy, or inconsistent with their texts.",
+      "Generalization across source-text and KG domains remains unresolved because the method can require manual prompt/domain adaptation.",
+      "REVIEW-LEVEL INFERENCE (not an author claim): The work does not establish recall over all facts in real-world text, because its natural-language evaluation reports human-judged precision and number of correct outputs rather than a complete gold set of all extractable triples."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0021-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "Gathering datasets for the triplet extraction task is both time-consuming and costly... only sparse or noisy datasets are available."
+      },
+      {
+        "span_id": "C0021-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "Particularly challenging is dealing with texts that are significantly different from the pre-training domain."
+      },
+      {
+        "span_id": "C0021-D-P016-TEXT-0003",
+        "page": 16,
+        "excerpt": "Precision was computed as the total number of valid triplets divided by the total number of predicted triplets across all samples."
+      }
+    ]
+  },
+  "code_and_data_availability": "not_reported"
+}

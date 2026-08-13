@@ -1,0 +1,875 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0035",
+    "title": "Automating Biomedical Knowledge Graph Construction For Context-Aware Scientific Inference",
+    "pdf_path": "data/batches/batch-02/C0035.pdf",
+    "authors": [
+      "Yikai Zheng",
+      "Wanquan Liu",
+      "Bi Zeng",
+      "Yichun Feng",
+      "Xiawei Du",
+      "Lu Zhou",
+      "Yixue Li"
+    ],
+    "year": 2026,
+    "venue": "bioRxiv preprint",
+    "identifier": {
+      "status": "reported",
+      "value": "https://doi.org/10.64898/2026.01.14.699420",
+      "evidence": [
+        {
+          "span_id": "C0035-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "bioRxiv preprint doi: https://doi.org/10.64898/2026.01.14.699420"
+        }
+      ]
+    },
+    "abstract": "Biomedical interactions are inherently dynamic, often shifting or even reversing under specific physiological states. Existing extraction methods simplify these mechanisms into context-agnostic binary associations, resulting in semantic loss and contradictory evidence. AutoBioKG is an end-to-end framework for context-aware biomedical knowledge graph construction using composite triplets to encode environmental conditions and entity attributes alongside core relationships. A self-evolving open information extraction model is trained on the curated BioOpenIE dataset. AutoBioKG surpasses state-of-the-art large language models in zero-shot settings on DDI, ChemProt, and BioRED, and graphs constructed by AutoBioKG outperform existing approaches on BioASQ biomedical question answering, especially for context-sensitive queries.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0035-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Yikai Zheng, Wanquan Liu, Bi Zeng*, Yichun Feng, Xiawei Du, Lu Zhou*, Yixue Li",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Preprint header",
+      "span_id": "C0035-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "this version posted January 14, 2026",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Preprint header",
+      "span_id": "C0035-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "bioRxiv preprint doi: https://doi.org/10.64898/2026.01.14.699420",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Preprint header",
+      "span_id": "C0035-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "bioRxiv preprint doi: https://doi.org/10.64898/2026.01.14.699420",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0035-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Here, we present AutoBioKG, an end-to-end framework that constructs context-aware knowledge graphs by leveraging composite triplets to encode environmental conditions and entity attributes alongside core relationships.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0035-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Simplifying the statement ... into the flat triplet ... results in critical semantic loss.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0035-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "These challenges highlight the necessity of an end-to-end automated pipeline that needs to integrate the entire process from text extraction, knowledge fusion, to graph construction.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3.1 Open Information Extraction via Composite Triples",
+      "span_id": "C0035-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "Our open information extraction model ... autoregressively generates a composite triplet sequence.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.1 Open Information Extraction via Composite Triples",
+      "span_id": "C0035-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "we train a seed model on BioOpenIE using supervised fine-tuning ... [and] adopt an iterative self-evolution strategy",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.2 The BioOpenIE dataset construction",
+      "span_id": "C0035-D-P015-TEXT-0002",
+      "page": 15,
+      "excerpt": "The first stage utilizes GPT-4.1 ... Stage 2 ... Guided by a taxonomy of 23 UMLS semantic types",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.3 Knowledge fusion and graph construction",
+      "span_id": "C0035-D-P017-TEXT-0003",
+      "page": 17,
+      "excerpt": "The pipeline comprises ... entity normalization ... relation alignment ... and automated storage implementation in a Neo4j graph database.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "2.1 The overview of AutoBioKG",
+      "span_id": "C0035-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "AutoBioKG aims to automatically construct high-quality open-domain knowledge graphs from unstructured biomedical literature through end-to-end information extraction and knowledge fusion.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "3.1 Open Information Extraction via Composite Triples",
+      "span_id": "C0035-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "First, we train a seed model on BioOpenIE using supervised fine-tuning.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.1 Open Information Extraction via Composite Triples",
+      "span_id": "C0035-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "each composite triplet is defined as: (Subject : [Attribute], Relation : [Condition], Object : [Attribute])",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.1 Self-evolution Learning Mechanism",
+      "span_id": "C0035-D-P014-TEXT-0002",
+      "page": 14,
+      "excerpt": "we select only pseudo-labeled samples satisfying the two quality criteria: Confidence ... > τconf AND Entropy ... < τent",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.3 Knowledge fusion and graph construction",
+      "span_id": "C0035-D-P017-TEXT-0003",
+      "page": 17,
+      "excerpt": "If the maximum similarity score exceeds a relation threshold ... we normalize ... Otherwise ... dynamically incorporate it as a new standard type",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.1 Composite Triplet Representation",
+      "span_id": "C0035-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "Attribute captures entity-specific properties ... Condition encodes the contextual circumstances under which the relation holds.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.2 Multi-stage Automated Annotation Pipeline",
+      "span_id": "C0035-D-P015-TEXT-0002",
+      "page": 15,
+      "excerpt": "Guided by a taxonomy of 23 UMLS semantic types relevant to biomedical research",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.3 Relation Alignment and Dynamic Vocabulary Expansion",
+      "span_id": "C0035-D-P017-TEXT-0003",
+      "page": 17,
+      "excerpt": "we maintain a dynamic standard relation vocabulary initialized with predefined relation types from the UMLS Semantic Network",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.2 Multi-stage Automated Annotation Pipeline",
+      "span_id": "C0035-D-P015-TEXT-0001",
+      "page": 15,
+      "excerpt": "Stage 1: Semantic Segmentation and Coreference Resolution ... Stage 2: Type-constrained Entity Recognition ... Stage 3: Composite Triple Extraction",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.2 Multi-layer Verification and Completion",
+      "span_id": "C0035-D-P016-TEXT-0002",
+      "page": 16,
+      "excerpt": "cross-sentence relation completion ... global consistency check reviews all triples ... to detect and resolve contradictions or redundancies",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.3 Knowledge fusion and graph construction",
+      "span_id": "C0035-D-P017-TEXT-0003",
+      "page": 17,
+      "excerpt": "entity normalization via Unified Medical Language System ... relation alignment via dynamic vocabulary expansion ... automated storage ... in a Neo4j graph database",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Literature Corpus Selection and Preprocessing",
+      "span_id": "C0035-D-P015-TEXT-0001",
+      "page": 15,
+      "excerpt": "We curated 500 peer-reviewed research articles from the PubMed database.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "2.4 End-to-End Context-Aware Knowledge Graph Construction",
+      "span_id": "C0035-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "We utilized the BioASQ benchmark collection as input. This corpus comprises abstracts and full texts covering diverse biomedical fields.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Stage 1: Semantic Segmentation and Coreference Resolution",
+      "span_id": "C0035-D-P015-TEXT-0001",
+      "page": 15,
+      "excerpt": "the model partitions the text into 3 to 5 semantically coherent paragraphs",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "2.4 End-to-End Context-Aware Knowledge Graph Construction",
+      "span_id": "C0035-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "Given a set of input documents, AutoBioKG autonomously executes open information extraction",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Composite Triplet Representation",
+      "span_id": "C0035-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "(Subject : [Attribute], Relation : [Condition], Object : [Attribute])",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "2.4 End-to-End Context-Aware Knowledge Graph Construction",
+      "span_id": "C0035-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "The graph contains 3,507 nodes representing distinct biomedical entities and 1,896 edges encoding their relationships.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Model Architecture and Training Objective",
+      "span_id": "C0035-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "Our open information extraction model is built upon LLaMA3.1-8B ... we employ Low-Rank Adaptation",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Multi-stage Automated Annotation Pipeline",
+      "span_id": "C0035-D-P015-TEXT-0002",
+      "page": 15,
+      "excerpt": "Stage 1 utilizes GPT-4.1 ... Stage 4: Multi-layer Verification and Completion. DeepSeek-R1 executes three layers of quality control.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.3 Knowledge fusion and graph construction",
+      "span_id": "C0035-D-P017-TEXT-0003",
+      "page": 17,
+      "excerpt": "we associate each entity mention with canonical concepts in the UMLS ... employ the SapBERT model ... BGE-m3 encoder ... Neo4j graph database",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Data Splitting and Quality Validation",
+      "span_id": "C0035-D-P016-TEXT-0001",
+      "page": 16,
+      "excerpt": "The dataset is partitioned ... training set comprising 300 articles and a test set comprising 200 articles.",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.4.1 Datasets",
+      "span_id": "C0035-D-P018-TEXT-0002",
+      "page": 18,
+      "excerpt": "The DDI dataset comprises 1,025 documents ... The ChemProt dataset ... comprises 1,820 PubMed abstracts ... The BioRED dataset serves as a larger-scale corpus",
+      "confidence": "medium"
+    },
+    "datasets-18-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Biomedical question answering",
+      "span_id": "C0035-D-P018-TEXT-0003",
+      "page": 18,
+      "excerpt": "selecting 200 instances for each of the four reasoning patterns ... Yes/No, Factoid, List, and Summary",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "3.4.2 Evaluation Metrics",
+      "span_id": "C0035-D-P018-TEXT-0001",
+      "page": 18,
+      "excerpt": "The performance of the open-domain information extraction task is quantified by precision, recall, and F1 values.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "3.4.2 Evaluation Metrics",
+      "span_id": "C0035-D-P019-TEXT-0002",
+      "page": 19,
+      "excerpt": "For 'Yes/No' questions, accuracy and macro F1 scores ... 'Factoid' ... Strict Accuracy ... Lenient Accuracy ... 'List' ... Mean F-measure ... 'Summary' ... ROUGE",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "2.3 The evolved model demonstrates strong generalization to unseen relation schemas",
+      "span_id": "C0035-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "We benchmarked our model against six state-of-the-art large language models (LLMs), including GPT-4o, GPT-4.1, DeepSeek-v3, LLaMA3.1-8B, and Qwen3-8B operating in both reasoning-enabled and standard modes.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "2.5 AutoBioKG-constructed knowledge graph significantly enhances complex biomedical question answering",
+      "span_id": "C0035-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "We integrated AutoBioKG and three baseline methods, specifically AutoKG, EDC, and iText2KG, into an identical ... pipeline.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-03": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Appendix A, Table A1",
+      "span_id": "C0035-D-P021-TABLE-0003",
+      "page": 21,
+      "excerpt": "Seed Model (Baseline) ... Supervised Verification Strategy ... Confidence-Only Strategy ... AutoBioKG (Confidence + Entropy)",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "2.3 The evolved model demonstrates strong generalization to unseen relation schemas",
+      "span_id": "C0035-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "the model, trained solely on BioOpenIE, [was evaluated] ... in a zero-shot setting",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "3.4.2 Evaluation Metrics",
+      "span_id": "C0035-D-P018-TEXT-0002",
+      "page": 18,
+      "excerpt": "If the similarity score exceeds a preset threshold θ = 0.85, the match is successful.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "2.5 AutoBioKG-constructed knowledge graph significantly enhances complex biomedical question answering",
+      "span_id": "C0035-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "This standardized protocol establishes knowledge graph quality as the sole determinant of performance differences.",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "2.3 The evolved model demonstrates strong generalization to unseen relation schemas",
+      "span_id": "C0035-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "our method achieved F1 performance gains of 20.7%, 19.7%, and 18.5% on DDI, ChemProt, and BioRED, respectively.",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "2.5.1 Quantitative Performance Analysis across BioASQ Tasks",
+      "span_id": "C0035-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "our system reached 80.5% accuracy and a macro F1 score of 75.9%",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "2.5.1 Quantitative Performance Analysis across BioASQ Tasks",
+      "span_id": "C0035-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "For Factoid questions, AutoBioKG achieved a strict accuracy of 44.5% ... For List questions, our F-measure reached 41.1%",
+      "confidence": "medium"
+    },
+    "main_results-22-04": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Appendix A, Table A1",
+      "span_id": "C0035-D-P021-TABLE-0004",
+      "page": 21,
+      "excerpt": "AutoBioKG (Confidence + Entropy) 67.3 precision, 81.6 recall, 73.8 F1",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.1 The overview of AutoBioKG",
+      "span_id": "C0035-D-P005-CAPTION-0001",
+      "page": 5,
+      "excerpt": "composite triplets are enriched with fine-grained attributes and contextual dependencies to enhance semantic density.",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Self-evolution Learning Mechanism",
+      "span_id": "C0035-D-P014-TEXT-0002",
+      "page": 14,
+      "excerpt": "This filtering ensures retained samples represent high-certainty and unambiguous extractions.",
+      "confidence": "medium"
+    },
+    "strengths-23-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.5.2 Case Study",
+      "span_id": "C0035-D-P012-PICTURE-0003",
+      "page": 12,
+      "excerpt": "AutoBioKG resolves contextual conflicts ... by incorporating conditional attributes",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Self-evolution Learning Mechanism",
+      "span_id": "C0035-D-P014-TEXT-0001",
+      "page": 14,
+      "excerpt": "we restricted self-evolution to a single refinement cycle to balance knowledge expansion and noise control.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.5.1 Quantitative Performance Analysis across BioASQ Tasks",
+      "span_id": "C0035-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "EDC leads slightly in ROUGE-2 F1 score with 13.8% versus 13.5%.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Entity Normalization",
+      "span_id": "C0035-D-P017-TEXT-0003",
+      "page": 17,
+      "excerpt": "Entities failing to reach this threshold retain their original text form as novel entities not yet incorporated in UMLS",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Discussion",
+      "span_id": "C0035-D-P019-TEXT-0001",
+      "page": 19,
+      "excerpt": "the current framework primarily targets standard research articles. Consequently, extending the framework to process heterogeneous document types, such as patents or clinical trial reports, remains a critical direction",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Discussion",
+      "span_id": "C0035-D-P019-TEXT-0002",
+      "page": 19,
+      "excerpt": "Integrating multimodal data ... may improve its ability to capture complex biological mechanisms",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "2.5.1 Quantitative Performance Analysis across BioASQ Tasks",
+      "span_id": "C0035-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "organizing these facts into fluent narrative essays depends more on the generation capability of the underlying language model",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Discussion",
+      "span_id": "C0035-D-P019-TEXT-0001",
+      "page": 19,
+      "excerpt": "extending the framework to process heterogeneous document types ... remains a critical direction for future improvements",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Discussion",
+      "span_id": "C0035-D-P019-TEXT-0002",
+      "page": 19,
+      "excerpt": "Incorporating iterative cycles of active learning could further refine the model and improve its predictive accuracy",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Composite Triplet Representation",
+      "span_id": "C0035-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "Attribute and Condition are optional slots.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Appendix A, A.1.2 Results and Failure Analysis",
+      "span_id": "C0035-D-P021-TEXT-0001",
+      "page": 21,
+      "excerpt": "the Validator Model suffered from over-correction bias ... introducing subtle semantic errors ... amplifying hallucinations.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Appendix A, A.2.2 Results and Analysis",
+      "span_id": "C0035-D-P022-TEXT-0002",
+      "page": 22,
+      "excerpt": "LLMs are known to suffer from poor calibration, often assigning high confidence probabilities even to hallucinations.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Discussion",
+      "span_id": "C0035-D-P019-TEXT-0003",
+      "page": 19,
+      "excerpt": "extending the framework to process heterogeneous document types ... remains a critical direction",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Data Availability and Code Availability",
+      "span_id": "C0035-D-P020-TEXT-0001",
+      "page": 20,
+      "excerpt": "The BioOpenIE dataset ... and the experimental data used for the ablation studies, are available in the GitHub repository at https://github.com/ZYK006/AutoBioKG.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses semantic loss and contradictory evidence caused by representing biomedical interactions as flat, context-agnostic subject-predicate-object triples. It aims to automate extraction, normalization, knowledge fusion, and graph construction from unstructured biomedical literature while preserving entity attributes and the conditions under which relationships hold.",
+  "methodology": {
+    "primary_family": "Generative text-to-structure methods",
+    "secondary_families": [
+      "Instruction-tuned or fine-tuned LLM methods",
+      "Ontology-constrained and schema-guided methods",
+      "Validation, correction, and knowledge-fusion methods",
+      "Hybrid NLP and LLM methods"
+    ],
+    "system_type": "end_to_end",
+    "supervision_setting": "supervised",
+    "description": "AutoBioKG uses a LLaMA3.1-8B decoder-only Transformer adapted with LoRA. It generates composite triples of the form (Subject:[Attribute], Relation:[Condition], Object:[Attribute]). A seed model is supervised-fine-tuned on BioOpenIE, then refined once using pseudo-labels from unlabeled PubMed introductions filtered jointly by token confidence and entropy. Extracted entities are normalized to UMLS concepts using candidate retrieval and SapBERT disambiguation; relations are aligned to a dynamic vocabulary using BGE-m3 similarity or added as new relation types. Verified triples are stored in Neo4j, and AutoBioKGAgent exposes extraction, normalization, graph construction, and querying through a natural-language/MCP interface."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The core representation is a schema-guided composite triple with optional subject attributes, relation conditions, and object attributes. Entity recognition is constrained by 23 UMLS semantic types; entity normalization uses UMLS Concept Unique Identifiers; the initial relation vocabulary is derived from the UMLS Semantic Network and can expand dynamically.",
+    "evidence": [
+      {
+        "span_id": "C0035-D-P013-TEXT-0001",
+        "page": 13,
+        "excerpt": "Attribute captures entity-specific properties ... Condition encodes the contextual circumstances under which the relation holds."
+      },
+      {
+        "span_id": "C0035-D-P015-TEXT-0002",
+        "page": 15,
+        "excerpt": "Guided by a taxonomy of 23 UMLS semantic types relevant to biomedical research"
+      },
+      {
+        "span_id": "C0035-D-P017-TEXT-0003",
+        "page": 17,
+        "excerpt": "we maintain a dynamic standard relation vocabulary initialized with predefined relation types from the UMLS Semantic Network"
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing and semantic segmentation",
+    "Coreference resolution",
+    "Entity and concept extraction",
+    "Entity typing",
+    "Composite relation and triple extraction",
+    "Cross-sentence triplet completion",
+    "Triplet verification and correction",
+    "Entity resolution and linking",
+    "Relation alignment and schema expansion",
+    "Knowledge fusion and deduplication",
+    "Graph construction",
+    "Graph querying and downstream application"
+  ],
+  "input_output": {
+    "input_type": "Unstructured biomedical research literature, including PubMed articles, abstracts, introductions, and full-text articles.",
+    "input_granularity": "Document and paragraph/sentence level: introductions are segmented into 3–5 semantic paragraphs for annotation, while the final system processes document collections associated with BioASQ questions.",
+    "output_representation": "Context-aware composite triples, normalized biomedical entities and relations, and a Neo4j knowledge graph containing nodes, edges, attributes, relationship conditions, and provenance/context information."
+  },
+  "models_and_tools": [
+    "LLaMA3.1-8B",
+    "LoRA",
+    "GPT-4.1",
+    "DeepSeek-R1",
+    "Gemini3-pro",
+    "SapBERT",
+    "BGE-m3",
+    "BERT semantic similarity encoder",
+    "MinerU",
+    "UMLS API and UMLS Semantic Network",
+    "Neo4j",
+    "GPT-4o-mini through Azure OpenAI API",
+    "Model Context Protocol (MCP)"
+  ],
+  "datasets": [
+    "BioOpenIE: 5,129 validated composite triples from 500 biomedical research articles; 300 articles for training and 200 for testing",
+    "DDI: 1,025 documents from DrugBank and MedLine with drug-drug interaction annotations",
+    "ChemProt: 1,820 PubMed abstracts with chemical-protein interaction annotations",
+    "BioRED: biomedical entity-relation extraction corpus from PubMed abstracts",
+    "BioASQ Task 12b (2024): 5,046 training questions; filtered evaluation set with 200 questions for each of Yes/No, Factoid, List, and Summary patterns",
+    "300 unlabeled PubMed introductions used for self-evolution pseudo-labeling"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Precision",
+      "Recall",
+      "F1 score",
+      "Semantic cosine similarity with threshold 0.85",
+      "BioASQ Yes/No accuracy and macro-F1",
+      "Factoid strict accuracy and lenient accuracy",
+      "List mean F-measure",
+      "Summary ROUGE-2 recall/F1 and ROUGE-SU4 recall/F1",
+      "Inter-rater agreement",
+      "Triple validation accuracy",
+      "Graph node and edge counts"
+    ],
+    "baselines": [
+      "Seed Model",
+      "Confidence-Only Strategy",
+      "Supervised Verification Strategy",
+      "GPT-4o",
+      "GPT-4.1",
+      "DeepSeek-v3",
+      "LLaMA3.1-8B",
+      "Qwen3-8B in thinking and non-thinking modes",
+      "AutoKG",
+      "EDC",
+      "iText2KG"
+    ],
+    "setting": "The extraction model was evaluated on BioOpenIE and zero-shot transferred to DDI, ChemProt, and BioRED without task-specific fine-tuning. Extraction matching used BERT sentence embeddings and cosine similarity threshold 0.85. For graph utility, AutoBioKG, AutoKG, EDC, and iText2KG were evaluated inside the same KG-RAG pipeline on filtered BioASQ Task 12b questions, with identical downstream retrieval and answer-generation procedures."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "The self-evolved model improved over the seed model across DDI, ChemProt, BioRED, and BioOpenIE; reported F1 gains ranged from 1.88 to 3.64 percentage points.",
+      "In zero-shot relation extraction, AutoBioKG exceeded GPT-4o by 20.7 percentage points F1 on DDI, 19.7 on ChemProt, and 18.5 on BioRED; it exceeded the second-best baseline by more than 18% across all three datasets.",
+      "On BioASQ Yes/No questions, AutoBioKG achieved 80.5% accuracy and 75.9% macro-F1.",
+      "On BioASQ Factoid questions, AutoBioKG achieved 44.5% strict accuracy, reported as 8.0 percentage points above AutoKG and EDC.",
+      "On BioASQ List questions, AutoBioKG achieved 41.1% F-measure, reported as 15.9 percentage points above the second-best baseline, EDC.",
+      "For Summary questions, AutoBioKG had the highest ROUGE-2 recall, but EDC had slightly higher ROUGE-2 F1 (13.8% versus 13.5%).",
+      "The constructed BioASQ graph contained 3,507 nodes, 1,896 edges, average node degree 2.08, and 348 composite-triple edges, representing 18.35% of all relationships.",
+      "In BioOpenIE validation, a PhD-level computational biologist and Gemini3-pro achieved 94.2% inter-rater agreement, and the extraction pipeline achieved 87.1% accuracy against the consensus ground truth."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0035-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "our method achieved F1 performance gains of 20.7%, 19.7%, and 18.5% on DDI, ChemProt, and BioRED, respectively."
+      },
+      {
+        "span_id": "C0035-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "our system reached 80.5% accuracy and a macro F1 score of 75.9%"
+      },
+      {
+        "span_id": "C0035-D-P011-TEXT-0003",
+        "page": 11,
+        "excerpt": "For Factoid questions, AutoBioKG achieved a strict accuracy of 44.5% ... For List questions, our F-measure reached 41.1%"
+      },
+      {
+        "span_id": "C0035-D-P021-TABLE-0004",
+        "page": 21,
+        "excerpt": "AutoBioKG (Confidence + Entropy) 67.3 precision, 81.6 recall, 73.8 F1"
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Preserves context and entity-specific attributes that flat triples omit, supporting condition-dependent and state-dependent biomedical relations.",
+      "Provides an integrated path from unstructured text through extraction, normalization, relation alignment, fusion, and Neo4j graph construction.",
+      "Combines supervised fine-tuning with confidence-entropy pseudo-label filtering to improve extraction without additional manual annotation.",
+      "Demonstrates zero-shot transfer to predefined relation schemas and strong results on three biomedical benchmarks.",
+      "The qualitative case studies show more precise mutation retrieval and resolution of apparently contradictory relations under different calcium conditions.",
+      "Provides natural-language and MCP-based interfaces intended to reduce technical barriers for non-computational users."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0035-D-P005-CAPTION-0001",
+        "page": 5,
+        "excerpt": "composite triplets are enriched with fine-grained attributes and contextual dependencies to enhance semantic density."
+      },
+      {
+        "span_id": "C0035-D-P014-TEXT-0002",
+        "page": 14,
+        "excerpt": "This filtering ensures retained samples represent high-certainty and unambiguous extractions."
+      },
+      {
+        "span_id": "C0035-D-P012-PICTURE-0003",
+        "page": 12,
+        "excerpt": "AutoBioKG resolves contextual conflicts ... by incorporating conditional attributes"
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "The method relies on a fixed composite-triple schema with one optional attribute slot for each entity and one condition slot on the relation, which may not express all biomedical event or n-ary structures.",
+      "The reported Summary evaluation did not dominate: EDC achieved higher ROUGE-2 F1 than AutoBioKG.",
+      "The self-evolution process was restricted to one refinement cycle because later cycles were observed to increase noise and produce diminishing returns.",
+      "Knowledge fusion depends on similarity thresholds and may retain novel entities or relations in unnormalized form when no sufficiently similar UMLS candidate exists.",
+      "The BioOpenIE annotation and validation pipeline is heavily LLM-mediated, so its quality depends on automated annotator behavior and the consensus procedure.",
+      "Review-level inference: comparison with baselines is strongest for the specified datasets and shared KG-RAG setup; it does not establish universal superiority across biomedical domains or graph-construction settings."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0035-D-P014-TEXT-0001",
+        "page": 14,
+        "excerpt": "we restricted self-evolution to a single refinement cycle to balance knowledge expansion and noise control."
+      },
+      {
+        "span_id": "C0035-D-P011-TEXT-0002",
+        "page": 11,
+        "excerpt": "EDC leads slightly in ROUGE-2 F1 score with 13.8% versus 13.5%."
+      },
+      {
+        "span_id": "C0035-D-P017-TEXT-0003",
+        "page": 17,
+        "excerpt": "Entities failing to reach this threshold retain their original text form as novel entities not yet incorporated in UMLS"
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The current framework primarily targets standard research articles; extending it to heterogeneous document types such as patents or clinical trial reports remains future work.",
+      "Integrating multimodal data, including chemical molecular structures or microscopic imagery, may be needed to capture mechanisms not evident from text alone.",
+      "The authors identify iterative active learning as a future direction for improving predictive accuracy.",
+      "The paper notes that summary fluency depends partly on the underlying language model, even when the graph provides accurate factual foundations."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0035-D-P019-TEXT-0001",
+        "page": 19,
+        "excerpt": "the current framework primarily targets standard research articles. Consequently, extending the framework to process heterogeneous document types, such as patents or clinical trial reports, remains a critical direction"
+      },
+      {
+        "span_id": "C0035-D-P019-TEXT-0002",
+        "page": 19,
+        "excerpt": "Integrating multimodal data ... may improve its ability to capture complex biological mechanisms"
+      },
+      {
+        "span_id": "C0035-D-P011-TEXT-0003",
+        "page": 11,
+        "excerpt": "organizing these facts into fluent narrative essays depends more on the generation capability of the underlying language model"
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed improvement: extend training and extraction to patents, clinical trial reports, and other heterogeneous biomedical documents.",
+      "Author-proposed improvement: incorporate multimodal evidence such as molecular structures and microscopy images.",
+      "Author-proposed improvement: add iterative active-learning cycles to refine the model and predictive accuracy.",
+      "Review-level inference: add explicit support for multiple attributes, nested conditions, temporal intervals, negation, uncertainty, provenance, and n-ary events to reduce representational loss.",
+      "Review-level inference: evaluate normalization and relation alignment against manually curated entity-linking and schema-mapping gold standards, not only downstream QA.",
+      "Review-level inference: perform independent human annotation and cross-domain robustness tests to quantify LLM-generated training-label bias."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0035-D-P019-TEXT-0001",
+        "page": 19,
+        "excerpt": "extending the framework to process heterogeneous document types ... remains a critical direction for future improvements"
+      },
+      {
+        "span_id": "C0035-D-P019-TEXT-0002",
+        "page": 19,
+        "excerpt": "Incorporating iterative cycles of active learning could further refine the model and improve its predictive accuracy"
+      },
+      {
+        "span_id": "C0035-D-P013-TEXT-0003",
+        "page": 13,
+        "excerpt": "Attribute and Condition are optional slots."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Context-dependent biomedical interactions remain difficult to represent when they require more complex structures than the composite triple schema.",
+      "The paper leaves open how to prevent hallucinated or semantically incorrect pseudo-labels during self-evolution; its ablation shows that supervised correction can propagate errors and confidence-only filtering admits noisy samples.",
+      "Entity and relation normalization remain incomplete for emerging terminology that falls below similarity thresholds or is absent from UMLS.",
+      "Generalization to patents, clinical trial reports, multimodal evidence, and broader biomedical document genres remains unresolved.",
+      "Review-level inference: reliable evaluation of context preservation, contradiction resolution, and mechanistic inference beyond the reported BioASQ case studies remains an open problem.",
+      "Review-level inference: the paper does not establish whether the graph remains accurate and consistent under continual updating at substantially larger corpus scale."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0035-D-P021-TEXT-0001",
+        "page": 21,
+        "excerpt": "the Validator Model suffered from over-correction bias ... introducing subtle semantic errors ... amplifying hallucinations."
+      },
+      {
+        "span_id": "C0035-D-P022-TEXT-0002",
+        "page": 22,
+        "excerpt": "LLMs are known to suffer from poor calibration, often assigning high confidence probabilities even to hallucinations."
+      },
+      {
+        "span_id": "C0035-D-P019-TEXT-0003",
+        "page": 19,
+        "excerpt": "extending the framework to process heterogeneous document types ... remains a critical direction"
+      }
+    ]
+  },
+  "code_and_data_availability": "The BioOpenIE dataset and experimental data for ablation studies, as well as the AutoBioKG source code including the self-evolution pipeline and model-training scripts, are reported as available at https://github.com/ZYK006/AutoBioKG."
+}

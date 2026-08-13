@@ -1,0 +1,783 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0052",
+    "title": "Knowledge Base Population: Successful Approaches and Challenges",
+    "pdf_path": "data/batches/batch-03/C0052.pdf",
+    "authors": [
+      "Heng Ji",
+      "Ralph Grishman"
+    ],
+    "year": 2011,
+    "venue": "Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The paper overviews the Knowledge Base Population track at the 2010 Text Analysis Conference. KBP comprises Entity Linking, which links names in context to knowledge-base entities, and Slot Filling, which adds entity information to the knowledge base from newswire and web documents. The paper surveys successful techniques, analyzes remaining challenges in comparison with traditional Information Extraction and Question Answering, and suggests ways to address them.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0052-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Heng Ji; Ralph Grishman",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication information",
+      "span_id": "C0052-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics ... June 19–24, 2011",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication information",
+      "span_id": "C0052-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics, pages 1148–1158",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0052-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "In this paper we give an overview of the Knowledge Base Population (KBP) track at the 2010 Text Analysis Conference. The main goal of KBP is to promote research in discovering facts about entities and augmenting a knowledge base with these facts.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0052-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We may need to gather information about a person or organization that is scattered among the documents of a large collection. This requires the ability to identify the relevant documents and to integrate facts, possibly redundant, possibly complementary, possibly in conflict.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Task Definition and Evaluation Metrics",
+      "span_id": "C0052-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "The overall goal of KBP is to automatically identify salient and novel entities, link them to corresponding Knowledge Base entries, then discover attributes about the entities, and finally expand the KB with any new attributes.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Entity Linking: What Works",
+      "span_id": "C0052-D-P003-TABLE-0001",
+      "page": 3,
+      "excerpt": "Candidate ranking methods include unsupervised similarity computation, supervised classification, rule-based ranking, global graph-based ranking, and information retrieval.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Entity Linking: What Works",
+      "span_id": "C0052-D-P003-TABLE-0001",
+      "page": 3,
+      "excerpt": "The table summarizes Wikipedia hyperlink mining, source-document coreference resolution, document semantic analysis, IR, supervised classification, rule-based methods, and global graph-based ranking.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Slot Filling: What Works",
+      "span_id": "C0052-D-P005-TABLE-0002",
+      "page": 5,
+      "excerpt": "Slot filling answer extraction methods include distant learning, bootstrapping, distant supervision, supervised classifiers, QA, and hand-coded heuristic rules.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Use of External Knowledge Base",
+      "span_id": "C0052-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "CUNY exploited Freebase and LCC exploited DBpedia as fact validation in slot filling.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Entity Linking: A General Architecture",
+      "span_id": "C0052-D-P003-PICTURE-0001",
+      "page": 3,
+      "excerpt": "The general entity linking architecture consists of query expansion, KB node candidate generation, and KB node candidate ranking before producing an answer.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Slot Filling: A General Architecture",
+      "span_id": "C0052-D-P005-PICTURE-0002",
+      "page": 5,
+      "excerpt": "The basic system structure involved three phases: document/passage retrieval, answer extraction, and answer combination.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Entity Linking: A General Architecture",
+      "span_id": "C0052-D-P003-PICTURE-0001",
+      "page": 3,
+      "excerpt": "It includes three steps: (1) query expansion ... (2) candidate generation ... (3) candidate ranking.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Slot Filling: A General Architecture",
+      "span_id": "C0052-D-P005-PICTURE-0002",
+      "page": 5,
+      "excerpt": "Most participants met this challenge through a hybrid system which combined aspects of QA (passage retrieval) and IE (answer extraction and answer combination).",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Toward System Combination",
+      "span_id": "C0052-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "The increasing number of diverse approaches based on different resources provide new opportunities for both entity linking and slot filling tasks to benefit from system combination.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Task Definition and Evaluation Metrics",
+      "span_id": "C0052-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Attributes (“slots”) derived from Wikipedia infoboxes are used to create the reference KB.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Task Definition and Evaluation Metrics",
+      "span_id": "C0052-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "KBP2010 defined 26 types of attributes for persons ... and 16 types of attributes for organizations.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Use of External Knowledge Base",
+      "span_id": "C0052-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "These resources can provide a large number of seed tuples to bootstrap slot filling or guide distant learning.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Entity Linking: A General Architecture",
+      "span_id": "C0052-D-P003-PICTURE-0001",
+      "page": 3,
+      "excerpt": "Query expansion, candidate generation, and candidate ranking produce an entity-linking answer.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Slot Filling: A General Architecture",
+      "span_id": "C0052-D-P005-PICTURE-0002",
+      "page": 5,
+      "excerpt": "Document/passage retrieval, answer extraction, and answer combination form the basic slot-filling structure.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Toward System Combination",
+      "span_id": "C0052-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "The CUNY slot filling system combined individual pipelines using global features including voting and dependency relations.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Task Definition and Evaluation Metrics",
+      "span_id": "C0052-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The source collection includes 1,286,609 newswire documents, 490,596 web documents and hundreds of transcribed spoken documents.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Task Definition and Evaluation Metrics",
+      "span_id": "C0052-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Each query in the Slot Filling task consists of the name of the entity, its type ... a background document containing the name ... its node ID ... and the attributes which need not be filled.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Slot Filling: Remaining Challenges",
+      "span_id": "C0052-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "In only 60.4% of the cases do the entity name and slot fill appear together in the same sentence.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Task Definition and Evaluation Metrics",
+      "span_id": "C0052-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The system is required to provide the ID of the KB entry to which the query refers; or NIL if there is no such KB entry.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Task Definition and Evaluation Metrics",
+      "span_id": "C0052-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Along with each slot fill, the system must provide the ID of a document which supports the correctness of this fill.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Entity Linking: What Works",
+      "span_id": "C0052-D-P003-TABLE-0001",
+      "page": 3,
+      "excerpt": "Methods include Wikipedia hyperlink mining, source document coreference resolution, document semantic analysis, IR, unsupervised similarity computation, supervised classification, rule-based ranking, and global graph-based ranking.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Slot Filling: What Works",
+      "span_id": "C0052-D-P005-TABLE-0002",
+      "page": 5,
+      "excerpt": "Methods include distant learning, bootstrapping, distant supervision, supervised classifiers, QA, and hand-coded heuristic rules.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Toward System Combination",
+      "span_id": "C0052-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "The NUSchime entity linking system trained an SVM based re-scoring model ... The CUNY slot filling system trained a maximum-entropy-based re-ranking model.",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Task Definition and Evaluation Metrics",
+      "span_id": "C0052-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The reference KB includes hundreds of thousands of entities based on articles from an October 2008 dump of English Wikipedia which includes 818,741 nodes.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Task Definition and Evaluation Metrics",
+      "span_id": "C0052-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "The source collection includes 1,286,609 newswire documents, 490,596 web documents and hundreds of transcribed spoken documents.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Task Definition and Evaluation Metrics",
+      "span_id": "C0052-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "To score Entity Linking ... we compute the Micro-averaged Accuracy, computed across all queries.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Task Definition and Evaluation Metrics",
+      "span_id": "C0052-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Recall = Correct / Reference; Precision = Correct / System; F-Measure = (2 × Recall × Precision) / (Recall + Precision).",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Slot Filling: Remaining Challenges",
+      "span_id": "C0052-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "The Precision, Recall and F-measure for the initial human annotation are only about 70%, 54% and 61% respectively.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Semantic Relation Features",
+      "span_id": "C0052-D-P004-TABLE-0001",
+      "page": 4,
+      "excerpt": "The baseline system uses only Wikipedia title features for BuptPris and tf-idf weighted word features for CUNY; semantic features are compared against these baselines.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Toward System Combination",
+      "span_id": "C0052-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "The highest voting combination achieved a 4.7% absolute improvement in micro-averaged accuracy over the top entity-linking system.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Task Definition and Evaluation Metrics",
+      "span_id": "C0052-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Each site could submit up to three runs with different parameters.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Entity Linking: Remaining Challenges",
+      "span_id": "C0052-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "There are 2250 queries in the Entity Linking evaluation.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Slot Filling: Remaining Challenges",
+      "span_id": "C0052-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "An initial answer key annotation was created by a manual search of the corpus ... and then an independent adjudication pass was applied.",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Entity Linking: What Works",
+      "span_id": "C0052-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The top system achieved 85.78% micro-averaged accuracy.",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Semantic Relation Features",
+      "span_id": "C0052-D-P004-TABLE-0002",
+      "page": 4,
+      "excerpt": "BuptPris overall: 58.93 without semantic features and 73.29 with them; CUNY overall: 59.91 without and 69.29 with them.",
+      "confidence": "medium"
+    },
+    "main_results-21-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Toward System Combination",
+      "span_id": "C0052-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "The highest absolute improvement of 4.7% in micro-averaged accuracy over the top entity linking system.",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Abstract",
+      "span_id": "C0052-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We provide an overview of the techniques which can serve as a basis for a good KBP system, lay out the remaining challenges ... and provide some suggestions to address these challenges.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Toward System Combination",
+      "span_id": "C0052-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "The increasing number of diverse approaches based on different resources provide new opportunities ... to benefit from system combination.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Context Inference",
+      "span_id": "C0052-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "In the current setting of KBP, a set of target entities is provided to each system ... ideally a fully-automatic KBP system should be able to automatically discover novel entities.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Slot Filling: Remaining Challenges",
+      "span_id": "C0052-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "Slot filling remains a very challenging task; only one system exceeded 30% F-measure on the 2010 evaluation.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Slot Filling: Remaining Challenges",
+      "span_id": "C0052-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "Many of these difficult cases involve a combination of problems, but we estimate that at least 25% of the examples involve coreference which is beyond current system capabilities.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Slot Filling: What Works",
+      "span_id": "C0052-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "The official training data ... consisted of responses to 100 queries; the participants jointly prepared responses to another 50.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Use of External Knowledge Base",
+      "span_id": "C0052-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Freebase ... only covers 48% of the slot types and 5% of the slot answers in KBP2010 evaluation data.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Slot Filling: Remaining Challenges",
+      "span_id": "C0052-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "The Precision, Recall and F-measure for the initial human annotation are only about 70%, 54% and 61% respectively.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Entity Linking: Remaining Challenges",
+      "span_id": "C0052-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "Such cases might require new query reformulation and cross-document aggregation techniques.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Analysis of Difficult Queries",
+      "span_id": "C0052-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Gazetteers with entities ranked by salience or major entities marked are worth encoding as additional features.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Slot Filling: Remaining Challenges",
+      "span_id": "C0052-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "Systems would benefit from specialists which are able to reason about times, locations, family relationships, and employment relationships.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Context Inference",
+      "span_id": "C0052-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "Ideally a fully-automatic KBP system should be able to automatically discover novel entities ... and conduct global reasoning over these attributes.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Slot Filling: Remaining Challenges",
+      "span_id": "C0052-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "Cross-sentence coreference and some types of inference are critical to slot filling.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion",
+      "span_id": "C0052-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "It places more emphasis on cross-document entity resolution ... and forces systems to deal with redundant and conflicting answers across large corpora.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper analyzes how to discover and integrate facts about entities from large, heterogeneous newswire and web document collections into a knowledge base. It addresses Entity Linking and Slot Filling, including candidate generation and ranking, retrieval, relation/attribute extraction, answer combination, cross-document coreference, inference, redundancy and conflict handling, and the limitations of the 2010 KBP evaluation setting.",
+  "methodology": {
+    "primary_family": "Classical machine learning",
+    "secondary_families": [
+      "Rule-based NLP",
+      "Linguistic and dependency-based extraction",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "not_reported",
+    "description": "This is an analytical overview rather than a single newly proposed extractor. It synthesizes approaches used by 2010 KBP participants. Entity Linking is organized as query expansion, candidate generation, and candidate ranking using Wikipedia structure, document context, information retrieval, similarity, supervised classifiers, rules, or graph ranking. Slot Filling combines passage retrieval, IE or QA-style answer extraction, redundancy removal, answer validation, distant or weak supervision, bootstrapping, supervised classification, rules, and recursive cross-slot reasoning. The paper also evaluates system combination and identifies difficult cases requiring coreference and inference."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The KB schema is defined by entity types and fixed attribute/slot types derived from Wikipedia infoboxes. KBP 2010 used PER, ORG, and GPE entity types for Entity Linking; Slot Filling used person and organization queries with 26 person attribute types and 16 organization attribute types. Existing KBs such as Freebase and DBpedia were also used for seed tuples or fact validation.",
+    "evidence": [
+      {
+        "span_id": "C0052-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "Attributes (“slots”) derived from Wikipedia infoboxes are used to create the reference KB."
+      },
+      {
+        "span_id": "C0052-D-P002-TEXT-0002",
+        "page": 2,
+        "excerpt": "KBP2010 defined 26 types of attributes for persons ... and 16 types of attributes for organizations."
+      },
+      {
+        "span_id": "C0052-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "These resources can provide a large number of seed tuples to bootstrap slot filling or guide distant learning."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Entity and concept extraction",
+    "Entity typing",
+    "Coreference resolution",
+    "Entity linking",
+    "Relation and slot extraction",
+    "Candidate generation and ranking",
+    "Document and passage retrieval",
+    "Knowledge fusion and answer validation",
+    "Deduplication and redundancy removal",
+    "Cross-document and cross-slot reasoning",
+    "Graph or knowledge-base updating"
+  ],
+  "input_output": {
+    "input_type": "Unstructured English newswire, web documents, and some transcribed spoken documents, together with entity queries and background documents.",
+    "input_granularity": "Entity-query plus a disambiguating background document for Entity Linking; entity query, type, background document, KB node ID when available, and unfilled attributes for Slot Filling. Evidence may be distributed across documents, passages, sentences, and cross-sentence contexts.",
+    "output_representation": "Entity Linking outputs a KB node identifier or NIL. Slot Filling outputs non-NIL attribute/slot values with supporting document IDs, or NIL when no evidence exists; answers are grouped into equivalence classes and redundant answers are removed."
+  },
+  "models_and_tools": [
+    "Wikipedia hyperlink, redirect, disambiguation, anchor, and infobox mining",
+    "Source-document coreference resolution",
+    "Information retrieval and vector-space similarity",
+    "Supervised classifiers, including SVM and maximum entropy",
+    "Rule-based and hand-coded heuristic systems",
+    "Graph-based ranking and PageRank-like algorithms",
+    "Distant supervision and bootstrapping",
+    "Question-answering components",
+    "Entity salience and web popularity ranking",
+    "Recursive cross-slot and cross-query reasoning",
+    "Voting and system-combination re-ranking"
+  ],
+  "datasets": [
+    "TAC KBP 2010 Entity Linking evaluation",
+    "TAC KBP 2010 Slot Filling evaluation",
+    "Reference KB based on an October 2008 English Wikipedia dump with 818,741 nodes",
+    "KBP source collection: 1,286,609 newswire documents, 490,596 web documents, and hundreds of transcribed spoken documents"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Micro-averaged accuracy for Entity Linking",
+      "Precision, recall, and F-measure for Slot Filling",
+      "Manual correctness, wrong, and redundant judgments for pooled slot responses",
+      "Inter-annotator-agreement benchmark for Entity Linking",
+      "Annotation precision, recall, and F-measure"
+    ],
+    "baselines": [
+      "BuptPris Entity Linking using only Wikipedia title features versus semantic features",
+      "CUNY Entity Linking using tf-idf weighted word features versus semantic features",
+      "Individual entity-linking pipelines versus SVM re-scoring and voting combinations",
+      "Individual slot-filling pipelines versus maximum-entropy re-ranking combination",
+      "Existing KB validation resources such as Freebase and DBpedia"
+    ],
+    "setting": "The analysis covers the official TAC KBP 2010 regular Entity Linking and Slot Filling evaluations. Entity Linking used 2,250 queries and up to three runs per site; Slot Filling pooled system responses with manually prepared fills and judged them by hand. The paper also reports training-data analyses, inter-annotator comparisons, and component ablations or combinations."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "The top Entity Linking system achieved 85.78% micro-averaged accuracy; two systems approached the inter-annotator benchmark for person entities and one exceeded it.",
+      "Stanford-UBC improved Entity Linking micro-averaged accuracy from 74.85% to 82.15% using Wikipedia hyperlink-derived features.",
+      "Adding semantic features improved BuptPris overall accuracy from 58.93% to 73.29% and CUNY overall accuracy from 59.91% to 69.29%.",
+      "A web-popularity-only candidate-ranking approach achieved 71% micro-averaged accuracy, outperforming 24 KBP2010 system runs.",
+      "Freebase/DBpedia validation produced about a 1% recall gain with a slight precision loss for CUNY and LCC.",
+      "Recursive reasoning increased CUNY training-data F-measure from 33.57% to 35.29% and IBM training-data F-measure from 26% to 34.83%.",
+      "Voting over the top nine Entity Linking systems yielded a 4.7 percentage-point absolute improvement over the top individual system.",
+      "CUNY slot-filling system combination increased training-data F-measure from 17.9%, 27.7%, and 21.0% for individual pipelines to 34.3%; only one official Slot Filling system exceeded 30% F-measure."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0052-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "The top system achieved 85.78% micro-averaged accuracy."
+      },
+      {
+        "span_id": "C0052-D-P004-TABLE-0002",
+        "page": 4,
+        "excerpt": "BuptPris overall: 58.93 without semantic features and 73.29 with them; CUNY overall: 59.91 without and 69.29 with them."
+      },
+      {
+        "span_id": "C0052-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "The highest absolute improvement of 4.7% in micro-averaged accuracy over the top entity linking system."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "The overview identifies reusable architectures and decomposes Entity Linking and Slot Filling into operational stages.",
+      "It compares diverse approaches, including supervised, unsupervised, rule-based, IR, graph-based, QA, distant-supervision, and system-combination methods.",
+      "The analysis explicitly examines difficult cases, cross-document coreference, cross-slot inference, noisy web input, and annotation quality rather than focusing only on aggregate scores.",
+      "The reviewed approaches can exploit existing knowledge bases, Wikipedia structure, document context, recursive reasoning, and complementary system outputs."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0052-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "We provide an overview of the techniques which can serve as a basis for a good KBP system, lay out the remaining challenges ... and provide some suggestions to address these challenges."
+      },
+      {
+        "span_id": "C0052-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "The increasing number of diverse approaches based on different resources provide new opportunities ... to benefit from system combination."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Review analysis: The paper is an overview and does not introduce or evaluate one unified end-to-end Text-to-KG system.",
+      "Review analysis: The surveyed evaluation assumes target entities are supplied, so it does not fully evaluate automatic discovery of novel entities and complete corpus-wide KB population.",
+      "Review analysis: Slot Filling remains weak: only one system exceeded 30% F-measure, and many correct human-filled cases were missed by all systems.",
+      "Review analysis: The systems depend heavily on limited training data, noisy web text, external resources, and difficult cross-sentence coreference and inference.",
+      "Review analysis: Results from diverse participant systems are not uniformly controlled experiments, so component effects are not always directly comparable."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0052-D-P005-TEXT-0001",
+        "page": 5,
+        "excerpt": "In the current setting of KBP, a set of target entities is provided to each system ... ideally a fully-automatic KBP system should be able to automatically discover novel entities."
+      },
+      {
+        "span_id": "C0052-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "Slot filling remains a very challenging task; only one system exceeded 30% F-measure on the 2010 evaluation."
+      },
+      {
+        "span_id": "C0052-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "Many of these difficult cases involve a combination of problems, but we estimate that at least 25% of the examples involve coreference which is beyond current system capabilities."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The small amount of official training data limits traditional supervised learning coverage; the official training data contained responses to 100 queries, with another 50 prepared jointly.",
+      "Existing manually created knowledge bases cover only some slot types and answers; Freebase covers 48% of slot types and 5% of slot answers in the KBP2010 evaluation data.",
+      "Web popularity information is a changing black box, making research results difficult to duplicate.",
+      "The current evaluation setting supplies target entities and therefore does not require systems to discover all novel entities in the source collection.",
+      "Annotation quality limits the attainable score: initial human annotation was approximately 70% precision, 54% recall, and 61% F-measure.",
+      "Cross-sentence coreference and inference are critical but remain beyond current systems in many cases."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0052-D-P005-TEXT-0001",
+        "page": 5,
+        "excerpt": "The official training data ... consisted of responses to 100 queries; the participants jointly prepared responses to another 50."
+      },
+      {
+        "span_id": "C0052-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "Freebase ... only covers 48% of the slot types and 5% of the slot answers in KBP2010 evaluation data."
+      },
+      {
+        "span_id": "C0052-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "The Precision, Recall and F-measure for the initial human annotation are only about 70%, 54% and 61% respectively."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Improve query reformulation and cross-document aggregation for cases requiring external hyperlink analysis.",
+      "Use entity salience rankings or curated gazetteers as additional candidate-ranking features while addressing reproducibility of dynamic web signals.",
+      "Develop deeper context-entity understanding for ambiguous GPE queries and use global reasoning over related entities.",
+      "Use bootstrapping, distant supervision, and filtering to expand sparse training coverage while reducing noise.",
+      "Improve robust mention detection and structured-content recovery for noisy web data.",
+      "Develop specialized reasoning for time, location, family, and employment relations; use cross-slot coherence and recursive queries.",
+      "Combine complementary systems using confidence, voting, dependency, and global features."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0052-D-P005-TEXT-0001",
+        "page": 5,
+        "excerpt": "Such cases might require new query reformulation and cross-document aggregation techniques."
+      },
+      {
+        "span_id": "C0052-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "Gazetteers with entities ranked by salience or major entities marked are worth encoding as additional features."
+      },
+      {
+        "span_id": "C0052-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "Systems would benefit from specialists which are able to reason about times, locations, family relationships, and employment relationships."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Fully automatic discovery of salient and novel entities across the entire source collection remains unresolved.",
+      "Reliable cross-document and cross-sentence coreference, including nominal and non-identity coreference, remains unresolved.",
+      "Cross-slot and world-knowledge inference needed to maintain coherent entity profiles remains difficult.",
+      "Handling redundant, complementary, and conflicting facts across large document collections remains a central challenge.",
+      "Robust extraction from noisy web documents and effective use of hyperlinks and external background knowledge remain unresolved.",
+      "The limited and imperfectly annotated training data, incomplete external KB coverage, and evaluation ceiling imposed by annotation inconsistency remain unresolved.",
+      "The paper leaves open whether current state-of-the-art techniques have reached a performance ceiling."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0052-D-P005-TEXT-0001",
+        "page": 5,
+        "excerpt": "Ideally a fully-automatic KBP system should be able to automatically discover novel entities ... and conduct global reasoning over these attributes."
+      },
+      {
+        "span_id": "C0052-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "Cross-sentence coreference and some types of inference are critical to slot filling."
+      },
+      {
+        "span_id": "C0052-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "It places more emphasis on cross-document entity resolution ... and forces systems to deal with redundant and conflicting answers across large corpora."
+      }
+    ]
+  },
+  "code_and_data_availability": "not_reported"
+}

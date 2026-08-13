@@ -1,0 +1,914 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0146",
+    "title": "Generative Knowledge Graph Construction: A Review",
+    "pdf_path": "data/pdfs/C0146.pdf",
+    "authors": [
+      "Hongbin Ye",
+      "Ningyu Zhang",
+      "Hui Chen",
+      "Huajun Chen"
+    ],
+    "year": 2022,
+    "venue": "Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing (EMNLP 2022)",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "This review defines generative knowledge graph construction as sequence-to-sequence methods for building knowledge graphs. It summarizes recent generative KGC progress, compares paradigm advantages and weaknesses by generation target, provides theoretical and empirical analyses, and proposes future research directions.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0146-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Hongbin Ye, Ningyu Zhang, Hui Chen, Huajun Chen",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication footer",
+      "span_id": "C0146-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing ... ©2022 Association for Computational Linguistics",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication footer",
+      "span_id": "C0146-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing, pages 1–17",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0146-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Generative Knowledge Graph Construction (KGC) refers to those methods that leverage the sequence-to-sequence framework for building knowledge graphs... We present the advantages and weaknesses of each paradigm... and provide theoretical insight and empirical analysis.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0146-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Conventionally, KGC is solved by employing task-specific discriminators... in a pipeline manner... However, this presents limitations of error population and poor adaptability for different tasks.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0146-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "Despite the success of numerous generative KGC approaches, these works scattered among various tasks have not been systematically reviewed and analyzed.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-03": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "2.1 Knowledge Graph Construction",
+      "span_id": "C0146-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "Knowledge Graph Construction mainly aims to extract structural information from unstructured texts, such as Named Entity Recognition, Relation Extraction, Event Extraction, Entity Linking, and Knowledge Graph Completion.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0146-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Generative Knowledge Graph Construction (KGC) refers to those methods that leverage the sequence-to-sequence framework for building knowledge graphs.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3 Taxonomy of Generative Knowledge Graph Construction",
+      "span_id": "C0146-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "we mainly consider the following five paradigms... based on generation target",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "2.2 Discrimination and Generation Methodologies",
+      "span_id": "C0146-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "if x is the input sentence and y the result of linearized triplets, the target for the generation model is to autoregressively generate y given x",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "4.1 Theoretical Insight",
+      "span_id": "C0146-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "knowledge-guided (or schema-guided) decoding has become the mainstay for many generative KGC tasks.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3.6 Comparison and Discussion",
+      "span_id": "C0146-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "A unifying theme across many of these methods is that of end-to-end architecture or the idea that the knowledge extraction can be redefined as text sequence to structure generation task.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "5 Future Directions: Inference Speed",
+      "span_id": "C0146-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "Sui et al. (2021) also formulates end-to-end knowledge base population as a direct set generation problem.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "2.2 Discrimination and Generation Methodologies",
+      "span_id": "C0146-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "By fine-tuning seq2seq model (e.g. MASS, T5, and BART) on such a task, using the cross-entropy loss, we can maximize the log-likelihood of the generated linearized triplets.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "5 Future Directions: Training Efficiency",
+      "span_id": "C0146-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "In practical applications, it is essential to reduce data annotation and training costs. One idea is to freeze most of the generation model parameters... or leverage prompt learning.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0146-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Our contributions are threefold: (1) We present a detailed, complete taxonomy... (2) We provide a theoretical and empirical analysis... (3) We propose several research directions.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3 Taxonomy of Generative Knowledge Graph Construction",
+      "span_id": "C0146-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "we mainly consider the following five paradigms... copy-based Sequence, structure-linearized Sequence, label-augmented Sequence, indice-based Sequence, and blank-based Sequence.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.3–3.5",
+      "span_id": "C0146-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "This paradigm refers to utilizing the extra markers to indicate specific entities or relationships... generates the indices of the words in the input text... utilizing templates to define the appropriate order and relationship for the generated spans.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-04": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.6 Comparison and Discussion",
+      "span_id": "C0146-D-P006-TEXT-0004",
+      "page": 6,
+      "excerpt": "Table 1... [compares] Semantic utilization... Search space... Application scope... Template cost.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.2 Structure-linearized Sequence",
+      "span_id": "C0146-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "it utilizes the event schema to constrain decoding space, ensuring the output text is semantically and structurally legitimate.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.6 Comparison and Discussion",
+      "span_id": "C0146-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Generative models can decode and control extraction targets on demand for different specific tasks, scenarios, and settings (i.e., different schema).",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "4.1 Theoretical Insight",
+      "span_id": "C0146-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "the model will limit the target set by pre-defined schema as YT ⊂ Y.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0146-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "KGC is proposed, which is the process of populating (or building from scratch) a KG with new knowledge elements (e.g., entities, relations, events).",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0146-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "typically including (1) entity discovery or named entity recognition, (2) entity linking, (3) relation extraction and (4) event extraction.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "2.1 Knowledge Graph Construction",
+      "span_id": "C0146-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "Knowledge Graph Completion aims to complete incomplete triples ⟨Steve Job, create, ?⟩ for blank entities Apple, NeXT Inc. and Pixar.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "2.1 Knowledge Graph Construction",
+      "span_id": "C0146-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Knowledge Graph Construction mainly aims to extract structural information from unstructured texts.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3.5 Blank-based Sequence",
+      "span_id": "C0146-D-P006-CAPTION-0002",
+      "page": 6,
+      "excerpt": "Document... + Template... The template refers to a text describing an event type, which adds blank argument role placeholders.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "2.1 Knowledge Graph Construction",
+      "span_id": "C0146-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "For instance, given a sentence, 'Steve Jobs and Steve Wozniak co-founded Apple in 1977.'",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.1 Copy-based Sequence",
+      "span_id": "C0146-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "For document-level extraction, Huang et al. (2021) proposes a TOP-k copy mechanism to alleviate the computational complexity of entity pairs.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-03": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.5 Blank-based Sequence",
+      "span_id": "C0146-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "Li et al. (2021b) frames document-level event argument extraction as conditional generation given a template.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Figure 1 and Introduction",
+      "span_id": "C0146-D-P001-PICTURE-0001",
+      "page": 1,
+      "excerpt": "Seq2Seq Text: <triplet> United States <subj> Joe Biden <obj> Country-President. Delinearization [produces the extracted result].",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.4 Indice-based Sequence",
+      "span_id": "C0146-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "the output sequence y is generated via the indices: y = [b1, e1, t1, ...]; bi and ei indicates the begin and end indices... ti is the index of the entity type.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-03": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.5 Blank-based Sequence",
+      "span_id": "C0146-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "The output sequences are sentences where the blank placeholders are replaced by specific event arguments.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "2.2 Discrimination and Generation Methodologies",
+      "span_id": "C0146-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "By fine-tuning seq2seq model (e.g. MASS, T5, and BART) on such a task... [maximize] the generated linearized triplets.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.1 Copy-based Sequence",
+      "span_id": "C0146-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "the model copies the head entity from the input sentence and then the tail entity. Similarly, relations are generated from target vocabulary.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.4 Indice-based Sequence",
+      "span_id": "C0146-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "The hidden vector is computed at decoding time by the pointer network... to get the representation of the tuple indices.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-04": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.1 Theoretical Insight",
+      "span_id": "C0146-D-P007-TEXT-0004",
+      "page": 7,
+      "excerpt": "Vanilla decoding solutions such as beam search or greedy have been investigated... knowledge-guided (or schema-guided) decoding has become the mainstay.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-05": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "5 Future Directions: Inference Speed",
+      "span_id": "C0146-D-P009-TEXT-0005",
+      "page": 9,
+      "excerpt": "the autoregressive decoder generates each token based on previously generated tokens during inference, and this process is not parallelizable.",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.2 Empirical Analysis",
+      "span_id": "C0146-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "we only select two representative tasks of entity/relation extraction and event extraction with NYT and ACE datasets.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.2 Empirical Analysis",
+      "span_id": "C0146-D-P008-TABLE-0002",
+      "page": 8,
+      "excerpt": "Table 2: Main results of NYT dataset.",
+      "confidence": "medium"
+    },
+    "datasets-17-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.2 Empirical Analysis",
+      "span_id": "C0146-D-P008-TABLE-0003",
+      "page": 8,
+      "excerpt": "Table 3: F1 results (%) of ACE-2005.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.2 Empirical Analysis",
+      "span_id": "C0146-D-P008-TABLE-0001",
+      "page": 8,
+      "excerpt": "NYT ... P R F",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.2 Empirical Analysis",
+      "span_id": "C0146-D-P008-TABLE-0002",
+      "page": 8,
+      "excerpt": "F1 results (%) of ACE-2005... Id is Identification, and Cl is Classification.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.2 Empirical Analysis",
+      "span_id": "C0146-D-P008-TABLE-0001",
+      "page": 8,
+      "excerpt": "Table 2 lists discrimination models CasRel, TPLinker and OneRel, alongside copy-based, structure-based, label-based, indice-based and non-autoregressive methods.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.2 Empirical Analysis",
+      "span_id": "C0146-D-P008-TABLE-0002",
+      "page": 8,
+      "excerpt": "Table 3 lists discrimination models JMEE, DYGIE++, OneIE, QAEE, MQAEE and RCEE, and generative methods TEXT2EVENT, UIE, DEEPSTRUCT, TANL, BART-Gen, DEGREE, GTEE and PAIE.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.2 Empirical Analysis",
+      "span_id": "C0146-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "To investigate the effect of different generation methods, we conduct an analysis of the experimental results of existing generative KGC work... Results are taken from existing papers.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.2 Empirical Analysis",
+      "span_id": "C0146-D-P008-TABLE-0002",
+      "page": 8,
+      "excerpt": "The top section refers to the discrimination models, and the bottom section indicates generation models.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "2.3 Advantages of the Generation Methods",
+      "span_id": "C0146-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "the discriminative and generative methods are not simply superior or inferior due to the proliferation of related studies.",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.2 Empirical Analysis",
+      "span_id": "C0146-D-P008-TABLE-0001",
+      "page": 8,
+      "excerpt": "NYT: OneRel 92.8 F; CGT 94.7 P, 84.2 R, 89.1 F; REBEL 91.5 P, 92.0 R, 91.8 F; UIE 93.5 F; DEEPSTRUCT 93.9 F; SPN 93.3 P, 91.7 R, 92.5 F.",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.2 Empirical Analysis",
+      "span_id": "C0146-D-P008-TABLE-0002",
+      "page": 8,
+      "excerpt": "ACE-2005: DEEPSTRUCT 73.5/69.8 trigger Id/Cl and 59.4/56.2 argument Id/Cl; PAIE 75.7*/72.7* argument Id/Cl.",
+      "confidence": "medium"
+    },
+    "main_results-21-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.2 Empirical Analysis",
+      "span_id": "C0146-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "Structure-based and label-based methods both achieve similar extraction performance compared with all discrimination models on NYT datasets.",
+      "confidence": "medium"
+    },
+    "main_results-21-04": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 3 caption",
+      "span_id": "C0146-D-P008-TABLE-0004",
+      "page": 8,
+      "excerpt": "'*' refers to experiments only in argument extraction tasks with the golden trigger.",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Abstract",
+      "span_id": "C0146-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We present the advantages and weaknesses of each paradigm in terms of different generation targets and provide theoretical insight and empirical analysis.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.6 Comparison and Discussion",
+      "span_id": "C0146-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Table 1... [compares] Semantic utilization... Search space... Application scope... Template cost.",
+      "confidence": "medium"
+    },
+    "strengths-22-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.1 Theoretical Insight",
+      "span_id": "C0146-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "the design of output space is vital for generative KGC, and it is necessary to balance parametric optimization as well as semantic utilization.",
+      "confidence": "medium"
+    },
+    "strengths-22-04": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "6 Conclusion and Vision",
+      "span_id": "C0146-D-P009-TEXT-0004",
+      "page": 9,
+      "excerpt": "the generative paradigm for KGC has the potential advantages of unifying different tasks and better utilizing semantic information.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.6 Comparison and Discussion",
+      "span_id": "C0146-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "Due to the application of the constraint decoding mechanism, some structure-based methods can be reduced to the same decoding space as the copy-based methods.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2 Empirical Analysis",
+      "span_id": "C0146-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "Results are taken from existing papers... Due to space limitations of the article, we only select two representative tasks... with NYT and ACE datasets.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "5 Future Directions: Inference Speed",
+      "span_id": "C0146-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "the autoregressive decoder generates each token based on previously generated tokens during inference, and this process is not parallelizable.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-04": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.1 Theoretical Insight",
+      "span_id": "C0146-D-P007-TEXT-0004",
+      "page": 7,
+      "excerpt": "the model with a small output space may fail to utilize rich semantic information from labels or text.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "7 Limitations",
+      "span_id": "C0146-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "Due to the page limit, we cannot afford the technical details for models. Moreover, we only review the works within five years, mainly from the ACL, EMNLP, NAACL, COLING, AAAI, IJCAI, etc. We will continue adding more related works with more detailed analysis.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "5 Future Directions: Generation Architecture",
+      "span_id": "C0146-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "we argue that neuro-symbolic models... can be designed for generative KGC.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "5 Future Directions: Generation Quality",
+      "span_id": "C0146-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "more sophisticated strategies can be leveraged to control the quality... Control code construction... decoding strategy... Loss function design... Prompt design... Retrieval augmentation... Write-then-Edit strategy... Diffusion process.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "5 Future Directions: Training Efficiency and Universal Deployment",
+      "span_id": "C0146-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "it is essential to reduce data annotation and training costs... freeze most... parameters or leverage prompt learning... it is beneficial to study the framework to advocate for a unified view of KGC.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-04": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "5 Future Directions: Inference Speed",
+      "span_id": "C0146-D-P009-TEXT-0004",
+      "page": 9,
+      "excerpt": "it is beneficial to develop a fast inference model for generative KGC.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.1 Theoretical Insight",
+      "span_id": "C0146-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "it is necessary to balance parametric optimization as well as semantic utilization.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5 Future Directions: Universal Deployment",
+      "span_id": "C0146-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "instead of improvements being prone to be exclusive to a single task, domain, or dataset, we argue that it is beneficial to study the framework to advocate for a unified view of KGC.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "6 Conclusion and Vision",
+      "span_id": "C0146-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "we envision a more potent synergy between the methodologies from the NLG and knowledge graph communities... symbolic structure in KG can have potential guidance for text generation.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-04": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5 Future Directions: Inference Speed",
+      "span_id": "C0146-D-P009-TEXT-0004",
+      "page": 9,
+      "excerpt": "the non-autoregressive approach applied to KGC proves to be effective in solving the exposure bias and overfitting problems.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Introduction: Present work",
+      "span_id": "C0146-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "maintain a public repository for research convenience... https://github.com/zjunlp/Generative_KG_Construction_Papers",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "A survey problem: generative KGC methods had become distributed across entity recognition, relation extraction, event extraction, entity linking, and KG completion, without a systematic review or common comparison. The paper organizes and analyzes these methods, which use Seq2Seq generation to extract or generate KG-relevant structures from text and thereby avoid the task-specific pipeline limitations of error propagation and poor cross-task adaptability.",
+  "methodology": {
+    "primary_family": "Generative text-to-structure methods",
+    "secondary_families": [
+      "Joint entity-relation extraction",
+      "Ontology-constrained and schema-guided methods"
+    ],
+    "system_type": "end_to_end",
+    "supervision_setting": "supervised",
+    "description": "The paper surveys generative KGC as conditional sequence generation: unstructured text x is mapped to a linearized structural target y, then inverse-linearized or decoded into entities, relations/triples, event structures, links, or KG-completion outputs. It proposes five generation-target paradigms in execution terms: (1) copy-based sequences copy entity tokens while generating relation tokens from a restricted vocabulary; (2) structure-linearized sequences serialize a target graph/event/triple structure, often with schema-constrained decoding; (3) label-augmented sequences reproduce input text with bracketed natural-language labels; (4) indice-based sequences generate begin/end and label indices via pointer-style decoding; and (5) blank-based sequences fill role placeholders in event templates. The review compares semantic utilization, decoding search space, application scope, and template cost; theoretically analyzes output-space/semantic trade-offs and decoding; and aggregates reported NYT and ACE-2005 results from prior work. Contributions explicitly stated by the authors are a detailed taxonomy, theoretical and empirical analysis, and future directions."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "Schema use is central to several reviewed generative approaches. Targets may be restricted to a predefined schema; structural/event schemas constrain decoding and validate semantic/structural legitimacy. The review describes prefix-tree decoding based on predefined schemas and label-semantic or template-based representations. It does not propose a new ontology or schema itself.",
+    "evidence": [
+      {
+        "span_id": "C0146-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "it utilizes the event schema to constrain decoding space, ensuring the output text is semantically and structurally legitimate."
+      },
+      {
+        "span_id": "C0146-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "Generative models can decode and control extraction targets on demand for different specific tasks, scenarios, and settings (i.e., different schema)."
+      },
+      {
+        "span_id": "C0146-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "the model will limit the target set by pre-defined schema as YT ⊂ Y."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Entity and concept extraction",
+    "Entity typing",
+    "Entity resolution and linking",
+    "Relation and triple extraction",
+    "Event extraction",
+    "Graph construction",
+    "Graph updating"
+  ],
+  "input_output": {
+    "input_type": "Unstructured natural-language text, including sentences and documents; certain reviewed methods additionally take a schema, task specification, or event template as input.",
+    "input_granularity": "Sentence-level examples are used for NER, relation extraction, entity linking, and triple generation; the review also covers document-level relation and event extraction.",
+    "output_representation": "Linearized structure sequences that can be inverse-linearized into typed entities, entity links, relation triples, event triggers/arguments, or KG-completion answers. Formats include copied token spans plus relation tokens, serialized triples/structures, label-augmented text, input-token indices, and filled natural-language templates."
+  },
+  "models_and_tools": [
+    "Sequence-to-sequence generative models",
+    "MASS",
+    "T5",
+    "BART",
+    "Copy mechanism",
+    "Pointer network",
+    "Prefix-tree/schema-constrained decoding",
+    "Autoregressive decoding (beam search or greedy decoding)",
+    "Non-autoregressive Transformer decoder",
+    "Semi-autoregressive decoding"
+  ],
+  "datasets": [
+    "NYT dataset (entity/relation extraction comparison)",
+    "ACE-2005 (event extraction comparison)"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Precision (P), recall (R), and F1 for NYT relation extraction",
+      "F1 (%) for ACE-2005 event extraction",
+      "ACE event trigger and argument identification (Id) and classification (Cl) F1"
+    ],
+    "baselines": [
+      "NYT discriminative comparators: CasRel, TPLinker, OneRel",
+      "NYT generative/comparative methods: CopyRE, CopyRRL, CopyMTL, CGT, REBEL, UIE, DEEPSTRUCT, TANL, PNDec",
+      "NYT non-autoregressive comparators: SPN, Seq2UMTree",
+      "ACE-2005 discriminative comparators: JMEE, DYGIE++, OneIE, QAEE, MQAEE, RCEE",
+      "ACE-2005 generative comparators: TEXT2EVENT, UIE, DEEPSTRUCT, TANL, BART-Gen, DEGREE, GTEE, PAIE"
+    ],
+    "setting": "This is a review-level empirical comparison, not a newly run experiment: the authors select representative entity/relation extraction and event extraction results on NYT and ACE-2005 from existing papers. Table 2 separates discriminative, generative, and non-autoregressive methods; Table 3 reports trigger and argument identification/classification results. The paper cautions against a simple superior/inferior framing of discriminative versus generative methods."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "NYT relation extraction: DEEPSTRUCT reports F1 93.9; UIE 93.5; CGT P/R/F 94.7/84.2/89.1; REBEL 91.5/92.0/91.8; TANL F1 90.8. The reported discriminative reference values are CasRel 89.6 F1, TPLinker 92.0, and OneRel 92.8.",
+      "NYT non-autoregressive methods: SPN reports P/R/F 93.3/91.7/92.5; Seq2UMTree reports 79.1/75.1/77.1.",
+      "ACE-2005 event extraction: DEEPSTRUCT reports trigger identification/classification F1 73.5/69.8 and argument identification/classification F1 59.4/56.2. UIE reports trigger classification 73.4 and argument classification 54.8; TEXT2EVENT 71.9 and 53.8 respectively. PAIE, evaluated only for argument extraction with golden triggers, reports argument identification/classification 75.7/72.7.",
+      "Authors' synthesis: structure- and label-based approaches achieve similar extraction performance to the cited discriminative methods on NYT; generative methods are comparable on ACE-2005 event extraction. These are cross-paper tabulations, not controlled head-to-head experiments run by this survey.",
+      "[Review-level inference] The reported values support treating the paper as a comparative synthesis, not as evidence that any one method is universally superior, because tasks, method groups, and (for PAIE) evaluation conditions differ."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0146-D-P008-TABLE-0001",
+        "page": 8,
+        "excerpt": "NYT: OneRel 92.8 F; CGT 94.7 P, 84.2 R, 89.1 F; REBEL 91.5 P, 92.0 R, 91.8 F; UIE 93.5 F; DEEPSTRUCT 93.9 F; SPN 93.3 P, 91.7 R, 92.5 F."
+      },
+      {
+        "span_id": "C0146-D-P008-TABLE-0002",
+        "page": 8,
+        "excerpt": "ACE-2005: DEEPSTRUCT 73.5/69.8 trigger Id/Cl and 59.4/56.2 argument Id/Cl; PAIE 75.7*/72.7* argument Id/Cl."
+      },
+      {
+        "span_id": "C0146-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "Structure-based and label-based methods both achieve similar extraction performance compared with all discrimination models on NYT datasets."
+      },
+      {
+        "span_id": "C0146-D-P008-TABLE-0004",
+        "page": 8,
+        "excerpt": "'*' refers to experiments only in argument extraction tasks with the golden trigger."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Provides a task-by-generation-target taxonomy that covers five Seq2Seq paradigms across NER, relation extraction, event extraction, entity linking, and KG completion.",
+      "Links the taxonomy to an explicit comparative framework: semantic utilization, search space, application scope, and template cost.",
+      "Combines conceptual/theoretical analysis of output-space and decoding trade-offs with tabulated empirical results on NYT and ACE-2005.",
+      "Identifies schema-guided decoding, non-autoregressive generation, unified architectures, and decoding efficiency as concrete design concerns rather than presenting generation as categorically superior.",
+      "[Review-level inference] Its tables and figures make it useful as a methodological map for selecting a generation representation, but the paper's evidence remains a secondary synthesis of prior studies."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0146-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "We present the advantages and weaknesses of each paradigm in terms of different generation targets and provide theoretical insight and empirical analysis."
+      },
+      {
+        "span_id": "C0146-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "Table 1... [compares] Semantic utilization... Search space... Application scope... Template cost."
+      },
+      {
+        "span_id": "C0146-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "the design of output space is vital for generative KGC, and it is necessary to balance parametric optimization as well as semantic utilization."
+      },
+      {
+        "span_id": "C0146-D-P009-TEXT-0004",
+        "page": 9,
+        "excerpt": "the generative paradigm for KGC has the potential advantages of unifying different tasks and better utilizing semantic information."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "The review's scope is limited to generative KGC, so it does not comprehensively evaluate non-generative extraction, fusion, validation, or updating pipelines.",
+      "The empirical analysis is limited to two benchmark settings and imports results from existing papers rather than running a unified controlled evaluation.",
+      "The five paradigm categories can overlap in practice: schema constraints can make a structure-based method's decoding space resemble a copy-based method's, complicating strict category boundaries.",
+      "Autoregressive decoding incurs sequential inference cost and can suffer exposure bias/overfitting; some index-based formats also sacrifice label/text semantics for a smaller output space.",
+      "[Review-level inference] The cross-paper comparisons should be interpreted as descriptive because the survey does not establish uniform implementations, splits, preprocessing, or evaluation protocols across every result it tabulates."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0146-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "Due to the application of the constraint decoding mechanism, some structure-based methods can be reduced to the same decoding space as the copy-based methods."
+      },
+      {
+        "span_id": "C0146-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "Results are taken from existing papers... Due to space limitations of the article, we only select two representative tasks... with NYT and ACE datasets."
+      },
+      {
+        "span_id": "C0146-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "the autoregressive decoder generates each token based on previously generated tokens during inference, and this process is not parallelizable."
+      },
+      {
+        "span_id": "C0146-D-P007-TEXT-0004",
+        "page": 7,
+        "excerpt": "the model with a small output space may fail to utilize rich semantic information from labels or text."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "Because of the page limit, the survey cannot provide technical details for the reviewed models.",
+      "The review covers only works from approximately five years, mainly from ACL, EMNLP, NAACL, COLING, AAAI, and IJCAI.",
+      "The authors state that they will continue adding related works with more detailed analysis."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0146-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "Due to the page limit, we cannot afford the technical details for models. Moreover, we only review the works within five years, mainly from the ACL, EMNLP, NAACL, COLING, AAAI, IJCAI, etc. We will continue adding more related works with more detailed analysis."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Develop neuro-symbolic generative KGC architectures to improve interpretability and combine neural and symbolic reasoning.",
+      "Improve generation quality using control codes, external-feedback or discriminator-assisted decoding, loss design, prompt design, retrieval augmentation, write-then-edit strategies, or diffusion processes.",
+      "Reduce annotation and training cost through parameter freezing, prompt learning, and knowledge-decoupling interventions.",
+      "Develop unified multi-task/multi-domain models rather than task-, domain-, or dataset-specific improvements.",
+      "Develop faster inference through non-autoregressive triple-set generation, semi-autoregressive decoding, and dynamic pathways.",
+      "[Review-level inference] A shared evaluation protocol across paradigms and tasks would strengthen the paper's comparative claims; this is inferred from its reliance on prior-paper results, not stated as an author proposal."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0146-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "we argue that neuro-symbolic models... can be designed for generative KGC."
+      },
+      {
+        "span_id": "C0146-D-P009-TEXT-0002",
+        "page": 9,
+        "excerpt": "more sophisticated strategies can be leveraged to control the quality... Control code construction... decoding strategy... Loss function design... Prompt design... Retrieval augmentation... Write-then-Edit strategy... Diffusion process."
+      },
+      {
+        "span_id": "C0146-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "it is essential to reduce data annotation and training costs... freeze most... parameters or leverage prompt learning... it is beneficial to study the framework to advocate for a unified view of KGC."
+      },
+      {
+        "span_id": "C0146-D-P009-TEXT-0004",
+        "page": 9,
+        "excerpt": "it is beneficial to develop a fast inference model for generative KGC."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "How to balance a constrained output/search space, which can ease optimization, against rich use of label and text semantics.",
+      "How to ensure output quality, including reliable and semantically/structurally legitimate generated structures.",
+      "How to obtain efficient inference without autoregressive sequential decoding, exposure bias, or propagation of prediction deviations.",
+      "How to build universal models that transfer across KGC tasks, domains, datasets, and potentially modalities while preserving task-specific performance.",
+      "How to integrate symbolic structure and generative NLP more effectively.",
+      "[Review-level inference] Broad Text-to-KG stages such as coreference resolution, entity deduplication/fusion, graph validation/correction, and graph updating receive no sustained treatment in this generative-extraction-focused survey; their integration with the five paradigms remains unresolved within this paper's coverage."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0146-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "it is necessary to balance parametric optimization as well as semantic utilization."
+      },
+      {
+        "span_id": "C0146-D-P009-TEXT-0002",
+        "page": 9,
+        "excerpt": "instead of improvements being prone to be exclusive to a single task, domain, or dataset, we argue that it is beneficial to study the framework to advocate for a unified view of KGC."
+      },
+      {
+        "span_id": "C0146-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "we envision a more potent synergy between the methodologies from the NLG and knowledge graph communities... symbolic structure in KG can have potential guidance for text generation."
+      },
+      {
+        "span_id": "C0146-D-P009-TEXT-0004",
+        "page": 9,
+        "excerpt": "the non-autoregressive approach applied to KGC proves to be effective in solving the exposure bias and overfitting problems."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that the authors maintain a public repository for research convenience: https://github.com/zjunlp/Generative_KG_Construction_Papers. It does not report a new codebase, dataset release, or archival identifier for this survey."
+}

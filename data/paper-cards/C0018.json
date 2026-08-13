@@ -1,0 +1,755 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0018",
+    "title": "iText2KG: Incremental Knowledge Graphs Construction Using Large Language Models",
+    "pdf_path": "data/batches/batch-02/C0018.pdf",
+    "authors": [
+      "Yassir Lairgi",
+      "Ludovic Moncla",
+      "Rémy Cazabet",
+      "Khalid Benabdeslem",
+      "Pierre Cléau"
+    ],
+    "year": 2024,
+    "venue": "arXiv preprint",
+    "identifier": {
+      "status": "reported",
+      "value": "arXiv:2409.03284v1",
+      "evidence": [
+        {
+          "span_id": "C0018-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "arXiv:2409.03284v1 [cs.AI] 5 Sep 2024."
+        }
+      ]
+    },
+    "abstract": "The paper proposes iText2KG, a plug-and-play zero-shot method for incremental, topic-independent KG construction from unstructured documents. It uses a Document Distiller, Incremental Entity Extractor, Incremental Relation Extractor, and Graph Integrator/Visualization module to address semantic duplication and unresolved entities/relations without post-processing. The authors report superior performance against baselines for scientific-paper, website, and CV graph construction.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title block",
+      "span_id": "C0018-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Yassir LAIRGI; Ludovic MONCLA; Rémy CAZABET; Khalid BENABDESLEM; and Pierre CLÉAU.",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Title block",
+      "span_id": "C0018-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "arXiv:2409.03284v1 [cs.AI] 5 Sep 2024.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Title block",
+      "span_id": "C0018-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "arXiv:2409.03284v1 [cs.AI] 5 Sep 2024.",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Title block",
+      "span_id": "C0018-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "arXiv:2409.03284v1 [cs.AI] 5 Sep 2024.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0018-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "we propose iText2KG, a method for incremental, topic-independent KG construction without post-processing... comprises four modules... Our method demonstrates superior performance compared to baseline methods across three scenarios.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0018-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "unresolved and semantically duplicated entities and relations still pose significant challenges, leading to inconsistent graphs that require extensive post-processing.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "3 Incremental Text2KG",
+      "span_id": "C0018-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "This work aims to develop a plug-and-play solution for constructing KGs from documents with resolved entities and relations as output.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3 Incremental Text2KG",
+      "span_id": "C0018-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Adopting a ‘zero-shot’ approach is essential... prompts used to generate the KG do not require prior examples or predefined ontologies.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.2 Proposed method — Module 1",
+      "span_id": "C0018-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "uses LLMs to rewrite input documents into semantic blocks, considering a predefined schema or blueprint.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.2 Proposed method — Module 2",
+      "span_id": "C0018-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "searches for a similar entity in E using a cosine similarity measure with a predefined threshold.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3.2 Proposed method",
+      "span_id": "C0018-D-P005-PICTURE-0001",
+      "page": 5,
+      "excerpt": "iText2KG approach composed of four modules... Document Distiller, Incremental Entities Extractor, Incremental Relations Extractor, and Neo4j Graph Integrator.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "3 Incremental Text2KG",
+      "span_id": "C0018-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "a ‘zero-shot’ approach... prompts used to generate the KG do not require prior examples or predefined ontologies.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.2 Proposed method",
+      "span_id": "C0018-D-P005-PICTURE-0001",
+      "page": 5,
+      "excerpt": "entity extraction and relation extraction tasks are separated... The fourth module [serves] to visualize the graph.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.2 Proposed method — Modules 1–2",
+      "span_id": "C0018-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "For each document, we will obtain a JSON semi-filled... The global entity set E is then updated by unifying it with Ed,matched.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.2 Proposed method — Modules 3–4",
+      "span_id": "C0018-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "The Global Document Entities E are provided as context along with each Semantic Block... fed into Neo4j to construct the knowledge graph.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.2 Proposed method — Module 1",
+      "span_id": "C0018-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "the schema is not an ontology but a blueprint... schema functions like a predefined JSON, instructing the LLM to extract particular values... for specific keys.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.2 Proposed method — Modules 1–2",
+      "span_id": "C0018-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "rewrite input documents into semantic blocks... improve the signal-to-noise ratio... extracts the Global Document Entities... searches for a similar entity.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.2 Proposed method — Modules 3–4",
+      "span_id": "C0018-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "extract the Global Document Relations... Global Document Entities and the Global Document Relations are fed into Neo4j to construct the knowledge graph.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "4 Experiments",
+      "span_id": "C0018-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "Entity/Relation Resolution False Discovery Rate: Evaluate the proportion of unresolved... entities or relations among the total extracted.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3 Incremental Text2KG",
+      "span_id": "C0018-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "construct consistent KGs from raw documents incrementally, using an LLM.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "4.1 Datasets and Baseline Methods",
+      "span_id": "C0018-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "generated 5 CVs... selected 5 company websites, and 5 scientific articles... extracted the textual information from websites, which will serve as input.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "4.3 Second and Third Modules Evaluation Results",
+      "span_id": "C0018-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "Input documents to the Document Distiller can be independent documents or chunks. If the chunk size is smaller, the semantic blocks will capture more specific details.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.2 Proposed method — Module 1",
+      "span_id": "C0018-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "For each document, we will obtain a JSON semi-filled with the desired information... aggregate all these semi-filled JSONs to form the semantic blocks.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.2 Proposed method — Module 4",
+      "span_id": "C0018-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "The Global Document Entities and the Global Document Relations are fed into Neo4j to construct the knowledge graph.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.2 Proposed method — Module 1",
+      "span_id": "C0018-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "We have used Langchain’s JSON Parser to define the schema along with the documents as context.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4 Experiments",
+      "span_id": "C0018-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "We chose GPT-4 in all our experiments.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.3 Second and Third Modules Evaluation Results — Threshold Estimation",
+      "span_id": "C0018-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "Entities and relationships were vectorized using the pre-trained model text-embedding-3-large.",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.1 Datasets and Baseline Methods",
+      "span_id": "C0018-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "generated 5 CVs using GPT-4, selected 5 company websites, and 5 scientific articles.",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.1 Datasets and Baseline Methods",
+      "span_id": "C0018-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "we used the annotated dataset from [6]... manual checks for triplets not present in the dataset... composes the ground truth.",
+      "confidence": "medium"
+    },
+    "datasets-18-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.3 Second and Third Modules Evaluation Results — Threshold Estimation",
+      "span_id": "C0018-D-P012-TEXT-0003",
+      "page": 12,
+      "excerpt": "a dataset of 1,500 similar entity pairs and 500 relationships... was generated using GPT-4.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4 Experiments",
+      "span_id": "C0018-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "Schema consistency... Information consistency... Triplet Extraction Precision... Entity/Relation Resolution False Discovery Rate.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.3 Second and Third Modules Evaluation Results — Threshold Estimation",
+      "span_id": "C0018-D-P013-TABLE-0002",
+      "page": 13,
+      "excerpt": "The mean and standard deviation of cosine similarity for these datasets were then calculated.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.1 Datasets and Baseline Methods",
+      "span_id": "C0018-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "compared our method against baseline methods including Graph Construction using OpenAI Function Method, Langchain, and LlamaIndex.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.3 Second and Third Modules Evaluation Results",
+      "span_id": "C0018-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "we did not evaluate LlamaIndex against our method.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4 Experiments",
+      "span_id": "C0018-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "We chose GPT-4 in all our experiments... adopted three use cases: website to KG, scientific article to KG, and Curriculum Vitae to KG.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.1 Datasets and Baseline Methods",
+      "span_id": "C0018-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "This manual check combined with the aforementioned dataset composes the ground truth.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.3 Second and Third Modules Evaluation Results",
+      "span_id": "C0018-D-P011-TABLE-0003",
+      "page": 11,
+      "excerpt": "Precision scores for relevant triplets across two datasets: music and computer science... Global Entities as Context and Local Entities as Context.",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.2 First Module Evaluation Results",
+      "span_id": "C0018-D-P010-TABLE-0001",
+      "page": 10,
+      "excerpt": "CVs 0.97 ± 0.09; Scientific Articles 0.98 ± 0.04; Websites 0.94 ± 0.13.",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.3 Second and Third Modules Evaluation Results",
+      "span_id": "C0018-D-P011-TABLE-0002",
+      "page": 11,
+      "excerpt": "Computer Science Dataset: 0.83 ± 0.06 global, 0.94 ± 0.06 local; Music Dataset: 0.81 ± 0.05 global, 0.9 ± 0.07 local.",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.3 Second and Third Modules Evaluation Results",
+      "span_id": "C0018-D-P012-TABLE-0003",
+      "page": 12,
+      "excerpt": "Our Method: entities 0.01 ± 0.01, 0, 0; relations 0.01 ± 0.01, 0, 0 for scientific articles, CVs, and websites.",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "5 Conclusion",
+      "span_id": "C0018-D-P014-TEXT-0001",
+      "page": 14,
+      "excerpt": "flexibility... stems from the use of a user-defined blueprint... adapt to a wide range of scenarios.",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.3 Second and Third Modules Evaluation Results",
+      "span_id": "C0018-D-P012-TABLE-0002",
+      "page": 12,
+      "excerpt": "Our Method [has] lower False Discovery Rates than OpenAI Function and Langchain in scientific articles and websites.",
+      "confidence": "medium"
+    },
+    "strengths-23-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.2 Proposed method — Module 3",
+      "span_id": "C0018-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "global entities... extracts both the relations directly stated and implied... local entities... only extracts the relations directly stated.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.3 Second and Third Modules Evaluation Results",
+      "span_id": "C0018-D-P011-TABLE-0001",
+      "page": 11,
+      "excerpt": "precision... when global entities are fed as context is 10% lower... richer graph... higher chance of irrelevant relations.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "5 Conclusion",
+      "span_id": "C0018-D-P014-TEXT-0002",
+      "page": 14,
+      "excerpt": "there is no universal blueprint for all use cases; instead, the design varies depending on the specific application.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.1 Datasets and Baseline Methods",
+      "span_id": "C0018-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "generated 5 CVs... selected 5 company websites, and 5 scientific articles.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.3 Second and Third Modules Evaluation Results — Threshold Estimation",
+      "span_id": "C0018-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "An upper threshold (e.g., 0.7) was chosen to ensure high precision, while a lower threshold reduced resolution specificity.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.3 Second and Third Modules Evaluation Results",
+      "span_id": "C0018-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "This results in a richer graph with more potential information and a higher chance of irrelevant relations.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.3 Second and Third Modules Evaluation Results",
+      "span_id": "C0018-D-P012-TEXT-0003",
+      "page": 12,
+      "excerpt": "False Discovery Rates... for websites to KG are higher... due to the larger number of documents (chunks) and the unstructured nature of website textual information.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "5 Conclusion",
+      "span_id": "C0018-D-P015-TEXT-0001",
+      "page": 15,
+      "excerpt": "Future research will focus on enhancing metrics such as cosine similarity... eliminating the necessity to define a threshold as a hyperparameter, and integrating the entity type as a parameter.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4.3 Second and Third Modules Evaluation Results",
+      "span_id": "C0018-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "This presents a trade-off that depends on the use case. We leave it to the user to decide.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5 Conclusion",
+      "span_id": "C0018-D-P015-TEXT-0001",
+      "page": 15,
+      "excerpt": "Future research will focus on... eliminating the necessity to define a threshold as a hyperparameter.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.3 Second and Third Modules Evaluation Results",
+      "span_id": "C0018-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "We leave it to the user to decide whether to accept a 10% decrease in precision in exchange for an enriched graph.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.1 Datasets and Baseline Methods",
+      "span_id": "C0018-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "this dataset is not exhaustive for triplet extraction, leading us to conduct manual checks for triplets not present in the dataset.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Introduction footnote 3",
+      "span_id": "C0018-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The code and the dataset are available at https://github.com/AuvaLab/itext2kg.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "4.3 Second and Third Modules Evaluation Results — Threshold Estimation",
+      "span_id": "C0018-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "a dataset of 1,500 similar entity pairs and 500 relationships... is available in the iText2KG Github repository.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Construct consistent knowledge graphs incrementally from raw, unstructured documents while reducing semantically duplicated or unresolved entities and relations. The objective is a topic- and document-type-independent, zero-shot alternative to ontology-dependent and supervised KG-construction pipelines.",
+  "methodology": {
+    "primary_family": "Zero-shot and few-shot LLM prompting (without task-specific model training)",
+    "secondary_families": [
+      "Hybrid NLP and LLM methods",
+      "Ontology-constrained and schema-guided methods",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "zero_shot",
+    "description": "Execution order: (1) Document Distiller prompts an LLM with each raw document/chunk and a user-defined JSON-like blueprint, producing and aggregating semi-filled JSON semantic blocks. (2) iEntities Matcher extracts entities from the first block, then for each later block extracts local entities and incrementally matches them to global entities by exact membership or cosine-similarity threshold, updating the global entity set. (3) iRelations Matcher receives each semantic block and either global or locally matched entities as context; it extracts relations and incrementally resolves them analogously. Global context permits direct and implied relations but can add irrelevant edges; local context targets direct relations. (4) global entities and relations are loaded into Neo4j for graph construction and visualization."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The method accepts a user-defined schema/blueprint, implemented as a predefined JSON structure parsed with LangChain, to guide which textual values are distilled. The authors explicitly distinguish this flexible blueprint from an ontology; it biases extraction toward classes/keys but is intended to remain adaptable across use cases.",
+    "evidence": [
+      {
+        "span_id": "C0018-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "the schema is not an ontology but a blueprint... schema functions like a predefined JSON, instructing the LLM to extract particular values... for specific keys."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing",
+    "Entity and concept extraction",
+    "Entity resolution and linking",
+    "Relation and triple extraction",
+    "Graph construction",
+    "Knowledge fusion and deduplication",
+    "Graph validation and correction"
+  ],
+  "input_output": {
+    "input_type": "Raw unstructured natural-language documents: website text, scientific articles, and CVs; documents are rewritten into JSON semantic blocks before entity and relation extraction.",
+    "input_granularity": "A document may be an independent document or a chunk. Processing is sequential over document-level semantic blocks; smaller chunks yield more specific semantic blocks.",
+    "output_representation": "A Neo4j knowledge graph containing globally resolved entity nodes and resolved relation edges; intermediate outputs are semi-filled JSON semantic blocks and global entity/relation sets, with relation outputs evaluable as triples."
+  },
+  "models_and_tools": [
+    "GPT-4",
+    "LangChain JSON Parser",
+    "Neo4j",
+    "Cosine similarity matching",
+    "OpenAI text-embedding-3-large"
+  ],
+  "datasets": [
+    "Document-Distiller evaluation set: 5 GPT-4-generated CVs, 5 company websites (text extracted), and 5 scientific articles",
+    "Annotated dataset from reference [6] for triplet consistency, augmented by manual checks for absent triplets",
+    "Threshold-estimation data: 1,500 similar entity pairs and 500 relationships generated with GPT-4 across multiple domains",
+    "Computer Science dataset and Music dataset for Table 2 triplet precision"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Schema Consistency score",
+      "Information Consistency categories: very different (<30%), medium (30–60%), largely consistent (60–90%), fully consistent (>90%)",
+      "Triplet Extraction Precision",
+      "Entity/Relation Resolution False Discovery Rate",
+      "Mean and standard deviation of cosine similarity for entity and relationship matching data"
+    ],
+    "baselines": [
+      "Graph Construction using OpenAI Function Method",
+      "LangChain graph construction",
+      "LlamaIndex property-graph construction (not evaluated in entity/relation-resolution FDR tables because authors state it produces unconnected RAG-oriented subgraphs)"
+    ],
+    "setting": "All experiments use GPT-4. Module 1 is assessed on three document types using schema and information consistency. Modules 2–3 are assessed for relevant-triplet precision on Computer Science and Music data under global-versus-local entity context, and for unresolved-entity/relation FDR in scientific-article-to-KG, CV-to-KG, and website-to-KG scenarios against OpenAI Function and LangChain. Ground truth combines an annotated dataset with manual checks because the authors judged the dataset non-exhaustive."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Experimental result: Document Distiller schema consistency was 0.97 ± 0.09 for CVs, 0.98 ± 0.04 for scientific articles, and 0.94 ± 0.13 for websites.",
+      "Experimental result: fully/largely consistent distilled content was 74.5%/25.5% for CVs, 57.1%/42.9% for scientific articles, and 56.0%/24.0% for websites; websites also had 20.0% medium consistency.",
+      "Experimental result: local entity context produced higher relevant-triplet precision than global context: Computer Science 0.94 ± 0.06 versus 0.83 ± 0.06; Music 0.90 ± 0.07 versus 0.81 ± 0.05.",
+      "Experimental result: iText2KG entity FDR was 0.01 ± 0.01 for scientific articles, 0 for CVs, and 0 for websites; relation FDR was 0.01 ± 0.01, 0, and 0, respectively. OpenAI Function/LangChain had entity FDR 0.11/0.14 (articles) and 0.31/0.29 (websites), and relation FDR 0.07/0.06 and 0.15/0.14, respectively."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0018-D-P010-TABLE-0001",
+        "page": 10,
+        "excerpt": "CVs 0.97 ± 0.09; Scientific Articles 0.98 ± 0.04; Websites 0.94 ± 0.13."
+      },
+      {
+        "span_id": "C0018-D-P011-TABLE-0002",
+        "page": 11,
+        "excerpt": "Computer Science Dataset: 0.83 ± 0.06 global, 0.94 ± 0.06 local; Music Dataset: 0.81 ± 0.05 global, 0.9 ± 0.07 local."
+      },
+      {
+        "span_id": "C0018-D-P012-TABLE-0003",
+        "page": 12,
+        "excerpt": "Our Method: entities 0.01 ± 0.01, 0, 0; relations 0.01 ± 0.01, 0, 0 for scientific articles, CVs, and websites."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author claim: flexible user-defined blueprints make the method adaptable to structured and unstructured document types without a universal ontology.",
+      "Experimental result: incremental entity/relation resolution achieved lower reported FDR than the evaluated OpenAI Function and LangChain baselines for scientific-article and website scenarios.",
+      "Experimental result: separating entity extraction from relation extraction supports two operating points: local context for higher precision and global context for richer, implied-relation extraction.",
+      "Review-level inference: the explicit intermediate semantic-block and global-entity representations make the source of graph nodes and edges more inspectable than a single direct text-to-graph generation step."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0018-D-P014-TEXT-0001",
+        "page": 14,
+        "excerpt": "flexibility... stems from the use of a user-defined blueprint... adapt to a wide range of scenarios."
+      },
+      {
+        "span_id": "C0018-D-P012-TABLE-0002",
+        "page": 12,
+        "excerpt": "Our Method [has] lower False Discovery Rates than OpenAI Function and Langchain in scientific articles and websites."
+      },
+      {
+        "span_id": "C0018-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "global entities... extracts both the relations directly stated and implied... local entities... only extracts the relations directly stated."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author-reported trade-off: global entity context enriches the graph with implied relations but lowers triplet precision by about 10 percentage points and increases the chance of irrelevant relations.",
+      "Author-reported dependency: output focus is controlled by a user-supplied blueprint whose design varies by application; there is no universal blueprint.",
+      "Review-level inference: the evaluation is limited in scale for distillation (five items of each document type), and triplet ground truth includes manual checking after the authors found the referenced dataset non-exhaustive; this limits certainty about generalization and reproducibility of those measurements.",
+      "Review-level inference: the paper reports extraction precision and unresolved-duplicate FDR, but does not report recall, end-to-end graph completeness, cost, latency, or inter-annotator agreement for manual checks."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0018-D-P011-TABLE-0001",
+        "page": 11,
+        "excerpt": "precision... when global entities are fed as context is 10% lower... richer graph... higher chance of irrelevant relations."
+      },
+      {
+        "span_id": "C0018-D-P014-TEXT-0002",
+        "page": 14,
+        "excerpt": "there is no universal blueprint for all use cases; instead, the design varies depending on the specific application."
+      },
+      {
+        "span_id": "C0018-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "generated 5 CVs... selected 5 company websites, and 5 scientific articles."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The cosine-similarity matching threshold is a hyperparameter: an upper threshold such as 0.7 is selected for high precision, while a lower threshold reduces resolution specificity.",
+      "Global-context relation extraction has a precision-versus-richness trade-off because it can generate irrelevant implied relations.",
+      "Websites are more difficult than CVs and scientific articles because their content is more unstructured; larger numbers of chunks also increase noisy nodes and make resolution important."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0018-D-P013-TEXT-0001",
+        "page": 13,
+        "excerpt": "An upper threshold (e.g., 0.7) was chosen to ensure high precision, while a lower threshold reduced resolution specificity."
+      },
+      {
+        "span_id": "C0018-D-P011-TEXT-0002",
+        "page": 11,
+        "excerpt": "This results in a richer graph with more potential information and a higher chance of irrelevant relations."
+      },
+      {
+        "span_id": "C0018-D-P012-TEXT-0003",
+        "page": 12,
+        "excerpt": "False Discovery Rates... for websites to KG are higher... due to the larger number of documents (chunks) and the unstructured nature of website textual information."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed improvement: enhance cosine-similarity metrics for entity and relation matching.",
+      "Author-proposed improvement: eliminate manual definition of the matching threshold hyperparameter.",
+      "Author-proposed improvement: integrate entity type as a parameter in matching.",
+      "Review-level inference: evaluate the global-versus-local context choice with a precision-and-recall/completeness protocol so that implied-relation gains are measured rather than described only as graph enrichment."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0018-D-P015-TEXT-0001",
+        "page": 15,
+        "excerpt": "Future research will focus on enhancing metrics such as cosine similarity... eliminating the necessity to define a threshold as a hyperparameter, and integrating the entity type as a parameter."
+      },
+      {
+        "span_id": "C0018-D-P011-TEXT-0002",
+        "page": 11,
+        "excerpt": "This presents a trade-off that depends on the use case. We leave it to the user to decide."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-stated unresolved problem: robustly matching semantically similar entities and relations without a manually selected cosine-similarity threshold remains open.",
+      "Author-stated unresolved problem: choosing between globally contextualized, richer but less precise relations and locally contextualized, more precise but less enriched relations remains application-dependent.",
+      "Review-level inference: reliable evaluation of implied triples and whole-graph completeness remains unresolved in this study because the authors augment a non-exhaustive annotated dataset with manual checks and report precision rather than recall."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0018-D-P015-TEXT-0001",
+        "page": 15,
+        "excerpt": "Future research will focus on... eliminating the necessity to define a threshold as a hyperparameter."
+      },
+      {
+        "span_id": "C0018-D-P011-TEXT-0002",
+        "page": 11,
+        "excerpt": "We leave it to the user to decide whether to accept a 10% decrease in precision in exchange for an enriched graph."
+      },
+      {
+        "span_id": "C0018-D-P010-TEXT-0003",
+        "page": 10,
+        "excerpt": "this dataset is not exhaustive for triplet extraction, leading us to conduct manual checks for triplets not present in the dataset."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that code and dataset are available at https://github.com/AuvaLab/itext2kg. It also states that the threshold-estimation entity-pair and relationship datasets are available in that repository."
+}

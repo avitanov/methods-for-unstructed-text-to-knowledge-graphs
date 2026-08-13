@@ -1,0 +1,826 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0030",
+    "title": "Doc‐KG: Unstructured documents to knowledge graph construction, identification and validation with Wikidata",
+    "pdf_path": "data/batches/batch-02/C0030.pdf",
+    "authors": [
+      "Muhammad Salman",
+      "Armin Haller",
+      "Sergio J. Rodríguez Méndez",
+      "Usman Naseem"
+    ],
+    "year": 2024,
+    "venue": "Expert Systems",
+    "identifier": {
+      "status": "reported",
+      "value": "DOI: 10.1111/exsy.13617",
+      "evidence": [
+        {
+          "span_id": "C0030-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "DOI: 10.1111/exsy.13617"
+        }
+      ]
+    },
+    "abstract": "The paper introduces Doc-KG, a system that transforms unstructured documents into structured knowledge by extracting local RDF triples and mapping them to a target knowledge graph such as Wikidata. It uses syntactic information to extract entities and predicates, constructs local knowledge graphs, and identifies corresponding Wikidata URIs. Evaluation on WebNLG reports 86.64% accuracy for triple extraction and 61.35% mapping of the local KG to Wikidata, with 38.65% described as novel information. A manually annotated qualitative evaluation reports better triple extraction than the baselines.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0030-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Muhammad Salman, Armin Haller, Sergio J. Rodríguez Méndez, Usman Naseem",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Article metadata",
+      "span_id": "C0030-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "© 2024 The Authors. Expert Systems",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Article metadata",
+      "span_id": "C0030-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Expert Systems. 2024;41:e13617",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Article metadata",
+      "span_id": "C0030-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "DOI: 10.1111/exsy.13617",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0030-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We introduce an enhanced Doc-KG model... transform unstructured documents into structured knowledge by generating local KGs and mapping these to a target KG, such as Wikidata.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0030-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Unstructured text poses a challenge in information extraction and retrieval... extracting knowledge from unstructured text is crucial to constructing up-to-date KGs.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Literature review",
+      "span_id": "C0030-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "KG... still lacks the availability of a standard benchmark dataset... research work is limited in mapping and linking the triples with Wikidata.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3.2.1 Doc-KG",
+      "span_id": "C0030-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "This method is centred around utilizing syntactic dependency-based Natural Language Understanding (NLU) approaches...",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Algorithm 1 and Doc-KG description",
+      "span_id": "C0030-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "Dependency tags are classified as subjects, predicates, and objects; Triple = [S,P,O]; KG:Append(Triple).",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.3 Qualitative check with external KG",
+      "span_id": "C0030-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "To evaluate the quality of extracted triples, we map the extracted triples to an external KG, that is, Wikidata.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0030-D-P003-CAPTION-0001",
+      "page": 3,
+      "excerpt": "After triple mentions are extracted... they are integrated to form triples and construct a local KG. Finally, the triples... are identified in Wikidata and mapped with the URI.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.2.1 Doc-KG",
+      "span_id": "C0030-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "Preprocess: Tokenizer | POSTagger | Sentensizer | Lemmatizer... dependency tags classify subjects, predicates, and objects... schema free Knowledge Triple mapping in KG.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.3.2 Predicate mappings",
+      "span_id": "C0030-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "The approach... involves three iterations: first, searching for an exact match with the base predicates; second... alternative labels; and third... after cleaning the relationships string of stop-words.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.2.1 Doc-KG",
+      "span_id": "C0030-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "The resulting triples... are then stored in a schema-free triple store.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.3.1 Entity mapping",
+      "span_id": "C0030-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "For such typed entities, a pre-defined URI is assigned... Money:Q1368, Numerical Number:Q11563, Percentage:Q11229, and Date/Time:Q11471.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Future directions",
+      "span_id": "C0030-D-P015-TEXT-0003",
+      "page": 15,
+      "excerpt": "Integrating knowledge from external resources and domain-specific ontologies could enrich the extracted knowledge.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Algorithm 1 and 3.2.1",
+      "span_id": "C0030-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "Preprocess... classify Subjects, Predicates, and Objects... Textual Knowledge Triples... Schema Free Knowledge Triple mapping in KG.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.3.1 Entity mapping",
+      "span_id": "C0030-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The URI of the subject and object entities... are extracted using the online Wikidata Query Service.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "4.3 Ablation study",
+      "span_id": "C0030-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "Precision is calculated based on the textual similarity... Recall... penalizes the model if it returns more than expected triples.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3.1 Dataset",
+      "span_id": "C0030-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We utilized the WebNLG dataset... By extracting triples from the WebNLG dataset, we obtained a diverse collection of sentences.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3.4 Qualitative check with crowdsourced dataset",
+      "span_id": "C0030-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "We manually annotated a set of 80 unique compound and complex sentences from Wikipedia.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Algorithm 1",
+      "span_id": "C0030-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "for Sentence in RT do... Triple [S,P,O]... end for",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Results and discussion",
+      "span_id": "C0030-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "Our input sentences were obtained from the ‘1-Triple to Text’ corpus, and our objective was to extract one triple per sentence.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.2.1 Doc-KG",
+      "span_id": "C0030-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "We construct triple representations in the form of ‘Subject-Predicate-Object’ (SPO)... stored in a schema-free triple store.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Algorithm 2",
+      "span_id": "C0030-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "Return Annotated-KG",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.2.1 Doc-KG",
+      "span_id": "C0030-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "Parsing techniques are applied using popular libraries such as SpaCy and NLTK... seven specific dependency types...",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.2.2–3.2.3",
+      "span_id": "C0030-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "we leverage Textacy's Subject-Verb-Object extraction feature... Stanford CoreNLP model for Open Information Extraction.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.3",
+      "span_id": "C0030-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "The query language used for this task is SPARQL...",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.1 Dataset and Table 2",
+      "span_id": "C0030-D-P005-TABLE-0001",
+      "page": 5,
+      "excerpt": "Total sentences 7686; the sentences represent 16 different domains.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.4 Qualitative check with crowdsourced dataset",
+      "span_id": "C0030-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "We manually annotated a set of 80 unique compound and complex sentences from Wikipedia... captured 327 annotations against 80 sentences.",
+      "confidence": "medium"
+    },
+    "datasets-17-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.3 Qualitative check with external KG",
+      "span_id": "C0030-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "we map the extracted triples to an external KG, that is, Wikidata.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4 Results and discussion",
+      "span_id": "C0030-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "Accuracy (Quantitative) = Total Score / Total Sentences (N).",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "3.4 Qualitative check",
+      "span_id": "C0030-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "An extracted triple is considered Incorrect if... less than 50%... Correct if... more than 75%.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.3 Ablation study",
+      "span_id": "C0030-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "Precision... Recall... F-measure = 2 × Precision × Recall / (Precision + Recall).",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "3.2.2–3.2.3",
+      "span_id": "C0030-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "The experiment evaluated [SpaCy SVO] on both raw text and refined text... Stanford CoreNLP model for OpenIE.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Table 3",
+      "span_id": "C0030-D-P009-TABLE-0002",
+      "page": 9,
+      "excerpt": "Stanford CoreNLP; SpaCy SVO; SpaCy SVO with CS; Doc-KG (Our Model).",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "3.1 Dataset",
+      "span_id": "C0030-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "The dataset... consisting of 7686 sentences... manually annotated a sampled data of 80 sentences with 326 triples.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.1 Quantitative analysis",
+      "span_id": "C0030-D-P009-TABLE-0002",
+      "page": 9,
+      "excerpt": "Doc-KG... 6659... 86.64%; Stanford CoreNLP... 69.45%; SpaCy SVO... 7.43%; SpaCy SVO with CS... 33.11%.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.3 Ablation study",
+      "span_id": "C0030-D-P013-TABLE-0003",
+      "page": 13,
+      "excerpt": "The metrics include Recall, Precision, and F-measure...",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.1 Quantitative analysis and Table 3",
+      "span_id": "C0030-D-P009-TABLE-0001",
+      "page": 9,
+      "excerpt": "Doc-KG (Our Model) 6659 extracted triples, Accuracy 86.64%; Stanford CoreNLP 69.45%; SpaCy SVO 7.43%; SpaCy SVO with CS 33.11%.",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.2.1 External KG assessment",
+      "span_id": "C0030-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "67.66% of the subjects, 78.19% of the predicates, and 71.75% of the objects... complete... 21.89%... typed subjects and objects... 61.35%.",
+      "confidence": "medium"
+    },
+    "main_results-21-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 4",
+      "span_id": "C0030-D-P014-TABLE-0003",
+      "page": 14,
+      "excerpt": "Doc-KG Recall 97.86, Precision 44.68, F-measure 61.35.",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.1 Quantitative analysis",
+      "span_id": "C0030-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "our Syntactic-based NLP model... achieved the highest performance with an accuracy of 86.64%.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2.1 External KG assessment",
+      "span_id": "C0030-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "incorporating typed subjects and objects significantly increased the number of identified triples to 61.35%.",
+      "confidence": "medium"
+    },
+    "strengths-22-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2.3 Overall assessment",
+      "span_id": "C0030-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "Despite not employing extensive pre-processing and entity disambiguation techniques, our system demonstrated efficient performance.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.2.2 SpaCy's SVO",
+      "span_id": "C0030-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "The SVO model operates well on simple sentences... performance may suffer when faced with more complex sentence structures.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.2.3 Stanford's OpenIE",
+      "span_id": "C0030-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "the model generated non-informative triples... [Mark Zuckerberg, is, CEO].",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.3.2 Predicate mappings",
+      "span_id": "C0030-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "matching and mapping the extracted predicates... is difficult due to the different words used in natural language to describe similar concepts.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-04": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Table 4",
+      "span_id": "C0030-D-P014-TABLE-0004",
+      "page": 14,
+      "excerpt": "Doc-KG... Precision 44.68; OpenIE... Precision 55.57.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.2.3 Overall assessment",
+      "span_id": "C0030-D-P011-TEXT-0001",
+      "page": 11,
+      "excerpt": "there is still room for improvement... incorporating additional NLP techniques in the preprocessing stage and query generation, as well as enhancing entity disambiguation.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Conclusion",
+      "span_id": "C0030-D-P015-TEXT-0002",
+      "page": 15,
+      "excerpt": "we acknowledge that there is room for further improvement, particularly in sentence simplification.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Literature review",
+      "span_id": "C0030-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "KG... still lacks the availability of a standard benchmark dataset for KG construction and validation.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Conclusion and Future directions",
+      "span_id": "C0030-D-P015-TEXT-0001",
+      "page": 15,
+      "excerpt": "Simplifying sentences in a controlled manner... reducing noise and increasing the system's overall accuracy.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Future directions",
+      "span_id": "C0030-D-P015-TEXT-0002",
+      "page": 15,
+      "excerpt": "advanced natural language processing techniques, such as semantic role labelling and named entity recognition... domain-specific ontologies... prompt engineering and fine-tuning of... LLMs.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4.2.3 Overall assessment",
+      "span_id": "C0030-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "enhancing entity disambiguation... handle cases where multiple entities with similar labels exist.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Literature review",
+      "span_id": "C0030-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "research work is limited in mapping and linking the triples with Wikidata... investigating this aspect is vital.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.3.2 Predicate mappings",
+      "span_id": "C0030-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "matching and mapping the extracted predicates... is difficult due to the different words used in natural language.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Table 4 discussion",
+      "span_id": "C0030-D-P014-TEXT-0003",
+      "page": 14,
+      "excerpt": "OpenIE leads in precision... Doc-KG's precision is 44.68%, which... is still competitive, especially considering its much higher recall.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-04": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Future directions",
+      "span_id": "C0030-D-P015-TEXT-0004",
+      "page": 15,
+      "excerpt": "future work should explore... semantic role labelling and named entity recognition... domain-specific ontologies... LLMs in TE tasks.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Data availability statement and endnotes",
+      "span_id": "C0030-D-P015-TEXT-0001",
+      "page": 15,
+      "excerpt": "The data that support the findings of this study are available from the corresponding author... Code and Data: https://w3id.org/salmon/Doc-KG... https://w3id.org/salmon/TinyButMighty.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses automatic construction and enrichment of knowledge graphs from unstructured natural-language documents, focusing on extracting subject-predicate-object triples and identifying or mapping those triples in Wikidata. It motivates the work by noting the lack of a standard benchmark for triple extraction from unstructured text and the limited prior work on mapping extracted triples to Wikidata.",
+  "methodology": {
+    "primary_family": "Linguistic and dependency-based extraction",
+    "secondary_families": [
+      "Rule-based NLP",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "not_reported",
+    "description": "Doc-KG is a sequential classical-NLP pipeline. It tokenizes, sentence-splits, lemmatizes, POS-tags, and syntactically parses input text. Dependency labels identify subject and object tokens, while ROOT, AMOD, ADJ, AGENT, and ATTR labels identify predicate tokens. The resulting subject-predicate-object triples are appended to a schema-free local KG. Entity mentions are mapped to Wikidata through exact-label SPARQL queries, with predefined Wikidata URIs for typed values such as dates, numbers, percentages, and money. Predicates are mapped using a locally indexed list of Wikidata properties and alternative labels, followed by stop-word cleaning. The system is compared with SpaCy/Textacy SVO and Stanford CoreNLP OpenIE."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The extraction stage is schema-free and stores textual SPO triples. The linking stage uses Wikidata as the target KG and its RDF/URI vocabulary: entity labels are queried through SPARQL, predicates are matched against Wikidata base properties and alternative labels, and typed values receive predefined Wikidata URIs. The paper also suggests future use of domain-specific ontologies.",
+    "evidence": [
+      {
+        "span_id": "C0030-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "The resulting triples... are then stored in a schema-free triple store."
+      },
+      {
+        "span_id": "C0030-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "For such typed entities, a pre-defined URI is assigned... Money:Q1368, Numerical Number:Q11563, Percentage:Q11229, and Date/Time:Q11471."
+      },
+      {
+        "span_id": "C0030-D-P015-TEXT-0003",
+        "page": 15,
+        "excerpt": "Integrating knowledge from external resources and domain-specific ontologies could enrich the extracted knowledge."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing: tokenization, sentence segmentation, lemmatization, stop-word removal, n-gram modelling, and sentence cleaning",
+    "Entity and concept extraction: dependency-based subject and object extraction",
+    "Entity typing: predefined handling of numerical, date, percentage, time, and monetary values",
+    "Entity resolution and linking: exact-label matching and Wikidata URI assignment",
+    "Relation and triple extraction: dependency-based predicate extraction and SPO formation",
+    "Graph construction: appending extracted triples to a schema-free local KG",
+    "Knowledge fusion and deduplication: mapping local triples to Wikidata properties, alternative labels, and URIs",
+    "Graph validation and correction: qualitative comparison with Wikidata and manually annotated ground truth"
+  ],
+  "input_output": {
+    "input_type": "Unstructured natural-language text, including raw document sentences; evaluation inputs are sentences derived from WebNLG's 1-Triple-to-Text corpus and Wikipedia sentences for TinyButMighty.",
+    "input_granularity": "Sentence-level processing; each sentence is processed independently in the extraction algorithm, with the quantitative WebNLG setup targeting one triple per sentence.",
+    "output_representation": "A local schema-free knowledge graph represented as subject-predicate-object textual triples, followed by an annotated/mapped KG whose entities and predicates may be assigned Wikidata URIs or newly created URIs."
+  },
+  "models_and_tools": [
+    "Doc-KG syntactic dependency parsing pipeline",
+    "POS tagging and dependency parsing",
+    "SpaCy and NLTK",
+    "Textacy SpaCy Subject-Verb-Object extractor",
+    "Stanford CoreNLP OpenIE",
+    "Wikidata Query Service and SPARQL",
+    "Local Wikidata predicate index with base and alternative labels",
+    "Cosine and Jaccard similarity coefficients",
+    "Custom triple-set precision, recall, and F-measure evaluation algorithm"
+  ],
+  "datasets": [
+    "WebNLG-derived quantitative dataset: 7,686 sentences across 16 domains, including Airports, Artists, Astronauts, Athletes, Buildings, Celestial Body, Cities, Cosmic Characters, Companies, Foods, Transportation Means, Monuments, Politicians, Sports Teams, Universities, and Books Writers",
+    "Manually annotated WebNLG sample: 80 sentences and 326 triples, as described in the dataset section",
+    "TinyButMighty crowdsourced/Wikipedia dataset: 80 compound and complex sentences with 327 annotations; the results section refers to 326 ground-truth triples",
+    "Wikidata, used as the external target knowledge graph for entity and predicate identification"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Quantitative sentence-level extraction accuracy: extracted triples divided by total sentences",
+      "Wikidata mapping percentages for subjects, predicates, objects, complete triples, and triples including typed entities",
+      "Cosine similarity and Jaccard similarity for extracted versus annotated triple sets",
+      "Similarity-threshold F-measure with penalty below 0.50 and amnesty above 0.75",
+      "Precision, recall, and F-measure computed using the custom triple-set algorithm"
+    ],
+    "baselines": [
+      "SpaCy/Textacy SVO on raw text",
+      "SpaCy/Textacy SVO on cleaned text with stop-word removal",
+      "Stanford CoreNLP OpenIE"
+    ],
+    "setting": "Quantitative evaluation uses 7,686 WebNLG-derived sentences and aims to extract one triple per sentence. Qualitative evaluation uses Wikidata endpoint matching and manually annotated sentences. Baselines are evaluated on the same extraction datasets; the custom qualitative metric compares generated triples with human annotations using textual similarity, thresholds, cosine/Jaccard coefficients, and aggregated precision, recall, and F-measure. A domain-specific comparison is also shown for CoreNLP OpenIE and Doc-KG."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Doc-KG extracted 6,659 triples with 86.64% quantitative accuracy on 7,686 WebNLG-derived sentences, compared with 69.45% for Stanford CoreNLP, 7.43% for SpaCy SVO, and 33.11% for cleaned-text SpaCy SVO.",
+      "In external Wikidata mapping, the paper reports identification of 67.66% of subjects, 78.19% of predicates, and 71.75% of objects; complete triple mapping was 21.89%, increasing to 61.35% when typed entities were included.",
+      "On the manually annotated qualitative sample, Doc-KG identified 310 triples, while OpenIE identified 834 and SpaCy identified 59. The reported overall qualitative scores with penalty and amnesty were 38.15% for Doc-KG, 31.19% for OpenIE, and 2.71% for SpaCy.",
+      "On the custom standard-metric evaluation, Doc-KG achieved recall 97.86%, precision 44.68%, and F-measure 61.35%; OpenIE achieved 39.16%, 55.57%, and 45.94%, while SpaCy achieved 11.31%, 12.54%, and 11.90%, respectively.",
+      "The paper reports that OpenIE outperformed Doc-KG in the Astronauts and Athletes domains, while performance was comparable for Artists."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0030-D-P009-TABLE-0001",
+        "page": 9,
+        "excerpt": "Doc-KG (Our Model) 6659 extracted triples, Accuracy 86.64%; Stanford CoreNLP 69.45%; SpaCy SVO 7.43%; SpaCy SVO with CS 33.11%."
+      },
+      {
+        "span_id": "C0030-D-P011-TEXT-0002",
+        "page": 11,
+        "excerpt": "67.66% of the subjects, 78.19% of the predicates, and 71.75% of the objects... complete... 21.89%... typed subjects and objects... 61.35%."
+      },
+      {
+        "span_id": "C0030-D-P014-TABLE-0003",
+        "page": 14,
+        "excerpt": "Doc-KG Recall 97.86, Precision 44.68, F-measure 61.35."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Paper-reported strength: the dependency-based method achieved the highest quantitative extraction accuracy among the evaluated systems on the WebNLG-derived dataset.",
+      "Paper-reported strength: typed-entity URI handling substantially increased the proportion of local triples identified in Wikidata from 21.89% completely mapped triples to 61.35%.",
+      "Paper-reported strength: the method has a simple pipeline and does not require extensive preprocessing or entity disambiguation while still producing promising extraction results.",
+      "Review-level inference: the explicit separation of local triple construction from target-KG mapping makes the workflow relatively interpretable and auditable."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0030-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "our Syntactic-based NLP model... achieved the highest performance with an accuracy of 86.64%."
+      },
+      {
+        "span_id": "C0030-D-P011-TEXT-0002",
+        "page": 11,
+        "excerpt": "incorporating typed subjects and objects significantly increased the number of identified triples to 61.35%."
+      },
+      {
+        "span_id": "C0030-D-P011-TEXT-0003",
+        "page": 11,
+        "excerpt": "Despite not employing extensive pre-processing and entity disambiguation techniques, our system demonstrated efficient performance."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Paper-reported weakness: SpaCy SVO performs poorly on complex sentence structures and improves markedly only after stop-word removal.",
+      "Paper-reported weakness: Stanford OpenIE can generate non-informative triples such as [Mark Zuckerberg, is, CEO].",
+      "Paper-reported weakness: predicate mapping is difficult because natural-language predicates can use different words for similar concepts; the proposed method relies on exact or alternative-label string matching after cleaning.",
+      "Review-level inference: the 44.68% precision reported for Doc-KG is lower than OpenIE's 55.57%, indicating a substantial false-positive trade-off despite high recall.",
+      "Review-level inference: the method's exact-label matching and newly created URIs may be brittle for aliases, ambiguity, paraphrases, and entities absent from Wikidata."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0030-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "The SVO model operates well on simple sentences... performance may suffer when faced with more complex sentence structures."
+      },
+      {
+        "span_id": "C0030-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "the model generated non-informative triples... [Mark Zuckerberg, is, CEO]."
+      },
+      {
+        "span_id": "C0030-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "matching and mapping the extracted predicates... is difficult due to the different words used in natural language to describe similar concepts."
+      },
+      {
+        "span_id": "C0030-D-P014-TABLE-0004",
+        "page": 14,
+        "excerpt": "Doc-KG... Precision 44.68; OpenIE... Precision 55.57."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The authors state that the system has room for improvement in sentence simplification.",
+      "They state that the system does not yet employ extensive preprocessing or entity disambiguation.",
+      "They identify the need for improved query generation and better entity disambiguation when multiple entities have similar labels.",
+      "They note that the work uses a manually annotated benchmark and a WebNLG-derived dataset in the absence of a standardized benchmark for this task."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0030-D-P011-TEXT-0001",
+        "page": 11,
+        "excerpt": "there is still room for improvement... incorporating additional NLP techniques in the preprocessing stage and query generation, as well as enhancing entity disambiguation."
+      },
+      {
+        "span_id": "C0030-D-P015-TEXT-0002",
+        "page": 15,
+        "excerpt": "we acknowledge that there is room for further improvement, particularly in sentence simplification."
+      },
+      {
+        "span_id": "C0030-D-P004-TEXT-0003",
+        "page": 4,
+        "excerpt": "KG... still lacks the availability of a standard benchmark dataset for KG construction and validation."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed improvement: apply controlled sentence simplification before triple extraction to reduce noise and make information more straightforward.",
+      "Author-proposed improvement: incorporate semantic role labeling and named entity recognition to improve entity identification and relation extraction.",
+      "Author-proposed improvement: integrate external resources and domain-specific ontologies for richer knowledge representation.",
+      "Author-proposed improvement: investigate prompt engineering and fine-tuning of large language models for future triple-extraction and KG-construction tasks.",
+      "Review-level inference: replace or supplement exact string matching with context-aware entity and predicate disambiguation, and evaluate its effect on precision."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0030-D-P015-TEXT-0001",
+        "page": 15,
+        "excerpt": "Simplifying sentences in a controlled manner... reducing noise and increasing the system's overall accuracy."
+      },
+      {
+        "span_id": "C0030-D-P015-TEXT-0002",
+        "page": 15,
+        "excerpt": "advanced natural language processing techniques, such as semantic role labelling and named entity recognition... domain-specific ontologies... prompt engineering and fine-tuning of... LLMs."
+      },
+      {
+        "span_id": "C0030-D-P011-TEXT-0003",
+        "page": 11,
+        "excerpt": "enhancing entity disambiguation... handle cases where multiple entities with similar labels exist."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "The paper leaves unresolved robust triple extraction from complex and diverse unstructured sentences.",
+      "Entity disambiguation and linking remain unresolved when multiple Wikidata entities have similar labels or when exact labels are unavailable.",
+      "Predicate normalization remains difficult for paraphrases and semantically equivalent natural-language relations.",
+      "The lack of a standardized benchmark for triple extraction and KG validation remains unresolved.",
+      "The precision-recall trade-off remains unresolved: Doc-KG obtains very high recall but lower precision than OpenIE in the reported qualitative evaluation.",
+      "The paper identifies future but unresolved integration of semantic role labeling, domain ontologies, and LLM-based extraction."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0030-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "research work is limited in mapping and linking the triples with Wikidata... investigating this aspect is vital."
+      },
+      {
+        "span_id": "C0030-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "matching and mapping the extracted predicates... is difficult due to the different words used in natural language."
+      },
+      {
+        "span_id": "C0030-D-P014-TEXT-0003",
+        "page": 14,
+        "excerpt": "OpenIE leads in precision... Doc-KG's precision is 44.68%, which... is still competitive, especially considering its much higher recall."
+      },
+      {
+        "span_id": "C0030-D-P015-TEXT-0004",
+        "page": 15,
+        "excerpt": "future work should explore... semantic role labelling and named entity recognition... domain-specific ontologies... LLMs in TE tasks."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that supporting data are available from the corresponding author. It provides Doc-KG and TinyButMighty links in the endnotes: https://w3id.org/salmon/Doc-KG and https://w3id.org/salmon/TinyButMighty. Stanford OpenIE is cited as publicly available. No repository contents or license details are described in the paper."
+}

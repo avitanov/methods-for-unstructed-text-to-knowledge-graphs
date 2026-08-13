@@ -1,0 +1,910 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0039",
+    "title": "Knowledge Graph Population from News Streams",
+    "pdf_path": "data/pdfs/C0039.pdf",
+    "authors": [
+      "Dèlia Fernández Cañellas"
+    ],
+    "year": 2023,
+    "venue": "Universitat Politècnica de Catalunya, PhD dissertation, Teoria del Senyal i Comunicacions",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "Industrial PhD dissertation on constructing and maintaining media knowledge graphs from online news. It develops multimodal entity linking and type-aware relation extraction; VLX-Stories, an online multilingual event-detection and event-KG system; emerging-entity detection; and SHACL/triple-classification quality controls to populate the Vilynx Knowledge Graph (VKG).",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0039-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Knowledge Graph Population from News Streams ... by Dèlia Fernández Cañellas.",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0039-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Barcelona, July 2023.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0039-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Universitat Politècnica de Catalunya ... This thesis is submitted in partial fulfillment of the requirements for the degree of Doctor of Philosophy (PhD).",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0039-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "This industrial doctorate dissertation addresses the problem of constructing knowledge resources and integrating them into a system used by media producers... knowledge graphs and their maintenance through Information Extraction (IE) from news streams is studied.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-02": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0039-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "The final system is capable of extracting triples describing the contents of a news article.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-03": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0039-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "An emerging entity detection module... creates new knowledge graph entities... data validation and triple classification tools are added to increase the quality of the knowledge graph population.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "0.2 Research Question",
+      "span_id": "C0039-D-P016-TEXT-0001",
+      "page": 16,
+      "excerpt": "Can we generate a dynamic knowledge graph that updates according to world changes by leveraging on the information in the news?",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "7 Introduction",
+      "span_id": "C0039-D-P079-TEXT-0002",
+      "page": 79,
+      "excerpt": "Detecting, structuring and augmenting a knowledge graph with new entities and facts from text is therefore essential for constructing and maintaining knowledge graphs.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Conclusions",
+      "span_id": "C0039-D-P105-TEXT-0001",
+      "page": 105,
+      "excerpt": "The presented system is composed by three main modules... IE models... event detection and representation... and triple validation.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Conclusions",
+      "span_id": "C0039-D-P108-TEXT-0002",
+      "page": 108,
+      "excerpt": "The work developed in this thesis falls in the intersection of many fields, specially Natural Language Processing (NLP) and semantic technologies.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.2 Models",
+      "span_id": "C0039-D-P051-PICTURE-0001",
+      "page": 51,
+      "excerpt": "We will take BERT pre-trained model and adapt it to solve our RE task. On top of BERT we add a Softmax classifier.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "9.2.1 Constraints Overview",
+      "span_id": "C0039-D-P095-TEXT-0002",
+      "page": 95,
+      "excerpt": "We divided the validation rules applied in two main groups: type constraints... and data constraints.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "9.5.2.2 Training",
+      "span_id": "C0039-D-P101-TEXT-0003",
+      "page": 101,
+      "excerpt": "We will train four different classifiers: linear SVM, gradient boosting, random forest and bagging classifier.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "7.2 System Overview",
+      "span_id": "C0039-D-P081-CAPTION-0001",
+      "page": 81,
+      "excerpt": "The framework is composed by four modules: Named Entity Recognition and Disambiguation (NERD), Relation Extraction (RE), a Triple Validator and a Triple Classifier.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Conclusions",
+      "span_id": "C0039-D-P105-TEXT-0002",
+      "page": 105,
+      "excerpt": "First, a news aggregator... Afterwards, IE techniques... This system is extended with an emerging entity detector... The relations extracted... are validated... Finally, the triples inferred are used to update... VKG.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "3.3.2 Results",
+      "span_id": "C0039-D-P051-TEXT-0001",
+      "page": 51,
+      "excerpt": "For all variants, we performed fine-tuning from BERTBASE model.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "5.2.3 Topic Detection and Tracking",
+      "span_id": "C0039-D-P064-TEXT-0002",
+      "page": 64,
+      "excerpt": "The chosen clustering technique for topic detection is DBSCAN, which is a unsupervised density-based algorithm.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-03": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "8.2.2 Entity Creation with Human in the Loop",
+      "span_id": "C0039-D-P089-TEXT-0003",
+      "page": 89,
+      "excerpt": "The creation of emerging entities requires human validation before becoming a proper concept in the knowledge graph.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "5.2 Method",
+      "span_id": "C0039-D-P063-PICTURE-0001",
+      "page": 63,
+      "excerpt": "First, a collection of news articles is built by crawling RSS feeds... articles are represented with its entities... Finally... topic tracking... [or] topic detection.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "2.2.1 System Overview",
+      "span_id": "C0039-D-P029-PICTURE-0002",
+      "page": 29,
+      "excerpt": "The system provides semantic tagging from three different sources: visual, audio and associated text (unstructured and semi-structured).",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "7.2 System Overview",
+      "span_id": "C0039-D-P082-TEXT-0003",
+      "page": 82,
+      "excerpt": "The Dynamic EL module splits the input text... in sentences and detects knowledge graph entities... sentences with annotated entities are processed in the RE module... The extracted RDF graph is validated with SHACL constraints... feature vectors... predict the correctness of each triple.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "7.2 System Overview",
+      "span_id": "C0039-D-P082-TEXT-0001",
+      "page": 82,
+      "excerpt": "VKG... is constructed by merging different public knowledge resources: Freebase, Wikidata and Wikipedia... extracted relations in the RE module are defined into VKG ontology, together with the SHACL constrains used for data validation.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "6.2.3.2 Event Properties Extraction",
+      "span_id": "C0039-D-P072-TEXT-0002",
+      "page": 72,
+      "excerpt": "All the information collected for each event is structured in the presented VLX-Event Ontology.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "9.2.1 Constraints Overview",
+      "span_id": "C0039-D-P095-TEXT-0003",
+      "page": 95,
+      "excerpt": "For all relations in our ontology we defined their respective domains and ranges, which will be used for validation.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Conclusions",
+      "span_id": "C0039-D-P105-TEXT-0001",
+      "page": 105,
+      "excerpt": "VLX-Stories parses news articles and clusters them... IE techniques are used to detect the entities... and the relations between them... validated triples populate... VLX-Stories KG... triples inferred are used to update... VKG.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "9.4.1 RDF Validation",
+      "span_id": "C0039-D-P098-TEXT-0002",
+      "page": 98,
+      "excerpt": "Repeated triples... are merged in a graph of unique triples... SHACL constraints are applied... Final output consists in an RDF graph of valid and unique triples.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "8.2.1 Aspirant Generation",
+      "span_id": "C0039-D-P088-TEXT-0003",
+      "page": 88,
+      "excerpt": "Aspirants created are stored as a new entry into an external DB with its metadata context... Once the aspirant is created, it is added into the Event Semantic Pattern.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "7 Introduction",
+      "span_id": "C0039-D-P079-TEXT-0001",
+      "page": 79,
+      "excerpt": "We propose learning from aggregated news... The extracted entities and facts will be used to keep up to date an industrial knowledge graph based on mass media.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "2.2.1 System Overview",
+      "span_id": "C0039-D-P029-TEXT-0002",
+      "page": 29,
+      "excerpt": "Document related metadata... unstructured text... audio transcript... OCR... Visual Entity Recognition.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "5.2.1 News Feeds Crawler",
+      "span_id": "C0039-D-P063-TEXT-0001",
+      "page": 63,
+      "excerpt": "The feeds crawler... stores... each article URL, publication date, title and description... crawl[s] the URL and parse[s] the article... to extract all its text data and images.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "7.2 System Overview",
+      "span_id": "C0039-D-P082-TEXT-0002",
+      "page": 82,
+      "excerpt": "The input of the system are aggregated news... a set of clustered articles that discuss the same event or story.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "7.2 System Overview",
+      "span_id": "C0039-D-P082-TEXT-0001",
+      "page": 82,
+      "excerpt": "The extracted relations are expressed as RDF triples of the form ⟨subject, predicate, object⟩, and interconnected into an RDF graph.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "6.2.3.2 Event Properties Extraction",
+      "span_id": "C0039-D-P072-TEXT-0002",
+      "page": 72,
+      "excerpt": "The Who, Where and Topic are extracted from the event semantic pattern... We define the What... with a sentence... To answer When, we take the date of the first article published.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "2.2.2 Mention Detection",
+      "span_id": "C0039-D-P030-TEXT-0001",
+      "page": 30,
+      "excerpt": "In particular, we will use Spacy... for its state of the art performance, easy to use Python implementation, multilinguality, and mature adoption in industry.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "2.2.3 Holistic Named Entity Disambiguation",
+      "span_id": "C0039-D-P030-TEXT-0002",
+      "page": 30,
+      "excerpt": "The candidate entity generation module queries a knowledge graph... Candidates are retrieved with an Elastic Search query.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "5.2.3 Topic Detection and Tracking",
+      "span_id": "C0039-D-P064-TEXT-0003",
+      "page": 64,
+      "excerpt": "For this topic tracking task, we use the k-Nearest Neighbours (k-NN) algorithm... The chosen clustering technique for topic detection is DBSCAN.",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "2.4 Conclusions",
+      "span_id": "C0039-D-P042-TABLE-0001",
+      "page": 42,
+      "excerpt": "The first experiment... was evaluated with VLX-News Dataset... The tags generated were highly graded by human users... accuracy of 80.87%.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.3.1 Datasets",
+      "span_id": "C0039-D-P052-TABLE-0002",
+      "page": 52,
+      "excerpt": "TypeRE 30,923 total; 24,729 train; 3,095 dev; 3,099 test; 27 relations; 29,730 entities.",
+      "confidence": "medium"
+    },
+    "datasets-17-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "9.5.1.1 Dataset",
+      "span_id": "C0039-D-P100-TABLE-0003",
+      "page": 100,
+      "excerpt": "The resulting dataset contains a total of 11 aggregated news stories and 400 candidate facts... 17 from the 27 relations in the TypeRE dataset.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "3.3.2 Results",
+      "span_id": "C0039-D-P052-TABLE-0001",
+      "page": 52,
+      "excerpt": "Test performance on the TACRED relation extraction benchmark... Precision, Recall, F1; TypeRE additionally reports Accuracy.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "5.3 Experiments",
+      "span_id": "C0039-D-P065-TABLE-0002",
+      "page": 65,
+      "excerpt": "Event P.; Article P.; Article R.; Article F1.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "9.5.2.3 Results",
+      "span_id": "C0039-D-P102-TABLE-0003",
+      "page": 102,
+      "excerpt": "Comparison of triple classification results... Precision, Recall, F1, Accuracy, AUC ROC, AUC P/R.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "2.4 Conclusions",
+      "span_id": "C0039-D-P042-TEXT-0001",
+      "page": 42,
+      "excerpt": "The performance... was improved by a 5% (reaching 0.82) when simulating the addition of visually recognized entities.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "3.2.2 Models",
+      "span_id": "C0039-D-P051-TEXT-0002",
+      "page": 51,
+      "excerpt": "As baseline for comparison we use Soares et al. configuration of BERT with Entity Markers.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-03": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "9.5.1.2 Results",
+      "span_id": "C0039-D-P100-TABLE-0003",
+      "page": 100,
+      "excerpt": "We compare the output from the RE model (Base), type constraints (Type), all constraints... (Type+Data), and... aggregated news (Type+Data in AN).",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "3.3.2 Results",
+      "span_id": "C0039-D-P052-TEXT-0001",
+      "page": 52,
+      "excerpt": "Fine-tuning was configured with... 10 epochs, a learning rate of 3e-5 with Adam, and a batch size of 64.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "9.5.2.2 Training",
+      "span_id": "C0039-D-P101-TEXT-0002",
+      "page": 101,
+      "excerpt": "Samples in the dataset are divided into train and test subsets, with a partition of 70% and 30% correspondingly.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "9.5.1.2 Results",
+      "span_id": "C0039-D-P100-TEXT-0003",
+      "page": 100,
+      "excerpt": "The sentences in the TypeRE dataset... are from Wikipedia articles, while sentences in AggregatedNewsRE dataset are from news articles, where language expressions follow a different distribution.",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "2.4 Conclusions",
+      "span_id": "C0039-D-P042-TEXT-0001",
+      "page": 42,
+      "excerpt": "Overall f1-score of 0.77... improved by a 5% (reaching 0.82)... accuracy of 80.87%.",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "3.3.2 Results",
+      "span_id": "C0039-D-P052-TABLE-0002",
+      "page": 52,
+      "excerpt": "BERTEM+TM: TACRED test F1 68.8; TypeRE test F1 89.9 and accuracy 93.7.",
+      "confidence": "medium"
+    },
+    "main_results-21-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "9.5.1.2 Results",
+      "span_id": "C0039-D-P100-TABLE-0003",
+      "page": 100,
+      "excerpt": "Base: Precision 54.5, Recall 85.5, F1 66.6, Accuracy 62.3; Type+Data in AN: 70.1, 81.7, 75.5, 75.0.",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "7.2 System Overview",
+      "span_id": "C0039-D-P082-TEXT-0001",
+      "page": 82,
+      "excerpt": "The system transforms unstructured text from aggregated news articles to a structured knowledge representation while detecting novel entities and triples that are OOKG.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "9.5.1.2 Results",
+      "span_id": "C0039-D-P101-TEXT-0002",
+      "page": 101,
+      "excerpt": "Only a 3.8% of recall is lost, while accuracy increases 12.7%.",
+      "confidence": "medium"
+    },
+    "strengths-22-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "8.5 Conclusions",
+      "span_id": "C0039-D-P090-TEXT-0003",
+      "page": 90,
+      "excerpt": "These representations work as entities during disambiguation and are indexed by search algorithms. However, they will not be part of the knowledge graph until a human has reviewed and validated it.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "9.6.2 Triple Classification",
+      "span_id": "C0039-D-P103-TEXT-0001",
+      "page": 103,
+      "excerpt": "Most of [the incorrect triples had] a good relation prediction, but [were] wrong because an incorrect entity disambiguation.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.3 Experiments",
+      "span_id": "C0039-D-P065-TEXT-0002",
+      "page": 65,
+      "excerpt": "High average precision... but a poor recall (58.548%), which translate to an article classification F1 score of 72.32%.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Future Work",
+      "span_id": "C0039-D-P111-TEXT-0003",
+      "page": 111,
+      "excerpt": "We found difficulties on the performance evaluation, because there is no dataset that we could use to test the end-to-end system.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "2.3.2.3 Human Rating of Generated Tags",
+      "span_id": "C0039-D-P042-TEXT-0001",
+      "page": 42,
+      "excerpt": "Many of these entities are too generic concepts... most of the incorrect entities are abstract concepts... repeated errors on the mapping from keywords to knowledge graph entities.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "5.3 Experiments",
+      "span_id": "C0039-D-P065-TEXT-0002",
+      "page": 65,
+      "excerpt": "The system parameters have been optimized to prioritize precision over recall.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "9.2.1 Constraints Overview",
+      "span_id": "C0039-D-P096-TEXT-0003",
+      "page": 96,
+      "excerpt": "If we are missing entity-types relations in the KG, we will also discard some true positives.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Future Work",
+      "span_id": "C0039-D-P110-TEXT-0001",
+      "page": 110,
+      "excerpt": "The models could be improved with a greater diversity of data sources... improve the robustness... adding validation and feedback from users.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Future Work",
+      "span_id": "C0039-D-P111-TEXT-0002",
+      "page": 111,
+      "excerpt": "Future work... improve the amount of false negative article assignations... design quality evaluation experiments.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Future Work",
+      "span_id": "C0039-D-P111-TEXT-0003",
+      "page": 111,
+      "excerpt": "Future work on this model should focus on adding contextual information thought the use of knowledge graph embeddings... With a larger corpus of triples we would be able to apply neural models.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "9 Novel Facts Validation",
+      "span_id": "C0039-D-P093-TEXT-0001",
+      "page": 93,
+      "excerpt": "There are triples that are semantically correct but are still wrong. Detecting such errors is challenging, as it is not possible to detect by applying rules.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Future Work",
+      "span_id": "C0039-D-P111-TEXT-0002",
+      "page": 111,
+      "excerpt": "There is no dataset that we could use to test the end-to-end system... [it] would require a human evaluation to analyze if we are missing or merging events.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "8.5 Conclusions",
+      "span_id": "C0039-D-P091-TEXT-0003",
+      "page": 91,
+      "excerpt": "We will automatize the detection of alias from the aspirants... [and] extension... to other types of entities.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "3.3.1 Datasets",
+      "span_id": "C0039-D-P051-TEXT-0001",
+      "page": 51,
+      "excerpt": "TypeRE Dataset: https://figshare.com/articles/dataset/TypeRE_Dataset/12850154",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "9 Novel Facts Validation",
+      "span_id": "C0039-D-P094-TEXT-0002",
+      "page": 94,
+      "excerpt": "AggregatedNewsRE Dataset: https://figshare.com/articles/dataset/AggregatedNewsRE_Dataset/12850682",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-03": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Conclusions",
+      "span_id": "C0039-D-P108-TEXT-0003",
+      "page": 108,
+      "excerpt": "All the contributions have been deployed as industrial tools on production systems, providing services to several media companies.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "How to generate a dynamic, high-quality knowledge graph that updates with world changes by extracting entities, relations, events, and novel facts from unstructured, multilingual news streams. The application setting is media-content indexing, search, event exploration, and KG maintenance, where static encyclopedic KGs omit emerging entities and current facts.",
+  "methodology": {
+    "primary_family": "Hybrid NLP and LLM methods",
+    "secondary_families": [
+      "Transformer encoder methods",
+      "Ontology-constrained and schema-guided methods",
+      "Validation, correction, and knowledge-fusion methods",
+      "Classical machine learning"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "supervised",
+    "description": "The end-to-end workflow is: (1) crawl RSS feeds and parse article text/images; (2) represent articles with NER/POS-derived entities, nouns, and noun chunks, weighted with modified TF-IDF and time; (3) use k-NN tracking and DBSCAN detection to aggregate same-story news; (4) obtain semantic entities through multimodal entity linking, including spaCy NER/POS, visual recognition, OCR, and speech-to-text inputs; (5) dynamically create provisional person 'aspirants' from repeated NIL mentions, then have humans accept, merge as aliases, or reject them; (6) create candidate entity pairs in sentences and use fine-tuned BERT with entity/type markers to classify ontology relations; (7) merge duplicate triples and validate RDF graphs with ontology-derived SHACL type/cardinality/disjoint constraints, exploiting redundancy across an event; (8) aggregate unique triples across events, classify their correctness from 18 redundancy/prediction features, and ingest threshold-passing triples into VKG. Separately, VLX-Stories represents events in an event ontology using who/what/where/when/topic properties."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "VKG is an encyclopedic KG merged from Freebase, Wikidata, and Wikipedia. It supplies entity candidates, an ontology of relation predicates and entity types, and SHACL constraints. The system also defines a VLX-Event Ontology, inspired by journalism's who/what/where/when questions plus topic, category, semantic-pattern entities, and article context. The schema constrains RE outputs and RDF validation.",
+    "evidence": [
+      {
+        "span_id": "C0039-D-P082-TEXT-0001",
+        "page": 82,
+        "excerpt": "VKG... is constructed by merging different public knowledge resources: Freebase, Wikidata and Wikipedia... extracted relations in the RE module are defined into VKG ontology, together with the SHACL constrains used for data validation."
+      },
+      {
+        "span_id": "C0039-D-P072-TEXT-0002",
+        "page": 72,
+        "excerpt": "All the information collected for each event is structured in the presented VLX-Event Ontology."
+      },
+      {
+        "span_id": "C0039-D-P095-TEXT-0003",
+        "page": 95,
+        "excerpt": "For all relations in our ontology we defined their respective domains and ranges, which will be used for validation."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing",
+    "Entity and concept extraction",
+    "Entity typing",
+    "Entity resolution and linking",
+    "Relation and triple extraction",
+    "Event extraction",
+    "Graph construction",
+    "Knowledge fusion and deduplication",
+    "Graph validation and correction",
+    "Graph updating"
+  ],
+  "input_output": {
+    "input_type": "Online multilingual news streams aggregated into same-event article clusters; individual article text and semi-structured metadata, optionally associated images, video/audio transcripts, and OCR text.",
+    "input_granularity": "RSS feeds and articles; article titles, descriptions, full text, metadata fields, and sentences; the main KG-population unit is an aggregated-news/event cluster containing multiple articles.",
+    "output_representation": "Annotated entities and relation-labelled candidate facts; RDF subject-predicate-object triples and valid RDF subgraphs; populated/updated VKG; and VLX-Stories KG event instances represented by a journalism-W ontology (who, what, where, when, topic, category, article context)."
+  },
+  "models_and_tools": [
+    "RSS crawler and customized HTML parser",
+    "spaCy pretrained NER and POS-tagging models",
+    "Speech-to-text module (treated as external black box)",
+    "OCR module (treated as external black box)",
+    "Visual Entity Recognition deep-learning modules",
+    "Elasticsearch candidate retrieval",
+    "Entity embeddings for collective EL scoring",
+    "Fine-tuned BERTBASE relation classifiers: BERTEM baseline, BERTTM, and BERTEM+TM",
+    "k-NN with cosine similarity for topic tracking",
+    "DBSCAN for topic detection",
+    "One-layer LSTM article-category classifier",
+    "SHACL validator",
+    "scikit-learn linear SVM, gradient boosting, random forest, and bagging triple classifiers"
+  ],
+  "datasets": [
+    "VLX-News Dataset for EL training/testing (size not reported in the inspected text)",
+    "YouTube-8M subset: 13,951 videos for multilingual tagging statistics; 1,400 randomly selected English videos for human tag-quality evaluation",
+    "TACRED: 106k sentences, 41 relation categories plus no-relation, 17 entity types",
+    "TypeRE: 30,923 sentences; 24,729/3,095/3,099 train/dev/test; 27 relations; 29,730 unique entities; created by aligning Wiki80, KBP37, and KnowledgeNet with VKG ontology",
+    "UCI-ML News Aggregator Dataset subset: 91,728 articles and 6,289 events after exclusions",
+    "100 US semantic event patterns from 1–7 January 2019",
+    "Emerging-entity recovery set: 648 events from US, Spain, and Portugal, 1–7 January 2019",
+    "AggregatedNewsRE: 400 manually annotated candidate facts from 11 aggregated-news stories, 17 relations, 91 entities",
+    "Triple-classifier dataset: 866 unique triples (500 valid, 366 invalid), manually annotated by three people"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Entity-linking/tagging F1 and human-rating accuracy",
+      "Relation-extraction precision, recall, F1, and accuracy",
+      "Event detection precision; article-assignment precision, recall, and F1",
+      "Event-pattern entity-linking precision, recall, F1, and accuracy",
+      "Emerging-entity recovery percentage and production detection/validation proportions",
+      "Triple-validation precision, recall, F1, and accuracy",
+      "Triple-classification precision, recall, F1, accuracy, ROC AUC, and PR AUC",
+      "Production manual correctness rate of newly ingested triples"
+    ],
+    "baselines": [
+      "EL: base system without simulated visual entities; several ML classifiers, with polynomial SVM reported as best",
+      "RE: BERTEM entity-marker configuration from Soares et al.; published ERNIE and SpanBERT TACRED results reported for contextual comparison",
+      "Triple validation: raw BERTEM+TM RE output ('Base'), then type-only and type+data constraint variants",
+      "Triple classification: linear SVM, gradient boosting, random forest, and bagging classifier comparisons"
+    ],
+    "setting": "The dissertation evaluates modules separately and reports production analytics. RE variants were fine-tuned from BERTBASE for 10 epochs with learning rate 3e-5, Adam, and batch size 64. Triple-classifier data use a 70/30 train/test split. Event clustering used UCI data after URL/keyword/minimum-cluster exclusions, with DBSCAN eps=0.65 and min_samples=5. The paper explicitly notes the absence of a full end-to-end event-system benchmark and the domain shift between Wikipedia-trained RE and news text."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Holistic EL: best model F1=0.77 on VLX-News; simulated visual entities raised F1 to 0.82 (5 percentage-point improvement). Human evaluation of 14,024 tags from 1,400 YouTube-8M videos reported 80.87% accuracy.",
+      "RE: BERTEM+TM achieved TACRED test P/R/F1=70.3/67.3/68.8 versus BERTEM=67.8/65.3/65.5; on TypeRE it reached P/R/F1/accuracy=90.2/89.5/89.9/93.7 versus BERTEM=87.0/88.3/87.6/92.1.",
+      "Event clustering: on the filtered UCI subset, event-detection precision=81.58%; article P/R/F1=94.57/58.54/72.32. Production analytics report 17,296.37 articles/day and 362.48 country-level events/day across seven countries.",
+      "Event semantic-pattern linking: 100 patterns yielded P/R/F1/accuracy=0.86/0.94/0.90/0.86.",
+      "Emerging entities: recovery of deleted persons was 78.86% across 648 stories. In production, 67.88 emerging entities/day were detected; human review judged 75.45% new entities, 22.15% aliases, and 9.7% NER errors.",
+      "RDF validation on AggregatedNewsRE improved precision from 54.5 to 70.1 and F1 from 66.6 to 75.5; recall fell from 85.5 to 81.7. Gradient boosting gave the best triple-classification accuracy (73.8%, ROC AUC=81.0); high-threshold random-forest/bagging runs reportedly achieved about 98% precision with recall above 50%.",
+      "In a 24-hour production sample, 88.6% of manually evaluated new triples passing validation were correct. In a daily ingestion run, 57% of 113 unique submitted triples were newly ingested and 84.6% of ingested triples were manually judged correct."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0039-D-P042-TEXT-0001",
+        "page": 42,
+        "excerpt": "Overall f1-score of 0.77... improved by a 5% (reaching 0.82)... accuracy of 80.87%."
+      },
+      {
+        "span_id": "C0039-D-P052-TABLE-0002",
+        "page": 52,
+        "excerpt": "BERTEM+TM: TACRED test F1 68.8; TypeRE test F1 89.9 and accuracy 93.7."
+      },
+      {
+        "span_id": "C0039-D-P100-TABLE-0003",
+        "page": 100,
+        "excerpt": "Base: Precision 54.5, Recall 85.5, F1 66.6, Accuracy 62.3; Type+Data in AN: 70.1, 81.7, 75.5, 75.0."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "REVIEW INFERENCE: The system addresses a complete operational Text-to-KG chain—from stream ingestion and event aggregation through canonical entity/relation extraction, validation, and graph updating—rather than evaluating only an isolated extractor.",
+      "REVIEW INFERENCE: Aggregated same-event news provides repeated evidence that the validator and classifier explicitly exploit, and the controlled validation experiment shows a large precision gain with limited recall loss.",
+      "REVIEW INFERENCE: Schema-aware methods are used at two points: type markers improve RE and SHACL constraints prevent ontology-incoherent RDF triples.",
+      "REVIEW INFERENCE: The 'aspirant' design allows timely provisional tagging and search for emerging persons while retaining human gatekeeping before persistent KG creation.",
+      "REVIEW INFERENCE: Evaluation combines public benchmarks, purpose-built datasets, ablations/baselines, and production measurements, making the practical design and trade-offs visible."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0039-D-P082-TEXT-0001",
+        "page": 82,
+        "excerpt": "The system transforms unstructured text from aggregated news articles to a structured knowledge representation while detecting novel entities and triples that are OOKG."
+      },
+      {
+        "span_id": "C0039-D-P101-TEXT-0002",
+        "page": 101,
+        "excerpt": "Only a 3.8% of recall is lost, while accuracy increases 12.7%."
+      },
+      {
+        "span_id": "C0039-D-P090-TEXT-0003",
+        "page": 90,
+        "excerpt": "These representations work as entities during disambiguation and are indexed by search algorithms. However, they will not be part of the knowledge graph until a human has reviewed and validated it."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "REVIEW INFERENCE: The pipeline compounds errors across NER, EL, RE, validation, and classification; production analysis identifies erroneous entity disambiguation as the dominant pattern among incorrect ingested triples.",
+      "REVIEW INFERENCE: High-precision operating choices deliberately leave many relevant articles/triples unassigned or filtered, constraining coverage and recall.",
+      "REVIEW INFERENCE: Several evaluations are custom, small, manually annotated, simulated (deleting known entities), or module-specific; the thesis does not establish an end-to-end benchmark of full KG-population quality.",
+      "REVIEW INFERENCE: The system is limited to three languages and production-specific VKG ontology/data infrastructure, so cross-domain and broader multilingual generalization are unproven.",
+      "REVIEW INFERENCE: Reliance on human review for final emerging-entity creation improves quality but limits full automation and may delay canonical graph updates."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0039-D-P103-TEXT-0001",
+        "page": 103,
+        "excerpt": "Most of [the incorrect triples had] a good relation prediction, but [were] wrong because an incorrect entity disambiguation."
+      },
+      {
+        "span_id": "C0039-D-P065-TEXT-0002",
+        "page": 65,
+        "excerpt": "High average precision... but a poor recall (58.548%), which translate to an article classification F1 score of 72.32%."
+      },
+      {
+        "span_id": "C0039-D-P111-TEXT-0003",
+        "page": 111,
+        "excerpt": "We found difficulties on the performance evaluation, because there is no dataset that we could use to test the end-to-end system."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The EL system can produce generic, abstract, and repeated keyword-to-entity mapping errors; unknown/ambiguous contexts remain difficult.",
+      "The RE study did not evaluate BERTLARGE because of its high computational requirements.",
+      "The news aggregator prioritizes precision and consequently has poor article-assignment recall; business news are especially difficult because financial terms recur across unrelated articles.",
+      "Event representation struggles with homonyms and unknown contexts; no suitable end-to-end event-system dataset was available.",
+      "Emerging-entity creation is restricted to persons with at least two words; deleted entities can be wrongly linked to same/related aliases.",
+      "SHACL type constraints can reject true positives when the KG lacks required entity-type data.",
+      "Triple classifiers are limited by annotated-data volume; production errors frequently originate in entity disambiguation."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0039-D-P042-TEXT-0001",
+        "page": 42,
+        "excerpt": "Many of these entities are too generic concepts... most of the incorrect entities are abstract concepts... repeated errors on the mapping from keywords to knowledge graph entities."
+      },
+      {
+        "span_id": "C0039-D-P065-TEXT-0002",
+        "page": 65,
+        "excerpt": "The system parameters have been optimized to prioritize precision over recall."
+      },
+      {
+        "span_id": "C0039-D-P096-TEXT-0003",
+        "page": 96,
+        "excerpt": "If we are missing entity-types relations in the KG, we will also discard some true positives."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "AUTHOR-PROPOSED: Improve EL using more sources/metadata, robustness to noisy and out-of-knowledge-base data, and user-based validation/feedback; add visual-training data and stronger visual recognition.",
+      "AUTHOR-PROPOSED: Explore RE architectures that integrate KG information into language-model representations; use BERTLARGE where feasible.",
+      "AUTHOR-PROPOSED: Improve false-negative article assignments and design human end-to-end event-quality evaluations.",
+      "AUTHOR-PROPOSED: Extend emerging-entity detection beyond people to locations, organizations, and events; automatically identify aliases using multilingual string matching and co-occurrence/context features.",
+      "AUTHOR-PROPOSED: Add KG-embedding/context features to triple classification and collect a larger labelled corpus to test neural classifiers."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0039-D-P110-TEXT-0001",
+        "page": 110,
+        "excerpt": "The models could be improved with a greater diversity of data sources... improve the robustness... adding validation and feedback from users."
+      },
+      {
+        "span_id": "C0039-D-P111-TEXT-0002",
+        "page": 111,
+        "excerpt": "Future work... improve the amount of false negative article assignations... design quality evaluation experiments."
+      },
+      {
+        "span_id": "C0039-D-P111-TEXT-0003",
+        "page": 111,
+        "excerpt": "Future work on this model should focus on adding contextual information thought the use of knowledge graph embeddings... With a larger corpus of triples we would be able to apply neural models."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "AUTHOR-STATED: Dynamic KG maintenance still needs reliable handling of KG incompleteness, emerging entity canonicalization, aliases, and world changes.",
+      "AUTHOR-STATED: Measuring the end-to-end correctness of detected/merged news events remains unresolved without suitable data and human evaluation.",
+      "AUTHOR-STATED: The precision–recall trade-off remains unresolved for real-time event tracking and high-quality population.",
+      "AUTHOR-STATED: Detecting semantically plausible but factually wrong triples cannot be solved by ontology constraints alone; stronger contextual verification is needed.",
+      "REVIEW INFERENCE: Provenance-aware truth assessment, broad multilingual/domain transfer, and fully automated but high-precision entity creation are not demonstrated by this dissertation and remain open for this approach."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0039-D-P093-TEXT-0001",
+        "page": 93,
+        "excerpt": "There are triples that are semantically correct but are still wrong. Detecting such errors is challenging, as it is not possible to detect by applying rules."
+      },
+      {
+        "span_id": "C0039-D-P111-TEXT-0002",
+        "page": 111,
+        "excerpt": "There is no dataset that we could use to test the end-to-end system... [it] would require a human evaluation to analyze if we are missing or merging events."
+      },
+      {
+        "span_id": "C0039-D-P091-TEXT-0003",
+        "page": 91,
+        "excerpt": "We will automatize the detection of alias from the aspirants... [and] extension... to other types of entities."
+      }
+    ]
+  },
+  "code_and_data_availability": "The dissertation supplies Figshare URLs for TypeRE and AggregatedNewsRE datasets. It describes production deployment at Vilynx, but does not report a public source-code repository, public trained-model release, public VKG dump, or public full production/news corpus. It cites the public YouTube-8M, TACRED, and UCI-ML News Aggregator resources used in evaluations."
+}

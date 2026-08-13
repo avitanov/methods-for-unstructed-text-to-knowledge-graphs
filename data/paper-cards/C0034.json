@@ -1,0 +1,704 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0034",
+    "title": "ICDM 2019 Knowledge Graph Contest: Team UWA",
+    "pdf_path": "data/batches/batch-02/C0034.pdf",
+    "authors": [
+      "Michael Stewart",
+      "Majigsuren Enkhsaikhan",
+      "Wei Liu"
+    ],
+    "year": 2019,
+    "venue": "ICDM 2019 Knowledge Graph Contest",
+    "identifier": {
+      "status": "reported",
+      "value": "arXiv:1909.01807v1",
+      "evidence": [
+        {
+          "span_id": "C0034-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "arXiv:1909.01807v1 [cs.CL] 4 Sep 2019."
+        }
+      ]
+    },
+    "abstract": "not_reported",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0034-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "1st Michael Stewart; 2nd Majigsuren Enkhsaikhan; 3rd Wei Liu; The University of Western Australia.",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "PDF header",
+      "span_id": "C0034-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "arXiv:1909.01807v1 [cs.CL] 4 Sep 2019.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Title",
+      "span_id": "C0034-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "ICDM 2019 Knowledge Graph Contest: Team UWA.",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "PDF header",
+      "span_id": "C0034-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "arXiv:1909.01807v1 [cs.CL] 4 Sep 2019.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "I-A. Introduction",
+      "span_id": "C0034-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The contest task... demands a refined set of high-quality triples.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "I-A. Introduction",
+      "span_id": "C0034-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "NER tools can only capture Ford and GT350 as entities and ignore the other phrases.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "I-A. Introduction",
+      "span_id": "C0034-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The best performance was achieved by maintaining a high level of simplicity and utilising a pipeline-based approach.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "I-B. Triple extraction system",
+      "span_id": "C0034-D-P002-PICTURE-0002",
+      "page": 2,
+      "excerpt": "The core pipeline comprises Text Cleaning, Text Processing, Chunking, Coreference Resolution, Triple Mapping, Triple Filtering, and Article Removal.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "I-B. Triple extraction system",
+      "span_id": "C0034-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Text processing uses tokenisation, POS tagging, entity recognition and dependency parsing using SpaCy.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "I-C. Visualisation system",
+      "span_id": "C0034-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "We use an attention-based bidirectional Long Short-Term Memory (LSTM) model... trained on the SemEval 2010 Task 8 dataset.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "I-B. Triple extraction system",
+      "span_id": "C0034-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Our triple extraction system adopts a pipeline-based approach in order to convert a document into a set of triples.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "I-B. Triple extraction system",
+      "span_id": "C0034-D-P002-PICTURE-0002",
+      "page": 2,
+      "excerpt": "A diagram of the core components of our triple extraction system.",
+      "confidence": "medium"
+    },
+    "methodology-description-09-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "I-B. Triple extraction system",
+      "span_id": "C0034-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "It comprises seven distinct stages, as shown in Figure 1.",
+      "confidence": "medium"
+    },
+    "methodology-description-09-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Algorithm 2",
+      "span_id": "C0034-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "For each relation, get entities on the left and right side, add [head, relation, tail], then create a graph and use shortest paths to add 'in' triples.",
+      "confidence": "medium"
+    },
+    "methodology-description-09-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "III. External Resources",
+      "span_id": "C0034-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "The attention-based Bi-LSTM for relation extraction is implemented in Tensorflow, and trained on the SemEval 2010 Task 8 dataset.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-10-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "I-C. Visualisation system",
+      "span_id": "C0034-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The relation extraction component maps the relation phrase of each triple to one or more structured relation types.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-10-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "I-C. Visualisation system",
+      "span_id": "C0034-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "Our system currently maps each relation phrase to its corresponding SemEval relation.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-11-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "I-B. Triple extraction system",
+      "span_id": "C0034-D-P001-PICTURE-0001",
+      "page": 1,
+      "excerpt": "Text Cleaning; Text Processing; Chunking; Coreference Resolution; Triple Mapping; Triple Filtering; Article Removal; Triples.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-11-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "I-B. Triple extraction system",
+      "span_id": "C0034-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Triple filtering is performed to remove any triple with a stop word as a head entity.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-12-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "I-A. Introduction",
+      "span_id": "C0034-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Real-world applications, such as the domain specific text in automotive engineering or public security.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-12-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "I-B. Triple extraction system",
+      "span_id": "C0034-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "convert a document into a set of triples.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-13-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Algorithm 2",
+      "span_id": "C0034-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Extract triples from the document at the sentence level... Extract the triples at the document level using the graph shortest paths.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-14-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "I-B. Triple extraction system",
+      "span_id": "C0034-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Triples are created from the sentences in head, relation, tail format.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-14-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "I-C. Visualisation system",
+      "span_id": "C0034-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "Each triple [is] appended with the degree/betweenness of the head and tail nodes, structured relation(s), and named entity classes.",
+      "confidence": "medium"
+    },
+    "models_and_tools-15-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "I-A. Introduction",
+      "span_id": "C0034-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Our system is built using... NLTK and SpaCy.",
+      "confidence": "medium"
+    },
+    "models_and_tools-15-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "I-B. Triple extraction system",
+      "span_id": "C0034-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "A list of coreferenced items is created using NeuralCoref.",
+      "confidence": "medium"
+    },
+    "models_and_tools-15-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "I-C. Visualisation system",
+      "span_id": "C0034-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "We use an attention-based bidirectional Long Short-Term Memory (LSTM) model.",
+      "confidence": "medium"
+    },
+    "models_and_tools-15-04": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "III. External Resources",
+      "span_id": "C0034-D-P005-TEXT-0004",
+      "page": 5,
+      "excerpt": "Our visualisation system is written in Flask. The front-end visualisations are written primarily in D3.js... degree and betweenness calculations are performed via NetworkX.",
+      "confidence": "medium"
+    },
+    "datasets-16-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "I-C. Visualisation system",
+      "span_id": "C0034-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "feed them into a pretrained model (trained on the SemEval 2010 Task 8 dataset).",
+      "confidence": "medium"
+    },
+    "datasets-16-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "II-A. Triple Extraction",
+      "span_id": "C0034-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "In order to evaluate the quality of our triple extraction system, we consider the following two sentences: Ford Motor Company is an American multinational automaker...",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-17-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "II-A. Triple Extraction",
+      "span_id": "C0034-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Table III displays the subject, predicate, object triples... and the additional information provided by the visualisation system.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-17-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "II-C. Conclusion",
+      "span_id": "C0034-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "The graph edit distance metric that is commonly used to automatically evaluate the quality of triples is only capable of structural analysis.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-18-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "II-A. Triple Extraction",
+      "span_id": "C0034-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "In order to evaluate the quality of our triple extraction system, we consider the following two sentences.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-18-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "II-B. Coreference Resolution",
+      "span_id": "C0034-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "To highlight the effectiveness of our coreference resolution component, we introduce an additional sentence to our example.",
+      "confidence": "medium"
+    },
+    "main_results-19-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "II-A. Triple Extraction",
+      "span_id": "C0034-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Our system is able to extract useful triples with 'in' relations... such as (Ford Motor Company, in, Dearborn).",
+      "confidence": "medium"
+    },
+    "main_results-19-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "II-B. Coreference Resolution",
+      "span_id": "C0034-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The visualisation in Figure 3 clearly shows Ford Motor Company as the shared entity between the three sentences.",
+      "confidence": "medium"
+    },
+    "main_results-19-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "II-C. Conclusion",
+      "span_id": "C0034-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "our system uses a pipeline-based approach to extract a set of triples from a given document. It offers a simple and effective solution.",
+      "confidence": "medium"
+    },
+    "strengths-20-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "I-A. Introduction",
+      "span_id": "C0034-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Chunking of noun phrases for entities and chunking of action related phrases for relations are performed in this work.",
+      "confidence": "medium"
+    },
+    "strengths-20-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "I-B. Triple extraction system",
+      "span_id": "C0034-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "verb phrases can contain verbs, particles and/or adverbs that represent more meaningful relations between entities.",
+      "confidence": "medium"
+    },
+    "strengths-20-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "II-A. Triple Extraction",
+      "span_id": "C0034-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "The chunking component ensures useful phrases such as 'Ford Motor Company' and 'Henry Ford' appear in multiple triples.",
+      "confidence": "medium"
+    },
+    "weaknesses-21-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "I-A. Introduction",
+      "span_id": "C0034-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Our best deep learning-based approach produced high-quality triples, but only in very small numbers.",
+      "confidence": "medium"
+    },
+    "weaknesses-21-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "I-C. Visualisation system",
+      "span_id": "C0034-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "One caveat of performing the NER after the triple extraction pipeline is that there is no contextual information passed to the named entity recognition model.",
+      "confidence": "medium"
+    },
+    "weaknesses-21-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Algorithm 2",
+      "span_id": "C0034-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "For each relation, the algorithm obtains heads as entities on the left and tails as entities on the right, then adds triples for each head and tail.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-22-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "I-A. Introduction",
+      "span_id": "C0034-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Considering a sentence may have zero or many triples... it was exceedingly difficult to represent the input data... [to] predict a decently-sized set of valid triples.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-22-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "I-A. Introduction",
+      "span_id": "C0034-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "OpenIE tends to produce a vast number of triples, with many subjects or objects being long sequences of words.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-22-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "II-C. Conclusion",
+      "span_id": "C0034-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "The graph edit distance metric... is only capable of structural analysis.",
+      "confidence": "medium"
+    },
+    "possible_improvements-23-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "II-C. Conclusion",
+      "span_id": "C0034-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "To improve the metric it could be combined with meaningful semantic measures... Another option would be to incorporate a simple sum of word embeddings over each triple.",
+      "confidence": "medium"
+    },
+    "possible_improvements-23-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "II-C. Conclusion",
+      "span_id": "C0034-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "In future we plan to continue working on our end-to-end deep learning-based triple extraction model.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-24-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "I-A. Introduction",
+      "span_id": "C0034-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "There is no benchmark annotated dataset relevant to those domains.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-24-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "II-C. Conclusion",
+      "span_id": "C0034-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "The graph edit distance metric... is only capable of structural analysis.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-25-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "I-C. Visualisation system",
+      "span_id": "C0034-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The source code of our visualisation system is available on Github.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "medium",
+  "problem_addressed": "Construct a refined, high-quality set of subject–predicate–object triples from domain-specific unstructured documents for the ICDM contest, while avoiding missed domain entities, overly long OpenIE arguments, and fixed relation inventories that do not fit the task.",
+  "methodology": {
+    "primary_family": "Rule-based NLP",
+    "secondary_families": [
+      "Linguistic and dependency-based extraction",
+      "Neural NLP pipelines"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "not_reported",
+    "description": "Execution order: clean special characters and joined sentences; process text with SpaCy tokenisation, POS tagging, NER, and dependency parsing; chunk noun phrases as entities and action-related verb phrases as relations; resolve selected coreference mentions with NeuralCoref; map each relation to every entity chunk on its left and right to form triples; add document-level 'in' triples when shortest graph paths connect named entities through in/at/on; filter stop-word heads; remove articles and possessive/demonstrative pronouns from triple endpoints. For visualization, append centrality, NER types, and an LSTM-derived SemEval relation type."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "No ontology constrains triple extraction. The optional visualization post-processing maps each extracted relation phrase to a SemEval relation type; the paper states that SemEval has nine semantic-relation types plus an other class.",
+    "evidence": [
+      {
+        "span_id": "C0034-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "The relation extraction component maps the relation phrase of each triple to one or more structured relation types."
+      },
+      {
+        "span_id": "C0034-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "Our system currently maps each relation phrase to its corresponding SemEval relation."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing",
+    "Entity and concept extraction",
+    "Coreference resolution",
+    "Relation and triple extraction",
+    "Graph construction",
+    "Graph validation and correction"
+  ],
+  "input_output": {
+    "input_type": "Unstructured English document text, including domain-specific automotive-engineering and public-security text.",
+    "input_granularity": "Document-level input processed sentence by sentence, with an additional document-level graph-shortest-path step.",
+    "output_representation": "A list/set of head–relation–tail triples, optionally post-processed for visualization with centrality values, SemEval relation labels, and five NER types (PER, ORG, LOC, MISC, O)."
+  },
+  "models_and_tools": [
+    "SpaCy for tokenisation, POS tagging, NER, and dependency parsing",
+    "NLTK stop-word list",
+    "NeuralCoref for coreference items",
+    "NetworkX for graph creation and shortest paths and for degree/betweenness",
+    "Pretrained attention-based Bi-LSTM relation classifier trained on SemEval-2010 Task 8",
+    "TensorFlow implementation of the Bi-LSTM",
+    "Flask visualization backend",
+    "D3.js visualization frontend"
+  ],
+  "datasets": [
+    "SemEval-2010 Task 8 dataset, used to train the pretrained Bi-LSTM relation-classification component",
+    "An illustrative Ford Motor Company document example for triple extraction and coreference visualization"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Illustrative inspection of extracted triples and visualization output",
+      "Degree centrality and betweenness centrality for visualization",
+      "Graph edit distance discussed as a commonly used structural-only automatic triple-quality metric, but not reported as an applied result"
+    ],
+    "baselines": "not_reported",
+    "setting": "Qualitative case-study evaluation on Ford Motor Company example sentences. Table III lists resulting triples and derived annotations; Figure 3 visualizes coreference over an example extended with a third sentence. No held-out extraction test set, numerical precision/recall/F1, or baseline comparison is reported."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "The case study produces phrase-level triples including (Ford Motor Company, in, Dearborn), which the authors identify as a useful result of graph-based triple mapping.",
+      "The visualization joins 'Ford Motor Company', 'It', 'The company', and 'it' as the shared entity across three example sentences; Ford Motor Company is largest because it has the highest degree centrality.",
+      "The authors conclude that the pipeline is a simple and effective solution for knowledge-graph construction from domain-specific text, but report no aggregate quantitative extraction score."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0034-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "Our system is able to extract useful triples with 'in' relations... such as (Ford Motor Company, in, Dearborn)."
+      },
+      {
+        "span_id": "C0034-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "The visualisation in Figure 3 clearly shows Ford Motor Company as the shared entity between the three sentences."
+      },
+      {
+        "span_id": "C0034-D-P005-TEXT-0003",
+        "page": 5,
+        "excerpt": "our system uses a pipeline-based approach to extract a set of triples from a given document. It offers a simple and effective solution."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Phrase chunking captures domain-relevant common-noun entities that conventional named-entity recognizers may miss.",
+      "Verb/action chunking yields multiword relation phrases such as 'was founded by' and 'incorporated on'.",
+      "Document-level graph paths add location-style links between entities across sentence-level triples.",
+      "Coreference replacement makes repeated mentions share an entity node in the visualization.",
+      "The visualization enriches triples with centrality, typed relation, and endpoint NER information."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0034-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "Chunking of noun phrases for entities and chunking of action related phrases for relations are performed in this work."
+      },
+      {
+        "span_id": "C0034-D-P002-TEXT-0002",
+        "page": 2,
+        "excerpt": "verb phrases can contain verbs, particles and/or adverbs that represent more meaningful relations between entities."
+      },
+      {
+        "span_id": "C0034-D-P004-TEXT-0003",
+        "page": 4,
+        "excerpt": "The chunking component ensures useful phrases such as 'Ford Motor Company' and 'Henry Ford' appear in multiple triples."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "The authors' initial end-to-end deep-learning approach produced high-quality triples only in very small numbers and was not adopted.",
+      "The post-extraction NER labeling loses contextual information.",
+      "[Review-level inference] The Cartesian pairing of every left-side entity with every right-side entity for each relation can generate spurious triples in syntactically complex sentences.",
+      "[Review-level inference] The paper's evidence is limited to qualitative examples, so extraction accuracy and generalization to the stated domains cannot be established."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0034-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "Our best deep learning-based approach produced high-quality triples, but only in very small numbers."
+      },
+      {
+        "span_id": "C0034-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "One caveat of performing the NER after the triple extraction pipeline is that there is no contextual information passed to the named entity recognition model."
+      },
+      {
+        "span_id": "C0034-D-P003-TEXT-0003",
+        "page": 3,
+        "excerpt": "For each relation, the algorithm obtains heads as entities on the left and tails as entities on the right, then adds triples for each head and tail."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The end-to-end deep-learning triple extractor had difficulty representing documents that can contain zero or many triples and did not produce enough triples.",
+      "Off-the-shelf NER has restricted entity types and can miss important domain-specific phrases.",
+      "OpenIE can produce many triples with long subject/object spans, while systems using fixed relation types are unsuitable for the contest's open-ended requirement.",
+      "Post-extraction NER lacks contextual information.",
+      "Graph edit distance gives only structural analysis of triple quality."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0034-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "Considering a sentence may have zero or many triples... it was exceedingly difficult to represent the input data... [to] predict a decently-sized set of valid triples."
+      },
+      {
+        "span_id": "C0034-D-P001-TEXT-0002",
+        "page": 1,
+        "excerpt": "OpenIE tends to produce a vast number of triples, with many subjects or objects being long sequences of words."
+      },
+      {
+        "span_id": "C0034-D-P005-TEXT-0003",
+        "page": 5,
+        "excerpt": "The graph edit distance metric... is only capable of structural analysis."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Authors: combine graph edit distance with meaningful semantic measures such as SPICE.",
+      "Authors: use a simple sum of word embeddings over each triple to capture semantic information in the metric.",
+      "Authors: continue developing the end-to-end deep-learning triple-extraction model.",
+      "[Review-level inference] Evaluate the full pipeline on annotated domain corpora with precision, recall, F1, error analysis, and comparisons against suitable OpenIE and KG-construction baselines.",
+      "[Review-level inference] Replace the unrestricted left/right entity pairing with dependency- or predicate-argument-constrained candidate selection and separately validate added graph-path triples."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0034-D-P005-TEXT-0001",
+        "page": 5,
+        "excerpt": "To improve the metric it could be combined with meaningful semantic measures... Another option would be to incorporate a simple sum of word embeddings over each triple."
+      },
+      {
+        "span_id": "C0034-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "In future we plan to continue working on our end-to-end deep learning-based triple extraction model."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "[Review-level inference] Robust evaluation of semantic correctness remains unresolved because the paper neither applies a semantic triple metric nor reports benchmark extraction results.",
+      "[Review-level inference] Domain adaptation remains unresolved: the paper motivates automotive and public-security low-resource text but provides no domain-specific labeled evaluation.",
+      "[Review-level inference] It remains unverified whether the simple heuristic pipeline maintains precision on longer documents, nested clauses, or ambiguous coreference."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0034-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "There is no benchmark annotated dataset relevant to those domains."
+      },
+      {
+        "span_id": "C0034-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "The graph edit distance metric... is only capable of structural analysis."
+      }
+    ]
+  },
+  "code_and_data_availability": "The PDF states that source code for the visualization system is available at https://github.com/Michael-Stewart-Webdev/text2kg-visualisation. It does not state availability of the complete triple-extraction pipeline, its contest inputs/outputs, or an evaluation dataset."
+}

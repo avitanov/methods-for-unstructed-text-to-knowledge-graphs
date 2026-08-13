@@ -1,0 +1,829 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0101",
+    "title": "Knowledge Graphs Generation from Cultural Heritage Texts: Combining LLMs and Ontological Engineering for Scholarly Debates",
+    "pdf_path": "data/manual-pdfs/C0101.pdf",
+    "authors": [
+      "Andrea Schimmenti",
+      "Valentina Pasqual",
+      "Fabio Vitali",
+      "Marieke van Erp"
+    ],
+    "year": 2025,
+    "venue": "arXiv preprint (cs.CL)",
+    "identifier": {
+      "status": "reported",
+      "value": "arXiv:2511.10354v1",
+      "evidence": [
+        {
+          "span_id": "C0101-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "arXiv:2511.10354v1 [cs.CL] 13 Nov 2025"
+        }
+      ]
+    },
+    "abstract": "Introduces ATR4CH, a systematic five-step methodology that combines annotation models, ontological frameworks, and LLM-based extraction to generate Cultural Heritage knowledge graphs from text. A sequential pipeline using Claude Sonnet 3.7, Llama 3.3 70B, and GPT-4o-mini is validated on Wikipedia authenticity-assessment debates.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0101-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Andrea Schimmenti; Valentina Pasqual; Fabio Vitali; Marieke van Erp",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0101-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "arXiv:2511.10354v1 [cs.CL] 13 Nov 2025",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0101-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "arXiv:2511.10354v1 [cs.CL]",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0101-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "arXiv:2511.10354v1 [cs.CL] 13 Nov 2025",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0101-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "This paper introduces ATR4CH (Adaptive Text-to-RDF for Cultural Heritage), a systematic five-step methodology for Large Language Model-based Knowledge Extraction from Cultural Heritage documents.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0101-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "This fundamental misalignment between rich textual content and sparse structured claims illustrates the core challenge this research addresses.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0101-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "How can a systematic methodology coordinate LLM-based Knowledge Extraction (KE) with ontological frameworks to effectively capture and structure the complex interpretative knowledge contained in CH texts?",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Knowledge Extraction Pipeline and Evaluation Framework",
+      "span_id": "C0101-D-P023-TEXT-0001",
+      "page": 23,
+      "excerpt": "Our implementation integrates three complementary technologies in a sequential LLM-based process: GliNER for lightweight NER; LLMs for structured information extraction; Rule-based entity linking.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Knowledge Extraction Pipeline and Evaluation Framework",
+      "span_id": "C0101-D-P024-TEXT-0001",
+      "page": 24,
+      "excerpt": "The KE pipeline is based on six components, each enriching the output before passing it to the next. Each component produces a JSON, each with a given schema designed to be convertible to RDF at the end.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "CH Item Metadata Extraction",
+      "span_id": "C0101-D-P025-TEXT-0002",
+      "page": 25,
+      "excerpt": "The task relies on In-Context Learning (ICL) in a Few-Shot setting (with 3 examples), using Chain-of-Thought (COT) reasoning.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Knowledge Extraction and Evaluation",
+      "span_id": "C0101-D-P012-TEXT-0003",
+      "page": 12,
+      "excerpt": "Technical Evaluation: Component-level assessment using precision, recall, and F1-score, plus coverage analysis for Competency Questions.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Knowledge Extraction Pipeline and Evaluation Framework",
+      "span_id": "C0101-D-P024-TEXT-0001",
+      "page": 24,
+      "excerpt": "Raw text documents → metadata extraction ... Entity mentions → entity resolution ... Opinions + contexts → evidence mining ... Evidence + full context → hypothesis extraction.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "CH Item Metadata Extraction",
+      "span_id": "C0101-D-P025-TEXT-0001",
+      "page": 25,
+      "excerpt": "The task relies on In-Context Learning (ICL) in a Few-Shot setting (with 3 examples), using Chain-of-Thought (COT) reasoning.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Entity Recognition and Cognizer Classification",
+      "span_id": "C0101-D-P026-TEXT-0002",
+      "page": 26,
+      "excerpt": "The task relies on In-Context Learning (ICL) in a Few-Shot setting (with 3 examples), using Chain-of-Thought (COT) reasoning.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Methodology Overview",
+      "span_id": "C0101-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "Through five sequential steps, these inputs are transformed into a working extraction pipeline, a refined annotation model, and a comprehensive evaluation framework.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Knowledge Extraction Pipeline and Evaluation Framework",
+      "span_id": "C0101-D-P024-TEXT-0002",
+      "page": 24,
+      "excerpt": "Raw text documents → metadata extraction ... Item metadata + text → opinion holder identification ... Entity mentions → entity resolution ... Linked entities + paragraphs → opinion extraction ... evidence mining ... hypothesis extraction.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Knowledge Graph",
+      "span_id": "C0101-D-P029-TEXT-0003",
+      "page": 29,
+      "excerpt": "The final output is then mapped to RDF using the algorithms explained in Sections 4.4 and 4.5.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Ontology",
+      "span_id": "C0101-D-P016-TEXT-0001",
+      "page": 16,
+      "excerpt": "The data model represents authenticity assessment claims using RDF-star ... contextual information about the claim is recorded ... using HiCo ... and ... PROV-o.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "SEBI Annotation Model",
+      "span_id": "C0101-D-P020-TEXT-0002",
+      "page": 20,
+      "excerpt": "The refined annotation model captures CH item metadata, evidence and features, and scholarly hypotheses through three additional layers.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Knowledge Extraction Pipeline and Evaluation Framework",
+      "span_id": "C0101-D-P023-TEXT-0003",
+      "page": 23,
+      "excerpt": "LLMs handle structured information extraction through JSON schema-based responses.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Knowledge Extraction Pipeline and Evaluation Framework",
+      "span_id": "C0101-D-P024-TEXT-0001",
+      "page": 24,
+      "excerpt": "Raw text documents → metadata extraction ... Entity mentions → entity resolution → Wikidata-linked entity clusters ... opinion extraction ... evidence mining ... hypothesis extraction.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Entity Resolution and Linking",
+      "span_id": "C0101-D-P026-TEXT-0002",
+      "page": 26,
+      "excerpt": "The third component performs coreference resolution and Entity Linking (EL). It clusters entities through identical mentions across paragraphs.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Integration and Refinement",
+      "span_id": "C0101-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "Mapping Algorithm Enhancement ... adding validation using tools such as SHACL, OWL reasoners, SPARQLAnything and RML.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Dataset",
+      "span_id": "C0101-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "Our dataset comprises Wikipedia articles focusing on historical forgeries, hoaxes, and authenticity controversies across CH.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "CH Item Metadata Extraction",
+      "span_id": "C0101-D-P025-TEXT-0002",
+      "page": 25,
+      "excerpt": "Input: Raw Wikipedia articles in markup (.txt files)",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Knowledge Extraction Pipeline and Evaluation Framework",
+      "span_id": "C0101-D-P024-TEXT-0001",
+      "page": 24,
+      "excerpt": "The system automatically selects only the relevant paragraphs whenever possible.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Hypothesis Extraction",
+      "span_id": "C0101-D-P028-TEXT-0002",
+      "page": 28,
+      "excerpt": "Input: Opinions + evidence evaluations + full document context",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Knowledge Extraction Pipeline and Evaluation Framework",
+      "span_id": "C0101-D-P024-TEXT-0001",
+      "page": 24,
+      "excerpt": "Each component produces a JSON, each with a given schema designed to be convertible to RDF at the end.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Knowledge Graph",
+      "span_id": "C0101-D-P029-TEXT-0002",
+      "page": 29,
+      "excerpt": "The final output is then mapped to RDF ... this was generated by the pipeline using Llama 3.3 70B.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Knowledge Extraction Pipeline and Evaluation Framework",
+      "span_id": "C0101-D-P023-TEXT-0001",
+      "page": 23,
+      "excerpt": "The pipeline was used with three different models ... Claude Sonnet 3.7 ... Llama 3.3 70B ... GPT-4o-mini.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Entity Resolution and Linking",
+      "span_id": "C0101-D-P026-TEXT-0002",
+      "page": 26,
+      "excerpt": "uses the Wikibase API ... score based on name similarity (Levenshtein distance) ... entity type compatibility ... occupation relevance.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Minimal Working Annotation",
+      "span_id": "C0101-D-P018-TEXT-0003",
+      "page": 18,
+      "excerpt": "Our annotation model was developed through INCEpTION.",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Dataset",
+      "span_id": "C0101-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "Out of the total 1301 documents ... 717 articles were excluded ... The dataset encompasses 581 articles as shown in Table 1.",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Dataset",
+      "span_id": "C0101-D-P014-TEXT-0002",
+      "page": 14,
+      "excerpt": "articles averaging 8,150 characters and 1,249 tokens per document.",
+      "confidence": "medium"
+    },
+    "datasets-18-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "SEBI Annotation Model",
+      "span_id": "C0101-D-P023-TABLE-0003",
+      "page": 23,
+      "excerpt": "CH Items 45; Entities 235; Interpretation Acts 215; Evidences 132; Features 115; Wikidata alignments 308.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Evaluation Framework",
+      "span_id": "C0101-D-P031-TEXT-0001",
+      "page": 31,
+      "excerpt": "We report micro-averaged results for individual metadata categories ... and macro-averaged overall performance using standard precision, recall, and F1-score calculations.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Evaluation Framework",
+      "span_id": "C0101-D-P032-TEXT-0002",
+      "page": 32,
+      "excerpt": "we implement a custom scoring metric operating on a 4-point scale.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Evaluation Framework",
+      "span_id": "C0101-D-P032-TEXT-0003",
+      "page": 32,
+      "excerpt": "We chose G-EVAL to evaluate two metrics: debate correctness and debate representativeness.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Evaluation Framework",
+      "span_id": "C0101-D-P031-TEXT-0001",
+      "page": 31,
+      "excerpt": "How accurately does the pipeline extract alleged item metadata compared to expert annotations?",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Results",
+      "span_id": "C0101-D-P033-TABLE-0002",
+      "page": 33,
+      "excerpt": "Model: Ground Truth, Claude, GPT, Llama.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Evaluation Framework",
+      "span_id": "C0101-D-P031-TEXT-0001",
+      "page": 31,
+      "excerpt": "Our evaluation framework provides a multi-dimensional assessment of the KG generation pipeline ... We integrate human assessment throughout our evaluation pipeline.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Evaluation Framework",
+      "span_id": "C0101-D-P032-TEXT-0002",
+      "page": 32,
+      "excerpt": "Evaluation is limited to the subset of successfully matched entities identified in RQ2 to ensure fair comparison.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Overall Discourse Representation Fidelity",
+      "span_id": "C0101-D-P037-TEXT-0003",
+      "page": 37,
+      "excerpt": "The empirical threshold ... on three well-represented articles revised manually ... is set at 0.6-0.7.",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "EQ1 and EQ2 Results",
+      "span_id": "C0101-D-P035-TABLE-0001",
+      "page": 35,
+      "excerpt": "Claude Overall ... F1 0.991; GPT Overall ... F1 0.970; Llama Overall ... F1 0.965. Entity recognition F1: Claude 0.728, GPT 0.803, Llama 0.709.",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "EQ3 and EQ4 Results",
+      "span_id": "C0101-D-P036-TABLE-0002",
+      "page": 36,
+      "excerpt": "Claude 3.87 (96.8); GPT-4o-mini 3.84 (96.0); Llama 3.3 3.81 (95.3). Hypothesis Macro F1: Claude 0.655; GPT 0.749; Llama 0.694.",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "EQ5 Results",
+      "span_id": "C0101-D-P037-TABLE-0003",
+      "page": 37,
+      "excerpt": "Claude Mean 0.620 / 0.607; GPT 0.590 / 0.580; Llama 0.533 / 0.523.",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "The ATR4CH Methodology",
+      "span_id": "C0101-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "Unlike traditional methodologies that treat annotation, KE, and ontology alignment as separate processes, ATR4CH recognizes that these processes are fundamentally interdependent.",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Contributions, Limitations and Future Directions",
+      "span_id": "C0101-D-P040-TEXT-0002",
+      "page": 40,
+      "excerpt": "RDF-star ... enabling structured representation of evidence-based scholarly interpretation while preserving provenance and alternative hypotheses.",
+      "confidence": "medium"
+    },
+    "strengths-23-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Model Comparison and Performance Trade-offs",
+      "span_id": "C0101-D-P039-TEXT-0003",
+      "page": 39,
+      "excerpt": "GPT-4o-mini performs better since it managed to correctly identify more Cognizers covered in the GT than other models, while having the least parameters of the lot.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Overall Discourse Representation Fidelity",
+      "span_id": "C0101-D-P037-TEXT-0001",
+      "page": 37,
+      "excerpt": "Incorrect entity identification leads to error propagation throughout the pipeline, causing the generation of FPs in downstream components.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Extraction Performance Analysis",
+      "span_id": "C0101-D-P038-TEXT-0002",
+      "page": 38,
+      "excerpt": "capturing nuanced scholarly hypotheses requires more sophisticated interpretation regardless of architecture.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Contributions, Limitations and Future Directions",
+      "span_id": "C0101-D-P040-TEXT-0003",
+      "page": 40,
+      "excerpt": "complete automation remains premature, suggesting that balanced human-machine collaboration represents the most viable path forward.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Contributions, Limitations and Future Directions",
+      "span_id": "C0101-D-P040-TEXT-0001",
+      "page": 40,
+      "excerpt": "The current focus on English Wikipedia sources limits multilingual applicability ... Performance on primary scholarly literature remains untested, and two key bottlenecks emerged: Cognizer classification difficulty and dependency on Wikidata linking for optimal performance.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0101-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "The produced KG is limited to Wikipedia articles. While the results are encouraging, human oversight is necessary during post-processing.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Overall Discourse Representation Fidelity",
+      "span_id": "C0101-D-P037-TEXT-0001",
+      "page": 37,
+      "excerpt": "Future iterations of the pipeline should incorporate self-consistency checks at the entity identification stage to reduce error accumulation and improve overall accuracy.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Deployment Implications and Cost-Effectiveness",
+      "span_id": "C0101-D-P039-TEXT-0002",
+      "page": 39,
+      "excerpt": "fine-tuning approaches could specifically target bottlenecks like Cognizer classification ... enhanced pre-processing using specialized tools could filter irrelevant entities.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Contributions, Limitations and Future Directions",
+      "span_id": "C0101-D-P040-TEXT-0003",
+      "page": 40,
+      "excerpt": "Future work will prioritize developing multilingual extraction capabilities ... and creating user-friendly tools ... with appropriate human-in-the-loop interfaces.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Extraction Performance Analysis",
+      "span_id": "C0101-D-P038-TEXT-0001",
+      "page": 38,
+      "excerpt": "the model perspective on specific domain terminology and approaches requires improvement, as the G-EVAL evaluation demonstrates.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Contributions, Limitations and Future Directions",
+      "span_id": "C0101-D-P040-TEXT-0002",
+      "page": 40,
+      "excerpt": "While LLMs show promise for structuring complex scholarly debates, complete automation remains premature.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0101-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "The methodology is designed to be adaptable across CH domains ... with authenticity assessment serving as a validation case.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0101-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "To ensure reproducibility of this work, all the code is published on a GitHub repository (https://anonymous.4open.science/r/SEBI-Knowledge-Extraction-5FCE).",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "SEBI Annotation Model",
+      "span_id": "C0101-D-P023-TEXT-0002",
+      "page": 23,
+      "excerpt": "Wikidata integration providing entity resolution and the INCEpTION project available on GitHub alongside mapping scripts.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses the gap between rich, interpretative Cultural Heritage scholarly discourse in unstructured texts and sparse structured KGs. It aims to extract agents, competing authenticity claims, evidence, and alternative hypotheses while retaining provenance and multi-perspectival reasoning.",
+  "methodology": {
+    "primary_family": "Hybrid NLP and LLM methods",
+    "secondary_families": [
+      "Zero-shot and few-shot LLM prompting (without task-specific model training)",
+      "Ontology-constrained and schema-guided methods",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "few_shot",
+    "description": "ATR4CH is a five-step iterative Text-to-RDF methodology: (I) analyse corpus, target ontology, competency questions, and core ontological patterns; (II) create and validate a minimal working annotation schema and annotation-to-RDF mapping on a pilot corpus; (III) design a modular extraction architecture around that schema; (IV) test end-to-end, refine the production KG annotation model and mappings; (V) extract a held-out test set and perform technical, semantic, competency-based, and expert evaluation. Its case-study implementation is a six-stage sequential pipeline: LLM metadata extraction; GliNER entity detection plus few-shot LLM cognizer classification/coreferences; rule-based Wikidata entity linking; LLM opinion extraction/classification; LLM evidence-feature-evaluation extraction; and LLM hypothesis extraction. JSON-schema outputs are mapped to RDF-star/SEBI graphs."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The target schema is the Scholarly Evidence Based Interpretation ontology (SEBI), combined with RDF-star reification, HiCo InterpretationAct, PROV-O provenance, DCTerms, and linked vocabularies. SEBI models authenticity classifications, alleged metadata, scholarly claims, supporting evidence/features, evaluation criteria/polarity/confidence, and alternative authorship, date, location, and motivation hypotheses. Extraction stages return JSON constrained by schemas and map it to RDF-star; Wikidata and DCMI Type Vocabulary support entity/type alignment.",
+    "evidence": [
+      {
+        "span_id": "C0101-D-P016-TEXT-0001",
+        "page": 16,
+        "excerpt": "The data model represents authenticity assessment claims using RDF-star ... contextual information about the claim is recorded ... using HiCo ... and ... PROV-o."
+      },
+      {
+        "span_id": "C0101-D-P020-TEXT-0002",
+        "page": 20,
+        "excerpt": "The refined annotation model captures CH item metadata, evidence and features, and scholarly hypotheses through three additional layers."
+      },
+      {
+        "span_id": "C0101-D-P023-TEXT-0003",
+        "page": 23,
+        "excerpt": "LLMs handle structured information extraction through JSON schema-based responses."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing: cleans Wikipedia markup and selects relevant paragraphs",
+    "Entity and concept extraction: GliNER detects people, organizations, groups, and locations; LLM identifies CH items and cognizers",
+    "Entity typing: entity labels and cognizer/not-cognizer classification",
+    "Coreference resolution: LLM extracts additional mentions; mentions are clustered across paragraphs",
+    "Entity resolution and linking: rule-based Wikidata candidate retrieval/scoring and owl:sameAs output",
+    "Relation and triple extraction: cognizer–item opinions, evidence assessments, and hypothesis relations are extracted",
+    "Ontology or schema discovery: corpus/ontology analysis identifies core ontological patterns and competency-question coverage",
+    "Graph construction: schema-conformant JSON is mapped to RDF-star/SEBI graphs",
+    "Graph validation and correction: mapping validation, end-to-end testing, human review of semantically equivalent false positives, and component/discourse evaluation"
+  ],
+  "input_output": {
+    "input_type": "Raw English Wikipedia articles about Cultural Heritage historical forgeries, hoaxes, and authenticity controversies, stored as markup/text files, with extracted item metadata and selected contextual paragraphs passed between stages.",
+    "input_granularity": "Document-level articles are processed first; later stages use entity-centred relevant paragraphs, while the final hypothesis stage uses full document context.",
+    "output_representation": "Intermediate JSON objects conforming to component schemas, then RDF-star knowledge graphs implementing SEBI. The graph contains CH items and alleged metadata, Wikidata-linked scholarly agents, HiCo interpretation acts/provenance, quoted authenticity and alternative-hypothesis triples, and evidence nodes with feature assessments and polarity."
+  },
+  "models_and_tools": [
+    "Claude Sonnet 3.7",
+    "Llama 3.3 70B",
+    "GPT-4o-mini",
+    "GliNER for named-entity recognition",
+    "Rule-based entity linking using the Wikibase API, Levenshtein name similarity, type compatibility, and occupation relevance",
+    "INCEpTION for annotation",
+    "SEBI ontology; RDF-star; HiCo; PROV-O; DCTerms; Wikidata; DCMI Type Vocabulary",
+    "GraphDB for KG visualisation/showcase",
+    "G-EVAL for discourse-fidelity evaluation"
+  ],
+  "datasets": [
+    "Case-study corpus: 581 English Wikipedia articles on Cultural Heritage forgeries, hoaxes, and authenticity controversies, collected from 15 Wikipedia categories in October 2024; average 8,150 characters and 1,249 tokens per article",
+    "Pilot corpus: Donation of Constantine, Eremin Letter, Getty Kouros, Historia Augusta, Life of Homer, Marriage Charter of Empress Theophanu, and Protocols of the Elders of Sion",
+    "Expert-annotated ground truth: 45 CH-item spans, 235 entity spans, 215 interpretation acts, 132 evidences, 115 features, and 308 Wikidata alignments"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Micro-averaged precision, recall, and F1 by metadata category; macro-averaged overall metadata scores",
+      "Entity-level precision, recall, F1, true positives, false positives, and false negatives",
+      "Custom 0–4 evidence score across feature, evaluation perspective, feature class, and polarity; reported mean/percentage",
+      "Precision, recall, and F1 for hypothesis/judgment extraction, including type, creator, date, and location F1",
+      "G-EVAL debate correctness and debate representativeness on a 0–1 scale",
+      "Exploratory SPARQL counts of triples, interpretation acts, and cognizers"
+    ],
+    "baselines": [
+      "Expert-annotated ground truth (GT), including rehydrated GT for G-EVAL comparison",
+      "Comparative model configurations: Claude Sonnet 3.7, GPT-4o-mini, and Llama 3.3 70B"
+    ],
+    "setting": "The authors evaluate three pipeline runs on their manually annotated authenticity-debate data across five evaluation questions: metadata extraction, cognizer recognition, evidence extraction, hypotheses/judgments, and end-to-end discourse fidelity. They manually review metadata false positives for semantic equivalence. Hypothesis evaluation is restricted to successfully matched entities; G-EVAL compares whole rehydrated generated KGs against rehydrated GT. An empirical G-EVAL threshold was derived from three manually reviewed articles."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Metadata extraction was strong: Claude overall precision/recall/F1 = 0.987/0.995/0.991; GPT-4o-mini = 0.942/1.000/0.970; Llama 3.3 = 0.933/1.000/0.965.",
+      "Cognizer/entity recognition: Claude P/R/F1 = 0.696/0.763/0.728; GPT = 0.718/0.912/0.803; Llama = 0.626/0.817/0.709.",
+      "Evidence extraction mean 0–4 scores were Claude 3.87 (96.8%), GPT-4o-mini 3.84 (96.0%), and Llama 3.3 3.81 (95.3%).",
+      "Hypothesis macro F1 was Claude 0.655, GPT 0.749, and Llama 0.694. Claude led location hypotheses (0.923) and date hypotheses (0.791); GPT led authenticity-type F1 (0.845); Llama led creator-hypothesis F1 (0.712).",
+      "For G-EVAL debate correctness, means were Claude 0.620, GPT 0.590, and Llama 0.533; debate representativeness means were Claude 0.607, GPT 0.580, and Llama 0.523.",
+      "Generated KGs contained more triples than GT—Claude 10,173, GPT 12,088, Llama 10,119 versus GT 4,026—while interpretation-act and cognizer counts were broadly comparable."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0101-D-P035-TABLE-0001",
+        "page": 35,
+        "excerpt": "Claude Overall ... F1 0.991; GPT Overall ... F1 0.970; Llama Overall ... F1 0.965. Entity recognition F1: Claude 0.728, GPT 0.803, Llama 0.709."
+      },
+      {
+        "span_id": "C0101-D-P036-TABLE-0002",
+        "page": 36,
+        "excerpt": "Claude 3.87 (96.8); GPT-4o-mini 3.84 (96.0); Llama 3.3 3.81 (95.3). Hypothesis Macro F1: Claude 0.655; GPT 0.749; Llama 0.694."
+      },
+      {
+        "span_id": "C0101-D-P037-TABLE-0003",
+        "page": 37,
+        "excerpt": "Claude Mean 0.620 / 0.607; GPT 0.590 / 0.580; Llama 0.533 / 0.523."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author-stated: ATR4CH coordinates annotation, ontology alignment, and extraction instead of treating them as independent processes, yielding a replicable, resource-adaptive framework.",
+      "Author-stated: the SEBI/RDF-star representation preserves multi-perspective claims, provenance, supporting evidence, and alternative hypotheses.",
+      "Experimental result: all models achieved high metadata and evidence-extraction scores; smaller GPT-4o-mini remained competitive and led cognizer recall and hypothesis macro F1.",
+      "Review-level inference: modular intermediate JSON outputs and component-level evaluation make error sources more inspectable than a single opaque end-to-end generation step."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0101-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "Unlike traditional methodologies that treat annotation, KE, and ontology alignment as separate processes, ATR4CH recognizes that these processes are fundamentally interdependent."
+      },
+      {
+        "span_id": "C0101-D-P040-TEXT-0002",
+        "page": 40,
+        "excerpt": "RDF-star ... enabling structured representation of evidence-based scholarly interpretation while preserving provenance and alternative hypotheses."
+      },
+      {
+        "span_id": "C0101-D-P039-TEXT-0003",
+        "page": 39,
+        "excerpt": "GPT-4o-mini performs better since it managed to correctly identify more Cognizers covered in the GT than other models, while having the least parameters of the lot."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author-stated: error propagation begins with incorrect cognizer identification; downstream evidence outputs can then be empty or incorrect.",
+      "Author-stated: extraction performance declines markedly for nuanced scholarly hypothesis extraction relative to metadata and evidence extraction.",
+      "Review-level inference: the sequential pipeline creates a recall bottleneck because later opinion, evidence, and hypothesis stages depend on prior cognizer detection and linking.",
+      "Review-level inference: the method's reliance on human review, manually annotated GT, and semantic adjudication constrains fully automatic scalability claims."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0101-D-P037-TEXT-0001",
+        "page": 37,
+        "excerpt": "Incorrect entity identification leads to error propagation throughout the pipeline, causing the generation of FPs in downstream components."
+      },
+      {
+        "span_id": "C0101-D-P038-TEXT-0002",
+        "page": 38,
+        "excerpt": "capturing nuanced scholarly hypotheses requires more sophisticated interpretation regardless of architecture."
+      },
+      {
+        "span_id": "C0101-D-P040-TEXT-0003",
+        "page": 40,
+        "excerpt": "complete automation remains premature, suggesting that balanced human-machine collaboration represents the most viable path forward."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The current work is restricted to English Wikipedia sources, limiting multilingual applicability.",
+      "Performance on primary scholarly literature has not been tested.",
+      "Cognizer classification is a key bottleneck.",
+      "Optimal performance depends on Wikidata linking.",
+      "The produced KG is limited to Wikipedia articles and human post-processing oversight remains necessary."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0101-D-P040-TEXT-0001",
+        "page": 40,
+        "excerpt": "The current focus on English Wikipedia sources limits multilingual applicability ... Performance on primary scholarly literature remains untested, and two key bottlenecks emerged: Cognizer classification difficulty and dependency on Wikidata linking for optimal performance."
+      },
+      {
+        "span_id": "C0101-D-P001-TEXT-0002",
+        "page": 1,
+        "excerpt": "The produced KG is limited to Wikipedia articles. While the results are encouraging, human oversight is necessary during post-processing."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed: add self-consistency checks at the entity-identification stage to reduce error accumulation.",
+      "Author-proposed: fine-tune models or use hybrid approaches to improve cognizer classification.",
+      "Author-proposed: apply specialised pre-processing to filter irrelevant entities before extraction.",
+      "Author-proposed: develop multilingual extraction, include primary scholarly works, and build user-friendly human-in-the-loop customisation interfaces for CH practitioners.",
+      "Review-level inference: evaluate entity linking independently and add confidence-aware review queues, because linking quality and cognizer identification determine downstream coverage."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0101-D-P037-TEXT-0001",
+        "page": 37,
+        "excerpt": "Future iterations of the pipeline should incorporate self-consistency checks at the entity identification stage to reduce error accumulation and improve overall accuracy."
+      },
+      {
+        "span_id": "C0101-D-P039-TEXT-0002",
+        "page": 39,
+        "excerpt": "fine-tuning approaches could specifically target bottlenecks like Cognizer classification ... enhanced pre-processing using specialized tools could filter irrelevant entities."
+      },
+      {
+        "span_id": "C0101-D-P040-TEXT-0003",
+        "page": 40,
+        "excerpt": "Future work will prioritize developing multilingual extraction capabilities ... and creating user-friendly tools ... with appropriate human-in-the-loop interfaces."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-stated: reliable extraction of nuanced, multi-perspectival scholarly interpretations and domain terminology remains incomplete, as reflected by moderate G-EVAL scores.",
+      "Author-stated: automated KG generation from multilingual and primary scholarly Cultural Heritage texts remains unvalidated.",
+      "Author-stated: complete automation is premature; determining an effective human–machine collaboration process remains open.",
+      "Review-level inference: generalisation beyond the Wikipedia authenticity-assessment domain is unresolved because the reported evaluation is domain-specific and does not test transfer to other Cultural Heritage discourse types."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0101-D-P038-TEXT-0001",
+        "page": 38,
+        "excerpt": "the model perspective on specific domain terminology and approaches requires improvement, as the G-EVAL evaluation demonstrates."
+      },
+      {
+        "span_id": "C0101-D-P040-TEXT-0002",
+        "page": 40,
+        "excerpt": "While LLMs show promise for structuring complex scholarly debates, complete automation remains premature."
+      },
+      {
+        "span_id": "C0101-D-P004-TEXT-0003",
+        "page": 4,
+        "excerpt": "The methodology is designed to be adaptable across CH domains ... with authenticity assessment serving as a validation case."
+      }
+    ]
+  },
+  "code_and_data_availability": "Code is reported as published in the anonymous SEBI-Knowledge-Extraction GitHub repository (https://anonymous.4open.science/r/SEBI-Knowledge-Extraction-5FCE). The paper also states that the INCEpTION project and mapping scripts are available there. The PDF does not explicitly state a separate downloadable release or licence for the full corpus/ground-truth data."
+}

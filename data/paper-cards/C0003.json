@@ -1,0 +1,736 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0003",
+    "title": "Review of Automatic and Semi-Automatic Creation of Knowledge Graphs from Structured and Unstructured Data",
+    "pdf_path": "data/batches/batch-02/C0003.pdf",
+    "authors": [
+      "Auritë Bytyçi",
+      "Lorik Ramosaj",
+      "Eliot Bytyçi"
+    ],
+    "year": 2023,
+    "venue": "Proceedings of RTA-CSIT 2023; CEUR Workshop Proceedings",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The paper reviews recent work on automatic and semi-automatic knowledge-graph creation from structured and unstructured data. It considers handling unstructured text, defining nodes and relationships, ontology development, commonly used machine-learning/NLP algorithms, Neo4j, and Python; it concludes that semi-automatic approaches exist while fully automatic approaches remain ideas.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title block",
+      "span_id": "C0003-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Auritë Bytyçi, Lorik Ramosaj and Eliot Bytyçi",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication information",
+      "span_id": "C0003-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of RTA-CSIT 2023, April 26–27, 2023 Tirana, Albania.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication information",
+      "span_id": "C0003-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of RTA-CSIT 2023, April 26–27, 2023 Tirana, Albania ... CEUR Workshop Proceedings (CEUR-WS.org).",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0003-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "creating knowledge graphs is a time-consuming process that needs domain experts' support ... analyzed papers published in the recent five years ... Conclusive to the study, there exist some semi-automatic approaches but the fully automatic ones remain as ideas.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "1. Introduction",
+      "span_id": "C0003-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Experts frequently manually construct domain-specific knowledge graphs, which process can be time-consuming and error-prone. Furthermore, manual creation may not be possible in large-scale or quickly evolving domains.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0003-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "This motivated us to research automatic or semi-automatic creation of knowledge graphs from structured or unstructured data.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3. Methodology",
+      "span_id": "C0003-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Our research is based on recommendations from Prisma [28] and follows their checklist for performing a systematic review.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0003-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "widely used machine learning algorithms including support vector machines, neural networks, random forests, and logistic regression ... K-Means, TF-IDF, BERT, and skip-gram ... were considered.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "4.2. Thorough paper analysis",
+      "span_id": "C0003-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Important aspect of knowledge graph creation are ontologies, too, and several approaches have been used in the papers.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3. Methodology",
+      "span_id": "C0003-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The final 21 papers chosen for the review were analyzed in depth ... 2 papers [could not be found] as complete documents ... resulting in 19 papers to be analyzed.",
+      "confidence": "medium"
+    },
+    "methodology-description-09-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3. Methodology",
+      "span_id": "C0003-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The search was conducted in four libraries: IEEExplore, ScienceDirect, Springer Link and ACM digital library. The query ... (“databases” OR “relations databases”) AND “knowledge graphs” AND “automatic” AND “creation”.",
+      "confidence": "medium"
+    },
+    "methodology-description-09-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3. Methodology",
+      "span_id": "C0003-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "the collection was checked for duplicates ... books and book chapters were removed ... followed by surveys and reviews ... reviewing each paper on the keywords and abstracts. If the reviewer had doubt, another reviewer would help.",
+      "confidence": "medium"
+    },
+    "methodology-description-09-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3. Methodology",
+      "span_id": "C0003-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "The second round involved reading the whole paper and deciding whether the paper is still interesting and fits to the criteria defined in the beginning of the review.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-10-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0003-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The analysis takes into account the process of building knowledge graphs, which encompasses ... developing ontologies.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-10-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "4.2. Thorough paper analysis",
+      "span_id": "C0003-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "using many ontologies for knowledge graph creation that are created for particular tasks ... a comprehensive suite ... consisting of taxonomy enrichment and relation discovery ... constructing the knowledge graph ontology using Protégé tool [34].",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-10-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "4.2. Thorough paper analysis",
+      "span_id": "C0003-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "some papers don’t mention any specific ontologies [35, 36, 38, 42].",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-11-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "4.2. Thorough paper analysis",
+      "span_id": "C0003-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "handling unstructured texts ... information extraction to retrieve facts from text, with each fact comprising a subject, predicate, and object.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-11-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "4.2. Thorough paper analysis",
+      "span_id": "C0003-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Entity linking ... managing mappings between cells and entities ... information extraction ... extracted entities and relationships ... preprocessing phase.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-11-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "4.2. Thorough paper analysis",
+      "span_id": "C0003-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "data cleaning ... handling synonyms ... Important aspect of knowledge graph creation are ontologies.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-12-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0003-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "automatic or semi-automatic creation of knowledge graphs from structured or unstructured data.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-12-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3. Methodology",
+      "span_id": "C0003-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "locate any relevant papers that would explain generation of knowledge graphs, automatically or semi automatically from tabular data or relational databases.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-13-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "4.2. Thorough paper analysis",
+      "span_id": "C0003-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "unstructured data from free texts ... electronic medical records of patients ... Entity linking ... linking of text spans to previously known entities.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-13-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "4.2. Thorough paper analysis",
+      "span_id": "C0003-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "managing mappings between cells and entities in a knowledge graph [44].",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-14-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "4.2. Thorough paper analysis",
+      "span_id": "C0003-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "each fact comprising a subject, predicate, and object.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-14-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "4.2. Thorough paper analysis",
+      "span_id": "C0003-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "executing Cypher statements to create entities with properties and corresponding relationships.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-14-03": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "4.2. Thorough paper analysis",
+      "span_id": "C0003-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "RDFlib, is responsible for creating RDF triples.",
+      "confidence": "medium"
+    },
+    "models_and_tools-15-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0003-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "support vector machines, neural networks, random forests, and logistic regression ... K-Means, TF-IDF, BERT, and skip-gram ... Neo4j and Python scripting language.",
+      "confidence": "medium"
+    },
+    "models_and_tools-15-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.2. Thorough paper analysis",
+      "span_id": "C0003-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Other algorithms used involve cognitive scripting ... entity linking ... and Viterbi algorithm [33].",
+      "confidence": "medium"
+    },
+    "models_and_tools-15-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.4. Future challenge directions",
+      "span_id": "C0003-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "BERT is mentioned in few of the papers [32, 35, 38, 42] as the way forward. Nevertheless, GPT-3 is seen as a possibility to use for the pre-trained models, too [42].",
+      "confidence": "medium"
+    },
+    "datasets-16-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3. Methodology",
+      "span_id": "C0003-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "identified 1027 potential papers in all four libraries ... resulting in 19 papers to be analyzed.",
+      "confidence": "medium"
+    },
+    "datasets-16-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.1. Meta data analysis",
+      "span_id": "C0003-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The most used research domain ... is medicine [29, 40, 42, 45] and education [34, 35, 39, 46], followed by research conducted with graphs in research papers [32, 38].",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-17-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "3. Methodology",
+      "span_id": "C0003-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "identified 1027 potential papers ... IEEExplore search resulted in 232 papers ... Springer Link ... 288 ... ScienceDirect ... 342 papers and ACM digital library ... 165 papers.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-17-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "3. Methodology",
+      "span_id": "C0003-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "first round of the reviews ... resulted in 56 papers selected ... final 21 papers ... 2 papers [were unavailable] ... resulting in 19 papers to be analyzed.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-17-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4. Research analysis of the selected papers",
+      "span_id": "C0003-D-P004-SECTION-0003",
+      "page": 4,
+      "excerpt": "The paper reports publication, venue, and domain distributions and a narrative analysis; no comparative result table with task metrics is presented.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-18-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "3. Methodology",
+      "span_id": "C0003-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Our research is based on recommendations from Prisma [28] and follows their checklist for performing a systematic review.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-18-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "3. Methodology",
+      "span_id": "C0003-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "limit the search to the last five years, resulting in a period from 2017 until December 2022, when the search was concluded.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-18-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "3. Methodology",
+      "span_id": "C0003-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "The selection concentrated in Journal and Conference papers ... reviewing each paper on the keywords and abstracts ... The second round involved reading the whole paper.",
+      "confidence": "medium"
+    },
+    "main_results-19-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "3. Methodology",
+      "span_id": "C0003-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "1027 potential papers ... 56 papers selected ... final 21 papers ... resulting in 19 papers to be analyzed.",
+      "confidence": "medium"
+    },
+    "main_results-19-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.1. Meta data analysis",
+      "span_id": "C0003-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The most used research domain ... is medicine ... and education.",
+      "confidence": "medium"
+    },
+    "main_results-19-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0003-D-P001-TEXT-0003",
+      "page": 1,
+      "excerpt": "there exist some semi-automatic approaches but the fully automatic ones remain as ideas.",
+      "confidence": "medium"
+    },
+    "main_results-19-04": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "5. Conclusion",
+      "span_id": "C0003-D-P006-TEXT-0004",
+      "page": 6,
+      "excerpt": "the results ... show that it is possible to extract important data and relationships from these created knowledge graphs by using machine learning methods.",
+      "confidence": "medium"
+    },
+    "strengths-20-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Abstract",
+      "span_id": "C0003-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The analysis takes into account ... managing unstructured texts, defining nodes and relationships between them, and developing ontologies.",
+      "confidence": "medium"
+    },
+    "strengths-20-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3. Methodology",
+      "span_id": "C0003-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "Our research is based on recommendations from Prisma [28] ... The search was conducted in four libraries ... The query used for the search was ...",
+      "confidence": "medium"
+    },
+    "strengths-20-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2. Thorough paper analysis",
+      "span_id": "C0003-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "Knowledge graph creation in [34] was performed with the combination of manual and automatic methods, while authors in [36] focus on creating biodiversity knowledge graphs in semi-automatic fashion.",
+      "confidence": "medium"
+    },
+    "weaknesses-21-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.3. Limitations of the review",
+      "span_id": "C0003-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "we might have missed any of the other relevant papers from other different online databases. Moreover, non-English papers were not included ... we were not able to retrieve a couple of them.",
+      "confidence": "medium"
+    },
+    "weaknesses-21-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.3. Limitations of the review",
+      "span_id": "C0003-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "This makes the review even harder, especially taking into account the number of fields dealing with knowledge graphs.",
+      "confidence": "medium"
+    },
+    "weaknesses-21-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3. Methodology",
+      "span_id": "C0003-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "The query used for the search was: (“databases” OR “relations databases”) AND “knowledge graphs” AND “automatic” AND “creation”.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-22-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.3. Limitations of the review",
+      "span_id": "C0003-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "we might have missed any of the other relevant papers from other different online databases. Moreover, non-English papers were not included in the review, and we were not able to retrieve a couple of them.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-22-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "3. Methodology",
+      "span_id": "C0003-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "we were not able to find online 2 papers as complete documents ... resulting in 19 papers to be analyzed.",
+      "confidence": "medium"
+    },
+    "possible_improvements-23-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4.4. Future challenge directions",
+      "span_id": "C0003-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "although many of the papers discuss enhancing their models ... BERT is mentioned ... as the way forward. Nevertheless, GPT-3 is seen as a possibility to use for the pre-trained models, too [42].",
+      "confidence": "medium"
+    },
+    "possible_improvements-23-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Abstract",
+      "span_id": "C0003-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "creating knowledge graphs is a time-consuming process that needs domain experts' support.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-24-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Abstract",
+      "span_id": "C0003-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "there exist some semi-automatic approaches but the fully automatic ones remain as ideas.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-24-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5. Conclusion",
+      "span_id": "C0003-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "manual methods are less popular because of their shortcomings, which include the inability to easily combine data from various sources into a single knowledge graph, the potential for bias ... and the requirement for ongoing maintenance.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "A systematic review of whether and how knowledge graphs can be created automatically or semi-automatically from structured/tabular or unstructured data, motivated by expert-built domain KGs being time-consuming, error-prone, and unsuitable for large-scale or fast-changing domains.",
+  "methodology": {
+    "primary_family": "Systematic literature review (not a Text-to-KG methodology family in the supplied taxonomy)",
+    "secondary_families": [
+      "Classical machine learning",
+      "Neural NLP pipelines",
+      "Transformer encoder methods",
+      "Ontology-constrained and schema-guided methods",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "not_reported",
+    "supervision_setting": "not_reported",
+    "description": "The authors searched IEEE Xplore, ScienceDirect, Springer Link, and ACM Digital Library for 2017–December 2022 using one Boolean query. They deduplicated records; removed books, chapters, surveys, and reviews; screened keywords and abstracts with a second reviewer resolving doubts; then read full papers and reached reviewer consensus. The resulting 19 accessible studies are narratively analyzed by domain, degree of automation, extraction/linking/preprocessing, ontology use, algorithms, storage, and tools."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "Ontology and schema construction are review topics. The reviewed methods use task-specific ontologies, ontology suites combining taxonomy enrichment and relation discovery, automated class suggestions, Protégé-built ontologies, and the DISK ontology; the review reports that some reviewed papers did not specify an ontology.",
+    "evidence": [
+      {
+        "span_id": "C0003-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "The analysis takes into account the process of building knowledge graphs, which encompasses ... developing ontologies."
+      },
+      {
+        "span_id": "C0003-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "using many ontologies for knowledge graph creation that are created for particular tasks ... a comprehensive suite ... consisting of taxonomy enrichment and relation discovery ... constructing the knowledge graph ontology using Protégé tool [34]."
+      },
+      {
+        "span_id": "C0003-D-P005-TEXT-0003",
+        "page": 5,
+        "excerpt": "some papers don’t mention any specific ontologies [35, 36, 38, 42]."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing",
+    "Entity and concept extraction",
+    "Entity resolution and linking",
+    "Relation and triple extraction",
+    "Ontology or schema discovery",
+    "Graph construction",
+    "Knowledge fusion and deduplication",
+    "Graph storage"
+  ],
+  "input_output": {
+    "input_type": "Review corpus of papers about structured/tabular/relational-database data and unstructured natural-language text used for knowledge-graph creation.",
+    "input_granularity": "Paper-level review corpus; the reviewed systems variously process text facts/spans, free text, electronic medical records, table cells, datasets, and relational/tabular data.",
+    "output_representation": "Review synthesis of automatic/semi-automatic KG-creation approaches; reviewed output forms include subject–predicate–object facts/triples, entity-property-relationship graphs, Neo4j nodes and edges/property graphs, and RDF triples."
+  },
+  "models_and_tools": [
+    "Logistic regression",
+    "Random forest",
+    "Support vector machine",
+    "Neural networks",
+    "K-means",
+    "TF-IDF",
+    "BERT",
+    "skip-gram",
+    "Viterbi algorithm",
+    "Entity linking",
+    "Semantic data mining",
+    "Deep reinforcement learning",
+    "Crowdsourcing",
+    "Natural language processing",
+    "Neo4j",
+    "Python",
+    "Protégé",
+    "D3.js",
+    "Osmium Python library",
+    "RDFlib",
+    "GPT-3 (future possibility)"
+  ],
+  "datasets": [
+    "Literature-review corpus: 1,027 initial candidate papers retrieved from IEEE Xplore, Springer Link, ScienceDirect, and ACM Digital Library; 19 accessible papers analyzed in depth.",
+    "Reviewed-study domains reported: medicine, education, research papers, welding, retail, biodiversity, geographic data, course/MOOC data, and electronic medical records."
+  ],
+  "evaluation": {
+    "metrics": [
+      "Review-retrieval and screening counts: 1,027 total search results; IEEE Xplore 232; Springer Link 288; ScienceDirect 342; ACM Digital Library 165.",
+      "Screening counts: 56 papers after the first keyword/abstract review; 21 selected for in-depth review; 19 papers analyzed because two full texts were unavailable.",
+      "No model-level predictive metrics, statistical tests, or common benchmark metrics are reported for this review paper."
+    ],
+    "baselines": "not_reported",
+    "setting": "PRISMA-guided systematic-review process. Search period: 2017 through December 2022. Sources: IEEE Xplore, ScienceDirect, Springer Link, and ACM Digital Library. Selection was limited to journal and conference papers; duplicate records, books/chapters, surveys, and reviews were removed; title/keyword/abstract screening and then full-paper review were performed, with reviewer consensus for doubtful cases."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "The search yielded 1,027 potential papers; 56 remained after initial screening, 21 were selected for in-depth review, and 19 were analyzed because two papers could not be obtained as complete documents.",
+      "The review identifies medicine and education as the most represented reviewed domains, followed by research-paper graphs and diverse other domains.",
+      "The review finds both semi-automatic and claimed automatic approaches, but concludes that fully automatic KG creation remains an idea rather than an established outcome.",
+      "Across the reviewed work, information extraction, entity linking, entity/relation identification, data cleaning, synonym handling, ontology construction/use, machine-learning/NLP methods, and graph storage are recurring components.",
+      "The authors conclude that important data and relationships can be extracted from created KGs with machine-learning methods and state that well-structured data/relationships, well-designed ontologies, and advanced algorithms support useful construction."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0003-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "1027 potential papers ... 56 papers selected ... final 21 papers ... resulting in 19 papers to be analyzed."
+      },
+      {
+        "span_id": "C0003-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "The most used research domain ... is medicine ... and education."
+      },
+      {
+        "span_id": "C0003-D-P001-TEXT-0003",
+        "page": 1,
+        "excerpt": "there exist some semi-automatic approaches but the fully automatic ones remain as ideas."
+      },
+      {
+        "span_id": "C0003-D-P006-TEXT-0004",
+        "page": 6,
+        "excerpt": "the results ... show that it is possible to extract important data and relationships from these created knowledge graphs by using machine learning methods."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author-stated: The review covers both structured and unstructured data and considers multiple KG-construction components, including text handling, nodes/relations, and ontology development.",
+      "Author-stated: It uses a stated PRISMA-based procedure, names four search libraries, provides its exact search string and date range, and reports the screening flow.",
+      "Review-level inference: The paper is useful as a compact map of heterogeneous KG-creation components, algorithms, tools, and application domains, including semi-automatic workflows that combine manual and automatic work."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0003-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "The analysis takes into account ... managing unstructured texts, defining nodes and relationships between them, and developing ontologies."
+      },
+      {
+        "span_id": "C0003-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "Our research is based on recommendations from Prisma [28] ... The search was conducted in four libraries ... The query used for the search was ..."
+      },
+      {
+        "span_id": "C0003-D-P004-TEXT-0003",
+        "page": 4,
+        "excerpt": "Knowledge graph creation in [34] was performed with the combination of manual and automatic methods, while authors in [36] focus on creating biodiversity knowledge graphs in semi-automatic fashion."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author-stated: The search may have missed relevant papers from other databases, excluded non-English papers, and lacked full-text access to two selected papers.",
+      "Author-stated: The fast-growing and multidisciplinary KG literature makes the review difficult.",
+      "Review-level inference: The single narrow Boolean query is centered on databases/relational databases and may under-retrieve Text-to-KG work described with NLP, information extraction, triples, entities, relation extraction, or ontology terms but not the exact query terms.",
+      "Review-level inference: The paper does not provide a per-study extraction table, study-quality assessment, reproducible record-level bibliography/screening log, or quantitative cross-study comparison; therefore its claims are primarily narrative and should not be used as comparative performance evidence."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0003-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "we might have missed any of the other relevant papers from other different online databases. Moreover, non-English papers were not included ... we were not able to retrieve a couple of them."
+      },
+      {
+        "span_id": "C0003-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "This makes the review even harder, especially taking into account the number of fields dealing with knowledge graphs."
+      },
+      {
+        "span_id": "C0003-D-P003-TEXT-0003",
+        "page": 3,
+        "excerpt": "The query used for the search was: (“databases” OR “relations databases”) AND “knowledge graphs” AND “automatic” AND “creation”."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "Relevant papers may have been missed because only the four selected libraries were searched.",
+      "Non-English papers were excluded.",
+      "Two selected papers could not be retrieved as complete documents and were not analyzed.",
+      "The recent expansion of KG usage and the number of fields involved make reviewing the topic difficult."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0003-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "we might have missed any of the other relevant papers from other different online databases. Moreover, non-English papers were not included in the review, and we were not able to retrieve a couple of them."
+      },
+      {
+        "span_id": "C0003-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "we were not able to find online 2 papers as complete documents ... resulting in 19 papers to be analyzed."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-stated: Future work in the reviewed literature should enhance models, with BERT mentioned in several papers and GPT-3 identified as a possible pretrained-model option.",
+      "Review-level inference: Expand the review protocol with broader, stage-specific search synonyms; additional databases; non-English coverage or a documented language rationale; complete record-level screening data; and a structured, per-paper quality and evidence extraction table.",
+      "Review-level inference: Evaluate automatic and semi-automatic KG-construction methods separately using compatible end-to-end measures for extraction accuracy, ontology/schema quality, graph quality, human effort, coverage, and reproducibility."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0003-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "although many of the papers discuss enhancing their models ... BERT is mentioned ... as the way forward. Nevertheless, GPT-3 is seen as a possibility to use for the pre-trained models, too [42]."
+      },
+      {
+        "span_id": "C0003-D-P001-TEXT-0002",
+        "page": 1,
+        "excerpt": "creating knowledge graphs is a time-consuming process that needs domain experts' support."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-stated: Fully automatic KG-creation approaches remain ideas; the review finds semi-automatic approaches instead.",
+      "Author-stated: Ongoing maintenance, integrating diverse sources into a single KG, and potential bias remain shortcomings of manual creation.",
+      "Review-level inference: Robust end-to-end automatic construction across heterogeneous structured and unstructured sources, with reliable ontology design and minimal expert intervention, remains unresolved; this follows the authors' conclusion and their discussion of manual shortcomings."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0003-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "there exist some semi-automatic approaches but the fully automatic ones remain as ideas."
+      },
+      {
+        "span_id": "C0003-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "manual methods are less popular because of their shortcomings, which include the inability to easily combine data from various sources into a single knowledge graph, the potential for bias ... and the requirement for ongoing maintenance."
+      }
+    ]
+  },
+  "code_and_data_availability": "not_reported"
+}

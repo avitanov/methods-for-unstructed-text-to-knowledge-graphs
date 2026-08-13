@@ -1,0 +1,888 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0025",
+    "title": "Knowledge Vault: A Web-Scale Approach to Probabilistic Knowledge Fusion",
+    "pdf_path": "data/batches/batch-02/C0025.pdf",
+    "authors": [
+      "Xin Luna Dong",
+      "Evgeniy Gabrilovich",
+      "Geremy Heitz",
+      "Wilko Horn",
+      "Ni Lao",
+      "Kevin Murphy",
+      "Thomas Strohmann",
+      "Shaohua Sun",
+      "Wei Zhang"
+    ],
+    "year": 2014,
+    "venue": "KDD 2014",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The paper introduces Knowledge Vault, a Web-scale probabilistic knowledge base that combines extractions from Web content—including text, tabular data, page structure, and human annotations—with prior knowledge from existing repositories. Supervised machine-learning fusion computes calibrated probabilities that candidate facts are correct, and the paper studies the utility of the sources and extraction methods.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title block",
+      "span_id": "C0025-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Xin Luna Dong, Evgeniy Gabrilovich, Geremy Heitz, Wilko Horn, Ni Lao, Kevin Murphy, Thomas Strohmann, Shaohua Sun, Wei Zhang.",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication footer",
+      "span_id": "C0025-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "KDD 2014.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication footer",
+      "span_id": "C0025-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "KDD 2014.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0025-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Knowledge Vault ... combines extractions from Web content ... with prior knowledge derived from existing knowledge repositories. We employ supervised machine learning methods for fusing these distinct information sources.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0025-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "standard methods for this task ... often produce very noisy, unreliable facts. To alleviate the amount of noise ... [the approach] should automatically leverage already-cataloged knowledge to build prior models of fact correctness.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Overview",
+      "span_id": "C0025-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "KV stores information in the form of RDF triples (subject, predicate, object) ... Associated with each such triple is a confidence score, representing the probability that KV 'believes' the triple is correct.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Overview",
+      "span_id": "C0025-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Knowledge fusion: this system computes the probability of a triple being true, based on agreement between different extractors and priors.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.1.1 Text documents",
+      "span_id": "C0025-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "standard NLP tools ... named entity recognition, part of speech tagging, dependency parsing, co-reference resolution ... and entity linkage ... train relation extractors using distant supervision.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "4.2 Neural network model (MLP)",
+      "span_id": "C0025-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "we associate one vector per predicate ... use a standard multi layer perceptron (MLP) to capture interaction terms.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0025-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "Entity types and predicates come from a fixed ontology.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Overview",
+      "span_id": "C0025-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "KV contains three major components: Extractors; Graph-based priors; Knowledge fusion.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "2.2 Local closed world assumption",
+      "span_id": "C0025-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "All the components of our system use supervised machine learning methods to fit probabilistic binary classifiers.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "3.1.1 Text documents",
+      "span_id": "C0025-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "We then train relation extractors using distant supervision.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.1.1 Text documents",
+      "span_id": "C0025-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "These perform named entity recognition, part of speech tagging, dependency parsing, co-reference resolution ... and entity linkage ... fit a binary classifier ... logistic regression for each predicate independently in parallel.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.1.2–3.3",
+      "span_id": "C0025-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "DOM ... lexicalized path ... HTML tables ... matching to Freebase ... manual mapping from schema.org to the Freebase schema ... boosted decision stumps ... Platt Scaling.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4.1–4.3",
+      "span_id": "C0025-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "PRA then performs a random walk ... neural network model ... we set L = K = 60 ... Fusing the two prior methods ... AUC of the fused system is 0.911.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0025-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Entity types and predicates come from a fixed ontology ... KV separates facts about the world from their lexical representation.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.1.3–3.1.4",
+      "span_id": "C0025-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "identify the relation ... in each column ... by matching to Freebase ... We define a manual mapping from schema.org to the Freebase schema for these different predicates.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Discussion — Adding new entities and relations",
+      "span_id": "C0025-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "there are many entities that are mentioned on the Web but are not in Freebase, and hence not in KV either ... many relations ... cannot be represented in the Freebase schema.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.1.1 Text documents",
+      "span_id": "C0025-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "named entity recognition, part of speech tagging, dependency parsing, co-reference resolution ... entity linkage ... train relation extractors using distant supervision.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.2 Fusing the extractors",
+      "span_id": "C0025-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "combine these signals ... apply a binary classifier to compute Pr(t = 1|f(t)) ... perform de-duplication of sources before running the extraction pipelines.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.3 Calibration of the probability estimates",
+      "span_id": "C0025-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "we adopt ... Platt Scaling ... Figure 1 shows that our (fused) probability estimates are well-calibrated.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0025-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "we extract facts from ... free text, HTML DOM trees, HTML Web tables, and human annotations of Web pages.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "4 Graph-based priors",
+      "span_id": "C0025-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "we exploit existing triples in Freebase to fit prior models.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.1.1 Text documents",
+      "span_id": "C0025-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "find examples of sentences in which this pair is mentioned, and extract features/patterns ... from the surface text or the dependency parse.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.1.2–3.1.3",
+      "span_id": "C0025-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "derive features connecting two entities from the DOM trees ... identify the relation ... expressed in each column of the table.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0025-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "KV stores information in the form of RDF triples (subject, predicate, object) ... Associated with each such triple is a confidence score.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Overview",
+      "span_id": "C0025-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "we are trying to construct a weighted labeled graph ... compute Pr(G(s, p, o) = 1|·) for candidate (s, p, o) triples.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "2.2 and 3.1.1",
+      "span_id": "C0025-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "supervised machine learning methods to fit probabilistic binary classifiers ... logistic regression ... MapReduce framework.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.2–3.3",
+      "span_id": "C0025-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "considerably better performance by using boosted decision stumps ... adopt ... Platt Scaling.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.1–4.2",
+      "span_id": "C0025-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "path ranking algorithm ... standard multi layer perceptron (MLP) ... We set L = K = 60.",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "2.1 Evaluation protocol",
+      "span_id": "C0025-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "extract about 1.6B candidate triples, covering 4469 different types of relations and 1100 different types of entities ... split ... training set (80%) and a test set (20%).",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.1.2–3.1.4",
+      "span_id": "C0025-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "more than 1B pages of data in DOM tree format ... over 570M tables on the Web ... use schema.org annotations.",
+      "confidence": "medium"
+    },
+    "datasets-17-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "6 Evaluating LCWA",
+      "span_id": "C0025-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "This subset consisted of 1000 triples for 10 different predicates ... discarded the 305 triples with unknown labels.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "3.4 Comparison of the methods",
+      "span_id": "C0025-D-P005-TABLE-0001",
+      "page": 5,
+      "excerpt": "Table 2: Performance of different extraction systems; columns include # > 0.7, # > 0.9, Frac. >0.9, and AUC.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "3.3 Calibration of the probability estimates",
+      "span_id": "C0025-D-P004-CAPTION-0002",
+      "page": 4,
+      "excerpt": "Figure 1: True probability vs estimated probability ... if we collect all the triples that have a predicted probability of 0.9, then we find that about 90% of them are indeed true.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "6 Evaluating LCWA",
+      "span_id": "C0025-D-P008-TABLE-0003",
+      "page": 8,
+      "excerpt": "Table 5: AUC scores for the fused prior, extractor and prior+extractor using different labels.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "3.4 Comparison of the methods",
+      "span_id": "C0025-D-P005-TABLE-0001",
+      "page": 5,
+      "excerpt": "Rows: TBL, ANO, TXT, DOM, FUSED-EX.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.2–4.3",
+      "span_id": "C0025-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "AUC for the MLP model is 0.882, and for PRA is 0.884 ... AUC of the fused [prior] system is 0.911.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-03": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "6 Evaluating LCWA",
+      "span_id": "C0025-D-P008-TABLE-0003",
+      "page": 8,
+      "excerpt": "Columns: Prior, Extractor, Prior+ex; rows: LCWA and Human.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "2.1 Evaluation protocol",
+      "span_id": "C0025-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "randomly split ... training set (80% of the data) and a test set (20%) ... at most 10k instances of each predicate ... pooled ... a more balanced test set.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "2.2 Local closed world assumption",
+      "span_id": "C0025-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "if (s,p,o) ∈ O(s,p), ... correct; if ... |O(s,p)| > 0 ... incorrect; if O(s,p) is empty, we do not label the triple, and ... throw it out.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "6 Evaluating LCWA",
+      "span_id": "C0025-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "manually labeled ... 1000 triples for 10 different predicates ... discarded the 305 triples with unknown labels ... trained on our full training set ... using LCWA labels.",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "3.4 Comparison of the methods",
+      "span_id": "C0025-D-P005-TABLE-0001",
+      "page": 5,
+      "excerpt": "TBL AUC 0.856; ANO 0.920; TXT 0.867; DOM 0.928; FUSED-EX. 0.927; DOM has 94M and FUSED-EX. 100M triples above 0.9.",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.2–4.3",
+      "span_id": "C0025-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "AUC for the MLP model is 0.882, and for PRA is 0.884 ... AUC of the fused system is 0.911.",
+      "confidence": "medium"
+    },
+    "main_results-21-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "5 Fusing extractors and priors; 6 Evaluating LCWA",
+      "span_id": "C0025-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "combining priors and extractors increases the number of high confidence facts ... from about 100M to about 271M. Of these, about 33% are new facts ... not yet in Freebase.",
+      "confidence": "medium"
+    },
+    "main_results-21-04": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "6 Evaluating LCWA",
+      "span_id": "C0025-D-P008-TABLE-0004",
+      "page": 8,
+      "excerpt": "LCWA: Prior 0.943, Extractor 0.872, Prior+ex 0.959; Human: Prior 0.843, Extractor 0.852, Prior+ex 0.869.",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Overview",
+      "span_id": "C0025-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Extractors ... Graph-based priors ... Knowledge fusion: this system computes the probability of a triple being true, based on agreement between different extractors and priors.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.3 Calibration of the probability estimates",
+      "span_id": "C0025-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "our (fused) probability estimates are well-calibrated.",
+      "confidence": "medium"
+    },
+    "strengths-22-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "5 Fusing extractors and priors",
+      "span_id": "C0025-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "combining priors and extractors increases ... high confidence facts ... from about 100M to about 271M. Of these, about 33% are new facts.",
+      "confidence": "medium"
+    },
+    "strengths-22-04": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0025-D-P002-TEXT-0004",
+      "page": 2,
+      "excerpt": "KV separates facts about the world from their lexical representation. This makes KV a structured repository of knowledge that is language independent.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Discussion — Modeling mutual exclusion between facts",
+      "span_id": "C0025-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "Currently (for reasons of scalability) we treat each fact as an independent binary random variable ... many triples are correlated.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "6 Evaluating LCWA",
+      "span_id": "C0025-D-P008-TABLE-0002",
+      "page": 8,
+      "excerpt": "performance on the human labeled data is lower ... LCWA 0.959 versus Human 0.869 for Prior+ex.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Discussion — Dealing with correlated sources; Adding new entities and relations",
+      "span_id": "C0025-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "Currently we have a very simple solution ... counting each domain only once ... many entities ... are not in Freebase, and hence not in KV either.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-04": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Related work",
+      "span_id": "C0025-D-P008-TEXT-0004",
+      "page": 8,
+      "excerpt": "KV ... can support simple queries ... However, we do not yet support sophisticated queries, such as JOIN or SELECT.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "6 Evaluating LCWA",
+      "span_id": "C0025-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "we know that [LCWA] is just an approximation to the truth ... this can result in false negatives ... Freebase can contain errors, which can result in false positives.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Discussion — Modeling mutual exclusion and soft correlation",
+      "span_id": "C0025-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "Currently ... we treat each fact as an independent binary random variable ... Preliminary experiments ... show some promise, but we still need to fully integrate this kind of joint prior into KV.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Discussion",
+      "span_id": "C0025-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "Currently we have a very simple solution ... counting each domain only once ... Future ... model such temporal facts ... entities ... not in Freebase ... relations ... cannot be represented in the Freebase schema.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "2.2 Local closed world assumption",
+      "span_id": "C0025-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "There are more sophisticated methods for training models that don't make this assumption ... we leave the integration of such methods into KV to future work.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Discussion — Modeling mutual exclusion and soft correlation",
+      "span_id": "C0025-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "We are currently investigating more sophisticated methods ... we still need to fully integrate this kind of joint prior into KV.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Discussion",
+      "span_id": "C0025-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "we plan to deploy more sophisticated copy detection mechanisms ... extend KV to model such temporal facts ... automatically create new entities ... extend the schema ... crowdsourcing techniques.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Discussion — Modeling mutual exclusion; Modeling soft correlation",
+      "span_id": "C0025-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "many triples are correlated ... Preliminary experiments ... did not work very well ... need to fully integrate this kind of joint prior into KV.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Discussion — Correlated sources; temporal facts; entities and relations",
+      "span_id": "C0025-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "problematic if we have duplicated or correlated sources ... duration of a fact is not necessarily related to the timestamp ... need to automatically create new entities ... extend the schema ... in a controlled way.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Discussion — Knowledge representation and inherent bounds",
+      "span_id": "C0025-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "There will always be a long tail of concepts that are difficult to capture in any fixed ontology ... not all of human knowledge is available on the Web.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Constructing a much larger knowledge base from the Web while controlling the noise of automatic extraction. The objective is to populate a fixed-schema, language-independent repository of disambiguated RDF triples and attach a calibrated probability of correctness to every candidate fact by combining Web extraction evidence with graph-derived Freebase priors.",
+  "methodology": {
+    "primary_family": "Validation, correction, and knowledge-fusion methods",
+    "secondary_families": [
+      "Classical machine learning",
+      "Linguistic and dependency-based extraction",
+      "Neural NLP pipelines",
+      "Ontology-constrained and schema-guided methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "supervised",
+    "description": "Execution pipeline: (1) collect Web free text, HTML DOM trees, HTML tables, and schema.org-annotated pages; (2) for text, run named-entity recognition, POS tagging, dependency parsing, within-document coreference, and entity linking, then train per-predicate distant-supervision logistic-regression extractors from surface/dependency patterns; (3) for DOM pages, learn classifiers from lexicalized DOM paths between linked entities; (4) for tables, link entities and match each unambiguous column to a Freebase predicate; (5) map a subset of schema.org annotations manually to Freebase predicates; (6) merge/de-duplicate source evidence at domain level and fuse the four extractor outputs with per-predicate boosted decision stumps; (7) learn graph priors from Freebase with PRA random-walk path features and a 60-dimensional embedding/MLP link-prediction model, then fuse the priors; (8) fuse extraction and prior scores and calibrate output probabilities with Platt scaling. Labels for supervised training and most testing use the local closed-world assumption (LCWA)."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The system uses a fixed ontology: entity types and predicates are fixed, and outputs use Freebase entity identifiers and predicates. Freebase supplies both schema and prior facts. HTML-table columns are matched to Freebase predicates; schema.org annotations are manually mapped to 14 mostly person-related Freebase predicates. This constrains extraction but leaves Web entities and relations absent from Freebase unsupported in the current system.",
+    "evidence": [
+      {
+        "span_id": "C0025-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "Entity types and predicates come from a fixed ontology ... KV separates facts about the world from their lexical representation."
+      },
+      {
+        "span_id": "C0025-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "identify the relation ... in each column ... by matching to Freebase ... We define a manual mapping from schema.org to the Freebase schema for these different predicates."
+      },
+      {
+        "span_id": "C0025-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "there are many entities that are mentioned on the Web but are not in Freebase, and hence not in KV either ... many relations ... cannot be represented in the Freebase schema."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing",
+    "Entity and concept extraction",
+    "Coreference resolution",
+    "Entity resolution and linking",
+    "Relation and triple extraction",
+    "Graph construction",
+    "Knowledge fusion and deduplication",
+    "Graph validation and correction"
+  ],
+  "input_output": {
+    "input_type": "Web-scale unstructured and semi-structured Web content: free text documents, HTML DOM trees, HTML tables, and human-authored schema.org annotations; existing Freebase triples are also input as graph priors and distant-supervision seeds.",
+    "input_granularity": "Document/page-level text and DOM trees; table-column-level Web tables; page annotations; linked entity-pair/sentence instances for text extraction; and candidate subject–predicate–object triples for fusion and graph-prior scoring.",
+    "output_representation": "A probabilistic, weighted labeled knowledge graph of disambiguated RDF subject–predicate–object triples, using fixed Freebase entity identifiers and predicates. Each triple has a calibrated probability/confidence of being correct."
+  },
+  "models_and_tools": [
+    "Standard NLP pipeline: named-entity recognition, POS tagging, dependency parsing, within-document coreference resolution, and entity linkage",
+    "Per-predicate distant-supervision logistic-regression relation extractors for text",
+    "Per-predicate classifiers using lexicalized DOM-tree paths",
+    "Entity-linking plus Freebase schema-matching heuristic for Web tables",
+    "Manual schema.org-to-Freebase mapping for 14 predicates",
+    "MapReduce for parallel per-predicate text classifiers",
+    "Boosted decision stumps for extraction/prior fusion",
+    "PRA (path ranking algorithm) plus per-predicate logistic regression for graph priors",
+    "60-dimensional entity/predicate embeddings and a multilayer perceptron for graph priors",
+    "Platt scaling for calibration",
+    "Local closed-world assumption for automatic labels"
+  ],
+  "datasets": [
+    "A very large Web corpus comprising free text, HTML DOM pages (including text and deep-Web sources), HTML tables, and schema.org-annotated pages",
+    "Freebase: source of existing triples for distant-supervision seeds, LCWA labels, and graph-prior training",
+    "Approximately 1.6 billion extracted candidate triples covering 4,469 relation types and 1,100 entity types",
+    "Balanced held-out test sample: 20% split of candidate triples, capped at 10,000 instances per predicate",
+    "Human-labeled subset: 1,000 triples across 10 predicates; 305 unknown labels discarded"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Area under the ROC curve (AUC)",
+      "Number of triples above confidence thresholds 0.7 and 0.9",
+      "Fraction of triples above 0.9 confidence",
+      "Calibration comparison of estimated and true probabilities",
+      "Manual human-label AUC evaluation"
+    ],
+    "baselines": [
+      "Individual extraction systems: TBL, ANO, TXT, and DOM",
+      "Fused-extractor system",
+      "Individual graph-prior methods: PRA and MLP",
+      "Fused-prior system",
+      "Prior-only and extractor-only systems compared with the fused prior-plus-extractor system",
+      "LCWA labels compared with human labels for the same fused systems"
+    ],
+    "setting": "Candidate triples were randomly split 80%/20% for training/testing, with the exact same triple excluded from training and each predicate capped at 10,000 test instances before pooling to balance common predicates. Labels were generated by LCWA: a Freebase-listed object is positive, an alternative object for a locally nonempty subject–predicate pair is negative, and empty pairs are dropped. Extraction-system AUCs use their distinct corresponding test sets; fused-extractor AUC uses their union. A human assessment used in-house raters on 1,000 triples from 10 predicates, retaining 695 non-unknown judgments; models remained trained on the full LCWA-labelled training data."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "The completed KV contains 1.6B candidate triples; 271M have probability at least 0.9, cover 4,469 relation types and 1,100 entity types, and about one-third of these confident facts are not already in Freebase.",
+      "Among individual extractors, DOM has the highest AUC (0.928), followed by ANO (0.920), TXT (0.867), and TBL (0.856). Fusing extractors yields 100M facts at confidence at least 0.9 versus 94M for DOM alone, with AUC 0.927.",
+      "PRA and the 60-dimensional MLP graph prior have similar AUCs (0.884 and 0.882); fusing those priors raises AUC to 0.911.",
+      "Combining fused extractor evidence with fused graph priors raises high-confidence facts from about 100M to about 271M and achieves AUC 0.959 under LCWA labels, compared with 0.943 prior-only and 0.872 extractor-only.",
+      "On human judgments, performance is lower but the combined system remains best: AUC 0.869 versus 0.852 extractor-only and 0.843 prior-only. The authors interpret the limited degradation as indirect support for LCWA adequacy.",
+      "The calibrated fused probability has the stated interpretation that about 90% of triples assigned 0.9 are true."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0025-D-P005-TABLE-0001",
+        "page": 5,
+        "excerpt": "TBL AUC 0.856; ANO 0.920; TXT 0.867; DOM 0.928; FUSED-EX. 0.927; DOM has 94M and FUSED-EX. 100M triples above 0.9."
+      },
+      {
+        "span_id": "C0025-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "AUC for the MLP model is 0.882, and for PRA is 0.884 ... AUC of the fused system is 0.911."
+      },
+      {
+        "span_id": "C0025-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "combining priors and extractors increases the number of high confidence facts ... from about 100M to about 271M. Of these, about 33% are new facts ... not yet in Freebase."
+      },
+      {
+        "span_id": "C0025-D-P008-TABLE-0004",
+        "page": 8,
+        "excerpt": "LCWA: Prior 0.943, Extractor 0.872, Prior+ex 0.959; Human: Prior 0.843, Extractor 0.852, Prior+ex 0.869."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "The architecture integrates complementary evidence: four heterogeneous Web extraction modalities, Freebase graph priors, and learned per-predicate fusion rather than trusting any individual extractor.",
+      "It produces calibrated uncertainty rather than only binary facts, enabling the system to distinguish high-confidence from uncertain facts.",
+      "It operates at Web scale and achieves high coverage: 271M facts at probability at least 0.9, including roughly one-third absent from the prior Freebase graph.",
+      "The empirical design separately measures extractor, prior, and fused performance and includes a human-label check of LCWA-based evaluation.",
+      "[Review inference] The fixed Freebase schema and entity identifiers make the output directly interoperable as a structured KG and suppress lexical relation duplication typical of open IE."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0025-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "Extractors ... Graph-based priors ... Knowledge fusion: this system computes the probability of a triple being true, based on agreement between different extractors and priors."
+      },
+      {
+        "span_id": "C0025-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "our (fused) probability estimates are well-calibrated."
+      },
+      {
+        "span_id": "C0025-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "combining priors and extractors increases ... high confidence facts ... from about 100M to about 271M. Of these, about 33% are new facts."
+      },
+      {
+        "span_id": "C0025-D-P002-TEXT-0004",
+        "page": 2,
+        "excerpt": "KV separates facts about the world from their lexical representation. This makes KV a structured repository of knowledge that is language independent."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "The system treats facts as independent binary variables for scalability, so it does not model mutual exclusion or other correlations among facts.",
+      "LCWA-derived labels are imperfect because Freebase is incomplete and can contain errors; human-label AUCs are lower than LCWA AUCs.",
+      "The fixed Freebase ontology excludes Web entities and relations not already representable in Freebase; automatic creation of new entities remains work in progress.",
+      "Simple domain-level source deduplication does not adequately address copied or correlated sources.",
+      "The system does not model temporal validity of facts and supports only simple probabilistic queries, not JOIN or SELECT.",
+      "[Review inference] The paper evaluates globally pooled, predicate-balanced AUC and confidence counts, so it does not report end-to-end precision/recall by extraction source, entity type, or individual predicate; deployment behavior for rare or newly introduced schemas is therefore not established here."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0025-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "Currently (for reasons of scalability) we treat each fact as an independent binary random variable ... many triples are correlated."
+      },
+      {
+        "span_id": "C0025-D-P008-TABLE-0002",
+        "page": 8,
+        "excerpt": "performance on the human labeled data is lower ... LCWA 0.959 versus Human 0.869 for Prior+ex."
+      },
+      {
+        "span_id": "C0025-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "Currently we have a very simple solution ... counting each domain only once ... many entities ... are not in Freebase, and hence not in KV either."
+      },
+      {
+        "span_id": "C0025-D-P008-TEXT-0004",
+        "page": 8,
+        "excerpt": "KV ... can support simple queries ... However, we do not yet support sophisticated queries, such as JOIN or SELECT."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "LCWA is only an approximation: Freebase's partial actor lists can create false negatives and Freebase errors can create false positives.",
+      "For scalability, the current model treats each fact independently and does not enforce mutual exclusion for functional relations.",
+      "Naively enforcing mutual exclusion fails when values differ only in granularity, such as Honolulu versus Hawaii.",
+      "Soft numerical correlations among facts are not fully integrated.",
+      "The current compatibility handling across abstraction levels is limited to geographical knowledge.",
+      "Counting each domain once is only a simple treatment of duplicated or correlated sources.",
+      "The current system lacks temporal fact modeling; fact duration is not necessarily linked to source timestamp.",
+      "Entities absent from Freebase and relations outside its schema cannot currently be represented.",
+      "RDF triples may be inadequate for richer forms of knowledge, and a fixed ontology has a difficult long tail of concepts.",
+      "Even perfect Web machine reading cannot recover all human knowledge, especially commonsense knowledge unavailable on the Web."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0025-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "we know that [LCWA] is just an approximation to the truth ... this can result in false negatives ... Freebase can contain errors, which can result in false positives."
+      },
+      {
+        "span_id": "C0025-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "Currently ... we treat each fact as an independent binary random variable ... Preliminary experiments ... show some promise, but we still need to fully integrate this kind of joint prior into KV."
+      },
+      {
+        "span_id": "C0025-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "Currently we have a very simple solution ... counting each domain only once ... Future ... model such temporal facts ... entities ... not in Freebase ... relations ... cannot be represented in the Freebase schema."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Use more sophisticated correlation-aware models to enforce mutual exclusion while accounting for compatible values at different granularities.",
+      "Fully integrate joint priors for soft correlations, including numerical relations such as parent/child birth dates.",
+      "Generalize compatibility reasoning beyond geographic values to other hierarchically related values.",
+      "Deploy copy-detection methods for correlated Web sources.",
+      "Extend KV with temporal representations for facts valid over an interval.",
+      "Automatically create new entities and extend the relation schema in a controlled manner.",
+      "Develop richer knowledge representations and extend the neural model to richer forms of knowledge.",
+      "Use crowdsourcing to acquire knowledge, especially commonsense knowledge not available on the Web.",
+      "Integrate more sophisticated training methods that do not rely on LCWA labels."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0025-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "There are more sophisticated methods for training models that don't make this assumption ... we leave the integration of such methods into KV to future work."
+      },
+      {
+        "span_id": "C0025-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "We are currently investigating more sophisticated methods ... we still need to fully integrate this kind of joint prior into KV."
+      },
+      {
+        "span_id": "C0025-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "we plan to deploy more sophisticated copy detection mechanisms ... extend KV to model such temporal facts ... automatically create new entities ... extend the schema ... crowdsourcing techniques."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "How to learn reliable truth probabilities when the existing KB used for weak labels is incomplete or erroneous.",
+      "How to jointly model hard mutual exclusion and soft fact correlations at Web scale without conflating semantically compatible values at different granularities.",
+      "How to identify copied or correlated Web sources so repeated evidence is not overcounted.",
+      "How to represent time-varying facts when a source timestamp does not determine a fact's validity interval.",
+      "How to add new entities and relation types while avoiding uncontrolled redundant or synonymous relations.",
+      "How to represent richer conceptual/commonsense knowledge beyond a fixed RDF triple ontology and obtain knowledge not expressed on the Web.",
+      "[Review inference] These limitations jointly leave open a central quality-control problem: scalable KG population must reconcile evidence provenance, entity/schema expansion, and interdependent fact constraints rather than scoring candidate triples independently."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0025-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "many triples are correlated ... Preliminary experiments ... did not work very well ... need to fully integrate this kind of joint prior into KV."
+      },
+      {
+        "span_id": "C0025-D-P009-TEXT-0002",
+        "page": 9,
+        "excerpt": "problematic if we have duplicated or correlated sources ... duration of a fact is not necessarily related to the timestamp ... need to automatically create new entities ... extend the schema ... in a controlled way."
+      },
+      {
+        "span_id": "C0025-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "There will always be a long tail of concepts that are difficult to capture in any fixed ontology ... not all of human knowledge is available on the Web."
+      }
+    ]
+  },
+  "code_and_data_availability": "not_reported"
+}

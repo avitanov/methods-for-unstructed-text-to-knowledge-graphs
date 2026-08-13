@@ -1,0 +1,752 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0031",
+    "title": "Information Extraction meets the Semantic Web: A Survey",
+    "pdf_path": "data/batches/batch-02/C0031.pdf",
+    "authors": [
+      "Jose L. Martinez-Rodriguez",
+      "Aidan Hogan",
+      "Ivan Lopez-Arevalo"
+    ],
+    "year": 2016,
+    "venue": "Semantic Web Journal",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "Survey of Information Extraction in a Semantic Web setting, examining how Semantic Web languages, ontologies, knowledge bases, and tools can improve extraction and how extraction can populate Semantic Web resources. It covers extraction and linking of entities, concepts, and relations, primarily from natural-language text, with an additional overview of markup documents and web tables.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0031-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Information Extraction meets the Semantic Web: A Survey — Jose L. Martinez-Rodriguez, Aidan Hogan and Ivan Lopez-Arevalo.",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Journal header",
+      "span_id": "C0031-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Undefined 0 (2016) 1.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "PDF metadata/title page",
+      "span_id": "C0031-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Subject: Semantic Web Journal.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0031-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We provide a comprehensive survey ... using Semantic Web resources ... to improve Information Extraction, and/or using Information Extraction to populate the Semantic Web.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "1. Introduction",
+      "span_id": "C0031-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "there is still a significant gap between the coverage of structured and unstructured data available on the Web",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "1. Introduction — Survey Scope",
+      "span_id": "C0031-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "this survey includes papers that: deal with extraction and/or linking of entities, concepts and/or relations ... [and] consider extraction from either unstructured or semi-structured sources.",
+      "confidence": "medium"
+    },
+    "methodology-description-06-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "1. Introduction — Survey Methodology",
+      "span_id": "C0031-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "we apply a rough filter for relevance based on the title and type of publication; thereafter, we filter by abstract, and finally by the body of the paper’s content.",
+      "confidence": "medium"
+    },
+    "methodology-description-06-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "1. Introduction — Survey Methodology",
+      "span_id": "C0031-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "we take note of other works referenced in related works, works that cite more prominent relevant papers, and also check the bibliography of prominent authors.",
+      "confidence": "medium"
+    },
+    "methodology-description-06-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4. Relation Extraction & Linking — Summary",
+      "span_id": "C0031-D-P052-TEXT-0003",
+      "page": 52,
+      "excerpt": "not all systems follow these steps in the presented order and not all systems apply (or even require) all such steps.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-07-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "1. Introduction — Survey Scope",
+      "span_id": "C0031-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "a work must make non-trivial use of an ontology, knowledge-base, tool or language that is founded on one of the core Semantic Web standards: RDF/RDFS/OWL/SKOS/SPARQL.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-07-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "1. Introduction",
+      "span_id": "C0031-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "an existing Semantic Web ontology or knowledge-base is used to guide the extraction, which further populates the given ontology and/or knowledge-base.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-07-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "6. Discussion — Trends",
+      "span_id": "C0031-D-P059-TEXT-0003",
+      "page": 59,
+      "excerpt": "post 2009, we notice a shift towards using general-domain KBs – DBpedia, Freebase, YAGO, etc.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-08-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0031-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "we focus on the extraction and linking of three elements: entities, concepts and relations.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-08-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "4.1. Entity Extraction (and Linking)",
+      "span_id": "C0031-D-P043-TEXT-0002",
+      "page": 43,
+      "excerpt": "in the context of REL, when extracting and linking entities, Coreference Resolution (CR) plays a very important role.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-08-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "4. Relation Extraction & Linking — Summary",
+      "span_id": "C0031-D-P052-TEXT-0003",
+      "page": 52,
+      "excerpt": "distant supervision has become a dominating theme ... to extract further mentions and, ultimately, novel KB triples.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-09-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0031-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The focus of the majority of the survey is on works applied to unstructured sources (text in natural language); however, we also provide an overview ... for semi-structured inputs, namely markup documents and web tables.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-10-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "1. Introduction",
+      "span_id": "C0031-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "the extraction process [is] identifying mentions referring to such entities/concepts/relations in the unstructured or semi-structured input.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-10-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "4. Relation Extraction & Linking — Scale & Efficiency",
+      "span_id": "C0031-D-P052-TEXT-0002",
+      "page": 52,
+      "excerpt": "processing of different sentences, paragraphs and/or documents can be performed independently.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-10-03": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "5. Semi-structured Information Extraction",
+      "span_id": "C0031-D-P053-TEXT-0003",
+      "page": 53,
+      "excerpt": "we proceed by discussing two types of semi-structured sources – markup documents and tables.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-11-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "1. Introduction — Information Extraction Tasks",
+      "span_id": "C0031-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "binary relations may be represented as RDF triples after linking entities and linking the predicate to an appropriate property.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-11-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "4. Relation Extraction & Linking — Summary",
+      "span_id": "C0031-D-P052-TEXT-0002",
+      "page": 52,
+      "excerpt": "systems dealing with n-ary relations mint new IRIs as part of their output representation.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-11-03": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "4. Relation Extraction & Linking",
+      "span_id": "C0031-D-P044-TABLE-0003",
+      "page": 44,
+      "excerpt": "The table compares Entity, Parsing, Property Selection, Representation, KB, and Domain for relation extraction and linking systems.",
+      "confidence": "medium"
+    },
+    "models_and_tools-12-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "2. Entity Extraction & Linking",
+      "span_id": "C0031-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "The highlighted systems are then as follows: SemTag ... KIM ... AIDA ... DBpedia Spotlight ... SDA ... KORE ... LINDEN.",
+      "confidence": "medium"
+    },
+    "models_and_tools-12-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "2.1.2 Recognition",
+      "span_id": "C0031-D-P014-TEXT-0002",
+      "page": 14,
+      "excerpt": "Stanford NER ... uses a pre-trained Conditional Random Fields (CRF) classifier ... WAT relies on OpenNLP’s NER tool based on a Maximum Entropy model.",
+      "confidence": "medium"
+    },
+    "models_and_tools-12-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4. Relation Extraction & Linking",
+      "span_id": "C0031-D-P044-TABLE-0003",
+      "page": 44,
+      "excerpt": "Table 4 lists relation systems and their entity extraction, parsing, property-selection, representation, KB, and domain choices.",
+      "confidence": "medium"
+    },
+    "datasets-13-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "2.4 Evaluation — Datasets",
+      "span_id": "C0031-D-P017-TEXT-0001",
+      "page": 17,
+      "excerpt": "We will first describe some of the commonly used evaluation datasets and then discuss evaluations conducted by third parties to compare various EEL tools.",
+      "confidence": "medium"
+    },
+    "datasets-13-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4. Relation Extraction & Linking",
+      "span_id": "C0031-D-P044-TABLE-0002",
+      "page": 44,
+      "excerpt": "The KB column includes Artists ontology, Freebase, DBpedia, YAGO, WordNet and BabelNet across the surveyed systems.",
+      "confidence": "medium"
+    },
+    "datasets-13-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.7 Evaluation",
+      "span_id": "C0031-D-P046-TEXT-0003",
+      "page": 46,
+      "excerpt": "A number of standard evaluation datasets have ... been used by a number of works.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-14-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "2.4 Evaluation",
+      "span_id": "C0031-D-P017-TEXT-0001",
+      "page": 17,
+      "excerpt": "different applications may require different precision/recall trade-offs, or may provide different input sources.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-14-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.7 Evaluation — Metrics",
+      "span_id": "C0031-D-P046-TEXT-0002",
+      "page": 46,
+      "excerpt": "Standard evaluation measures are typically applied, including precision, recall, F-measure, accuracy ... metrics such as Mean Average Precision (MAP) are applied.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-14-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "3.6 Evaluation",
+      "span_id": "C0031-D-P025-TEXT-0003",
+      "page": 25,
+      "excerpt": "evaluations of topic modeling may also consider perplexity (the log-likelihood of a held-out test set).",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-15-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "2.4.2 Third-party comparisons",
+      "span_id": "C0031-D-P018-TEXT-0001",
+      "page": 18,
+      "excerpt": "We now describe third-party evaluations that compare various EEL tools.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-15-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4. Relation Extraction & Linking — Summary",
+      "span_id": "C0031-D-P053-TEXT-0002",
+      "page": 53,
+      "excerpt": "no single system technique or system can be considered to cover all use-cases.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-16-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "1. Introduction — Survey Methodology",
+      "span_id": "C0031-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "For each keyphrase, we perform a search on Google Scholar for related papers.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-16-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "6. Discussion — Communities",
+      "span_id": "C0031-D-P060-TEXT-0002",
+      "page": 60,
+      "excerpt": "In terms of the 106 highlighted papers in this survey for EEL, CEL, REL and Semi-Structured Inputs ... we performed a meta-analysis of the venues.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-16-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "6. Discussion — Communities",
+      "span_id": "C0031-D-P060-TABLE-0003",
+      "page": 60,
+      "excerpt": "Table 8 aggregates highlighted papers by research area, with a total of 106.",
+      "confidence": "medium"
+    },
+    "main_results-17-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "6. Discussion — Trends",
+      "span_id": "C0031-D-P059-TEXT-0001",
+      "page": 59,
+      "excerpt": "post 2009, we notice a shift towards using general-domain KBs – DBpedia, Freebase, YAGO, etc.",
+      "confidence": "medium"
+    },
+    "main_results-17-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "6. Discussion — Trends",
+      "span_id": "C0031-D-P059-TEXT-0002",
+      "page": 59,
+      "excerpt": "Another general trend we have observed is one towards more “holistic” methods – such as collective assignment, joint models.",
+      "confidence": "medium"
+    },
+    "main_results-17-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "6. Discussion — Communities",
+      "span_id": "C0031-D-P060-TABLE-0003",
+      "page": 60,
+      "excerpt": "Semantic Web (SW) has total 39; the table total is 106.",
+      "confidence": "medium"
+    },
+    "strengths-18-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Abstract",
+      "span_id": "C0031-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "we focus on the extraction and linking of three elements: entities, concepts and relations.",
+      "confidence": "medium"
+    },
+    "strengths-18-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "1. Introduction — Survey Methodology",
+      "span_id": "C0031-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "we filter by abstract, and finally by the body of the paper’s content.",
+      "confidence": "medium"
+    },
+    "strengths-18-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4. Relation Extraction & Linking",
+      "span_id": "C0031-D-P044-TABLE-0003",
+      "page": 44,
+      "excerpt": "The comparative table records system, year, entity strategy, parsing, property selection, representation, KB and domain.",
+      "confidence": "medium"
+    },
+    "weaknesses-19-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "1. Introduction — Survey Scope",
+      "span_id": "C0031-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "a work must make non-trivial use of an ontology, knowledge-base, tool or language ... RDF/RDFS/OWL/SKOS/SPARQL.",
+      "confidence": "medium"
+    },
+    "weaknesses-19-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.4 Evaluation",
+      "span_id": "C0031-D-P017-TEXT-0002",
+      "page": 17,
+      "excerpt": "different applications may require different precision/recall trade-offs, or may provide different input sources.",
+      "confidence": "medium"
+    },
+    "weaknesses-19-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4. Relation Extraction & Linking — Summary",
+      "span_id": "C0031-D-P053-TEXT-0003",
+      "page": 53,
+      "excerpt": "no single system technique or system can be considered to cover all use-cases.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-20-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "1. Introduction — Survey Methodology",
+      "span_id": "C0031-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "This methodology may miss relevant papers and is considered as seeding an initial list of papers.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-20-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4. Relation Extraction & Linking — Language and Scale & Efficiency",
+      "span_id": "C0031-D-P052-TEXT-0002",
+      "page": 52,
+      "excerpt": "almost all systems presented here are evaluated only for English corpora ... most of the approaches do not explicitly tackle the question of scale and efficiency.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-20-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.7 Evaluation — Automated evaluation",
+      "span_id": "C0031-D-P047-TEXT-0003",
+      "page": 47,
+      "excerpt": "such approaches are not very suitable for precision since the KB is incomplete, and likewise assumes that held-out KB relations are mentioned in the input text.",
+      "confidence": "medium"
+    },
+    "possible_improvements-21-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "6. Discussion — Trends",
+      "span_id": "C0031-D-P060-TEXT-0001",
+      "page": 60,
+      "excerpt": "We see this trend of jointly modeling several interrelated aspects of IE as set to continue.",
+      "confidence": "medium"
+    },
+    "possible_improvements-21-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4. Relation Extraction & Linking — Language",
+      "span_id": "C0031-D-P052-TEXT-0002",
+      "page": 52,
+      "excerpt": "Possible solutions include trying to replace the particular component with its equivalent in another language ... or ... translate the text to the supported language.",
+      "confidence": "medium"
+    },
+    "possible_improvements-21-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "1. Introduction — Survey Methodology",
+      "span_id": "C0031-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "The lists of papers found through these searches, along with their metadata and how they were labeled in terms of relevance, are also provided.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-22-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4. Relation Extraction & Linking — Summary",
+      "span_id": "C0031-D-P053-TEXT-0001",
+      "page": 53,
+      "excerpt": "REL is still very much an active area of research.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-22-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.7 Evaluation",
+      "span_id": "C0031-D-P046-TEXT-0002",
+      "page": 46,
+      "excerpt": "REL is a challenging task, where evaluation is likewise difficult.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-22-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4. Relation Extraction & Linking — Summary",
+      "span_id": "C0031-D-P052-TEXT-0003",
+      "page": 52,
+      "excerpt": "Choosing an RE strategy for a particular application scenario can be complex given that every approach has pros and cons regarding the application at hand.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-23-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "1. Introduction — Survey Methodology",
+      "span_id": "C0031-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We provide further details of our survey online.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-23-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "1. Introduction — Survey Methodology",
+      "span_id": "C0031-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "This webpage includes further details ... the search keywords used, the inclusion/exclusion criteria ... lists of papers ... metadata and how they were labeled in terms of relevance.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses the semantic gap between abundant unstructured Web information and comparatively limited structured Semantic Web content. Its objective is to consolidate literature at the intersection of Information Extraction and Semantic Web technologies, including methods that extract and/or link entities, concepts, and relations from unstructured or semi-structured sources.",
+  "methodology": {
+    "primary_family": "not_reported",
+    "secondary_families": "not_reported",
+    "system_type": "not_reported",
+    "supervision_setting": "not_reported",
+    "description": "This is a literature survey rather than a newly proposed extraction system. Its review workflow: define section-specific IE and Semantic-Web keyword lists; search their conjunctions in Google Scholar; filter initial results by title/publication type, then abstract, then full paper; extend the seed set through references, citing papers, prominent authors, and newly discovered keywords. The synthesis is organized by entity extraction/linking, concept extraction/linking, relation extraction/linking, semi-structured extraction, and discussion. Within the surveyed relation-extraction literature, the illustrative execution order is entity extraction/linking, relation parsing, property selection/mapping, RDF representation, and evaluation, while explicitly noting that systems need not follow every step or that order."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "Semantic Web resources are central to the survey scope. Included work must make non-trivial use of RDF, RDFS, OWL, SKOS, SPARQL, or a resource founded on those standards. Ontologies and knowledge bases can guide extraction and be populated by the extracted results; the survey repeatedly uses DBpedia, Freebase, YAGO, Wikipedia-derived resources, WordNet, and domain ontologies as examples.",
+    "evidence": [
+      {
+        "span_id": "C0031-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "a work must make non-trivial use of an ontology, knowledge-base, tool or language that is founded on one of the core Semantic Web standards: RDF/RDFS/OWL/SKOS/SPARQL."
+      },
+      {
+        "span_id": "C0031-D-P002-TEXT-0002",
+        "page": 2,
+        "excerpt": "an existing Semantic Web ontology or knowledge-base is used to guide the extraction, which further populates the given ontology and/or knowledge-base."
+      },
+      {
+        "span_id": "C0031-D-P059-TEXT-0003",
+        "page": 59,
+        "excerpt": "post 2009, we notice a shift towards using general-domain KBs – DBpedia, Freebase, YAGO, etc."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Entity and concept extraction",
+    "Entity resolution and linking",
+    "Relation and triple extraction",
+    "Coreference resolution",
+    "Ontology or schema discovery",
+    "Graph construction",
+    "Knowledge fusion and deduplication"
+  ],
+  "input_output": {
+    "input_type": "Primarily unstructured natural-language text; additionally semi-structured markup documents and web tables.",
+    "input_granularity": "The surveyed methods operate at mention, sentence, paragraph/document, corpus, Web page, markup-document, and table levels; the survey's principal examples use text mentions within sentences and documents.",
+    "output_representation": "The surveyed systems output extracted mentions linked to disambiguated KB/ontology identifiers, entity/concept/relation annotations, binary or n-ary relations, RDF triples, RDF/RDFS/OWL representations, and populated or augmented knowledge bases. The survey itself produces a narrative synthesis and comparative tables rather than a machine-generated graph."
+  },
+  "models_and_tools": [
+    "No single model or implementation is proposed; this is a survey.",
+    "Representative surveyed EEL tools include SemTag, KIM, AIDA, DBpedia Spotlight, SDA, KORE, LINDEN, and WAT.",
+    "Representative surveyed NLP/IE components include Stanford NER/CoreNLP, OpenNLP, GATE, Lucene, dependency parsers, CRF and maximum-entropy NER, graph-based collective disambiguation, distant supervision, OpenIE, frame semantics, and discourse representation structures.",
+    "Representative surveyed relation systems include DeepDive, Knowledge Vault, FRED, RdfLiveNews, and Fact Extractor."
+  ],
+  "datasets": [
+    "The survey does not train or test one new model on one dataset.",
+    "It reviews task-specific resources, including EEL datasets such as AIDA/CoNLL, KORE-50, MSNBC, AQUAINT, ACE2004, IITB, and Microposts.",
+    "For REL it discusses manually annotated corpora, held-out KB triples, crowd/expert judgments, and challenge data; examples include NYT/Freebase-style distant-supervision settings and OKE challenge resources.",
+    "Knowledge bases used as reference/evaluation resources include DBpedia, Freebase, YAGO/YAGO2, Wikipedia, BabelNet, WordNet, and domain ontologies."
+  ],
+  "evaluation": {
+    "metrics": [
+      "The survey reports that EEL and REL evaluations commonly use precision, recall, F-measure/F1, and accuracy.",
+      "For ranked outputs it reports precision@k, mean average precision (MAP), and, for selected topic-modeling work, held-out-set perplexity/log-likelihood.",
+      "It emphasizes that metric choice and precision–recall trade-offs depend on the application and that cross-system results require compatible datasets/settings."
+    ],
+    "baselines": [
+      "No single experimental baseline is defined because the paper does not introduce a new extraction model. Instead, it summarizes third-party comparative evaluations and challenge events that compare heterogeneous EEL/REL systems; it cautions that a single technique or system does not cover all use cases."
+    ],
+    "setting": "Survey/meta-analysis setting. The authors collect and screen literature rather than run a new shared benchmark. They organize comparative evidence by extraction target and input type, summarize evaluation practices for EEL, concept extraction/linking, and REL, and perform a venue/community meta-analysis over 106 highlighted papers drawn from Tables 1, 3, 4, 5, and 6."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "The paper synthesizes entity, concept, and relation extraction/linking methods for text and semi-structured inputs, rather than claiming a new state-of-the-art score.",
+      "The authors identify a temporal trend: before about 2009, work commonly used domain-specific ontologies, limited-type NER, manually labelled corpora, handcrafted patterns, and linguistic resources; after 2009, work shifted toward general-domain KBs such as DBpedia, Freebase, and YAGO and more statistical/data-driven methods.",
+      "They observe a trend toward holistic/collective and joint modeling of within-task and cross-task dependencies, including NER–EL, WSD–EEL, and EEL–REL interdependencies.",
+      "Their venue analysis covers 106 highlighted papers; Semantic Web venues account for the largest single area total (39), while the majority of highlighted work is from non-Semantic-Web communities.",
+      "For REL, the survey identifies distant supervision as dominant in recent binary-relation approaches, whereas n-ary extraction more often uses linguistic resources such as frame semantics or discourse representation theory and must address RDF/KB mapping."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0031-D-P059-TEXT-0001",
+        "page": 59,
+        "excerpt": "post 2009, we notice a shift towards using general-domain KBs – DBpedia, Freebase, YAGO, etc."
+      },
+      {
+        "span_id": "C0031-D-P059-TEXT-0002",
+        "page": 59,
+        "excerpt": "Another general trend we have observed is one towards more “holistic” methods – such as collective assignment, joint models."
+      },
+      {
+        "span_id": "C0031-D-P060-TABLE-0003",
+        "page": 60,
+        "excerpt": "Semantic Web (SW) has total 39; the table total is 106."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: The survey is broad and structurally useful for a Text-to-KG review because it connects entity, concept, and relation extraction/linking with Semantic Web resource use, RDF representation, and KB population rather than treating these as isolated tasks.",
+      "Review-level inference: Its explicit scope and search/screening procedure improve traceability relative to an unsystematic narrative survey, and its comparative tables make heterogeneous systems easier to locate by task, KB, representation, and domain.",
+      "Review-level inference: The discussion of evaluation variability and application-dependent precision/recall trade-offs appropriately avoids treating incomparable reported scores as a universal ranking."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0031-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "we focus on the extraction and linking of three elements: entities, concepts and relations."
+      },
+      {
+        "span_id": "C0031-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "we filter by abstract, and finally by the body of the paper’s content."
+      },
+      {
+        "span_id": "C0031-D-P044-TABLE-0003",
+        "page": 44,
+        "excerpt": "The comparative table records system, year, entity strategy, parsing, property selection, representation, KB and domain."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: Because this is a 2016-era survey, its methodology taxonomy and empirical synthesis predate transformer encoder and LLM-based Text-to-KG approaches; it cannot establish conclusions about those later families.",
+      "Review-level inference: The work groups a very heterogeneous body of systems and application settings. Its useful descriptive comparisons do not provide a unified, controlled quantitative benchmark across all methods.",
+      "Review-level inference: The survey's scope requires non-trivial Semantic Web use, so relevant text-to-graph extraction work without RDF/RDFS/OWL/SKOS/SPARQL resources is deliberately outside its coverage."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0031-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "a work must make non-trivial use of an ontology, knowledge-base, tool or language ... RDF/RDFS/OWL/SKOS/SPARQL."
+      },
+      {
+        "span_id": "C0031-D-P017-TEXT-0002",
+        "page": 17,
+        "excerpt": "different applications may require different precision/recall trade-offs, or may provide different input sources."
+      },
+      {
+        "span_id": "C0031-D-P053-TEXT-0003",
+        "page": 53,
+        "excerpt": "no single system technique or system can be considered to cover all use-cases."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The authors state that their keyword-based survey methodology may miss relevant papers; it only includes papers they could find through that methodology.",
+      "They note that included scope is deliberately constrained to non-trivial Semantic Web technologies/resources and extraction from unstructured or semi-structured sources.",
+      "For REL, the authors state that many approaches do not explicitly address scale and efficiency, most surveyed systems are evaluated only for English, and language-specific NLP components complicate multilingual use.",
+      "They state that automated KB-based evaluation is not suitable for precision when the KB is incomplete, and it assumes withheld KB relations should appear in text."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0031-D-P005-TEXT-0001",
+        "page": 5,
+        "excerpt": "This methodology may miss relevant papers and is considered as seeding an initial list of papers."
+      },
+      {
+        "span_id": "C0031-D-P052-TEXT-0002",
+        "page": 52,
+        "excerpt": "almost all systems presented here are evaluated only for English corpora ... most of the approaches do not explicitly tackle the question of scale and efficiency."
+      },
+      {
+        "span_id": "C0031-D-P047-TEXT-0003",
+        "page": 47,
+        "excerpt": "such approaches are not very suitable for precision since the KB is incomplete, and likewise assumes that held-out KB relations are mentioned in the input text."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-stated direction: Continue jointly modeling interdependent extraction/linking tasks rather than optimizing only isolated components.",
+      "Author-stated direction: For multilingual REL, replace language-specific components with equivalents in the target language or translate into a supported language, while recognizing that neither guarantees equivalent performance and translation introduces errors.",
+      "Review-level inference: A modern successor should preserve this paper's task/resource-oriented organization while explicitly adding transformer and LLM methodology families, provenance/faithfulness evaluation, constrained generation, and reproducible common evaluation protocols."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0031-D-P060-TEXT-0001",
+        "page": 60,
+        "excerpt": "We see this trend of jointly modeling several interrelated aspects of IE as set to continue."
+      },
+      {
+        "span_id": "C0031-D-P052-TEXT-0002",
+        "page": 52,
+        "excerpt": "Possible solutions include trying to replace the particular component with its equivalent in another language ... or ... translate the text to the supported language."
+      },
+      {
+        "span_id": "C0031-D-P005-TEXT-0003",
+        "page": 5,
+        "excerpt": "The lists of papers found through these searches, along with their metadata and how they were labeled in terms of relevance, are also provided."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-stated: REL remains an active research area; no single technique/system covers all use cases, and selecting an RE strategy depends on binary versus n-ary needs, identifier creation, language, scale, and efficiency.",
+      "Author-stated: Reliable evaluation remains difficult, particularly recall and precision assessment in incomplete KBs and heterogeneous representations/settings.",
+      "Review-level inference: The paper leaves unresolved how to obtain directly comparable end-to-end Text-to-KG evaluations spanning extraction, linking, schema alignment, graph validation, and updating, because it reports task-specific evaluation practices rather than such a unified protocol."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0031-D-P053-TEXT-0001",
+        "page": 53,
+        "excerpt": "REL is still very much an active area of research."
+      },
+      {
+        "span_id": "C0031-D-P046-TEXT-0002",
+        "page": 46,
+        "excerpt": "REL is a challenging task, where evaluation is likewise difficult."
+      },
+      {
+        "span_id": "C0031-D-P052-TEXT-0003",
+        "page": 52,
+        "excerpt": "Choosing an RE strategy for a particular application scenario can be complex given that every approach has pros and cons regarding the application at hand."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper provides a survey webpage URL and states that it contains supplementary survey methodology, search keywords, inclusion/exclusion and filtering details, discovered-paper lists with metadata and relevance labels, supplementary example data, and venue/area details. The paper does not state that source code for a new system is released."
+}

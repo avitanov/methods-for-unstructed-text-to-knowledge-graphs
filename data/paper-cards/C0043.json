@@ -1,0 +1,785 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0043",
+    "title": "Relation Extraction with Matrix Factorization and Universal Schemas",
+    "pdf_path": "data/batches/batch-03/C0043.pdf",
+    "authors": [
+      "Sebastian Riedel",
+      "Limin Yao",
+      "Andrew McCallum",
+      "Benjamin M. Marlin"
+    ],
+    "year": 2013,
+    "venue": "Proceedings of NAACL-HLT 2013",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The paper proposes universal-schema relation extraction: a schema that unites textual surface-form predicates and relation types from existing structured databases. It populates this schema with matrix-factorization models that learn latent vectors for entity tuples and relations, enabling prediction of unobserved surface-pattern and database-relation facts. Jointly modeling New York Times textual relations and Freebase relations is reported to outperform state-of-the-art distant supervision.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0043-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Sebastian Riedel; Limin Yao, Andrew McCallum, Benjamin M. Marlin.",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication footer",
+      "span_id": "C0043-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of NAACL-HLT 2013, pages 74–84.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication footer",
+      "span_id": "C0043-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of NAACL-HLT 2013, pages 74–84, Atlanta, Georgia, 9–14 June 2013.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0043-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "To populate a database of such schema we present matrix factorization models that learn latent feature vectors for entity tuples and relations.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-02": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0043-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "By doing so our approach outperforms state-of-the-art distant supervision.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0043-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Traditional relation extraction predicts relations within some fixed and finite target schema.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "1 Introduction",
+      "span_id": "C0043-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Our focus lies on learning asymmetric implicature among relations. This allows us to probabilistically ‘fill in’ inferred unobserved entity-entity relations in this union.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "1 Introduction",
+      "span_id": "C0043-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Our technical approach is based on extensions to probabilistic models of matrix factorization and collaborative filtering.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "1 Introduction",
+      "span_id": "C0043-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We define our schema to be the union of all source schemas: original input forms ... as well as relations in the schemas of many available pre-existing structured databases.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Figure 1",
+      "span_id": "C0043-D-P003-CAPTION-0002",
+      "page": 3,
+      "excerpt": "Reasoning with the universal schema incorporates these tasks in a joint fashion.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "1 Introduction",
+      "span_id": "C0043-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We represent the probabilistic knowledge base as a matrix with entity-entity pairs in the rows and relations in the columns.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "2.4 Combined Model",
+      "span_id": "C0043-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "In practice all the above models can capture important aspects of the data. Hence we also use various combinations.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "4.1 Data",
+      "span_id": "C0043-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "For training tuples we add as Freebase facts all facts that appear in Freebase.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "4.3 Predicting Freebase Relations",
+      "span_id": "C0043-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "Our latent feature models can learn pattern-pattern correlations both on the unlabeled training and test set.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "1 Introduction",
+      "span_id": "C0043-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The rows come from running cross-document entity resolution across pre-existing structured databases and textual corpora. The columns come from the union of surface forms and DB relations.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "2.3 Entity Model",
+      "span_id": "C0043-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "In our entity model E we learn a latent entity representation from data.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "2.5.1 Objective",
+      "span_id": "C0043-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "For each pair of facts f+ and f− we want p(f+) > p(f−) ... BPR ... directly correlated to what we want to achieve: well-ranked tuples per relation.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "1 Introduction",
+      "span_id": "C0043-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We define our schema to be the union of all source schemas: original input forms ... as well as relations in the schemas of many available pre-existing structured databases.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "2.3 Entity Model",
+      "span_id": "C0043-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "Instead of using a predetermined set of entity types, in our entity model E we learn a latent entity representation from data.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "5 Conclusion",
+      "span_id": "C0043-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "In future work we may even include relations between entities and continuous attributes.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "4.1 Data",
+      "span_id": "C0043-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "This alignment relies on a preprocessing step that links NER mentions in text with entities in Freebase.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "4.1 Data",
+      "span_id": "C0043-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "For each mention ... we extract ... the lexicalized dependency path ... Then we add <p,t> to the surface pattern facts.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "5 Conclusion",
+      "span_id": "C0043-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "By predicting missing tuples in the structured schema we can expand a knowledge base of fixed schema.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "4.1 Data",
+      "span_id": "C0043-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "Our documents are taken from the NYTimes corpus.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "4.1 Data",
+      "span_id": "C0043-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "We extract ... the lexicalized dependency path p between m1 and m2.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "4.1 Data",
+      "span_id": "C0043-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "We align an entity tuple <t1,t2> with a pair of mentions <m1,m2> in the same sentence if m1 is linked to t1 and m2 to t2.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "2 Model",
+      "span_id": "C0043-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The pair <r,t> is a fact, or relation instance.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "5 Conclusion",
+      "span_id": "C0043-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "By predicting missing tuples for surface pattern relations we can populate a database without any labelled data.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "2.1 Latent Feature Model",
+      "span_id": "C0043-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "We measure compatibility between relation r and tuple t as dot product of two latent feature representations.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "2.5.2 Optimization",
+      "span_id": "C0043-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "To maximize the objective ... we employ Stochastic Gradient Descent (SGD).",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.1 Data",
+      "span_id": "C0043-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "In our case we use a simple string-match heuristic to find this linking.",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.1 Data",
+      "span_id": "C0043-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "Articles after 2000 are used as training corpus, articles from 1990 to 1999 as test corpus.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.1 Data",
+      "span_id": "C0043-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Filtering out patterns with fewer than 10 mentions yields approximately 4k patterns.",
+      "confidence": "medium"
+    },
+    "datasets-17-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.1 Data",
+      "span_id": "C0043-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "The above alignment and filtering process reduces the total number of tuples related according to Freebase to 16k.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.2 Evaluation",
+      "span_id": "C0043-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "We can use these annotations to measure an average precision across the precision-recall curve, and an aggregate mean average precision (MAP) across all relations.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Table 1",
+      "span_id": "C0043-D-P007-TABLE-0002",
+      "page": 7,
+      "excerpt": "NFE is statistically different to all but NF and F according to the sign test.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.3 Predicting Freebase Relations",
+      "span_id": "C0043-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "Our first baseline is MI09 ... We hence also compare against YA11 ... The third baseline is SU12, the state-of-the-art Multi-Instance Multi-Label system.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.2 Evaluation",
+      "span_id": "C0043-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "We treat each relation as query and receive the top 1000 ... entity pairs from each system. Then we pool the top 100 ... and manually judge their relevance.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.3 Predicting Freebase Relations",
+      "span_id": "C0043-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "We use the same number of components ... KF = KE = 100, 1000 epochs, and 0.01 as regularizer ... and 0.1 for neighborhood weights.",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 1",
+      "span_id": "C0043-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "MAP: MI09 0.32, YA11 0.42, SU12 0.56, N 0.45, F 0.61, NF 0.66, NFE 0.63; Weighted MAP: 0.48, 0.52, 0.57, 0.52, 0.66, 0.67, 0.69.",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 2",
+      "span_id": "C0043-D-P008-TABLE-0002",
+      "page": 8,
+      "excerpt": "MAP: N 0.22, F 0.44, NF 0.44, NFE 0.43; Weighted MAP: N 0.28, F 0.56, NF 0.50, NFE 0.46.",
+      "confidence": "medium"
+    },
+    "main_results-21-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.3 Predicting Freebase Relations",
+      "span_id": "C0043-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "The slowest model trains in just 45 minutes. By contrast, training the topic model in YA11 alone takes 4 hours. Training SU12 takes two hours (on less data).",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Abstract",
+      "span_id": "C0043-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "By operating simultaneously on relations observed in text and in pre-existing structured DBs such as Freebase, we are able to reason about unstructured and structured data in mutually-supporting ways.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.3 Predicting Freebase Relations",
+      "span_id": "C0043-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "The combination of N, F and E outperforms all other models in terms of weighted MAP, indicating the power of selectional preferences learned from data.",
+      "confidence": "medium"
+    },
+    "strengths-22-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Figure 1",
+      "span_id": "C0043-D-P003-CAPTION-0003",
+      "page": 3,
+      "excerpt": "Reasoning with the universal schema incorporates these tasks in a joint fashion.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.4 Predicting Surface Patterns",
+      "span_id": "C0043-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "In the weighted MAP metric we note that incorporating entity representations ... in fact hurts total performance.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.1 Data",
+      "span_id": "C0043-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "To simplify evaluation, we create a subsampled test set by randomly choosing 10k of the original test set tuples.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "2 Model",
+      "span_id": "C0043-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "For simplicity we assume each relation to be binary, although our approach can be easily generalized to the n-ary case.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "2.3 Entity Model",
+      "span_id": "C0043-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Knowledge bases such as Freebase or DBPedia have extensive ontologies of types of entities, these are often not sufficiently fine to allow relations to discriminate.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.4 Predicting Surface Patterns",
+      "span_id": "C0043-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "Freebase relations are typed—they require very specific types of entities as arguments. By contrast, for a surface pattern like ‘X visits Y’ X could be a person or organization.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "5 Conclusion",
+      "span_id": "C0043-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "Reasoning with universal schemas is not merely a tool for information extraction. It can also serve as a framework for various data integration tasks.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "5 Conclusion",
+      "span_id": "C0043-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "We could integrate facts from one schema ... into another ... by adding both sets of relations to the set of surface patterns.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "5 Conclusion",
+      "span_id": "C0043-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "In future work we also plan to integrate universal entity types and attributes into the model.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "2 Model",
+      "span_id": "C0043-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "For simplicity we assume each relation to be binary, although our approach can be easily generalized to the n-ary case.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5 Conclusion",
+      "span_id": "C0043-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "In future work we also plan to integrate universal entity types and attributes into the model.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5 Conclusion",
+      "span_id": "C0043-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "For example, we could integrate facts from one schema (say, Freebase) into another (say, the TAC KBP schema).",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2 Evaluation",
+      "span_id": "C0043-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "Then we pool the top 100 ... answers from each system and manually judge their relevance or ‘truth.’",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "5 Conclusion",
+      "span_id": "C0043-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "The source code of our system, its output, and all data annotations are available at http://www.riedelcastro.org/uschema.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Relation extraction normally targets a fixed, finite schema and needs manually labeled text or an existing structured source with that schema. The paper seeks to populate a flexible universal schema, predict missing binary relation facts, generalize beyond explicit textual mentions, and jointly exploit textual surface patterns and Freebase relations.",
+  "methodology": {
+    "primary_family": "Classical machine learning",
+    "secondary_families": [
+      "Ontology-constrained and schema-guided methods",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "end_to_end",
+    "supervision_setting": "weakly_supervised",
+    "description": "The system constructs a sparse fact matrix whose rows are cross-document-resolved entity pairs and whose columns are both lexicalized dependency-path surface patterns and Freebase relations. It scores a relation–tuple cell with a logistic model. F factorizes relation and tuple embeddings; N sums directed relation-neighborhood weights for relations observed on the same tuple; E learns latent entity vectors and relation-slot vectors for selectional preferences. N, F, and E are combined additively (notably NFE). Training uses Bayesian Personalized Ranking over observed facts versus unobserved tuples, quadratic regularization, and stochastic gradient descent. In execution order: link NER mentions to Freebase entities using string matching; align entity pairs co-occurring in sentences; extract lexicalized dependency paths and retain patterns with at least 10 mentions; add training Freebase facts; train the ranking model; rank unobserved tuples separately for each target relation."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "Uses a universal schema rather than a fixed ontology: the union of relation schemas from structured sources such as Freebase and open-ended textual surface patterns. Freebase ontology types are deliberately not used as the entity model's predetermined types; the model instead learns latent entity representations. The authors propose future integration of universal entity types and attributes.",
+    "evidence": [
+      {
+        "span_id": "C0043-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "We define our schema to be the union of all source schemas: original input forms ... as well as relations in the schemas of many available pre-existing structured databases."
+      },
+      {
+        "span_id": "C0043-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "Instead of using a predetermined set of entity types, in our entity model E we learn a latent entity representation from data."
+      },
+      {
+        "span_id": "C0043-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "In future work we may even include relations between entities and continuous attributes."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Entity and concept extraction",
+    "Entity resolution and linking",
+    "Relation and triple extraction",
+    "Graph construction",
+    "Knowledge fusion and deduplication"
+  ],
+  "input_output": {
+    "input_type": "New York Times newswire text, Freebase facts, NER mentions linked to Freebase entities, and lexicalized dependency paths between co-sentential entity mentions.",
+    "input_granularity": "A relation candidate is an ordered binary entity tuple aligned to a pair of entity mentions in the same sentence; each tuple aggregates its observed dependency-path patterns and, for training, its Freebase facts.",
+    "output_representation": "Ranked, probabilistic binary relation instances: relation–entity-pair cells in a universal-schema matrix. Outputs include predicted Freebase facts and predicted textual surface-pattern relations."
+  },
+  "models_and_tools": [
+    "Latent feature matrix-factorization model (F)",
+    "Directed neighborhood model (N)",
+    "Latent entity/selectional-preference model (E)",
+    "Combined NFE model",
+    "Bayesian Personalized Ranking objective",
+    "Stochastic gradient descent",
+    "Simple string-match entity-linking heuristic",
+    "Lexicalized dependency-path extractor"
+  ],
+  "datasets": [
+    "New York Times Annotated Corpus: articles after 2000 for training and 1990–1999 for testing",
+    "Freebase facts and corresponding entity tuples, split 50/50 into training and test",
+    "Approximately 4,000 retained lexicalized dependency-path patterns",
+    "Approximately 16,000 Freebase-related tuples after alignment/filtering (about 8,000 train and 8,000 test)",
+    "About 200,000 additional unrecorded-Freebase training tuples and 200,000 test tuples; evaluation uses a random 10,000-tuple test subsample"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Per-relation precision and recall",
+      "Average precision over each precision–recall curve",
+      "Mean Average Precision (MAP) across relations",
+      "Weighted MAP, weighting each relation's average precision by its number of true facts",
+      "Averaged 11-point precision–recall curves",
+      "Sign test for per-relation statistical differences"
+    ],
+    "baselines": [
+      "MI09: distantly supervised classifier based on Mintz et al. (2009)",
+      "YA11: MI09 augmented with preprocessed pattern-cluster features from Yao et al. (2011)",
+      "SU12: Multi-Instance Multi-Label relation extractor from Surdeanu et al. (2012)",
+      "Ablations/comparators N, F, NF, and NFE"
+    ],
+    "setting": "The authors train on observed NYT-pattern and Freebase facts, then evaluate two ranking tasks: prediction of Freebase relations and prediction of ten selected surface-pattern relations. For each relation as query, systems return their top 1,000 entity pairs; the top 100 answers from each system are pooled and manually judged. Results are restricted to a 10,000-tuple subsampled test set although models run on the complete data. Model settings are KF=KE=100 where applicable, 1,000 epochs, component regularization 0.01, and neighborhood-weight regularization 0.1."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "On Freebase-relation prediction, Table 1 reports MAP / weighted MAP of 0.32 / 0.48 for MI09, 0.42 / 0.52 for YA11, 0.56 / 0.57 for SU12, 0.45 / 0.52 for N, 0.61 / 0.66 for F, 0.66 / 0.67 for NF, and 0.63 / 0.69 for NFE.",
+      "NFE has the best Freebase weighted MAP (0.69), whereas NF has the best MAP (0.66); NFE is significantly different by sign test from all compared systems except NF and F.",
+      "On ten surface-pattern relations, Table 2 reports MAP / weighted MAP of 0.22 / 0.28 for N, 0.44 / 0.56 for F, 0.44 / 0.50 for NF, and 0.43 / 0.46 for NFE.",
+      "The paper states the slowest proposed model trains in 45 minutes, versus four hours for YA11's topic model and two hours for SU12 on less data."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0043-D-P007-TABLE-0001",
+        "page": 7,
+        "excerpt": "MAP: MI09 0.32, YA11 0.42, SU12 0.56, N 0.45, F 0.61, NF 0.66, NFE 0.63; Weighted MAP: 0.48, 0.52, 0.57, 0.52, 0.66, 0.67, 0.69."
+      },
+      {
+        "span_id": "C0043-D-P008-TABLE-0002",
+        "page": 8,
+        "excerpt": "MAP: N 0.22, F 0.44, NF 0.44, NFE 0.43; Weighted MAP: N 0.28, F 0.56, NF 0.50, NFE 0.46."
+      },
+      {
+        "span_id": "C0043-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "The slowest model trains in just 45 minutes. By contrast, training the topic model in YA11 alone takes 4 hours. Training SU12 takes two hours (on less data)."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author-stated: jointly modeling surface patterns and structured relations lets unstructured and structured data support one another and improves structured-relation prediction.",
+      "Author-stated: latent factorization can learn pattern–pattern correlations from unlabeled data and generalize to patterns unavailable in distant-supervision training.",
+      "Author-stated: learned latent entity representations capture selectional preferences without relying on predetermined entity types.",
+      "[Review inference] The explicit combination of text-derived and KB-derived columns makes this a direct graph-population and knowledge-fusion method, rather than only a fixed-schema text classifier."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0043-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "By operating simultaneously on relations observed in text and in pre-existing structured DBs such as Freebase, we are able to reason about unstructured and structured data in mutually-supporting ways."
+      },
+      {
+        "span_id": "C0043-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "The combination of N, F and E outperforms all other models in terms of weighted MAP, indicating the power of selectional preferences learned from data."
+      },
+      {
+        "span_id": "C0043-D-P003-CAPTION-0003",
+        "page": 3,
+        "excerpt": "Reasoning with the universal schema incorporates these tasks in a joint fashion."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author-stated: the entity model harms weighted-MAP performance for surface-pattern relations; the paper attributes this to surface patterns admitting broader argument types than typed Freebase relations.",
+      "Author-stated: ranking evaluation is limited to a 10,000-tuple test subsample and a selected set of ten surface-pattern relations.",
+      "[Review inference] The pipeline depends on NER, simple string-match entity linking, and co-sentential entity-pair alignment; errors or ambiguity in these upstream steps can propagate to relation facts.",
+      "[Review inference] The method only treats binary relations in the presented experiments, although the paper says generalization to n-ary relations is possible; therefore n-ary performance is unverified here."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0043-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "In the weighted MAP metric we note that incorporating entity representations ... in fact hurts total performance."
+      },
+      {
+        "span_id": "C0043-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "To simplify evaluation, we create a subsampled test set by randomly choosing 10k of the original test set tuples."
+      },
+      {
+        "span_id": "C0043-D-P002-TEXT-0003",
+        "page": 2,
+        "excerpt": "For simplicity we assume each relation to be binary, although our approach can be easily generalized to the n-ary case."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The authors note that Freebase's ontology types are often not sufficiently fine to discriminate relations, motivating latent entity representations instead of predetermined types.",
+      "The authors report that NFE can underperform on broad surface patterns because Freebase relations are typed while a pattern such as “X visits Y” permits several semantic types in each argument position.",
+      "The conclusion limits demonstrated scope to relation extraction and says universal-schema reasoning could additionally support data-integration tasks."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0043-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "Knowledge bases such as Freebase or DBPedia have extensive ontologies of types of entities, these are often not sufficiently fine to allow relations to discriminate."
+      },
+      {
+        "span_id": "C0043-D-P009-TEXT-0002",
+        "page": 9,
+        "excerpt": "Freebase relations are typed—they require very specific types of entities as arguments. By contrast, for a surface pattern like ‘X visits Y’ X could be a person or organization."
+      },
+      {
+        "span_id": "C0043-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "Reasoning with universal schemas is not merely a tool for information extraction. It can also serve as a framework for various data integration tasks."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed: integrate facts from one structured schema into another by adding both schemas' relations to the universal schema alongside surface patterns.",
+      "Author-proposed: integrate universal entity types and attributes, including continuous attributes such as gene-expression measurements.",
+      "[Review inference] Replace simple string-match linking with a stronger entity-linking and disambiguation component, then quantify its effect under the same ranking protocol.",
+      "[Review inference] Evaluate the stated n-ary extension and use broader, more diverse corpora and relation sets to test generalization beyond the selected binary tasks."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0043-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "We could integrate facts from one schema ... into another ... by adding both sets of relations to the set of surface patterns."
+      },
+      {
+        "span_id": "C0043-D-P009-TEXT-0002",
+        "page": 9,
+        "excerpt": "In future work we also plan to integrate universal entity types and attributes into the model."
+      },
+      {
+        "span_id": "C0043-D-P002-TEXT-0003",
+        "page": 2,
+        "excerpt": "For simplicity we assume each relation to be binary, although our approach can be easily generalized to the n-ary case."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-stated: how to integrate universal entity types and attributes into the universal-schema model remains future work.",
+      "Author-stated: cross-schema data integration, such as Freebase-to-TAC KBP integration mediated by surface patterns, is proposed but not evaluated.",
+      "[Review inference] The study does not establish how well universal-schema predictions calibrate as factual KG assertions under incomplete or incorrect source-KB facts, because it evaluates ranked pooled results rather than a complete graph-validation setting.",
+      "[Review inference] Scalability and robustness for many more relations, multilingual text, evolving schemas, and n-ary/event extraction remain unresolved in this PDF."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0043-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "In future work we also plan to integrate universal entity types and attributes into the model."
+      },
+      {
+        "span_id": "C0043-D-P009-TEXT-0002",
+        "page": 9,
+        "excerpt": "For example, we could integrate facts from one schema (say, Freebase) into another (say, the TAC KBP schema)."
+      },
+      {
+        "span_id": "C0043-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "Then we pool the top 100 ... answers from each system and manually judge their relevance or ‘truth.’"
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that source code, system output, and all data annotations are available at http://www.riedelcastro.org/uschema. Availability was reported by the paper; this analysis did not access or verify the link."
+}

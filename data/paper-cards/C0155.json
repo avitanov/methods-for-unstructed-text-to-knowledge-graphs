@@ -1,0 +1,1023 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0155",
+    "title": "LLMs for Knowledge Graph Construction and Reasoning: Recent Capabilities and Future Opportunities",
+    "pdf_path": "data/batches/batch-05/C0155.pdf",
+    "authors": [
+      "Yuqi Zhu",
+      "Xiaohan Wang",
+      "Jing Chen",
+      "Shuofei Qiao",
+      "Yixin Ou",
+      "Yunzhi Yao",
+      "Shumin Deng",
+      "Huajun Chen",
+      "Ningyu Zhang"
+    ],
+    "year": 2024,
+    "venue": "arXiv preprint",
+    "identifier": {
+      "status": "reported",
+      "value": "arXiv:2305.13168v4",
+      "evidence": [
+        {
+          "span_id": "C0155-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "arXiv:2305.13168v4 [cs.CL] 26 Dec 2024"
+        }
+      ]
+    },
+    "abstract": "The paper quantitatively and qualitatively evaluates LLMs for KG construction and reasoning on eight datasets covering entity/relation extraction, event extraction, link prediction, and question answering. It introduces Virtual Knowledge Extraction and VINE to test extraction of synthetic unseen knowledge, then proposes AutoKG, an LLM-and-external-source multi-agent approach for KG construction and reasoning. The reported overall finding is that GPT-4 is more suitable as an inference assistant than as a few-shot information extractor.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0155-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Yuqi Zhu, Xiaohan Wang, Jing Chen, Shuofei Qiao, Yixin Ou, Yunzhi Yao, Shumin Deng, Huajun Chen, Ningyu Zhang",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0155-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "arXiv:2305.13168v4 [cs.CL] 26 Dec 2024",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0155-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "arXiv:2305.13168v4 [cs.CL] 26 Dec 2024",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0155-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "arXiv:2305.13168v4 [cs.CL] 26 Dec 2024",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0155-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "This paper presents an exhaustive quantitative and qualitative evaluation of Large Language Models (LLMs) for Knowledge Graph (KG) construction and reasoning... experiments across eight diverse datasets... We further propose AutoKG, a multi-agent-based approach.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction — Recent Capabilities and Generalizability Analysis",
+      "span_id": "C0155-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "This analysis serves to assess the potential usage of such models in the field of knowledge graphs... we devise a unique task termed Virtual Knowledge Extraction, targeting LLMs’ ability to generalize and extract unfamiliar knowledge.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "3 Future Opportunities: Automatic KG Construction and Reasoning",
+      "span_id": "C0155-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "we propose the use of communicative intelligent agents for KG construction... Considering the knowledge cutoff prevalent in large models during the pre-training phase, we suggest the incorporation of external sources",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "2.1 Evaluation Principle",
+      "span_id": "C0155-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "A primary area of investigation is the models’ performance in zero-shot and one-shot tasks... The experimental prompt used is detailed in Appendix D.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Appendix D — Table D1",
+      "span_id": "C0155-D-P027-TABLE-0002",
+      "page": 27,
+      "excerpt": "Examples of zero-shot and one-shot prompts we used on Relation Extraction",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3 Future Opportunities: Automatic KG Construction and Reasoning",
+      "span_id": "C0155-D-P011-TEXT-0001",
+      "page": 11,
+      "excerpt": "we suggest the incorporation of external sources to assist task completion. These sources can include knowledge bases, existing KGs, and internet retrieval systems",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3 Future Opportunities: Automatic KG Construction and Reasoning",
+      "span_id": "C0155-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "the current results of the constructed knowledge graph still necessitate manual evaluation and validation.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3 Future Opportunities: Automatic KG Construction and Reasoning",
+      "span_id": "C0155-D-P011-TEXT-0001",
+      "page": 11,
+      "excerpt": "the task-specifier agent provides an elaborate description... the KG assistant and KG user collaborate... Concurrently, a web searcher role is introduced to aid the KG assistant in internet knowledge retrieval.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3 Future Opportunities: Automatic KG Construction and Reasoning",
+      "span_id": "C0155-D-P012-CAPTION-0002",
+      "page": 12,
+      "excerpt": "Figure 5... integrates KG construction and reasoning by employing GPT-4 and communicative agents based on ChatGPT... the KG assistant... initially consults the web searcher",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "2.1 Evaluation Principle",
+      "span_id": "C0155-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "we deliberately choose zero-shot and one-shot tasks over those requiring more examples",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "2.4.2 Preliminary Results",
+      "span_id": "C0155-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "We assess the performance of ChatGPT and GPT-4 on these test samples after learning two demonstrations of the same relation.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Introduction — Figure 1",
+      "span_id": "C0155-D-P002-CAPTION-0001",
+      "page": 2,
+      "excerpt": "three main components: 1) Basic Evaluation... zero-shot and one-shot... 2) Virtual Knowledge Extraction... VINE dataset; and 3) Automatic KG... multiple agents",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "2.4 — Figure 4 and 2.4.1",
+      "span_id": "C0155-D-P010-CAPTION-0002",
+      "page": 10,
+      "excerpt": "Prompts used in Virtual Knowledge Extraction... construct VINE based on the test set of Re-TACRED... replace existing entities and relations... with unseen ones",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3 Future Opportunities: Automatic KG Construction and Reasoning",
+      "span_id": "C0155-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "we utilize the role-playing method in CAMEL... designate the KG assistant agent as a Consultant and the KG user agent as a KG domain expert.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Appendix D — Table D1",
+      "span_id": "C0155-D-P027-TABLE-0001",
+      "page": 27,
+      "excerpt": "The list of predicates... What Subject-Predicate-Object triples are included... return the possible answers according to the list above.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Appendix D — Table D2",
+      "span_id": "C0155-D-P028-TABLE-0002",
+      "page": 28,
+      "excerpt": "The list of event types: [...] What types of events are included in the following sentence?",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3 Future Opportunities: Automatic KG Construction and Reasoning",
+      "span_id": "C0155-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "These sources can include knowledge bases, existing KGs, and internet retrieval systems",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Introduction — Recent Capabilities",
+      "span_id": "C0155-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Entity and Relation Extraction, along with Event Extraction, are pivotal for Knowledge Graph (KG) construction tasks.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "2.4 — Figure 4",
+      "span_id": "C0155-D-P010-PICTURE-0002",
+      "page": 10,
+      "excerpt": "Please find these two entities and give your answers in the form of [subject, predicate, object].",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3 Future Opportunities: Automatic KG Construction and Reasoning",
+      "span_id": "C0155-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "the current results of the constructed knowledge graph still necessitate manual evaluation and validation.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "2.2.2 Overall Results — Entity and Relation Extraction",
+      "span_id": "C0155-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We conduct experiments on DuIE2.0, Re-TACRED, and SciERC",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Appendix D — Table D2",
+      "span_id": "C0155-D-P028-TABLE-0002",
+      "page": 28,
+      "excerpt": "predict the tail entity [MASK] from the given... Please answer the following question.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-03": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "2.4.1 Data Collection",
+      "span_id": "C0155-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "we fabricate entities and relations not found in reality, structuring them into knowledge triples.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "2.2.2 Overall Results",
+      "span_id": "C0155-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "each involving 20 samples in the test/valid sets",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "2.2.2 Overall Results — Link Prediction and Question Answering",
+      "span_id": "C0155-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "FB15k-237... 25 instances... ATOMIC2020... 23 instances... 20 random instances sampled from each.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-03": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "2.4.2 Preliminary Results",
+      "span_id": "C0155-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "we conduct a random selection of ten sentences for evaluation",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-04": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3 Future Opportunities: Automatic KG Construction and Reasoning",
+      "span_id": "C0155-D-P012-PICTURE-0004",
+      "page": 12,
+      "excerpt": "Construct a Knowledge Graph about the movie \"Spider-Man: Across the Spider-Verse\"",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Appendix D — Table D1",
+      "span_id": "C0155-D-P027-TABLE-0001",
+      "page": 27,
+      "excerpt": "Require the answer only in the form: [subject, predicate, object].",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Appendix D — Table D2",
+      "span_id": "C0155-D-P028-TABLE-0002",
+      "page": 28,
+      "excerpt": "Require the answer in the form: Event type",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-03": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3 Future Opportunities: Automatic KG Construction and Reasoning",
+      "span_id": "C0155-D-P012-PICTURE-0003",
+      "page": 12,
+      "excerpt": "Title; Main Characters; Main Settings; Main Events; Main Relationships",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Introduction — Figure 1 caption",
+      "span_id": "C0155-D-P002-CAPTION-0001",
+      "page": 2,
+      "excerpt": "large models (text-davinci-003, ChatGPT, and GPT-4)",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "2.2.2 Overall Results",
+      "span_id": "C0155-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "we use PaddleNLP LIC2021 IE, PL-Marker and EXOBRAIN as baselines",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "2.2.2 Overall Results — Link Prediction",
+      "span_id": "C0155-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "the best performing fine-tuned models are C-LMKE (BERT-base) and COMET (BART)",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-04": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3 Future Opportunities: Automatic KG Construction and Reasoning",
+      "span_id": "C0155-D-P011-TEXT-0004",
+      "page": 11,
+      "excerpt": "we utilize the role-playing method in CAMEL",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-05": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3 Future Opportunities: Automatic KG Construction and Reasoning",
+      "span_id": "C0155-D-P013-TEXT-0005",
+      "page": 13,
+      "excerpt": "Currently, the gpt-3.5-turbo in use is subjected to a max token restriction.",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "2.2.1 Settings — Datasets",
+      "span_id": "C0155-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "we employ DuIE2.0, SciERC, Re-TACRED, and MAVEN... FB15K-237 and ATOMIC 2020... FreebaseQA and MetaQA",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Appendix B — Datasets",
+      "span_id": "C0155-D-P025-TEXT-0002",
+      "page": 25,
+      "excerpt": "DuIE2.0... more than 210,000 sentences and 48 predefined relationship categories... MAVEN... 4,480 documents and 168 event types.",
+      "confidence": "medium"
+    },
+    "datasets-18-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Appendix B and C",
+      "span_id": "C0155-D-P026-TEXT-0003",
+      "page": 26,
+      "excerpt": "FB15K-237... 237 relations and 14,541 entities... ATOMIC 2020... 1.33 million inferential knowledge tuples... dataset includes 1,400 sentences, 39 novel relations, and 786 unique entities.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "2.2.2 Overall Results — Entity and Relation Extraction",
+      "span_id": "C0155-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "the results are reported utilizing the standard micro F1 score.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "2.2.2 Overall Results — Event Extraction",
+      "span_id": "C0155-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Using the F-score metric",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "2.2.2 Overall Results — Link Prediction and Question Answering",
+      "span_id": "C0155-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "hits@1 score... bleu1 score... AnswerExactMatch is adopted as the metric of evaluation.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-04": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "2.4.2 Preliminary Results",
+      "span_id": "C0155-D-P010-TEXT-0004",
+      "page": 10,
+      "excerpt": "GPT-4 successfully extracted 80% of the virtual triples, while the accuracy of ChatGPT is only 27%.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "2.2.2 Overall Results",
+      "span_id": "C0155-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "we use PaddleNLP LIC2021 IE, PL-Marker and EXOBRAIN as baselines",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "2.2.2 Overall Results — Event Extraction",
+      "span_id": "C0155-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "GPT-4’s performance is benchmarked against the existing state-of-the-art (SOTA) model, as well as to other models in the GPT family.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-03": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "2.2.2 Overall Results — Question Answering",
+      "span_id": "C0155-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "Yu et al. and Madani and Joseph represent the SOTA models employed.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-04": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "3 Future Opportunities: Automatic KG Construction and Reasoning",
+      "span_id": "C0155-D-P012-PICTURE-0004",
+      "page": 12,
+      "excerpt": "GPT-4 only; ChatGPT with Communicative Agents",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "2.1 Evaluation Principle",
+      "span_id": "C0155-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "some experiments... rely on randomly sampled subsets of datasets... The experimental prompt used is detailed in Appendix D.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "2.2.2 Overall Results — Question Answering",
+      "span_id": "C0155-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "under one-shot setting by randomly sampling one example from the train set as the in-context exemplar.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "2.3 Discussion",
+      "span_id": "C0155-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "Our experiment, conducted in March-April 2023, uses an interactive interface rather than an API to evaluate the GPT models on a randomly selected subset of datasets.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-04": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "3 Future Opportunities: Automatic KG Construction and Reasoning",
+      "span_id": "C0155-D-P012-CAPTION-0004",
+      "page": 12,
+      "excerpt": "The figure omits the specific operational process, providing the results directly.",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "2.2.2 Overall Results — Table 1",
+      "span_id": "C0155-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "GPT-4: DuIE2.0 31.03/41.91; Re-TACRED 15.5/22.5; SciERC 7.2/9.1; MAVEN 34.2/30.4; FB15K-237 32.0/40.0; ATOMIC2020 16.3/19.1; FreebaseQA 95.0/95.0; MetaQA 63.8/56.0.",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "2.2.3 KG Construction vs. Reasoning",
+      "span_id": "C0155-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "they do not surpass the current state-of-the-art models in KG construction under zero-shot and one-shot settings... all LLMs in one-shot, and GPT-4 in zero-shot, match or near SOTA performance on the FreebaseQA and FB15K-237 datasets.",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "2.4.2 Preliminary Results",
+      "span_id": "C0155-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "GPT-4 successfully extracted 80% of the virtual triples, while the accuracy of ChatGPT is only 27%.",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction — Contributions",
+      "span_id": "C0155-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "We evaluate LLMs... evaluating their zero-shot and one-shot performance on KG construction and reasoning on eight benchmark datasets.",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.4 — Virtual Knowledge Extraction",
+      "span_id": "C0155-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "we fabricate entities and relations not found in reality... using the efficiency of this process as an indicator of LLMs’ capacity to manage virtual knowledge.",
+      "confidence": "medium"
+    },
+    "strengths-23-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3 Future Opportunities: Automatic KG Construction and Reasoning",
+      "span_id": "C0155-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "we suggest the incorporation of external sources... knowledge bases, existing KGs, and internet retrieval systems.",
+      "confidence": "medium"
+    },
+    "strengths-23-04": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.2.2 Overall Results",
+      "span_id": "C0155-D-P007-TABLE-0004",
+      "page": 7,
+      "excerpt": "Table 1 KG Construction and KG Reasoning tasks.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.1 Evaluation Principle",
+      "span_id": "C0155-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "some experiments... rely on randomly sampled subsets of datasets... there may be inherent variability in the results due to this sampling approach.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.3 Discussion",
+      "span_id": "C0155-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "Dataset noise could lead to ambiguities... Model performance is notably influenced by the semantic depth of instructions... answers involving synonymous terms might not be accurately recognized.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.2.4 General vs. Specific Domain",
+      "span_id": "C0155-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "both GPT-4 and ChatGPT underperform on the specialized SciERC dataset",
+      "confidence": "medium"
+    },
+    "weaknesses-24-04": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3 Future Opportunities: Automatic KG Construction and Reasoning",
+      "span_id": "C0155-D-P012-CAPTION-0004",
+      "page": 12,
+      "excerpt": "The figure omits the specific operational process, providing the results directly.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-05": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3 Future Opportunities: Automatic KG Construction and Reasoning",
+      "span_id": "C0155-D-P013-TEXT-0005",
+      "page": 13,
+      "excerpt": "the current results of the constructed knowledge graph still necessitate manual evaluation and validation.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "3 Future Opportunities: Automatic KG Construction and Reasoning",
+      "span_id": "C0155-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "The utilization of the API is constrained by a maximum token limit... AutoKG now exhibits shortcomings in facilitating efficient human-machine interaction... Hallucination problem of LLMs.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Introduction — Future Opportunities",
+      "span_id": "C0155-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "their strong dependence on prompt engineering and the inherent limitations of their knowledge cutoff.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "2.2.3 KG Construction vs. Reasoning",
+      "span_id": "C0155-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "indicating limitations in extracting information from sparse data.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4 Conclusion and Future Work",
+      "span_id": "C0155-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "In the future, we would like to extend our work to other LLMs and explore additional KG-related tasks, such as multimodal reasoning.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "2.3 Discussion",
+      "span_id": "C0155-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "Finding optimal instructions through prompt engineering can enhance performance. An In-context Learning approach with relevant samples can further improve outcomes.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "3 Future Opportunities: Automatic KG Construction and Reasoning",
+      "span_id": "C0155-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "we suggest the incorporation of external sources... knowledge bases, existing KGs, and internet retrieval systems",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-04": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "3 Future Opportunities: Automatic KG Construction and Reasoning",
+      "span_id": "C0155-D-P013-TEXT-0004",
+      "page": 13,
+      "excerpt": "This can be achieved via comparison with standard answers, expert review, or through semi-automatic algorithms.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.4 Discussion",
+      "span_id": "C0155-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "is it due to the substantial volume of textual data used in pre-training phases... or is it attributed to their robust inference and generalization capabilities?",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.2.4 General vs. Specific Domain",
+      "span_id": "C0155-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "challenges in LLMs’ recognition and understanding of specialized terms",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.3 Discussion",
+      "span_id": "C0155-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "Dataset labels may not capture all correct responses, and answers involving synonymous terms might not be accurately recognized.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-04": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "3 Future Opportunities: Automatic KG Construction and Reasoning",
+      "span_id": "C0155-D-P013-TEXT-0004",
+      "page": 13,
+      "excerpt": "three significant challenges remain... maximum token limit... human-machine interaction... Hallucination problem of LLMs.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Introduction — footnote 1",
+      "span_id": "C0155-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The code and datasets are in https://github.com/zjunlp/AutoKG.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Declarations — Data and Materials availability",
+      "span_id": "C0155-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "Our data and materials are accessible in the repository here... The code and datasets are in https://github.com/zjunlp/AutoKG",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The study asks how capable general-purpose LLMs are, without task-specific training, at representative KG construction and reasoning tasks; whether apparent information-extraction success reflects memorized pre-training knowledge or contextual generalization; and how LLMs plus external information and communicative agents could support automatic KG construction and reasoning.",
+  "methodology": {
+    "primary_family": "Zero-shot and few-shot LLM prompting",
+    "secondary_families": [
+      "Hybrid NLP and LLM methods",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "zero_shot",
+    "description": "The work has three connected components. (1) It prompts text-davinci-003, ChatGPT, and GPT-4 in zero- and one-shot settings for relation/triple extraction, event detection, link prediction, and KBQA, comparing their scores with fully supervised task baselines. Prompts constrain the allowed relations/event labels where appropriate and request structured triple or label answers. (2) It creates VINE from Re-TACRED by replacing real entities and relations with invented ones, then asks models to extract virtual SPO triples after relation-specific demonstrations, to probe generalization beyond memorized facts. (3) It proposes AutoKG: a role-playing multi-agent concept using a task specifier, KG-domain-expert user, consultant/KG assistant, and web-searcher; agents iteratively clarify the task, retrieve external information when indicated, and produce a KG. The paper shows one qualitative movie-KG example rather than a controlled AutoKG benchmark."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "Task-provided schemas constrain several prompted evaluations: SciERC and DuIE2.0 provide allowed predicate lists, and event detection provides an event-type list. AutoKG may use external knowledge bases or existing KGs, but the paper does not specify an ontology language, a schema-discovery algorithm, or formal graph constraints.",
+    "evidence": [
+      {
+        "span_id": "C0155-D-P027-TABLE-0001",
+        "page": 27,
+        "excerpt": "The list of predicates... What Subject-Predicate-Object triples are included... return the possible answers according to the list above."
+      },
+      {
+        "span_id": "C0155-D-P028-TABLE-0002",
+        "page": 28,
+        "excerpt": "The list of event types: [...] What types of events are included in the following sentence?"
+      },
+      {
+        "span_id": "C0155-D-P011-TEXT-0003",
+        "page": 11,
+        "excerpt": "These sources can include knowledge bases, existing KGs, and internet retrieval systems"
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Entity and concept extraction",
+    "Relation and triple extraction",
+    "Event extraction",
+    "Graph construction",
+    "Graph validation and correction"
+  ],
+  "input_output": {
+    "input_type": "Natural-language sentences for relation/triple extraction and event detection; KG triples with a masked tail entity for link prediction; natural-language questions for KBQA; synthetic/Re-TACRED-derived sentences with invented entity and relation names for VINE; and a user task/dialogue plus optional internet/external-source information for AutoKG.",
+    "input_granularity": "Primarily single sentence/instance: 20 samples per relation-extraction dataset, 20 random MAVEN samples, 25 FB15K-237 instances, 23 ATOMIC2020 instances, 20 instances per QA dataset, and 10 VINE sentences. AutoKG is illustrated at whole-topic/whole-film-KG level through a dialogue.",
+    "output_representation": "Relation extraction and VINE output subject-predicate-object triples; event extraction outputs event types; link prediction outputs a tail entity; KBQA outputs answer strings/entities; AutoKG’s illustrated output is a human-readable graph-like organization of title, characters, settings, events, and relationships rather than a stated formal RDF/serialization."
+  },
+  "models_and_tools": [
+    "text-davinci-003",
+    "ChatGPT",
+    "GPT-4",
+    "PaddleNLP LIC2021 IE baseline",
+    "PL-Marker baseline",
+    "EXOBRAIN baseline",
+    "C-LMKE (BERT-base) baseline",
+    "COMET (BART) baseline",
+    "CAMEL role-playing method for AutoKG demonstration",
+    "gpt-3.5-turbo used in AutoKG",
+    "web searcher / internet retrieval"
+  ],
+  "datasets": [
+    "DuIE2.0: Chinese relation extraction; over 210,000 sentences; 48 relation categories",
+    "SciERC: scientific abstracts annotated with 7 relations",
+    "Re-TACRED: over 91,000 sentences and 40 relations",
+    "MAVEN: 4,480 documents and 168 event types",
+    "FB15K-237: 14,541 entities and 237 relations",
+    "ATOMIC2020: 1.33 million inferential knowledge tuples about entities and events",
+    "FreebaseQA: open-domain QA built on Freebase",
+    "MetaQA: more than 400,000 single-hop and multi-hop QA pairs",
+    "VINE: 1,400 synthetic sentences, 39 novel relations, and 786 unique entities; derived by replacing Re-TACRED entities/relations with unseen virtual ones"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Micro F1 for entity and relation extraction",
+      "F-score for MAVEN event detection",
+      "Hits@1 for FB15K-237 link prediction",
+      "BLEU-1 for ATOMIC2020 link prediction",
+      "AnswerExactMatch for FreebaseQA and MetaQA",
+      "Accuracy/percentage of correctly extracted virtual triples for VINE"
+    ],
+    "baselines": [
+      "Fine-tuned task-specific SOTA: PaddleNLP LIC2021 IE (DuIE2.0), PL-Marker (Re-TACRED), EXOBRAIN (SciERC), an unnamed cited SOTA model for MAVEN, C-LMKE/BERT-base (FB15K-237), COMET/BART (ATOMIC2020), Yu et al. for FreebaseQA, and Madani and Joseph for MetaQA",
+      "Other prompted LLMs: text-davinci-003 and ChatGPT, compared with GPT-4 in both zero-shot and one-shot settings",
+      "GPT-4-only construction versus ChatGPT with communicative agents in one qualitative AutoKG illustration"
+    ],
+    "setting": "The authors use zero-shot and one-shot prompts, with one train-set example randomly sampled as the in-context exemplar for one-shot QA and task prompts provided in Appendix D. Benchmark evaluations are small randomly selected subsets: 20 instances for each RE dataset, 20 MAVEN samples, 25 FB15K-237 instances, 23 ATOMIC2020 instances, and 20 per QA dataset. They compare results to fully supervised SOTA values. VINE tests 10 selected sentences covering all relations after two same-relation demonstrations. The GPT evaluation ran through an interactive interface, not an API, in March–April 2023. AutoKG receives only a qualitative movie example; Figure 5 explicitly omits its specific operational process."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Table 1: GPT-4 zero-shot/one-shot micro-F1 was 31.03/41.91 on DuIE2.0, 15.5/22.5 on Re-TACRED, and 7.2/9.1 on SciERC, below fine-tuned SOTA values 69.42, 91.4, and 53.2 respectively.",
+      "Table 1: On MAVEN event detection, GPT-4 scored 34.2 F-score zero-shot and 30.4 one-shot versus SOTA 68.8; the one-shot demonstration did not improve GPT-4.",
+      "Table 1: GPT-4 scored 32.0/40.0 on FB15K-237 (Hits@1) versus 32.4 SOTA, and 16.3/19.1 on ATOMIC2020 (BLEU-1) versus 46.9 SOTA.",
+      "Table 1: GPT-4 obtained 95.0/95.0 AnswerExactMatch on FreebaseQA versus 79.0 SOTA, and 63.8/56.0 on MetaQA versus 100 SOTA; GPT-4 and ChatGPT matched at 95.0 on FreebaseQA zero-shot.",
+      "On the 10-sentence VINE preliminary test after two demonstrations, GPT-4 extracted 80% of virtual triples and ChatGPT 27%.",
+      "The authors’ synthesis is that LLMs did not beat supervised SOTA on KG construction in these zero-/one-shot experiments but were closer to/matched SOTA on selected KG reasoning tasks; AutoKG’s movie example is described as more effective and comprehensive with communicative agents plus internet augmentation."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0155-D-P007-TABLE-0001",
+        "page": 7,
+        "excerpt": "GPT-4: DuIE2.0 31.03/41.91; Re-TACRED 15.5/22.5; SciERC 7.2/9.1; MAVEN 34.2/30.4; FB15K-237 32.0/40.0; ATOMIC2020 16.3/19.1; FreebaseQA 95.0/95.0; MetaQA 63.8/56.0."
+      },
+      {
+        "span_id": "C0155-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "they do not surpass the current state-of-the-art models in KG construction under zero-shot and one-shot settings... all LLMs in one-shot, and GPT-4 in zero-shot, match or near SOTA performance on the FreebaseQA and FB15K-237 datasets."
+      },
+      {
+        "span_id": "C0155-D-P010-TEXT-0003",
+        "page": 10,
+        "excerpt": "GPT-4 successfully extracted 80% of the virtual triples, while the accuracy of ChatGPT is only 27%."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author-reported: broad empirical coverage across four KG-related task types and eight datasets, contrasting three LLMs with fine-tuned SOTA systems in zero- and one-shot settings.",
+      "Author-reported: VINE deliberately replaces real entities and relations with virtual ones, directly probing whether prompted extraction can be learned from demonstrations rather than merely recalled from pre-training.",
+      "Author-reported: the AutoKG concept addresses knowledge-cutoff limitations by combining role-specialized LLM dialogue with possible external KB/KG/internet retrieval.",
+      "[Review-level inference] The paper is especially useful as a comparative capability study because Table 1 associates each score with the task/dataset and a stated metric, making the within-table conclusions auditable."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0155-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "We evaluate LLMs... evaluating their zero-shot and one-shot performance on KG construction and reasoning on eight benchmark datasets."
+      },
+      {
+        "span_id": "C0155-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "we fabricate entities and relations not found in reality... using the efficiency of this process as an indicator of LLMs’ capacity to manage virtual knowledge."
+      },
+      {
+        "span_id": "C0155-D-P011-TEXT-0003",
+        "page": 11,
+        "excerpt": "we suggest the incorporation of external sources... knowledge bases, existing KGs, and internet retrieval systems."
+      },
+      {
+        "span_id": "C0155-D-P007-TABLE-0004",
+        "page": 7,
+        "excerpt": "Table 1 KG Construction and KG Reasoning tasks."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author-reported: results may vary because benchmark experiments use randomly sampled subsets; GPT models were evaluated through an interactive interface rather than an API.",
+      "Author-reported: instruction quality, dataset noise/label inaccuracies, and current evaluation methods can affect measured performance; exact-match style evaluation can fail to credit synonymous valid answers.",
+      "Author-reported: performance on specialized SciERC is weak, which the authors hypothesize reflects insufficient domain-specific expertise from predominantly general-corpus training.",
+      "[Review-level inference] The AutoKG claim is not supported by a controlled quantitative comparison: the paper provides a single qualitative movie example, says the figure omits the operational process, and notes the output still needs manual validation.",
+      "[Review-level inference] The construction-task comparisons should be interpreted cautiously because the prompted LLMs are zero-/one-shot while the reported reference systems are fully supervised, and the test subsets are very small."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0155-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "some experiments... rely on randomly sampled subsets of datasets... there may be inherent variability in the results due to this sampling approach."
+      },
+      {
+        "span_id": "C0155-D-P009-TEXT-0002",
+        "page": 9,
+        "excerpt": "Dataset noise could lead to ambiguities... Model performance is notably influenced by the semantic depth of instructions... answers involving synonymous terms might not be accurately recognized."
+      },
+      {
+        "span_id": "C0155-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "both GPT-4 and ChatGPT underperform on the specialized SciERC dataset"
+      },
+      {
+        "span_id": "C0155-D-P012-CAPTION-0004",
+        "page": 12,
+        "excerpt": "The figure omits the specific operational process, providing the results directly."
+      },
+      {
+        "span_id": "C0155-D-P013-TEXT-0005",
+        "page": 13,
+        "excerpt": "the current results of the constructed knowledge graph still necessitate manual evaluation and validation."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The AutoKG use of gpt-3.5-turbo is constrained by a maximum API token limit, which affects KG construction.",
+      "AutoKG lacks efficient human-machine interaction: fully autonomous operation lacks immediate human error correction, while involving humans at every step substantially raises time and labor cost.",
+      "LLM hallucinations require output scrutiny against standard answers, expert review, or semi-automatic algorithms.",
+      "LLMs face a knowledge cutoff and depend strongly on prompt engineering; specialized-domain terminology is challenging.",
+      "The authors state that their results indicate a limitation in extracting information from sparse data, relative to supervised construction systems."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0155-D-P013-TEXT-0001",
+        "page": 13,
+        "excerpt": "The utilization of the API is constrained by a maximum token limit... AutoKG now exhibits shortcomings in facilitating efficient human-machine interaction... Hallucination problem of LLMs."
+      },
+      {
+        "span_id": "C0155-D-P002-TEXT-0002",
+        "page": 2,
+        "excerpt": "their strong dependence on prompt engineering and the inherent limitations of their knowledge cutoff."
+      },
+      {
+        "span_id": "C0155-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "indicating limitations in extracting information from sparse data."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed: extend the evaluation to other LLMs and additional KG-related tasks, including multimodal reasoning.",
+      "Author-proposed: improve prompts through prompt engineering and relevant in-context examples.",
+      "Author-proposed: use external knowledge bases, existing KGs, and internet retrieval to mitigate knowledge-cutoff limitations in AutoKG.",
+      "Author-proposed: scrutinize LLM outputs through standard-answer comparison, expert review, or semi-automatic algorithms.",
+      "[Review-level inference] A future AutoKG study should specify a formal output schema and measure factuality, completeness, and human-validation workload against reproducible baselines; the current paper does not supply those controlled measurements."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0155-D-P013-TEXT-0001",
+        "page": 13,
+        "excerpt": "In the future, we would like to extend our work to other LLMs and explore additional KG-related tasks, such as multimodal reasoning."
+      },
+      {
+        "span_id": "C0155-D-P009-TEXT-0002",
+        "page": 9,
+        "excerpt": "Finding optimal instructions through prompt engineering can enhance performance. An In-context Learning approach with relevant samples can further improve outcomes."
+      },
+      {
+        "span_id": "C0155-D-P011-TEXT-0003",
+        "page": 11,
+        "excerpt": "we suggest the incorporation of external sources... knowledge bases, existing KGs, and internet retrieval systems"
+      },
+      {
+        "span_id": "C0155-D-P013-TEXT-0004",
+        "page": 13,
+        "excerpt": "This can be achieved via comparison with standard answers, expert review, or through semi-automatic algorithms."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Separating LLM extraction based on contextual learning/generalization from success based on memorized pre-training knowledge remains an active question; VINE is presented as a preliminary probe.",
+      "Reliable extraction in specialized domains and complex/ambiguous sentences remains unresolved.",
+      "How to evaluate generative LLM outputs fairly when dataset labels omit valid answers or synonyms remains unresolved.",
+      "For AutoKG, token limits, practical human oversight versus cost, and hallucination/factual verification remain unresolved.",
+      "[Review-level inference] The paper leaves unresolved whether the proposed multi-agent and retrieval design scales to large, formally serialized KGs, because it provides only a qualitative demonstration and no scalability or end-to-end graph-quality evaluation."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0155-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "is it due to the substantial volume of textual data used in pre-training phases... or is it attributed to their robust inference and generalization capabilities?"
+      },
+      {
+        "span_id": "C0155-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "challenges in LLMs’ recognition and understanding of specialized terms"
+      },
+      {
+        "span_id": "C0155-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "Dataset labels may not capture all correct responses, and answers involving synonymous terms might not be accurately recognized."
+      },
+      {
+        "span_id": "C0155-D-P013-TEXT-0004",
+        "page": 13,
+        "excerpt": "three significant challenges remain... maximum token limit... human-machine interaction... Hallucination problem of LLMs."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that code and datasets/data and materials are available at https://github.com/zjunlp/AutoKG. No license, archival version, or detailed reproducibility instructions are reported in the PDF."
+}

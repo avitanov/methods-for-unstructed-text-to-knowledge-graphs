@@ -1,0 +1,849 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0143",
+    "title": "Extract, Define, Canonicalize: An LLM-based Framework for Knowledge Graph Construction",
+    "pdf_path": "data/pdfs/C0143.pdf",
+    "authors": [
+      "Bowen Zhang",
+      "Harold Soh"
+    ],
+    "year": 2024,
+    "venue": "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP 2024), pages 9820–9836",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The paper proposes Extract-Define-Canonicalize (EDC), an LLM-based three-phase framework for knowledge graph construction from text. It performs open triplet extraction, generates definitions for induced schema components, and canonicalizes them against either a target schema or a self-generated schema; an optional trained schema retriever supports iterative refinement. The authors evaluate it on three KGC benchmarks and report high-quality triplet extraction without parameter tuning of the base LLM.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title block",
+      "span_id": "C0143-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Bowen Zhang and Harold Soh",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication line",
+      "span_id": "C0143-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication line",
+      "span_id": "C0143-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing, pages 9820–9836",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0143-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "we propose a three-phase framework named Extract-Define-Canonicalize (EDC): open information extraction followed by schema definition and post-hoc canonicalization.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "1 Introduction",
+      "span_id": "C0143-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "larger and more complex schemas easily exceed the LLMs’ context window length.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "1 Introduction",
+      "span_id": "C0143-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "pre-defined schemas are not always available ... but still would like to extract intrinsically high-quality KGs.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3.1 EDC: Extract-Define-Canonicalize",
+      "span_id": "C0143-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Through few-shot prompting, LLMs identify and extract relational triplets ... independent of any specific schema.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.1 EDC: Extract-Define-Canonicalize",
+      "span_id": "C0143-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Target Alignment: With an existing target schema, we identify the most closely related components within the target schema.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.2 EDC+R: iteratively refine EDC with Schema Retriever",
+      "span_id": "C0143-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Schema Retriever is a fine-tuned variant of the sentence embedding model E5-mistral-7b-instruct.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "1 Introduction",
+      "span_id": "C0143-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "decompose KGC into three primary phases ... Open Information Extraction; Schema Definition; Schema Canonicalization.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "A.2 Prompting-related hyperparameters",
+      "span_id": "C0143-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "We use few-shot prompting for all modules of EDC ... choose 6-shot examples.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "A.3 Schema Retriever Training",
+      "span_id": "C0143-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "finetune the embedding model to distinguish between the correct relation ... and other non-relevant relations using the InfoNCE loss.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "1 Introduction",
+      "span_id": "C0143-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Open Information Extraction ... Schema Definition ... Schema Canonicalization.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.2 EDC+R: iteratively refine EDC with Schema Retriever",
+      "span_id": "C0143-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Candidate Entities ... Candidate Relations ... retrieved from the pre-defined/canonicalized schema by using a trained Schema Retriever.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "1 Introduction",
+      "span_id": "C0143-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "EDC ... with schema of large size or without any pre-defined schema; Schema Retriever ...; Empirical evidence.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.1 EDC: Extract-Define-Canonicalize",
+      "span_id": "C0143-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Absent a target schema, the goal is to consolidate semantically similar schema components ... Starting with an empty canonical schema.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.1 EDC: Extract-Define-Canonicalize",
+      "span_id": "C0143-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "Note that the choices above are obtained by using vector similarity search. After the LLM makes its choice, the relations are transformed.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.1 EDC: Extract-Define-Canonicalize",
+      "span_id": "C0143-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "LLMs identify and extract relational triplets ([Subject, Relation, Object]) from input texts.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.1 EDC: Extract-Define-Canonicalize",
+      "span_id": "C0143-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The third phase aims to refine the open KG into a canonical form, eliminating redundancies and ambiguities.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "A.4.1 Obtaining Candidate Entities",
+      "span_id": "C0143-D-P014-TEXT-0003",
+      "page": 14,
+      "excerpt": "Entities extracted from the text by prompting the LLM to perform an entity extraction task.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3.1 EDC: Extract-Define-Canonicalize",
+      "span_id": "C0143-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Given a piece of text, extract relational triplets in the form of [Subject, Relation, Object] from it.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3.2 EDC+R: iteratively refine EDC with Schema Retriever",
+      "span_id": "C0143-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "we construct a ‘hint’ for the extraction phase ... Candidate Entities ... Candidate Relations.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Table 8",
+      "span_id": "C0143-D-P015-TABLE-0001",
+      "page": 15,
+      "excerpt": "The average number of triplets extracted per sentence on all three datasets.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "F Combine EDC with other IE tools",
+      "span_id": "C0143-D-P016-TEXT-0002",
+      "page": 16,
+      "excerpt": "beneficial in scenarios such as processing long documents that exceed the context window length of LLMs.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.1 EDC: Extract-Define-Canonicalize",
+      "span_id": "C0143-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The resultant triplets ... form an open KG, which is forwarded to subsequent phases.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.1 EDC: Extract-Define-Canonicalize",
+      "span_id": "C0143-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "[‘Alan Shepard’, ‘birthDate’, ‘Nov 18, 1923’], [‘Alan Shepard’, ‘mission’, ‘Apollo 14’], which forms our canonicalized KG.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.1 Experimental Setup — EDC Models",
+      "span_id": "C0143-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "we tested ... GPT-4, GPT-3.5-turbo, and Mistral-7b ... For the framework’s remaining components ... GPT-3.5-turbo.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "A.2 Prompting-related hyperparameters",
+      "span_id": "C0143-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "For the MCQ ... retrieve top-5 ... For refinement, the schema retriever retrieves top-10.",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.1 Experimental Setup — Datasets",
+      "span_id": "C0143-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "WebNLG ... 1165 pairs ... 159 unique relation types; REBEL ... sample of 1000 ... 200 distinct relation types.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "D Experiments on a Novel Dataset",
+      "span_id": "C0143-D-P016-TEXT-0002",
+      "page": 16,
+      "excerpt": "we create a novel small-scale dataset (50 entries) of fictional entities and information.",
+      "confidence": "medium"
+    },
+    "datasets-17-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "F Combine EDC with other IE tools",
+      "span_id": "C0143-D-P016-TEXT-0003",
+      "page": 16,
+      "excerpt": "experiments on Re-DOCRED ... combining EDC with LingMess ... and simple sentence-level chunking.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.1.1 Evaluation Criteria and Baselines",
+      "span_id": "C0143-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "use the WEBNLG evaluation script ... Precision, Recall, and F1 ... Exact ... Partial ... Strict.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.1.1 Evaluation Criteria and Baselines",
+      "span_id": "C0143-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "Conciseness ... number of relations types. Redundancy ... average cosine similarity.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.2.2 Self Canonicalization",
+      "span_id": "C0143-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "two independent annotators ... high inter-annotator agreement score of 0.94.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-04": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "A.3 Schema Retriever Training",
+      "span_id": "C0143-D-P013-TEXT-0004",
+      "page": 13,
+      "excerpt": "recall@10 scores ... 0.823, 0.663, and 0.818.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.1.1 Evaluation Criteria and Baselines",
+      "span_id": "C0143-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "REGEN ... state-of-the-art model for WebNLG ... GenIE ... state-of-the-art model for REBEL and Wiki-NRE.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.1.1 Evaluation Criteria and Baselines",
+      "span_id": "C0143-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Baseline Open KG ... CESI ... leading clustering-based approach for open KG canonicalization.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-03": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Table 7",
+      "span_id": "C0143-D-P015-TABLE-0003",
+      "page": 15,
+      "excerpt": "EDC+R-lastround ... entities and relations extracted from the last round are removed from the refinement hint.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.1.1 Evaluation Criteria and Baselines",
+      "span_id": "C0143-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "Target Alignment (when a schema is provided) and Self Canonicalization (no schema) due to the inherently different objectives.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.2.2 Self Canonicalization",
+      "span_id": "C0143-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "we conducted a targeted human evaluation ... two independent annotators.",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 3",
+      "span_id": "C0143-D-P014-TABLE-0001",
+      "page": 14,
+      "excerpt": "WebNLG: EDC+R GPT-4 Partial F1 0.820, Strict 0.786, Exact 0.800; REGEN 0.767, 0.720, 0.723.",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 4 and Table 5",
+      "span_id": "C0143-D-P014-TABLE-0002",
+      "page": 14,
+      "excerpt": "REBEL EDC+R GPT-4 Partial/Strict/Exact F1 0.601/0.559/0.574; Wiki-NRE 0.713/0.709/0.709.",
+      "confidence": "medium"
+    },
+    "main_results-21-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 2",
+      "span_id": "C0143-D-P008-TABLE-0003",
+      "page": 8,
+      "excerpt": "WebNLG EDC 0.956 precision, 200 relations, 0.833 redundancy; CESI 0.724, 280, 0.893.",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "1 Introduction",
+      "span_id": "C0143-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "EDC ... can either discover triplets consistent with a pre-existing schema of potentially large size ... or self-generate a schema.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "2 Background",
+      "span_id": "C0143-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "by allowing the LLMs to verify if a transformation can be performed ... EDC alleviates the over-generalization issue.",
+      "confidence": "medium"
+    },
+    "strengths-22-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Table 1",
+      "span_id": "C0143-D-P008-TABLE-0003",
+      "page": 8,
+      "excerpt": "Removing Schema Retriever reduces GPT-3.5 Partial F1: 0.794 to 0.752 (WebNLG), 0.559 to 0.517 (REBEL), 0.693 to 0.653 (Wiki-NRE).",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "6 Limitations and Future Directions",
+      "span_id": "C0143-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "EDC is a costly framework, involving a large number of LLM calls ... around 0.009 USD per example.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "6 Limitations and Future Directions",
+      "span_id": "C0143-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "incorporate an entity de-duplication mechanism in the future to reduce the redundancy.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2.1 Target Alignment",
+      "span_id": "C0143-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "REBEL and Wiki-NRE ... incomplete reference sets, leading to overly pessimistic evaluations for methods like EDC.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-04": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "A.4.2 Obtaining Candidate Relations",
+      "span_id": "C0143-D-P014-TEXT-0004",
+      "page": 14,
+      "excerpt": "there is a chance that the retriever may retrieve irrelevant information.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "6 Limitations and Future Directions",
+      "span_id": "C0143-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "We only considered schema canonicalization ... incorporate an entity de-duplication mechanism.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "6 Limitations and Future Directions",
+      "span_id": "C0143-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "schema retriever may benefit from training on more diverse and higher-quality data.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "6 Limitations and Future Directions",
+      "span_id": "C0143-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "we only tested different LLMs for OIE while all the other modules ... rely on GPT-3.5-turbo.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-04": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "7 Ethical Considerations",
+      "span_id": "C0143-D-P009-TEXT-0004",
+      "page": 9,
+      "excerpt": "The use of current LLMs may incur risks such as hallucinations ... and privacy issues.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "6 Limitations and Future Directions",
+      "span_id": "C0143-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "smaller language models can be fine-tuned for OIE and smaller BERT-based classifiers can be trained for schema canonicalization.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "F Combine EDC with other IE tools",
+      "span_id": "C0143-D-P016-TEXT-0002",
+      "page": 16,
+      "excerpt": "combining EDC with LingMess ... and simple sentence-level chunking ... strict micro F1 score from 0.132 to 0.234.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "G Combining OIE and Schema Definition",
+      "span_id": "C0143-D-P016-TEXT-0003",
+      "page": 16,
+      "excerpt": "slight performance gains (0.516 to 0.518 ... Partial) and token cost reduction (≈ 3k to 2k tokens per example).",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "6 Limitations and Future Directions",
+      "span_id": "C0143-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "incorporate an entity de-duplication mechanism ... via coreference resolution.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2.1 Target Alignment",
+      "span_id": "C0143-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "datasets also contain reference triplets based on information extraneous to the text.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "D Experiments on a Novel Dataset",
+      "span_id": "C0143-D-P016-TEXT-0003",
+      "page": 16,
+      "excerpt": "there is a risk the LLMs have already been trained on these datasets.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0143-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Code for EDC is available at https://github.com/clear-nus/edc.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "4 Experiments",
+      "span_id": "C0143-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Source code for EDC and to replicate our experiments are available in the supplementary materials.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-03": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "7 Ethical Considerations",
+      "span_id": "C0143-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "Software and code for this paper is publicly available at https://github.com/clear-nus/edc.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Automated knowledge graph construction from natural-language text, focused on relational triplet extraction and canonicalization. Existing prompt-based LLM KGC methods require target-schema information in the prompt, which does not scale to large schemas and is unsuitable when no fixed schema exists; open extraction also leaves redundant and ambiguous relation phrases.",
+  "methodology": {
+    "primary_family": "Zero-shot and few-shot LLM prompting (without task-specific base-model training)",
+    "secondary_families": [
+      "Ontology-constrained and schema-guided methods",
+      "Validation, correction, and knowledge-fusion methods",
+      "Instruction-tuned or fine-tuned LLM methods (trained schema-retriever component)"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "few_shot",
+    "description": "EDC executes in order: (1) an LLM uses few-shot open information extraction to emit [subject, relation, object] triples without including a schema; (2) the LLM writes contextual natural-language definitions for extracted relation/schema components; (3) a sentence-transformer similarity search retrieves candidate relation components and the LLM verifies whether a proposed replacement is semantically valid. With a supplied target schema, non-alignable components and their triples are excluded; without one, non-alignable components are added to an initially empty canonical schema. Optional EDC+R performs another extraction pass using a hint containing prior extracted entities/relations plus top retrieved schema relations. Its fine-tuned E5-Mistral schema retriever maps text and defined relations into a relevance-oriented vector space. Contributions detailed: EDC supports both large predefined schemas and schema induction; the trained Schema Retriever improves refinement; experiments compare EDC/EDC+R against trained and canonicalization baselines across target-alignment and self-canonicalization settings."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "Schema is central and may be either externally supplied or induced. EDC defines each extracted relation in natural language, embeds definitions, retrieves nearest candidate schema components, and asks the LLM to validate replacement. In target alignment, triples must conform to the target schema and rejected mappings are excluded. In self-canonicalization, the system begins with an empty canonical schema and adds components when no valid equivalent exists; this is schema canonicalization, not ontology discovery in the formal ontology-engineering sense.",
+    "evidence": [
+      {
+        "span_id": "C0143-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "Absent a target schema, the goal is to consolidate semantically similar schema components ... Starting with an empty canonical schema."
+      },
+      {
+        "span_id": "C0143-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "Note that the choices above are obtained by using vector similarity search. After the LLM makes its choice, the relations are transformed."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Entity and concept extraction (entities in subject/object triple positions; optional candidate-entity extraction)",
+    "Relation and triple extraction",
+    "Ontology or schema discovery (self-generated canonical relation schema)",
+    "Graph construction (open and canonicalized triplet KG)",
+    "Knowledge fusion and deduplication (relation/schema canonicalization)",
+    "Graph validation and correction (LLM verification of candidate schema substitutions; refinement)"
+  ],
+  "input_output": {
+    "input_type": "Unstructured natural-language text, with an optional predefined relation schema for target alignment; EDC+R additionally uses previously extracted triples and retrieved relation definitions as prompting hints.",
+    "input_granularity": "Individual text instances/sentences paired with triples in the benchmark test sets; the paper reports average extracted triples per sentence. The framework is also described as composable with sentence-level chunking for documents exceeding LLM context windows.",
+    "output_representation": "Lists of relational triples [Subject, Relation, Object], first forming an open KG and then a canonicalized KG. In target alignment, relation labels are aligned to a supplied schema; in self-canonicalization, a concise induced canonical relation schema is produced."
+  },
+  "models_and_tools": [
+    "GPT-4 for OIE experiments; accessed through the OpenAI API",
+    "GPT-3.5-turbo for OIE experiments and all remaining prompted EDC modules",
+    "Mistral-7b for OIE experiments; deployed locally",
+    "E5-Mistral-7b-instruct as the unmodified sentence-embedding model for canonicalization similarity search",
+    "Fine-tuned E5-Mistral-7b-instruct Schema Retriever, trained with InfoNCE",
+    "Vector/cosine similarity search over schema-definition embeddings",
+    "Six-shot prompting; top-5 relations for canonicalization MCQ; top-10 retrieved relations for refinement"
+  ],
+  "datasets": [
+    "WebNLG+2020 v3.0 semantic-parsing test split: 1,165 text–triple pairs; 159 unique relation types",
+    "REBEL original test partition: random sample of 1,000 text–triple pairs from 105,516 entries; 200 relation types",
+    "Wiki-NRE test split: sample of 1,000 text–triple pairs from 29,619 entries; 45 relation types",
+    "Novel fictional dataset: 50 annotated entries using the Wiki-NRE schema, created to test possible LLM benchmark contamination",
+    "Additional comparative datasets in appendix: CoNLL04 and SciERC; Re-DOCRED combined with LingMess and sentence chunking"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Automatic token-based triple Precision, Recall, and F1 using the WEBNLG evaluation script",
+      "Partial match: at least a partial triple match, disregarding element type",
+      "Strict match: exact triplet match including element types",
+      "Exact match: complete triple match, disregarding element type",
+      "Self-canonicalization human-evaluated precision",
+      "Number of relation types as schema conciseness (lower is better)",
+      "Redundancy score: average cosine similarity of each canonical relation to its nearest counterpart (lower is better)",
+      "Inter-annotator agreement of 0.94 for two independent annotators",
+      "Schema Retriever Recall@10: WebNLG 0.823, REBEL 0.663, Wiki-NRE 0.818"
+    ],
+    "baselines": [
+      "REGEN (T5 sequence-to-sequence with reinforcement learning) on WebNLG",
+      "GenIE (BART sequence-to-sequence constrained generation) on REBEL and Wiki-NRE",
+      "Open KG: initial OIE output, for self-canonicalization",
+      "CESI: clustering-based open-KG canonicalization, applied to the Open KG",
+      "ChatIE and CodeKGC in appendix comparisons on CoNLL04, SciERC, and Wiki-NRE",
+      "GenIE on the novel fictional dataset",
+      "EDC+R without Schema Retriever and EDC+R-lastround ablations"
+    ],
+    "setting": "Two principal settings. Target Alignment evaluates recovery of reference triples conforming to a provided relation schema on WebNLG, sampled REBEL, and sampled Wiki-NRE; EDC and one-refinement EDC+R are evaluated with GPT-4, GPT-3.5, or Mistral-7b as OIE LLMs. Self Canonicalization provides no target schema, uses GPT-3.5 for OIE, compares EDC with its Open-KG output and CESI, and uses targeted blinded human assessment by two annotators. Appendix tests more refinement, ablations, a 50-item fictional dataset, small-schema comparisons, and a Re-DOCRED integration experiment."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Target alignment, Table 3: on WebNLG, GPT-4 EDC+R achieved Partial/Strict/Exact F1 of 0.820/0.786/0.800, exceeding REGEN's 0.767/0.720/0.723; GPT-3.5 EDC+R achieved 0.794/0.753/0.772.",
+      "Target alignment, Table 4: on REBEL, GPT-4 EDC+R achieved Partial/Strict/Exact F1 0.601/0.559/0.574, versus GenIE 0.385/0.356/0.364.",
+      "Target alignment, Table 5: on Wiki-NRE, GPT-4 EDC+R achieved Partial/Strict/Exact F1 0.713/0.709/0.709, versus GenIE 0.484/0.463/0.478.",
+      "Schema Retriever ablation with GPT-3.5: removing it reduced WebNLG Partial F1 from 0.794 to 0.752, REBEL from 0.559 to 0.517, and Wiki-NRE from 0.693 to 0.653.",
+      "Self-canonicalization Table 2: EDC precision/relation-count/redundancy was 0.956/200/0.833 on WebNLG, 0.867/225/0.831 on REBEL, and 0.898/106/0.833 on Wiki-NRE; CESI had lower precision and more relation types on each dataset.",
+      "Novel 50-item fictional dataset: EDC+R Partial/Strict/Exact F1 was 0.767/0.738/0.738 compared with GenIE 0.530/0.432/0.472.",
+      "A second refinement gave only small further gains with GPT-3.5 (e.g., WebNLG Partial F1 0.797 vs 0.794 after one refinement), which authors characterize as diminishing returns."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0143-D-P014-TABLE-0001",
+        "page": 14,
+        "excerpt": "WebNLG: EDC+R GPT-4 Partial F1 0.820, Strict 0.786, Exact 0.800; REGEN 0.767, 0.720, 0.723."
+      },
+      {
+        "span_id": "C0143-D-P014-TABLE-0002",
+        "page": 14,
+        "excerpt": "REBEL EDC+R GPT-4 Partial/Strict/Exact F1 0.601/0.559/0.574; Wiki-NRE 0.713/0.709/0.709."
+      },
+      {
+        "span_id": "C0143-D-P008-TABLE-0003",
+        "page": 8,
+        "excerpt": "WebNLG EDC 0.956 precision, 200 relations, 0.833 redundancy; CESI 0.724, 280, 0.893."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author-reported: avoids putting a large full schema into the initial extraction prompt; supports both target-schema alignment and self-canonicalization when no fixed schema is available.",
+      "Author-reported/experimental: contextual LLM-generated definitions plus LLM verification aim to avoid the over-generalization of embedding-only or clustering canonicalization.",
+      "Experimental: one refinement with a trained Schema Retriever consistently improved target-alignment results in the reported ablation.",
+      "Review-level inference: separating schema definition and canonicalization from initial open extraction makes the approach modular and enables an auditable execution order, although the paper does not test a formal auditability measure."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0143-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "EDC ... can either discover triplets consistent with a pre-existing schema of potentially large size ... or self-generate a schema."
+      },
+      {
+        "span_id": "C0143-D-P002-TEXT-0002",
+        "page": 2,
+        "excerpt": "by allowing the LLMs to verify if a transformation can be performed ... EDC alleviates the over-generalization issue."
+      },
+      {
+        "span_id": "C0143-D-P008-TABLE-0003",
+        "page": 8,
+        "excerpt": "Removing Schema Retriever reduces GPT-3.5 Partial F1: 0.794 to 0.752 (WebNLG), 0.559 to 0.517 (REBEL), 0.693 to 0.653 (Wiki-NRE)."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author-reported: EDC requires many LLM calls and is costly; using GPT-3.5-turbo for all components cost about USD 0.009 per example.",
+      "Author-reported: the study only canonicalizes schema components/relations and does not provide a general entity de-duplication mechanism.",
+      "Experimental/evaluation caveat: REBEL and Wiki-NRE reference triples can be incomplete or include information not directly stated in text, so automatic reference-based scores can penalize valid extractions; this restricts interpretation of reported scores.",
+      "Review-level inference: output correctness still relies on prompted LLM extraction and LLM mapping decisions; vector retrieval can return irrelevant relations, so the method does not itself guarantee factuality or prevent hallucination.",
+      "Experimental: EDC alone was not always superior on small-schema CoNLL04 and SciERC; the gains over prior LLM approaches there required refinement."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0143-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "EDC is a costly framework, involving a large number of LLM calls ... around 0.009 USD per example."
+      },
+      {
+        "span_id": "C0143-D-P009-TEXT-0002",
+        "page": 9,
+        "excerpt": "incorporate an entity de-duplication mechanism in the future to reduce the redundancy."
+      },
+      {
+        "span_id": "C0143-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "REBEL and Wiki-NRE ... incomplete reference sets, leading to overly pessimistic evaluations for methods like EDC."
+      },
+      {
+        "span_id": "C0143-D-P014-TEXT-0004",
+        "page": 14,
+        "excerpt": "there is a chance that the retriever may retrieve irrelevant information."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The scope is schema canonicalization only; entity duplication remains and should be addressed, potentially through coreference resolution.",
+      "The Schema Retriever may benefit from more diverse and higher-quality training data.",
+      "Only the OIE module was tested with different LLMs; the other prompted modules rely on GPT-3.5-turbo, so smaller open models should be evaluated for those tasks.",
+      "The framework requires many LLM calls and costs about USD 0.009 per example with GPT-3.5-turbo for all components.",
+      "Current LLM use entails hallucination and privacy risks.",
+      "Potential benchmark contamination remains because LLM training data are unknown; the paper mitigates rather than eliminates this concern with a 50-item fictional dataset."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0143-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "We only considered schema canonicalization ... incorporate an entity de-duplication mechanism."
+      },
+      {
+        "span_id": "C0143-D-P009-TEXT-0002",
+        "page": 9,
+        "excerpt": "schema retriever may benefit from training on more diverse and higher-quality data."
+      },
+      {
+        "span_id": "C0143-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "we only tested different LLMs for OIE while all the other modules ... rely on GPT-3.5-turbo."
+      },
+      {
+        "span_id": "C0143-D-P009-TEXT-0004",
+        "page": 9,
+        "excerpt": "The use of current LLMs may incur risks such as hallucinations ... and privacy issues."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Add entity de-duplication/coreference resolution; the appendix combines EDC with LingMess and sentence-level chunking for long documents.",
+      "Train the Schema Retriever on more diverse, higher-quality data and evaluate smaller open-source LLMs in every EDC module.",
+      "Replace some LLM components with smaller fine-tuned OIE models or BERT-based schema-canonicalization classifiers to reduce cost.",
+      "Combine OIE and schema-definition calls to reduce latency and token cost; on REBEL this preliminary experiment increased Partial F1 from 0.516 to 0.518 and reduced tokens from about 3k to 2k per example.",
+      "Explore EDC for embodied AI/robotics memory KGs and schema enrichment with newly discovered relations."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0143-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "smaller language models can be fine-tuned for OIE and smaller BERT-based classifiers can be trained for schema canonicalization."
+      },
+      {
+        "span_id": "C0143-D-P016-TEXT-0002",
+        "page": 16,
+        "excerpt": "combining EDC with LingMess ... and simple sentence-level chunking ... strict micro F1 score from 0.132 to 0.234."
+      },
+      {
+        "span_id": "C0143-D-P016-TEXT-0003",
+        "page": 16,
+        "excerpt": "slight performance gains (0.516 to 0.518 ... Partial) and token cost reduction (≈ 3k to 2k tokens per example)."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "How to robustly deduplicate and coreference-resolve entities alongside relation/schema canonicalization in general KGs.",
+      "How to maintain extraction faithfulness, prevent hallucination, and manage privacy risks when LLMs are central components.",
+      "How to evaluate systems fairly when text–triple benchmarks have incomplete or text-extraneous reference annotations and LLM pretraining exposure is unknown.",
+      "How to reduce multi-call LLM cost and latency without degrading extraction/canonicalization quality.",
+      "How well the method generalizes from sentence-level benchmark instances to long, heterogeneous real-world documents and broader schema components such as entity or event types."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0143-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "incorporate an entity de-duplication mechanism ... via coreference resolution."
+      },
+      {
+        "span_id": "C0143-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "datasets also contain reference triplets based on information extraneous to the text."
+      },
+      {
+        "span_id": "C0143-D-P016-TEXT-0003",
+        "page": 16,
+        "excerpt": "there is a risk the LLMs have already been trained on these datasets."
+      }
+    ]
+  },
+  "code_and_data_availability": "Code for EDC and experiment replication is reported as available at https://github.com/clear-nus/edc; the paper states that source code and supplementary materials are available. The evaluated public datasets are named and their test splits/samples are described, but the PDF does not state a separately released processed-data package or a persistent artifact version."
+}

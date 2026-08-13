@@ -1,0 +1,854 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0096",
+    "title": "Entity Disambiguation for Knowledge Base Population",
+    "pdf_path": "data/manual-pdfs/C0096.pdf",
+    "authors": [
+      "Mark Dredze",
+      "Paul McNamee",
+      "Delip Rao",
+      "Adam Gerber",
+      "Tim Finin"
+    ],
+    "year": 2010,
+    "venue": "Proceedings of the 23rd International Conference on Computational Linguistics (COLING 2010), pages 277–285, Beijing",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The paper presents a scalable supervised entity-disambiguation system for linking textual entity mentions to a knowledge base while handling name variation, ambiguity, and NIL entities absent from the KB. It reports up to 95% performance on newswire entities and 80% on a challenging public test set.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title block",
+      "span_id": "C0096-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Mark Dredze and Paul McNamee and Delip Rao and Adam Gerber and Tim Finin",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Proceedings footer",
+      "span_id": "C0096-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the 23rd International Conference on Computational Linguistics (Coling 2010)",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Proceedings footer",
+      "span_id": "C0096-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the 23rd International Conference on Computational Linguistics (Coling 2010), pages 277–285, Beijing, August 2010",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0096-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We present a state of the art system for entity disambiguation that not only addresses these challenges but also scales to knowledge bases with several million entries using very little resources.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-02": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0096-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "our approach achieves performance of up to 95% on entities mentioned from newswire and 80% on a public test set that was designed to include challenging queries.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "3 Entity Linking",
+      "span_id": "C0096-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We define entity linking as matching a textual entity mention, possibly identified by a named entity recognizer, to a KB entry, such as a Wikipedia page that is a canonical entry for that entity.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "3.1 Key Issues",
+      "span_id": "C0096-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "There are 3 challenges to entity linking: Name Variations... Entity Ambiguity... Absence.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-03": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0096-D-P001-TEXT-0003",
+      "page": 1,
+      "excerpt": "inserting extracted knowledge into a KB is fraught with challenges arising from natural language ambiguity, textual inconsistencies, and lack of world knowledge.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "5 Entity Linking as Ranking",
+      "span_id": "C0096-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We select a single correct candidate for a query using a supervised machine learning ranker.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "5 Entity Linking as Ranking",
+      "span_id": "C0096-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "We used the library SVMrank to solve this optimization. We used a linear kernel.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "5.5 Document Features",
+      "span_id": "C0096-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "we used a named-entity tagger and relation finder, SERIF... identified name and nominal mentions that were deemed co-referent with the entity mention.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "6 Predicting NIL Mentions",
+      "span_id": "C0096-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "We learn when to predict NIL using the SVM ranker by augmenting Y to include NIL.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3.2 Contributions",
+      "span_id": "C0096-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The remaining sections describe the candidate selection system, features and ranking, and our novel approach learning NILs, followed by an empirical evaluation.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "5 Entity Linking as Ranking",
+      "span_id": "C0096-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "a set of possible entities for this query produced by the selection system above, which ensures that Y is small.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0096-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We adopt a supervised approach, where each of the possible entities contained within Wikipedia are scored for a match to the query entity.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "7 Evaluation",
+      "span_id": "C0096-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "Since our approach relies on supervised learning, we begin by constructing our own training corpus.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4 Candidate Selection for Name Variants",
+      "span_id": "C0096-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Titles that are exact matches... wholly contained in or contain the mention... first letters... known alias... strong string similarity score.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "5 Entity Linking as Ranking; 5.1 Features for Entity Disambiguation",
+      "span_id": "C0096-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "We select a single correct candidate for a query using a supervised machine learning ranker... 200 atomic features represent x based on each candidate query/KB pair... the total number of features grew to 26,569.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "6 Predicting NIL Mentions; 6.1 NIL Features",
+      "span_id": "C0096-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "We learn when to predict NIL using the SVM ranker by augmenting Y to include NIL... We included several features, such as a) the max, mean, and difference between max and mean...",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.2 Contributions",
+      "span_id": "C0096-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "we develop a rich feature set for entity linking that can work with any KB.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "5.3 Wikipedia Features",
+      "span_id": "C0096-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Wikitology... metadata consisting of keywords or categories in a domain-appropriate taxonomy... we computed top-ranked categories for the query documents and used this information as features.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "7.1 TAC-KBP 2009 Experiments",
+      "span_id": "C0096-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "The KB is derived from English Wikipedia pages that contained an infobox. Entries contain basic descriptions (article text) and attributes.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "5.5 Document Features",
+      "span_id": "C0096-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "we used a named-entity tagger and relation finder, SERIF... identified name and nominal mentions that were deemed co-referent with the entity mention.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "5.5 Document Features",
+      "span_id": "C0096-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "we used these as features as well as the predicted NE type for the entity mention in the document text.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3 Entity Linking",
+      "span_id": "C0096-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "The system can either return a matching entry or NIL to indicate there is no matching entry.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3 Entity Linking",
+      "span_id": "C0096-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "An entity linking query is a request to link a textual entity mention in a given document to an entry in a KB.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "7.1 TAC-KBP 2009 Experiments",
+      "span_id": "C0096-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "Entries contain basic descriptions (article text) and attributes.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "5 Entity Linking as Ranking",
+      "span_id": "C0096-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The ith query is given by the pair {xi, yi}, where we assume at most one correct KB entry.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "7.1 TAC-KBP 2009 Experiments",
+      "span_id": "C0096-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The TAC-KBP query set contains 3904 entity mentions for 560 distinct entities.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3 Entity Linking",
+      "span_id": "C0096-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The system can either return a matching entry or NIL to indicate there is no matching entry.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "8 Conclusion",
+      "span_id": "C0096-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "We presented a state of the art system to disambiguate entity mentions in text and link them to a knowledge base.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.1 Scaling Candidate Selection; 5 Entity Linking as Ranking",
+      "span_id": "C0096-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Our Python implementation with indexing features and four threads achieved up to 80× speedup... We used the library SVMrank... a linear kernel... C as 0.01 times the number of training examples.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "5.2 Features for Name Variants; 5.5 Document Features",
+      "span_id": "C0096-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Another measure... was computed by training finite-state transducers... we used a named-entity tagger and relation finder, SERIF.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "5.3–5.5",
+      "span_id": "C0096-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "we used Google’s PageRank... IDF values were approximated using counts from the Google 5-gram dataset.",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "7 Evaluation; 7.1 TAC-KBP 2009 Experiments",
+      "span_id": "C0096-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "The total of 1615 training examples included 539 (33.4%) PER, 618 (38.3%) ORG, and 458 (28.4%) GPE entity mentions... train (908 examples) and development (707 examples) split.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "7.1 TAC-KBP 2009 Experiments",
+      "span_id": "C0096-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The TAC-KBP query set contains 3904 entity mentions for 560 distinct entities... Most queries were missing from the KB (57%).",
+      "confidence": "medium"
+    },
+    "datasets-17-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "7.3 Experiments on Microsoft News Data",
+      "span_id": "C0096-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "20 news stories from MSNBC with 642 entity mentions manually linked to Wikipedia and another 113 mentions not having any corresponding link to Wikipedia... we used 759 total entities.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Table 1; 7.1 TAC-KBP 2009 Experiments",
+      "span_id": "C0096-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "Table 1: Micro and macro-averaged accuracy for TAC-KBP data... micro-averaged accuracy – averaged over all queries – and macro-averaged accuracy – averaged over each unique entity.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "7.1 TAC-KBP 2009 Experiments",
+      "span_id": "C0096-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The candidate selection phase obtained a recall of 98.6%... returned a mean of 76 candidates per query, but the median was 15.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Table 3",
+      "span_id": "C0096-D-P008-TABLE-0003",
+      "page": 8,
+      "excerpt": "Table 3: Micro-average results for Microsoft data.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Table 1",
+      "span_id": "C0096-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "Micro and macro-averaged accuracy for TAC-KBP data compared to best and median reported performance.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "7.2 Feature Effectiveness",
+      "span_id": "C0096-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "The baseline includes only features based on string similarity or aliases and is not effective at finding correct entries and strongly favors NIL predictions.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-03": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Table 3; 7.3 Experiments on Microsoft News Data",
+      "span_id": "C0096-D-P008-TABLE-0003",
+      "page": 8,
+      "excerpt": "Cucerzan (2007) 0.914... our results (94.7%) appear to be at least on par with Cucerzan’s system (91.4% overall accuracy).",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "7 Evaluation",
+      "span_id": "C0096-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "The TAC-KBP and Microsoft News data sets were held out for final tests. A model trained on all 1615 examples was used for experiments.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "7.1 TAC-KBP 2009 Experiments",
+      "span_id": "C0096-D-P007-TABLE-0002",
+      "page": 7,
+      "excerpt": "Results are shown for all features as well as removing a small number of features using feature selection on development data.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "7.3 Experiments on Microsoft News Data",
+      "span_id": "C0096-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "We learned a new model on the training data above using a reduced feature set to increase speed... we manually confirmed NIL answers and new answers... an exact comparison is not possible.",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 1; 7.1 TAC-KBP 2009 Experiments",
+      "span_id": "C0096-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "All Features: All 0.7984, non-NIL 0.7063, NIL 0.8677... Macro-Averaged All Features: All 0.7695, non-NIL 0.6097, NIL 0.8464... candidate selection phase obtained a recall of 98.6%.",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 2; Table 3; 7.3 Experiments on Microsoft News Data",
+      "span_id": "C0096-D-P008-TABLE-0002",
+      "page": 8,
+      "excerpt": "All 0.7984 0.7063 0.8677... All 452 187 0.9469 0.9245 0.9786... resolved each query in 1.98 seconds (median).",
+      "confidence": "medium"
+    },
+    "main_results-21-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "7.2 Feature Effectiveness",
+      "span_id": "C0096-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "Removing all feature combinations would have improved overall performance to 81.05% by gaining on non-NIL for a small decline on NIL detection.",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.1 Scaling Candidate Selection",
+      "span_id": "C0096-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Our Python implementation with indexing features and four threads achieved up to 80× speedup compared to naive implementation... Omitting the Dice computation yielded results in a few milliseconds.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "7.1 TAC-KBP 2009 Experiments",
+      "span_id": "C0096-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The candidate selection phase obtained a recall of 98.6%... a mean of 76 candidates per query, but the median was 15.",
+      "confidence": "medium"
+    },
+    "strengths-22-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Table 1; 7.1 TAC-KBP 2009 Experiments",
+      "span_id": "C0096-D-P007-TABLE-0003",
+      "page": 7,
+      "excerpt": "NIL 0.8677... We obtained... the best results for NIL detection with micro-averaged accuracy, which shows the advantage of our approach to learning NIL.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "7.1 TAC-KBP 2009 Experiments",
+      "span_id": "C0096-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "We observed that ORGs were more difficult, due to the greater variation and complexity in their naming.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "7.1 TAC-KBP 2009 Experiments",
+      "span_id": "C0096-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "Missed candidates included Iron Lady... PCC... and Queen City.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "7.2 Feature Effectiveness; 7.3 Experiments on Microsoft News Data",
+      "span_id": "C0096-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "The ablation study showed considerable redundancy across feature groupings... an exact comparison is not possible.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4 Candidate Selection for Name Variants",
+      "span_id": "C0096-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "We did not optimize the thresholds for string similarity, but these could obviously be tuned to minimize the candidate sets and maximize recall.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "7.3 Experiments on Microsoft News Data",
+      "span_id": "C0096-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "One issue with our KB was that it was derived from infoboxes in Wikipedia’s Oct 2008 version which has both new entities, and is missing entities... entities not having an infobox were left out.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "7.1 TAC-KBP 2009 Experiments",
+      "span_id": "C0096-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "Missed candidates included Iron Lady... PCC... and Queen City.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4 Candidate Selection for Name Variants",
+      "span_id": "C0096-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "these could obviously be tuned to minimize the candidate sets and maximize recall.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4.1 Scaling Candidate Selection",
+      "span_id": "C0096-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "more than 95% of the processing time was consumed by Dice score computation, which was only required to correctly retrieve less than 4% of the training queries. Omitting the Dice computation yielded results in a few milliseconds.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "7.1 TAC-KBP 2009 Experiments",
+      "span_id": "C0096-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "We observed that ORGs were more difficult, due to the greater variation and complexity in their naming.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.1 Key Issues",
+      "span_id": "C0096-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Processing large text collections virtually guarantees that many entities will not appear in the KB (NIL), even for large KBs.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "7.3 Experiments on Microsoft News Data",
+      "span_id": "C0096-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "One issue with our KB was that it was derived from infoboxes in Wikipedia’s Oct 2008 version which has both new entities, and is missing entities... an exact comparison is not possible.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "8 Conclusion",
+      "span_id": "C0096-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "we described several important challenges in the entity linking task including handling variations in entity names, ambiguity in entity mentions, and missing entities in the KB.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "8 Conclusion",
+      "span_id": "C0096-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "To spur further research in these areas we are releasing our entity linking system.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "7 Evaluation",
+      "span_id": "C0096-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "Data available from www.dredze.com",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Entity linking for knowledge-base population: map a textual person, organization, or geo-political-entity mention in a document to its canonical KB/Wikipedia entry, or return NIL when no corresponding KB entry exists. The method targets name variants, mention ambiguity, and KB absence, which otherwise impede integrating extracted facts into an existing KB.",
+  "methodology": {
+    "primary_family": "Classical machine learning",
+    "secondary_families": [
+      "Linguistic and dependency-based extraction",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "supervised",
+    "description": "Execution pipeline: (1) receive an entity-linking query consisting of a textual mention and its document; a named-entity recognizer may identify the mention. (2) Retrieve a compact candidate set from a Wikipedia-derived KB using exact/containment/acronym/alias and string-similarity title matches; an indexed implementation precomputes non-string filters and skip-bigram Dice features and serves the KB concurrently. (3) For each query–candidate pair, build roughly 200 atomic features, expanded to 26,569 conjunction features: normalized/exact and approximate name matching, acronym and alias evidence, trained finite-state-transducer name similarity, Wikipedia graph/category and Google popularity evidence, document–KB text similarity, KB facts, and predicted/KB entity types. SERIF supplies named and nominal coreferent mentions used as document features. (4) Train a linear maximum-margin SVMrank so the gold candidate outranks incorrect candidates. (5) Add NIL as a rankable candidate and score NIL-specific aggregate and match/context features; output the highest-ranked KB entry or NIL. No LLM, prompting, transformer, generative graph extraction, relation extraction output, or task-specific fine-tuning is reported."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The system does not require an ontology or schema for its core candidate selection and ranking. Its evaluated KB is derived from English Wikipedia pages containing infoboxes, whose article text and attributes provide candidate evidence and types. Optional Wikipedia-specific features include graph statistics, Wikitology category/taxonomy evidence, and Google results; Wikitology categories are used as ranking and NIL features rather than as output schema discovery.",
+    "evidence": [
+      {
+        "span_id": "C0096-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "we develop a rich feature set for entity linking that can work with any KB."
+      },
+      {
+        "span_id": "C0096-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "Wikitology... metadata consisting of keywords or categories in a domain-appropriate taxonomy... we computed top-ranked categories for the query documents and used this information as features."
+      },
+      {
+        "span_id": "C0096-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "The KB is derived from English Wikipedia pages that contained an infobox. Entries contain basic descriptions (article text) and attributes."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Entity typing",
+    "Coreference resolution",
+    "Entity resolution and linking"
+  ],
+  "input_output": {
+    "input_type": "An entity-linking query: a textual entity mention in a document, possibly supplied by a named-entity recognizer, plus a Wikipedia-derived knowledge base whose entries include titles, article text, attributes, and types.",
+    "input_granularity": "One entity mention within its source document is processed per query; evaluation consists of thousands of mention-level queries, with document-level context used for scoring.",
+    "output_representation": "One selected canonical KB entry (a Wikipedia-derived page/node) for each mention, or the special NIL outcome if the entity has no matching KB entry; it produces entity links for KB population rather than triples or a complete graph serialization."
+  },
+  "models_and_tools": [
+    "Linear-kernel SVMrank maximum-margin ranking model; slack parameter C = 0.01 times the number of training examples; swapped-pairs loss.",
+    "Candidate retrieval index with precomputed non-string filters and indexed skip-bigram Dice scores; concurrent KB serving with four threads in the reported Python implementation.",
+    "Trained finite-state transducers for name-pair similarity, using a global log-linear model.",
+    "SERIF named-entity tagger and relation finder for entity types and named/nominal coreferent mentions.",
+    "Wikipedia/Infobox KB, Wikipedia redirects, class-specific and Freebase-derived alias lists, Wikitology, Wikipedia graph statistics, Google PageRank/results, and Google 5-gram counts for approximate IDF."
+  ],
+  "datasets": [
+    "Author-constructed supervised training corpus: 1,496 highlighted named-entity mentions from TAC-KBP news documents plus 119 TAC-KBP sample queries; 1,615 examples total (539 PER, 618 ORG, 458 GPE), 80.5% linked to 300 unique KB entities; train/development split of 908/707.",
+    "TAC-KBP 2009 entity-linking test set: 3,904 entity mentions for 560 distinct entities; 69% organization queries and 57% NIL queries.",
+    "Microsoft News Data used by Cucerzan (2007): 20 MSNBC news stories with 642 manually Wikipedia-linked mentions and 113 unlinked mentions; because one article was unavailable, the authors used 759 total entities and removed 297 items not recognized as entities by SERIF.",
+    "Knowledge base: English Wikipedia pages with an infobox, using the October 2008 version for Microsoft News evaluation; 818,000 entries in candidate selection, with 35% PER/ORG/GPE."
+  ],
+  "evaluation": {
+    "metrics": [
+      "Micro-averaged entity-linking accuracy over all queries.",
+      "Macro-averaged entity-linking accuracy averaged over unique entities.",
+      "Accuracy separately for all, non-NIL, and NIL queries.",
+      "Candidate-selection recall.",
+      "Per-class micro-average accuracy for NIL, GPE, ORG, and PER on Microsoft News Data.",
+      "Median query processing time and candidate-set size statistics."
+    ],
+    "baselines": [
+      "TAC-KBP reported best and median system performance, as presented in Table 1.",
+      "A small candidate-selection baseline using only string-similarity and alias features for the additive feature study.",
+      "Cucerzan (2007) reported overall accuracy of 0.914 on Microsoft News Data."
+    ],
+    "setting": "The authors developed features using an author-created supervised corpus split into 908 training and 707 development examples, then trained on all 1,615 examples for held-out final tests on TAC-KBP 2009 and Microsoft News. TAC-KBP comparisons report all-features and feature-selected variants alongside best/median reported results. Microsoft News evaluation used a reduced feature set for speed, manually checked NIL and newly proposed answers caused by KB-version mismatch, and therefore is not an exact comparison with Cucerzan (2007)."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "On TAC-KBP, the all-features system achieved 0.7984 micro-averaged accuracy overall, 0.7063 for non-NIL, and 0.8677 for NIL; macro-averaged accuracies were 0.7695 overall, 0.6097 non-NIL, and 0.8464 NIL. The feature-selected variant achieved 0.7704 macro overall and 0.8919 micro NIL accuracy.",
+      "On held-out TAC-KBP, candidate selection achieved 98.6% recall; the mean, median, and maximum candidates per query were 76, 15, and 2,772, respectively.",
+      "The feature-addition baseline achieved 0.7264 overall micro accuracy, 0.4621 non-NIL, and 0.9251 NIL; adding named-entity analysis produced 0.7661 overall and 0.7181 non-NIL; all features produced 0.7984 overall.",
+      "On Microsoft News, the reduced-feature system achieved 0.9469 micro accuracy overall (0.9245 non-NIL; 0.9786 NIL) on 452 retained recognized-entity queries. Per class, it achieved 0.9696 GPE, 0.8348 ORG, and 0.9951 PER accuracy. Median resolution time was 1.98 seconds per query.",
+      "Removing all feature combinations in an ablation improved overall TAC-KBP performance to 81.05%, due to a non-NIL gain and small NIL decline."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0096-D-P007-TABLE-0001",
+        "page": 7,
+        "excerpt": "All Features: All 0.7984, non-NIL 0.7063, NIL 0.8677... Macro-Averaged All Features: All 0.7695, non-NIL 0.6097, NIL 0.8464... candidate selection phase obtained a recall of 98.6%."
+      },
+      {
+        "span_id": "C0096-D-P008-TABLE-0002",
+        "page": 8,
+        "excerpt": "All 0.7984 0.7063 0.8677... All 452 187 0.9469 0.9245 0.9786... resolved each query in 1.98 seconds (median)."
+      },
+      {
+        "span_id": "C0096-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "Removing all feature combinations would have improved overall performance to 81.05% by gaining on non-NIL for a small decline on NIL detection."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author claim: the candidate-selection method handles name variants while keeping candidate lists manageable for a large-scale KB; indexed retrieval, concurrent serving, and optional omission of Dice computation make it practical at million-entry scale.",
+      "Experimental result: candidate selection retained high recall (98.6% on TAC-KBP) while reducing the search space substantially; the authors report a median of 15 candidates per TAC-KBP query.",
+      "Experimental result: integrating NIL into ranking achieved strong NIL performance, including 0.8677 all-feature micro NIL accuracy on TAC-KBP and 0.9786 NIL accuracy on Microsoft News.",
+      "Experimental result: document-level named-entity/coreference analysis, popularity, and text-comparison features materially improved non-NIL accuracy relative to a string/alias baseline.",
+      "Review-level inference: treating NIL as a rankable alternative lets evidence of candidate absence influence the same decision as entity selection, avoiding a separate threshold-selection step."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0096-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "Our Python implementation with indexing features and four threads achieved up to 80× speedup compared to naive implementation... Omitting the Dice computation yielded results in a few milliseconds."
+      },
+      {
+        "span_id": "C0096-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "The candidate selection phase obtained a recall of 98.6%... a mean of 76 candidates per query, but the median was 15."
+      },
+      {
+        "span_id": "C0096-D-P007-TABLE-0003",
+        "page": 7,
+        "excerpt": "NIL 0.8677... We obtained... the best results for NIL detection with micro-averaged accuracy, which shows the advantage of our approach to learning NIL."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author observation: organizations are harder than persons and geo-political entities because organization names vary more and are more complex; in Microsoft News, ORG accuracy (0.8348) is below GPE (0.9696) and PER (0.9951).",
+      "Author observation: the candidate retriever misses metaphorical references, incomplete acronyms, translated/reordered names, and nicknames; failure to retrieve the correct candidate precludes correct linking.",
+      "Author observation: feature groups have substantial redundancy; removing all feature combinations improved overall performance to 81.05% in one ablation.",
+      "Review-level inference: the approach has substantial external-resource and feature-engineering dependence (Wikipedia/infobox content, aliases, Google signals, Wikitology, SERIF, and manually constructed training links), which may complicate reproducibility and portability despite its KB-independent core features.",
+      "Review-level inference: scores from the Microsoft News experiment should not be treated as a strict head-to-head comparison with Cucerzan (2007), because the KB version differed, the authors manually reviewed NIL/new answers, and they state exact comparison was not possible."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0096-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "We observed that ORGs were more difficult, due to the greater variation and complexity in their naming."
+      },
+      {
+        "span_id": "C0096-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "Missed candidates included Iron Lady... PCC... and Queen City."
+      },
+      {
+        "span_id": "C0096-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "The ablation study showed considerable redundancy across feature groupings... an exact comparison is not possible."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The string-similarity thresholds used in candidate selection were not optimized; the authors state they could be tuned to reduce candidate sets and increase recall.",
+      "The evaluated Wikipedia-derived KB is incomplete and temporally mismatched for some Microsoft News queries: it used an October 2008 version, has new and missing entities relative to the earlier benchmark KB, and omits entities without infoboxes.",
+      "Candidate selection has imperfect recall and misses hard name variants such as incomplete acronyms, metaphorical references, and nicknames.",
+      "The reported Microsoft News comparison with Cucerzan (2007) is not exact because one source news article was unavailable, the KB versions differed, and NIL/new answers were manually checked."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0096-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "We did not optimize the thresholds for string similarity, but these could obviously be tuned to minimize the candidate sets and maximize recall."
+      },
+      {
+        "span_id": "C0096-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "One issue with our KB was that it was derived from infoboxes in Wikipedia’s Oct 2008 version which has both new entities, and is missing entities... entities not having an infobox were left out."
+      },
+      {
+        "span_id": "C0096-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "Missed candidates included Iron Lady... PCC... and Queen City."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed improvement: tune candidate-selection string-similarity thresholds to minimize candidate-set sizes while maximizing recall.",
+      "Author-described efficiency improvement: omit Dice-score computation where its small recall contribution does not justify its runtime cost; the paper reports it consumed over 95% of processing time but retrieved fewer than 4% of training queries correctly.",
+      "Review-level inference: improve difficult organization and nonliteral/alias cases by expanding or adapting alias/name-variation resources and by designing retrieval features that better capture incomplete acronyms, translated word order, and contextual nicknames.",
+      "Review-level inference: evaluate portability by replacing Wikipedia/Google/Wikitology-derived signals with equivalents available in a target curated KB, then measuring the resulting performance and NIL calibration separately."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0096-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "these could obviously be tuned to minimize the candidate sets and maximize recall."
+      },
+      {
+        "span_id": "C0096-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "more than 95% of the processing time was consumed by Dice score computation, which was only required to correctly retrieve less than 4% of the training queries. Omitting the Dice computation yielded results in a few milliseconds."
+      },
+      {
+        "span_id": "C0096-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "We observed that ORGs were more difficult, due to the greater variation and complexity in their naming."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-reported unresolved problem: accurately link mentions whose referent is absent from the KB while also distinguishing plausible but incorrect candidates; the paper addresses this through NIL ranking but reports remaining retrieval and KB-coverage failures.",
+      "Review-level inference: resolving all entity mentions in open-domain text remains constrained by KB coverage, including entities that lack a canonical/infobox entry and entities introduced after a KB snapshot.",
+      "Review-level inference: reliable comparison across entity-linking systems remains difficult when systems use different KB snapshots, source-document availability, manual adjudication practices, and feature subsets."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0096-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "Processing large text collections virtually guarantees that many entities will not appear in the KB (NIL), even for large KBs."
+      },
+      {
+        "span_id": "C0096-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "One issue with our KB was that it was derived from infoboxes in Wikipedia’s Oct 2008 version which has both new entities, and is missing entities... an exact comparison is not possible."
+      },
+      {
+        "span_id": "C0096-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "we described several important challenges in the entity linking task including handling variations in entity names, ambiguity in entity mentions, and missing entities in the KB."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that its entity-linking system is being released. It also states that the authors’ training data were available from www.dredze.com. The PDF does not provide a persistent repository URL, license, package version, or explicit availability statement for all evaluation data."
+}

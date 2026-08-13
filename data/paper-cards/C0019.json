@@ -1,0 +1,682 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0019",
+    "title": "Leveraging LLM for Automated Ontology Extraction and Knowledge Graph Generation",
+    "pdf_path": "data/batches/batch-02/C0019.pdf",
+    "authors": [
+      "Mohammad Sadeq Abolhasani",
+      "Rong Pan"
+    ],
+    "year": "not_reported",
+    "venue": "not_reported",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The paper presents OntoKGen, an LLM-assisted interactive pipeline for extracting a user-tailored ontology from targeted RAM-domain knowledge, generating a knowledge graph from comprehensive engineering text under that confirmed ontology, and optionally producing Cypher MERGE queries for Neo4j. The system uses an adaptive iterative chain-of-thought procedure and human confirmation to reduce ontology ambiguity and support structured retrieval, analysis, and future RAG use.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title block",
+      "span_id": "C0019-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Mohammad Sadeq Abolhasani, Arizona State University; Rong Pan, PhD, Arizona State University",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-02-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Summary & Conclusions",
+      "span_id": "C0019-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Our work addresses this challenge by presenting OntoKGen, a Genuine pipeline for Ontology extraction and Knowledge Graph (KG) generation.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-02-02": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Summary & Conclusions",
+      "span_id": "C0019-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "OntoKGen leverages Large Language Models (LLMs) through an interactive user interface guided by our adaptive iterative Chain of Thought (CoT) algorithm.",
+      "confidence": "medium"
+    },
+    "problem_addressed-03-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Summary & Conclusions",
+      "span_id": "C0019-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Extracting relevant and structured knowledge from large, complex technical documents within the Reliability and Maintainability (RAM) domain is labor-intensive and prone to errors.",
+      "confidence": "medium"
+    },
+    "problem_addressed-03-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "4.1 Problem Definition",
+      "span_id": "C0019-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "Traditional knowledge extraction methods are both labor-intensive and error-prone, often resulting in incomplete or inconsistent knowledge representations.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-04-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3.1 Overview of the Proposed System",
+      "span_id": "C0019-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "OntoKGen integrates OpenAI’s API to harness the power of LLMs to automate the extraction of domain-specific ontologies and generate KGs based on user inputs.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-04-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3.2 Chain of Thought (CoT) Prompting",
+      "span_id": "C0019-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "We incorporate our adaptive iterative CoT algorithm to ensure that the LLM executes tasks with consistency and precision.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-05-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.4 Knowledge Graph Generation",
+      "span_id": "C0019-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "the ontology now serves as the structural blueprint for the KG generation and reflects all user-specific requirements.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-05-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.5 User Interface",
+      "span_id": "C0019-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "Through this interface, users can iteratively refine both the ontology and KG.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-06-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3.1 Overview of the Proposed System",
+      "span_id": "C0019-D-P002-PICTURE-0001",
+      "page": 2,
+      "excerpt": "The system prompts users to provide either a predefined ontology or a piece of text... Once the ontology is confirmed, the user is asked to provide comprehensive texts... OntoKGen then meticulously identifies relevant instances.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-06-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "4.4–4.5 Knowledge Graph and Cypher Query Generation",
+      "span_id": "C0019-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Following the adaptive iterative CoT algorithm, OntoKGen carries out KG generation in two main phases: Creation and Review.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-07-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "3.2 Chain of Thought (CoT) Prompting",
+      "span_id": "C0019-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Our approach goes further by not only asking the LLM to perform tasks step-by-step but also clearly defining each step.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-07-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "3.1 Overview of the Proposed System",
+      "span_id": "C0019-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "OntoKGen integrates OpenAI’s API... based on user inputs without requiring local computational resources.",
+      "confidence": "medium"
+    },
+    "methodology-description-08-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4.3 Ontology Extraction Process",
+      "span_id": "C0019-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Upon user confirmation of the identified concepts, OntoKGen then identified relationships... Finally, the system reviews the targeted knowledge to identify additional attributes for nodes beyond id and name.",
+      "confidence": "medium"
+    },
+    "methodology-description-08-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4.4 Knowledge Graph Generation Process",
+      "span_id": "C0019-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "Phase 1: Creation... Step 1: Identify Concepts... Step 2: Identify Relationships... Step 3: Identify Properties.",
+      "confidence": "medium"
+    },
+    "methodology-description-08-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4.4–4.5 Knowledge Graph Generation Process",
+      "span_id": "C0019-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "Step 4: Review the Text... Step 5: Review the Graph... Upon approval, OntoKGen generates the necessary Cypher queries using the MERGE command.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-09-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.3 Ontology Extraction",
+      "span_id": "C0019-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "An ontology defines concepts (nodes), relationships (edges), and the attributes (properties) of these nodes.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-09-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "4.3 Ontology Extraction Process",
+      "span_id": "C0019-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "Concepts: Equipment System, Equipment States... Relationships: Has State, Has Sub-State, Has Activity, and Has Metric. Properties: Mandatory properties for each node (name, id).",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-09-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.4 Knowledge Graph Generation",
+      "span_id": "C0019-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "The ontology serves as a blueprint, ensuring the KG is generated with a clear and consistent representation of domain-specific knowledge.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-10-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.3 Ontology Extraction",
+      "span_id": "C0019-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "our adaptive ontology extraction algorithm involves identifying and confirming concepts, relationships, and properties through a series of structured steps.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-10-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "4.4 Knowledge Graph Generation Process",
+      "span_id": "C0019-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "OntoKGen starts by examining the comprehensive text to find instances that match the first concept... OntoKGen then identifies the first relationship... and creates relationships between the corresponding nodes.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-10-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "4.4 Knowledge Graph Generation Process",
+      "span_id": "C0019-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "OntoKGen reviews the entire comprehensive text again... Any missing nodes or relationships are added... [it] checks for unconnected nodes and adds necessary relationships.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-11-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3.1 Overview of the Proposed System",
+      "span_id": "C0019-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The system prompts users to provide either a predefined ontology or a piece of text (targeted knowledge).",
+      "confidence": "medium"
+    },
+    "input_output-input_type-11-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "4.2 Data Collection",
+      "span_id": "C0019-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The document contains text, tables, and graphs with the primary focus on the textual content, which formed the basis for ontology extraction and KG generation.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-12-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "4.2 Data Collection",
+      "span_id": "C0019-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The targeted knowledge can range from a straightforward query... to more detailed one or even a part of the comprehensive text.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-12-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "4.4 Knowledge Graph Generation Process",
+      "span_id": "C0019-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "OntoKGen then requests the comprehensive text, in this case \"Background Statement for Semiconductor Draft Document 6578\".",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-13-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.6 Cypher Query Generation",
+      "span_id": "C0019-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "using Cypher Query. By utilizing the MERGE command, the system ensures that nodes, relationships, and properties are created simultaneously.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-13-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "4.6 Results and Discussion",
+      "span_id": "C0019-D-P005-CAPTION-0002",
+      "page": 5,
+      "excerpt": "Figure 5 Generated Knowledge Graph in Neo4j... The KG includes various nodes, relationships, and properties.",
+      "confidence": "medium"
+    },
+    "models_and_tools-14-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.1 Overview of the Proposed System",
+      "span_id": "C0019-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "OntoKGen integrates OpenAI’s API to harness the power of LLMs.",
+      "confidence": "medium"
+    },
+    "models_and_tools-14-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.5–3.6 User Interface and Cypher Query Generation",
+      "span_id": "C0019-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "Our user interface also maintains contextual awareness throughout the process... OntoKGen facilitates the transition of the KG to the Neo4j... using Cypher Query.",
+      "confidence": "medium"
+    },
+    "datasets-15-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.2 Data Collection",
+      "span_id": "C0019-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "the document titled Background Statement for Semiconductor Draft Document 6578 was used as the primary source for comprehensive text.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-16-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4 Case Study",
+      "span_id": "C0019-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "This case study demonstrates the implementation of OntoKGen within the RAM domain.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-16-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.6 Results and Discussion",
+      "span_id": "C0019-D-P005-CAPTION-0002",
+      "page": 5,
+      "excerpt": "Figure 5 Generated Knowledge Graph in Neo4j; Figure 6 Extracted node’s properties.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-16-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "5 Conclusion and Future Works",
+      "span_id": "C0019-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "Although we have set the foundation for competency question answering to evaluate the method's accuracy, conducting this quantitative analysis and presenting those results are beyond the scope and limitations of this paper.",
+      "confidence": "medium"
+    },
+    "main_results-17-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.6 Results and Discussion",
+      "span_id": "C0019-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "The generated KG in Neo4j demonstrates OntoKGen's ability to transform comprehensive technical documents into structured, actionable knowledge.",
+      "confidence": "medium"
+    },
+    "main_results-17-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.6 Results and Discussion — Accuracy and Completeness",
+      "span_id": "C0019-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Every concept, sub-state, activity, and metric is correctly represented.",
+      "confidence": "medium"
+    },
+    "main_results-17-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "5 Conclusion and Future Works",
+      "span_id": "C0019-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "conducting this quantitative analysis and presenting those results are beyond the scope and limitations of this paper.",
+      "confidence": "medium"
+    },
+    "strengths-18-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Summary & Conclusions",
+      "span_id": "C0019-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "OntoKGen recommends an ontology grounded in best practices... all while giving the user complete control over the final ontology.",
+      "confidence": "medium"
+    },
+    "strengths-18-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.4 Knowledge Graph Generation Process",
+      "span_id": "C0019-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Any missing nodes or relationships are added as required... It checks for unconnected nodes and adds necessary relationships.",
+      "confidence": "medium"
+    },
+    "strengths-18-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.6 Cypher Query Generation",
+      "span_id": "C0019-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "the MERGE command... prevents issues such as trying to create relationships for non-existent nodes and avoids duplicating nodes.",
+      "confidence": "medium"
+    },
+    "weaknesses-19-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4 Case Study",
+      "span_id": "C0019-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "This case study demonstrates the implementation of OntoKGen within the RAM domain.",
+      "confidence": "medium"
+    },
+    "weaknesses-19-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.3 Ontology Extraction Process",
+      "span_id": "C0019-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "Upon user confirmation... User feedback is integrated to refine these relationships... for final approval.",
+      "confidence": "medium"
+    },
+    "weaknesses-19-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "5 Conclusion and Future Works",
+      "span_id": "C0019-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "conducting this quantitative analysis and presenting those results are beyond the scope and limitations of this paper.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-20-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "5 Conclusion and Future Works",
+      "span_id": "C0019-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "For this paper, we employed a human-in-the-loop approach to evaluate the performance of OntoKGen.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-20-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "5 Conclusion and Future Works",
+      "span_id": "C0019-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "conducting this quantitative analysis and presenting those results are beyond the scope and limitations of this paper.",
+      "confidence": "medium"
+    },
+    "possible_improvements-21-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "5 Conclusion and Future Works",
+      "span_id": "C0019-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "we have set the foundation for competency question answering to evaluate the method's accuracy... [this] will be addressed in future work.",
+      "confidence": "medium"
+    },
+    "possible_improvements-21-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "5 Conclusion and Future Works",
+      "span_id": "C0019-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Our Future work will focus on leveraging the generated KGs as sources in Retrieval-Augmented Generation (RAG) systems... implement live data manipulation directly from the interactive interface.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-22-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "2 Literature Review",
+      "span_id": "C0019-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "there remain gaps in handling broader and more complex topics, such as those in lengthy and intricate engineering documents.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-22-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5 Conclusion and Future Works",
+      "span_id": "C0019-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "conducting this quantitative analysis and presenting those results are beyond the scope and limitations of this paper.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-22-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.5 User Interface",
+      "span_id": "C0019-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "The LLM uses the entire conversation history... to maintain context, reduce errors and hallucinations, and improve the overall quality of the final KG.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Automate extraction and organization of relevant, structured knowledge from long, complex Reliability and Maintainability technical documents, especially semiconductor-equipment material, because manual extraction and KG construction are labor-intensive, error-prone, and may yield incomplete or inconsistent representations. The objective is a user-tailored ontology and KG that supports querying, analysis, and decision-making.",
+  "methodology": {
+    "primary_family": "Zero-shot and few-shot LLM prompting (without task-specific model training)",
+    "secondary_families": [
+      "Ontology-constrained and schema-guided methods",
+      "Hybrid NLP and LLM methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "zero_shot",
+    "description": "OntoKGen is an interactive, human-in-the-loop LLM system using OpenAI's API and an adaptive iterative CoT algorithm. Execution order: (1) the user supplies a predefined ontology or targeted text; (2) the LLM proposes/refines concepts, then relationships, then node properties, each confirmed by the user; (3) the confirmed ontology becomes the schema blueprint; (4) comprehensive text is supplied; (5) creation iterates over ontology concepts to create nodes and properties, then over relationships to create edges, then fills properties; (6) review re-reads the text for missing aligned instances/relations and reviews the graph for incorrect, unconnected, or missing links; (7) on approval, the system generates Cypher MERGE commands to populate Neo4j. Conversation history is retained to maintain context and guide users back to the active stage."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The ontology is extracted and confirmed before KG generation and explicitly constrains it. It comprises concepts/node classes, relationships/edge types, and node attributes. In the case study it included Equipment System, Equipment States, Sub-States, Activities, and Metrics; Has State, Has Sub-State, Has Activity, and Has Metric; mandatory id and name plus a user-specified brief explanation. The system uses the ontology as a structural blueprint to avoid ambiguity and enforce a consistent graph.",
+    "evidence": [
+      {
+        "span_id": "C0019-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "An ontology defines concepts (nodes), relationships (edges), and the attributes (properties) of these nodes."
+      },
+      {
+        "span_id": "C0019-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "Concepts: Equipment System, Equipment States... Relationships: Has State, Has Sub-State, Has Activity, and Has Metric. Properties: Mandatory properties for each node (name, id)."
+      },
+      {
+        "span_id": "C0019-D-P003-TEXT-0003",
+        "page": 3,
+        "excerpt": "The ontology serves as a blueprint, ensuring the KG is generated with a clear and consistent representation of domain-specific knowledge."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Entity and concept extraction",
+    "Relation and triple extraction",
+    "Ontology or schema discovery",
+    "Graph construction",
+    "Graph validation and correction"
+  ],
+  "input_output": {
+    "input_type": "User-provided predefined ontology or targeted natural-language text for ontology extraction, followed by comprehensive unstructured engineering-domain text; the source document may contain text, tables, and graphs, but the case study primarily uses textual content.",
+    "input_granularity": "A short user query, detailed targeted text, or part of the comprehensive document is used initially; then the complete source document is reviewed, described as lengthy and technically complex.",
+    "output_representation": "A property knowledge graph of nodes, typed relationships, and node properties, visualized and stored in Neo4j; optional Cypher MERGE commands create the nodes and relationships. The case-study graph represents equipment-system states, sub-states, activities, and metrics."
+  },
+  "models_and_tools": [
+    "OpenAI API",
+    "Large language model (specific model not reported)",
+    "Adaptive iterative Chain-of-Thought prompting algorithm",
+    "Interactive conversational user interface",
+    "Neo4j",
+    "Cypher Query using MERGE"
+  ],
+  "datasets": [
+    "Background Statement for Semiconductor Draft Document 6578 (case-study source document; RAM domain; semiconductor manufacturing equipment)"
+  ],
+  "evaluation": {
+    "metrics": "not_reported",
+    "baselines": "not_reported",
+    "setting": "Single qualitative human-in-the-loop case study in the RAM domain, applied to semiconductor manufacturing equipment. The authors visually inspect the generated Neo4j KG and describe accuracy, completeness, efficiency, and user interaction; there is no reported quantitative evaluation, benchmark comparison, baseline, dataset split, or numerical metric. Competency-question-based accuracy evaluation is only proposed for future work."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "The case study produced a Neo4j KG grounded in a confirmed ontology of equipment-system concepts, states, sub-states, activities, metrics, relationships, and properties.",
+      "The authors report qualitatively that every concept, sub-state, activity, and metric in the comprehensive text was represented in the graph.",
+      "The KG-generation phase required minimal user interaction after ontology confirmation, while the ontology phase incorporated user-specific requirements.",
+      "No quantitative accuracy, completeness, efficiency, or competency-question results are reported; therefore the paper provides no numerical performance results or comparative claims."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0019-D-P005-TEXT-0001",
+        "page": 5,
+        "excerpt": "The generated KG in Neo4j demonstrates OntoKGen's ability to transform comprehensive technical documents into structured, actionable knowledge."
+      },
+      {
+        "span_id": "C0019-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "Every concept, sub-state, activity, and metric is correctly represented."
+      },
+      {
+        "span_id": "C0019-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "conducting this quantitative analysis and presenting those results are beyond the scope and limitations of this paper."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author-stated: a confirmed, user-tailored ontology constrains downstream extraction and gives the user control over the final representation.",
+      "Author-stated: the ordered creation and review steps check the source text for missing ontology-aligned items and check the graph for unconnected nodes, providing an explicit correction mechanism.",
+      "Author-stated: optional Cypher MERGE generation supports practical Neo4j import while avoiding duplicate nodes and relationships involving nonexistent nodes.",
+      "Review-level inference: the architecture is traceable at the level of schema elements and ordered extraction steps, which is useful for a domain-expert review workflow."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0019-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "OntoKGen recommends an ontology grounded in best practices... all while giving the user complete control over the final ontology."
+      },
+      {
+        "span_id": "C0019-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "Any missing nodes or relationships are added as required... It checks for unconnected nodes and adds necessary relationships."
+      },
+      {
+        "span_id": "C0019-D-P003-TEXT-0003",
+        "page": 3,
+        "excerpt": "the MERGE command... prevents issues such as trying to create relationships for non-existent nodes and avoids duplicating nodes."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: the evidence is limited to one qualitative case study, so effectiveness, error rate, and generalizability across documents and domains cannot be determined from this paper.",
+      "Review-level inference: the method depends on users to confirm and refine the ontology; therefore output quality and effort can vary with user expertise and preferences.",
+      "Review-level inference: the paper does not name the LLM, disclose prompts, provide implementation details, or report code/data availability, which limits reproducibility.",
+      "Review-level inference: the evaluation contains no baselines or quantitative metrics, so the claimed accuracy and efficiency cannot be independently compared."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0019-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "This case study demonstrates the implementation of OntoKGen within the RAM domain."
+      },
+      {
+        "span_id": "C0019-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "Upon user confirmation... User feedback is integrated to refine these relationships... for final approval."
+      },
+      {
+        "span_id": "C0019-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "conducting this quantitative analysis and presenting those results are beyond the scope and limitations of this paper."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "Quantitative accuracy evaluation using competency questions and presentation of those results are outside the scope and limitations of the paper.",
+      "The paper's evaluation uses a human-in-the-loop approach rather than the planned quantitative analysis."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0019-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "For this paper, we employed a human-in-the-loop approach to evaluate the performance of OntoKGen."
+      },
+      {
+        "span_id": "C0019-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "conducting this quantitative analysis and presenting those results are beyond the scope and limitations of this paper."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-stated: conduct quantitative competency-question-based accuracy evaluation.",
+      "Author-stated: use the generated KG as a source for domain-specific Retrieval-Augmented Generation systems.",
+      "Author-stated: implement live data manipulation in the interactive interface so users can dynamically update and modify the KG.",
+      "Review-level inference: evaluate extraction against annotated gold graphs and report precision, recall, F1, completeness, schema conformance, human effort, cost, and latency against reproducible baselines."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0019-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "we have set the foundation for competency question answering to evaluate the method's accuracy... [this] will be addressed in future work."
+      },
+      {
+        "span_id": "C0019-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "Our Future work will focus on leveraging the generated KGs as sources in Retrieval-Augmented Generation (RAG) systems... implement live data manipulation directly from the interactive interface."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-stated: a quantitative assessment of method accuracy remains unresolved.",
+      "Review-level inference: robustness of ontology and KG extraction from diverse long, complex engineering documents remains unmeasured.",
+      "Review-level inference: hallucination, omission, and correctness rates after the system's review steps remain unresolved because no error analysis or quantitative results are supplied.",
+      "Review-level inference: the amount and type of human intervention required to obtain a reliable ontology and KG remains unmeasured."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0019-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "there remain gaps in handling broader and more complex topics, such as those in lengthy and intricate engineering documents."
+      },
+      {
+        "span_id": "C0019-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "conducting this quantitative analysis and presenting those results are beyond the scope and limitations of this paper."
+      },
+      {
+        "span_id": "C0019-D-P003-TEXT-0003",
+        "page": 3,
+        "excerpt": "The LLM uses the entire conversation history... to maintain context, reduce errors and hallucinations, and improve the overall quality of the final KG."
+      }
+    ]
+  },
+  "code_and_data_availability": "not_reported"
+}

@@ -1,0 +1,1052 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0008",
+    "title": "From Text to Knowledge: Bridging the Gap with Probabilistic Graphical Models",
+    "pdf_path": "data/pdfs/C0008.pdf",
+    "authors": [
+      "Markus Bundschus"
+    ],
+    "year": 2010,
+    "venue": "Doctoral dissertation, Faculty of Mathematics, Computer Science and Statistics, Ludwig-Maximilians-Universität München",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "This dissertation develops probabilistic-graphical-model approaches for turning unstructured text into structured knowledge and for discovery in semantically annotated document collections. Its Text2SemRel system uses conditional random fields to extract entities and typed relations and construct a fact-oriented knowledge base; it is applied at scale to construct the literature-derived human gene-disease network (LHGDN). It also presents directed topic-model extensions of LDA for unsupervised modelling of dependencies between documents and semantic annotations.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0008-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "From Text to Knowledge: Bridging the Gap with Probabilistic Graphical Models — Markus Bundschus.",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0008-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "München, den 01.06.2010.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0008-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Dissertation an der Fakultät für Mathematik, Informatik und Statistik der Ludwig-Maximilians-Universität München.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0008-D-P012-TEXT-0001",
+      "page": 12,
+      "excerpt": "The first part of the thesis will present a novel system called Text2SemRel that is able to (semi-)automatically construct knowledge bases from textual document collections.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-02": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0008-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "Essential part of the system is a novel algorithm for extracting relations between entity mentions that is based on Conditional Random Fields.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-03": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0008-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "In the second part ... extensions of the Latent Dirichlet Allocation framework ... learn in an unsupervised way the statistical semantic dependencies between ... documents and their semantic annotations.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "2.1 Overview",
+      "span_id": "C0008-D-P023-TEXT-0001",
+      "page": 23,
+      "excerpt": "Our objective is to set up a general framework, which automatically constructs a knowledge base from a text collection.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "2.1.2 Motivation and Problem Statement",
+      "span_id": "C0008-D-P026-TEXT-0002",
+      "page": 26,
+      "excerpt": "The main problem considered here is how to extract entities and relations from a loose text collection and how to arrange the extracted facts in an ER graph.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-03": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "2.1.2 Motivation and Problem Statement",
+      "span_id": "C0008-D-P026-TEXT-0003",
+      "page": 26,
+      "excerpt": "Extraction of entities ... extraction of typed relations ... normalization of entities and relations to Uniform Resource Identifiers (URIs).",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "2.2 A Novel Approach for Knowledge Base Construction with Conditional Random Fields",
+      "span_id": "C0008-D-P034-TEXT-0001",
+      "page": 34,
+      "excerpt": "We will introduce two novel variants of CRFs that solve entity recognition and relation extraction in a combined fashion.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "2.5 Conclusions",
+      "span_id": "C0008-D-P070-TEXT-0002",
+      "page": 70,
+      "excerpt": "We consider relation extraction as sequence labeling task and an essential part of the system is the learning module for relation extraction that is based on Conditional Random Fields.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "2.1 Overview",
+      "span_id": "C0008-D-P023-TEXT-0001",
+      "page": 23,
+      "excerpt": "Facts can be converted into a canonical form provided that controlled vocabularies of entities are available.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "2.2.5 Fact Extraction",
+      "span_id": "C0008-D-P051-TEXT-0002",
+      "page": 51,
+      "excerpt": "IsPorperFact checks if the entity classes connected by the relation label maintain the conceptual schema.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "2.1.3 Proposed Approach at a Glance",
+      "span_id": "C0008-D-P027-PICTURE-0001",
+      "page": 27,
+      "excerpt": "Text2SemRel framework: pre-processing layer, learning layer, extraction layer, and data-storage & representation layer.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "2.2.5 Fact Extraction",
+      "span_id": "C0008-D-P052-TEXT-0002",
+      "page": 52,
+      "excerpt": "Fact extraction from general free text first applies a trained CRF for NER, then uses recognized entity mentions as features for the SRE CRF, validates pairs, normalizes entities, and stores triples.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "2.1.3 Proposed Approach at a Glance",
+      "span_id": "C0008-D-P026-TEXT-0001",
+      "page": 26,
+      "excerpt": "Our method builds on supervised learning ... Text2SemRel depends on labeled training data.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "2.5 Conclusions",
+      "span_id": "C0008-D-P070-TEXT-0002",
+      "page": 70,
+      "excerpt": "Since Text2SemRel relies on a hand-build training corpus it is more suitable for targeted relation extraction.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "2.1.3 Proposed Approach at a Glance",
+      "span_id": "C0008-D-P027-PICTURE-0001",
+      "page": 27,
+      "excerpt": "The framework has preprocessing, learning, extraction, and data-storage/representation layers.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "2.2 A Novel Approach for Knowledge Base Construction with Conditional Random Fields",
+      "span_id": "C0008-D-P034-TEXT-0002",
+      "page": 34,
+      "excerpt": "The first variant ... labels entities and relations in one step. The second variant ... extract[s] entities and their relations from general free-text.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "2.4.1 System Description",
+      "span_id": "C0008-D-P049-TEXT-0003",
+      "page": 49,
+      "excerpt": "The fact learning model was implemented with the help of MALLET ... restricted to the special case of linear-chain CRFs.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "2.1.1 Terminology",
+      "span_id": "C0008-D-P024-TEXT-0001",
+      "page": 24,
+      "excerpt": "A relation is well-defined by its label, domain and range.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "2.2.5 Fact Extraction",
+      "span_id": "C0008-D-P051-TEXT-0002",
+      "page": 51,
+      "excerpt": "We consider only facts for further processing that do not violate the schema.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "4.3 Literature-derived Human Gene-Disease Network (LHGDN)",
+      "span_id": "C0008-D-P119-TEXT-0003",
+      "page": 119,
+      "excerpt": "Bio2RDF links to the MeSH thesaurus, which was used as controlled vocabulary for normalization.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "2.1.2 Motivation and Problem Statement",
+      "span_id": "C0008-D-P026-TEXT-0001",
+      "page": 26,
+      "excerpt": "Main challenges: extraction of entities; extraction of typed relations between entities; normalization ... to URIs.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "2.2.5 Fact Extraction",
+      "span_id": "C0008-D-P052-TEXT-0002",
+      "page": 52,
+      "excerpt": "The algorithm predicts entity mentions and entity-pair relations, applies IsProperFact, normalizes entities, and adds facts.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "4.3 Literature-derived Human Gene-Disease Network (LHGDN)",
+      "span_id": "C0008-D-P119-TEXT-0003",
+      "page": 119,
+      "excerpt": "The extracted facts were normalized to URIs and stored in form of a RDF graph.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "2.1 Overview",
+      "span_id": "C0008-D-P023-TEXT-0001",
+      "page": 23,
+      "excerpt": "Text2SemRel [is] a new approach to build automatically a knowledge base consisting of entities and relations extracted from textual data.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "2.4.2 Disease-Treatment Relation Extraction from PubMed",
+      "span_id": "C0008-D-P061-TEXT-0002",
+      "page": 61,
+      "excerpt": "This annotated text corpus ... was generated from MEDLINE 2001 abstracts.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-03": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "2.4.3 Gene-Disease Relation Extraction from GeneRIF Phrases",
+      "span_id": "C0008-D-P064-TEXT-0003",
+      "page": 64,
+      "excerpt": "GeneRIFs are phrases which refer to a particular gene ... and describe its function in a concise phrase.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "2.2.1 Named Entity Recognition and Semantic Relation Extraction as Sequence Labeling Task",
+      "span_id": "C0008-D-P035-TEXT-0001",
+      "page": 35,
+      "excerpt": "Entities and their relations are extracted from sentences. A sentence in turn can be seen as a consecutive sequence of words.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "2.2.5 Fact Extraction",
+      "span_id": "C0008-D-P053-TEXT-0002",
+      "page": 53,
+      "excerpt": "The property that encyclopaedic-style articles have, namely that the key entity is given a priori, does not hold for general free text anymore.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "2.1.1 Terminology",
+      "span_id": "C0008-D-P024-TEXT-0001",
+      "page": 24,
+      "excerpt": "A triple consisting of an entity, a relation and another entity is referred to as fact.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "2.1.1 Terminology",
+      "span_id": "C0008-D-P024-TEXT-0002",
+      "page": 24,
+      "excerpt": "A knowledge base ... can be represented as an Entity-Relationship graph ... nodes ... [and] directed links are relations.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-03": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "4.3 Literature-derived Human Gene-Disease Network (LHGDN)",
+      "span_id": "C0008-D-P120-TEXT-0003",
+      "page": 120,
+      "excerpt": "Facts in the LHGDN are encoded in RDF using N-triples. Reification is used to add further statements ... such as the PubMed article ... or the type of relation.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "2.4.1 System Description",
+      "span_id": "C0008-D-P049-TEXT-0001",
+      "page": 49,
+      "excerpt": "The fact learning model was implemented with the help of MALLET ... [and] restricted to ... linear-chain CRFs.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "2.2.5 Fact Extraction",
+      "span_id": "C0008-D-P053-TEXT-0002",
+      "page": 53,
+      "excerpt": "The N most likely label sequences can be extracted in a linear forward Viterbi pass and backward pass with the A* algorithm.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "2.3 Visualization and Interactive Search",
+      "span_id": "C0008-D-P057-TEXT-0003",
+      "page": 57,
+      "excerpt": "The proposed information access layer ... relies on ... Cytoscape.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-04": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "2.3 Visualization and Interactive Search",
+      "span_id": "C0008-D-P057-TEXT-0004",
+      "page": 57,
+      "excerpt": "All available information ... [is] indexed with the enhanced search plugin (ESP), that uses the Lucene retrieval library.",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "2.4.2 Disease-Treatment Relation Extraction from PubMed",
+      "span_id": "C0008-D-P061-TEXT-0001",
+      "page": 61,
+      "excerpt": "In a total of 3570 sentences, entities describing diseases and treatments were extracted and disease-treatment relations were classified as ... seven ... types.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "2.4.3 Gene-Disease Relation Extraction from GeneRIF Phrases",
+      "span_id": "C0008-D-P064-TEXT-0002",
+      "page": 64,
+      "excerpt": "Our data set consists of 5720 GeneRIF sentences retrieved from 453 randomly selected Entrez Gene database entries.",
+      "confidence": "medium"
+    },
+    "datasets-17-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "2.4.3 Gene-Disease Relation Extraction from GeneRIF Phrases",
+      "span_id": "C0008-D-P064-TEXT-0003",
+      "page": 64,
+      "excerpt": "Two human experts with biological backgrounds annotated the corpus with an inter-annotator agreement estimated of about 84%.",
+      "confidence": "medium"
+    },
+    "datasets-17-04": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.3 Literature-derived Human Gene-Disease Network (LHGDN)",
+      "span_id": "C0008-D-P119-TEXT-0004",
+      "page": 119,
+      "excerpt": "GeneRIF version from March 31st, 2009, consisting of 414.241 phrases ... restricted to ... Homo Sapiens ... 178.004 phrases.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "2.4.2 Disease-Treatment Relation Extraction from PubMed",
+      "span_id": "C0008-D-P062-TEXT-0001",
+      "page": 62,
+      "excerpt": "Precision, recall and F-measure are estimated ... for NER, and accuracy for SRE.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "2.4.3 Gene-Disease Relation Extraction from GeneRIF Phrases",
+      "span_id": "C0008-D-P066-TEXT-0002",
+      "page": 66,
+      "excerpt": "We use a 10-fold cross-validation and report recall, precision and F-measure averaged over all cross-validation splits.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.4.2 Disease Gene Property Analysis",
+      "span_id": "C0008-D-P130-TEXT-0003",
+      "page": 130,
+      "excerpt": "A two-sample Kolmogorov-Smirnov (KS) test at the 95% significance level is performed for each database.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "2.4 Experimental Evaluation",
+      "span_id": "C0008-D-P061-TEXT-0001",
+      "page": 61,
+      "excerpt": "We compare our approach against the results published in [163]. [163] use a multilayer Neural Network and probabilistic generative models.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "2.4.3 Gene-Disease Relation Extraction from GeneRIF Phrases",
+      "span_id": "C0008-D-P066-TABLE-0002",
+      "page": 66,
+      "excerpt": "Baselines include Dictionary + naive rule-based, CRF + naive rule-based, CRF + SVM (linear), and CRF + SVM (F-score + RBF).",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-03": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.4 Analysis of the LHGDN",
+      "span_id": "C0008-D-P122-PICTURE-0003",
+      "page": 122,
+      "excerpt": "Number of genes, diseases and edges in OMIM, UniProt, PharmGKB, CTD, CURATED, LHGDN and ALL.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "2.4.2 Disease-Treatment Relation Extraction from PubMed",
+      "span_id": "C0008-D-P061-TEXT-0001",
+      "page": 61,
+      "excerpt": "We present results for the full data set, including sentences that contain no entities at all.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "2.4.2 Disease-Treatment Relation Extraction from PubMed",
+      "span_id": "C0008-D-P062-TEXT-0002",
+      "page": 62,
+      "excerpt": "We used 5-fold cross-validation, in accordance with the 80%/20% training/test split used by [163].",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "2.4.3 Gene-Disease Relation Extraction from GeneRIF Phrases",
+      "span_id": "C0008-D-P066-TEXT-0003",
+      "page": 66,
+      "excerpt": "The gene entities themselves are known and do not need to be extracted.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-04": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.3 Literature-derived Human Gene-Disease Network (LHGDN)",
+      "span_id": "C0008-D-P119-TEXT-0004",
+      "page": 119,
+      "excerpt": "The cascaded CRF was chosen, since it yielded a better performance than the one-step CRF.",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "2.4.2 Disease-Treatment Relation Extraction from PubMed",
+      "span_id": "C0008-D-P063-TABLE-0001",
+      "page": 63,
+      "excerpt": "Cascaded CRF: NER 69.0 recall, 75.3 precision, 72.0 F-score; SRE accuracy 96.9 (gold entities) and 79.5 (entities extracted).",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "2.4.3 Gene-Disease Relation Extraction from GeneRIF Phrases",
+      "span_id": "C0008-D-P066-TABLE-0002",
+      "page": 66,
+      "excerpt": "Cascaded CRF: recall 76.61, precision 79.46, F-score 78.00; CRF+SVM (F-score + RBF): F-score 78.03.",
+      "confidence": "medium"
+    },
+    "main_results-21-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "2.4.3 Gene-Disease Relation Extraction from GeneRIF Phrases",
+      "span_id": "C0008-D-P068-TABLE-0003",
+      "page": 68,
+      "excerpt": "Overall cascaded CRF recall 76.61, precision 79.46, F-score 78.00; relation-specific values are reported.",
+      "confidence": "medium"
+    },
+    "main_results-21-04": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.3 Literature-derived Human Gene-Disease Network (LHGDN)",
+      "span_id": "C0008-D-P120-TEXT-0004",
+      "page": 120,
+      "excerpt": "The LHGDN provides currently 59.342 positive statements ... for 1.850 diseases and 6.154 distinct genes.",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.2 A Novel Approach for Knowledge Base Construction with Conditional Random Fields",
+      "span_id": "C0008-D-P034-TEXT-0001",
+      "page": 34,
+      "excerpt": "In contrast to most previous work, we do not assume that the entities are given in advance.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.4.3 Gene-Disease Relation Extraction from GeneRIF Phrases",
+      "span_id": "C0008-D-P069-TEXT-0002",
+      "page": 69,
+      "excerpt": "Training of the cascaded CRF is much faster (factor of ten in our setting), since no time-consuming feature selection is needed.",
+      "confidence": "medium"
+    },
+    "strengths-22-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.5 Conclusions",
+      "span_id": "C0008-D-P070-TEXT-0003",
+      "page": 70,
+      "excerpt": "Facts can be converted into canonical form provided that controlled vocabularies of entities are available.",
+      "confidence": "medium"
+    },
+    "strengths-22-04": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.4.3 Gene-Disease Relation Extraction from GeneRIF Phrases",
+      "span_id": "C0008-D-P069-TABLE-0004",
+      "page": 69,
+      "excerpt": "F-score increases from 38.48 to 75.22 as relational feature groups are added.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.5 Conclusions",
+      "span_id": "C0008-D-P070-TEXT-0001",
+      "page": 70,
+      "excerpt": "Since Text2SemRel relies on a hand-build training corpus it is more suitable for targeted relation extraction.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.4.3 Gene-Disease Relation Extraction from GeneRIF Phrases",
+      "span_id": "C0008-D-P069-TEXT-0002",
+      "page": 69,
+      "excerpt": "The F-measure for a soft matching criterion ... increases to 85.20%.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.5 Conclusions",
+      "span_id": "C0008-D-P071-TEXT-0003",
+      "page": 71,
+      "excerpt": "A more advanced normalization strategy will be needed for entities that are highly polysemous (e.g. person names).",
+      "confidence": "medium"
+    },
+    "weaknesses-23-04": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.5 Conclusions",
+      "span_id": "C0008-D-P070-TEXT-0004",
+      "page": 70,
+      "excerpt": "[Text2SemRel] scales well to large textual collections from a certain domain ... but it does not scale to the web.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-05": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.3 Literature-derived Human Gene-Disease Network (LHGDN)",
+      "span_id": "C0008-D-P119-TEXT-0005",
+      "page": 119,
+      "excerpt": "This normalization procedure is not perfect and thus false positive facts are also extracted.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "2.1.3 Proposed Approach at a Glance",
+      "span_id": "C0008-D-P026-TEXT-0001",
+      "page": 26,
+      "excerpt": "The existence of labeled data is often seen as a bottleneck in learning from textual sources.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "2.4.3 Gene-Disease Relation Extraction from GeneRIF Phrases",
+      "span_id": "C0008-D-P069-TEXT-0002",
+      "page": 69,
+      "excerpt": "For both types of relations we expect a significant increase in performance with the inclusion of more training data.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "2.4.3 Gene-Disease Relation Extraction from GeneRIF Phrases",
+      "span_id": "C0008-D-P070-TEXT-0003",
+      "page": 70,
+      "excerpt": "Whether or not a gene is causing the disease or is just associated with the disease pathogenesis is not encoded.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-04": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.5 Conclusions",
+      "span_id": "C0008-D-P136-TEXT-0004",
+      "page": 136,
+      "excerpt": "Even though the facts stored in the LHGDN are of high quality, they do not represent manually curated knowledge.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "2.4.2 Disease-Treatment Relation Extraction from PubMed",
+      "span_id": "C0008-D-P063-TEXT-0001",
+      "page": 63,
+      "excerpt": "Possible improvements could be achieved with the inclusion of a larger and/or more refined treatment dictionary.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "2.4.3 Gene-Disease Relation Extraction from GeneRIF Phrases",
+      "span_id": "C0008-D-P069-TEXT-0002",
+      "page": 69,
+      "excerpt": "For both types of relations we expect a significant increase in performance with the inclusion of more training data.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "2.4.3 Gene-Disease Relation Extraction from GeneRIF Phrases",
+      "span_id": "C0008-D-P070-TEXT-0003",
+      "page": 70,
+      "excerpt": "We plan to extend our relation types towards etiological information.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-04": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4.5 Conclusions",
+      "span_id": "C0008-D-P136-TEXT-0004",
+      "page": 136,
+      "excerpt": "Future improvements will involve a more advanced entity normalization strategy.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-05": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4.5 Conclusions",
+      "span_id": "C0008-D-P137-TEXT-0005",
+      "page": 137,
+      "excerpt": "A particular interesting direction for future research is to study the ranking of LHGDN-specific genes ... [to] filter out false positives.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.5 Conclusions",
+      "span_id": "C0008-D-P071-TEXT-0001",
+      "page": 71,
+      "excerpt": "Another issue of future work will be to improve the entity normalization module.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.4.3 Gene-Disease Relation Extraction from GeneRIF Phrases",
+      "span_id": "C0008-D-P069-TEXT-0002",
+      "page": 69,
+      "excerpt": "For a supervised learning approach this is still a very sparse training set, resulting in a low accuracy.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2 State of the Art Curated Human Gene-Disease Association Databases",
+      "span_id": "C0008-D-P118-TEXT-0003",
+      "page": 118,
+      "excerpt": "The mapping is non-trivial and subject of current research.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-04": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.4.3 Gene-Disease Relation Extraction from GeneRIF Phrases",
+      "span_id": "C0008-D-P070-TEXT-0004",
+      "page": 70,
+      "excerpt": "Whether or not a gene is causing the disease or is just associated ... is not encoded.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "2.4.2 Disease-Treatment Relation Extraction from PubMed",
+      "span_id": "C0008-D-P063-TEXT-0001",
+      "page": 63,
+      "excerpt": "The data, enriched with supplementary annotations, are provided online.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "2.4.3 Gene-Disease Relation Extraction from GeneRIF Phrases",
+      "span_id": "C0008-D-P064-TEXT-0002",
+      "page": 64,
+      "excerpt": "The annotation guidelines are available online.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-03": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "4.3 Literature-derived Human Gene-Disease Network (LHGDN)",
+      "span_id": "C0008-D-P120-TEXT-0003",
+      "page": 120,
+      "excerpt": "The LHGDN is publicly available. Facts in the LHGDN are encoded in RDF using N-triples.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-04": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "4.3 Literature-derived Human Gene-Disease Network (LHGDN)",
+      "span_id": "C0008-D-P106-TEXT-0004",
+      "page": 106,
+      "excerpt": "A previous version of the LHGDN ... is available online as supplementary data.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The thesis addresses the gap between facts buried in unstructured textual collections and queryable structured knowledge. Its direct Text-to-KG problem is: given typed entities and relations, extract entity mentions and typed relations from text, normalize them to URIs, and arrange the resulting facts as an entity-relationship graph. The principal applied case is extraction of typed human gene-disease associations from biomedical text.",
+  "methodology": {
+    "primary_family": "Classical machine learning",
+    "secondary_families": [
+      "Ontology-constrained and schema-guided methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "supervised",
+    "description": "Text2SemRel is a supervised, schema-guided extraction pipeline. First, a document collection is annotated using entity classes and relation types from a conceptual schema. A linear-chain CRF learns NER and semantic-relation-extraction (SRE) labels using lexical, orthographic, word-shape, character n-gram, contextual-window, and dictionary features. The one-step CRF jointly labels entities and relations for encyclopaedic-style text with a known key entity. The cascaded CRF first predicts entities with an NER CRF, passes role features to an SRE CRF, and is used for general free text; when more than two entity mentions are predicted, it examines N-best Viterbi label sequences. Candidate facts are checked against relation domain/range constraints, entity mentions are normalized by strict controlled-vocabulary matching plus a sliding-window expansion/shrinking heuristic, and valid triples are stored. The thesis additionally develops unsupervised Topic-Concept and User-Topic-Concept extensions of LDA for discovery over already semantically annotated document collections; these models are not the Text2SemRel KG-construction component."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "A supplied conceptual schema/semantic data model defines entity classes, binary relation labels, and each relation's domain and range. It constrains fact acceptance so that only schema-consistent pairs are stored. Controlled vocabularies/thesauri provide entity URIs for canonicalization; in the biomedical implementation, disease names and synonyms come from the MeSH C branch and existing Bio2RDF namespaces supply identifiers. The extracted facts can populate a formal ontology and are serialized as RDF/N-triples.",
+    "evidence": [
+      {
+        "span_id": "C0008-D-P024-TEXT-0001",
+        "page": 24,
+        "excerpt": "A relation is well-defined by its label, domain and range."
+      },
+      {
+        "span_id": "C0008-D-P051-TEXT-0002",
+        "page": 51,
+        "excerpt": "We consider only facts for further processing that do not violate the schema."
+      },
+      {
+        "span_id": "C0008-D-P119-TEXT-0003",
+        "page": 119,
+        "excerpt": "Bio2RDF links to the MeSH thesaurus, which was used as controlled vocabulary for normalization."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing",
+    "Entity and concept extraction",
+    "Entity typing",
+    "Entity resolution and linking",
+    "Relation and triple extraction",
+    "Graph construction",
+    "Graph validation and correction"
+  ],
+  "input_output": {
+    "input_type": "Unstructured natural-language text: general free-text sentences, PubMed/MEDLINE abstracts, and GeneRIF biomedical phrases. The broader thesis also uses documents with existing semantic annotations for topic-model-based discovery.",
+    "input_granularity": "Sentence-level sequence labeling; documents/collections are processed as collections of sentences. GeneRIF input phrases are concise statements tied to a known Entrez Gene key entity, whereas general free text has no key entity known in advance.",
+    "output_representation": "Typed binary entity-relation triples/facts, optionally in canonical URI form, assembled into an entity-relationship graph. The LHGDN implementation stores an RDF graph encoded in N-triples and uses RDF reification to attach provenance (e.g., source PubMed article) and predicted relation type."
+  },
+  "models_and_tools": [
+    "Text2SemRel",
+    "linear-chain Conditional Random Fields (one-step CRF and cascaded CRF)",
+    "MALLET CRF implementation with default Gaussian prior",
+    "Viterbi-style decoding; N-best Viterbi plus A* backward pass for multi-entity sentences",
+    "MeSH disease and chemical/drug controlled vocabularies and relation-keyword dictionaries",
+    "Bio2RDF URI namespaces",
+    "Cytoscape visualization",
+    "Enhanced Search Plugin (ESP) using Lucene",
+    "Topic-Concept Model and User-Topic-Concept Model (LDA extensions)"
+  ],
+  "datasets": [
+    "Disease-treatment corpus from MEDLINE 2001/PubMed abstracts: 3,570 sentences, with seven relation types (cure, only disease, only treatment, prevents, side effect, vague, does not cure).",
+    "In-house gene-disease GeneRIF corpus: 5,720 phrases from 453 randomly selected Entrez Gene entries; two biologically trained annotators; estimated inter-annotator agreement about 84%; five relation types.",
+    "Large-scale LHGDN source: GeneRIF release dated 31 March 2009, 414,241 total phrases, restricted to 178,004 Homo sapiens phrases.",
+    "For ontology/dictionary support: MeSH C (disease) branch including names and synonyms; MeSH D (chemicals and drugs) branch for treatments."
+  ],
+  "evaluation": {
+    "metrics": [
+      "NER precision, recall, and F-score.",
+      "SRE accuracy for the disease-treatment corpus, evaluated with gold entities and with entities predicted by the pipeline.",
+      "Exact entity-level precision, recall, and F-score for combined NER+SRE on the GeneRIF corpus; 10-fold cross-validation averages.",
+      "Relation-specific precision, recall, and F-score.",
+      "Feature-ablation F-score.",
+      "LHGDN comparison by counts of genes, diseases, and associations; overlap/coverage; pathway and Gene Ontology homogeneity versus random controls with two-sample Kolmogorov-Smirnov tests; power-law goodness-of-fit."
+    ],
+    "baselines": [
+      "Disease-treatment task: best graphical model and multilayer neural network results reported by [163].",
+      "Gene-disease task: dictionary plus naive rule-based; CRF plus naive rule-based; CRF plus linear SVM; CRF plus feature-selected RBF SVM.",
+      "Large-scale comparison resources: OMIM, UniProt, PharmGKB, CTD, and their CURATED union."
+    ],
+    "setting": "For disease-treatment extraction, the cascaded CRF is evaluated on the full 3,570-sentence corpus, including sentences with no entities, with 5-fold cross-validation consistent with the cited 80/20 split; SRE is measured both with gold entities and end-to-end predicted entities. For GeneRIF gene-disease extraction, exact entity-level matching and 10-fold cross-validation are used; genes are provided by the associated Entrez Gene ID, so NER reduces to recognizing diseases. For large-scale construction, the cascaded CRF trained on the complete in-house corpus processes 178,004 human GeneRIF phrases and serializes normalized results as LHGDN."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Experimental result: on disease-treatment extraction, the cascaded CRF achieved NER recall 69.0%, precision 75.3%, F-score 72.0%; SRE accuracy 96.9% with gold entities and 79.5% end-to-end. This exceeded the cited best graphical model on NER F-score (71.0%) and was close to the cited neural network SRE score (79.6% end-to-end).",
+      "Experimental result: on GeneRIF gene-disease extraction, cascaded CRF achieved recall 76.61%, precision 79.46%, and F-score 78.00%, essentially matching feature-selected RBF CRF+SVM (78.03%) and exceeding the one-step CRF (75.90%).",
+      "Experimental result: relation-specific cascaded-CRF F-scores were 78.95% Any, 65.02% Unrelated, 78.91% Altered expression, 80.04% Genetic variation, and 71.16% Regulatory modification.",
+      "Experimental result: on a feature ablation for one GeneRIF split, the one-step CRF F-score rose from 38.48% with baseline NER features to 75.22% after dictionaries, dictionary-window, start-window, key-entity-neighbourhood, and negation features.",
+      "Large-scale result: LHGDN contains 59,342 positive gene-disease association statements, 1,850 diseases, and 6,154 distinct genes.",
+      "Review-level inference: the reported scores support the thesis's claim that cascaded CRF is competitive for the two tested biomedical tasks, but are not evidence of performance on arbitrary domains or web-scale text."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0008-D-P063-TABLE-0001",
+        "page": 63,
+        "excerpt": "Cascaded CRF: NER 69.0 recall, 75.3 precision, 72.0 F-score; SRE accuracy 96.9 (gold entities) and 79.5 (entities extracted)."
+      },
+      {
+        "span_id": "C0008-D-P066-TABLE-0002",
+        "page": 66,
+        "excerpt": "Cascaded CRF: recall 76.61, precision 79.46, F-score 78.00; CRF+SVM (F-score + RBF): F-score 78.03."
+      },
+      {
+        "span_id": "C0008-D-P068-TABLE-0003",
+        "page": 68,
+        "excerpt": "Overall cascaded CRF recall 76.61, precision 79.46, F-score 78.00; relation-specific values are reported."
+      },
+      {
+        "span_id": "C0008-D-P120-TEXT-0004",
+        "page": 120,
+        "excerpt": "The LHGDN provides currently 59.342 positive statements ... for 1.850 diseases and 6.154 distinct genes."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author contribution: the thesis provides an end-to-end path from labelled text through extraction, schema filtering, normalization, RDF storage, visualization, and keyword-supported exploration rather than stopping at relation classification.",
+      "Experimental result: the cascaded CRF performs competitively with a carefully tuned feature-selected RBF CRF+SVM on GeneRIF (78.00% versus 78.03% F-score) while the authors report roughly tenfold faster training because feature selection is unnecessary.",
+      "Author contribution: the schema's relation domain/range constraints and controlled-vocabulary URI normalization make accepted facts usable in canonical, ontology-compatible form.",
+      "Experimental result: relational-context features materially improve the one-step model's F-score (38.48% baseline to 75.22% with all tested feature groups).",
+      "Author contribution: the large-scale application yields a provenance-enriched RDF network with typed molecular conditions, substantial coverage, and a graph/keyword exploration interface.",
+      "Review-level inference: explicit entity recognition plus typed relation extraction, rather than assuming gold entities, makes the reported end-to-end evaluation more relevant to practical Text-to-KG pipelines than relation-only evaluation."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0008-D-P034-TEXT-0001",
+        "page": 34,
+        "excerpt": "In contrast to most previous work, we do not assume that the entities are given in advance."
+      },
+      {
+        "span_id": "C0008-D-P069-TEXT-0002",
+        "page": 69,
+        "excerpt": "Training of the cascaded CRF is much faster (factor of ten in our setting), since no time-consuming feature selection is needed."
+      },
+      {
+        "span_id": "C0008-D-P070-TEXT-0003",
+        "page": 70,
+        "excerpt": "Facts can be converted into canonical form provided that controlled vocabularies of entities are available."
+      },
+      {
+        "span_id": "C0008-D-P069-TABLE-0004",
+        "page": 69,
+        "excerpt": "F-score increases from 38.48 to 75.22 as relational feature groups are added."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author-stated/experimental: the approach requires a hand-built labelled training corpus, making it targeted and supervised rather than immediately transferable to unseen domains.",
+      "Experimental: exact entity-boundary matching depresses performance; a softer partial-entity criterion raises combined NER+SRE F-score to 85.20%, demonstrating boundary sensitivity.",
+      "Author-stated: normalization is strict and was tested on relatively non-polysemous entities; highly polysemous entities such as person names require a more advanced strategy.",
+      "Author-stated: Text2SemRel scales to large collections within a domain but not to the web.",
+      "Review-level inference: the large LHGDN counts are extracted statements, not manually curated truth; the study acknowledges false positives and incomplete terminology coverage, so coverage must not be interpreted as validated biological causality."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0008-D-P070-TEXT-0001",
+        "page": 70,
+        "excerpt": "Since Text2SemRel relies on a hand-build training corpus it is more suitable for targeted relation extraction."
+      },
+      {
+        "span_id": "C0008-D-P069-TEXT-0002",
+        "page": 69,
+        "excerpt": "The F-measure for a soft matching criterion ... increases to 85.20%."
+      },
+      {
+        "span_id": "C0008-D-P071-TEXT-0003",
+        "page": 71,
+        "excerpt": "A more advanced normalization strategy will be needed for entities that are highly polysemous (e.g. person names)."
+      },
+      {
+        "span_id": "C0008-D-P070-TEXT-0004",
+        "page": 70,
+        "excerpt": "[Text2SemRel] scales well to large textual collections from a certain domain ... but it does not scale to the web."
+      },
+      {
+        "span_id": "C0008-D-P119-TEXT-0005",
+        "page": 119,
+        "excerpt": "This normalization procedure is not perfect and thus false positive facts are also extracted."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "Labelled training data is a bottleneck for adaptation to a new domain.",
+      "The system does not scale to web-wide extraction.",
+      "Current normalization works for naturally low-polysemy entities but needs improvement for highly polysemous ones.",
+      "Disease-entity boundary guidelines and annotator inconsistencies make exact matching difficult.",
+      "Unrelated and regulatory-modification relations have sparse training examples and lower accuracy.",
+      "The defined gene-disease relation types do not encode whether a gene causes a disease versus is merely associated with its pathogenesis.",
+      "LHGDN facts are high quality but are not manually curated; controlled vocabularies differ in granularity and complicate data integration."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0008-D-P026-TEXT-0001",
+        "page": 26,
+        "excerpt": "The existence of labeled data is often seen as a bottleneck in learning from textual sources."
+      },
+      {
+        "span_id": "C0008-D-P069-TEXT-0002",
+        "page": 69,
+        "excerpt": "For both types of relations we expect a significant increase in performance with the inclusion of more training data."
+      },
+      {
+        "span_id": "C0008-D-P070-TEXT-0003",
+        "page": 70,
+        "excerpt": "Whether or not a gene is causing the disease or is just associated with the disease pathogenesis is not encoded."
+      },
+      {
+        "span_id": "C0008-D-P136-TEXT-0004",
+        "page": 136,
+        "excerpt": "Even though the facts stored in the LHGDN are of high quality, they do not represent manually curated knowledge."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed: obtain more labelled examples, particularly for unrelated and regulatory-modification relation classes.",
+      "Author-proposed: improve entity-boundary detection and refine disease annotation guidelines.",
+      "Author-proposed: include a larger and/or more refined treatment dictionary instead of indiscriminately using all MeSH D-branch entries.",
+      "Author-proposed: extend gene-disease relation types with etiological information.",
+      "Author-proposed: develop a more advanced entity-normalization strategy for polysemy and incomplete synonym coverage.",
+      "Author-proposed: rank LHGDN-specific genes using disease-gene prioritization tools to help filter false positives.",
+      "Review-level inference: add calibrated confidence/provenance review and independent external validation before using automatically extracted associations for scientific decision-making."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0008-D-P063-TEXT-0001",
+        "page": 63,
+        "excerpt": "Possible improvements could be achieved with the inclusion of a larger and/or more refined treatment dictionary."
+      },
+      {
+        "span_id": "C0008-D-P069-TEXT-0002",
+        "page": 69,
+        "excerpt": "For both types of relations we expect a significant increase in performance with the inclusion of more training data."
+      },
+      {
+        "span_id": "C0008-D-P070-TEXT-0003",
+        "page": 70,
+        "excerpt": "We plan to extend our relation types towards etiological information."
+      },
+      {
+        "span_id": "C0008-D-P136-TEXT-0004",
+        "page": 136,
+        "excerpt": "Future improvements will involve a more advanced entity normalization strategy."
+      },
+      {
+        "span_id": "C0008-D-P137-TEXT-0005",
+        "page": 137,
+        "excerpt": "A particular interesting direction for future research is to study the ranking of LHGDN-specific genes ... [to] filter out false positives."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-stated: reliable entity normalization and disambiguation for highly polysemous mentions remains unresolved.",
+      "Author-stated: high-quality, broad-coverage supervised extraction remains constrained by annotation effort and sparse examples for rare relation types.",
+      "Author-stated: integrating gene-disease resources remains difficult because controlled vocabularies have different granularity and mappings are non-trivial.",
+      "Author-stated: the extracted relation taxonomy does not resolve causal/etiological status.",
+      "Review-level inference: the work leaves open how to generalize the targeted, schema-dependent CRF pipeline across domains and to web scale while preserving its precision and recall.",
+      "Review-level inference: automated extraction cannot by itself establish the biological validity or causal interpretation of the generated network facts."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0008-D-P071-TEXT-0001",
+        "page": 71,
+        "excerpt": "Another issue of future work will be to improve the entity normalization module."
+      },
+      {
+        "span_id": "C0008-D-P069-TEXT-0002",
+        "page": 69,
+        "excerpt": "For a supervised learning approach this is still a very sparse training set, resulting in a low accuracy."
+      },
+      {
+        "span_id": "C0008-D-P118-TEXT-0003",
+        "page": 118,
+        "excerpt": "The mapping is non-trivial and subject of current research."
+      },
+      {
+        "span_id": "C0008-D-P070-TEXT-0004",
+        "page": 70,
+        "excerpt": "Whether or not a gene is causing the disease or is just associated ... is not encoded."
+      }
+    ]
+  },
+  "code_and_data_availability": "The thesis reports that the resulting LHGDN is publicly available online and part of the Linked Life Data initiative; it also reports online availability of supplementary annotation guidelines, relation dictionaries, enriched disease-treatment data, and an earlier LHGDN version. The PDF does not report a public source-code repository or a software license for Text2SemRel."
+}

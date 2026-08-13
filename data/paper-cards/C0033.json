@@ -1,0 +1,692 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0033",
+    "title": "Exploiting lexical patterns for knowledge graph construction from unstructured text in Spanish",
+    "authors": [
+      "Ana B. Rios-Alvarado",
+      "Jose L. Martinez-Rodriguez",
+      "Andrea G. Garcia-Perez",
+      "Tania Y. Guerrero-Melendez",
+      "Ivan Lopez-Arevalo",
+      "Jose Luis Gonzalez-Compean"
+    ],
+    "year": 2022,
+    "venue": "not_reported",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "Knowledge graphs (KGs) are useful data structures for the integration, retrieval, dissemination, and inference of information in various information domains. One of the main challenges in building KGs is the extraction of named entities (nodes) and their relations (edges), particularly when processing unstructured text as it has no semantic descriptions. Generating KGs from texts written in Spanish represents a research challenge as the existing structures, models, and strategies designed for other languages are not compatible in this scenario. This paper proposes a method to design and construct KGs from unstructured text in Spanish. We defined lexical patterns to extract named entities and (non) taxonomic, equivalence, and composition relations. Next, named entities are linked and enriched with DBpedia resources through a strategy based on SPARQL queries. Finally, OWL properties are defined from the predicate relations for creating resource description framework (RDF) triples. We evaluated the performance of the proposed method to determine the degree of elements extracted from the input text and to assess their quality through standard information retrieval measures. The evaluation revealed the feasibility of the proposed method to extract RDF triples from datasets in general and computer science domains. Competitive results were observed by comparing our method regarding an existing approach from the literature.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "pdf_path": null
+  },
+  "problem_addressed": "Building knowledge graphs from unstructured text in Spanish is challenging because existing structures, models, and strategies designed for other languages (mainly English) are not compatible with Spanish, and no complete solution had been developed to construct KGs from unstructured Spanish text, requiring extraction of named entities and relations, their linking to KG resources, and representation as RDF triples.",
+  "methodology": {
+    "primary_family": "Pattern-based knowledge extraction (lexical/grammatical pattern matching for entity and relation extraction)",
+    "secondary_families": [
+      "Named entity recognition (NER parser)"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "not_reported",
+    "description": "The proposed method is composed of four main stages: (1) text preprocessing, (2) knowledge extraction of named entities and semantic relations via lexical patterns and an NER parser combined with pattern matching, (3) component linking to DBpedia resources with semantic enrichment, and (4) representation, where properties are crafted from predicates and triples are constructed, stored, and visualized."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The method uses DBpedia, RDFS, and OWL vocabularies for existing properties (rdf:type, dcterms:subject, rdf:seeAlso, rdfs:label, owl:sameAs), and additionally defines a custom scheme by crafting new OWL properties (owl:ObjectProperty or owl:DatatypeProperty, with rdfs:domain and rdfs:range) from extracted predicates when no existing ontology property is suitable.",
+    "evidence": [
+      {
+        "span_id": "C0033-D-P008-TABLE-0001",
+        "page": 8,
+        "excerpt": "Table 4 Properties used in the enrichment process\n\n| Property        | Description                                                           |\n|-----------------|-----------------------------------------------------------------------|\n| rdf:type        | Used to state that a resource is an instance of a class               |\n| dcterms:subject | It specifies the topic or category of a resource                      |\n| rdf:seeAlso     | It allows to associate a resource with another one                    |\n| rdfs:label      | Used to create literal descriptions of the resources                  |\n| owl:sameAs      | It indicates that two URI references actually refer to the same thing |"
+      },
+      {
+        "span_id": "C0033-D-P007-TEXT-0016",
+        "page": 7,
+        "excerpt": "At this point, the extracted entities were associated to resources (from DBpedia and Wikidata) and their enriching information is connected to them with already defined properties from DBpedia, RDFS and OWL vocabularies (obtained through queries). However, connecting the elements in semantic relations is a complicated task due to the heterogeneous data, the sparse descriptive ontologies, and the integration of knowledge components. Thus, we implemented a strategy for crafting properties using the predicate of a semantic relation and the identified resources by defining the following features:"
+      },
+      {
+        "span_id": "C0033-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "-Type. If the semantic relation has KG resources associated to subject and object , the property is defined as owl:ObjectProperty , otherwise it is defined as owl:DatatypeProperty ."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing (filtering, sentence segmentation, grammatical tagging)",
+    "Knowledge extraction (named entity and semantic relation extraction via lexical patterns)",
+    "Component linking (entity linking and semantic enrichment with DBpedia)"
+  ],
+  "input_output": {
+    "input_type": "Unstructured plain text written in Spanish (UTF-8)",
+    "input_granularity": "Sentence-level (documents segmented into sentences, with sentences of fewer than five words removed)",
+    "output_representation": "RDF triples following Linked Data principles, represented with properties crafted from predicates and stored as an RDF file / knowledge graph"
+  },
+  "models_and_tools": [
+    "NLTK toolkit",
+    "Stanford CoreNLP",
+    "RDFlib",
+    "Apache Jena",
+    "GraphViz Python",
+    "Python (version 3.5)"
+  ],
+  "datasets": [
+    "CS",
+    "KI",
+    "FN"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Precision",
+      "Recall",
+      "F-Measure"
+    ],
+    "baselines": [
+      "K&I"
+    ],
+    "setting": "Manual evaluation by three human judges (Spanish native speakers with Semantic Web knowledge) on randomly selected sentences and on the whole CS dataset, plus a comparison against the K&I approach on the KI dataset for RDF triple extraction."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Table 6: extracted components per dataset - KI (100 sent.): NER-T 459, NER-P 222, EL 119, SR 42, RDF triples 111; CS (250 sent.): NER-T 291, NER-P 4080, EL 400, SR 171, RDF triples 166; FN (1050 sent.): NER-T 4967, NER-P 8460, EL 1433, SR 484, RDF triples 2398",
+      "Table 10: comparison on KI dataset - K&I Precision 0.4620, Recall 0.5615, F-1 0.5069, |T|=140; Our approach Precision 0.5585, Recall 0.4696, F-1 0.5102, |T|=111"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0033-D-P011-TABLE-0001",
+        "page": 11,
+        "excerpt": "Table 6 Results of the extracted components\n\n| Dataset         |   NER-T |   NER-P |   EL |   SR |   RDF triples |\n|-----------------|---------|---------|------|------|---------------|\n| KI (100 sent.)  |     459 |     222 |  119 |   42 |           111 |\n| CS (250 sent.)  |     291 |    4080 |  400 |  171 |           166 |\n| FN (1050 sent.) |    4967 |    8460 | 1433 |  484 |          2398 |"
+      },
+      {
+        "span_id": "C0033-D-P012-TABLE-0001",
+        "page": 12,
+        "excerpt": "Table 8 Evaluation of extracted semantic relations\n\n|   Sentences |   SR |   Correct |   Incorrect |   Identified |   Precision |   Recall |   F-1 |\n|-------------|------|-----------|-------------|--------------|-------------|----------|-------|\n|         100 |   84 |        49 |          26 |           75 |        0.65 |     0.58 |  0.62 |"
+      },
+      {
+        "span_id": "C0033-D-P012-TABLE-0002",
+        "page": 12,
+        "excerpt": "Fig. 2 Results of RDF triples evaluation\n\n|                    |   Precision |   Recall |   F-1 |\n|--------------------|-------------|----------|-------|\n| Semantic relations |        0.55 |     0.60 |  0.57 |\n| Subjects           |        0.60 |     0.83 |  0.70 |\n| Predicates         |        0.50 |     0.67 |  0.57 |\n| Objects            |        0.48 |     0.60 |  0.53 |"
+      },
+      {
+        "span_id": "C0033-D-P013-TABLE-0001",
+        "page": 13,
+        "excerpt": "Table 10 Results of comparing the RDF triple extractors\n\n| Approach     |   Precision |   Recall |    F-1 |   &#124; T &#124; |\n|--------------|-------------|----------|--------|-------------------|\n| K&I          |      0.4620 |   0.5615 | 0.5069 |               140 |\n| Our approach |      0.5585 |   0.4696 | 0.5102 |               111 |"
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "The method achieves competitive performance versus the existing English-focused K&I approach when applied to the KI dataset, with better precision (0.5585 vs 0.4620) though fewer extracted triples",
+      "Lexical patterns tailored specifically for Spanish grammar allow identification of multi-word entities and specialized terms that a generic NER tool alone misses",
+      "The pipeline supports extensibility, allowing patterns to be replaced or extended for other languages or domains"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0033-D-P013-TABLE-0001",
+        "page": 13,
+        "excerpt": "Table 10 Results of comparing the RDF triple extractors\n\n| Approach     |   Precision |   Recall |    F-1 |   &#124; T &#124; |\n|--------------|-------------|----------|--------|-------------------|\n| K&I          |      0.4620 |   0.5615 | 0.5069 |               140 |\n| Our approach |      0.5585 |   0.4696 | 0.5102 |               111 |"
+      },
+      {
+        "span_id": "C0033-D-P013-TEXT-0005",
+        "page": 13,
+        "excerpt": "The results of the comparison are presented in Table 10, where the evaluation measures and number of extracted triples (| T |) are displayed for K&I and our proposed approach. Although the conditions for the extraction and representation between the two approaches are slightly different (particularly the property mapping and the language), the purpose was to analyze the performance of our proposal regarding an existing approach from the literature. Our proposal got better performance due to a focus on precision, but there were fewer extractions compared to K&I approach."
+      },
+      {
+        "span_id": "C0033-D-P011-TEXT-0004",
+        "page": 11,
+        "excerpt": "We noted that the NER tool presented difficulties in identifying entities in Spanish texts for the CS dataset. This was because the used models works better in more general domains. On the contrary, when adding lexical patterns, the identification of specific entities improves. For example, entities composed of different words such as 'Museo Nacional de Historia Natural/National Museum of Natural History' can be identified. The idea is to increase the number of extractions that can be useful for the association of resources for the subject or object of a triple identified in the text. In the case of the KI dataset, a larger number of entities were extracted by NER-T, mainly because it contains general domain sentences from Wikipedia. However, we also noted a reduction in the number of entities obtained by NER-P because they had already been considered in NER-T and also by variations in the language of translation from English to Spanish. In the case of the FN dataset, the extraction of elements demonstrated that the strategy is able to get elements of information in another domain. Compared to the other datasets, the system obtained more triples from FN (regarding the proportion of sentences of the three datasets). This is due to the number of linked entities and the ratio of the words per sentence, which shows that the patterns work better with shorter sentences since longer sentences contain more lexical elements (e.g., sentence complements joined with prepositions) that require more robust patterns to model them."
+      },
+      {
+        "span_id": "C0033-D-P015-TEXT-0010",
+        "page": 15,
+        "excerpt": "-The use of patterns for identifying entities and semantic relations are useful for matching such components in a general domain. Thus, we can replace the whole set of patterns or add more patterns to the existing list if the input text is in another language or information domain. This option allows the strategy to stay balanced for processing text in no particular domain or adapted for a particular one."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "The focus on lexical patterns for specific relation types causes fewer extracted triples and lower recall compared to K&I, an out-of-vocabulary (OOV) problem where unmatched patterns are not captured",
+      "NER tool performance degrades on domain-specific (CS) Spanish text since models work better for general domains",
+      "Errors in early pipeline stages (entity/relation extraction) are inherited and amplified in later stages (RDF triple construction), especially affecting object elements"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0033-D-P013-TEXT-0012",
+        "page": 13,
+        "excerpt": "-This work is focused on lexical patterns to establish a semantic valence of words and describe the behavior of words in a sentence. Such lexical patterns represent taxonomic, equivalent, and structural relations. For example, our method can detect taxonomic relations described by hyponyms/hyperonyms relation predicates between two resources, such as in the triple: < dbr:Rohtak, isA/esUna, dbr:Ciudad > . However, although the use of lexical patterns allow the proposed method to get a higher precision regarding the approach of K&I, it is also a cause of obtaining fewer triples and a lower recall because of its focus on a particular type of relations. This issue is known as outof-vocabulary (OOV) problem. In this case, the system"
+      },
+      {
+        "span_id": "C0033-D-P011-TEXT-0004",
+        "page": 11,
+        "excerpt": "We noted that the NER tool presented difficulties in identifying entities in Spanish texts for the CS dataset. This was because the used models works better in more general domains. On the contrary, when adding lexical patterns, the identification of specific entities improves. For example, entities composed of different words such as 'Museo Nacional de Historia Natural/National Museum of Natural History' can be identified. The idea is to increase the number of extractions that can be useful for the association of resources for the subject or object of a triple identified in the text. In the case of the KI dataset, a larger number of entities were extracted by NER-T, mainly because it contains general domain sentences from Wikipedia. However, we also noted a reduction in the number of entities obtained by NER-P because they had already been considered in NER-T and also by variations in the language of translation from English to Spanish. In the case of the FN dataset, the extraction of elements demonstrated that the strategy is able to get elements of information in another domain. Compared to the other datasets, the system obtained more triples from FN (regarding the proportion of sentences of the three datasets). This is due to the number of linked entities and the ratio of the words per sentence, which shows that the patterns work better with shorter sentences since longer sentences contain more lexical elements (e.g., sentence complements joined with prepositions) that require more robust patterns to model them."
+      },
+      {
+        "span_id": "C0033-D-P012-TEXT-0008",
+        "page": 12,
+        "excerpt": "Based on the results of Table 9 and given that the sentences in the CS dataset are contained within 19 documents, we present the Precision, Recall, and F-1 values by document (and by element) in the Fig. 2. In terms of the RDF triple elements, the subject obtained the best performance given for all the measures. This behavior is assumed due to the initial point to set an entity as subject and later connect its remaining elements, which sometimes are missing or incomplete (mainly in the case of the object ). For example, according to the sentence Frida Kahlo was a self-portrait painter , a semantic relation can be wasA(Frida Khalo, self-portrait painter) . However, in an RDF triple, the object may miss the word painter , producing an incoherent idea. Much of the influence in supporting coherent ideas is given by the correct extraction of the semantic relation, delimiting the elements that can be represented and inheriting possible errors from early to late steps of the process."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The out-of-vocabulary (OOV) problem: the system does not consider relations or patterns not covered by the defined lexical patterns",
+      "Ellipsis in Spanish (omitted nouns) cannot be processed since patterns always start with a determiner or noun",
+      "Spanish-specific word order (e.g., adjective after noun) requires patterns distinct from those usable in English",
+      "Qualifiers (e.g., temporal qualifiers like 'first') are missing from extracted triples because they require a reification model not covered by this work"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0033-D-P013-TEXT-0012",
+        "page": 13,
+        "excerpt": "-This work is focused on lexical patterns to establish a semantic valence of words and describe the behavior of words in a sentence. Such lexical patterns represent taxonomic, equivalent, and structural relations. For example, our method can detect taxonomic relations described by hyponyms/hyperonyms relation predicates between two resources, such as in the triple: < dbr:Rohtak, isA/esUna, dbr:Ciudad > . However, although the use of lexical patterns allow the proposed method to get a higher precision regarding the approach of K&I, it is also a cause of obtaining fewer triples and a lower recall because of its focus on a particular type of relations. This issue is known as outof-vocabulary (OOV) problem. In this case, the system"
+      },
+      {
+        "span_id": "C0033-D-P015-TEXT-0002",
+        "page": 15,
+        "excerpt": "-Another challenge to deal with in the Spanish language is that the noun could be omitted in a sentence; this is called ellipsis . For example, in the sentence 'estuve en Paris/I was in Paris', there is no noun in the Spanish version, this type of sentence could not be processed with our proposal because the patterns always start with a determiner or a noun."
+      },
+      {
+        "span_id": "C0033-D-P014-TEXT-0002",
+        "page": 14,
+        "excerpt": "-Even though the patterns defined in this work (Tables 1, 2) could also be applied in diverse sentences in English, in some cases, the Spanish language requires lexical items in a specific order to follow correct grammar. Such is the case of the order of adjectives and nouns in a sentence. In Spanish, an adjective goes after the noun, and in English, it goes before the noun (for example, 'carro rojo' is an"
+      },
+      {
+        "span_id": "C0033-D-P013-TEXT-0009",
+        "page": 13,
+        "excerpt": "-More than one RDF triple can be extracted from a single sentence. For example, given the sentence John Genzale was born in Queens, New York, where he first lived in East Elmhurst , a list of some possible RDF triples is presented in Listing 4. For visual and space reasons, not all descriptions from the sentence are represented in the example, where the qualifier ( first ) is missing and can only be defined by a reification model [24], which is not within the focus of this work."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Expand the list of lexical patterns according to domain and language to reduce the out-of-vocabulary (OOV) problem",
+      "Use deep learning and word embeddings to create character-sequence representations for predicting strings not covered by patterns",
+      "Replace tagging and linking modules with more robust/precise strategies, such as disambiguation methods depending on KB characteristics or machine-learning-based property linking",
+      "Explore Web of Data visualization tools (e.g., KG-visual, LDViz) for navigating larger KGs"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0033-D-P014-TEXT-0001",
+        "page": 14,
+        "excerpt": "does not consider what is not covered by the patterns. One option to solve this aspect is to expand the list of patterns according to the domain and language [25]. Another option for addressing this problem is through deep learning and word embeddings, creating a representation of character sequences that allow predicting strings [37,42]. However,suchaspectswillbeconsideredforfuturework."
+      },
+      {
+        "span_id": "C0033-D-P015-TEXT-0003",
+        "page": 15,
+        "excerpt": "-While we focused on a prototype implementation, the tagging and linking modules (for entities and relations) can be replaced with more robust and/or precise strategies. For example, disambiguation methods depending on the characteristics of the KB (e.g., hierarchy, types, mentions) [25], and property linking strategies based on machine learning [32], to mention a few."
+      },
+      {
+        "span_id": "C0033-D-P015-TEXT-0005",
+        "page": 15,
+        "excerpt": "-Regarding the visualization, Fig. 4 shows a graph created with GraphViz for an example entity, which was done only to briefly represent the data obtained. On the other hand, higher dimensional graphs can be navigated with Protégé, which can be useful in, for example, the task of automatic ontology learning. However, for the next version of the system, we will explore Web of Data tools or strategies that would help us to visualize large KGs. For example, KG-visual [11] or LDViz [28], to mention a few."
+      },
+      {
+        "span_id": "C0033-D-P013-TEXT-0012",
+        "page": 13,
+        "excerpt": "-This work is focused on lexical patterns to establish a semantic valence of words and describe the behavior of words in a sentence. Such lexical patterns represent taxonomic, equivalent, and structural relations. For example, our method can detect taxonomic relations described by hyponyms/hyperonyms relation predicates between two resources, such as in the triple: < dbr:Rohtak, isA/esUna, dbr:Ciudad > . However, although the use of lexical patterns allow the proposed method to get a higher precision regarding the approach of K&I, it is also a cause of obtaining fewer triples and a lower recall because of its focus on a particular type of relations. This issue is known as outof-vocabulary (OOV) problem. In this case, the system"
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "The out-of-vocabulary problem for relations/entities not covered by defined lexical patterns remains unresolved",
+      "There is a need for a categorization of semantic relations (for English and Spanish) to support fair evaluation and comparison of approaches",
+      "A standardized way to map extracted relations to well-defined vocabularies (OWL, RDFS) is still needed",
+      "Handling of qualifiers via reification was noted as outside the scope of this work"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0033-D-P015-TEXT-0011",
+        "page": 15,
+        "excerpt": "-Wefound the need to categorize semantic relations (both for English and Spanish) to support the evaluation of approaches with certain information requirements."
+      },
+      {
+        "span_id": "C0033-D-P015-TEXT-0006",
+        "page": 15,
+        "excerpt": "It is worth mentioning that the characterization of entities and relations would be helpful for a fair comparison between approaches. For example, Rosales et al. [34] provide a categorization of named entities so that they can compare EL systems according to the type of entities they extract. Such an aspect may benefit the extraction and evaluation of semantic relations and also the assessment of RDF triples. Moreover, there are different descriptions of semantic relations according to, for example, the number of elements (binary, n -ary) and the type of relation (e.g., composition, inheritance, aggregation, and association). However, it is required a categorization of semantic web relations thinking on several factors such as open relations for real-world objects, different languages and linguistic features, relations attached to certain types of entities, to mention a few. Moreover, a way to map such relations with properties and vocabularies using welldefined standards (OWL, RDFS, OWL) is still needed [25]."
+      },
+      {
+        "span_id": "C0033-D-P013-TEXT-0009",
+        "page": 13,
+        "excerpt": "-More than one RDF triple can be extracted from a single sentence. For example, given the sentence John Genzale was born in Queens, New York, where he first lived in East Elmhurst , a list of some possible RDF triples is presented in Listing 4. For visual and space reasons, not all descriptions from the sentence are represented in the example, where the qualifier ( first ) is missing and can only be defined by a reification model [24], which is not within the focus of this work."
+      }
+    ]
+  },
+  "code_and_data_availability": "The Computer Science dataset is provided online at https://github.com/annarios84/KGspanishtexts, and the Financial News dataset is provided online at https://www.kaggle.com/datasets/datamarket/noticias-economicas.",
+  "analysis_confidence": "medium",
+  "evidence_locations": {
+    "paper_metadata.authors-01": {
+      "claim": "Ana B. Rios-Alvarado; Jose L. Martinez-Rodriguez; Andrea G. Garcia-Perez; Tania Y. Guerrero-Melendez; Ivan Lopez-Arevalo; Jose Luis Gonzalez-Compean",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Ana B. Rios-Alvarado 1 · Jose L. Martinez-Rodriguez 2 · Andrea G. Garcia-Perez 1 · Tania Y. Guerrero-Melendez 1 · Ivan Lopez-Arevalo 3 · Jose Luis Gonzalez-Compean 3",
+      "confidence": "medium"
+    },
+    "paper_metadata.year-01": {
+      "claim": "2022",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "Received: 16 July 2021 / Accepted: 6 June 2022 / Published online: 25 August 2022 ©The Author(s) 2022",
+      "confidence": "medium"
+    },
+    "paper_metadata.abstract-01": {
+      "claim": "Knowledge graphs (KGs) are useful data structures for the integration, retrieval, dissemination, and inference of information in various information domains. One of the main challenges in building KGs is the extraction of named entities (nodes) and their relations (edges), particularly when processing unstructured text as it has no semantic descriptions. Generating KGs from texts written in Spanish represents a research challenge as the existing structures, models, and strategies designed for other languages are not compatible in this scenario. This paper proposes a method to design and construct KGs from unstructured text in Spanish. We defined lexical patterns to extract named entities and (non) taxonomic, equivalence, and composition relations. Next, named entities are linked and enriched with DBpedia resources through a strategy based on SPARQL queries. Finally, OWL properties are defined from the predicate relations for creating resource description framework (RDF) triples. We evaluated the performance of the proposed method to determine the degree of elements extracted from the input text and to assess their quality through standard information retrieval measures. The evaluation revealed the feasibility of the proposed method to extract RDF triples from datasets in general and computer science domains. Competitive results were observed by comparing our method regarding an existing approach from the literature.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P001-TEXT-0003",
+      "page": 1,
+      "excerpt": "Knowledge graphs (KGs) are useful data structures for the integration, retrieval, dissemination, and inference of information in various information domains. One of the main challenges in building KGs is the extraction of named entities (nodes) and their relations (edges), particularly when processing unstructured text as it has no semantic descriptions. Generating KGs from texts written in Spanish represents a research challenge as the existing structures, models, and strategies designed for other languages are not compatible in this scenario. This paper proposes a method to design and construct KGs from unstructured text in Spanish. We defined lexical patterns to extract named entities and (non) taxonomic, equivalence, and composition relations. Next, named entities are linked and enriched with DBpedia resources through a strategy based on SPARQL queries. Finally, OWL properties are defined from the predicate relations for creating resource description framework (RDF) triples. We evaluated the performance of the proposed method to determine the degree of elements extracted from the input text and to assess their quality through standard information retrieval measures. The evaluation revealed the feasibility of the proposed method to extract RDF triples from datasets in general and computer science domains. Competitive results were observed by comparing our method regarding an existing approach from the literature.",
+      "confidence": "medium"
+    },
+    "problem_addressed-01": {
+      "claim": "Building knowledge graphs from unstructured text in Spanish is challenging because existing structures, models, and strategies designed for other languages (mainly English) are not compatible with Spanish, and no complete solution had been developed to construct KGs from unstructured Spanish text, requiring extraction of named entities and relations, their linking to KG resources, and representation as RDF triples.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P001-TEXT-0003",
+      "page": 1,
+      "excerpt": "Knowledge graphs (KGs) are useful data structures for the integration, retrieval, dissemination, and inference of information in various information domains. One of the main challenges in building KGs is the extraction of named entities (nodes) and their relations (edges), particularly when processing unstructured text as it has no semantic descriptions. Generating KGs from texts written in Spanish represents a research challenge as the existing structures, models, and strategies designed for other languages are not compatible in this scenario. This paper proposes a method to design and construct KGs from unstructured text in Spanish. We defined lexical patterns to extract named entities and (non) taxonomic, equivalence, and composition relations. Next, named entities are linked and enriched with DBpedia resources through a strategy based on SPARQL queries. Finally, OWL properties are defined from the predicate relations for creating resource description framework (RDF) triples. We evaluated the performance of the proposed method to determine the degree of elements extracted from the input text and to assess their quality through standard information retrieval measures. The evaluation revealed the feasibility of the proposed method to extract RDF triples from datasets in general and computer science domains. Competitive results were observed by comparing our method regarding an existing approach from the literature.",
+      "confidence": "medium"
+    },
+    "problem_addressed-02": {
+      "claim": "Building knowledge graphs from unstructured text in Spanish is challenging because existing structures, models, and strategies designed for other languages (mainly English) are not compatible with Spanish, and no complete solution had been developed to construct KGs from unstructured Spanish text, requiring extraction of named entities and relations, their linking to KG resources, and representation as RDF triples.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Some solutions have recently been proposed for Spanish to extract and link entities [1], and to generically explore structural relations [40]. However, as far as we know, a complete solution has not been developed to construct KGs from unstructured text in Spanish. Processing Spanish implies its own difficulties in terms of linguistic variations and ambiguities, where structures developed for other languages are not equivalent in this scenario. Thus, a model for data representation from Spanish text is required. This model would allow, among other things, the integration and quick access to information, the enrichment of the original text with metadata, and the exploitation of underlying knowledge, implicit in the text.",
+      "confidence": "medium"
+    },
+    "problem_addressed-03": {
+      "claim": "Building knowledge graphs from unstructured text in Spanish is challenging because existing structures, models, and strategies designed for other languages (mainly English) are not compatible with Spanish, and no complete solution had been developed to construct KGs from unstructured Spanish text, requiring extraction of named entities and relations, their linking to KG resources, and representation as RDF triples.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "In this paper, we propose a method to design and construct KGs from unstructured text in Spanish. We use contextual information to generate lexical patterns that help capture the meaning of words to extract named entities and semantic relations (taxonomic, non-taxonomic, equivalence, and composition relations) that are later linked with DBpedia resources. The idea is to build a network to describe the content of a set of documents by defining a collection of fixed relations and properties, enriched with information from external KGs. We evaluate the performance of the proposed method by measuring the degree of elements extracted from the input text and then assessing their correctness through measures such as precision, recall, and F-1 [36]. The results demonstrate the feasibility of the proposed method to extract triples from three datasets in general, computer science, and financial news domains. We also demonstrate competitive results by comparing our method regarding an existing approach from the literature (but focused on English text).",
+      "confidence": "medium"
+    },
+    "problem_addressed-04": {
+      "claim": "Building knowledge graphs from unstructured text in Spanish is challenging because existing structures, models, and strategies designed for other languages (mainly English) are not compatible with Spanish, and no complete solution had been developed to construct KGs from unstructured Spanish text, requiring extraction of named entities and relations, their linking to KG resources, and representation as RDF triples.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P002-TEXT-0010",
+      "page": 2,
+      "excerpt": "According to the resource description framework (RDF) model, 1 KGs are composed of a set of triples, each with the structure <subject, predicate, object> . The interaction between the subject and the object can be seen as a semantic relation (see the work of Karim et al. [19] for a formal definition of RDF triple and RDF graph). Rather than extracting such components manually by a domain expert, the NLP field plays a central role during the automatic extraction of knowledge from text. NLP incorporates two main tasks: the extraction of named entities (e.g., persons, locations, or organizations) and the extraction of their semantic relations. Named entities are commonly extracted by varied techniques based on machine learning [5], ontology matching [38], online services such as DBpedia Spotlight [27], a combination of techniques [14], and so on. On the other hand, the relation between entities is commonly exploited by strategies that encompass the use of syntactic patterns [8], machine learning [10], and semantic role labeling [12]. However, a step forward for creating a KG is the association of such components to resources from an existing KG and underlying ontologies of the semantic web. The complete process of extracting entities, their relations, and linking them to KG resources is known as relation extraction and linking (REL). Thus, REL can be useful for the semantic enrichment of text or create a graph with semantic and unique components. According to the way semantic relations are extracted from text, we identified three groups of REL approaches:",
+      "confidence": "medium"
+    },
+    "methodology.primary_family-01": {
+      "claim": "Pattern-based knowledge extraction (lexical/grammatical pattern matching for entity and relation extraction)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P004-TEXT-0015",
+      "page": 4,
+      "excerpt": "According to Bower [2], structures that define different types of semantic relations can be obtained by analyzing the text. For example, if there is a sentence: 'an X has the parts A, B and C', a structural relation (meronymic or part-whole relation) can be identified. One way to find such information is through lexical patterns. Thus, the extraction of knowledge components is based on lexical patterns that were defined in two phases. First, taxonomic, non-taxonomic, and some linguistic patterns (defined by Mora et al. [30] and by Hojas-Mazo et al. [17]) were adapted for obtaining relations and specialized entities. Second, diverse sentences were organized regarding their components (e.g., named entity, equivalence relation). Next, applying a grammatical tagger over the sentences makes it possible to generalize tags for obtaining patterns that describe each knowledge component.",
+      "confidence": "medium"
+    },
+    "methodology.primary_family-02": {
+      "claim": "Pattern-based knowledge extraction (lexical/grammatical pattern matching for entity and relation extraction)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P005-TEXT-0009",
+      "page": 5,
+      "excerpt": "The extraction of the knowledge components is supported by a matching process according to the defined patterns. Thus, the set of patterns is iterated to find occurrences within the tagged text. The process is defined in Algorithm 1. The algorithm takes as input a sentence (plain text in Spanish) and obtains its POS (line 3), which is used for obtaining entities through a NER parser and the input entity patterns (line 4). Only if the sentence contains two or more entities then their possible relations are obtained (line 6), where the relation matcher identifies the elements of the semantic relation according to the patterns previously defined.",
+      "confidence": "medium"
+    },
+    "methodology.primary_family-03": {
+      "claim": "Pattern-based knowledge extraction (lexical/grammatical pattern matching for entity and relation extraction)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P002-TEXT-0011",
+      "page": 2,
+      "excerpt": "-Pattern-based. This kind of approach is defined in terms of constructing grammatical structures that describe semantic relations from text. For example, it is often common to see entities defined by nouns and their relation",
+      "confidence": "medium"
+    },
+    "methodology.secondary_families-01": {
+      "claim": "Named entity recognition (NER parser)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P005-TEXT-0005",
+      "page": 5,
+      "excerpt": "-Through a NER parser. A named entity recognition (NER) parser is used to identify named entities from the input sentences. The output of this step is a set of entity tuples with the components defined previously.",
+      "confidence": "medium"
+    },
+    "methodology.secondary_families-02": {
+      "claim": "Named entity recognition (NER parser)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P005-TEXT-0013",
+      "page": 5,
+      "excerpt": "This step is aimed at providing an association of the named entities with resources from DBpedia (denoted by the prefix dbr: ) through SPARQL queries. The idea is to associate the surface form of the entity with its corresponding uniform resource identifier (URI) by matching the available label of the queried resources. Additionally, RDF triples associated with the selected resource are retrieved as enriching information for the KG. Listing 1 presents two SPARQL",
+      "confidence": "medium"
+    },
+    "methodology.secondary_families-03": {
+      "claim": "Named entity recognition (NER parser)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P007-TEXT-0016",
+      "page": 7,
+      "excerpt": "At this point, the extracted entities were associated to resources (from DBpedia and Wikidata) and their enriching information is connected to them with already defined properties from DBpedia, RDFS and OWL vocabularies (obtained through queries). However, connecting the elements in semantic relations is a complicated task due to the heterogeneous data, the sparse descriptive ontologies, and the integration of knowledge components. Thus, we implemented a strategy for crafting properties using the predicate of a semantic relation and the identified resources by defining the following features:",
+      "confidence": "medium"
+    },
+    "methodology.secondary_families-04": {
+      "claim": "Named entity recognition (NER parser)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P009-TEXT-0006",
+      "page": 9,
+      "excerpt": "@prefix rdf : <http://www.w3.org/1999/02/22rdf -syntax -ns#> . @prefix rdfs : <http://www.w3.org/2000/01/ rdf -schema #> . @prefix owl : <http://www.w3.org/2002/07/ owl #> . @prefix schema : <http:// schema .org/> . @prefix dbr : <http://dbpedia.org/resource/> . @prefix dbo: <http://dbpedia.org/ontology/> . @prefix tprop : <http://www. uat -fic-agab.com/prop/> . @prefix dcterms : <http://purl.org/dc/terms/> . @prefix wikidata: <http://www.wikidata.org/entity/> . dbr :Frida_Kahlo tprop :fueUna \"pintora mexicana\"@es ; tprop :nacidaComo \"Magdalena Frida Kahlo Calderon\"@es ; tprop :formaParteDe dbr :Category:20th-century_Mexican_painters ; dcterms :subject dbr :Category:People_from_Mexico_City ; dcterms :subject dbr :Category:20th-century_women ; dcterms :subject dbr :Category:Diarists ; dcterms :subject dbr :Category:Women_painters ; dcterms :subject dbr :Category:Mexican_Trotskyists ; rdf :type schema :Person ; rdf :type dbo:Artist ; rdf :type owl :Thing ; owl :sameAs wikidata:Q5588 .",
+      "confidence": "medium"
+    },
+    "methodology.system_type-01": {
+      "claim": "pipeline",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The proposed method for KG construction from unstructured text in Spanish is presented in Fig. 1. It is composed of four main stages: text preprocessing, knowledge extraction (entities and semantic relations), component linking (with DBpedia resources and ontologies), and representation of triples (by following the Linked Data principles). We describe the stages of the proposed method in the following subsections starting with the type of components extracted with it.",
+      "confidence": "medium"
+    },
+    "methodology.system_type-02": {
+      "claim": "pipeline",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P002-TEXT-0007",
+      "page": 2,
+      "excerpt": "-A pipeline of stages to construct KGs from unstructured text in Spanish, defining an OWL scheme for interconnecting semantic relations with the identified entities.",
+      "confidence": "medium"
+    },
+    "methodology.description-01": {
+      "claim": "The proposed method is composed of four main stages: (1) text preprocessing, (2) knowledge extraction of named entities and semantic relations via lexical patterns and an NER parser combined with pattern matching, (3) component linking to DBpedia resources with semantic enrichment, and (4) representation, where properties are crafted from predicates and triples are constructed, stored, and visualized.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The proposed method for KG construction from unstructured text in Spanish is presented in Fig. 1. It is composed of four main stages: text preprocessing, knowledge extraction (entities and semantic relations), component linking (with DBpedia resources and ontologies), and representation of triples (by following the Linked Data principles). We describe the stages of the proposed method in the following subsections starting with the type of components extracted with it.",
+      "confidence": "medium"
+    },
+    "methodology.description-02": {
+      "claim": "The proposed method is composed of four main stages: (1) text preprocessing, (2) knowledge extraction of named entities and semantic relations via lexical patterns and an NER parser combined with pattern matching, (3) component linking to DBpedia resources with semantic enrichment, and (4) representation, where properties are crafted from predicates and triples are constructed, stored, and visualized.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P005-TEXT-0009",
+      "page": 5,
+      "excerpt": "The extraction of the knowledge components is supported by a matching process according to the defined patterns. Thus, the set of patterns is iterated to find occurrences within the tagged text. The process is defined in Algorithm 1. The algorithm takes as input a sentence (plain text in Spanish) and obtains its POS (line 3), which is used for obtaining entities through a NER parser and the input entity patterns (line 4). Only if the sentence contains two or more entities then their possible relations are obtained (line 6), where the relation matcher identifies the elements of the semantic relation according to the patterns previously defined.",
+      "confidence": "medium"
+    },
+    "methodology.description-03": {
+      "claim": "The proposed method is composed of four main stages: (1) text preprocessing, (2) knowledge extraction of named entities and semantic relations via lexical patterns and an NER parser combined with pattern matching, (3) component linking to DBpedia resources with semantic enrichment, and (4) representation, where properties are crafted from predicates and triples are constructed, stored, and visualized.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P007-TEXT-0011",
+      "page": 7,
+      "excerpt": "The steps for the semantic enrichment are described in Algorithm 2. The algorithm takes as input a set of named entities and a set of queries (as defined by the properties in Table 4). Next, the entities are iterated to query and disambiguate their respective resource from DBpedia (line 3). Only if there is an available resource for such entity, the algorithm continues by submitting queries and gathering the enriching triples output (line 6). Note that the association of resources is restricted to the mentioned properties to enrich the graph logically without ambiguous information, where those entities with no resource associated are discarded.",
+      "confidence": "medium"
+    },
+    "methodology.description-04": {
+      "claim": "The proposed method is composed of four main stages: (1) text preprocessing, (2) knowledge extraction of named entities and semantic relations via lexical patterns and an NER parser combined with pattern matching, (3) component linking to DBpedia resources with semantic enrichment, and (4) representation, where properties are crafted from predicates and triples are constructed, stored, and visualized.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P007-TEXT-0016",
+      "page": 7,
+      "excerpt": "At this point, the extracted entities were associated to resources (from DBpedia and Wikidata) and their enriching information is connected to them with already defined properties from DBpedia, RDFS and OWL vocabularies (obtained through queries). However, connecting the elements in semantic relations is a complicated task due to the heterogeneous data, the sparse descriptive ontologies, and the integration of knowledge components. Thus, we implemented a strategy for crafting properties using the predicate of a semantic relation and the identified resources by defining the following features:",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-01": {
+      "claim": "Text preprocessing (filtering, sentence segmentation, grammatical tagging); Knowledge extraction (named entity and semantic relation extraction via lexical patterns); Component linking (entity linking and semantic enrichment with DBpedia)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The proposed method for KG construction from unstructured text in Spanish is presented in Fig. 1. It is composed of four main stages: text preprocessing, knowledge extraction (entities and semantic relations), component linking (with DBpedia resources and ontologies), and representation of triples (by following the Linked Data principles). We describe the stages of the proposed method in the following subsections starting with the type of components extracted with it.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-02": {
+      "claim": "Text preprocessing (filtering, sentence segmentation, grammatical tagging); Knowledge extraction (named entity and semantic relation extraction via lexical patterns); Component linking (entity linking and semantic enrichment with DBpedia)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P007-TEXT-0015",
+      "page": 7,
+      "excerpt": "This final step covers the construction of the KG according to the knowledge components extracted in the previous tasks. This step is divided into three subtasks as described in the following subsections.",
+      "confidence": "medium"
+    },
+    "input_output.input_type-01": {
+      "claim": "Unstructured plain text written in Spanish (UTF-8)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P004-TEXT-0012",
+      "page": 4,
+      "excerpt": "-Text filtering. The method takes as input plain text 3 in Spanish (UTF-8 charset format). Moreover, special characters are eliminated.",
+      "confidence": "medium"
+    },
+    "input_output.input_granularity-01": {
+      "claim": "Sentence-level (documents segmented into sentences, with sentences of fewer than five words removed)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P004-TEXT-0013",
+      "page": 4,
+      "excerpt": "-Sentence segmentation. The text is segmented into sentences through an NLP parser. This task is performed because such grammatical structures help to define complete and coherent ideas (with subject, predicate, and object) to extract entities and relations. Additionally, sentences containing less than five words are removed. We defined such a word window because sentences with fewer words (short texts) present problems in the detection of the knowledge components, particularly for extracting semantic relations.",
+      "confidence": "medium"
+    },
+    "input_output.output_representation-01": {
+      "claim": "RDF triples following Linked Data principles, represented with properties crafted from predicates and stored as an RDF file / knowledge graph",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The proposed method for KG construction from unstructured text in Spanish is presented in Fig. 1. It is composed of four main stages: text preprocessing, knowledge extraction (entities and semantic relations), component linking (with DBpedia resources and ontologies), and representation of triples (by following the Linked Data principles). We describe the stages of the proposed method in the following subsections starting with the type of components extracted with it.",
+      "confidence": "medium"
+    },
+    "input_output.output_representation-02": {
+      "claim": "RDF triples following Linked Data principles, represented with properties crafted from predicates and stored as an RDF file / knowledge graph",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P008-TEXT-0004",
+      "page": 8,
+      "excerpt": "-Triple crafting. Once the scheme for the set of entities and properties was generated, it is possible to build RDF triples that comprise the KG. The idea is to include the entities, relations, and the enriched information associated with DBpedia resources as triples.",
+      "confidence": "medium"
+    },
+    "models_and_tools-01": {
+      "claim": "NLTK toolkit; Stanford CoreNLP; RDFlib; Apache Jena; GraphViz Python; Python (version 3.5)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P010-TEXT-0016",
+      "page": 10,
+      "excerpt": "Preparation: The NLTK toolkit 12 was used for natural language processing tasks (Tokenize, POS-Tagging).",
+      "confidence": "medium"
+    },
+    "models_and_tools-02": {
+      "claim": "NLTK toolkit; Stanford CoreNLP; RDFlib; Apache Jena; GraphViz Python; Python (version 3.5)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P010-TEXT-0017",
+      "page": 10,
+      "excerpt": "Knowledge extraction: Stanford CoreNLP 13 was used to identify entities in Spanish with the Named Entity Recognition tool together with the lexical patterns.",
+      "confidence": "medium"
+    },
+    "models_and_tools-03": {
+      "claim": "NLTK toolkit; Stanford CoreNLP; RDFlib; Apache Jena; GraphViz Python; Python (version 3.5)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P010-TEXT-0018",
+      "page": 10,
+      "excerpt": "Linking: The library RDFlib 14 for Python was used for querying the DBpedia repository.",
+      "confidence": "medium"
+    },
+    "models_and_tools-04": {
+      "claim": "NLTK toolkit; Stanford CoreNLP; RDFlib; Apache Jena; GraphViz Python; Python (version 3.5)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P010-TEXT-0019",
+      "page": 10,
+      "excerpt": "Representation: The building of the scheme RDF was made using Apache Jena. 15 The graph was visualized using the library GraphViz Python. 16",
+      "confidence": "medium"
+    },
+    "models_and_tools-05": {
+      "claim": "NLTK toolkit; Stanford CoreNLP; RDFlib; Apache Jena; GraphViz Python; Python (version 3.5)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P010-TEXT-0015",
+      "page": 10,
+      "excerpt": "In addition to the algorithms and descriptions presented in Sect. 3, this section presents some implementation details for the components of the proposed method. Python (version 3.5) was used for the implementation of the modules. The following libraries and frameworks were used:",
+      "confidence": "medium"
+    },
+    "datasets-01": {
+      "claim": "CS; KI; FN",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P010-TABLE-0001",
+      "page": 10,
+      "excerpt": "Table 5 Dataset features\n\n| Dataset   | Domain   |   Sentences |   Average W/S | Source    | Triples   |\n|-----------|----------|-------------|---------------|-----------|-----------|\n| KI        | G        |         100 |          16.3 | Wikipedia | 132       |\n| CS        | CS, G    |         250 |          27.1 | Web       | 166       |\n| FN        | F        |        1050 |          11.4 | News      | -         |",
+      "confidence": "medium"
+    },
+    "datasets-02": {
+      "claim": "CS; KI; FN",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P009-TEXT-0005",
+      "page": 9,
+      "excerpt": "-Computer Science (CS). This dataset is composed of 19 documents with a total of 250 sentences written in Spanish. The documents correspond to abstracts of general domain articles and specialized texts in computer science published by researchers from the Autonomous University of Tamaulipas (by using a Google Scholar filter). Three computer science domain experts manually identified a set of 270 entities and 166 triples from the sentences. We considered entities that correspond to class,",
+      "confidence": "medium"
+    },
+    "datasets-03": {
+      "claim": "CS; KI; FN",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "-Wikipedia-based(KI).Thisdatasetwasproposedby[20], which is composed of 100 sentences in English randomly selected from Wikipedia. Each sentence in the dataset contains its corresponding triples with resources linked to DBpedia. The dataset is composed of 132 RDF triples. The sentences were translated into Spanish.",
+      "confidence": "medium"
+    },
+    "datasets-04": {
+      "claim": "CS; KI; FN",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "-Financial News (FN). This dataset is composed of 1050 sentences in the domain of financial news in Spanish, collected from specialized media in Spain. This dataset is provided online. 11",
+      "confidence": "medium"
+    },
+    "evaluation.metrics-01": {
+      "claim": "Precision; Recall; F-Measure",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P010-TEXT-0005",
+      "page": 10,
+      "excerpt": "The experiments considered traditional information retrieval metrics, such as precision , recall , and F-Measure . The metrics are described as follows:",
+      "confidence": "medium"
+    },
+    "evaluation.metrics-02": {
+      "claim": "Precision; Recall; F-Measure",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P010-TEXT-0012",
+      "page": 10,
+      "excerpt": "-F-Measure is a harmonic average between precision and recall. It is defined in Eq. (3).",
+      "confidence": "medium"
+    },
+    "evaluation.baselines-01": {
+      "claim": "K&I",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P012-TEXT-0009",
+      "page": 12,
+      "excerpt": "Although there is a lack of techniques for KG extraction from plain text in Spanish, our goal in this experiment is to compare the performance of our proposed strategy against an existing approach from the literature. In this regard, we considered the approach proposed by Kertkeidkachorn et al. [20] (K&I) by adapting the following scenario:",
+      "confidence": "medium"
+    },
+    "evaluation.baselines-02": {
+      "claim": "K&I",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P013-TABLE-0001",
+      "page": 13,
+      "excerpt": "Table 10 Results of comparing the RDF triple extractors\n\n| Approach     |   Precision |   Recall |    F-1 |   &#124; T &#124; |\n|--------------|-------------|----------|--------|-------------------|\n| K&I          |      0.4620 |   0.5615 | 0.5069 |               140 |\n| Our approach |      0.5585 |   0.4696 | 0.5102 |               111 |",
+      "confidence": "medium"
+    },
+    "evaluation.setting-01": {
+      "claim": "Manual evaluation by three human judges (Spanish native speakers with Semantic Web knowledge) on randomly selected sentences and on the whole CS dataset, plus a comparison against the K&I approach on the KI dataset for RDF triple extraction.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P012-TEXT-0001",
+      "page": 12,
+      "excerpt": "-Evaluators. Three human evaluators manually identified the semantic relations from the randomly selected sentences, and then they compared and assessed each of the automatically extracted semantic relations. On the other hand, the evaluators (judges) are Spanish native speakers with notions of the Semantic Web standards, and belong to a postgraduate Computer Science program. Note that the same judge features apply for the next experiments.",
+      "confidence": "medium"
+    },
+    "evaluation.setting-02": {
+      "claim": "Manual evaluation by three human judges (Spanish native speakers with Semantic Web knowledge) on randomly selected sentences and on the whole CS dataset, plus a comparison against the K&I approach on the KI dataset for RDF triple extraction.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P012-TEXT-0005",
+      "page": 12,
+      "excerpt": "-Dataset. We used the whole CS dataset.",
+      "confidence": "medium"
+    },
+    "evaluation.setting-03": {
+      "claim": "Manual evaluation by three human judges (Spanish native speakers with Semantic Web knowledge) on randomly selected sentences and on the whole CS dataset, plus a comparison against the K&I approach on the KI dataset for RDF triple extraction.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "-Dataset. The KI dataset is used.",
+      "confidence": "medium"
+    },
+    "evaluation.setting-04": {
+      "claim": "Manual evaluation by three human judges (Spanish native speakers with Semantic Web knowledge) on randomly selected sentences and on the whole CS dataset, plus a comparison against the K&I approach on the KI dataset for RDF triple extraction.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P013-TEXT-0004",
+      "page": 13,
+      "excerpt": "-Evaluation. Considering the language of the KI dataset and the one used in our proposal, the extracted triples were manually evaluated to analyze the degree of matching regarding the elements of the original RDF triples in the dataset. In this way, we avoid penalizing identifier differences for the original and extracted resources due to language label changes.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-01": {
+      "claim": "The Computer Science dataset is provided online at https://github.com/annarios84/KGspanishtexts, and the Financial News dataset is provided online at https://www.kaggle.com/datasets/datamarket/noticias-economicas.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P010-TEXT-0010",
+      "page": 10,
+      "excerpt": "10 https://github.com/annarios84/KGspanishtexts.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-02": {
+      "claim": "The Computer Science dataset is provided online at https://github.com/annarios84/KGspanishtexts, and the Financial News dataset is provided online at https://www.kaggle.com/datasets/datamarket/noticias-economicas.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P010-TEXT-0011",
+      "page": 10,
+      "excerpt": "11 https://www.kaggle.com/datasets/datamarket/noticias-economicas.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-03": {
+      "claim": "The Computer Science dataset is provided online at https://github.com/annarios84/KGspanishtexts, and the Financial News dataset is provided online at https://www.kaggle.com/datasets/datamarket/noticias-economicas.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "-Financial News (FN). This dataset is composed of 1050 sentences in the domain of financial news in Spanish, collected from specialized media in Spain. This dataset is provided online. 11",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-04": {
+      "claim": "The Computer Science dataset is provided online at https://github.com/annarios84/KGspanishtexts, and the Financial News dataset is provided online at https://www.kaggle.com/datasets/datamarket/noticias-economicas.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0033-D-P010-TEXT-0004",
+      "page": 10,
+      "excerpt": "While the first dataset is used for testing the extraction of entities and semantic relations through an a posteriori analysis (evaluated by judges after extraction), the second and third datasets were used to evaluate the extraction and association of RDF triples from text. A brief description of the datasets is presented in Table 5, where CS, G, and F are for the Computer Science, General, and Financial domain, respectively, and '-' means no info available.",
+      "confidence": "medium"
+    }
+  }
+}

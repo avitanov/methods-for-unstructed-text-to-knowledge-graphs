@@ -1,0 +1,675 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0126",
+    "title": "Alzheimer’s Disease Knowledge Graph Enhances Knowledge Discovery and Disease Prediction",
+    "authors": [
+      "Yue Yang",
+      "Kaixian Yu",
+      "Shan Gao",
+      "Sheng Yu",
+      "Di Xiong",
+      "Chuanyang Qin",
+      "Huiyuan Chen",
+      "Jiarui Tang",
+      "Niansheng Tang",
+      "Hongtu Zhu"
+    ],
+    "year": 2024,
+    "venue": "bioRxiv preprint",
+    "identifier": {
+      "status": "reported",
+      "value": "https://doi.org/10.1101/2024.07.03.601339",
+      "evidence": [
+        {
+          "span_id": "C0126-D-P002-TEXT-0003",
+          "page": 2,
+          "excerpt": "Alzheimer's Disease, Disease Prediction, Knowledge Graph Construction, Link Prediction available under a CC-BY-NC-ND 4.0 International license. was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made bioRxiv preprint doi: https://doi.org/10.1101/2024.07.03.601339; this version posted July 5, 2024. The copyright holder for this preprint (which"
+        }
+      ]
+    },
+    "abstract": "not_reported",
+    "discovery_source": {
+      "status": "reported",
+      "value": "bioRxiv preprint server",
+      "evidence": [
+        {
+          "span_id": "C0126-D-P002-TEXT-0003",
+          "page": 2,
+          "excerpt": "Alzheimer's Disease, Disease Prediction, Knowledge Graph Construction, Link Prediction available under a CC-BY-NC-ND 4.0 International license. was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made bioRxiv preprint doi: https://doi.org/10.1101/2024.07.03.601339; this version posted July 5, 2024. The copyright holder for this preprint (which"
+        }
+      ]
+    },
+    "pdf_path": null
+  },
+  "problem_addressed": "Alzheimer's disease research literature is vast and fragmented, making it difficult to synthesize relationships among AD, genes, variants, chemicals, drugs, and other diseases; the paper addresses the need to systematically extract and organize this information into a structured, AD-specific knowledge graph to support drug repurposing, biomarker discovery, and disease prediction.",
+  "methodology": {
+    "primary_family": "Supervised information extraction (joint named entity recognition and relation classification) for knowledge graph construction",
+    "secondary_families": [
+      "entity linking",
+      "knowledge fusion with external databases",
+      "knowledge graph embedding (link prediction)",
+      "predictive modeling (logistic regression, XGBoost)"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "supervised",
+    "description": "The authors annotate 800 PubMed abstracts (ADERC corpus) with BERN pre-labeling and BRAT manual annotation, and train a joint SpERT model with SciBERT embeddings for simultaneous entity recognition and relation classification. The trained model is applied to ~169,630 unannotated abstracts retrieved from PubMed to extract entity mentions and relation triplets. Entity linking constructs nodes and edges of the ADKG, which is further fused with external knowledge graphs (DisGeNET, HPO, DrugBank, PharmGKB, OMIM, STRING). Knowledge graph embedding models (TransE, TransH, TransR, ComplEx, ConvKB) are trained on ADKG for link prediction."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The annotation schema defines entity types (Gene/Protein, Disease, Drug/Chemical, Species, Mutation, plus added 'method' and 'other' categories) and eight relationship types (treatment_for, treatment_target_for, help_diagnose, risk_factor_of, characteristic_for, hyponym_of, associated_with, abbreviation_for). Entities are further linked to reference biomedical databases/ontologies including NCBI Gene, UniProt, ChEBI, DrugBank, HPO, Disease Ontology, ClinVar, and MeSH, and the ADKG is fused with external KGs (DisGeNET, PharmGKB, OMIM, STRING).",
+    "evidence": [
+      {
+        "span_id": "C0126-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "Beyond the five entity types identified by BERN, annotators introduced an additional 'method' category to classify methodological entities, exemplified by '18F-FDG-PET'. An 'other' category was also designated to encapsulate entities falling outside the predefined types. For the extraction of  relationships,  our  focus  was  pinned  on  eight  types: treatment_for,  treatment_target_for, help_diagnose, risk_factor_of, characteristic_for, hyponym_of, associated_with , and abbreviation_for , which were selected to align with AD-related research inquiries. A meticulous manual review of 800 abstracts was conducted, leading to their comprehensive annotation via the BRAT  tool  [57].  This  process  resulted  in  a  richly  annotated  corpus  that  encompassed  both biomedical entities and their interrelations across 800 abstracts."
+      },
+      {
+        "span_id": "C0126-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "The  issue  of  inconsistent  entity  representations,  whether  across  various  abstracts  or  within different  sentences  of  the  same  text,  can  introduce  ambiguity.  To  address  this,  we  have established a thorough entity linking procedure that coherently associates references to identical entities. This process utilizes an array of biomedical databases, each catering to specific types of entities. Our extensive database ensemble encompasses genes from NCBI Gene [59], proteins as outlined  in  UniProt  [60],  small  molecules  listed  in  ChEBI  [61],  pharmaceuticals  detailed  in DrugBank [62], phenotypes described in HPO [63], diseases cataloged in the Disease Ontology [64], mutations recorded in ClinVar [65,66], and other medical entities classified under MeSH. In  this  framework, every  entity is  allocated a unique identifier (ID) from its respective source database, enriched with detailed descriptions and additional information to support precise entity resolution and linkage. We employ simstring [67] for approximating string matching, comparing entity  mentions  in  our  extracted  triplets  against  standard  names  and  their  synonyms  in  the reference databases, with matching scores serving as a measure of confidence."
+      },
+      {
+        "span_id": "C0126-D-P011-TEXT-0002",
+        "page": 11,
+        "excerpt": "Integrating external knowledge graphs with the Alzheimer's Disease Knowledge Graph (ADKG) is  essential  to  enhance  the  comprehensiveness  and  accuracy  of  the  information  available  to researchers  and  practitioners  [68].  This  integration  enriches  the  ADKG  with  diverse  datasets, enabling more robust analyses and insights into Alzheimer's disease. To preserve the integrity of the  integrated  knowledge  graph,  we  included  the  sources  of  each  entity  and  relationship. Additionally, we have developed a comprehensive mapping schema to facilitate the alignment of entities  and  relationships  across  different  knowledge  graphs.  We  integrated  representative external databases like DisGeNET [23], The Human Phenotype Ontology (HPO) [63], DrugBank [62], PharmGKB  (Pharmacogenomics Knowledgebase) [69], OMIM  (Online Mendelian Inheritance in Man) [70], and STRING [71]. The full details of how we processed the external databases in the integration process is available in the supplementary materials."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "abstract retrieval from PubMed",
+    "pre-labeling with BERN",
+    "manual annotation via BRAT",
+    "abbreviation resolution",
+    "entity linking to reference databases",
+    "knowledge graph construction (nodes and edges)",
+    "knowledge fusion with external knowledge graphs",
+    "knowledge graph embedding and link prediction"
+  ],
+  "input_output": {
+    "input_type": "Biomedical literature text (PubMed abstracts related to Alzheimer's disease)",
+    "input_granularity": "Sentence-level text within abstracts, from which entity mentions and relation triplets are extracted",
+    "output_representation": "A knowledge graph (ADKG) composed of head-relation-tail entity triplets, with entities linked to unique identifiers from reference biomedical databases and edges annotated with PubMed IDs, text spans, and matching confidence scores"
+  },
+  "models_and_tools": [
+    "SpERT",
+    "SciBERT",
+    "TransE",
+    "TransH",
+    "TransR",
+    "ComplEx",
+    "ConvKB",
+    "XGBoost",
+    "logistic regression",
+    "simstring"
+  ],
+  "datasets": "not_reported",
+  "evaluation": {
+    "metrics": [
+      "Precision",
+      "Recall",
+      "Mean Rank",
+      "Hits@10"
+    ],
+    "baselines": [
+      "TransE",
+      "TransH",
+      "TransR",
+      "ComplEx"
+    ],
+    "setting": "Held-out evaluation: ADKG divided into ~80% training, ~10% validation, ~10% testing for knowledge graph embedding (KGE) model selection; UK Biobank dataset (52,164 cases and 541 controls) split into 90% training/validation and 10% testing for disease prediction models."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Entity Recognition model achieved micro F1 of 87.2% and macro F1 of 86.1%",
+      "Relation Extraction model achieved micro F1 of 67.1% and macro F1 of 66.3%",
+      "ConvKB achieved the best KGE performance with Mean Rank 312 and Hits@10 0.2781 (Table 1), outperforming TransE, TransH, TransR, and ComplEx",
+      "ADKG precision evaluation: 94 out of 137 sampled triplets (68.61%) were correctly represented",
+      "XGBoost with ADKG-derived predictors achieved AUC of 0.928, higher than logistic regression"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0126-D-P014-TEXT-0002",
+        "page": 14,
+        "excerpt": "We present a detailed comparison of the precision, recall, and F1 score metrics for three different models: Entity Recognition, Relation Extraction, and a Joint model that combines the two tasks. Precision and  recall  are  reported  in  both  micro  and  macro  averages,  offering  insights  into  the models'  performance  across  individual  instances  (micro)  as  well  as  across  different  classes (macro). For Entity Recognition, the model demonstrates strong performance with a micro F1 score of 87.2% and a macro F1 score of 86.1%, indicating consistent accuracy across various entity types. Relation Extraction shows lower scores across all metrics, with a micro F1 score of 67.1% and a macro F1 of 66.3%, reflecting the increased challenge of this task. The Joint model, which tackles both entity recognition and relation extraction simultaneously, understandably has lower  scores  than  the  individual  tasks  with  a  micro  F1  of  61.4%  and  a  macro  F1  of  61.5%, suggesting that combining tasks may introduce additional complexity."
+      },
+      {
+        "span_id": "C0126-D-P017-TABLE-0001",
+        "page": 17,
+        "excerpt": "Table 1 Knowledge Graph Embedding performance of the best setting on test set for different KGE models\n\n| Model   |   Mean Rank |   Hits@10 |\n|---------|-------------|-----------|\n| TransE  |         387 |    0.1646 |\n| TransH  |         373 |    0.1973 |\n| TransR  |         377 |    0.1941 |\n| ComplEx |         340 |    0.2125 |\n| ConvKB  |         312 |    0.2781 |"
+      },
+      {
+        "span_id": "C0126-D-P015-TEXT-0001",
+        "page": 15,
+        "excerpt": "Assessing the performance of a knowledge graph, such as the ADKG, necessitates a meticulous evaluation, particularly focusing on the precision of the predicted triplets to confirm the graph's effective encapsulation of the sourced information. This evaluation involves selecting a random sample of 100 sentences from the relevant literature and examining the triplets that the ADKG derives  from  these  sentences.  Each  triplet's  accuracy  is  scrutinized  to  verify  its  faithful representation  of  the  sentence's  content.  Precision  is  quantified  as  the  proportion  of  accurate triplets  in  relation  to  the  total  number  of  triplets  extracted.  This  rigorous  validation  process initially employs GPT-4 and is subsequently cross-verified by domain specialists. In our analysis, we  found  that  94  out  of  137  triplets  (68.61%)  were  correctly  represented  in  the  ADKG, demonstrating its efficacy in capturing pertinent information."
+      },
+      {
+        "span_id": "C0126-D-P019-TEXT-0005",
+        "page": 19,
+        "excerpt": "The  integration  of  domain-specific  knowledge  from  the  ADKG  substantially  improved  the model's  predictive  accuracy,  as  demonstrated  by  an  increase  in  the  Area  under  the  Receiver Operating Characteristic (ROC) curve from 0.9025 to 0.9137 for the ADKG-enhanced model."
+      },
+      {
+        "span_id": "C0126-D-P020-TEXT-0001",
+        "page": 20,
+        "excerpt": "Moreover, the application of the XGBoost algorithm with ADKG-derived predictors achieved an even  higher  AUC  of  0.928,  underscoring  the  potency  of  sophisticated  machine  learning techniques in refining AD predictive models. These results highlight the pivotal role of domainspecific knowledge in augmenting model performance. This comprehensive evaluation process is depicted in Figure 4."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Integrated ADKG with multiple external biomedical databases to enhance comprehensiveness"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0126-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "Provide a brand-new human-annotated benchmark dataset for named entity recognition and relation classification specified in AD literature."
+      },
+      {
+        "span_id": "C0126-D-P014-TEXT-0001",
+        "page": 14,
+        "excerpt": "The constructed dataset (ADERC) includes annotations for biomedical entities and their relations for  800  abstracts.  These  abstracts  are  retrieved  from  PubMed  through  query  of  \"Alzheimer's disease\".  The  ADERC contains  20,  886  annotated  mentions  and  4,  935  relationships  between these  mentions.  The  original  predictions  on  all  the  abstracts  contains  in  total  3,199,276  entity mentions  and  633,733  triplets,  among  which  we  identified  45,277  unique  triplets  between mapped entities after entity linking. Details of the types of entity and relationships are shown in Figure 2."
+      },
+      {
+        "span_id": "C0126-D-P020-TEXT-0002",
+        "page": 20,
+        "excerpt": "In this study, we unveil a cutting-edge data mining approach for developing the ADKG, derived from triplets extracted from academic abstracts. This knowledge graph serves as a pivotal tool for drug repurposing and identifying biomarkers pertinent to AD. Additionally, we introduce the ADERC, a uniquely human-annotated dataset tailored for research in AD knowledge graphs. Our methodology delves into the ADKG's attributes, employing it for data retrieval and showcasing its  utility  in  discovering  new  connections  through  link  prediction  techniques  enabled  by knowledge graph embedding methods. A cornerstone of our research is the practical use of the ADKG  in  the  predictive  modeling  of  AD,  capitalizing  on  the  comprehensive  data  available within the UK Biobank."
+      },
+      {
+        "span_id": "C0126-D-P011-TEXT-0002",
+        "page": 11,
+        "excerpt": "Integrating external knowledge graphs with the Alzheimer's Disease Knowledge Graph (ADKG) is  essential  to  enhance  the  comprehensiveness  and  accuracy  of  the  information  available  to researchers  and  practitioners  [68].  This  integration  enriches  the  ADKG  with  diverse  datasets, enabling more robust analyses and insights into Alzheimer's disease. To preserve the integrity of the  integrated  knowledge  graph,  we  included  the  sources  of  each  entity  and  relationship. Additionally, we have developed a comprehensive mapping schema to facilitate the alignment of entities  and  relationships  across  different  knowledge  graphs.  We  integrated  representative external databases like DisGeNET [23], The Human Phenotype Ontology (HPO) [63], DrugBank [62], PharmGKB  (Pharmacogenomics Knowledgebase) [69], OMIM  (Online Mendelian Inheritance in Man) [70], and STRING [71]. The full details of how we processed the external databases in the integration process is available in the supplementary materials."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Only 68.61% precision was observed in a manual/GPT-4 validation of sampled ADKG triplets, suggesting a substantial fraction of extracted triplets may be inaccurate",
+      "Data source is restricted to abstracts, excluding full-text articles and supplementary materials that could enrich extracted information",
+      "The model does not explicitly recognize negative relationships, which could lead to inclusion of erroneous conclusions"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0126-D-P014-TEXT-0002",
+        "page": 14,
+        "excerpt": "We present a detailed comparison of the precision, recall, and F1 score metrics for three different models: Entity Recognition, Relation Extraction, and a Joint model that combines the two tasks. Precision and  recall  are  reported  in  both  micro  and  macro  averages,  offering  insights  into  the models'  performance  across  individual  instances  (micro)  as  well  as  across  different  classes (macro). For Entity Recognition, the model demonstrates strong performance with a micro F1 score of 87.2% and a macro F1 score of 86.1%, indicating consistent accuracy across various entity types. Relation Extraction shows lower scores across all metrics, with a micro F1 score of 67.1% and a macro F1 of 66.3%, reflecting the increased challenge of this task. The Joint model, which tackles both entity recognition and relation extraction simultaneously, understandably has lower  scores  than  the  individual  tasks  with  a  micro  F1  of  61.4%  and  a  macro  F1  of  61.5%, suggesting that combining tasks may introduce additional complexity."
+      },
+      {
+        "span_id": "C0126-D-P015-TEXT-0001",
+        "page": 15,
+        "excerpt": "Assessing the performance of a knowledge graph, such as the ADKG, necessitates a meticulous evaluation, particularly focusing on the precision of the predicted triplets to confirm the graph's effective encapsulation of the sourced information. This evaluation involves selecting a random sample of 100 sentences from the relevant literature and examining the triplets that the ADKG derives  from  these  sentences.  Each  triplet's  accuracy  is  scrutinized  to  verify  its  faithful representation  of  the  sentence's  content.  Precision  is  quantified  as  the  proportion  of  accurate triplets  in  relation  to  the  total  number  of  triplets  extracted.  This  rigorous  validation  process initially employs GPT-4 and is subsequently cross-verified by domain specialists. In our analysis, we  found  that  94  out  of  137  triplets  (68.61%)  were  correctly  represented  in  the  ADKG, demonstrating its efficacy in capturing pertinent information."
+      },
+      {
+        "span_id": "C0126-D-P021-TEXT-0001",
+        "page": 21,
+        "excerpt": "While our framework demonstrates considerable promise, there are avenues for enhancement. Beyond technical refinements, a critical area for expansion involves broadening the data sources beyond abstracts to include full-text articles, as well as data from supplementary materials like tables and notes, to enrich the depth of information extracted. Further granularity in classifying entity and relationship types could also provide deeper insights. For example, differentiating the 'gene' category into more specific types such as gene, protein, and RNA could offer more precise understanding. Recognizing negative relationships  is  equally  important, as  it can  help  identify erroneous conclusions in AD  research. Such advancements  would  necessitate increased annotation  efforts  to  generate  enough  annotated  training  samples  for  each  detailed  category, ensuring the model's ability to accurately discern these patterns."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The data source is limited to abstracts rather than full-text articles and supplementary materials such as tables and notes",
+      "Entity and relationship type granularity is coarse (e.g., 'gene' category is not differentiated into gene, protein, and RNA)",
+      "The current framework does not recognize negative relationships, which could help identify erroneous conclusions"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0126-D-P021-TEXT-0001",
+        "page": 21,
+        "excerpt": "While our framework demonstrates considerable promise, there are avenues for enhancement. Beyond technical refinements, a critical area for expansion involves broadening the data sources beyond abstracts to include full-text articles, as well as data from supplementary materials like tables and notes, to enrich the depth of information extracted. Further granularity in classifying entity and relationship types could also provide deeper insights. For example, differentiating the 'gene' category into more specific types such as gene, protein, and RNA could offer more precise understanding. Recognizing negative relationships  is  equally  important, as  it can  help  identify erroneous conclusions in AD  research. Such advancements  would  necessitate increased annotation  efforts  to  generate  enough  annotated  training  samples  for  each  detailed  category, ensuring the model's ability to accurately discern these patterns."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Broaden data sources beyond abstracts to include full-text articles and supplementary materials like tables and notes",
+      "Increase granularity in entity and relationship type classification (e.g., splitting 'gene' into gene, protein, RNA)",
+      "Add recognition of negative relationships to identify erroneous conclusions",
+      "Integrate ADKG data into a large language model-powered question-and-answer (Q&A) engine to improve public accessibility of AD information"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0126-D-P021-TEXT-0001",
+        "page": 21,
+        "excerpt": "While our framework demonstrates considerable promise, there are avenues for enhancement. Beyond technical refinements, a critical area for expansion involves broadening the data sources beyond abstracts to include full-text articles, as well as data from supplementary materials like tables and notes, to enrich the depth of information extracted. Further granularity in classifying entity and relationship types could also provide deeper insights. For example, differentiating the 'gene' category into more specific types such as gene, protein, and RNA could offer more precise understanding. Recognizing negative relationships  is  equally  important, as  it can  help  identify erroneous conclusions in AD  research. Such advancements  would  necessitate increased annotation  efforts  to  generate  enough  annotated  training  samples  for  each  detailed  category, ensuring the model's ability to accurately discern these patterns."
+      },
+      {
+        "span_id": "C0126-D-P021-TEXT-0002",
+        "page": 21,
+        "excerpt": "Regarding the application of the ADKG, we have outlined various potential uses and presented case  studies  to  illustrate  how  the  ADKG  can  enhance  traditional  tasks.  It's  important  to  note, however, that the scope for improving traditional tasks with knowledge graph insights extends beyond  the  examples  provided  in  our  manuscript.  The  emergence  of  large  language  models opens up even more possibilities. One notable application could involve integrating ADKG data into a question-and-answer (Q&A) engine powered by large language models, thereby making Alzheimer's Disease information more readily accessible to the general public."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Achieving finer-grained entity/relationship classification would require substantially increased annotation efforts to generate sufficient training samples for each detailed category",
+      "The scope for applying knowledge graph insights to traditional tasks extends beyond the examples demonstrated in this study, indicating unexplored application areas"
+    ],
+    "evidence": [
+      {
+        "span_id": "C0126-D-P021-TEXT-0001",
+        "page": 21,
+        "excerpt": "While our framework demonstrates considerable promise, there are avenues for enhancement. Beyond technical refinements, a critical area for expansion involves broadening the data sources beyond abstracts to include full-text articles, as well as data from supplementary materials like tables and notes, to enrich the depth of information extracted. Further granularity in classifying entity and relationship types could also provide deeper insights. For example, differentiating the 'gene' category into more specific types such as gene, protein, and RNA could offer more precise understanding. Recognizing negative relationships  is  equally  important, as  it can  help  identify erroneous conclusions in AD  research. Such advancements  would  necessitate increased annotation  efforts  to  generate  enough  annotated  training  samples  for  each  detailed  category, ensuring the model's ability to accurately discern these patterns."
+      },
+      {
+        "span_id": "C0126-D-P021-TEXT-0002",
+        "page": 21,
+        "excerpt": "Regarding the application of the ADKG, we have outlined various potential uses and presented case  studies  to  illustrate  how  the  ADKG  can  enhance  traditional  tasks.  It's  important  to  note, however, that the scope for improving traditional tasks with knowledge graph insights extends beyond  the  examples  provided  in  our  manuscript.  The  emergence  of  large  language  models opens up even more possibilities. One notable application could involve integrating ADKG data into a question-and-answer (Q&A) engine powered by large language models, thereby making Alzheimer's Disease information more readily accessible to the general public."
+      }
+    ]
+  },
+  "code_and_data_availability": "The datasets generated during the study are available in the Zenodo repository (https://doi.org/10.5281/zenodo.5770100), and the ADKG knowledge graph is accessible via the developed website https://biomedkg.com/ for query and visualization.",
+  "analysis_confidence": "high",
+  "evidence_locations": {
+    "paper_metadata.authors-01": {
+      "claim": "Yue Yang; Kaixian Yu; Shan Gao; Sheng Yu; Di Xiong; Chuanyang Qin; Huiyuan Chen; Jiarui Tang; Niansheng Tang; Hongtu Zhu",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Yue Yang 1 , Kaixian Yu 2 , Shan Gao 3 , Sheng Yu 4 , Di Xiong 5 , Chuanyang Qin 3 , Huiyuan Chen 3 , Jiarui Tang 1 , Niansheng Tang 3 , Hongtu Zhu 1*",
+      "confidence": "high"
+    },
+    "paper_metadata.year-01": {
+      "claim": "2024",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "Alzheimer's Disease, Disease Prediction, Knowledge Graph Construction, Link Prediction available under a CC-BY-NC-ND 4.0 International license. was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made bioRxiv preprint doi: https://doi.org/10.1101/2024.07.03.601339; this version posted July 5, 2024. The copyright holder for this preprint (which",
+      "confidence": "high"
+    },
+    "paper_metadata.venue-01": {
+      "claim": "bioRxiv preprint",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "Alzheimer's Disease, Disease Prediction, Knowledge Graph Construction, Link Prediction available under a CC-BY-NC-ND 4.0 International license. was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made bioRxiv preprint doi: https://doi.org/10.1101/2024.07.03.601339; this version posted July 5, 2024. The copyright holder for this preprint (which",
+      "confidence": "high"
+    },
+    "problem_addressed-01": {
+      "claim": "Alzheimer's disease research literature is vast and fragmented, making it difficult to synthesize relationships among AD, genes, variants, chemicals, drugs, and other diseases; the paper addresses the need to systematically extract and organize this information into a structured, AD-specific knowledge graph to support drug repurposing, biomarker discovery, and disease prediction.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "As the field of AD research rapidly evolves, it becomes increasingly crucial to synthesize and summarize information from the multitude of studies and published papers. This comprehensive approach allows researchers, clinicians, and policymakers to gain a holistic understanding of the current state of AD research and treatment. By consolidating findings from diverse areas such as disease mechanisms, diagnostic tools, treatment strategies, and care approaches, we can identify emerging  trends,  highlight  promising  avenues  for  future  research,  and  inform  evidence-based practices  in  AD  management.  Furthermore,  regular  summaries  of  the  expanding  body  of knowledge  facilitate  the  translation  of  research  findings  into  clinical  practice  and  policy decisions, ultimately advancing our collective efforts to combat this devastating disease.",
+      "confidence": "high"
+    },
+    "problem_addressed-02": {
+      "claim": "Alzheimer's disease research literature is vast and fragmented, making it difficult to synthesize relationships among AD, genes, variants, chemicals, drugs, and other diseases; the paper addresses the need to systematically extract and organize this information into a structured, AD-specific knowledge graph to support drug repurposing, biomarker discovery, and disease prediction.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "The goal of this paper is to develop a novel data mining method to extract information on AD from literature, primarily biomedical entities related to AD, and their relationships, to construct an AD  knowledge  graph. We  employ  a supervised strategy, harnessing crowdsourced annotations  and  GPT-4  [55]  for textual  enrichment to curate a  training  set  for  the  SpERT[50] model  training.  We  further  delve  into  the  knowledge  graph's  attributes  and  its  utility  in hypothesis generation and disease prediction.",
+      "confidence": "high"
+    },
+    "problem_addressed-03": {
+      "claim": "Alzheimer's disease research literature is vast and fragmented, making it difficult to synthesize relationships among AD, genes, variants, chemicals, drugs, and other diseases; the paper addresses the need to systematically extract and organize this information into a structured, AD-specific knowledge graph to support drug repurposing, biomarker discovery, and disease prediction.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P002-TEXT-0001-PART001",
+      "page": 2,
+      "excerpt": "Background : Alzheimer's disease (AD), a progressive neurodegenerative disorder, continues to increase  in  prevalence  without  any  effective  treatments  to  date.  In  this  context,  knowledge graphs (KGs) have emerged as a pivotal tool in biomedical research, offering new perspectives on  drug  repurposing  and  biomarker  discovery  by  analyzing  intricate  network  structures.  Our study  seeks  to  build  an  AD-specific  knowledge  graph,  highlighting  interactions  among  AD, genes,  variants,  chemicals,  drugs,  and  other  diseases.  The  goal  is  to  shed  light  on  existing treatments, potential targets, and diagnostic methods for AD, thereby aiding in drug repurposing and the identification of biomarkers. Results :  We  annotated  800  PubMed  abstracts  and  leveraged  GPT-4  for  text  augmentation  to enrich  our  training  data  for  named  entity  recognition  (NER)  and  relation  classification.  A comprehensive data mining model, integrating NER and relationship classification, was trained on the annotated corpus. This model was subsequently applied to extract relation triplets from unannotated  abstracts.  To  enhance  entity  linking,  we  utilized  a  suite  of  reference  biomedical databases  and  refine  the  linking  accuracy  through  abbreviation  resolution.  As  a  result,  we successfully identified 3,199,276 entity mentions and 633,733 triplets, elucidating connections between 5,000 unique entities. These connections were pivotal in constructing a comprehensive Alzheimer's  Disease  Knowledge  Graph  (ADKG).  We  also  integrated  the  ADKG  constructed after entity linking with other biomedical databases. The ADKG served as a training ground for Knowledge  Graph  Embedding  models  with  the  high-ranking  predicted  triplets  supported  by evidence, underscoring the utility of ADKG in generating testable scientific hypotheses. ",
+      "confidence": "high"
+    },
+    "methodology.primary_family-01": {
+      "claim": "Supervised information extraction (joint named entity recognition and relation classification) for knowledge graph construction",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "The goal of this paper is to develop a novel data mining method to extract information on AD from literature, primarily biomedical entities related to AD, and their relationships, to construct an AD  knowledge  graph. We  employ  a supervised strategy, harnessing crowdsourced annotations  and  GPT-4  [55]  for textual  enrichment to curate a  training  set  for  the  SpERT[50] model  training.  We  further  delve  into  the  knowledge  graph's  attributes  and  its  utility  in hypothesis generation and disease prediction.",
+      "confidence": "high"
+    },
+    "methodology.primary_family-02": {
+      "claim": "Supervised information extraction (joint named entity recognition and relation classification) for knowledge graph construction",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "We developed a unified model for simultaneous named entity recognition and relation extraction on ADERC, leveraging the SpERT [50] framework with SciBERT [58] embeddings. To refine our negative sampling approach, we introduced manually crafted negative instances. Beyond the standard  practice  of  using  texts  without  named  entities  or  unrelated  entity  pairs  as  negative examples, we enriched the dataset by modifying positive instances through the substitution  of entities  and  relations.  This  method  is  designed  to  achieve  a  balanced  dataset,  offering  a comprehensive  assortment  of  both  positive  and  negative  samples  to  reduce  model  bias  and improve precision in detecting pertinent entities and their connections.",
+      "confidence": "high"
+    },
+    "methodology.secondary_families-01": {
+      "claim": "entity linking; knowledge fusion with external databases; knowledge graph embedding (link prediction); predictive modeling (logistic regression, XGBoost)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "The  issue  of  inconsistent  entity  representations,  whether  across  various  abstracts  or  within different  sentences  of  the  same  text,  can  introduce  ambiguity.  To  address  this,  we  have established a thorough entity linking procedure that coherently associates references to identical entities. This process utilizes an array of biomedical databases, each catering to specific types of entities. Our extensive database ensemble encompasses genes from NCBI Gene [59], proteins as outlined  in  UniProt  [60],  small  molecules  listed  in  ChEBI  [61],  pharmaceuticals  detailed  in DrugBank [62], phenotypes described in HPO [63], diseases cataloged in the Disease Ontology [64], mutations recorded in ClinVar [65,66], and other medical entities classified under MeSH. In  this  framework, every  entity is  allocated a unique identifier (ID) from its respective source database, enriched with detailed descriptions and additional information to support precise entity resolution and linkage. We employ simstring [67] for approximating string matching, comparing entity  mentions  in  our  extracted  triplets  against  standard  names  and  their  synonyms  in  the reference databases, with matching scores serving as a measure of confidence.",
+      "confidence": "high"
+    },
+    "methodology.secondary_families-02": {
+      "claim": "entity linking; knowledge fusion with external databases; knowledge graph embedding (link prediction); predictive modeling (logistic regression, XGBoost)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "Integrating external knowledge graphs with the Alzheimer's Disease Knowledge Graph (ADKG) is  essential  to  enhance  the  comprehensiveness  and  accuracy  of  the  information  available  to researchers  and  practitioners  [68].  This  integration  enriches  the  ADKG  with  diverse  datasets, enabling more robust analyses and insights into Alzheimer's disease. To preserve the integrity of the  integrated  knowledge  graph,  we  included  the  sources  of  each  entity  and  relationship. Additionally, we have developed a comprehensive mapping schema to facilitate the alignment of entities  and  relationships  across  different  knowledge  graphs.  We  integrated  representative external databases like DisGeNET [23], The Human Phenotype Ontology (HPO) [63], DrugBank [62], PharmGKB  (Pharmacogenomics Knowledgebase) [69], OMIM  (Online Mendelian Inheritance in Man) [70], and STRING [71]. The full details of how we processed the external databases in the integration process is available in the supplementary materials.",
+      "confidence": "high"
+    },
+    "methodology.secondary_families-03": {
+      "claim": "entity linking; knowledge fusion with external databases; knowledge graph embedding (link prediction); predictive modeling (logistic regression, XGBoost)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P012-TEXT-0003-PART001",
+      "page": 12,
+      "excerpt": "We  evaluated  several  knowledge  graph  embedding  (KGE)  methods,  including  distancebased models like TransE [72], TransH [73], and TransR [74], the semantic matching-based ComplEx model [75], and the ConvKB model [76], which incorporates convolutional neural networks. Each model offers a unique approach to representing relationships and entities: (i)  TransE  treats  relationships  as  translations  in  the  embedding  space,  where  the plausibility  of  a  fact  is  the  L1  or  L2  dista nce between the sum of the head entity and relation vectors and the tail entity vector, embodying the concept of the relation 'translating' the head to the  tail  entity.  (ii) TransH projects  entity  embeddings  onto  relation-specific  hyperplanes, accommodating entities' differing  roles  across  multiple  relations.  Its  scoring  function  assesses fact  plausibility  based  on  the  L1  or  L2  norm  after  this  projection,  reflecting  the  translation principle  on  these  hyperplanes.  (iii) TransR separates  entity  and  relation  embeddings  into distinct  spaces,  projecting  entity  embeddings  into  a  relation-specific  space  before  translation. The fact's plausibility is measured by the L1 or L2 distance between the translated head entity and the tail entity within this relation space. (iv) ComplEx uses complex-valued embeddings to represent both symmetric and asymmetric relationships, with its scoring function being the real part  of  the  dot  product  of  complex  embeddings,  facilitating  the  modeling  of  diverse  relation types,  including  hierarchical  and  reciprocal  relations.  (v) ConvKB employs  a  convolutional neural  network  over  concatenated  embeddings  of  head  entities,  relations,  and  tail  entities  to identify  global  interaction  patterns.  Its  scoring involves  convolution, a non-linear  feature  map, and  a  linear  scoring  layer,  capturing  intricate  interaction  patterns  to  predict  new  facts.  ",
+      "confidence": "high"
+    },
+    "methodology.secondary_families-04": {
+      "claim": "entity linking; knowledge fusion with external databases; knowledge graph embedding (link prediction); predictive modeling (logistic regression, XGBoost)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P019-TEXT-0003",
+      "page": 19,
+      "excerpt": "In  developing  the predictive  model  for  AD,  we  utilized both  logistic  regression  and  XGBoost algorithms  [79].  To  prepare  for  model  training,  we  tackled  the  issue  of  missing  data  in  the normalized  protein  expression  profiles  by  employing  mean  substitution  [80],  ensuring  the completeness  and  reliability  of  the  data  essential  for  the  logistic  regression  model,  given  the complexity  of  missing  data  patterns.  The  relatively  low  occurrence  of  AD  in  the  population, leading to an imbalanced case-control ratio in our dataset, prompted us to use the ROSE package [81]  for  oversampling,  achieving  a  more  equitable  distribution  of  cases  and  controls  in  the training dataset.",
+      "confidence": "high"
+    },
+    "methodology.system_type-01": {
+      "claim": "pipeline",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P007-TEXT-0006",
+      "page": 7,
+      "excerpt": "We will first introduce the primary  steps to construct the Alzheimer's  Disease Entity Relation Corpus (ADERC). Then, we will discuss on how we utilize the dataset to train an information extraction model for triplets' extraction. Finally, we describe the approaches utilized to construct ADKG. The overall procedure of constructing ADKG is illustrated in Figure 1.",
+      "confidence": "high"
+    },
+    "methodology.system_type-02": {
+      "claim": "pipeline",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P008-CAPTION-0001",
+      "page": 8,
+      "excerpt": "Figure 1. General Pipeline: corpus generation, model building, entity linking, ADKG construction, and applications",
+      "confidence": "high"
+    },
+    "methodology.supervision_setting-01": {
+      "claim": "supervised",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "The goal of this paper is to develop a novel data mining method to extract information on AD from literature, primarily biomedical entities related to AD, and their relationships, to construct an AD  knowledge  graph. We  employ  a supervised strategy, harnessing crowdsourced annotations  and  GPT-4  [55]  for textual  enrichment to curate a  training  set  for  the  SpERT[50] model  training.  We  further  delve  into  the  knowledge  graph's  attributes  and  its  utility  in hypothesis generation and disease prediction.",
+      "confidence": "high"
+    },
+    "methodology.description-01": {
+      "claim": "The authors annotate 800 PubMed abstracts (ADERC corpus) with BERN pre-labeling and BRAT manual annotation, and train a joint SpERT model with SciBERT embeddings for simultaneous entity recognition and relation classification. The trained model is applied to ~169,630 unannotated abstracts retrieved from PubMed to extract entity mentions and relation triplets. Entity linking constructs nodes and edges of the ADKG, which is further fused with external knowledge graphs (DisGeNET, HPO, DrugBank, PharmGKB, OMIM, STRING). Knowledge graph embedding models (TransE, TransH, TransR, ComplEx, ConvKB) are trained on ADKG for link prediction.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "A new dataset for AD-related information extraction, ADERC, is constructed from 800 PubMed abstracts related to AD.  The overall procedure for generating the dataset is shown in Figure 1. Three  steps  are  taken:  abstract  retrieval,  pre-labeling  using  BERN[56],  and  annotation  using BRAT[57].",
+      "confidence": "high"
+    },
+    "methodology.description-02": {
+      "claim": "The authors annotate 800 PubMed abstracts (ADERC corpus) with BERN pre-labeling and BRAT manual annotation, and train a joint SpERT model with SciBERT embeddings for simultaneous entity recognition and relation classification. The trained model is applied to ~169,630 unannotated abstracts retrieved from PubMed to extract entity mentions and relation triplets. Entity linking constructs nodes and edges of the ADKG, which is further fused with external knowledge graphs (DisGeNET, HPO, DrugBank, PharmGKB, OMIM, STRING). Knowledge graph embedding models (TransE, TransH, TransR, ComplEx, ConvKB) are trained on ADKG for link prediction.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "We  extracted  169,630  abstracts  from  PubMed  (https://pubmed.ncbi.nlm.nih.gov/)  utilizing  the keyword 'Alzheimer' through the Entrez function of the Bio package (as of 5/2/2021). The BERN tool  [56],  known  for  its  prowess  in  biomedical  entity  recognition  and  normalization,  was employed  to  initially  tag  named  entities,  assigning  categories  such  as  Gene/Protein,  Disease, Drug/Chemical,  Species,  and  Mutation,  before  the  commencement  of  manual  annotation.",
+      "confidence": "high"
+    },
+    "methodology.description-03": {
+      "claim": "The authors annotate 800 PubMed abstracts (ADERC corpus) with BERN pre-labeling and BRAT manual annotation, and train a joint SpERT model with SciBERT embeddings for simultaneous entity recognition and relation classification. The trained model is applied to ~169,630 unannotated abstracts retrieved from PubMed to extract entity mentions and relation triplets. Entity linking constructs nodes and edges of the ADKG, which is further fused with external knowledge graphs (DisGeNET, HPO, DrugBank, PharmGKB, OMIM, STRING). Knowledge graph embedding models (TransE, TransH, TransR, ComplEx, ConvKB) are trained on ADKG for link prediction.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "We developed a unified model for simultaneous named entity recognition and relation extraction on ADERC, leveraging the SpERT [50] framework with SciBERT [58] embeddings. To refine our negative sampling approach, we introduced manually crafted negative instances. Beyond the standard  practice  of  using  texts  without  named  entities  or  unrelated  entity  pairs  as  negative examples, we enriched the dataset by modifying positive instances through the substitution  of entities  and  relations.  This  method  is  designed  to  achieve  a  balanced  dataset,  offering  a comprehensive  assortment  of  both  positive  and  negative  samples  to  reduce  model  bias  and improve precision in detecting pertinent entities and their connections.",
+      "confidence": "high"
+    },
+    "methodology.description-04": {
+      "claim": "The authors annotate 800 PubMed abstracts (ADERC corpus) with BERN pre-labeling and BRAT manual annotation, and train a joint SpERT model with SciBERT embeddings for simultaneous entity recognition and relation classification. The trained model is applied to ~169,630 unannotated abstracts retrieved from PubMed to extract entity mentions and relation triplets. Entity linking constructs nodes and edges of the ADKG, which is further fused with external knowledge graphs (DisGeNET, HPO, DrugBank, PharmGKB, OMIM, STRING). Knowledge graph embedding models (TransE, TransH, TransR, ComplEx, ConvKB) are trained on ADKG for link prediction.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "Integrating external knowledge graphs with the Alzheimer's Disease Knowledge Graph (ADKG) is  essential  to  enhance  the  comprehensiveness  and  accuracy  of  the  information  available  to researchers  and  practitioners  [68].  This  integration  enriches  the  ADKG  with  diverse  datasets, enabling more robust analyses and insights into Alzheimer's disease. To preserve the integrity of the  integrated  knowledge  graph,  we  included  the  sources  of  each  entity  and  relationship. Additionally, we have developed a comprehensive mapping schema to facilitate the alignment of entities  and  relationships  across  different  knowledge  graphs.  We  integrated  representative external databases like DisGeNET [23], The Human Phenotype Ontology (HPO) [63], DrugBank [62], PharmGKB  (Pharmacogenomics Knowledgebase) [69], OMIM  (Online Mendelian Inheritance in Man) [70], and STRING [71]. The full details of how we processed the external databases in the integration process is available in the supplementary materials.",
+      "confidence": "high"
+    },
+    "methodology.description-05": {
+      "claim": "The authors annotate 800 PubMed abstracts (ADERC corpus) with BERN pre-labeling and BRAT manual annotation, and train a joint SpERT model with SciBERT embeddings for simultaneous entity recognition and relation classification. The trained model is applied to ~169,630 unannotated abstracts retrieved from PubMed to extract entity mentions and relation triplets. Entity linking constructs nodes and edges of the ADKG, which is further fused with external knowledge graphs (DisGeNET, HPO, DrugBank, PharmGKB, OMIM, STRING). Knowledge graph embedding models (TransE, TransH, TransR, ComplEx, ConvKB) are trained on ADKG for link prediction.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P012-TEXT-0003-PART001",
+      "page": 12,
+      "excerpt": "We  evaluated  several  knowledge  graph  embedding  (KGE)  methods,  including  distancebased models like TransE [72], TransH [73], and TransR [74], the semantic matching-based ComplEx model [75], and the ConvKB model [76], which incorporates convolutional neural networks. Each model offers a unique approach to representing relationships and entities: (i)  TransE  treats  relationships  as  translations  in  the  embedding  space,  where  the plausibility  of  a  fact  is  the  L1  or  L2  dista nce between the sum of the head entity and relation vectors and the tail entity vector, embodying the concept of the relation 'translating' the head to the  tail  entity.  (ii) TransH projects  entity  embeddings  onto  relation-specific  hyperplanes, accommodating entities' differing  roles  across  multiple  relations.  Its  scoring  function  assesses fact  plausibility  based  on  the  L1  or  L2  norm  after  this  projection,  reflecting  the  translation principle  on  these  hyperplanes.  (iii) TransR separates  entity  and  relation  embeddings  into distinct  spaces,  projecting  entity  embeddings  into  a  relation-specific  space  before  translation. The fact's plausibility is measured by the L1 or L2 distance between the translated head entity and the tail entity within this relation space. (iv) ComplEx uses complex-valued embeddings to represent both symmetric and asymmetric relationships, with its scoring function being the real part  of  the  dot  product  of  complex  embeddings,  facilitating  the  modeling  of  diverse  relation types,  including  hierarchical  and  reciprocal  relations.  (v) ConvKB employs  a  convolutional neural  network  over  concatenated  embeddings  of  head  entities,  relations,  and  tail  entities  to identify  global  interaction  patterns.  Its  scoring involves  convolution, a non-linear  feature  map, and  a  linear  scoring  layer,  capturing  intricate  interaction  patterns  to  predict  new  facts.  ",
+      "confidence": "high"
+    },
+    "text_to_kg_stages-01": {
+      "claim": "abstract retrieval from PubMed; pre-labeling with BERN; manual annotation via BRAT; abbreviation resolution; entity linking to reference databases; knowledge graph construction (nodes and edges); knowledge fusion with external knowledge graphs; knowledge graph embedding and link prediction",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "A new dataset for AD-related information extraction, ADERC, is constructed from 800 PubMed abstracts related to AD.  The overall procedure for generating the dataset is shown in Figure 1. Three  steps  are  taken:  abstract  retrieval,  pre-labeling  using  BERN[56],  and  annotation  using BRAT[57].",
+      "confidence": "high"
+    },
+    "text_to_kg_stages-02": {
+      "claim": "abstract retrieval from PubMed; pre-labeling with BERN; manual annotation via BRAT; abbreviation resolution; entity linking to reference databases; knowledge graph construction (nodes and edges); knowledge fusion with external knowledge graphs; knowledge graph embedding and link prediction",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "We developed a unified model for simultaneous named entity recognition and relation extraction on ADERC, leveraging the SpERT [50] framework with SciBERT [58] embeddings. To refine our negative sampling approach, we introduced manually crafted negative instances. Beyond the standard  practice  of  using  texts  without  named  entities  or  unrelated  entity  pairs  as  negative examples, we enriched the dataset by modifying positive instances through the substitution  of entities  and  relations.  This  method  is  designed  to  achieve  a  balanced  dataset,  offering  a comprehensive  assortment  of  both  positive  and  negative  samples  to  reduce  model  bias  and improve precision in detecting pertinent entities and their connections.",
+      "confidence": "high"
+    },
+    "text_to_kg_stages-03": {
+      "claim": "abstract retrieval from PubMed; pre-labeling with BERN; manual annotation via BRAT; abbreviation resolution; entity linking to reference databases; knowledge graph construction (nodes and edges); knowledge fusion with external knowledge graphs; knowledge graph embedding and link prediction",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "The  issue  of  inconsistent  entity  representations,  whether  across  various  abstracts  or  within different  sentences  of  the  same  text,  can  introduce  ambiguity.  To  address  this,  we  have established a thorough entity linking procedure that coherently associates references to identical entities. This process utilizes an array of biomedical databases, each catering to specific types of entities. Our extensive database ensemble encompasses genes from NCBI Gene [59], proteins as outlined  in  UniProt  [60],  small  molecules  listed  in  ChEBI  [61],  pharmaceuticals  detailed  in DrugBank [62], phenotypes described in HPO [63], diseases cataloged in the Disease Ontology [64], mutations recorded in ClinVar [65,66], and other medical entities classified under MeSH. In  this  framework, every  entity is  allocated a unique identifier (ID) from its respective source database, enriched with detailed descriptions and additional information to support precise entity resolution and linkage. We employ simstring [67] for approximating string matching, comparing entity  mentions  in  our  extracted  triplets  against  standard  names  and  their  synonyms  in  the reference databases, with matching scores serving as a measure of confidence.",
+      "confidence": "high"
+    },
+    "text_to_kg_stages-04": {
+      "claim": "abstract retrieval from PubMed; pre-labeling with BERN; manual annotation via BRAT; abbreviation resolution; entity linking to reference databases; knowledge graph construction (nodes and edges); knowledge fusion with external knowledge graphs; knowledge graph embedding and link prediction",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P011-TEXT-0001",
+      "page": 11,
+      "excerpt": "A knowledge graph (KG), Gg4666g1798, g1779g4667 consists of nodes g4668X g2869 , g1850 g2870 , … , g1850 g3015 g4669 g1488 g2180 and edges, g4668 E g2869 , g1831 g2870 , … , g1831 g3012 g4669 g1488 g2161 between nodes. In this  study,  to build  a knowledge  graph, Gg4666g1798, g1779g4667 , for  AD from the existing literature, we extract entities (nodes) and relationships (edges) from abstracts related to AD. The ADKG is developed from the triplets extracted across all abstracts using the trained model. The knowledge graph's construction involves two primary steps: creating nodes and establishing edges. In the node creation phase, abbreviations are resolved, and entities are identified through a process known as entity linking. Subsequently, for each identified triplet, edges are established, encapsulating the linked entities, the original PubMed ID, the spans of the entities within the text, and the matching scores. It's common for multiple edges to exist between a pair of nodes. In the finalized  ADKG,  the  nature  of  the  directed  edge  connecting  two  nodes  is  determined  by  the predominant relationship types observed in the edges connecting the head and tail entities.",
+      "confidence": "high"
+    },
+    "text_to_kg_stages-05": {
+      "claim": "abstract retrieval from PubMed; pre-labeling with BERN; manual annotation via BRAT; abbreviation resolution; entity linking to reference databases; knowledge graph construction (nodes and edges); knowledge fusion with external knowledge graphs; knowledge graph embedding and link prediction",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P012-TEXT-0003-PART001",
+      "page": 12,
+      "excerpt": "We  evaluated  several  knowledge  graph  embedding  (KGE)  methods,  including  distancebased models like TransE [72], TransH [73], and TransR [74], the semantic matching-based ComplEx model [75], and the ConvKB model [76], which incorporates convolutional neural networks. Each model offers a unique approach to representing relationships and entities: (i)  TransE  treats  relationships  as  translations  in  the  embedding  space,  where  the plausibility  of  a  fact  is  the  L1  or  L2  dista nce between the sum of the head entity and relation vectors and the tail entity vector, embodying the concept of the relation 'translating' the head to the  tail  entity.  (ii) TransH projects  entity  embeddings  onto  relation-specific  hyperplanes, accommodating entities' differing  roles  across  multiple  relations.  Its  scoring  function  assesses fact  plausibility  based  on  the  L1  or  L2  norm  after  this  projection,  reflecting  the  translation principle  on  these  hyperplanes.  (iii) TransR separates  entity  and  relation  embeddings  into distinct  spaces,  projecting  entity  embeddings  into  a  relation-specific  space  before  translation. The fact's plausibility is measured by the L1 or L2 distance between the translated head entity and the tail entity within this relation space. (iv) ComplEx uses complex-valued embeddings to represent both symmetric and asymmetric relationships, with its scoring function being the real part  of  the  dot  product  of  complex  embeddings,  facilitating  the  modeling  of  diverse  relation types,  including  hierarchical  and  reciprocal  relations.  (v) ConvKB employs  a  convolutional neural  network  over  concatenated  embeddings  of  head  entities,  relations,  and  tail  entities  to identify  global  interaction  patterns.  Its  scoring involves  convolution, a non-linear  feature  map, and  a  linear  scoring  layer,  capturing  intricate  interaction  patterns  to  predict  new  facts.  ",
+      "confidence": "high"
+    },
+    "input_output.input_type-01": {
+      "claim": "Biomedical literature text (PubMed abstracts related to Alzheimer's disease)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "A new dataset for AD-related information extraction, ADERC, is constructed from 800 PubMed abstracts related to AD.  The overall procedure for generating the dataset is shown in Figure 1. Three  steps  are  taken:  abstract  retrieval,  pre-labeling  using  BERN[56],  and  annotation  using BRAT[57].",
+      "confidence": "high"
+    },
+    "input_output.input_type-02": {
+      "claim": "Biomedical literature text (PubMed abstracts related to Alzheimer's disease)",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "We  extracted  169,630  abstracts  from  PubMed  (https://pubmed.ncbi.nlm.nih.gov/)  utilizing  the keyword 'Alzheimer' through the Entrez function of the Bio package (as of 5/2/2021). The BERN tool  [56],  known  for  its  prowess  in  biomedical  entity  recognition  and  normalization,  was employed  to  initially  tag  named  entities,  assigning  categories  such  as  Gene/Protein,  Disease, Drug/Chemical,  Species,  and  Mutation,  before  the  commencement  of  manual  annotation.",
+      "confidence": "high"
+    },
+    "input_output.input_granularity-01": {
+      "claim": "Sentence-level text within abstracts, from which entity mentions and relation triplets are extracted",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "One  promising  data  mining  method  involves  creating  interaction  triplets,  consisting  of  three components:  head  entity,  tail  entity,  and  their  relationship  [19].  For  example,  let's  consider  a sentence \"PPARgamma may be a potential target for AD\", we can obtain a triplet whose head entity is PPARgamma, the tail entity is AD, and their relationship is \"potential target for\". These triplets efficiently organize and make accessible the extensive knowledge embedded in the ADrelated literature. By aggregating and examining these triplets, researchers can achieve a holistic view of  AD research progress,  paving  the  way  for  the  construction  of  knowledge  graphs  that further illuminate the disease's complexities.",
+      "confidence": "high"
+    },
+    "input_output.input_granularity-02": {
+      "claim": "Sentence-level text within abstracts, from which entity mentions and relation triplets are extracted",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "Beyond the five entity types identified by BERN, annotators introduced an additional 'method' category to classify methodological entities, exemplified by '18F-FDG-PET'. An 'other' category was also designated to encapsulate entities falling outside the predefined types. For the extraction of  relationships,  our  focus  was  pinned  on  eight  types: treatment_for,  treatment_target_for, help_diagnose, risk_factor_of, characteristic_for, hyponym_of, associated_with , and abbreviation_for , which were selected to align with AD-related research inquiries. A meticulous manual review of 800 abstracts was conducted, leading to their comprehensive annotation via the BRAT  tool  [57].  This  process  resulted  in  a  richly  annotated  corpus  that  encompassed  both biomedical entities and their interrelations across 800 abstracts.",
+      "confidence": "high"
+    },
+    "input_output.output_representation-01": {
+      "claim": "A knowledge graph (ADKG) composed of head-relation-tail entity triplets, with entities linked to unique identifiers from reference biomedical databases and edges annotated with PubMed IDs, text spans, and matching confidence scores",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P011-TEXT-0001",
+      "page": 11,
+      "excerpt": "A knowledge graph (KG), Gg4666g1798, g1779g4667 consists of nodes g4668X g2869 , g1850 g2870 , … , g1850 g3015 g4669 g1488 g2180 and edges, g4668 E g2869 , g1831 g2870 , … , g1831 g3012 g4669 g1488 g2161 between nodes. In this  study,  to build  a knowledge  graph, Gg4666g1798, g1779g4667 , for  AD from the existing literature, we extract entities (nodes) and relationships (edges) from abstracts related to AD. The ADKG is developed from the triplets extracted across all abstracts using the trained model. The knowledge graph's construction involves two primary steps: creating nodes and establishing edges. In the node creation phase, abbreviations are resolved, and entities are identified through a process known as entity linking. Subsequently, for each identified triplet, edges are established, encapsulating the linked entities, the original PubMed ID, the spans of the entities within the text, and the matching scores. It's common for multiple edges to exist between a pair of nodes. In the finalized  ADKG,  the  nature  of  the  directed  edge  connecting  two  nodes  is  determined  by  the predominant relationship types observed in the edges connecting the head and tail entities.",
+      "confidence": "high"
+    },
+    "input_output.output_representation-02": {
+      "claim": "A knowledge graph (ADKG) composed of head-relation-tail entity triplets, with entities linked to unique identifiers from reference biomedical databases and edges annotated with PubMed IDs, text spans, and matching confidence scores",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "The  issue  of  inconsistent  entity  representations,  whether  across  various  abstracts  or  within different  sentences  of  the  same  text,  can  introduce  ambiguity.  To  address  this,  we  have established a thorough entity linking procedure that coherently associates references to identical entities. This process utilizes an array of biomedical databases, each catering to specific types of entities. Our extensive database ensemble encompasses genes from NCBI Gene [59], proteins as outlined  in  UniProt  [60],  small  molecules  listed  in  ChEBI  [61],  pharmaceuticals  detailed  in DrugBank [62], phenotypes described in HPO [63], diseases cataloged in the Disease Ontology [64], mutations recorded in ClinVar [65,66], and other medical entities classified under MeSH. In  this  framework, every  entity is  allocated a unique identifier (ID) from its respective source database, enriched with detailed descriptions and additional information to support precise entity resolution and linkage. We employ simstring [67] for approximating string matching, comparing entity  mentions  in  our  extracted  triplets  against  standard  names  and  their  synonyms  in  the reference databases, with matching scores serving as a measure of confidence.",
+      "confidence": "high"
+    },
+    "models_and_tools-01": {
+      "claim": "SpERT; SciBERT; TransE; TransH; TransR; ComplEx; ConvKB; XGBoost; logistic regression; simstring",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "We developed a unified model for simultaneous named entity recognition and relation extraction on ADERC, leveraging the SpERT [50] framework with SciBERT [58] embeddings. To refine our negative sampling approach, we introduced manually crafted negative instances. Beyond the standard  practice  of  using  texts  without  named  entities  or  unrelated  entity  pairs  as  negative examples, we enriched the dataset by modifying positive instances through the substitution  of entities  and  relations.  This  method  is  designed  to  achieve  a  balanced  dataset,  offering  a comprehensive  assortment  of  both  positive  and  negative  samples  to  reduce  model  bias  and improve precision in detecting pertinent entities and their connections.",
+      "confidence": "high"
+    },
+    "models_and_tools-02": {
+      "claim": "SpERT; SciBERT; TransE; TransH; TransR; ComplEx; ConvKB; XGBoost; logistic regression; simstring",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P012-TEXT-0003-PART001",
+      "page": 12,
+      "excerpt": "We  evaluated  several  knowledge  graph  embedding  (KGE)  methods,  including  distancebased models like TransE [72], TransH [73], and TransR [74], the semantic matching-based ComplEx model [75], and the ConvKB model [76], which incorporates convolutional neural networks. Each model offers a unique approach to representing relationships and entities: (i)  TransE  treats  relationships  as  translations  in  the  embedding  space,  where  the plausibility  of  a  fact  is  the  L1  or  L2  dista nce between the sum of the head entity and relation vectors and the tail entity vector, embodying the concept of the relation 'translating' the head to the  tail  entity.  (ii) TransH projects  entity  embeddings  onto  relation-specific  hyperplanes, accommodating entities' differing  roles  across  multiple  relations.  Its  scoring  function  assesses fact  plausibility  based  on  the  L1  or  L2  norm  after  this  projection,  reflecting  the  translation principle  on  these  hyperplanes.  (iii) TransR separates  entity  and  relation  embeddings  into distinct  spaces,  projecting  entity  embeddings  into  a  relation-specific  space  before  translation. The fact's plausibility is measured by the L1 or L2 distance between the translated head entity and the tail entity within this relation space. (iv) ComplEx uses complex-valued embeddings to represent both symmetric and asymmetric relationships, with its scoring function being the real part  of  the  dot  product  of  complex  embeddings,  facilitating  the  modeling  of  diverse  relation types,  including  hierarchical  and  reciprocal  relations.  (v) ConvKB employs  a  convolutional neural  network  over  concatenated  embeddings  of  head  entities,  relations,  and  tail  entities  to identify  global  interaction  patterns.  Its  scoring involves  convolution, a non-linear  feature  map, and  a  linear  scoring  layer,  capturing  intricate  interaction  patterns  to  predict  new  facts.  ",
+      "confidence": "high"
+    },
+    "models_and_tools-03": {
+      "claim": "SpERT; SciBERT; TransE; TransH; TransR; ComplEx; ConvKB; XGBoost; logistic regression; simstring",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P019-TEXT-0003",
+      "page": 19,
+      "excerpt": "In  developing  the predictive  model  for  AD,  we  utilized both  logistic  regression  and  XGBoost algorithms  [79].  To  prepare  for  model  training,  we  tackled  the  issue  of  missing  data  in  the normalized  protein  expression  profiles  by  employing  mean  substitution  [80],  ensuring  the completeness  and  reliability  of  the  data  essential  for  the  logistic  regression  model,  given  the complexity  of  missing  data  patterns.  The  relatively  low  occurrence  of  AD  in  the  population, leading to an imbalanced case-control ratio in our dataset, prompted us to use the ROSE package [81]  for  oversampling,  achieving  a  more  equitable  distribution  of  cases  and  controls  in  the training dataset.",
+      "confidence": "high"
+    },
+    "models_and_tools-04": {
+      "claim": "SpERT; SciBERT; TransE; TransH; TransR; ComplEx; ConvKB; XGBoost; logistic regression; simstring",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "The  issue  of  inconsistent  entity  representations,  whether  across  various  abstracts  or  within different  sentences  of  the  same  text,  can  introduce  ambiguity.  To  address  this,  we  have established a thorough entity linking procedure that coherently associates references to identical entities. This process utilizes an array of biomedical databases, each catering to specific types of entities. Our extensive database ensemble encompasses genes from NCBI Gene [59], proteins as outlined  in  UniProt  [60],  small  molecules  listed  in  ChEBI  [61],  pharmaceuticals  detailed  in DrugBank [62], phenotypes described in HPO [63], diseases cataloged in the Disease Ontology [64], mutations recorded in ClinVar [65,66], and other medical entities classified under MeSH. In  this  framework, every  entity is  allocated a unique identifier (ID) from its respective source database, enriched with detailed descriptions and additional information to support precise entity resolution and linkage. We employ simstring [67] for approximating string matching, comparing entity  mentions  in  our  extracted  triplets  against  standard  names  and  their  synonyms  in  the reference databases, with matching scores serving as a measure of confidence.",
+      "confidence": "high"
+    },
+    "evaluation.metrics-01": {
+      "claim": "Precision; Recall; Mean Rank; Hits@10",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P014-TEXT-0002",
+      "page": 14,
+      "excerpt": "We present a detailed comparison of the precision, recall, and F1 score metrics for three different models: Entity Recognition, Relation Extraction, and a Joint model that combines the two tasks. Precision and  recall  are  reported  in  both  micro  and  macro  averages,  offering  insights  into  the models'  performance  across  individual  instances  (micro)  as  well  as  across  different  classes (macro). For Entity Recognition, the model demonstrates strong performance with a micro F1 score of 87.2% and a macro F1 score of 86.1%, indicating consistent accuracy across various entity types. Relation Extraction shows lower scores across all metrics, with a micro F1 score of 67.1% and a macro F1 of 66.3%, reflecting the increased challenge of this task. The Joint model, which tackles both entity recognition and relation extraction simultaneously, understandably has lower  scores  than  the  individual  tasks  with  a  micro  F1  of  61.4%  and  a  macro  F1  of  61.5%, suggesting that combining tasks may introduce additional complexity.",
+      "confidence": "high"
+    },
+    "evaluation.metrics-02": {
+      "claim": "Precision; Recall; Mean Rank; Hits@10",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "For  all  models,  we  conducted  a  comprehensive  search  for  the  optimal  hyper-parameters, including  choices  for  embedding  dimensions  (32,  64,  128,  256),  learning  rates  (0.05,  0.005, 0.0005), batch sizes (128, 256, 512, 1024), and specific parameters for each loss function. For ConvKB, we additionally  selected  the  number  of  filters  from  options  128,  256,  and  512.  We adopted the margin-based ranking loss function and implemented Bernoulli negative sampling [73]  for  training.  The  training  process  was  capped  at  a  maximum  of  1000  epochs.  During evaluation,  we  utilized  a  rank-based  metric,  specifically  focusing  on  the  mean  rank  of  correct predictions,  and  applied  a  filtered  setting  [72]  to  account  for  known  triples  when  ranking candidate  triples.  The  primary  criterion  for  model  selection  was  the  arithmetic  mean  rank, although  we  also  reported  Hits@10  as  an  additional  measure  to  gauge  model  performance. Arithmetic Mean Rank is a measure used to evaluate the performance of models by calculating the average rank assigned by a model to a set of triplets. A lower arithmetic mean rank indicates better performance, as it suggests that the model is more accurately ranking items according to their relevance or importance. Hits@10 is a metric commonly used in information retrieval and recommendation systems to measure the proportion of relevant items that appear within the topK results recommended by a model. In this case, Hits@10 specifically measures the percentage of  relevant  items  that  are  included  in  the  top  10  recommendations  provided  by  the  model.  A higher Hits@10 score indicates better performance, as it suggests that more relevant items are being recommended within the top results.",
+      "confidence": "high"
+    },
+    "evaluation.metrics-03": {
+      "claim": "Precision; Recall; Mean Rank; Hits@10",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P019-TEXT-0005",
+      "page": 19,
+      "excerpt": "The  integration  of  domain-specific  knowledge  from  the  ADKG  substantially  improved  the model's  predictive  accuracy,  as  demonstrated  by  an  increase  in  the  Area  under  the  Receiver Operating Characteristic (ROC) curve from 0.9025 to 0.9137 for the ADKG-enhanced model.",
+      "confidence": "high"
+    },
+    "evaluation.baselines-01": {
+      "claim": "TransE; TransH; TransR; ComplEx",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P012-TEXT-0003-PART001",
+      "page": 12,
+      "excerpt": "We  evaluated  several  knowledge  graph  embedding  (KGE)  methods,  including  distancebased models like TransE [72], TransH [73], and TransR [74], the semantic matching-based ComplEx model [75], and the ConvKB model [76], which incorporates convolutional neural networks. Each model offers a unique approach to representing relationships and entities: (i)  TransE  treats  relationships  as  translations  in  the  embedding  space,  where  the plausibility  of  a  fact  is  the  L1  or  L2  dista nce between the sum of the head entity and relation vectors and the tail entity vector, embodying the concept of the relation 'translating' the head to the  tail  entity.  (ii) TransH projects  entity  embeddings  onto  relation-specific  hyperplanes, accommodating entities' differing  roles  across  multiple  relations.  Its  scoring  function  assesses fact  plausibility  based  on  the  L1  or  L2  norm  after  this  projection,  reflecting  the  translation principle  on  these  hyperplanes.  (iii) TransR separates  entity  and  relation  embeddings  into distinct  spaces,  projecting  entity  embeddings  into  a  relation-specific  space  before  translation. The fact's plausibility is measured by the L1 or L2 distance between the translated head entity and the tail entity within this relation space. (iv) ComplEx uses complex-valued embeddings to represent both symmetric and asymmetric relationships, with its scoring function being the real part  of  the  dot  product  of  complex  embeddings,  facilitating  the  modeling  of  diverse  relation types,  including  hierarchical  and  reciprocal  relations.  (v) ConvKB employs  a  convolutional neural  network  over  concatenated  embeddings  of  head  entities,  relations,  and  tail  entities  to identify  global  interaction  patterns.  Its  scoring involves  convolution, a non-linear  feature  map, and  a  linear  scoring  layer,  capturing  intricate  interaction  patterns  to  predict  new  facts.  ",
+      "confidence": "high"
+    },
+    "evaluation.baselines-02": {
+      "claim": "TransE; TransH; TransR; ComplEx",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P017-TABLE-0001",
+      "page": 17,
+      "excerpt": "Table 1 Knowledge Graph Embedding performance of the best setting on test set for different KGE models\n\n| Model   |   Mean Rank |   Hits@10 |\n|---------|-------------|-----------|\n| TransE  |         387 |    0.1646 |\n| TransH  |         373 |    0.1973 |\n| TransR  |         377 |    0.1941 |\n| ComplEx |         340 |    0.2125 |\n| ConvKB  |         312 |    0.2781 |",
+      "confidence": "high"
+    },
+    "evaluation.baselines-03": {
+      "claim": "TransE; TransH; TransR; ComplEx",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P019-TEXT-0002",
+      "page": 19,
+      "excerpt": "We  conducted  a  comparative  evaluation  of  phenotypes  associated  with  AD  as  indicated  in ADKG versus  those  identified  through  conventional  screening,  particularly  in  their  ability  to predict AD. For phenotypes referenced from ADKG, we selected AD-related genes/proteins in ADKG and manually reviewed other entity types linked to AD (such as lifestyle variables and environmental factors) in the UK Biobank health records.",
+      "confidence": "high"
+    },
+    "evaluation.setting-01": {
+      "claim": "Held-out evaluation: ADKG divided into ~80% training, ~10% validation, ~10% testing for knowledge graph embedding (KGE) model selection; UK Biobank dataset (52,164 cases and 541 controls) split into 90% training/validation and 10% testing for disease prediction models.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "In developing the knowledge graph embedding model, we utilized various embedding techniques on the training set and determined the optimal parameters based on performance in the test set to create  the  final  model  for  discovering  new  knowledge.  The  ADKG  was  divided  into  training (approximately 80%), validation (around 10%), and testing (near 10%) subsets. We began with  a  balanced  distribution  of  relationships  across  these  subsets,  followed  by  manual adjustments to ensure all entities were represented in the training portion.",
+      "confidence": "high"
+    },
+    "evaluation.setting-02": {
+      "claim": "Held-out evaluation: ADKG divided into ~80% training, ~10% validation, ~10% testing for knowledge graph embedding (KGE) model selection; UK Biobank dataset (52,164 cases and 541 controls) split into 90% training/validation and 10% testing for disease prediction models.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P019-TEXT-0001",
+      "page": 19,
+      "excerpt": "(Dementia in Alzheimer's disease),  F01  (Vascular  dementia),  F02  (Dementia  in  other  diseases classified  elsewhere),  F03 (Unspecified dementia), F05 (Delirium, not induced by alcohol and other psychoactive substances), G30 (Alzheimer's disease), G31 (Other degenerative diseases of nervous  system,  not  elsewhere  classified),  and  G32  (Other  degenerative  disorders  of  nervous system in diseases classified elsewhere), and excluding individuals with any form of dementia reported by the UK Biobank. The complete dataset of 52164 cases and 541 controls was then randomly divided into training and validation (90%), and testing (10%) subsets for analysis.",
+      "confidence": "high"
+    },
+    "evaluation.setting-03": {
+      "claim": "Held-out evaluation: ADKG divided into ~80% training, ~10% validation, ~10% testing for knowledge graph embedding (KGE) model selection; UK Biobank dataset (52,164 cases and 541 controls) split into 90% training/validation and 10% testing for disease prediction models.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P017-TEXT-0002",
+      "page": 17,
+      "excerpt": "To  uncover  potential  triplets  not  currently  represented  in  the  ADKG,  we  utilized  the  entire ADKG as a training dataset.  Selecting  ConvKB  as  the  optimal  model,  we  applied  it  with  the most effective parameter configuration to train a KGE model on all ADKG triplets. We sought to discover  new  connections  by  calculating  scores  for  all  conceivable  head-tail-entity  triplets, ranking  them  based  on  these  scores.  This  ranking  of  potential  triplets  offers  insights  into prospective or previously unidentified relationships among ADKG entities.",
+      "confidence": "high"
+    },
+    "code_and_data_availability-01": {
+      "claim": "The datasets generated during the study are available in the Zenodo repository (https://doi.org/10.5281/zenodo.5770100), and the ADKG knowledge graph is accessible via the developed website https://biomedkg.com/ for query and visualization.",
+      "claim_type": "author_claim",
+      "section": null,
+      "span_id": "C0126-D-P022-TEXT-0004",
+      "page": 22,
+      "excerpt": "The  datasets  generated  during  and/or  analyzed  during  the  current  study  are  available  in  the Zenodo  repository  https://doi.org/10.5281/zenodo.5770100.  The  knowledge  graph  ADKG  is accessible via our developed website https://biomedkg.com/ for easy query and visualization.",
+      "confidence": "high"
+    }
+  }
+}

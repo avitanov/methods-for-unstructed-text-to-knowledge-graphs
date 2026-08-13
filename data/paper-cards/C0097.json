@@ -1,0 +1,720 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0097",
+    "title": "Entity extraction: From unstructured text to DBpedia RDF triples",
+    "pdf_path": "data/manual-pdfs/C0097.pdf",
+    "authors": [
+      "Peter Exner",
+      "Pierre Nugues"
+    ],
+    "year": "not_reported",
+    "venue": "not_reported",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The paper presents an end-to-end system that extracts RDF triples describing entity relations and properties from unstructured text. The pipeline includes semantic parsing and coreference resolution, groups actions and properties across sentences using coreference chains, processes more than 114,000 Wikipedia articles, extracts over 1,000,000 triples, maps 189,000 extracted triples to the DBpedia namespace using bootstrapped ontology mappings, and reports an F1 score of 66.3% on mapped triples.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0097-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Peter Exner and Pierre Nugues",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-02-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0097-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We describe an end-to-end system that automatically extracts RDF triples describing entity relations and properties from unstructured text.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-02-02": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0097-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "We applied our system to over 114,000 Wikipedia articles and we could extract more than 1,000,000 triples.",
+      "confidence": "medium"
+    },
+    "problem_addressed-03-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0097-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "However, the unstructured text of the articles is left unprocessed.",
+      "confidence": "medium"
+    },
+    "problem_addressed-03-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0097-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "We introduce a framework to carry out an end-to-end extraction of DBpedia triples from unstructured text.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-04-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "System Architecture",
+      "span_id": "C0097-D-P002-PICTURE-0001",
+      "page": 2,
+      "excerpt": "The system includes a generic semantic processing component based on a semantic role labeler (SRL) to discover relations in text.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-05-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Processing of Wikipedia Article Text",
+      "span_id": "C0097-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "We search date expressions in the temporal arguments AM-TMP using regular expressions.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-05-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Ontology Mapping",
+      "span_id": "C0097-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "We perform this final step to create the DBpedia RDF triples.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-06-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "System Architecture",
+      "span_id": "C0097-D-P002-PICTURE-0001",
+      "page": 2,
+      "excerpt": "Overview of the entity extraction pipeline.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-07-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Ontology Mapping",
+      "span_id": "C0097-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "We wished to perform it automatically. Our approach was to bootstrap the learning of ontology mappings by matching the subject and object of the extracted triples onto existing triples in the DBpedia dataset.",
+      "confidence": "medium"
+    },
+    "methodology-description-08-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "System Architecture",
+      "span_id": "C0097-D-P002-PICTURE-0001",
+      "page": 2,
+      "excerpt": "In total, the end-to-end processing of Wikipedia article text consists of seven modules.",
+      "confidence": "medium"
+    },
+    "methodology-description-08-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Processing of Wikipedia Article Text",
+      "span_id": "C0097-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "We used a coreference solver, included in the Stanford CoreNLP package, to link mentions of entities in the different parts of text.",
+      "confidence": "medium"
+    },
+    "methodology-description-08-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Ontology Mapping",
+      "span_id": "C0097-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "The learning process consists of the following steps.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-09-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Semantic Parsing",
+      "span_id": "C0097-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Propbank identifies up to six possible core arguments denoted A0, A1, ..., and A5.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-09-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Named Entity Link Ranking and Selection",
+      "span_id": "C0097-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "Predicted links are pruned if their DBpedia ontology class doesn’t match the named entity class predicted by the Stanford coreference solver.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-09-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Ontology Mapping",
+      "span_id": "C0097-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "Generic mappings are created and reused by generalizing DBpedia URIs, found in subjects and objects, to 43 top-level DBpedia ontology classes.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-10-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "System Architecture",
+      "span_id": "C0097-D-P002-PICTURE-0001",
+      "page": 2,
+      "excerpt": "WikiMarkup filtering module ... Wikipedia link extractor ... semantic parsing module ... coreference resolution module ... mention-to-entity linking module ... information aligning and entity extracting module ... ontology mapping module.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-10-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Ontology Mapping",
+      "span_id": "C0097-D-P005-CAPTION-0002",
+      "page": 5,
+      "excerpt": "An ideal conversion from text to the DBpedia RDF triples: (A) The input sentences. (B) The sentences after semantic parsing and coreference resolution. (C) Entity extraction. (D) Ontology mapping.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-10-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Conclusions and Future Work",
+      "span_id": "C0097-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "The resulting database may be used to populate Wikipedia articles with lacking or sparse infoboxes.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-11-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "WikiMarkup Filtering",
+      "span_id": "C0097-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Wikipedia articles are composed of text written in natural language annotated with a special markup called wikitext or wiki markup.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-12-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0097-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "We performed the evaluation by manually analyzing 200 randomly sampled sentences from different articles.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-12-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0097-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "In total, we processed 114,895 randomly selected articles amounting to 2,156,574 sentences.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-13-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Entity Extraction",
+      "span_id": "C0097-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "The extracted data types can be categorized as following: Named entity links expressed as DBpedia URIs, dates and years, integers, and strings.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-13-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Conclusions and Future Work",
+      "span_id": "C0097-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "We extracted over 1,000,000 triples that we stored as N-Triples.",
+      "confidence": "medium"
+    },
+    "models_and_tools-14-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Semantic Parsing",
+      "span_id": "C0097-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We use the Athena framework created for parallel semantic parsing of unstructured text.",
+      "confidence": "medium"
+    },
+    "models_and_tools-14-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Coreference Resolution",
+      "span_id": "C0097-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "We used a coreference solver, included in the Stanford CoreNLP package.",
+      "confidence": "medium"
+    },
+    "models_and_tools-14-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Named Entity Linking",
+      "span_id": "C0097-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "Wikifier is a named entity linking system that annotates unstructured text with Wikipedia links.",
+      "confidence": "medium"
+    },
+    "datasets-15-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0097-D-P010-TABLE-0001",
+      "page": 10,
+      "excerpt": "In total, we processed 114,895 randomly selected articles amounting to 2,156,574 sentences.",
+      "confidence": "medium"
+    },
+    "datasets-15-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Ontology Mapping",
+      "span_id": "C0097-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "The subject and object of the extracted triples are matched exactly to existing triples in the DBpedia dataset.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-16-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0097-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "We computed the precision, recall, and F1 scores.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-16-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0097-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "Each extracted attribute must exactly match the corresponding attribute in the sentence.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-17-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0097-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "Sampled sentences are examined for relevant subject-predicate-object triples and compared to the corresponding retrieved triples.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-17-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0097-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "The articles were processed in approximately 5 days on a cluster of 10 machines.",
+      "confidence": "medium"
+    },
+    "main_results-18-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0097-D-P010-TABLE-0001",
+      "page": 10,
+      "excerpt": "From the processed articles, we extracted a total of 1,023,316 triples, of which 189,610 triples were mapped to the DBpedia ontology.",
+      "confidence": "medium"
+    },
+    "main_results-18-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0097-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "The extracted mapped triples reached a F1 score of 66.3%, a precision of 74.3%, and a recall of 59.9%.",
+      "confidence": "medium"
+    },
+    "main_results-18-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0097-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "The largest source of errors came from predicates, 46.4%, followed by subjects, 27.2%, and objects, 26.4%.",
+      "confidence": "medium"
+    },
+    "strengths-19-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Related Work",
+      "span_id": "C0097-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We balance precision and recall by employing a combination of NLP tools, including semantic parsing, coreference resolution, and named entity linking.",
+      "confidence": "medium"
+    },
+    "strengths-19-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "System Architecture",
+      "span_id": "C0097-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "The system includes ... an automatic learning of ontology mappings to link the extracted triples to the DBpedia namespace.",
+      "confidence": "medium"
+    },
+    "strengths-19-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Experimental Results",
+      "span_id": "C0097-D-P010-TABLE-0003",
+      "page": 10,
+      "excerpt": "We extracted a total of 1,023,316 triples.",
+      "confidence": "medium"
+    },
+    "weaknesses-20-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Entity Extraction",
+      "span_id": "C0097-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "We have limited the entities to those found in DBpedia and we do not introduce new named entities to the DBpedia ontology.",
+      "confidence": "medium"
+    },
+    "weaknesses-20-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Experimental Results",
+      "span_id": "C0097-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "The largest source of errors came from predicates, 46.4%, followed by subjects, 27.2%, and objects, 26.4%.",
+      "confidence": "medium"
+    },
+    "weaknesses-20-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Experimental Results",
+      "span_id": "C0097-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "The linking of mentions to DBpedia URIs was also found to be a major source for errors.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-21-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0097-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "The majority of errors stem from erroneous ontology mappings.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-21-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0097-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "Currently, we categorize subjects and objects to 43 top-level DBpedia ontology classes out of 320 possible classes.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-21-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Conclusions and Future Work",
+      "span_id": "C0097-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "The largest source of errors stemmed from incorrect mappings.",
+      "confidence": "medium"
+    },
+    "possible_improvements-22-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Experimental Results",
+      "span_id": "C0097-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "Ontology mapping can be improved by using a more fine grained approach to the subject-object generalization.",
+      "confidence": "medium"
+    },
+    "possible_improvements-22-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Experimental Results",
+      "span_id": "C0097-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "The current rule-based mapping system could be replaced by a more capable system based on machine learning.",
+      "confidence": "medium"
+    },
+    "possible_improvements-22-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Conclusions and Future Work",
+      "span_id": "C0097-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "We also believe that retraining the named entity linker and improving filtering of erroneous coreference mentions may increase the results.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-23-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Experimental Results",
+      "span_id": "C0097-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "The majority of errors stem from erroneous ontology mappings.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-23-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusions and Future Work",
+      "span_id": "C0097-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "A future application of the framework might be to fully create Wikipedias from unstructured text.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-24-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Conclusions and Future Work",
+      "span_id": "C0097-D-P011-TEXT-0001",
+      "page": 11,
+      "excerpt": "An archive of extracted triples is available for download in N-Triple format.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses the problem of extracting structured entity-relation information from the unstructured text of Wikipedia articles and integrating the extracted information with the DBpedia ontology and namespace. Its objective is to extend DBpedia beyond information already available in infoboxes and other structured or semi-structured article content.",
+  "methodology": {
+    "primary_family": "Linguistic and dependency-based extraction",
+    "secondary_families": [
+      "Rule-based NLP",
+      "Ontology-constrained and schema-guided methods",
+      "Knowledge fusion and deduplication methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "weakly_supervised",
+    "description": "The method is a seven-module pipeline executed in sequence: WikiMarkup filtering; Wikipedia-link extraction; Athena semantic parsing with semantic role labeling; Stanford CoreNLP coreference resolution; mention-to-entity linking using article links and Wikifier; information alignment and entity extraction; and ontology mapping from PropBank predicate-argument roles to DBpedia properties. Semantic-role arguments provide candidate subjects and objects, coreference chains propagate representative entity links across mentions and sentences, and extracted predicates are first represented in the PropBank namespace. The mapping component bootstraps PropBank-to-DBpedia property mappings from matching subject-object pairs in existing DBpedia triples, generalizing entities to DBpedia ontology classes. The resulting mapped triples are serialized as DBpedia RDF N-Triples. The method does not use joint neural extraction, prompting, or fine-tuning; its central mechanisms are linguistic analysis, rules, linking, and bootstrapped schema mapping."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The system uses the PropBank roleset and predicate-argument schema during semantic parsing, then maps PropBank predicates and argument roles to the DBpedia property ontology. DBpedia URIs and ontology classes constrain entity linking and candidate selection; predicted links whose DBpedia class conflicts with the Stanford named-entity class are pruned. Mapping generalization uses 43 top-level DBpedia ontology classes, plus String, Date, and Number categories.",
+    "evidence": [
+      {
+        "span_id": "C0097-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "Propbank identifies up to six possible core arguments denoted A0, A1, ..., and A5."
+      },
+      {
+        "span_id": "C0097-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "Predicted links are pruned if their DBpedia ontology class doesn’t match the named entity class predicted by the Stanford coreference solver."
+      },
+      {
+        "span_id": "C0097-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "Generic mappings are created and reused by generalizing DBpedia URIs, found in subjects and objects, to 43 top-level DBpedia ontology classes."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing: WikiMarkup filtering removes annotations, link-only sections, references, and markup while retaining running text.",
+    "Entity and concept extraction: named entity mentions are obtained from article links, Wikifier, and Stanford CoreNLP annotations.",
+    "Entity typing: Stanford named-entity classes are used to filter conflicting linked entities.",
+    "Coreference resolution: Stanford CoreNLP creates coreference chains across the text.",
+    "Entity resolution and linking: article links and Wikifier mentions are converted to DBpedia URIs and ranked.",
+    "Relation and triple extraction: Athena semantic role labeling identifies PropBank predicates and arguments; binary relations are generated from n-ary predicate-argument structures.",
+    "Attribute extraction: temporal AM-TMP expressions are detected with date-pattern regular expressions; location AM-LOC arguments are linked to place entities.",
+    "Ontology or schema mapping: PropBank predicate-argument roles are mapped to DBpedia properties using bootstrapped mappings.",
+    "Graph construction: mapped subject-predicate-object records are serialized as DBpedia RDF N-Triples.",
+    "Knowledge fusion and deduplication: extracted triples are compared with existing DBpedia triples and repeated or already-present triples are identified."
+  ],
+  "input_output": {
+    "input_type": "Unstructured natural-language text from English Wikipedia articles after removal of WikiMarkup.",
+    "input_granularity": "Wikipedia articles processed at article and sentence level; the evaluation samples individual sentences, while coreference and extraction operate over article text.",
+    "output_representation": "Subject-predicate-object RDF triples, with entities represented by DBpedia URIs, predicates mapped to DBpedia properties when possible, and literals including dates, years, integers, and strings; outputs are stored in N-Triple format."
+  },
+  "models_and_tools": [
+    "Athena framework for large-scale semantic parsing and semantic role labeling",
+    "PropBank predicate-argument rolesets",
+    "Stanford CoreNLP tokenizer, part-of-speech tagger, named-entity recognizer, syntactic parser, and coreference solver",
+    "Wikifier for named-entity linking to Wikipedia",
+    "DBpedia dataset and DBpedia property ontology",
+    "Regular expressions for date and year extraction",
+    "Cluster of 10 machines for large-scale processing"
+  ],
+  "datasets": [
+    "114,895 randomly selected English Wikipedia articles",
+    "2,156,574 sentences from the processed articles",
+    "Existing DBpedia dataset and DBpedia triples used for ontology-mapping bootstrapping",
+    "Manual evaluation sample of 200 randomly selected sentences"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Precision",
+      "Recall",
+      "F1 score",
+      "Strict exact attribute matching"
+    ],
+    "baselines": "not_reported",
+    "setting": "Manual evaluation of 200 randomly sampled sentences from different Wikipedia articles. Human analysis identified relevant subject-predicate-object triples and compared them with retrieved triples. Attribute values were scored strictly: an extracted attribute had to exactly match the corresponding sentence attribute. Large-scale processing was performed on 114,895 articles over approximately five days using a cluster of 10 machines."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "The system processed 114,895 articles containing 2,156,574 sentences and extracted 1,023,316 triples.",
+      "Of the extracted triples, 189,610 were mapped to the DBpedia ontology; 15,067 of these already existed in DBpedia, while 174,543 were new triples in the DBpedia namespace.",
+      "The extracted mapped triples achieved 74.3% precision, 59.9% recall, and 66.3% F1 on the 200-sentence manual evaluation sample.",
+      "The largest error source was predicates at 46.4%, followed by subjects at 27.2% and objects at 26.4%.",
+      "The system produced approximately one extracted triple for every second processed sentence and nearly nine triples per article."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0097-D-P010-TABLE-0001",
+        "page": 10,
+        "excerpt": "From the processed articles, we extracted a total of 1,023,316 triples, of which 189,610 triples were mapped to the DBpedia ontology."
+      },
+      {
+        "span_id": "C0097-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "The extracted mapped triples reached a F1 score of 66.3%, a precision of 74.3%, and a recall of 59.9%."
+      },
+      {
+        "span_id": "C0097-D-P010-TEXT-0003",
+        "page": 10,
+        "excerpt": "The largest source of errors came from predicates, 46.4%, followed by subjects, 27.2%, and objects, 26.4%."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author-claimed strength: The method provides an end-to-end pipeline that combines semantic parsing, coreference resolution, entity linking, entity extraction, and ontology mapping.",
+      "Author-claimed strength: It integrates extracted facts directly with the DBpedia namespace instead of introducing a separate semantic structure.",
+      "Experimental strength: The system demonstrates large-scale processing over more than 114,000 articles and produces over one million triples.",
+      "Review-level inference: Explicit handling of coreference chains allows properties and relations expressed across multiple sentences to be grouped around the same entity.",
+      "Review-level inference: Bootstrapping mappings from existing DBpedia triples enables reuse of learned predicate mappings for entities lacking the original DBpedia property."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0097-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "We balance precision and recall by employing a combination of NLP tools, including semantic parsing, coreference resolution, and named entity linking."
+      },
+      {
+        "span_id": "C0097-D-P002-TEXT-0002",
+        "page": 2,
+        "excerpt": "The system includes ... an automatic learning of ontology mappings to link the extracted triples to the DBpedia namespace."
+      },
+      {
+        "span_id": "C0097-D-P010-TABLE-0003",
+        "page": 10,
+        "excerpt": "We extracted a total of 1,023,316 triples."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Experimental weakness: Predicate mapping errors account for 46.4% of extraction errors, making ontology alignment the dominant error source.",
+      "Experimental weakness: Entity linking and subject/object resolution remain error-prone because new entities may lack DBpedia URIs, Wikifier may predict an incorrect URI, and coreference mentions may be assigned to the wrong chain.",
+      "Methodological weakness: The entity vocabulary is restricted to entities already found in DBpedia, so the system does not introduce new named entities into the ontology.",
+      "Review-level inference: The reported evaluation is based on only 200 manually analyzed sentences and does not provide a gold-standard corpus for the full Wikipedia text.",
+      "Review-level inference: The mapping abstraction uses only 43 of 320 possible top-level DBpedia classes, which can lose distinctions between semantically different relations."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0097-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "We have limited the entities to those found in DBpedia and we do not introduce new named entities to the DBpedia ontology."
+      },
+      {
+        "span_id": "C0097-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "The largest source of errors came from predicates, 46.4%, followed by subjects, 27.2%, and objects, 26.4%."
+      },
+      {
+        "span_id": "C0097-D-P010-TEXT-0003",
+        "page": 10,
+        "excerpt": "The linking of mentions to DBpedia URIs was also found to be a major source for errors."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The majority of errors stem from erroneous ontology mappings.",
+      "The mapping approach generalizes subjects and objects to only 43 top-level DBpedia ontology classes out of 320 possible classes.",
+      "New entities that are not already represented in DBpedia lack corresponding DBpedia URIs.",
+      "Incorrect Wikifier links and incorrect coreference chains produce erroneous entity links.",
+      "The authors note that a mapping describing a person receiving a thing, such as an award, requires more detailed analysis because the received thing may represent items other than awards."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0097-D-P010-TEXT-0001",
+        "page": 10,
+        "excerpt": "The majority of errors stem from erroneous ontology mappings."
+      },
+      {
+        "span_id": "C0097-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "Currently, we categorize subjects and objects to 43 top-level DBpedia ontology classes out of 320 possible classes."
+      },
+      {
+        "span_id": "C0097-D-P011-TEXT-0003",
+        "page": 11,
+        "excerpt": "The largest source of errors stemmed from incorrect mappings."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed improvement: Use a more fine-grained subject-object generalization strategy during ontology mapping.",
+      "Author-proposed improvement: Increase bootstrapping data by using links to other datasets such as LinkedMDB.",
+      "Author-proposed improvement: Replace the rule-based mapping system with a machine-learning-based system.",
+      "Author-proposed improvement: Retrain Wikifier using a more current Wikipedia dump.",
+      "Author-proposed improvement: Improve filtering of erroneous coreference mentions.",
+      "Review-level inference: A larger, independently annotated evaluation set would make error estimates more reliable and enable more granular comparison of individual pipeline stages."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0097-D-P010-TEXT-0001",
+        "page": 10,
+        "excerpt": "Ontology mapping can be improved by using a more fine grained approach to the subject-object generalization."
+      },
+      {
+        "span_id": "C0097-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "The current rule-based mapping system could be replaced by a more capable system based on machine learning."
+      },
+      {
+        "span_id": "C0097-D-P011-TEXT-0003",
+        "page": 11,
+        "excerpt": "We also believe that retraining the named entity linker and improving filtering of erroneous coreference mentions may increase the results."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Accurate mapping from fine-grained PropBank predicate-argument roles to DBpedia properties remains unresolved.",
+      "Entity linking remains difficult when mentions are ambiguous, incorrectly linked, or refer to entities absent from DBpedia.",
+      "Coreference errors can propagate incorrect entity identities and relations through the pipeline.",
+      "The paper leaves open whether unstructured text alone can support creation of sufficiently complete Wikipedia or DBpedia resources.",
+      "Review-level inference: The system does not resolve the general problem of ontology/schema evolution when extracted relations do not fit existing DBpedia properties."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0097-D-P010-TEXT-0001",
+        "page": 10,
+        "excerpt": "The majority of errors stem from erroneous ontology mappings."
+      },
+      {
+        "span_id": "C0097-D-P011-TEXT-0002",
+        "page": 11,
+        "excerpt": "A future application of the framework might be to fully create Wikipedias from unstructured text."
+      }
+    ]
+  },
+  "code_and_data_availability": "An archive of extracted triples is stated to be available for download in N-Triple format at the project website. Code availability is not reported."
+}

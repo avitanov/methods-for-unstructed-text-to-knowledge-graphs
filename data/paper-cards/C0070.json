@@ -1,0 +1,712 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0070",
+    "title": "Coarse-to-fine Knowledge Graph Domain Adaptation based on Distantly-supervised Iterative Training",
+    "pdf_path": "data/manual-pdfs/C0070.pdf",
+    "authors": [
+      "Hongmin Cai",
+      "Wenxiong Liao",
+      "Zhengliang Liu",
+      "Yiyang Zhang",
+      "Xiaoke Huang",
+      "Siqi Ding",
+      "Hui Ren",
+      "Zihao Wu",
+      "Haixing Dai",
+      "Sheng Li",
+      "Lingfei Wu",
+      "Ninghao Liu",
+      "Quanzheng Li",
+      "Tianming Liu",
+      "Xiang Li"
+    ],
+    "year": 2023,
+    "venue": "not_reported",
+    "identifier": {
+      "status": "reported",
+      "value": "arXiv:2211.02849v2",
+      "evidence": [
+        {
+          "span_id": "C0070-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "arXiv:2211.02849v2 [cs.AI] 9 Mar 2023"
+        }
+      ]
+    },
+    "abstract": "The paper proposes an integrated framework for adapting and re-learning a knowledge graph from a general biomedical domain to a fine-grained oncology domain. It uses distant supervision and iterative training to discover domain-specific named entities and triplets from unlabeled text without manual annotation, with the goal of efficient oncology knowledge-graph construction.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0070-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Hongmin Cai; Wenxiong Liao; Zhengliang Liu; Yiyang Zhang; Xiaoke Huang; Siqi Ding; Hui Ren; Zihao Wu; Haixing Dai; Sheng Li; Lingfei Wu; Ninghao Liu; Quanzheng Li; Tianming Liu; Xiang Li",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Front matter",
+      "span_id": "C0070-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "arXiv:2211.02849v2 [cs.AI] 9 Mar 2023",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-03-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Front matter",
+      "span_id": "C0070-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "arXiv:2211.02849v2 [cs.AI] 9 Mar 2023",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0070-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "we propose an integrated framework for adapting and re-learning knowledge graphs from a general domain (biomedical in our case) to a fine-defined domain (oncology).",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0070-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "constructing a domain-specific knowledge graph from large collections of textual data without manual annotations is still an urgent problem to be solved.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "3.1 Notation and task definition",
+      "span_id": "C0070-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "adapt the KG from the coarse domain to the fine domain and leverage the knowledge from the coarse domain to guide the mining of new knowledge specific to the fine domain.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3.2 Iterative training framework",
+      "span_id": "C0070-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "our framework involves two neural network models: NER model and RE model.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "4.3 Implementation settings",
+      "span_id": "C0070-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "We tested BERT, Bio_ClinicalBERT, biomed_RoBERTa for initializing NER and RE models.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.1 Notation and task definition",
+      "span_id": "C0070-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "we will keep the definition of entity types and relation types from coarse-domain KG when constructing the fine-domain KG.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.4 Discovering fine-domain specific knowledge",
+      "span_id": "C0070-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "we developed a filtering mechanism only to keep the entities and triples with higher confidence.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Algorithm 1",
+      "span_id": "C0070-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "train_NER(model_N, corp_N); train_RE(model_R, corp_R); ... K_f = build_kg(T_O, T_conf)",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Background and related work",
+      "span_id": "C0070-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "distant supervision, a weakly supervised learning method, can replace manual annotation with an existing and remote knowledge base.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.2 Iterative training framework",
+      "span_id": "C0070-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "the core mechanism of the proposed iterative training is to split the whole unlabeled dataset into n sub-datasets without intersection.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.3 Constructing distantly-supervised corpus; 3.4 Discovering fine-domain specific knowledge",
+      "span_id": "C0070-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "we use both K_c, E_conf, and T_conf as knowledge bases ... filter ... entities and triples with higher confidence.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Algorithm 1",
+      "span_id": "C0070-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "K_f = build_kg(T_O, T_conf)",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "4.1 Dataset",
+      "span_id": "C0070-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "the biomedical KG ... defines 18 entity types ... and 19 relationship types.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "5 Conclusion and discussion",
+      "span_id": "C0070-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "clinical ontology ... integrate the relationships defined in ontology and entity description to enhance the model.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.2 Iterative training framework",
+      "span_id": "C0070-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Preprocessing operations include: handling special characters, word segmentation, filtering sentences using human-defined rules.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.2 Iterative training framework",
+      "span_id": "C0070-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "we apply the distant-supervision method to construct the NER training corpus ... and RE training corpus.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Algorithm 1",
+      "span_id": "C0070-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "K_f = build_kg(T_O, T_conf)",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "4.1 Dataset",
+      "span_id": "C0070-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "The source data is downloaded from 12 international journals in the oncology domain. PDF files of the papers were cleaned and converted to sentences.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.1 Notation and task definition",
+      "span_id": "C0070-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "An unstructured sentence s = [w1, w2, w3, ..., wn] indicates a sequence of tokens.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.2 Iterative training framework",
+      "span_id": "C0070-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "[CLS] head entity (head entity type) [SEP] tail entity (tail entity type) [SEP] sentence",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.1 Notation and task definition",
+      "span_id": "C0070-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "the knowledge graph, denoted as K, is a collection of triples t = (e_i, r_j, e_k).",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "4.6 Knowledge graph construction in the fine domain",
+      "span_id": "C0070-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "we can construct the KG in the fine domain by combining T_O, T_R, and T_E.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.2 Iterative training framework",
+      "span_id": "C0070-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "We replace the PLM’s output layer with a classifier head as NER model ... apply the BIO scheme ... fine-tune by minimizing the cross-entropy loss.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.2 Iterative training framework",
+      "span_id": "C0070-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "The RE model ... is defined as a PLM with a fully connected layer as a relation classifier. The feature of special token [CLS] fed into this fully connected layer.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.3 Implementation settings",
+      "span_id": "C0070-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "learning rate, batch size, and epochs are set as 2E-05, 20, and 4, respectively.",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.1 Dataset",
+      "span_id": "C0070-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "In total, we select 240,000 paragraphs as the unlabeled text corpus of the oncology domain D.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.1 Dataset",
+      "span_id": "C0070-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "including 5.2 million English entities and 7.34 million triples.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.2 Evaluation",
+      "span_id": "C0070-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "calculated the precision, recall, and F1 of the held-out dataset.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.2 Evaluation",
+      "span_id": "C0070-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "We randomly sampled 50 cases of E_conf, T_R, and T_E respectively ... we only show the precision.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.7 Ablation study",
+      "span_id": "C0070-D-P008-TABLE-0003",
+      "page": 8,
+      "excerpt": "Results of ablation study. models NER precision RE precision",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.3 Implementation settings",
+      "span_id": "C0070-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "We tested BERT, Bio_ClinicalBERT, biomed_RoBERTa for initializing NER and RE models.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.7 Ablation study",
+      "span_id": "C0070-D-P008-TABLE-0002",
+      "page": 8,
+      "excerpt": "w/o (cumulative) ... w/o (iter)",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.2 Evaluation",
+      "span_id": "C0070-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "the labels of testing samples in the held-out evaluation are all inferred by distant supervision from the coarse domain ... cannot evaluate the ability ... to discover new knowledge in the fine-domain.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.2 Evaluation",
+      "span_id": "C0070-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "We randomly sampled 50 cases of E_conf, T_R, and T_E respectively, then asked one physician to manually label them.",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Tables 1 and 2",
+      "span_id": "C0070-D-P006-TABLE-0001",
+      "page": 6,
+      "excerpt": "BERT 0.908 0.900 0.904 ... BERT 0.987 0.949 0.967",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Tables 4 and 5",
+      "span_id": "C0070-D-P008-TABLE-0002",
+      "page": 8,
+      "excerpt": "biomed_RoBERTa ... E_conf 0.94, T_R 0.76, T_E 0.74; complete NER precision 0.908 vs w/o cumulative 0.888 and w/o iter 0.894",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction and contributions",
+      "span_id": "C0070-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Our model does not require human annotated samples with distant-supervision for cross-domain KG adaptation.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.7 Ablation study",
+      "span_id": "C0070-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "the using of accumulated data through iterations is beneficial for improving the generalization ability of NER and RE models.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2 Evaluation",
+      "span_id": "C0070-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "this scheme can only evaluate whether the trained model can capture the knowledge in the coarse domain, but cannot evaluate the ability ... to discover new knowledge in the fine-domain.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "5 Conclusion and discussion",
+      "span_id": "C0070-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "distant supervision will inevitably introduce noisy labels ... the denoising step is usually needed but not implemented ... assume the source and target domains share the same set of entity types and relation types",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "5 Conclusion and discussion",
+      "span_id": "C0070-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "Several limitations and challenges remain ... more thorough evaluation with human reader study is needed",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "5 Conclusion and discussion",
+      "span_id": "C0070-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "distant supervision will inevitably introduce noisy labels ... denoising step ... not implemented",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "5 Conclusion and discussion",
+      "span_id": "C0070-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "clinical ontology ... integrate ... entity description ... assume the source and target domains share the same set of entity types and relation types",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "5 Conclusion and discussion",
+      "span_id": "C0070-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "we will investigate the scheme to allow adaption from multiple sources ... integrate the relationships defined in ontology and entity description ... adaptively add/remove entity and relation types",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5 Conclusion and discussion",
+      "span_id": "C0070-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "Several limitations and challenges remain beyond the current work for more effective and accurate KG construction",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2 Evaluation",
+      "span_id": "C0070-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "we cannot estimate the recall of fine-domain KG.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Introduction and contributions",
+      "span_id": "C0070-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We will release the source code and the data used in this work ... The constructed oncology KG will be hosted as a web service.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "4 Experiments",
+      "span_id": "C0070-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "the publicly-available data and the containerized environment in the released source code, for easy replication",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses construction of a domain-specific oncology knowledge graph from large collections of raw or unlabeled biomedical text when manually annotated training data are scarce. It specifically adapts a coarse biomedical KG to oncology while recovering oncology-specific entities and relation triples absent from the source KG.",
+  "methodology": {
+    "primary_family": "Neural NLP pipelines",
+    "secondary_families": [
+      "Transformer encoder methods",
+      "Ontology-constrained and schema-guided methods",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "weakly_supervised",
+    "description": "KGDA takes an existing coarse-domain KG K_c and an unlabeled target-domain corpus D, divides D into non-overlapping subsets, and alternates prediction, distant-corpus construction, and retraining. For the first subset, entity mentions are string-matched against K_c to create BIO-labelled NER data; relation instances are created from matched entity pairs, with NULL negatives sampled from unrelated pairs or out-of-domain words. Separate pretrained-language-model NER and RE classifiers are fine-tuned with cross-entropy. For later subsets, the current models predict entities and triples disjoint from K_c; high-confidence predictions are selected using probability and cumulative-frequency thresholds, added to the external knowledge bases, and used to create cumulative distant-supervision corpora for the next iteration. The final fine-domain KG combines overlapping triples with high-confidence target-domain triples. The method covers preprocessing, NER, entity typing through the source schema, relation/triple extraction, confidence filtering, and graph construction; separate coreference, entity linking, ontology discovery, and graph-validation modules are not reported."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The coarse biomedical KG defines the entity-type and relation-type inventory used for distant supervision and retained in the fine-domain KG: 18 entity types and 19 relation types. No external clinical ontology is used in the reported method; clinical ontology integration is identified as future work.",
+    "evidence": [
+      {
+        "span_id": "C0070-D-P005-TEXT-0001",
+        "page": 5,
+        "excerpt": "the biomedical KG ... defines 18 entity types ... and 19 relationship types."
+      },
+      {
+        "span_id": "C0070-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "clinical ontology ... integrate the relationships defined in ontology and entity description to enhance the model."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing",
+    "Entity and concept extraction via NER",
+    "Entity typing using the coarse-KG inventory",
+    "Relation and triple extraction",
+    "Confidence filtering and iterative refinement",
+    "Graph construction"
+  ],
+  "input_output": {
+    "input_type": "Unstructured English oncology-domain text from papers in 12 international journals, together with an existing biomedical KG for distant supervision.",
+    "input_granularity": "Sentence-level NER and relation-extraction instances; relation examples contain head and tail entity pairs with their sentence context.",
+    "output_representation": "A fine-domain KG represented as triples (head entity, relation, tail entity), including overlapping triples, new relations between known entities, and relations involving new entities."
+  },
+  "models_and_tools": [
+    "BERT, Bio_ClinicalBERT, and biomed_RoBERTa encoders",
+    "Separate NER classifier with BIO labels and cross-entropy training",
+    "Separate RE classifier over the [CLS] representation",
+    "String and entity-pair matching against the coarse KG and accumulated discoveries",
+    "Negative sampling using unrelated entity pairs and out-of-domain words",
+    "Probability and cumulative-frequency confidence thresholds",
+    "Learning rate 2E-05, batch size 20, 4 epochs",
+    "Ubuntu system with four NVIDIA A100 GPUs; seqeval for NER evaluation"
+  ],
+  "datasets": [
+    "240,000 unlabeled oncology paragraphs from 12 international journals, cleaned and converted to sentences",
+    "Biomedical coarse-domain KG with 5.2 million English entities, 18 entity types, and 7.34 million triples across 19 relation types",
+    "Fine-domain oncology KG constructed as the output"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Held-out NER precision, recall, and F1 using seqeval micro averages",
+      "Held-out RE weighted-average precision, recall, and F1",
+      "Manual precision for high-confidence entities, new-relation triples, and new-entity triples from 50 samples per category",
+      "Ablation NER precision and RE precision"
+    ],
+    "baselines": [
+      "BERT-initialized KGDA",
+      "Bio_ClinicalBERT-initialized KGDA",
+      "biomed_RoBERTa-initialized KGDA",
+      "Ablations without cumulative training data and without iterative training"
+    ],
+    "setting": "Biomedical-to-oncology adaptation using 240,000 unlabeled paragraphs. D1-D5 are used for iterative training and KG construction; D6 is held out. Held-out labels come from coarse-KG distant supervision, so this evaluates recovery of source-KG knowledge rather than recall of newly discovered oncology knowledge. Manual evaluation samples 50 cases each from high-confidence new entities, new-relation triples, and new-entity triples; one physician labels correctness, while recall cannot be estimated because the number of true fine-domain instances is unknown."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Held-out NER: BERT 0.908/0.900/0.904, Bio_ClinicalBERT 0.909/0.895/0.902, and biomed_RoBERTa 0.908/0.901/0.905 for precision/recall/F1.",
+      "Held-out RE: BERT 0.987/0.949/0.967, Bio_ClinicalBERT 0.988/0.957/0.972, and biomed_RoBERTa 0.987/0.959/0.972 for precision/recall/F1.",
+      "Manual precision for E_conf/T_R/T_E: BERT 0.90/0.58/0.70, Bio_ClinicalBERT 0.90/0.66/0.62, and biomed_RoBERTa 0.94/0.76/0.74.",
+      "For biomed_RoBERTa, complete versus without cumulative data versus without iteration gives NER precision 0.908/0.888/0.894 and RE precision 0.987/0.983/0.986.",
+      "The authors report that accumulated iterative data improves generalization and supports discovery of fine-domain-specific knowledge while retaining overlapping coarse-domain knowledge."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0070-D-P006-TABLE-0001",
+        "page": 6,
+        "excerpt": "BERT 0.908 0.900 0.904 ... BERT 0.987 0.949 0.967"
+      },
+      {
+        "span_id": "C0070-D-P008-TABLE-0002",
+        "page": 8,
+        "excerpt": "biomed_RoBERTa ... E_conf 0.94, T_R 0.76, T_E 0.74; complete NER precision 0.908 vs w/o cumulative 0.888 and w/o iter 0.894"
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "The authors claim that the framework constructs an oncology KG from fully unlabeled raw text using an existing biomedical KG and no manual annotation.",
+      "The iterative scheme incorporates high-confidence target entities and triples into later distant-supervision corpora, addressing fine-domain knowledge absent from a static coarse KG.",
+      "The evaluation combines held-out metrics with manual review of newly discovered entities and triples.",
+      "Review-level inference: the ablation design directly tests the contribution of cumulative and iterative training."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0070-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "Our model does not require human annotated samples with distant-supervision for cross-domain KG adaptation."
+      },
+      {
+        "span_id": "C0070-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "the using of accumulated data through iterations is beneficial for improving the generalization ability of NER and RE models."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Held-out evaluation cannot measure discovery of new target-domain knowledge because its labels are inferred from the coarse KG.",
+      "The method assumes source and target domains share entity-type and relation-type sets.",
+      "Distant supervision introduces noisy labels, and the current version does not implement denoising.",
+      "Review-level inference: confidence and frequency filtering may preserve systematic false positives and does not provide explicit provenance or contradiction checking.",
+      "Review-level inference: separate NER and RE models allow upstream entity errors to propagate into relation extraction and KG construction."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0070-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "this scheme can only evaluate whether the trained model can capture the knowledge in the coarse domain, but cannot evaluate the ability ... to discover new knowledge in the fine-domain."
+      },
+      {
+        "span_id": "C0070-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "distant supervision will inevitably introduce noisy labels ... the denoising step is usually needed but not implemented ... assume the source and target domains share the same set of entity types and relation types"
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "More thorough human-reader evaluation is needed to verify that newly discovered knowledge is relevant, not merely correct.",
+      "Distant-supervision noise requires denoising, which is not implemented.",
+      "Adaptation currently uses one coarse-domain source; multiple-source adaptation is future work.",
+      "Clinical ontology integration is future work.",
+      "The shared type and relation inventory assumption can limit fine-domain discovery; adaptive addition/removal is future work.",
+      "The framework uses BERT variants and could be adapted to newer pretrained language models."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0070-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "Several limitations and challenges remain ... more thorough evaluation with human reader study is needed"
+      },
+      {
+        "span_id": "C0070-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "distant supervision will inevitably introduce noisy labels ... denoising step ... not implemented"
+      },
+      {
+        "span_id": "C0070-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "clinical ontology ... integrate ... entity description ... assume the source and target domains share the same set of entity types and relation types"
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Add human-reader studies assessing correctness and target-domain relevance.",
+      "Add a denoising procedure for distant-supervision labels.",
+      "Adapt from multiple related-domain KGs.",
+      "Integrate clinical ontology relationships and entity descriptions.",
+      "Use data-mining methods to adaptively add or remove entity and relation types.",
+      "Adapt KGDA to newer pretrained language models.",
+      "Review-level proposal: add provenance, contradiction checking, calibration, and prioritized human validation to iterative filtering."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0070-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "we will investigate the scheme to allow adaption from multiple sources ... integrate the relationships defined in ontology and entity description ... adaptively add/remove entity and relation types"
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Evaluating recall and target-domain relevance when the population of true fine-domain entities and triples is unknown.",
+      "Denoising distant-supervision labels without suppressing valid discoveries.",
+      "Using multiple source KGs and clinical ontologies while preserving schema alignment.",
+      "Handling target-only entity and relation types instead of assuming identical inventories.",
+      "Assessing newer pretrained language models for domain adaptation and KG construction.",
+      "Review-level inference: validating, deduplicating, provenance-tracking, and safely integrating iterative triples into a maintained KG remains unresolved."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0070-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "Several limitations and challenges remain beyond the current work for more effective and accurate KG construction"
+      },
+      {
+        "span_id": "C0070-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "we cannot estimate the recall of fine-domain KG."
+      }
+    ]
+  },
+  "code_and_data_availability": "The authors state that source code and data will be released and that the constructed oncology KG will be hosted as a public web service. The experiments section mentions publicly available data and a containerized environment in the released source code, but provides no concrete repository URL."
+}

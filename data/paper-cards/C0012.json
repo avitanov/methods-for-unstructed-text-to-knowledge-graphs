@@ -1,0 +1,760 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0012",
+    "title": "Joint Extraction of Entities and Relations Based on a Novel Graph Scheme",
+    "pdf_path": "data/pdfs/C0012.pdf",
+    "authors": [
+      "Shaolei Wang",
+      "Yue Zhang",
+      "Wanxiang Che",
+      "Ting Liu"
+    ],
+    "year": 2018,
+    "venue": "Proceedings of the Twenty-Seventh International Joint Conference on Artificial Intelligence (IJCAI-18)",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The paper proposes joint entity and relation extraction by converting the task into a directed graph and generating the graph incrementally with a transition-based approach. The method performs joint decoding, models dependencies between entities and relations as well as between relations, and outperforms state-of-the-art methods on New York Times corpora.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0012-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Shaolei Wang, Yue Zhang, Wanxiang Che, Ting Liu",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Header",
+      "span_id": "C0012-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the Twenty-Seventh International Joint Conference on Artificial Intelligence (IJCAI-18)",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Header",
+      "span_id": "C0012-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the Twenty-Seventh International Joint Conference on Artificial Intelligence (IJCAI-18)",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0012-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We convert the joint task into a directed graph by designing a novel graph scheme and propose a transition-based approach to generate the directed graph incrementally, which can achieve joint learning through joint decoding.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0012-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Most existing neural joint methods extract entities and relations separately and achieve joint learning through parameter sharing, leading to a drawback that information between output entities and relations cannot be fully exploited.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0012-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "Due to the transformation into a tagging task, the method only indirectly captures output structural correspondences, and is incapable of identifying overlapping relations.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Contributions",
+      "span_id": "C0012-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We propose an intuitive graph scheme to jointly represent entities and relations.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Method overview",
+      "span_id": "C0012-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We propose a novel neural transition-based method, inspired by the list-based arc-eager algorithm for non-projective tree parsing.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Input Representation",
+      "span_id": "C0012-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "Two neural layers are used to represent the input, where the bottom layer is token embedding and the next layer is a Bi-LSTM layer.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Search Algorithm",
+      "span_id": "C0012-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Thus the extraction of entities and relations are merged in one transition-based system.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Experimental settings",
+      "span_id": "C0012-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "The training data set is obtained by means of distant supervision methods without manually labeling.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Graph Scheme",
+      "span_id": "C0012-D-P002-PICTURE-0001",
+      "page": 2,
+      "excerpt": "The nodes in the graph correspond to words in the input sentence. The directed arcs are broadly categorized into entity arcs that represent internal structures of entities and relation arcs that represent relations between entities.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Transition System",
+      "span_id": "C0012-D-P003-TABLE-0002",
+      "page": 3,
+      "excerpt": "The first seven actions are used to generate relations, and the last three actions are used to generate entities.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Input Representation and State Representation",
+      "span_id": "C0012-D-P004-PICTURE-0003",
+      "page": 4,
+      "excerpt": "For better capturing non-local context information, we use stack LSTM to represent different components of each state.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Baseline: Tagging Scheme",
+      "span_id": "C0012-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The relation type information is obtained from a predefined set of relations.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Transition System",
+      "span_id": "C0012-D-P003-TABLE-0002",
+      "page": 3,
+      "excerpt": "GEN-NER(y) ... labels this with label y ... and a relation arc with label l.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0012-D-P001-PICTURE-0001",
+      "page": 1,
+      "excerpt": "The input is unstructured texts and the output includes entities and their semantic relations.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Graph Scheme",
+      "span_id": "C0012-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Entity arcs ... represent internal structures of entities; relation arcs represent relations between entities.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Transition System",
+      "span_id": "C0012-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "GEN-NER pops all items from the top of e creating a chunk, labels this with label y ... and a relation arc with label l.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0012-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The input is unstructured texts and the output includes entities and their semantic relations.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Search Algorithm",
+      "span_id": "C0012-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The system is initialized by pushing all the input words and their representations onto β in reverse order.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Input Representation",
+      "span_id": "C0012-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "Given the token embeddings of an input sequence x = (x1, ..., xn), bidirectional LSTM is used to process the sequence.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Graph Scheme",
+      "span_id": "C0012-D-P002-PICTURE-0001",
+      "page": 2,
+      "excerpt": "The nodes in the graph correspond to words in the input sentence. ... entity arcs ... relation arcs.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Evaluation Metrics",
+      "span_id": "C0012-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "A triplet is regarded as correct when its relation type and head offsets of the two corresponding entities are both correct.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Input Representation",
+      "span_id": "C0012-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Two neural layers are used to represent the input ... token embedding ... and ... a Bi-LSTM layer.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Composition Functions",
+      "span_id": "C0012-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "To model underlying entity-relation and relation-relation dependencies, our method incrementally integrates the entity information and corresponding relation information.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Hyperparameters and Training Details",
+      "span_id": "C0012-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "We update all model parameters by backpropagation using stochastic gradient descent (SGD) with a learning rate of 0.01 and gradient clipping at 5.0.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-04": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Contributions",
+      "span_id": "C0012-D-P002-TEXT-0004",
+      "page": 2,
+      "excerpt": "The code is released: https://github.com/hitwsl/joint-entity-relation",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Experimental Settings",
+      "span_id": "C0012-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "The training data set is obtained by means of distant supervision methods without manually labeling and contains 353k triplets in total. While the test set is manually labeled and contains 3,880 triplets.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Evaluation Metrics",
+      "span_id": "C0012-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We adopt standard Precision (Prec), Recall (Rec) and F1 score to evaluate the model.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Evaluation Metrics",
+      "span_id": "C0012-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "A triplet is regarded as correct when its relation type and head offsets of the two corresponding entities are both correct.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Baselines",
+      "span_id": "C0012-D-P005-TABLE-0001",
+      "page": 5,
+      "excerpt": "We compare our method with several state-of-the-art extraction methods, which can be divided into ... pipelined methods, jointly extracting methods, and end-to-end methods.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Evaluation Metrics",
+      "span_id": "C0012-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We follow Zheng et al., creating a validation set by randomly sampling 10% data from test set and use the remaining data as evaluation.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Search Algorithm",
+      "span_id": "C0012-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "To label a new input sequence at test time, the maximum probability action is chosen greedily until the algorithm reaches a termination state.",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0012-D-P005-TABLE-0001",
+      "page": 5,
+      "excerpt": "Our Method 64.3 42.1 50.9",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0012-D-P005-TABLE-0002",
+      "page": 5,
+      "excerpt": "It achieves 4.6 point improvement over the best jointly extracting method ... and 1.4 point improvement over the best end-to-end sequence labeling method.",
+      "confidence": "medium"
+    },
+    "main_results-21-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Ablation Tests",
+      "span_id": "C0012-D-P005-TABLE-0003",
+      "page": 5,
+      "excerpt": "ALL 64.3 42.1 50.9; -composition 62.3 41.2 49.6; -Bi-LSTM 62.3 40.5 49.1",
+      "confidence": "medium"
+    },
+    "main_results-21-04": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Case Study",
+      "span_id": "C0012-D-P006-TABLE-0004",
+      "page": 6,
+      "excerpt": "Our method can identify overlapping relations ... our transition systems have the ability to handle multiple head or tail nodes.",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0012-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Our method can model underlying dependencies not only between entities and relations, but also between relations.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Graph Scheme",
+      "span_id": "C0012-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "To cope with the overlapping relations, the node in our directed graph can have multiple heads.",
+      "confidence": "medium"
+    },
+    "strengths-22-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Case Study",
+      "span_id": "C0012-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "Thanks to the use of stack LSTM state representation, our transition-based method can capture more global feature representations.",
+      "confidence": "medium"
+    },
+    "strengths-22-04": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Ablation Tests",
+      "span_id": "C0012-D-P005-TABLE-0004",
+      "page": 5,
+      "excerpt": "The F1-score decreases heavily without each strategy.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Experimental Settings",
+      "span_id": "C0012-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "The training data set is obtained by means of distant supervision methods without manually labeling.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Search Algorithm",
+      "span_id": "C0012-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "At test time, the maximum probability action is chosen greedily until the algorithm reaches a termination state.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Baseline: Tagging Scheme",
+      "span_id": "C0012-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "The relation type information is obtained from a predefined set of relations.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-04": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Experimental Results",
+      "span_id": "C0012-D-P005-TEXT-0004",
+      "page": 5,
+      "excerpt": "We use the public dataset NYT2 as our main data set.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Experimental Settings",
+      "span_id": "C0012-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "The training data set is obtained by means of distant supervision methods without manually labeling.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Search Algorithm",
+      "span_id": "C0012-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "To label a new input sequence at test time, the maximum probability action is chosen greedily.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Introduction",
+      "span_id": "C0012-D-P001-TEXT-0003",
+      "page": 1,
+      "excerpt": "The input is unstructured texts and the output includes entities and their semantic relations.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0012-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The task has been traditionally solved as a pipeline of two separate sub-tasks: entity recognition and relation extraction.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Graph Scheme",
+      "span_id": "C0012-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "The relation type information is obtained from a predefined set of relations.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Experimental Settings",
+      "span_id": "C0012-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "The training data set is obtained by means of distant supervision methods without manually labeling.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-04": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion",
+      "span_id": "C0012-D-P006-TEXT-0004",
+      "page": 6,
+      "excerpt": "Experiments show that our model achieves the state-of-the-art F-scores on a standard NewYork Times (NYT) benchmark.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-26-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Contributions",
+      "span_id": "C0012-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The code is released: https://github.com/hitwsl/joint-entity-relation",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-26-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Experimental Settings",
+      "span_id": "C0012-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "The dataset can be downloaded at: https://github.com/shanzhenren/CoType.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses joint extraction of entity mentions and semantic relations from unstructured sentences. It targets the limitation of prior neural methods that separately extract entities and relations and obtain joint learning mainly through parameter sharing, without fully exploiting dependencies between output entities, relations, and relation labels. It also addresses the inability of a prior tagging scheme to identify overlapping relations.",
+  "methodology": {
+    "primary_family": "Joint entity-relation extraction",
+    "secondary_families": [
+      "Neural NLP pipelines",
+      "Linguistic and dependency-based extraction"
+    ],
+    "system_type": "joint",
+    "supervision_setting": "weakly_supervised",
+    "description": "The method represents each sentence as a directed graph whose nodes correspond to input words. Entity arcs encode internal entity structure, while labeled relation arcs connect entity nodes. A transition system incrementally performs entity-generation and relation-generation actions over stacks, a buffer, partial entity chunks, relation arcs, and entity arcs. A Bi-LSTM encodes token context; stack LSTMs represent parser state; recursive composition functions update entity representations when relation arcs are created. A neural classifier assigns valid transition actions, and greedy decoding generates the final graph. Preconditions permit nodes to have multiple heads, supporting overlapping relations."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The system uses a predefined set of relation labels and entity labels/types supplied by the task/dataset. It does not discover an ontology or schema; the graph scheme defines the representation of entity arcs and labeled relation arcs.",
+    "evidence": [
+      {
+        "span_id": "C0012-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "The relation type information is obtained from a predefined set of relations."
+      },
+      {
+        "span_id": "C0012-D-P003-TABLE-0002",
+        "page": 3,
+        "excerpt": "GEN-NER(y) ... labels this with label y ... and a relation arc with label l."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing",
+    "Entity and concept extraction",
+    "Entity typing",
+    "Relation and triple extraction",
+    "Graph construction"
+  ],
+  "input_output": {
+    "input_type": "Unstructured natural-language text sentences",
+    "input_granularity": "Sentence-level token sequences; examples and decoding operate over individual sentences",
+    "output_representation": "A directed entity-relation graph represented by labeled entity arcs and labeled relation arcs, which is decoded into entity mentions and relation triples with relation type and entity offsets"
+  },
+  "models_and_tools": [
+    "Bi-LSTM token encoder",
+    "Structured skip n-gram word embeddings",
+    "Stack LSTM state representations",
+    "Recursive neural-network composition functions for entity-relation representations",
+    "Neural transition-based decoder/classifier",
+    "Stochastic gradient descent with learning rate 0.01 and gradient clipping at 5.0",
+    "Released implementation at https://github.com/hitwsl/joint-entity-relation"
+  ],
+  "datasets": [
+    "NYT2 public New York Times corpus: distant-supervision training set with 353k triplets and manually labeled test set with 3,880 triplets"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Precision",
+      "Recall",
+      "F1 score",
+      "Triplet-level correctness requiring correct relation type and head offsets of both corresponding entities"
+    ],
+    "baselines": [
+      "FCM",
+      "DS+logistic",
+      "LINE",
+      "MultiR",
+      "DS-Joint",
+      "CoType",
+      "LSTM-LSTM-Bias",
+      "LSTM-LSTM-Bias*"
+    ],
+    "setting": "The method is evaluated on the NYT2 benchmark. Ten percent of the manually labeled test set is randomly sampled as validation data, and the remaining test data is used for evaluation. Results are compared across pipelined, jointly extracting, and end-to-end baselines. The model is trained by maximizing the likelihood of each gold action given the current state and decoded greedily by selecting the maximum-probability valid action."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Our method: Precision 64.3, Recall 42.1, F1 50.9 on NYT (Table 4).",
+      "The method exceeds CoType, the best jointly extracting baseline in the table, by 4.6 F1 points (50.9 versus 46.3).",
+      "The method exceeds LSTM-LSTM-Bias, the best end-to-end sequence-labeling baseline in the table, by 1.4 F1 points (50.9 versus 49.5).",
+      "Compared with the authors' LSTM-LSTM-Bias* implementation, the method improves F1 from 49.1 to 50.9, precision from 60.8 to 64.3, and recall from 41.3 to 42.1.",
+      "Ablation without the composition function obtains Precision 62.3, Recall 41.2, F1 49.6; without Bi-LSTM obtains Precision 62.3, Recall 40.5, F1 49.1, versus the full model's F1 50.9 (Table 5).",
+      "The case study reports that the proposed method handles long-distance relations and overlapping relations that LSTM-LSTM-Bias* misses in the shown examples (Table 6).",
+      "Review-level inference: the reported gains support the paper's claim that joint decoding and output-structure representations are useful on this benchmark, but they do not establish general superiority beyond the reported NYT2 setting."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0012-D-P005-TABLE-0001",
+        "page": 5,
+        "excerpt": "Our Method 64.3 42.1 50.9"
+      },
+      {
+        "span_id": "C0012-D-P005-TABLE-0002",
+        "page": 5,
+        "excerpt": "It achieves 4.6 point improvement over the best jointly extracting method ... and 1.4 point improvement over the best end-to-end sequence labeling method."
+      },
+      {
+        "span_id": "C0012-D-P005-TABLE-0003",
+        "page": 5,
+        "excerpt": "ALL 64.3 42.1 50.9; -composition 62.3 41.2 49.6; -Bi-LSTM 62.3 40.5 49.1"
+      },
+      {
+        "span_id": "C0012-D-P006-TABLE-0004",
+        "page": 6,
+        "excerpt": "Our method can identify overlapping relations ... our transition systems have the ability to handle multiple head or tail nodes."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Jointly decodes entity and relation decisions in one transition system.",
+      "The graph representation supports overlapping relations by allowing nodes to have multiple heads.",
+      "The model explicitly represents dependencies between entities and relations and between different relations.",
+      "Bi-LSTM contextual encoding and stack-LSTM state representation support non-local context and long-distance relations.",
+      "The composition function and Bi-LSTM each contribute to performance according to the ablation results.",
+      "The implementation is released by the authors.",
+      "Review-level inference: the graph scheme is a natural intermediate representation for converting sentence-level extraction outputs into graph edges."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0012-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "Our method can model underlying dependencies not only between entities and relations, but also between relations."
+      },
+      {
+        "span_id": "C0012-D-P002-TEXT-0002",
+        "page": 2,
+        "excerpt": "To cope with the overlapping relations, the node in our directed graph can have multiple heads."
+      },
+      {
+        "span_id": "C0012-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "Thanks to the use of stack LSTM state representation, our transition-based method can capture more global feature representations."
+      },
+      {
+        "span_id": "C0012-D-P005-TABLE-0004",
+        "page": 5,
+        "excerpt": "The F1-score decreases heavily without each strategy."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "The method is evaluated only on the NYT2 benchmark reported in this paper.",
+      "Training relies on distantly supervised data, which the paper identifies as not manually labeled and which may contain noisy supervision.",
+      "Decoding is greedy, selecting the maximum-probability action at each step, so search errors can propagate through the transition sequence.",
+      "The graph scheme and transition system require a predefined relation-label inventory rather than discovering an ontology or schema.",
+      "The paper reports only sentence-level entity-relation extraction and does not evaluate entity linking, coreference, knowledge fusion, graph validation, or graph updating.",
+      "Review-level inference: the transition action space and state representation may increase implementation and computational complexity relative to simpler tagging approaches."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0012-D-P005-TEXT-0001",
+        "page": 5,
+        "excerpt": "The training data set is obtained by means of distant supervision methods without manually labeling."
+      },
+      {
+        "span_id": "C0012-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "At test time, the maximum probability action is chosen greedily until the algorithm reaches a termination state."
+      },
+      {
+        "span_id": "C0012-D-P002-TEXT-0003",
+        "page": 2,
+        "excerpt": "The relation type information is obtained from a predefined set of relations."
+      },
+      {
+        "span_id": "C0012-D-P005-TEXT-0004",
+        "page": 5,
+        "excerpt": "We use the public dataset NYT2 as our main data set."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "not_reported",
+    "value": null,
+    "evidence": []
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: evaluate the method on additional domains and manually annotated datasets to test transfer and robustness beyond NYT2.",
+      "Review-level inference: compare greedy decoding with beam search or globally optimized decoding to reduce transition-sequence error propagation.",
+      "Review-level inference: add explicit mechanisms for entity linking, coreference, schema/ontology constraints, graph validation, and knowledge fusion when deploying the extractor as a complete Text-to-KG system.",
+      "Review-level inference: investigate methods for reducing noise from distant supervision, such as manually verified subsets or noise-aware training.",
+      "Review-level inference: report computational cost, decoding speed, and scalability for longer sentences and larger relation inventories."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0012-D-P005-TEXT-0001",
+        "page": 5,
+        "excerpt": "The training data set is obtained by means of distant supervision methods without manually labeling."
+      },
+      {
+        "span_id": "C0012-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "To label a new input sequence at test time, the maximum probability action is chosen greedily."
+      },
+      {
+        "span_id": "C0012-D-P001-TEXT-0003",
+        "page": 1,
+        "excerpt": "The input is unstructured texts and the output includes entities and their semantic relations."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: the paper leaves open how well the graph-transition method generalizes beyond the NYT2 news domain.",
+      "Review-level inference: robust extraction under noisy distant supervision remains unresolved.",
+      "Review-level inference: complete Text-to-KG construction beyond entity and relation extraction remains unresolved, including linking, coreference, fusion, validation, and updating.",
+      "Review-level inference: the paper does not resolve whether greedy transition decoding is sufficient for complex graphs with many overlapping or long-distance relations.",
+      "Review-level inference: schema and ontology discovery is not addressed because relation labels are predefined."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0012-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "The task has been traditionally solved as a pipeline of two separate sub-tasks: entity recognition and relation extraction."
+      },
+      {
+        "span_id": "C0012-D-P002-TEXT-0002",
+        "page": 2,
+        "excerpt": "The relation type information is obtained from a predefined set of relations."
+      },
+      {
+        "span_id": "C0012-D-P005-TEXT-0003",
+        "page": 5,
+        "excerpt": "The training data set is obtained by means of distant supervision methods without manually labeling."
+      },
+      {
+        "span_id": "C0012-D-P006-TEXT-0004",
+        "page": 6,
+        "excerpt": "Experiments show that our model achieves the state-of-the-art F-scores on a standard NewYork Times (NYT) benchmark."
+      }
+    ]
+  },
+  "code_and_data_availability": "The authors state that code is released at https://github.com/hitwsl/joint-entity-relation. The paper uses the public NYT2 dataset and gives a download link to https://github.com/shanzhenren/CoType."
+}

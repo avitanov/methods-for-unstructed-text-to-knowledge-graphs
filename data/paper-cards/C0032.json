@@ -1,0 +1,965 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0032",
+    "title": "KBPearl",
+    "pdf_path": "data/batches/batch-02/C0032.pdf",
+    "authors": [
+      "Xueling Lin",
+      "Haoyang Li",
+      "Hao Xin",
+      "Zijian Li",
+      "Lei Chen"
+    ],
+    "year": 2020,
+    "venue": "Proceedings of the VLDB Endowment",
+    "identifier": {
+      "status": "reported",
+      "value": "DOI: 10.14778/3384345.3384352",
+      "evidence": [
+        {
+          "span_id": "C0032-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "DOI: https://doi.org/10.14778/3384345.3384352"
+        }
+      ]
+    },
+    "abstract": "KBPearl addresses knowledge-base population from unstructured text. It takes an incomplete knowledge base and a large text corpus, organizes noisy Open Information Extraction output into canonicalized facts, and populates the target knowledge base through joint entity and relation linking. The method uses contextual side information from source documents and a semantic graph to capture global coherence. A graph densification procedure selects entity and predicate linkings and identifies new entities. Experiments on real-world datasets evaluate effectiveness and efficiency against state-of-the-art techniques.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0032-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Xueling Lin, Haoyang Li, Hao Xin, Zijian Li, Lei Chen",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "PVLDB Reference Format",
+      "span_id": "C0032-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "PVLDB, 13(7): 1035-1049, 2020.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "PVLDB Reference Format",
+      "span_id": "C0032-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "PVLDB, 13(7): 1035-1049, 2020.",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "PVLDB Reference Format",
+      "span_id": "C0032-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "DOI: https://doi.org/10.14778/3384345.3384352",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0032-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We present an end-to-end system, KBPearl, for KBP, which takes an incomplete KB and a large corpus of text as input, to (1) organize the noisy extraction from Open IE into canonicalized facts; and (2) populate the KB by joint entity and relation linking.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0032-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Open IE techniques only extract ... without indicating which entity the noun phrase ... refers to.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0032-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "none of the existing works utilizes such global coherence for joint entity and relation linking in long-text documents.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-03": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Problem Definition",
+      "span_id": "C0032-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "Given an incomplete KB Ψ and a document d, our task is to (1) extract the side information S(d) and a set of canonicalized Open triples ...; (2) link each triple ... to the KB Ψ.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0032-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "we canonicalize the arguments of facts and link them to the target KB.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "System Framework Overview",
+      "span_id": "C0032-D-P003-PICTURE-0002",
+      "page": 3,
+      "excerpt": "Stage 1: Knowledge Extraction ... Step 1.3: Canonicalization; Stage 2: Knowledge Linking.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0032-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "we perform a joint entity and relation linking task on the semantic graph",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "System Framework Overview",
+      "span_id": "C0032-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "the document is pre-processed by a pipeline of linguistic tools",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Semantic Graph Construction",
+      "span_id": "C0032-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "we generate a set of candidate entity nodes ... match the types of noun phrases provided by the side information",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "System Framework Overview",
+      "span_id": "C0032-D-P003-PICTURE-0001",
+      "page": 3,
+      "excerpt": "Stage 1: Knowledge Extraction ... Stage 2: Knowledge Linking",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Efficient and Effective Linking",
+      "span_id": "C0032-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "KBPearl-Pipeline ... Build semantic graph ... GraphDensification ... obtain linking results",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Experiment Settings",
+      "span_id": "C0032-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "For the hyper-parameter training of θ in the greedy algorithm ... we utilize the ground truths labeled for the NYT2018 dataset.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "System Framework Overview",
+      "span_id": "C0032-D-P003-PICTURE-0001",
+      "page": 3,
+      "excerpt": "Step 1.1: Side Information Extraction ... Step 1.2: Triple Extraction ... Step 1.3: Canonicalization ... Step 2.1: Semantic Graph Construction ... Step 2.2: Graph Densification and Linking",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Graph Densification & Linking",
+      "span_id": "C0032-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "we select one optimal entity node e ∈ E for each noun phrase node n ∈ N, and one optimal predicate node p ∈ P for each relation phrase node r ∈ R.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Efficient and Effective Linking",
+      "span_id": "C0032-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "we propose two variants of the KBPearl system as solutions.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Problem Definition",
+      "span_id": "C0032-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "A KB Ψ can be considered as a set of facts, where each fact is stored in the form of a triple (s, p, o).",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Semantic Graph Construction",
+      "span_id": "C0032-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "for each noun phrase node, we generate a set of candidate entity nodes that (1) have n as one of their aliases, and (2) match the types of noun phrases",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Experiment Settings",
+      "span_id": "C0032-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "we produce the entity mapping between DBpedia and Wikidata ... and the relation mapping between DBpedia and Wikidata",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "System Framework Overview",
+      "span_id": "C0032-D-P003-PICTURE-0001",
+      "page": 3,
+      "excerpt": "Stage 1: Knowledge Extraction ... Stage 2: Knowledge Linking",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Stage 1: Knowledge Extraction",
+      "span_id": "C0032-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "sentence tokenization, ... POS tagging, ... noun-phrase chunking and named entity recognition ... and ... Time Tagger tools",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Triple Canonicalization and Noise Reduction",
+      "span_id": "C0032-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "filtering those that only contain pronouns, stopwords, and interrogative words ... [and] basic canonicalization",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-04": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Graph Densification & Linking",
+      "span_id": "C0032-D-P005-TEXT-0004",
+      "page": 5,
+      "excerpt": "we select one optimal entity node ... and one optimal predicate node ...",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-05": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Problem Definition",
+      "span_id": "C0032-D-P002-TEXT-0005",
+      "page": 2,
+      "excerpt": "If nsub is non-linkable, we report a new entity for it ... Finally, we add the new fact to the KB Ψ.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Problem Definition",
+      "span_id": "C0032-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Given an incomplete KB Ψ and a document d",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "System Framework Overview",
+      "span_id": "C0032-D-P003-PICTURE-0002",
+      "page": 3,
+      "excerpt": "Target KB Ψ; document d",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "KBPearl-Pipeline",
+      "span_id": "C0032-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "each of {g1, g2, ..., g|G|−1} contains k sentences",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Experiment Settings",
+      "span_id": "C0032-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "The average document length is 206.20 words.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Problem Definition",
+      "span_id": "C0032-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "we decide whether nsub is linked to an entity ... r is linked to a predicate ... and nobj is linked to an entity ... or referred to as a literal",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Problem Definition",
+      "span_id": "C0032-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Finally, we add the new fact to the KB Ψ.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Implementation Details of KBPearl",
+      "span_id": "C0032-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "we employ the Washington KnowItAll project ... NLTK Toolkit ... Stanford CoreNLP toolkit ... and SUTIME",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Implementation Details of KBPearl",
+      "span_id": "C0032-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "we employ four different Open IE tools ... ReVerb, MinIE ... ClausIE and Stanford Open IE Tool",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Implementation Details of KBPearl",
+      "span_id": "C0032-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "we ... index 64,126,653 entities and predicates from the Wikidata JSON dump of 2018-07-22 with Solr (Lucene)",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Benchmarks",
+      "span_id": "C0032-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "ReVerb38 is a dataset proposed for Open KB canonicalization ... with 45K Freebase triples extracted from Clueweb09",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Benchmarks",
+      "span_id": "C0032-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "NYT2018 contains news articles ... We select 30 documents and manually annotate the facts based on Wikidata and DBpedia as ground truths.",
+      "confidence": "medium"
+    },
+    "datasets-18-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Benchmarks",
+      "span_id": "C0032-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "T-REx ... We select 1815 documents with Wikidata triples aligned as ground truths.",
+      "confidence": "medium"
+    },
+    "datasets-18-04": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Benchmarks",
+      "span_id": "C0032-D-P008-TEXT-0004",
+      "page": 8,
+      "excerpt": "Knowledge Net ... contains 3977 documents, and 6920 triples linked to Wikidata.",
+      "confidence": "medium"
+    },
+    "datasets-18-05": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Benchmarks",
+      "span_id": "C0032-D-P008-TEXT-0005",
+      "page": 8,
+      "excerpt": "CC-DBP ... We select 969 documents with non-empty triples as ground truths.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Evaluation Metrics",
+      "span_id": "C0032-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "We use precision (P), recall (R) and F1-score (F) for performance evaluation.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Performance Evaluation",
+      "span_id": "C0032-D-P011-PICTURE-0002",
+      "page": 11,
+      "excerpt": "Efficiency evaluation regarding the length of the sentences and different values of parameter k",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Baselines",
+      "span_id": "C0032-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "DBpedia Spotlight ... TagMe ... ReMatch ... Falcon",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Baselines",
+      "span_id": "C0032-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "EARL ... QKBfly ... does not perform the relation linking task",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Experiment Settings",
+      "span_id": "C0032-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "we employ SPARQL query ... We produce the entity mapping between DBpedia and Wikidata ... and the relation mapping",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Evaluation Metrics",
+      "span_id": "C0032-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "All the experiments presented are conducted on a server with 128GB RAM, 2.4GHz CPU, with Ubuntu 18.04.1 LTS installed.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Implementation Details of KBPearl",
+      "span_id": "C0032-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "For the hyper-parameter training of θ ... we utilize the ground truths labeled for the NYT2018 dataset.",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 1: Performance of the entity linking task",
+      "span_id": "C0032-D-P010-TABLE-0001",
+      "page": 10,
+      "excerpt": "NYT2018 ... KBPearl-PP 0.422 0.744 0.539; KBPearl-NN 0.491 0.694 0.575",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 2: Performance of the relation linking task",
+      "span_id": "C0032-D-P010-TABLE-0002",
+      "page": 10,
+      "excerpt": "NYT2018 ... KBPearl-PP 0.302 0.405 0.346; KBPearl-NN 0.313 0.494 0.383",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "OpenIE-tool comparison",
+      "span_id": "C0032-D-P011-TABLE-0003",
+      "page": 11,
+      "excerpt": "KBP-MinIE ... NYT2018 ... 0.402 0.594 0.479",
+      "confidence": "medium"
+    },
+    "main_results-22-04": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Performance of Different Variants of KBPearl",
+      "span_id": "C0032-D-P011-TEXT-0004",
+      "page": 11,
+      "excerpt": "with more than 75 words, the time cost of KBPearl-Sim increases in an exponential manner, while the time cost of both KBPearl-PP and KBPearl-NN is still linear",
+      "confidence": "medium"
+    },
+    "main_results-22-05": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Results of Detecting New Entities",
+      "span_id": "C0032-D-P011-TEXT-0005",
+      "page": 11,
+      "excerpt": "both variants of KBPearl achieve better performance than QKBfly",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Contributions",
+      "span_id": "C0032-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "we perform a joint entity and relation linking task ... formulate this task as a dense subgraph detection problem",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Graph Densification & Linking",
+      "span_id": "C0032-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Problem 2 is NP-hard.",
+      "confidence": "medium"
+    },
+    "strengths-23-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0032-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "we locate the noun phrases representing new semantic concepts which do not exist in the target KB, and create new entities for them.",
+      "confidence": "medium"
+    },
+    "strengths-23-04": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Performance of Different Variants of KBPearl",
+      "span_id": "C0032-D-P011-TEXT-0004",
+      "page": 11,
+      "excerpt": "KBPearl-PP and KBPearl-NN achieve satisfactory performance with both short-text and long-text documents",
+      "confidence": "medium"
+    },
+    "strengths-23-05": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Experiment Settings",
+      "span_id": "C0032-D-P008-TEXT-0005",
+      "page": 8,
+      "excerpt": "we first compare the performance of different variants ... We then demonstrate the ability ... on new entities. Third, we validate ... effectiveness and efficiency",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Semantic Graph Construction",
+      "span_id": "C0032-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "the textual similarity between ni and ej is not considered",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Efficient and Effective Linking",
+      "span_id": "C0032-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "the assumption that all entities mentioned in a document are densely connected with each other in a KB is not always correct",
+      "confidence": "medium"
+    },
+    "weaknesses-24-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Results of Detecting New Entities",
+      "span_id": "C0032-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "all systems have relatively low precision and high recall ... it is not trivial for them to recognize entities containing long phrases",
+      "confidence": "medium"
+    },
+    "weaknesses-24-04": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Performance of KBPearl and Baselines",
+      "span_id": "C0032-D-P010-TEXT-0004",
+      "page": 10,
+      "excerpt": "The quality of Open IE results on interrogative sentences may not be as satisfactory as on declarative sentences.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-05": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Performance of KBPearl and Baselines",
+      "span_id": "C0032-D-P010-TEXT-0005",
+      "page": 10,
+      "excerpt": "all the systems recognize the more general predicate P31 ... instead of P39",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Performance of KBPearl and Baselines",
+      "span_id": "C0032-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "the quality of Open IE results on interrogative sentences may not be as satisfactory as on declarative sentences",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Results of Detecting New Entities",
+      "span_id": "C0032-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "it is not trivial for them to recognize entities containing long phrases",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Performance of KBPearl and Baselines",
+      "span_id": "C0032-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "all the systems recognize the more general predicate P31 ... instead of P39",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-04": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Efficient and Effective Linking",
+      "span_id": "C0032-D-P007-TEXT-0004",
+      "page": 7,
+      "excerpt": "not every pair of entities or predicates shares strong relatedness",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0032-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "if a noun phrase cannot be linked to any existing entity in the KB, then the knowledge regarding this noun phrase cannot be populated to the KB",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Results of Detecting New Entities",
+      "span_id": "C0032-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "all systems have relatively low precision and high recall",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Performance of KBPearl and Baselines",
+      "span_id": "C0032-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "the correct extraction should be ... P39 ... However, all the systems recognize the more general predicate P31",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-04": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Efficient and Effective Linking",
+      "span_id": "C0032-D-P007-TEXT-0004",
+      "page": 7,
+      "excerpt": "not every pair of entities or predicates shares strong relatedness",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Populate incomplete knowledge bases from unstructured natural-language documents without requiring a predefined set of predicates, while reducing OpenIE redundancy and ambiguity and jointly linking entity and relation phrases to the target KB. The paper specifically targets global coherence in long-text documents and the discovery of entities not already present in the KB.",
+  "methodology": {
+    "primary_family": "Validation, correction, and knowledge-fusion methods",
+    "secondary_families": [
+      "Joint entity-relation extraction",
+      "Linguistic and dependency-based extraction",
+      "Ontology-constrained and schema-guided methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "supervised",
+    "description": "KBPearl executes a two-stage text-to-KB population workflow. Stage 1 extracts side information and OpenIE triples, filters noisy triples, resolves basic noun-phrase and relation-phrase variation, and produces canonicalized triples. Stage 2 builds a weighted undirected semantic graph containing noun-phrase, relation-phrase, candidate-entity, and candidate-predicate nodes. Edge weights encode popularity, alias and pattern overlap, and keyphrase-based entity/predicate relatedness. A greedy graph-densification algorithm selects one entity for each noun phrase and one predicate for each relation phrase while maximizing the minimum weighted degree. The system has pipeline and near-neighbour variants; non-linkable noun phrases can be reported as new entities."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The target KB is an ontological triple store with entity, predicate, and literal sets. Candidate entities and predicates are generated from aliases and type constraints in the target KB; entity and predicate keyphrases, labels, aliases, relational patterns, and existing facts provide schema-side information. Experiments use Wikidata and DBpedia, with mappings between their entities and predicates.",
+    "evidence": [
+      {
+        "span_id": "C0032-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "A KB Ψ can be considered as a set of facts, where each fact is stored in the form of a triple (s, p, o)."
+      },
+      {
+        "span_id": "C0032-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "for each noun phrase node, we generate a set of candidate entity nodes that (1) have n as one of their aliases, and (2) match the types of noun phrases"
+      },
+      {
+        "span_id": "C0032-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "we produce the entity mapping between DBpedia and Wikidata ... and the relation mapping between DBpedia and Wikidata"
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing: sentence tokenization, POS tagging, noun-phrase chunking, and time extraction",
+    "Entity and concept extraction: named-entity recognition and entity typing",
+    "Coreference resolution: surname/first-name and pronoun heuristics",
+    "Relation and triple extraction: OpenIE extraction of subject-relation-object triples",
+    "Knowledge fusion and deduplication: noise filtering and triple canonicalization",
+    "Entity resolution and linking: candidate entity generation and joint entity linking",
+    "Relation extraction and linking: candidate predicate generation and joint relation linking",
+    "Graph construction: addition of new facts to the target KB",
+    "Ontology or schema-guided processing: use of target-KB aliases, types, predicates, labels, and keyphrases",
+    "Graph updating: insertion of newly linked facts and reporting/creation of new entities"
+  ],
+  "input_output": {
+    "input_type": "An incomplete knowledge base plus unstructured natural-language documents; the extraction component receives each document and an OpenIE tool produces open triples.",
+    "input_granularity": "Document-level processing with sentence-level preprocessing and optional groups of k sentences in pipeline mode; evaluation includes short questions, short documents, and long news documents.",
+    "output_representation": "Canonicalized Open triples linked to target-KB entities and predicates, with object entities or literals; new facts are added to the KB and non-linkable noun phrases may be reported as new entities."
+  },
+  "models_and_tools": [
+    "Washington KnowItAll sentence tokenizer",
+    "NLTK POS tagger",
+    "Stanford CoreNLP noun-phrase chunker and named-entity recognizer",
+    "SUTIME time tagger",
+    "ReVerb",
+    "MinIE in safe mode",
+    "ClausIE",
+    "Stanford OpenIE Tool",
+    "PATTY relational pattern repository",
+    "Solr/Lucene index",
+    "Wikidata JSON dump dated 2018-07-22",
+    "Greedy graph-densification algorithm",
+    "KBPearl-Pipeline (KBPearl-PP)",
+    "KBPearl-NearNeighbour (KBPearl-NN)",
+    "KBPearl-Sim"
+  ],
+  "datasets": [
+    "ReVerb38",
+    "NYT2018",
+    "LC-QuAD2.0",
+    "QALD-7-Wiki",
+    "T-REx",
+    "Knowledge Net",
+    "CC-DBP",
+    "Wikidata",
+    "DBpedia",
+    "ClueWeb09"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Precision",
+      "Recall",
+      "F1-score",
+      "Computation time",
+      "New-entity discovery precision, recall, and F1-score",
+      "Parameter sensitivity with respect to k"
+    ],
+    "baselines": [
+      "DBpedia Spotlight",
+      "TagMe",
+      "ReMatch",
+      "Falcon",
+      "EARL",
+      "QKBfly"
+    ],
+    "setting": "Experiments compare KBPearl-PP and KBPearl-NN with entity-linking and relation-linking baselines across seven datasets. OpenIE-tool variants and KBPearl-Sim are also evaluated. Ground truths are manually annotated or aligned to Wikidata/DBpedia; DBpedia-Wikidata mappings are produced with SPARQL. Experiments run on a server with 128 GB RAM, a 2.4 GHz CPU, and Ubuntu 18.04.1 LTS. The NYT2018 labels are used to train the greedy-algorithm threshold and exclude validation data used for hyperparameter training."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Table 1: On NYT2018 entity linking, KBPearl-PP obtains P=0.422, R=0.744, F1=0.539; KBPearl-NN obtains P=0.491, R=0.694, F1=0.575.",
+      "Table 1: On T-REx entity linking, KBPearl-PP obtains P=0.329, R=0.513, F1=0.401; KBPearl-NN obtains P=0.340, R=0.554, F1=0.421.",
+      "Table 1: On Knowledge Net entity linking, KBPearl-PP obtains P=0.297, R=0.446, F1=0.356; KBPearl-NN obtains P=0.327, R=0.466, F1=0.384.",
+      "Table 1: On CC-DBP entity linking, KBPearl-PP obtains P=0.415, R=0.620, F1=0.497; KBPearl-NN obtains P=0.418, R=0.620, F1=0.499.",
+      "Table 2: On NYT2018 relation linking, KBPearl-PP obtains P=0.302, R=0.405, F1=0.346; KBPearl-NN obtains P=0.313, R=0.494, F1=0.383.",
+      "Table 2: On LC-QuAD2.0 relation linking, both variants obtain P=0.566, R=0.479, F1=0.410 as printed in the table.",
+      "Table 3: With MinIE on QALD-7-Wiki, KBP-MinIE obtains P=0.565, R=0.557, F1=0.561; with ReVerb it obtains F1=0.546, with Stanford OpenIE F1=0.549, and with ClausIE F1=0.551.",
+      "Table 3: With MinIE on T-REx, KBP-MinIE obtains P=0.239, R=0.370, F1=0.291; on NYT2018 it obtains P=0.402, R=0.594, F1=0.479.",
+      "The paper reports that KBPearl-NN significantly outperforms baselines in precision and F1 on the long-text entity-linking datasets T-REx, Knowledge Net, and NYT2018, while Spotlight and Falcon perform better on some interrogative short-text datasets.",
+      "Figure 5 and the discussion report that KBPearl-PP and KBPearl-NN remain satisfactory as document length grows, whereas KBPearl-Sim degrades on long documents; Figure 6 reports exponential time growth for KBPearl-Sim beyond 75 words and approximately linear growth for PP and NN.",
+      "Figure 5(d) and the discussion report that both KBPearl variants outperform QKBfly for new-entity discovery, with relatively low precision and high recall for all systems."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0032-D-P010-TABLE-0001",
+        "page": 10,
+        "excerpt": "NYT2018 ... KBPearl-PP 0.422 0.744 0.539; KBPearl-NN 0.491 0.694 0.575"
+      },
+      {
+        "span_id": "C0032-D-P010-TABLE-0002",
+        "page": 10,
+        "excerpt": "NYT2018 ... KBPearl-PP 0.302 0.405 0.346; KBPearl-NN 0.313 0.494 0.383"
+      },
+      {
+        "span_id": "C0032-D-P011-TABLE-0003",
+        "page": 11,
+        "excerpt": "KBP-MinIE ... NYT2018 ... 0.402 0.594 0.479"
+      },
+      {
+        "span_id": "C0032-D-P011-TEXT-0004",
+        "page": 11,
+        "excerpt": "with more than 75 words, the time cost of KBPearl-Sim increases in an exponential manner, while the time cost of both KBPearl-PP and KBPearl-NN is still linear"
+      },
+      {
+        "span_id": "C0032-D-P011-TEXT-0005",
+        "page": 11,
+        "excerpt": "both variants of KBPearl achieve better performance than QKBfly"
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "The method jointly uses entity and predicate context rather than resolving each phrase independently.",
+      "The semantic graph represents noun phrases, relation phrases, candidate entities, and candidate predicates, enabling document-level global coherence.",
+      "The greedy densification approach addresses an explicitly formulated NP-hard constrained dense-subgraph problem and provides a tractable approximation.",
+      "The system supports facts involving non-predefined predicates and can report new entities for non-linkable noun phrases.",
+      "The pipeline and near-neighbour variants improve scalability for long documents relative to constructing and densifying one unrestricted graph.",
+      "The evaluation covers seven datasets, multiple OpenIE extractors, several baselines, effectiveness, efficiency, and new-entity discovery."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0032-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "we perform a joint entity and relation linking task ... formulate this task as a dense subgraph detection problem"
+      },
+      {
+        "span_id": "C0032-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "Problem 2 is NP-hard."
+      },
+      {
+        "span_id": "C0032-D-P002-TEXT-0003",
+        "page": 2,
+        "excerpt": "we locate the noun phrases representing new semantic concepts which do not exist in the target KB, and create new entities for them."
+      },
+      {
+        "span_id": "C0032-D-P011-TEXT-0004",
+        "page": 11,
+        "excerpt": "KBPearl-PP and KBPearl-NN achieve satisfactory performance with both short-text and long-text documents"
+      },
+      {
+        "span_id": "C0032-D-P008-TEXT-0005",
+        "page": 8,
+        "excerpt": "we first compare the performance of different variants ... We then demonstrate the ability ... on new entities. Third, we validate ... effectiveness and efficiency"
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Candidate entity generation is alias-based; textual similarity is not considered once candidates are restricted to entities sharing an alias.",
+      "The global-coherence assumption can fail when entities and predicates in a long document are only sparsely related; the unrestricted KBPearl-Sim variant degrades on long documents.",
+      "New-entity discovery has relatively low precision because long entity phrases can be split into incorrect fragments, producing false positives.",
+      "Performance on interrogative short texts is affected by imperfect OpenIE output and can be below specialized systems such as Spotlight and Falcon.",
+      "Relation-linking performance remains low on T-REx, and the paper identifies confusion between specific and general predicates, such as P39 versus P31.",
+      "The method depends on a large target-KB index, aliases, relational patterns, side-information extraction, and tuned graph parameters, which introduces engineering and configuration overhead.",
+      "Review-level inference: because the method relies on existing-KB aliases and keyphrases, it may be less robust to unseen surface forms and domains whose target KB has sparse side information."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0032-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "the textual similarity between ni and ej is not considered"
+      },
+      {
+        "span_id": "C0032-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "the assumption that all entities mentioned in a document are densely connected with each other in a KB is not always correct"
+      },
+      {
+        "span_id": "C0032-D-P011-TEXT-0003",
+        "page": 11,
+        "excerpt": "all systems have relatively low precision and high recall ... it is not trivial for them to recognize entities containing long phrases"
+      },
+      {
+        "span_id": "C0032-D-P010-TEXT-0004",
+        "page": 10,
+        "excerpt": "The quality of Open IE results on interrogative sentences may not be as satisfactory as on declarative sentences."
+      },
+      {
+        "span_id": "C0032-D-P010-TEXT-0005",
+        "page": 10,
+        "excerpt": "all the systems recognize the more general predicate P31 ... instead of P39"
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "not_reported",
+    "value": null,
+    "evidence": []
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: replace alias-only candidate generation with contextual semantic retrieval or learned candidate ranking so unseen and variant surface forms can be considered.",
+      "Review-level inference: add a robust long-phrase segmentation and emerging-entity detector to reduce false positives in new-entity discovery.",
+      "Review-level inference: use relation-type and argument-type constraints or stronger contextual relation disambiguation to distinguish specific predicates such as political office held from general predicates such as instance of.",
+      "Review-level inference: use adaptive sparse-coherence partitioning or document-topic segmentation instead of assuming one global dense subgraph for every long document.",
+      "Review-level inference: improve or jointly train the OpenIE component for interrogative and non-declarative sentences.",
+      "Review-level inference: release the KB index construction, trained threshold parameters, preprocessing configuration, and evaluation annotations to improve reproducibility."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0032-D-P010-TEXT-0001",
+        "page": 10,
+        "excerpt": "the quality of Open IE results on interrogative sentences may not be as satisfactory as on declarative sentences"
+      },
+      {
+        "span_id": "C0032-D-P011-TEXT-0002",
+        "page": 11,
+        "excerpt": "it is not trivial for them to recognize entities containing long phrases"
+      },
+      {
+        "span_id": "C0032-D-P010-TEXT-0003",
+        "page": 10,
+        "excerpt": "all the systems recognize the more general predicate P31 ... instead of P39"
+      },
+      {
+        "span_id": "C0032-D-P007-TEXT-0004",
+        "page": 7,
+        "excerpt": "not every pair of entities or predicates shares strong relatedness"
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "The paper leaves unresolved reliable linking of unseen entities and predicates that are not represented in the target KB.",
+      "New-entity discovery remains a high-recall but low-precision problem, especially for long or compositional entity mentions.",
+      "Accurate relation linking remains difficult when a natural-language relation has multiple levels of specificity or when the target predicate is expressed indirectly.",
+      "Global coherence is sparse or absent in portions of long documents, creating a tension between disambiguation quality and graph-construction efficiency.",
+      "OpenIE noise and weak performance on interrogative text remain upstream bottlenecks.",
+      "Review-level inference: the paper does not establish how well the system transfers to languages, domains, or target KBs outside the evaluated settings."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0032-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "if a noun phrase cannot be linked to any existing entity in the KB, then the knowledge regarding this noun phrase cannot be populated to the KB"
+      },
+      {
+        "span_id": "C0032-D-P011-TEXT-0002",
+        "page": 11,
+        "excerpt": "all systems have relatively low precision and high recall"
+      },
+      {
+        "span_id": "C0032-D-P010-TEXT-0003",
+        "page": 10,
+        "excerpt": "the correct extraction should be ... P39 ... However, all the systems recognize the more general predicate P31"
+      },
+      {
+        "span_id": "C0032-D-P007-TEXT-0004",
+        "page": 7,
+        "excerpt": "not every pair of entities or predicates shares strong relatedness"
+      }
+    ]
+  },
+  "code_and_data_availability": "not_reported"
+}

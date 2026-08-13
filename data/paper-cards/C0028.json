@@ -1,0 +1,864 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0028",
+    "title": "On Aligning OpenIE Extractions with Knowledge Bases: A Case Study",
+    "pdf_path": "data/batches/batch-02/C0028.pdf",
+    "authors": [
+      "Kiril Gashteovski",
+      "Rainer Gemulla",
+      "Bhushan Kotnis",
+      "Sven Hertling",
+      "Christian Meilicke"
+    ],
+    "year": 2020,
+    "venue": "Proceedings of the First Workshop on Evaluation and Comparison of NLP Systems (Eval4NLP)",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The paper directly and manually evaluates the information-content relationship between OPIEC OpenIE triples and DBpedia. It studies triples with the same arguments as DBpedia facts, then evaluates whether general OPIEC triples can be represented by one DBpedia fact or by KB formulas; it finds that one-fact mappings often lose specificity, while formulas express a substantial share of additional triples.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title block",
+      "span_id": "C0028-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Kiril Gashteovski, Rainer Gemulla, Bhushan Kotnis, Sven Hertling, Christian Meilicke",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication footer",
+      "span_id": "C0028-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "November 20, 2020. © 2020 Association for Computational Linguistics",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication footer",
+      "span_id": "C0028-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the First Workshop on Evaluation and Comparison of NLP Systems (Eval4NLP), pages 143–154",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0028-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "we directly evaluate how OIE triples from the OPIEC corpus are related to the DBpedia KB w.r.t. information content",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-02": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0028-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "significant part of OIE triples can be expressed by means of KB formulas instead of individual facts",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0028-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "OIE triples contain surface relations, which often makes their semantics ambiguous",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0028-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "our goal is not to compare different alignment strategies... [but] to investigate the limits of such alignments",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-03": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "3.1 One Triple Assumption",
+      "span_id": "C0028-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "Many methods... implicitly make the One Triple Assumption (OTA): “Any OIE triple can be expressed with one KB fact”.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3.3.1 Expressibility of OPIEC Triple with a Single DBpedia Fact",
+      "span_id": "C0028-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "a list of candidate DBpedia relations... descriptions, domain/range types... all other relevant information from DBpedia",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3.3.1 Expressibility of OPIEC Triple with a Single DBpedia Fact",
+      "span_id": "C0028-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "any DBpedia relation which respects the constraints of the argument types",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0028-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "no direct manual evaluation of such alignments has been performed. In this paper, we directly evaluate",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.3.2 Expressibility of OPIEC Triple with KB Formula",
+      "span_id": "C0028-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "an expert labeler manually generated KB formulas",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "2.2 Study Design",
+      "span_id": "C0028-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "we constructed a random sample... We show to human annotator the OIE triple and the relevant KB hit information",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3.3.1 Expressibility of OPIEC Triple with a Single DBpedia Fact",
+      "span_id": "C0028-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "The KB relation candidates are generated by two methods: KB hit counts... and any relation",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "2.2 Study Design",
+      "span_id": "C0028-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "We show to human annotator the OIE triple and the relevant KB hit information",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "3.3 Study Design",
+      "span_id": "C0028-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "an expert labeler evaluated the expressibility level for each OIE triple",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "2.2 Study Design",
+      "span_id": "C0028-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Each KB hit of the OIE triple was labeled with one of the four hit categories. For each OIE triple, we keep the label of the best hit.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.3.1 Expressibility of OPIEC Triple with a Single DBpedia Fact",
+      "span_id": "C0028-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "The KB relation candidates are generated by two methods: KB hit counts... and any relation",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.3.2 Expressibility of OPIEC Triple with KB Formula",
+      "span_id": "C0028-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "an expert labeler manually generated KB formulas... that switch the expressibility level",
+      "confidence": "medium"
+    },
+    "methodology-description-10-04": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4 Transferability",
+      "span_id": "C0028-D-P008-TEXT-0004",
+      "page": 8,
+      "excerpt": "We used three other popular OIE systems: Stanford OIE, RnnOIE and OpenIE 5",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.3.1 Expressibility of OPIEC Triple with a Single DBpedia Fact",
+      "span_id": "C0028-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "DBpedia relations that fit the domain/range constraints imposed by the types of the OPIEC triple",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Table 1",
+      "span_id": "C0028-D-P007-TABLE-0002",
+      "page": 7,
+      "excerpt": "Selected examples of OPIEC triples expressed with KB formulas",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "A.2 DSA Study: KB Data and Methodology",
+      "span_id": "C0028-D-P012-TEXT-0003",
+      "page": 12,
+      "excerpt": "We retained only the triples that were extracted with mapping-based infobox extraction... because of their higher extraction quality",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0028-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "the goal is to associate an OIE triple with an existing KB fact (assuming they have the same disambiguated arguments)",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.3.1 Expressibility of OPIEC Triple with a Single DBpedia Fact",
+      "span_id": "C0028-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "aligning the OIE triples to KB facts",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "5 Main Findings and Conclusions",
+      "span_id": "C0028-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "One way to harvest such knowledge is to add OIE triples to a KB with universal schema",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "A.1 OIE Data and Methodology",
+      "span_id": "C0028-D-P012-TEXT-0001",
+      "page": 12,
+      "excerpt": "OPIEC-Linked was constructed by running the OIE system MinIE-SpaTe over the entire English Wikipedia",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3.3.1 Expressibility of OPIEC Triple with a Single DBpedia Fact",
+      "span_id": "C0028-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Each OIE triple is presented to a human annotator along with: 1) argument types... 2) a list of candidate DBpedia relations",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "2.2 Study Design",
+      "span_id": "C0028-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "a random sample of 100 correctly extracted OIE triples",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "4 Transferability",
+      "span_id": "C0028-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "We ran these OIE systems on the provenance sentences of the sampled triples",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "2.1 KB Hits",
+      "span_id": "C0028-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "four hit categories: Same, OIE-More-Specific, KB-More-Specific and Different",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.2 Expressibility Levels",
+      "span_id": "C0028-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "three possible expressibility levels: Fully-Expressible, Partly-Expressible or Not-Expressible",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-03": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Table 1",
+      "span_id": "C0028-D-P007-TABLE-0003",
+      "page": 7,
+      "excerpt": "Selected examples of OPIEC triples expressed with KB formulas",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4 Transferability",
+      "span_id": "C0028-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "We used three other popular OIE systems: Stanford OIE... RnnOIE... and OpenIE 5",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "A.1 OIE Data and Methodology",
+      "span_id": "C0028-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "OPIEC-Linked was constructed by running the OIE system MinIE-SpaTe",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "2.2 Study Design",
+      "span_id": "C0028-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "OPIEC-Linked: the largest OIE corpus to date, having 6M OIE triples with disambiguated arguments... left us with around 3M triples",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.3 Study Design",
+      "span_id": "C0028-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "We constructed a random sample of 100 correctly extracted OIE triples from OPIEC with disambiguated arguments",
+      "confidence": "medium"
+    },
+    "datasets-17-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "A.1 OIE Data and Methodology",
+      "span_id": "C0028-D-P012-TEXT-0003",
+      "page": 12,
+      "excerpt": "We sampled 100 correctly extracted triples from OPIEC-Typed",
+      "confidence": "medium"
+    },
+    "datasets-17-04": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "A.2 DSA Study: KB Data and Methodology",
+      "span_id": "C0028-D-P012-TEXT-0004",
+      "page": 12,
+      "excerpt": "We retained only the triples that were extracted with mapping-based infobox extraction",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Figure 2",
+      "span_id": "C0028-D-P004-PICTURE-0001",
+      "page": 4,
+      "excerpt": "Semantic relatedness between OIE triples from OPIEC and their DBpedia hits",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Figure 3",
+      "span_id": "C0028-D-P007-PICTURE-0002",
+      "page": 7,
+      "excerpt": "Expressibility and presence of OIE information within the KB",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Table 2",
+      "span_id": "C0028-D-P008-TABLE-0003",
+      "page": 8,
+      "excerpt": "Label equivalence ratio of the evaluations",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-04": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Table 3",
+      "span_id": "C0028-D-P009-TABLE-0004",
+      "page": 9,
+      "excerpt": "Count; Jaccard w.r.t. MinIE; Coverage by MinIE",
+      "confidence": "medium"
+    },
+    "evaluation-setting-19-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "2.2 Study Design",
+      "span_id": "C0028-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "we study what can be achieved if: (1) arguments are correctly disambiguated, (2) OIE triples are correctly extracted, (3) OIE relations are disambiguated",
+      "confidence": "medium"
+    },
+    "evaluation-setting-19-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "3.3.1 Expressibility of OPIEC Triple with a Single DBpedia Fact",
+      "span_id": "C0028-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "the assumption here is that we have a perfect mapping from OIE triple to KB fact",
+      "confidence": "medium"
+    },
+    "evaluation-setting-19-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4 Transferability",
+      "span_id": "C0028-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "we select the triples that match the argument pair... As before, we keep only the triples that are correctly extracted",
+      "confidence": "medium"
+    },
+    "main_results-20-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "2.3 Experimental Results and Discussion",
+      "span_id": "C0028-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "in 88% of the cases, the OIE triple from OPIEC is able to semantically express its best hit... in almost half... (40% of all triples) the OIE triple is more specific",
+      "confidence": "medium"
+    },
+    "main_results-20-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Figure 2",
+      "span_id": "C0028-D-P004-PICTURE-0002",
+      "page": 4,
+      "excerpt": "All relations: Same 0.48; OIE-More-Specific 0.4; KB-More-Specific 0.07; Different 0.05. Is-a: 0.36, 0.63, 0.0, 0.01.",
+      "confidence": "medium"
+    },
+    "main_results-20-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "3.4 Results and Discussion",
+      "span_id": "C0028-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "42% can be fully expressed and 41% can be partly expressed with one DBpedia fact... [formula] fully expressed... increased from 42% to 66%",
+      "confidence": "medium"
+    },
+    "main_results-20-04": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Figure 3",
+      "span_id": "C0028-D-P007-PICTURE-0004",
+      "page": 7,
+      "excerpt": "Single fact (hit relation): 0.29/0.29/0.42; any relation: 0.42/0.41/0.17; Formula: 0.66/0.20/0.14",
+      "confidence": "medium"
+    },
+    "main_results-20-05": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "3.5 New Information for DBpedia",
+      "span_id": "C0028-D-P007-TEXT-0005",
+      "page": 7,
+      "excerpt": "in 59%... not present in DBpedia at all, in 23%... partly present and only in 18%... fully present",
+      "confidence": "medium"
+    },
+    "main_results-20-06": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 2",
+      "span_id": "C0028-D-P008-TABLE-0006",
+      "page": 8,
+      "excerpt": "Hit category: Stanford 0.98, OpenIE 5 0.84, RnnOIE 0.77, All 0.86; KB formula: 0.98, 0.89, 0.89, 0.92",
+      "confidence": "medium"
+    },
+    "strengths-21-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Abstract",
+      "span_id": "C0028-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "to date, no direct manual evaluation of such alignments has been performed",
+      "confidence": "medium"
+    },
+    "strengths-21-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.1 One Triple Assumption",
+      "span_id": "C0028-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Sometimes, an OIE triple cannot be expressed by a single KB fact, but it can be expressed by multiple KB facts or a first-order logic KB formula",
+      "confidence": "medium"
+    },
+    "strengths-21-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4 Transferability",
+      "span_id": "C0028-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "we study whether and to what extent the results of the evaluations transfer to other OIE systems",
+      "confidence": "medium"
+    },
+    "weaknesses-22-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.2 Study Design",
+      "span_id": "C0028-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "a random sample of 100 correctly extracted OIE triples",
+      "confidence": "medium"
+    },
+    "weaknesses-22-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.3.1 Expressibility of OPIEC Triple with a Single DBpedia Fact",
+      "span_id": "C0028-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "the assumption here is that we have a perfect mapping from OIE triple to KB fact",
+      "confidence": "medium"
+    },
+    "weaknesses-22-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "A.1 OIE Data and Methodology",
+      "span_id": "C0028-D-P012-TEXT-0003",
+      "page": 12,
+      "excerpt": "we assume both a perfect extractor and perfect alignments between the OIE triples and the KB facts",
+      "confidence": "medium"
+    },
+    "weaknesses-22-04": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "A.2 DSA Study: KB Data and Methodology",
+      "span_id": "C0028-D-P012-TEXT-0004",
+      "page": 12,
+      "excerpt": "We retained only the triples that were extracted with mapping-based infobox extraction",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-23-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.4 Discussion",
+      "span_id": "C0028-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "A limitation of this study is that we focus on the most common form of OIE extractions: OIE triples. Some OIE systems extract more complex structures—e.g. nested extractions... which are not covered by this paper and require a separate study.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "5 Main Findings and Conclusions",
+      "span_id": "C0028-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "One way to harvest such knowledge is to add OIE triples to a KB with universal schema... We leave such evaluations for future work.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4.4 Discussion",
+      "span_id": "C0028-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "Some OIE systems extract more complex structures... which are not covered by this paper and require a separate study.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "A.1 OIE Data and Methodology",
+      "span_id": "C0028-D-P012-TEXT-0003",
+      "page": 12,
+      "excerpt": "we assume both a perfect extractor and perfect alignments between the OIE triples and the KB facts",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5 Main Findings and Conclusions",
+      "span_id": "C0028-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "One way to harvest such knowledge is to add OIE triples to a KB with universal schema... We leave such evaluations for future work.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.4 Discussion",
+      "span_id": "C0028-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "nested extractions... are not covered by this paper and require a separate study.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.3.2 Expressibility of OPIEC Triple with KB Formula",
+      "span_id": "C0028-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "an expert labeler manually generated KB formulas",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-26-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Introduction, footnote 1",
+      "span_id": "C0028-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "All resources of the study are available on https://www.uni-mannheim.de/dws/research/resources/opiec/",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The study examines the limits of aligning ambiguous, surface-relation OpenIE triples to semantically precise DBpedia facts and schemas. It tests the distant-supervision assumption for triples sharing an argument pair with a KB fact, and the implicit one-triple assumption that any OIE triple can be expressed by one KB fact.",
+  "methodology": {
+    "primary_family": "Ontology-constrained and schema-guided methods",
+    "secondary_families": [
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "not_reported",
+    "description": "Execution order: (1) start with OPIEC-Linked triples extracted by MinIE-SpaTe from English Wikipedia and retain linked, filtered, correctly extracted triples; (2) use DBpedia ontology facts with disambiguated entity arguments; (3) for the DSA study, find all DBpedia facts sharing an OPIEC triple's entity pair, present facts, types, and relation semantics to an annotator, label each hit as Same/OIE-More-Specific/KB-More-Specific/Different, and retain the best hit; (4) for the OTA study, generate candidates from KB-hit relation counts and then any domain/range-compatible DBpedia relation, label each triple Fully-/Partly-/Not-Expressible with one fact, and manually formulate multi-fact first-order formulas where they improve expressibility; (5) compare information presence in DBpedia; (6) rerun Stanford OIE, OpenIE 5, and RnnOIE on the sampled provenance sentences to assess transferability."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "DBpedia is both the reference KB and schema vocabulary. Candidate relations are constrained using DBpedia argument types and relation domain/range information; mapping-based DBpedia ontology triples are retained. The study also tests representation by conjunctive, existential, temporal, and disjunctive KB formulas rather than one fact.",
+    "evidence": [
+      {
+        "span_id": "C0028-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "DBpedia relations that fit the domain/range constraints imposed by the types of the OPIEC triple"
+      },
+      {
+        "span_id": "C0028-D-P007-TABLE-0002",
+        "page": 7,
+        "excerpt": "Selected examples of OPIEC triples expressed with KB formulas"
+      },
+      {
+        "span_id": "C0028-D-P012-TEXT-0003",
+        "page": 12,
+        "excerpt": "We retained only the triples that were extracted with mapping-based infobox extraction... because of their higher extraction quality"
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Entity resolution and linking",
+    "Relation and triple extraction",
+    "Ontology or schema discovery",
+    "Graph construction",
+    "Knowledge fusion and deduplication",
+    "Graph validation and correction"
+  ],
+  "input_output": {
+    "input_type": "Linked OpenIE triples (subject, surface relation, object) from English Wikipedia, their provenance sentences, and DBpedia facts, relation metadata, entity types, and schema vocabulary.",
+    "input_granularity": "Individual linked OIE triples and entity pairs; transferability analyses rerun extractors on each sampled triple's provenance sentence.",
+    "output_representation": "Per-triple semantic-alignment labels (Same, OIE-More-Specific, KB-More-Specific, Different); expressibility labels (Fully-, Partly-, Not-Expressible); and, where feasible, DBpedia facts or first-order logic KB formulas composed of DBpedia predicates."
+  },
+  "models_and_tools": [
+    "MinIE-SpaTe (underlying extractor for OPIEC-Linked)",
+    "Stanford OIE",
+    "OpenIE 5",
+    "RnnOIE",
+    "DBpedia"
+  ],
+  "datasets": [
+    "OPIEC-Linked: 6M OpenIE triples with disambiguated arguments, extracted from English Wikipedia",
+    "Filtered OPIEC: approximately 3M triples after removing low-confidence/noisy extraction categories",
+    "DBpedia filtered to linked, mapping-based ontology triples",
+    "DSA study samples: 100 correctly extracted non-Is-a triples with DBpedia KB hits and 100 correctly extracted Is-a OPIEC-Typed triples",
+    "OTA study sample: 100 correctly extracted linked OPIEC triples"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Distribution/proportion of best-hit semantic labels",
+      "Distribution/proportion of Fully-, Partly-, and Not-Expressible triples under hit-relation, any-relation, and formula conditions",
+      "Distribution of OIE information fully/partly/not already present in DBpedia",
+      "Label equivalence ratio between MinIE/OPIEC labels and labels for other OIE systems",
+      "Entity and entity-pair counts, Jaccard similarity with MinIE, and coverage by MinIE"
+    ],
+    "baselines": "not_reported",
+    "setting": "Expert manual evaluation under an assumed perfect extractor and perfect OIE-to-KB alignments. In the DSA studies, annotators see every KB hit plus type and relation information and label the best semantic match. In the OTA study, annotators receive relation candidates from hit statistics or all type-compatible DBpedia relations, then assess best achievable one-fact expressibility and optionally formulate multi-fact formulas. Transferability is measured on matching-argument triples produced from the same provenance sentences by three OIE systems."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "For non-Is-a triples with a DBpedia hit, 48% of best hits are Same, 40% OIE-More-Specific, 7% KB-More-Specific, and 5% Different; thus 88% allow the OIE triple to express its best hit.",
+      "For Is-a triples with a DBpedia hit, 36% are Same, 63% OIE-More-Specific, 0% KB-More-Specific, and 1% Different.",
+      "With hit-relation candidates only, 29% of sampled OPIEC triples are fully expressible by one DBpedia fact, 29% partly expressible, and 42% not expressible. With any type-compatible DBpedia relation, these are 42%, 41%, and 17%; with KB formulas, 66%, 20%, and 14%.",
+      "For information already present in DBpedia, 18% of sampled OPIEC content is fully present, 23% partly present, and 59% not present.",
+      "Across other extractors, hit-category label equivalence is 98% for Stanford OIE, 84% for OpenIE 5, 77% for RnnOIE, and 86% combined. Formula-expressibility equivalence is 98%, 89%, 89%, and 92%, respectively."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0028-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "in 88% of the cases, the OIE triple from OPIEC is able to semantically express its best hit... in almost half... (40% of all triples) the OIE triple is more specific"
+      },
+      {
+        "span_id": "C0028-D-P004-PICTURE-0002",
+        "page": 4,
+        "excerpt": "All relations: Same 0.48; OIE-More-Specific 0.4; KB-More-Specific 0.07; Different 0.05. Is-a: 0.36, 0.63, 0.0, 0.01."
+      },
+      {
+        "span_id": "C0028-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "42% can be fully expressed and 41% can be partly expressed with one DBpedia fact... [formula] fully expressed... increased from 42% to 66%"
+      },
+      {
+        "span_id": "C0028-D-P007-PICTURE-0004",
+        "page": 7,
+        "excerpt": "Single fact (hit relation): 0.29/0.29/0.42; any relation: 0.42/0.41/0.17; Formula: 0.66/0.20/0.14"
+      },
+      {
+        "span_id": "C0028-D-P007-TEXT-0005",
+        "page": 7,
+        "excerpt": "in 59%... not present in DBpedia at all, in 23%... partly present and only in 18%... fully present"
+      },
+      {
+        "span_id": "C0028-D-P008-TABLE-0006",
+        "page": 8,
+        "excerpt": "Hit category: Stanford 0.98, OpenIE 5 0.84, RnnOIE 0.77, All 0.86; KB formula: 0.98, 0.89, 0.89, 0.92"
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "The paper directly evaluates information-content compatibility rather than relying only on downstream-task scores.",
+      "It separates semantic relatedness for existing same-argument KB hits from general expressibility, avoiding conflation of DSA and the one-triple assumption.",
+      "It evaluates both single-fact and compositional formula representations, showing where one-fact schema mapping loses information.",
+      "It includes a transferability check across three additional OIE extractors and analyzes entity/entity-pair overlap."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0028-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "to date, no direct manual evaluation of such alignments has been performed"
+      },
+      {
+        "span_id": "C0028-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "Sometimes, an OIE triple cannot be expressed by a single KB fact, but it can be expressed by multiple KB facts or a first-order logic KB formula"
+      },
+      {
+        "span_id": "C0028-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "we study whether and to what extent the results of the evaluations transfer to other OIE systems"
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "REVIEW-LEVEL INFERENCE: The manual samples (100 triples per stated sub-study) and expert-label procedure provide detailed semantic evidence but limit statistical precision and make annotation reproducibility dependent on undocumented annotator protocol details.",
+      "REVIEW-LEVEL INFERENCE: The conclusions are tied to English Wikipedia-derived OPIEC and DBpedia, and to filtered mapping-based DBpedia ontology facts; transfer to other domains, KB schemas, languages, and KB data models is not directly established.",
+      "REVIEW-LEVEL INFERENCE: Evaluation assumes correctly extracted, self-contained triples, correct argument disambiguation, and perfect best possible mappings, so it does not quantify end-to-end alignment performance under realistic extraction and linking errors."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0028-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "a random sample of 100 correctly extracted OIE triples"
+      },
+      {
+        "span_id": "C0028-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "the assumption here is that we have a perfect mapping from OIE triple to KB fact"
+      },
+      {
+        "span_id": "C0028-D-P012-TEXT-0003",
+        "page": 12,
+        "excerpt": "we assume both a perfect extractor and perfect alignments between the OIE triples and the KB facts"
+      },
+      {
+        "span_id": "C0028-D-P012-TEXT-0004",
+        "page": 12,
+        "excerpt": "We retained only the triples that were extracted with mapping-based infobox extraction"
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The study focuses on the common OIE triple form and does not cover more complex OIE output structures such as nested extractions; the authors state that these need a separate study."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0028-D-P010-TEXT-0001",
+        "page": 10,
+        "excerpt": "A limitation of this study is that we focus on the most common form of OIE extractions: OIE triples. Some OIE systems extract more complex structures—e.g. nested extractions... which are not covered by this paper and require a separate study."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed: evaluate harvesting OIE knowledge by adding OIE triples to a KB with universal schema.",
+      "REVIEW-LEVEL INFERENCE: Evaluate end-to-end systems that jointly account for extraction correctness, entity linking, relation alignment, and compositional formula construction rather than assuming those components are perfect.",
+      "REVIEW-LEVEL INFERENCE: Extend the protocol to complex/nested extractions and test multiple reference KBs, domains, and languages."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0028-D-P010-TEXT-0001",
+        "page": 10,
+        "excerpt": "One way to harvest such knowledge is to add OIE triples to a KB with universal schema... We leave such evaluations for future work."
+      },
+      {
+        "span_id": "C0028-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "Some OIE systems extract more complex structures... which are not covered by this paper and require a separate study."
+      },
+      {
+        "span_id": "C0028-D-P012-TEXT-0003",
+        "page": 12,
+        "excerpt": "we assume both a perfect extractor and perfect alignments between the OIE triples and the KB facts"
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-stated: whether adding OpenIE triples to a universal-schema KB can effectively harvest the information absent from the reference KB.",
+      "Author-stated: semantic alignment and expressibility for complex OpenIE structures, including nested extractions.",
+      "REVIEW-LEVEL INFERENCE: How to automatically induce and validate the multi-fact logical formulas needed for compositional OpenIE-to-KB mapping at scale remains unresolved by this manual case study."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0028-D-P010-TEXT-0001",
+        "page": 10,
+        "excerpt": "One way to harvest such knowledge is to add OIE triples to a KB with universal schema... We leave such evaluations for future work."
+      },
+      {
+        "span_id": "C0028-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "nested extractions... are not covered by this paper and require a separate study."
+      },
+      {
+        "span_id": "C0028-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "an expert labeler manually generated KB formulas"
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that all study resources are available at the authors' University of Mannheim OPIEC resource page. It does not separately specify source-code availability in the PDF."
+}

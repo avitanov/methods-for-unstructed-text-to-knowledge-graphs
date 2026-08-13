@@ -1,0 +1,789 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0040",
+    "title": "Semi-supervised Generative Open Information Extraction",
+    "pdf_path": "data/manual-pdfs/C0040.pdf",
+    "authors": [
+      "Shaowen Zhou"
+    ],
+    "year": 2023,
+    "venue": "Nanyang Technological University, Master of Engineering thesis",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "OpenIE extracts n-ary relation tuples from unstructured text without a predefined ontology. This thesis surveys neural OpenIE and proposes a mean-teacher semi-supervised generative OpenIE method: a jointly prompted extraction/verification model learns from labelled data and verified pseudo-labels from unlabeled text. It also reports exploratory zero-shot ChatGPT experiments.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0040-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Shaowen Zhou",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0040-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "2023",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Title page",
+      "span_id": "C0040-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "A thesis submitted to the Nanyang Technological University in partial fulfillment of the requirements for the degree of Master of Engineering.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0040-D-P011-TEXT-0001",
+      "page": 11,
+      "excerpt": "Open Information Extraction (OpenIE) extracts facts in the form of n-ary relation tuples ... from unstructured text without relying on predefined ontology schema.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-02": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0040-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "We leverage a mean teacher-based semi-supervised learning method to boost the performance of a generative OpenIE model.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "3.1 Preliminary",
+      "span_id": "C0040-D-P042-TEXT-0001",
+      "page": 42,
+      "excerpt": "The need for more training data becomes a challenge.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "3.1 Preliminary",
+      "span_id": "C0040-D-P043-TEXT-0002",
+      "page": 43,
+      "excerpt": "We introduce a verification mechanism to filter out non-trustworthy pseudo-labels, thus improving the performance.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3.1 Preliminary",
+      "span_id": "C0040-D-P043-TEXT-0001",
+      "page": 43,
+      "excerpt": "we apply the semi-supervised framework to a generative model.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3.2.1 Joint Extraction Verification Model",
+      "span_id": "C0040-D-P045-TEXT-0002",
+      "page": 45,
+      "excerpt": "the model takes a sentence as the input, and gives a structured output to represent extracted relations.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.2 Semi-Supervised Learning for OpenIE",
+      "span_id": "C0040-D-P044-PICTURE-0001",
+      "page": 44,
+      "excerpt": "The framework comprises joint extraction/verification training, pseudo-extraction generation and verification, student self-training, and teacher guidance.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.3 Verification Mechanism for pseudo-labels",
+      "span_id": "C0040-D-P051-TEXT-0002",
+      "page": 51,
+      "excerpt": "the verification task checks the quality of pseudo-labels and filters out low-quality ones.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3.2.1 Joint Extraction Verification Model",
+      "span_id": "C0040-D-P045-TEXT-0001",
+      "page": 45,
+      "excerpt": "The joint extraction/verification model can perform two tasks: extracting open relations from a given sentence and verifying the quality of an extraction given the sentence context.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3.2.2 Student Model",
+      "span_id": "C0040-D-P046-TEXT-0002",
+      "page": 46,
+      "excerpt": "The student takes a text sequence as input and gives a sequence containing all open relation extractions; its total objective combines supervised, consistency, and regularization losses.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "3.1 Preliminary",
+      "span_id": "C0040-D-P043-TEXT-0001",
+      "page": 43,
+      "excerpt": "we propose to leverage self-training as the semi-supervised method to learn from unlabeled texts.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "3.2 Semi-Supervised Learning for OpenIE",
+      "span_id": "C0040-D-P044-PICTURE-0002",
+      "page": 44,
+      "excerpt": "Student learning combines labeled data with teacher-generated, verified pseudo-labels from unlabeled data.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.2 Semi-Supervised Learning for OpenIE",
+      "span_id": "C0040-D-P044-PICTURE-0001",
+      "page": 44,
+      "excerpt": "The framework involves two steps: pre-training of joint extraction/verification model, and semi-supervised learning using verified pseudo extractions.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.2.1 Joint Extraction Verification Model",
+      "span_id": "C0040-D-P045-TABLE-0002",
+      "page": 45,
+      "excerpt": "Extraction prompt is “Extract the open relations from the text”; output encodes predicate and arguments as a tree. Verification asks whether an extraction is valid, true or false.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.2.2 Student Model",
+      "span_id": "C0040-D-P046-TEXT-0003",
+      "page": 46,
+      "excerpt": "The overall objective for the student model is L = Ls + Lc + Lr.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0040-D-P011-TEXT-0001",
+      "page": 11,
+      "excerpt": "OpenIE extracts facts ... without relying on predefined ontology schema.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.2.1 Joint Extraction Verification Model",
+      "span_id": "C0040-D-P045-TEXT-0002",
+      "page": 45,
+      "excerpt": "Since OpenIE does not define any schema, we remove the schema sequence from the input.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0040-D-P011-TEXT-0001",
+      "page": 11,
+      "excerpt": "OpenIE extracts facts in the form of n-ary relation tuples.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.2.1 Joint Extraction Verification Model",
+      "span_id": "C0040-D-P045-TABLE-0002",
+      "page": 45,
+      "excerpt": "The output represents an open relation with a relation/predicate node and subject and object argument nodes.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.3 Verification Mechanism for pseudo-labels",
+      "span_id": "C0040-D-P051-TEXT-0003",
+      "page": 51,
+      "excerpt": "the verification task checks the quality of pseudo-labels and filters out low-quality ones.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3.2.1 Joint Extraction Verification Model",
+      "span_id": "C0040-D-P045-TEXT-0001",
+      "page": 45,
+      "excerpt": "For the extraction task, the model takes a sentence as the input.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3.3.1 Verification Model",
+      "span_id": "C0040-D-P051-TEXT-0002",
+      "page": 51,
+      "excerpt": "The verification model reads a sentence and an extraction and outputs the token “true” for the trustworthy extraction and “false” otherwise.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.2.1 Joint Extraction Verification Model",
+      "span_id": "C0040-D-P045-TEXT-0001",
+      "page": 45,
+      "excerpt": "For the extraction task, the model takes a sentence as the input.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.4.1 Experiment Settings",
+      "span_id": "C0040-D-P052-TABLE-0002",
+      "page": 52,
+      "excerpt": "Dataset statistics are reported as numbers of sentences and tuples; the evaluation datasets are sentence-level OpenIE benchmarks.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.2.1 Joint Extraction Verification Model",
+      "span_id": "C0040-D-P045-TABLE-0001",
+      "page": 45,
+      "excerpt": "An extraction is encoded as a tree with its root being the predicate and its leaves as arguments.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.2.1 Joint Extraction Verification Model",
+      "span_id": "C0040-D-P045-TABLE-0002",
+      "page": 45,
+      "excerpt": "Pseudo-label verification output template: One word either “true” or “false”.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.4.1 Implementation",
+      "span_id": "C0040-D-P054-TEXT-0001",
+      "page": 54,
+      "excerpt": "We implement the semi-supervision framework based on UIE. We use T5-small as the backbone.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.2 Semi-Supervised Learning for OpenIE",
+      "span_id": "C0040-D-P044-TEXT-0002",
+      "page": 44,
+      "excerpt": "The teacher model averages the student model’s weights via the EMA.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.4.1 Implementation",
+      "span_id": "C0040-D-P054-TEXT-0003",
+      "page": 54,
+      "excerpt": "We run each experiment on a single NVIDIA V100 GPU.",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.4.1 Datasets & Metrics",
+      "span_id": "C0040-D-P052-TABLE-0001",
+      "page": 52,
+      "excerpt": "Table 3.4 gives LSOIE-wiki, CaRB, and unlabeled Wikipedia statistics, domains, label sources, sentences, and tuples.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.4.1 Datasets & Metrics",
+      "span_id": "C0040-D-P052-TEXT-0002",
+      "page": 52,
+      "excerpt": "CaRB is a crowd-sourced open relation extraction benchmark ... its domains are Newswire and Wikipedia.",
+      "confidence": "medium"
+    },
+    "datasets-17-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.4.1 Datasets & Metrics",
+      "span_id": "C0040-D-P053-TEXT-0003",
+      "page": 53,
+      "excerpt": "For unlabeled texts, we collect them from English Wikidump.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "3.4.1 Datasets & Metrics",
+      "span_id": "C0040-D-P053-TEXT-0001",
+      "page": 53,
+      "excerpt": "We report the score using a variant of CaRB known as CaRB (1-1) ... We compute the area under the precision-recall (P-R) curve as the AUC score.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "3.4.2 Evaluation Results",
+      "span_id": "C0040-D-P056-TABLE-0002",
+      "page": 56,
+      "excerpt": "Verification-task performance is reported as P, R, and F1.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "3.4.1 Compared Methods",
+      "span_id": "C0040-D-P054-TEXT-0001",
+      "page": 54,
+      "excerpt": "We compare our work with supervised baselines ... IMoJIE ... OpenIE6 ... We refer to the no semi-supervised baseline as “UIE-OIE”.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "3.4.2 Evaluation Results",
+      "span_id": "C0040-D-P055-TABLE-0002",
+      "page": 55,
+      "excerpt": "Table 3.5 compares IMoJIE, IGL-OIE, UIE-OIE, UIE-OIE augmented, and variants with semi-supervised learning.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "3.4.1 Datasets & Metrics",
+      "span_id": "C0040-D-P052-TEXT-0001",
+      "page": 52,
+      "excerpt": "we follow the common practice ... and use OpenIE4 bootstrapped tuples based on rules as the training data.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "3.4.1 Implementation",
+      "span_id": "C0040-D-P054-TEXT-0002",
+      "page": 54,
+      "excerpt": "we first train the model using training data under full supervision configuration and then use the model weights to initialize both student and teacher models.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "3.4.1 Implementation",
+      "span_id": "C0040-D-P054-TEXT-0003",
+      "page": 54,
+      "excerpt": "We set the batch size as 32, the maximum input length as 256, and the maximum output length as 256 ... initial learning rate as 5e-5.",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "3.4.2 Evaluation Results",
+      "span_id": "C0040-D-P055-TABLE-0001",
+      "page": 55,
+      "excerpt": "UIE-OIE With Verification: LSOIE-wiki F1 70.1/AUC 55.1; CaRB F1 42.1/AUC 24.7. UIE-OIE Without Verification: 69.4/54.2 and 42.8/25.1.",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "3.4.3 Ablation",
+      "span_id": "C0040-D-P056-TABLE-0002",
+      "page": 56,
+      "excerpt": "Consistency and self-regularization reach 69.4 F1; all verification strategies reach 70.11; joint model reaches 70.1 versus discrete model 69.5.",
+      "confidence": "medium"
+    },
+    "main_results-21-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "3.4.3 Ablation",
+      "span_id": "C0040-D-P058-TABLE-0003",
+      "page": 58,
+      "excerpt": "Tree-based structure scores 68.2/41.8 F1 versus tuple sequence 64.7/41.1; T5-small scores 68.2/41.8 versus T5-base 68.0/41.5.",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.2 Semi-Supervised Learning for OpenIE",
+      "span_id": "C0040-D-P044-PICTURE-0001",
+      "page": 44,
+      "excerpt": "Teacher-generated pseudo-extractions are verified and then used to self-train the student alongside supervised learning.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.4.2 Evaluation Results",
+      "span_id": "C0040-D-P055-TABLE-0002",
+      "page": 55,
+      "excerpt": "On LSOIE-wiki, the verified semi-supervised method achieves F1 70.1 and AUC 55.1, compared with UIE-OIE 68.2 and 52.7.",
+      "confidence": "medium"
+    },
+    "strengths-22-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Abstract",
+      "span_id": "C0040-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "OpenIE extracts facts in the form of n-ary relation tuples ... from unstructured text.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.4.2 Evaluation Results",
+      "span_id": "C0040-D-P056-TEXT-0001",
+      "page": 56,
+      "excerpt": "The verification task improves the model’s performance on the LSOIE-wiki. However, it drops the model’s performance on CaRB.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.3.2 Generation of Negative Examples",
+      "span_id": "C0040-D-P051-TEXT-0002",
+      "page": 51,
+      "excerpt": "We design three corresponding rules to generate negative samples targeting these errors respectively.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.4.4 Error Analysis",
+      "span_id": "C0040-D-P060-TABLE-0003",
+      "page": 60,
+      "excerpt": "In 50 LSOIE-wiki sentences, label noise occurred in 17 (34%); overly specific, wrong, missing, non-atomic, and repetitive extractions also occurred.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "3.5 Summary",
+      "span_id": "C0040-D-P061-TEXT-0001",
+      "page": 61,
+      "excerpt": "the verification task does not work well when the training data and test data follow different annotation specifications.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "3.4.4 Error Analysis",
+      "span_id": "C0040-D-P060-TABLE-0002",
+      "page": 60,
+      "excerpt": "label noise contributes to most of the errors ... Label noise: 17 sentences, 34%.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.1 Conclusion",
+      "span_id": "C0040-D-P063-TEXT-0003",
+      "page": 63,
+      "excerpt": "Due to the free form of OpenIE extractions, OpenIE, in practice, does not have a universal annotation standard. Annotating a large dataset is also costly.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4.2.1 Domain-specific OpenIE",
+      "span_id": "C0040-D-P064-TEXT-0001",
+      "page": 64,
+      "excerpt": "We expect more domain-specific data to be published ... propose some domain-specific annotation guidelines ... explore new evaluation metrics that consider domain-specific knowledge.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4.2.2 OpenIE in the LLM era",
+      "span_id": "C0040-D-P065-TEXT-0002",
+      "page": 65,
+      "excerpt": "we may explore other techniques to enhance the LLM’s performance on OpenIE. We could add demonstrations and apply adaptors over LLM.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "3.4.2 Evaluation Results",
+      "span_id": "C0040-D-P056-TEXT-0003",
+      "page": 56,
+      "excerpt": "The verification task lets the model learn how training data are labeled, but the knowledge does not apply to the test data.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2.1 Domain-specific OpenIE",
+      "span_id": "C0040-D-P064-TEXT-0001",
+      "page": 64,
+      "excerpt": "the task definition needs to give clear standards to judge which extractions are good regarding application value.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2.2 OpenIE in the LLM era",
+      "span_id": "C0040-D-P065-TEXT-0002",
+      "page": 65,
+      "excerpt": "We leave these as future work.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.4.1 Application",
+      "span_id": "C0040-D-P038-TEXT-0003",
+      "page": 38,
+      "excerpt": "multiple predicates [may refer] to the same semantic relation, or arguments [may refer] to the same entity ... complex remedial measures have not been fully studied.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Improve generative OpenIE when high-quality labelled training data are scarce and bootstrapped labels are noisy or unsuitable for differing application-specific annotation preferences. The objective is to exploit unlabeled Wikipedia text while filtering unreliable pseudo-extractions.",
+  "methodology": {
+    "primary_family": "Generative text-to-structure methods",
+    "secondary_families": [
+      "Neural NLP pipelines",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "end_to_end",
+    "supervision_setting": "weakly_supervised",
+    "description": "The proposed Semi-supervised UIE-OIE is a T5-small-based generative OpenIE system. It first jointly pre-trains extraction and pseudo-label-verification tasks using task prompts. Extraction maps a sentence directly to a UIE-inspired tree sequence in which each predicate is a relation node with subject/object argument leaves; no schema sequence is supplied because OpenIE is schema-free. Verification maps a sentence plus one tree-form extraction to true/false. Negative verification examples are synthesized by mismatching subject–predicate pairs across tuples, swapping subject and object, and extending an object with remaining sentence text. In semi-supervised training, identically initialized student and EMA mean-teacher models are used. For unlabeled sentences, the teacher greedily generates trees; malformed outputs are removed, candidates are filtered by a perplexity threshold, and each extraction is verified. The student trains on gold labels plus retained pseudo-labels with supervised, consistency, and R-Drop symmetric-KL regularization losses; the teacher is updated by EMA. Verification and extraction examples are balanced by random sampling."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "No predefined ontology or extraction schema is used. The method explicitly removes UIE's schema sequence from the input for OpenIE; output roles are generic relation, subject, object, and object2 labels rather than an ontology.",
+    "evidence": [
+      {
+        "span_id": "C0040-D-P011-TEXT-0001",
+        "page": 11,
+        "excerpt": "OpenIE extracts facts ... without relying on predefined ontology schema."
+      },
+      {
+        "span_id": "C0040-D-P045-TEXT-0002",
+        "page": 45,
+        "excerpt": "Since OpenIE does not define any schema, we remove the schema sequence from the input."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Entity and concept extraction (arguments in open tuples)",
+    "Relation and triple extraction (open n-ary relation tuples)",
+    "Graph validation and correction (pseudo-label verification during training)"
+  ],
+  "input_output": {
+    "input_type": "English unstructured natural-language sentences; training additionally uses a prompted sentence plus a candidate tree-form extraction for the verification task.",
+    "input_granularity": "Sentence level",
+    "output_representation": "A concatenated, tree-based text sequence of zero or more open n-ary tuples: every tree has a predicate/root labelled relation and argument leaves labelled subject, object, object2, etc. For verification, the output is the single token true or false."
+  },
+  "models_and_tools": [
+    "UIE framework",
+    "T5-small backbone",
+    "Mean-teacher student/teacher models with exponential moving average",
+    "R-Drop regularization",
+    "AdamW optimizer with linear scheduler",
+    "CaRB (1-1) scorer",
+    "Single NVIDIA V100 GPU"
+  ],
+  "datasets": [
+    "LSOIE-wiki: QA-SRL 2.0-derived Wikipedia OpenIE data; 19,676 training sentences/46,015 tuples and 2,403 test sentences/5,374 tuples",
+    "CaRB: crowd-sourced Newswire and Wikipedia evaluation data; rule-based OpenIE4 pseudo-labels used for the 92,774-sentence/190,661-tuple training set and 634 test sentences/2,701 tuples in the reported table",
+    "76,043 unlabeled Wikipedia sentences collected from English Wikidump"
+  ],
+  "evaluation": {
+    "metrics": [
+      "CaRB (1-1) tuple-matching precision",
+      "CaRB (1-1) tuple-matching recall",
+      "F1",
+      "Area under the precision–recall curve (AUC)",
+      "Verification-task precision, recall, and F1"
+    ],
+    "baselines": [
+      "IMoJIE",
+      "IGL-OIE/OpenIE6",
+      "UIE-OIE without semi-supervised learning",
+      "UIE-OIE augmented with pseudo-labels generated from unlabeled text"
+    ],
+    "setting": "Experiments evaluate LSOIE-wiki and CaRB under CaRB (1-1) scoring. The base model is first trained under full supervision, then initializes student and teacher for semi-supervised learning. For CaRB, rule-generated OpenIE4 labels are used for training because the benchmark itself is insufficient to train a deep model. T5-small experiments use batch size 32, max input/output lengths 256, initial learning rate 5e-5, AdamW with a linear schedule and 6% warm-up; semi-supervised stage lasts 5 epochs for CaRB and 10 for LSOIE variants. Thresholds are 0.1 for perplexity and 0.95 for verification."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "On LSOIE-wiki, UIE-OIE with verification achieved F1 70.1 and AUC 55.1, above UIE-OIE without semi-supervision (68.2/52.7), IMoJIE (65.3/49.0), IGL-OIE (61.7/45.1), and the no-verification semi-supervised variant (69.4/54.2).",
+      "On CaRB, the no-verification semi-supervised variant was best among proposed variants at F1 42.8 and AUC 25.1; adding verification scored 42.1/24.7, whereas UIE-OIE scored 41.8/23.5 and augmentation 42.0/24.0.",
+      "Ablation on LSOIE-wiki: consistency loss raised F1 from 68.2 to 68.6; adding self-regularization reached 69.4. All negative-example strategies together yielded 70.11 versus 69.4 base; a separate verifier reached 69.5 versus 70.1 for the joint model.",
+      "Tree output outperformed tuple-sequence output (LSOIE-wiki F1 68.2 vs 64.7; CaRB 41.8 vs 41.1). T5-base slightly underperformed T5-small (LSOIE-wiki 68.0 vs 68.2; CaRB 41.5 vs 41.8)."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0040-D-P055-TABLE-0001",
+        "page": 55,
+        "excerpt": "UIE-OIE With Verification: LSOIE-wiki F1 70.1/AUC 55.1; CaRB F1 42.1/AUC 24.7. UIE-OIE Without Verification: 69.4/54.2 and 42.8/25.1."
+      },
+      {
+        "span_id": "C0040-D-P056-TABLE-0002",
+        "page": 56,
+        "excerpt": "Consistency and self-regularization reach 69.4 F1; all verification strategies reach 70.11; joint model reaches 70.1 versus discrete model 69.5."
+      },
+      {
+        "span_id": "C0040-D-P058-TABLE-0003",
+        "page": 58,
+        "excerpt": "Tree-based structure scores 68.2/41.8 F1 versus tuple sequence 64.7/41.1; T5-small scores 68.2/41.8 versus T5-base 68.0/41.5."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Uses unlabeled text through mean-teacher self-training while retaining gold-supervised learning.",
+      "Joint prompted extraction and verification filters malformed and semantically unreliable pseudo-labels without training a separate extraction model and verifier.",
+      "Improves LSOIE-wiki F1 and AUC over the supervised UIE-OIE and named OpenIE baselines.",
+      "Review-level inference: The schema-free, n-ary tree output is directly usable as an intermediate fact/triple source for later graph construction, although this thesis does not perform graph construction."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0040-D-P044-PICTURE-0001",
+        "page": 44,
+        "excerpt": "Teacher-generated pseudo-extractions are verified and then used to self-train the student alongside supervised learning."
+      },
+      {
+        "span_id": "C0040-D-P055-TABLE-0002",
+        "page": 55,
+        "excerpt": "On LSOIE-wiki, the verified semi-supervised method achieves F1 70.1 and AUC 55.1, compared with UIE-OIE 68.2 and 52.7."
+      },
+      {
+        "span_id": "C0040-D-P011-TEXT-0003",
+        "page": 11,
+        "excerpt": "OpenIE extracts facts in the form of n-ary relation tuples ... from unstructured text."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Verification reduces CaRB performance relative to the no-verification semi-supervised variant because its training and test labels follow different standards.",
+      "The method remains sentence-level and English/Wikipedia-centred in its experiments; it does not resolve cross-sentence coreference, canonicalization/entity linking, ontology alignment, or graph construction.",
+      "Review-level inference: The pseudo-label filter is trained from synthetic error patterns, so it may miss other semantic errors not represented by subject–predicate mismatch, argument swapping, or over-detailed objects.",
+      "Review-level inference: The reported gains are benchmark-specific and cannot establish general superiority because annotation noise and divergent annotation specifications materially affect scores."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0040-D-P056-TEXT-0001",
+        "page": 56,
+        "excerpt": "The verification task improves the model’s performance on the LSOIE-wiki. However, it drops the model’s performance on CaRB."
+      },
+      {
+        "span_id": "C0040-D-P051-TEXT-0002",
+        "page": 51,
+        "excerpt": "We design three corresponding rules to generate negative samples targeting these errors respectively."
+      },
+      {
+        "span_id": "C0040-D-P060-TABLE-0003",
+        "page": 60,
+        "excerpt": "In 50 LSOIE-wiki sentences, label noise occurred in 17 (34%); overly specific, wrong, missing, non-atomic, and repetitive extractions also occurred."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The verification task does not work well when training and test data use different annotation specifications.",
+      "In error analysis, label noise is the largest recorded source of discrepancies (17 of 50 examined LSOIE-wiki sentences, 34%); gold data can contain incomplete or misplaced arguments.",
+      "OpenIE lacks a universal annotation standard, while large-scale annotation is costly."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0040-D-P061-TEXT-0001",
+        "page": 61,
+        "excerpt": "the verification task does not work well when the training data and test data follow different annotation specifications."
+      },
+      {
+        "span_id": "C0040-D-P060-TABLE-0002",
+        "page": 60,
+        "excerpt": "label noise contributes to most of the errors ... Label noise: 17 sentences, 34%."
+      },
+      {
+        "span_id": "C0040-D-P063-TEXT-0003",
+        "page": 63,
+        "excerpt": "Due to the free form of OpenIE extractions, OpenIE, in practice, does not have a universal annotation standard. Annotating a large dataset is also costly."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Publish domain-specific OpenIE datasets, such as medical-domain data, with annotation guidelines suited to downstream uses and evaluation metrics that include domain knowledge.",
+      "Investigate LLM-enhancement methods for OpenIE, including demonstrations and adaptors over LLMs.",
+      "Review-level inference: Improve pseudo-label verification by learning from broader semantic error types and adapting/calibrating it to the target benchmark's annotation convention before self-training."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0040-D-P064-TEXT-0001",
+        "page": 64,
+        "excerpt": "We expect more domain-specific data to be published ... propose some domain-specific annotation guidelines ... explore new evaluation metrics that consider domain-specific knowledge."
+      },
+      {
+        "span_id": "C0040-D-P065-TEXT-0002",
+        "page": 65,
+        "excerpt": "we may explore other techniques to enhance the LLM’s performance on OpenIE. We could add demonstrations and apply adaptors over LLM."
+      },
+      {
+        "span_id": "C0040-D-P056-TEXT-0003",
+        "page": 56,
+        "excerpt": "The verification task lets the model learn how training data are labeled, but the knowledge does not apply to the test data."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "How to define application-useful OpenIE extractions and a universal annotation standard.",
+      "Robust evaluation and transfer when datasets have different annotation policies and noisy gold labels.",
+      "Domain-specific OpenIE and evaluation beyond the reported Wikipedia/news settings.",
+      "Whether and how LLM prompting, demonstrations, or adaptation can reliably improve OpenIE.",
+      "Review-level inference: Converting extracted open tuples into a high-quality knowledge graph still requires downstream entity linking/canonicalization, schema alignment, fusion, and graph validation, none of which this method evaluates."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0040-D-P064-TEXT-0001",
+        "page": 64,
+        "excerpt": "the task definition needs to give clear standards to judge which extractions are good regarding application value."
+      },
+      {
+        "span_id": "C0040-D-P065-TEXT-0002",
+        "page": 65,
+        "excerpt": "We leave these as future work."
+      },
+      {
+        "span_id": "C0040-D-P038-TEXT-0003",
+        "page": 38,
+        "excerpt": "multiple predicates [may refer] to the same semantic relation, or arguments [may refer] to the same entity ... complex remedial measures have not been fully studied."
+      }
+    ]
+  },
+  "code_and_data_availability": "not_reported"
+}

@@ -1,0 +1,825 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0095",
+    "title": "Effective Modeling of Encoder-Decoder Architecture for Joint Entity and Relation Extraction",
+    "pdf_path": "data/batches/batch-04/C0095.pdf",
+    "authors": [
+      "Tapas Nayak",
+      "Hwee Tou Ng"
+    ],
+    "year": 2020,
+    "venue": "not_reported",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The paper proposes two encoder-decoder approaches for jointly extracting relation tuples from sentences with multiple tuples, overlapping entities, and full multi-token entity names. A word-level decoder uses a tuple representation and masking-based copying; a pointer-network decoder extracts complete tuples at each decoding step. Experiments on two New York Times datasets report significantly higher F1 scores than prior work.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title block",
+      "span_id": "C0095-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Tapas Nayak and Hwee Tou Ng",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication footer",
+      "span_id": "C0095-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Copyright 2020, Association for the Advancement of Artificial Intelligence",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-03-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0095-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "we propose two approaches to use encoder-decoder architecture for jointly extracting entities and relations",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-03-02": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0095-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "Experiments on the publicly available New York Times corpus show that our proposed approaches outperform previous work and achieve significantly higher F1 scores",
+      "confidence": "medium"
+    },
+    "problem_addressed-04-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0095-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "sharing of entities or overlapping entities among the tuples makes it more challenging",
+      "confidence": "medium"
+    },
+    "problem_addressed-04-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0095-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "Most prior work adopted a pipeline approach where entities were identified first followed by finding the relations among them",
+      "confidence": "medium"
+    },
+    "problem_addressed-04-03": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0095-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "The model should be able to extract multiple tuples with overlapping entities",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-05-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0095-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "jointly extracting entities and relations",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-05-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Task Description",
+      "span_id": "C0095-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Our task is to extract all relation tuples present in a sentence",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-06-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Encoder-Decoder Architecture",
+      "span_id": "C0095-D-P002-PICTURE-0001",
+      "page": 2,
+      "excerpt": "The architecture of an encoder-decoder model and a pointer network-based decoder block",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-06-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0095-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "We propose two novel approaches using encoder-decoder architecture",
+      "confidence": "medium"
+    },
+    "methodology-system_type-07-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0095-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "jointly extracting entities and relations",
+      "confidence": "medium"
+    },
+    "methodology-system_type-07-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Relation Tuple Extraction",
+      "span_id": "C0095-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "At every time step of the decoding, it extracts an entire relation tuple",
+      "confidence": "medium"
+    },
+    "methodology-description-08-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Encoder-Decoder Architecture",
+      "span_id": "C0095-D-P002-TABLE-0001",
+      "page": 2,
+      "excerpt": "Target: word-based decoding Somalia ; Mogadishu ; /location/country/capital | Somalia ; Mogadishu ; /location/location/contains",
+      "confidence": "medium"
+    },
+    "methodology-description-08-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Pointer Network-Based Decoder",
+      "span_id": "C0095-D-P003-PICTURE-0002",
+      "page": 3,
+      "excerpt": "The decoder consists of an LSTM with hidden dimension dh to generate the sequence of tuples, two pointer networks to find the two entities, and a classification network to find the relation",
+      "confidence": "medium"
+    },
+    "methodology-description-08-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Relation Tuple Extraction",
+      "span_id": "C0095-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "At every time step of the decoding, we first find the start and end pointers of the two entities in the source sentence",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-09-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Encoder-Decoder Architecture",
+      "span_id": "C0095-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The source sentence contains clue words for every relation which can help generate the relation tokens",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-09-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Pointer Network-Based Decoder",
+      "span_id": "C0095-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "The relation set R includes a special relation token EOS which indicates the end of the sequence",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-09-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Datasets",
+      "span_id": "C0095-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "NYT24 ... has 24 relations ... NYT29 ... has 29 relations",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-10-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Task Description",
+      "span_id": "C0095-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "A relation tuple consists of two entities and a relation",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-10-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Relation Tuple Extraction",
+      "span_id": "C0095-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "the start and end pointers of the two entities in the source sentence",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-10-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Relation Tuple Extraction",
+      "span_id": "C0095-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "the classification network of the decoder",
+      "confidence": "medium"
+    },
+    "input_output-input_type-11-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Encoder-Decoder Architecture",
+      "span_id": "C0095-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "input to the system is a sequence of words",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-12-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Task Description",
+      "span_id": "C0095-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Our task is to extract all relation tuples present in a sentence",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-12-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Datasets",
+      "span_id": "C0095-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "We focus on the task of extracting multiple tuples with overlapping entities from sentences",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-13-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Encoder-Decoder Architecture",
+      "span_id": "C0095-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "we represent each tuple as entity1 ; entity2 ; relation",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-13-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Pointer Network-Based Decoder",
+      "span_id": "C0095-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "yt is a tuple consisting of four indexes in the source sentence indicating the start and end locations of the two entities and a relation",
+      "confidence": "medium"
+    },
+    "models_and_tools-14-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Embedding Layer & Encoder",
+      "span_id": "C0095-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "we use a convolutional neural network with max-pooling to extract a feature vector for every word",
+      "confidence": "medium"
+    },
+    "models_and_tools-14-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Pointer Network-Based Decoder",
+      "span_id": "C0095-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "two pointer networks to find the two entities, and a classification network which identifies the relation",
+      "confidence": "medium"
+    },
+    "models_and_tools-14-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Parameter Settings",
+      "span_id": "C0095-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "The model is trained with mini-batch size of 32 and the network parameters are optimized using Adam",
+      "confidence": "medium"
+    },
+    "datasets-15-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Datasets",
+      "span_id": "C0095-D-P004-TABLE-0001",
+      "page": 4,
+      "excerpt": "# sentences 63,306 4,006 ... 56,196 5,000",
+      "confidence": "medium"
+    },
+    "datasets-15-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Datasets",
+      "span_id": "C0095-D-P004-TABLE-0002",
+      "page": 4,
+      "excerpt": "# tuples 78,973 5,859 ... 88,366 8,120",
+      "confidence": "medium"
+    },
+    "datasets-15-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Datasets",
+      "span_id": "C0095-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "We select 10% of the original training data and use it as the validation dataset",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-16-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Baselines and Evaluation Metrics",
+      "span_id": "C0095-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We report precision, recall, and F1 score for comparison",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-16-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0095-D-P006-TABLE-0002",
+      "page": 6,
+      "excerpt": "Comparison on entity and relation generation tasks",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-16-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Error Analysis",
+      "span_id": "C0095-D-P007-TABLE-0003",
+      "page": 7,
+      "excerpt": "% errors for wrong ordering and entity mismatch",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-17-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Baselines and Evaluation Metrics",
+      "span_id": "C0095-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We compare our model with the following state-of-the-art joint entity and relation extraction models",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-17-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Baselines and Evaluation Metrics",
+      "span_id": "C0095-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "SPTree ... Tagging ... CopyR ... HRL ... GraphR ... N-gram Attention",
+      "confidence": "medium"
+    },
+    "evaluation-setting-18-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Baselines and Evaluation Metrics",
+      "span_id": "C0095-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We consider the extracted tuples as a set and remove the duplicate tuples",
+      "confidence": "medium"
+    },
+    "evaluation-setting-18-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Baselines and Evaluation Metrics",
+      "span_id": "C0095-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "We run their model and our models five times and report the median results",
+      "confidence": "medium"
+    },
+    "evaluation-setting-18-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0095-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "For a test instance, we include those tuples which are extracted in the majority (≥ 3) of the five runs",
+      "confidence": "medium"
+    },
+    "main_results-19-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0095-D-P006-TABLE-0001",
+      "page": 6,
+      "excerpt": "WDec 0.777 0.608 0.682 ... 0.881 0.761 0.817; PNDec 0.732 0.624 0.673 ... 0.806 0.773 0.789",
+      "confidence": "medium"
+    },
+    "main_results-19-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Experimental Results",
+      "span_id": "C0095-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "our models are statistically significant (p < 0.001)",
+      "confidence": "medium"
+    },
+    "main_results-19-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Performance Analysis",
+      "span_id": "C0095-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "PtrNetDecoding is more than two times faster and takes one-third of the GPU memory of WordDecoding",
+      "confidence": "medium"
+    },
+    "strengths-20-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0095-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "represent multiple tuples with overlapping entities and different lengths of entities in a simple way",
+      "confidence": "medium"
+    },
+    "strengths-20-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Word-level Decoder & Copy Mechanism",
+      "span_id": "C0095-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "This ensures the copying of entities from the source sentence only",
+      "confidence": "medium"
+    },
+    "strengths-20-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Performance Analysis",
+      "span_id": "C0095-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "PtrNetDecoding is more than two times faster and takes one-third of the GPU memory",
+      "confidence": "medium"
+    },
+    "weaknesses-21-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Performance Analysis",
+      "span_id": "C0095-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "WordDecoding may not extract the special tokens and relation tokens at the right time steps",
+      "confidence": "medium"
+    },
+    "weaknesses-21-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Error Analysis",
+      "span_id": "C0095-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "This suggests that PtrNetDecoding makes more errors while pairing the entities with relations",
+      "confidence": "medium"
+    },
+    "weaknesses-21-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Performance Analysis",
+      "span_id": "C0095-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "This speedup and smaller memory consumption will be useful when we move from sentence-level extraction to document-level extraction",
+      "confidence": "medium"
+    },
+    "weaknesses-21-04": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Analysis and Discussion",
+      "span_id": "C0095-D-P007-TEXT-0004",
+      "page": 7,
+      "excerpt": "NYT24 has around 72.0% of overlapping tuples ... NYT29 has only 41.7%",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-22-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Performance Analysis",
+      "span_id": "C0095-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "This speedup and smaller memory consumption will be useful when we move from sentence-level extraction to document-level extraction",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-22-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Performance Analysis",
+      "span_id": "C0095-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The costly softmax operation and the higher number of decoding time steps significantly increase the training and inference time for WordDecoding",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-22-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Error Analysis",
+      "span_id": "C0095-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "This suggests that PtrNetDecoding makes more errors while pairing the entities with relations",
+      "confidence": "medium"
+    },
+    "possible_improvements-23-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Conclusion",
+      "span_id": "C0095-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "As future work, we would like to explore our proposed models for a document-level tuple extraction task",
+      "confidence": "medium"
+    },
+    "possible_improvements-23-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Performance Analysis",
+      "span_id": "C0095-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "PtrNetDecoding makes more errors while pairing the entities with relations",
+      "confidence": "medium"
+    },
+    "possible_improvements-23-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Analysis and Discussion",
+      "span_id": "C0095-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "NYT24 has around 72.0% of overlapping tuples ... NYT29 has only 41.7%",
+      "confidence": "medium"
+    },
+    "unresolved_problems-24-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion",
+      "span_id": "C0095-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "As future work, we would like to explore our proposed models for a document-level tuple extraction task",
+      "confidence": "medium"
+    },
+    "unresolved_problems-24-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Error Analysis",
+      "span_id": "C0095-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "the errors due to ordering of entities ... and mismatch of the first entity ... and the second entity",
+      "confidence": "medium"
+    },
+    "unresolved_problems-24-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Datasets",
+      "span_id": "C0095-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "We focus on the task of extracting multiple tuples with overlapping entities from sentences",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-25-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Abstract footnote",
+      "span_id": "C0095-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The code and data of this paper can be found at https://github.com/nusnlp/PtrNetDecoding4JERE",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses joint extraction of relation tuples from sentences when tuples may share one or both entities, entities may overlap, and entity names may contain multiple tokens. It aims to avoid the limitations of pipeline systems and earlier joint or encoder-decoder models that cannot reliably extract overlapping tuples or full entity spans.",
+  "methodology": {
+    "primary_family": "Joint entity-relation extraction",
+    "secondary_families": [
+      "Neural NLP pipelines",
+      "Generative text-to-structure methods"
+    ],
+    "system_type": "joint",
+    "supervision_setting": "not_reported",
+    "description": "The method has two encoder-decoder variants. WordDecoding encodes the input with word and character-CNN embeddings followed by a Bi-LSTM, then generates a serialized target sequence containing entity1, entity2, relation, and separator tokens one word at a time. A masking-based softmax restricts generated words to source tokens, relation tokens, separators, UNK, and EOS; duplicate and invalid tuples are removed after decoding. PtrNetDecoding removes entity and separator tokens from the decoder vocabulary and represents each tuple by two entity start/end spans plus a relation. Its decoder uses an LSTM, two pointer networks for entity spans, and a relation-classification network, generating one complete tuple per step. Attention variants and a masking/copy mechanism are evaluated."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The method uses a predefined relation set R rather than discovering an ontology. The word-decoder vocabulary contains source tokens, relation names, separator tokens, SOS, EOS, and UNK; the pointer decoder uses relation embeddings for the predefined relations and EOS. The NYT29 and NYT24 datasets contain 29 and 24 relation types respectively.",
+    "evidence": [
+      {
+        "span_id": "C0095-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "The source sentence contains clue words for every relation which can help generate the relation tokens"
+      },
+      {
+        "span_id": "C0095-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "The relation set R includes a special relation token EOS which indicates the end of the sequence"
+      },
+      {
+        "span_id": "C0095-D-P004-TEXT-0003",
+        "page": 4,
+        "excerpt": "NYT24 ... has 24 relations ... NYT29 ... has 29 relations"
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Entity and concept extraction",
+    "Relation and triple extraction"
+  ],
+  "input_output": {
+    "input_type": "Tokenized natural-language sentences.",
+    "input_granularity": "Sentence-level; the experiments target extraction of multiple tuples from individual sentences.",
+    "output_representation": "A set of relation tuples, each consisting of two full entity spans and one relation from a predefined relation set. WordDecoding serializes tuples as entity1 ; entity2 ; relation separated by |; PtrNetDecoding represents each tuple with four source-span indexes and a relation."
+  },
+  "models_and_tools": [
+    "Word2Vec",
+    "character-level CNN with max-pooling",
+    "Bi-LSTM encoder",
+    "LSTM decoder",
+    "attention mechanisms",
+    "masking-based copy mechanism",
+    "pointer networks",
+    "feed-forward relation classifier",
+    "Adam optimizer",
+    "WordDecoding (WDec)",
+    "PtrNetDecoding (PNDec)"
+  ],
+  "datasets": [
+    "NYT29: 63,306 training and 4,006 test sentences; 78,973 training and 5,859 test tuples; 29 relations",
+    "NYT24: 56,196 training and 5,000 test sentences; 88,366 training and 8,120 test tuples; 24 relations",
+    "For both datasets, 10% of the original training data is used for validation and the remaining 90% for training"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Precision",
+      "Recall",
+      "F1 score",
+      "Bootstrap-paired t-test significance",
+      "Entity-generation precision, recall, and F1",
+      "Relation-generation precision, recall, and F1",
+      "Error percentages for ordering and entity mismatches"
+    ],
+    "baselines": [
+      "SPTree",
+      "Tagging",
+      "CopyR",
+      "HRL",
+      "GraphR",
+      "N-gram Attention",
+      "HRL ensemble",
+      "Previous published results from Zeng et al. (2018), Takanobu et al. (2019), and Fu et al. (2019)"
+    ],
+    "setting": "Exact tuple-set evaluation on NYT29 and NYT24. Duplicate predicted tuples are removed; a tuple is correct only when both full entity names and the relation are correct. The authors run their models and HRL five times and report median results; other baseline scores are taken from prior publications. Ensemble results include tuples predicted by at least three of five runs. They also report ablations for attention mechanisms and the copy mechanism, and separate entity-generation and relation-generation analyses."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Single-run WDec obtains NYT29 P/R/F1 = 0.777/0.608/0.682 and NYT24 = 0.881/0.761/0.817; PNDec obtains NYT29 = 0.732/0.624/0.673 and NYT24 = 0.806/0.773/0.789.",
+      "Compared with HRL, single-run WDec has 3.9% and 4.1% higher F1 on NYT29 and NYT24; PNDec has 3.0% and 1.3% higher F1. The reported bootstrap-paired t-test gives p < 0.001.",
+      "Ensembling five runs gives WDec F1 = 0.716 on NYT29 and 0.844 on NYT24; PNDec gives 0.716 and 0.838. These are 4.2%/3.5% and 4.2%/2.9% higher than the HRL ensemble on NYT29/NYT24.",
+      "The copy mechanism improves WDec F1 by approximately 4–7% across the attention variants. WDec with single attention is strongest among WDec variants; PNDec combo attention is strongest among PNDec variants.",
+      "PNDec is reported as more than twice as fast and uses one-third of the GPU memory of WDec. The authors attribute this to generating a complete tuple per decoding step instead of one word per step.",
+      "In entity-generation analysis, PNDec F1 is 0.855 on NYT29 and 0.903 on NYT24; in relation-generation analysis, PNDec F1 is 0.823 and 0.925 respectively. WDec has higher full-tuple F1 despite lower or comparable component results because it makes fewer pairing errors."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0095-D-P006-TABLE-0001",
+        "page": 6,
+        "excerpt": "WDec 0.777 0.608 0.682 ... 0.881 0.761 0.817; PNDec 0.732 0.624 0.673 ... 0.806 0.773 0.789"
+      },
+      {
+        "span_id": "C0095-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "our models are statistically significant (p < 0.001)"
+      },
+      {
+        "span_id": "C0095-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "PtrNetDecoding is more than two times faster and takes one-third of the GPU memory of WordDecoding"
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "The method jointly extracts entities and relations, directly addressing interaction among multiple tuples.",
+      "The tuple representations support overlapping entities and full multi-token entity names.",
+      "The masking-based copy mechanism prevents ordinary generated entity tokens from coming from outside the source sentence while retaining an UNK fallback.",
+      "PNDec reduces decoding steps and resource use by extracting a complete tuple per step.",
+      "Review-level inference: the method produces structured relation tuples that can serve as inputs to downstream knowledge-graph construction, but the paper does not evaluate graph construction itself."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0095-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "represent multiple tuples with overlapping entities and different lengths of entities in a simple way"
+      },
+      {
+        "span_id": "C0095-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "This ensures the copying of entities from the source sentence only"
+      },
+      {
+        "span_id": "C0095-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "PtrNetDecoding is more than two times faster and takes one-third of the GPU memory"
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "WDec can fail to generate separator and relation tokens at the correct time steps, which can prevent correct tuple recovery.",
+      "PNDec can make more errors pairing entities with relations even though it is more intuitive and resource-efficient.",
+      "The approach is evaluated only at sentence level, not document level.",
+      "The method relies on a fixed predefined relation set and does not perform ontology discovery, entity linking, coreference resolution, graph construction, or graph validation.",
+      "NYT24 has substantially greater train/test tuple overlap than NYT29, so its higher scores may partly reflect memorization and the datasets are not directly equivalent.",
+      "Review-level inference: exact tuple matching does not measure downstream graph consistency, provenance quality, schema compliance, or robustness outside the NYT setting."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0095-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "WordDecoding may not extract the special tokens and relation tokens at the right time steps"
+      },
+      {
+        "span_id": "C0095-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "This suggests that PtrNetDecoding makes more errors while pairing the entities with relations"
+      },
+      {
+        "span_id": "C0095-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "This speedup and smaller memory consumption will be useful when we move from sentence-level extraction to document-level extraction"
+      },
+      {
+        "span_id": "C0095-D-P007-TEXT-0004",
+        "page": 7,
+        "excerpt": "NYT24 has around 72.0% of overlapping tuples ... NYT29 has only 41.7%"
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The authors do not report a dedicated limitations section.",
+      "The authors identify document-level tuple extraction as future work.",
+      "The authors note that WDec requires substantially more decoding steps and a large-vocabulary softmax, increasing training and inference cost.",
+      "The authors report that PNDec can make more entity-relation pairing errors than WDec despite its efficiency."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0095-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "This speedup and smaller memory consumption will be useful when we move from sentence-level extraction to document-level extraction"
+      },
+      {
+        "span_id": "C0095-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "The costly softmax operation and the higher number of decoding time steps significantly increase the training and inference time for WordDecoding"
+      },
+      {
+        "span_id": "C0095-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "This suggests that PtrNetDecoding makes more errors while pairing the entities with relations"
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed: extend the encoder-decoder approaches from sentence-level to document-level tuple extraction.",
+      "Review-level inference: add entity linking, coreference resolution, ontology/schema constraints, graph validation, and graph construction so extracted tuples can be evaluated as a complete Text-to-KG workflow.",
+      "Review-level inference: reduce PNDec pairing errors through stronger span-relation consistency constraints or reranking.",
+      "Review-level inference: evaluate on datasets with lower train/test lexical and tuple overlap and report cross-domain generalization."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0095-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "As future work, we would like to explore our proposed models for a document-level tuple extraction task"
+      },
+      {
+        "span_id": "C0095-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "PtrNetDecoding makes more errors while pairing the entities with relations"
+      },
+      {
+        "span_id": "C0095-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "NYT24 has around 72.0% of overlapping tuples ... NYT29 has only 41.7%"
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Document-level extraction with many entities and tuples remains unresolved in this paper.",
+      "Reliable extraction of multiple overlapping tuples while ensuring correct entity-relation pairing remains unresolved, especially for PNDec.",
+      "The method does not address entity linking, coreference, ontology discovery, graph construction, graph validation, or graph updating.",
+      "Generalization beyond the two NYT datasets and beyond a fixed relation inventory is not established.",
+      "Review-level inference: exact sentence-level tuple F1 does not resolve whether generated tuples form a coherent, deduplicated, schema-valid knowledge graph."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0095-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "As future work, we would like to explore our proposed models for a document-level tuple extraction task"
+      },
+      {
+        "span_id": "C0095-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "the errors due to ordering of entities ... and mismatch of the first entity ... and the second entity"
+      },
+      {
+        "span_id": "C0095-D-P004-TEXT-0003",
+        "page": 4,
+        "excerpt": "We focus on the task of extracting multiple tuples with overlapping entities from sentences"
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that its code and data are available at https://github.com/nusnlp/PtrNetDecoding4JERE."
+}

@@ -1,0 +1,732 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0116",
+    "title": "A Holy Quran Ontology Construction with Semi-Automatic Population",
+    "pdf_path": "data/manual-pdfs/C0116.pdf",
+    "authors": [
+      "Eman Elkhammash",
+      "Wahiba Ben Abdessalem"
+    ],
+    "year": 2019,
+    "venue": "Bioscience Biotechnology Research Communications",
+    "identifier": {
+      "status": "reported",
+      "value": "DOI: 10.21786/bbrc/12.1/26",
+      "evidence": [
+        {
+          "span_id": "C0116-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "DOI information is associated with the journal article as 10.21786/bbrc/12.1/26."
+        }
+      ]
+    },
+    "abstract": "The paper proposes a semi-automatic method for constructing and populating an ontology of named entities in the Holy Quran. It combines learning methods with statistical context ranking to discover additional named entities from the Quran and Hadith, followed by expert validation.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author information",
+      "span_id": "C0116-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Eman Elkhammash and Wahiba Ben Abdessalem",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Journal header",
+      "span_id": "C0116-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Special Issue Vol 12 No (1) February 2019",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Journal header",
+      "span_id": "C0116-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Biosci. Biotech. Res. Comm. Special Issue Vol 12 No (1) February 2019",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Article information",
+      "span_id": "C0116-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "DOI information is associated with the journal article as 10.21786/bbrc/12.1/26.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0116-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The major contribution of this approach is to harness the benefits of learning methods, conjoined with statistical models to extract contexts ... from Quran and Hadith and retain the weighty contexts for the recognition of supplementary named entities to populate the ontology.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0116-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Ontology population is the main step in ontology construction. However, the manual population is a time-consuming task.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction and related work",
+      "span_id": "C0116-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "This paper aims to create an ontology related to named entities in the Holy Quran ... from the holy Quran and prophetic traditions (Hadith).",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-03": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Proposed approach",
+      "span_id": "C0116-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "This ontology does not hold all the class’ instances.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0116-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "This approach applies learning techniques and statistical models to acquire and classify ontology instances.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Proposed approach",
+      "span_id": "C0116-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The building of the Holy Quran ontology was directed by the University of Stanford ontology-development steps.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Semi-automatic population algorithm",
+      "span_id": "C0116-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "We call context of a named entities, the set of n words that precede and follow the named entity.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Semi-automatic population algorithm",
+      "span_id": "C0116-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The process ... is proposed in the following algorithm: find occurrences, find contexts, rank contexts, find examples, validate instances, and iterate.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Semi-automatic population algorithm",
+      "span_id": "C0116-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "We introduce for each concept a small set of confident and well-known instances as examples of named entities.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Semi-automatic population algorithm",
+      "span_id": "C0116-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "The found named entity instances are validated by an expert in Islamic knowledge.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Proposed approach",
+      "span_id": "C0116-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The steps we follow to develop the proposed holy Quran ontology baptized: NEQ-Ontology are as follows.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Semi-automatic population algorithm",
+      "span_id": "C0116-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "List-Occ ← Find-occ ... Cont ← Find-Context ... RankC ← Rank-Context ... Instances ← Find-Exp ... Instances-Validation ... Return to step 2.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Implementation",
+      "span_id": "C0116-D-P004-PICTURE-0003",
+      "page": 4,
+      "excerpt": "The Holy Quran ontology (NEQ-Ontology) is implemented using the ontology editor Protégé 2000.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Proposed approach",
+      "span_id": "C0116-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We will reuse some of the concepts that appear in this ontology ... However, we will make a new taxonomy and populate this ontology based on the Holy Quran and Hadith.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Implementation",
+      "span_id": "C0116-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The ontology consists of 15 super classes.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Implementation",
+      "span_id": "C0116-D-P005-PICTURE-0003",
+      "page": 5,
+      "excerpt": "Properties are binary relations on individuals ... We use class equivalent ... The OWL formalism ... can be shown in Figure 7.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Proposed approach",
+      "span_id": "C0116-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Definition of the ontology domain and scope ... identification of the ontology terms ... definition of the ontology hierarchy of classes ... definition of the classes’ attributes ... definition of the attributes’ values ... population of the ontology.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Semi-automatic population algorithm",
+      "span_id": "C0116-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "Search segments matching the retained contexts. These segments are considered as newly named entity instances.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Semi-automatic population algorithm",
+      "span_id": "C0116-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "The validated instances ... [are] updated and extended ... In each iteration, the system learns, generates news contexts, and therefore new instances.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0116-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "In our work, we preferred to use Sahih Al-Bukhari and Sahih Muslim collections.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Semi-automatic population algorithm",
+      "span_id": "C0116-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "Find-occ (Instances, Quran, Sahih El Bukhari, Sahih Muslim)",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Semi-automatic population algorithm",
+      "span_id": "C0116-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The context of a named entities [is] the set of n words that precede and follow the named entity.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Implementation",
+      "span_id": "C0116-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The ontology consists of 15 super classes ... Individuals are used to represent the objects (instances) of the classes.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Implementation",
+      "span_id": "C0116-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Properties are binary relations on individuals.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0116-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Learning methods ... conjoined with statistical models to extract contexts ... and retain the weighty contexts.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Semi-automatic population algorithm",
+      "span_id": "C0116-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "The ranking function is computed ... based on the formula: Term Frequency-Inverse Document Frequency (tf-idf).",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Implementation",
+      "span_id": "C0116-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "The ... ontology ... is implemented using ... Protégé 2000.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-04": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Implementation",
+      "span_id": "C0116-D-P005-TEXT-0004",
+      "page": 5,
+      "excerpt": "We used OntoGraf tool to visualize the ontology.",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0116-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "In our work, we preferred to use Sahih Al-Bukhari and Sahih Muslim collections.",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Conclusion",
+      "span_id": "C0116-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "We have used the Sahih Al-Bukhari and Sahih Muslim collections.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-19-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Implementation",
+      "span_id": "C0116-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The Holy Quran ontology ... is implemented using the ontology editor Protégé 2000.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-19-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Implementation",
+      "span_id": "C0116-D-P005-PICTURE-0002",
+      "page": 5,
+      "excerpt": "Protégé offers a number of visualization tools that facilitate visualization of the ontology structure.",
+      "confidence": "medium"
+    },
+    "main_results-20-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Proposed approach",
+      "span_id": "C0116-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We will reuse some of the concepts ... However, we will make a new taxonomy and populate this ontology based on the Holy Quran and Hadith.",
+      "confidence": "medium"
+    },
+    "main_results-20-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Semi-automatic population algorithm",
+      "span_id": "C0116-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "The validated instances ... [are] updated and extended ... In each iteration, the system learns, generates news contexts, and therefore new instances.",
+      "confidence": "medium"
+    },
+    "main_results-20-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Implementation",
+      "span_id": "C0116-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "The ontology consists of 15 super classes.",
+      "confidence": "medium"
+    },
+    "strengths-21-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Abstract",
+      "span_id": "C0116-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Automatic or semi-automatic methods to populate an ontology are required.",
+      "confidence": "medium"
+    },
+    "strengths-21-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Semi-automatic population algorithm",
+      "span_id": "C0116-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "The found named entity instances are validated by an expert in Islamic knowledge.",
+      "confidence": "medium"
+    },
+    "strengths-21-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Implementation",
+      "span_id": "C0116-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "Individuals are used to represent the objects (instances) of the classes.",
+      "confidence": "medium"
+    },
+    "weaknesses-22-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Semi-automatic population algorithm",
+      "span_id": "C0116-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "We introduce for each concept a small set of confident and well-known instances as examples of named entities.",
+      "confidence": "medium"
+    },
+    "weaknesses-22-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion",
+      "span_id": "C0116-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "The referred named entities are not exhaustive in the holy Quran.",
+      "confidence": "medium"
+    },
+    "weaknesses-22-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion",
+      "span_id": "C0116-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "In future work, we want to investigate methods to (semi)-automatically find not only instances of classes, but also new classes of the ontology.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-23-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Conclusion",
+      "span_id": "C0116-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "The referred named entities are not exhaustive in the holy Quran.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-23-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Conclusion",
+      "span_id": "C0116-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "In future work, we want to investigate methods to (semi)-automatically find not only instances of classes, but also new classes of the ontology.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-23-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Conclusion",
+      "span_id": "C0116-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "This work can be extended to other Hadiths ... and Fiqh ... Complete application covering the entire proposed ontology needs to be accomplished.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Conclusion",
+      "span_id": "C0116-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "In future work, we want to investigate methods to (semi)-automatically find not only instances of classes, but also new classes of the ontology.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Conclusion",
+      "span_id": "C0116-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "This work can be extended to other Hadiths ... and Fiqh ... Complete application covering the entire proposed ontology needs to be accomplished.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion",
+      "span_id": "C0116-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "The referred named entities are not exhaustive in the holy Quran.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion",
+      "span_id": "C0116-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "We want to investigate methods to ... find ... new classes of the ontology.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion",
+      "span_id": "C0116-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "Complete application covering the entire proposed ontology needs to be accomplished.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Manual ontology population is time-consuming, while existing Quran ontologies do not contain all named-entity instances. The paper addresses construction of a named-entity ontology for the Holy Quran and semi-automatic discovery and population of additional instances using Quranic text and Sahih Al-Bukhari and Sahih Muslim Hadith collections.",
+  "methodology": {
+    "primary_family": "Classical machine learning",
+    "secondary_families": [
+      "Ontology-constrained and schema-guided methods",
+      "Linguistic and dependency-based extraction"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "weakly_supervised",
+    "description": "The authors first define the ontology domain and scope, reuse selected concepts from the Quran Corpus ontology, identify terms, build a hierarchical class taxonomy, define attributes and values, and then populate the ontology. Initial confident instances seed an iterative semi-automatic process. The system finds their occurrences in the Quran and two Hadith collections, extracts surrounding n-word contexts, ranks contexts using a TF-IDF-derived frequency scheme, searches for text segments matching retained contexts, treats matches as candidate named-entity instances, and sends candidates to an Islamic-knowledge expert for validation. Validated instances are added to the seed set and the process repeats. The ontology is implemented in Protégé 2000 and includes classes, subclasses, individuals, binary object properties, and class-equivalence constructs. The figures show the UML/class structure, class hierarchy, individuals, object properties, OWL equivalent-class representation, and OntoGraf visualizations."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The target schema is NEQ-Ontology, an ontology of named entities in the Holy Quran and Hadith. The authors reuse some concepts from the Quran Corpus ontology but create a new taxonomy and populate missing instances. The ontology defines 15 superclasses, hierarchical subclasses, class attributes, attribute values, binary object properties, and equivalent-class descriptions represented in OWL. Examples include Person/Prophet, Animal/Cow, Book, color properties, and relations such as SenderTo and has Miraculous.",
+    "evidence": [
+      {
+        "span_id": "C0116-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "We will reuse some of the concepts that appear in this ontology ... However, we will make a new taxonomy and populate this ontology based on the Holy Quran and Hadith."
+      },
+      {
+        "span_id": "C0116-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "The ontology consists of 15 super classes."
+      },
+      {
+        "span_id": "C0116-D-P005-PICTURE-0003",
+        "page": 5,
+        "excerpt": "Properties are binary relations on individuals ... We use class equivalent ... The OWL formalism ... can be shown in Figure 7."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Ontology or schema discovery: define the named-entity domain, terms, class hierarchy, attributes, values, and relations.",
+    "Text preprocessing: search the Quran and Hadith collections for occurrences of seed instances.",
+    "Entity and concept extraction: identify context-matching segments as candidate named entities.",
+    "Entity typing: assign validated instances to ontology classes or subclasses.",
+    "Relation and triple extraction: define and populate binary object properties between individuals; the paper illustrates relations such as has Color, SenderTo, and has Miraculous.",
+    "Graph construction: represent classes, subclasses, individuals, attributes, and object properties in NEQ-Ontology/OWL.",
+    "Graph validation and correction: expert in Islamic knowledge validates candidate instances.",
+    "Graph updating: add validated instances to the seed set and iterate context learning and extraction."
+  ],
+  "input_output": {
+    "input_type": "Unstructured natural-language religious texts: the Holy Quran, Sahih Al-Bukhari, and Sahih Muslim Hadith collections.",
+    "input_granularity": "Document collections and text occurrences of known named entities; contexts are fixed-width windows of n words preceding and following each entity occurrence, and matching text segments are used for candidate discovery.",
+    "output_representation": "A populated NEQ-Ontology represented as an ontology/OWL knowledge structure containing 15 superclasses, hierarchical subclasses, individuals, class attributes and values, binary object properties, and equivalent-class descriptions."
+  },
+  "models_and_tools": [
+    "Learning techniques for acquiring and classifying ontology instances",
+    "Statistical context ranking based on TF-IDF-related context frequency, inverse context frequency, example frequency, and inverse example frequency",
+    "Protégé 2000 ontology editor",
+    "OntoGraf visualization tool",
+    "OWL equivalent-class formalism"
+  ],
+  "datasets": [
+    "Holy Quran text",
+    "Sahih Al-Bukhari collection",
+    "Sahih Muslim collection"
+  ],
+  "evaluation": {
+    "metrics": "not_reported",
+    "baselines": "not_reported",
+    "setting": "The paper reports an implementation and illustrative ontology examples, including class hierarchies, individuals, object properties, equivalent-class modeling, and OntoGraf visualizations. It does not describe a quantitative named-entity extraction evaluation, a held-out test set, train/test split, or comparison against baselines."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "The authors construct NEQ-Ontology for named entities in the Holy Quran and Hadith.",
+      "The ontology reuses selected Quran Corpus concepts while adding a new taxonomy and additional named-entity instances from Quran and Hadith sources.",
+      "The proposed iterative method uses seed instances, context extraction, TF-IDF-based context ranking, context matching, and expert validation to extend the instance set.",
+      "The implementation models 15 superclasses with subclasses, individuals, attributes, binary object properties, and equivalent-class descriptions, and provides Protégé/OntoGraf visualizations.",
+      "No numerical precision, recall, F1, coverage, or comparative performance results are reported."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0116-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "We will reuse some of the concepts ... However, we will make a new taxonomy and populate this ontology based on the Holy Quran and Hadith."
+      },
+      {
+        "span_id": "C0116-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "The validated instances ... [are] updated and extended ... In each iteration, the system learns, generates news contexts, and therefore new instances."
+      },
+      {
+        "span_id": "C0116-D-P004-TEXT-0003",
+        "page": 4,
+        "excerpt": "The ontology consists of 15 super classes."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Uses authoritative domain texts from the Quran and two Hadith collections to extend a Quranic named-entity ontology.",
+      "Reduces fully manual population by iteratively exploiting contexts around trusted seed instances.",
+      "Includes domain-expert validation before candidate instances are incorporated.",
+      "Provides an explicit ontology construction workflow and a concrete graph representation with classes, instances, properties, and OWL equivalence.",
+      "The approach is domain-oriented and supports subsequent Quran information retrieval, information extraction, and text-mining applications."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0116-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "Automatic or semi-automatic methods to populate an ontology are required."
+      },
+      {
+        "span_id": "C0116-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "The found named entity instances are validated by an expert in Islamic knowledge."
+      },
+      {
+        "span_id": "C0116-D-P004-TEXT-0003",
+        "page": 4,
+        "excerpt": "Individuals are used to represent the objects (instances) of the classes."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "The method is limited to discovering additional named-entity instances from context patterns; it does not automatically discover new ontology classes.",
+      "The paper does not provide quantitative extraction or ontology-population evaluation, benchmark splits, error analysis, or baseline comparison.",
+      "The process depends on a small manually selected seed set and expert validation, limiting full automation and potentially affecting scalability.",
+      "Context matching and TF-IDF ranking may identify candidates based on surface context without demonstrating semantic disambiguation or robust relation extraction.",
+      "The paper does not establish exhaustive coverage of named entities in the Quran."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0116-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "We introduce for each concept a small set of confident and well-known instances as examples of named entities."
+      },
+      {
+        "span_id": "C0116-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "The referred named entities are not exhaustive in the holy Quran."
+      },
+      {
+        "span_id": "C0116-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "In future work, we want to investigate methods to (semi)-automatically find not only instances of classes, but also new classes of the ontology."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The named entities referred to by the ontology are not exhaustive in the Holy Quran.",
+      "The work has not yet implemented a complete application covering the entire proposed ontology.",
+      "The authors identify the need to extend the method to additional Hadith collections and Fiqh, including temporal interpretation of Sharia rules.",
+      "The current or proposed process focuses on finding instances and does not yet automatically find new ontology classes."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0116-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "The referred named entities are not exhaustive in the holy Quran."
+      },
+      {
+        "span_id": "C0116-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "In future work, we want to investigate methods to (semi)-automatically find not only instances of classes, but also new classes of the ontology."
+      },
+      {
+        "span_id": "C0116-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "This work can be extended to other Hadiths ... and Fiqh ... Complete application covering the entire proposed ontology needs to be accomplished."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-stated: develop semi-automatic methods that can discover new ontology classes as well as instances.",
+      "Author-stated: extend the source corpus to additional Hadith collections such as al-Tirmidhi and Ibn Maja and to Fiqh.",
+      "Author-stated: implement a complete application covering the proposed ontology.",
+      "Review-level inference: add manually annotated evaluation data and report precision, recall, F1, candidate yield, expert agreement, and ontology coverage.",
+      "Review-level inference: evaluate context-window and ranking choices against semantic or entity-linking methods, with error analysis for ambiguity and false matches.",
+      "Review-level inference: formalize provenance and validation rules for the generated individuals and relations."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0116-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "In future work, we want to investigate methods to (semi)-automatically find not only instances of classes, but also new classes of the ontology."
+      },
+      {
+        "span_id": "C0116-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "This work can be extended to other Hadiths ... and Fiqh ... Complete application covering the entire proposed ontology needs to be accomplished."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Exhaustive identification of named entities in the Quran remains unresolved.",
+      "Automatic discovery of new ontology classes remains unresolved.",
+      "The paper leaves open construction of a complete application over the entire ontology.",
+      "Generalization beyond the Quran, Sahih Al-Bukhari, and Sahih Muslim to additional Hadith and Fiqh sources remains open.",
+      "The paper does not resolve quantitative validation of candidate extraction quality, ontology coverage, or relation correctness."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0116-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "The referred named entities are not exhaustive in the holy Quran."
+      },
+      {
+        "span_id": "C0116-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "We want to investigate methods to ... find ... new classes of the ontology."
+      },
+      {
+        "span_id": "C0116-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "Complete application covering the entire proposed ontology needs to be accomplished."
+      }
+    ]
+  },
+  "code_and_data_availability": "not_reported"
+}

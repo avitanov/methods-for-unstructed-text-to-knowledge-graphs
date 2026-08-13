@@ -1,0 +1,714 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0037",
+    "title": "Entity Linking: An Issue to Extract Corresponding Entity With Knowledge Base",
+    "pdf_path": "data/manual-pdfs/C0037.pdf",
+    "authors": [
+      "Gongqing Wu",
+      "Ying He",
+      "Xuegang Hu"
+    ],
+    "year": 2018,
+    "venue": "IEEE Access",
+    "identifier": {
+      "status": "reported",
+      "value": "10.1109/ACCESS.2017.2787787",
+      "evidence": [
+        {
+          "span_id": "C0037-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "Digital Object Identifier 10.1109/ACCESS.2017.2787787"
+        }
+      ]
+    },
+    "abstract": "Entity linking is a task to extract query mentions in documents, and then link them to their corresponding entities in a knowledge base. It can improve the performances of knowledge network construction, knowledge fusion, information retrieval, natural language processing, and knowledge base population. In this paper, we introduce the difficulties and applications of entity linking and focus on the main methods to address this issue. At last, we list the knowledge bases, data sets, and the evaluation criterion and some challenges of entity linking.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0037-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "GONGQING WU, YING HE, AND XUEGANG HU",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication information",
+      "span_id": "C0037-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Received November 22, 2017, accepted December 20, 2017, date of publication January 4, 2018, date of current version March 9, 2018.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication information",
+      "span_id": "C0037-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "IEEE Access; 2018; 6",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Publication information",
+      "span_id": "C0037-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Digital Object Identifier 10.1109/ACCESS.2017.2787787",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0037-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Entity linking is a task to extract query mentions in documents, and then link them to their corresponding entities in a knowledge base. ... we focus on the main methods to address this issue. At last, we list the knowledge bases, data sets, and the evaluation criterion and some challenges of entity linking.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0037-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Entity linking is a task of linking named entities in web texts to their corresponding entities in a knowledge base ... the first phase is exactly to complete the entity linking task.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Entity Linking Definition and System Framework",
+      "span_id": "C0037-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "The goal of entity linking is to choose an entity from C; if each score(ci) ... is below τ ... the target entity e is NIL.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Named Entity Recognition and Coreference Resolution",
+      "span_id": "C0037-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The Methods of named entity recognition can be divided into rules-based method and statistical method.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Candidate Entity Disambiguation",
+      "span_id": "C0037-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Other researchers also use Naive Bayes, C4.5, and Binary Logistic classifier ... Besides those methods above, the methods based on deep learning has been proposes recently.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "NIL Clustering After Entity Linking",
+      "span_id": "C0037-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "This work involves clustering all entities pointing to NIL that refer to the same entity, and then giving each cluster a unique NIL ID.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Entity Linking Definition and System Framework",
+      "span_id": "C0037-D-P003-PICTURE-0001",
+      "page": 3,
+      "excerpt": "The common phases of entity linking include: candidate entity generation, candidate entity disambiguation and linking result.",
+      "confidence": "medium"
+    },
+    "methodology-description-09-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Entity Linking Definition and System Framework",
+      "span_id": "C0037-D-P003-PICTURE-0001",
+      "page": 3,
+      "excerpt": "The candidate entity generation module ... identify the entity mentions and then use the name of entities in conjunction with other features to find the candidate entities ... The candidate entity disambiguation module ... rank the candidate entities.",
+      "confidence": "medium"
+    },
+    "methodology-description-09-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Candidate Entity Generation",
+      "span_id": "C0037-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "Some researches use the empirical probability p(e|m) to select candidate entities.",
+      "confidence": "medium"
+    },
+    "methodology-description-09-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "NIL Clustering After Entity Linking",
+      "span_id": "C0037-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "It involves clustering all entities pointing to NIL that refer to the same entity, and then giving each cluster a unique NIL ID.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-10-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Knowledge Base",
+      "span_id": "C0037-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "The major knowledge base will be illustrated as follows: Wikipedia ... DBpedia ... YAGO ... TAC-KBP.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-10-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Knowledge Base",
+      "span_id": "C0037-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "DBpedia organize the structured data into the RDF form. It utilizes URI represent an entity and some attributes with their values describe the information of an entity.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-11-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "From Named Entity Recognition to Entity Linking",
+      "span_id": "C0037-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "In the task of entity linking, the named entity disambiguation is regarded as an essential step.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-11-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Entity Linking Definition and System Framework",
+      "span_id": "C0037-D-P003-PICTURE-0002",
+      "page": 3,
+      "excerpt": "The common phases of entity linking include: candidate entity generation, candidate entity disambiguation and linking result.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-11-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "NIL Clustering After Entity Linking",
+      "span_id": "C0037-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "This work involves clustering all entities pointing to NIL that refer to the same entity.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-12-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Entity Linking Definition and System Framework",
+      "span_id": "C0037-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Text: some query texts which contain many named entities. It can be divided into long texts and short texts.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-13-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Entity Linking Definition and System Framework",
+      "span_id": "C0037-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The long texts usually contain more than 400 words ... and the short texts contain an average of less than 200 words, such as tweets.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-14-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Entity Linking Definition and System Framework",
+      "span_id": "C0037-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "At last, the system returns the ID of the corresponding entity in the knowledge base or NIL.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-14-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "NIL Clustering After Entity Linking",
+      "span_id": "C0037-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "It involves clustering all entities pointing to NIL that refer to the same entity, and then giving each cluster a unique NIL ID.",
+      "confidence": "medium"
+    },
+    "models_and_tools-15-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Entity Linking Definition and System Framework",
+      "span_id": "C0037-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The recognized named entities ... using named entity recognition tools (e.g. Stanford NER system [49]).",
+      "confidence": "medium"
+    },
+    "models_and_tools-15-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Candidate Entity Generation",
+      "span_id": "C0037-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The mention is generated by the NLPIR word segmentation system; we select named entities according to the tags of words.",
+      "confidence": "medium"
+    },
+    "models_and_tools-15-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Candidate Entity Disambiguation",
+      "span_id": "C0037-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "Some researches also use Naive Bayes, C4.5, and Binary Logistic classifier ... the methods based on deep learning has been proposes recently.",
+      "confidence": "medium"
+    },
+    "datasets-16-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Datasets",
+      "span_id": "C0037-D-P008-TABLE-0001",
+      "page": 8,
+      "excerpt": "KORE50 ... AIDA-CoNLL ... NEEL ... OKE2016 ... AQUAINT ... TAC-KBP.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-17-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Evaluation Criterion",
+      "span_id": "C0037-D-P008-TABLE-0001",
+      "page": 8,
+      "excerpt": "Most systems use the evaluation measure Accuracy ... Some systems adopt three measures ... Precision(P), Recall(R), and Fα-measure.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-17-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Evaluation Criterion",
+      "span_id": "C0037-D-P009-TABLE-0002",
+      "page": 9,
+      "excerpt": "The measures are presented for micro average and macro average, including InKB and NIL cases.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-18-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0037-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "In this paper, we introduce the difficulties and applications of entity linking and focus on the main methods to address this issue. At last, we list the knowledge bases, data sets, and the evaluation criterion and some challenges of entity linking.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-18-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Challenges and Conclusion",
+      "span_id": "C0037-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "In this paper, we review and summarize the significance and application of entity linking. Then, we analyze some main methods of entity linking.",
+      "confidence": "medium"
+    },
+    "main_results-19-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Entity Linking Definition and System Framework",
+      "span_id": "C0037-D-P003-PICTURE-0001",
+      "page": 3,
+      "excerpt": "The common phases of entity linking include: candidate entity generation, candidate entity disambiguation and linking result.",
+      "confidence": "medium"
+    },
+    "main_results-19-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Candidate Entity Disambiguation",
+      "span_id": "C0037-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Huang et al. ... propose a deep semantic relatedness model ... which improves the accuracy rate by 19.4% and 24.5 on two publicly available datasets respectively.",
+      "confidence": "medium"
+    },
+    "main_results-19-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Evaluation Criterion",
+      "span_id": "C0037-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "Most systems use the evaluation measure Accuracy ... Precision(P), Recall(R), and Fα-measure.",
+      "confidence": "medium"
+    },
+    "strengths-20-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Abstract and Introduction",
+      "span_id": "C0037-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "It can improve the performances of knowledge network construction, knowledge fusion, information retrieval, natural language processing, and knowledge base population.",
+      "confidence": "medium"
+    },
+    "strengths-20-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Entity Linking Definition and System Framework",
+      "span_id": "C0037-D-P003-PICTURE-0002",
+      "page": 3,
+      "excerpt": "The common phases of entity linking include: candidate entity generation, candidate entity disambiguation and linking result.",
+      "confidence": "medium"
+    },
+    "strengths-20-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Knowledge Base and Evaluation",
+      "span_id": "C0037-D-P008-TABLE-0003",
+      "page": 8,
+      "excerpt": "We conclude six different datasets ... The evaluation measures can be divided into two categories.",
+      "confidence": "medium"
+    },
+    "weaknesses-21-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Challenges and Conclusion",
+      "span_id": "C0037-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "In this paper, we review and summarize ... we analyze some main methods of entity linking.",
+      "confidence": "medium"
+    },
+    "weaknesses-21-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Entity Linking Definition and System Framework",
+      "span_id": "C0037-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "The common phases of entity linking include: candidate entity generation, candidate entity disambiguation and linking result.",
+      "confidence": "medium"
+    },
+    "weaknesses-21-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Datasets and Evaluation Criterion",
+      "span_id": "C0037-D-P008-TABLE-0003",
+      "page": 8,
+      "excerpt": "We conclude six different datasets ... most systems use the evaluation measure Accuracy.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-22-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Challenges and Conclusion",
+      "span_id": "C0037-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "The knowledge bases utilized in the entity linking systems are offline databases or extracted from the online database but lacking in automatic update mechanism.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-22-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Challenges and Conclusion",
+      "span_id": "C0037-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "These short texts lack enough disambiguation information ... the disambiguation of mentions on short texts is full of challenges.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-22-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Challenges and Conclusion",
+      "span_id": "C0037-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "This task is limited by the problems of translation between languages, the portability of the models and gaining the large-scale training corpus.",
+      "confidence": "medium"
+    },
+    "possible_improvements-23-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Challenges and Conclusion",
+      "span_id": "C0037-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "It requires us to mine more evidences for the entity with little information. Hence, exploring a good method to extract more online information can improve the performance of entity linking.",
+      "confidence": "medium"
+    },
+    "possible_improvements-23-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Challenges and Conclusion",
+      "span_id": "C0037-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "Thus, it is very meaningful to study entity linking among different languages.",
+      "confidence": "medium"
+    },
+    "possible_improvements-23-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Challenges and Conclusion",
+      "span_id": "C0037-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "It can be regarded as a new challenge to balance accuracy and computing complexity in the future work.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-24-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Challenges and Conclusion",
+      "span_id": "C0037-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "Many knowledge bases are incomplete because of the slow updating.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-24-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Challenges and Conclusion",
+      "span_id": "C0037-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "These short texts lack enough disambiguation information ... full of challenges.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-24-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Challenges and Conclusion",
+      "span_id": "C0037-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "There are few works studying on the multilingual entity linking ... which lead to the low accuracy of multilingual entity linking.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper surveys entity linking as the problem of identifying ambiguous named-entity mentions in natural-language text and mapping them to the corresponding entities in a knowledge base, including deciding when a mention has no corresponding knowledge-base entity. It positions entity linking as a prerequisite for knowledge-base population and knowledge fusion.",
+  "methodology": {
+    "primary_family": "not_reported",
+    "secondary_families": [
+      "Linguistic and dependency-based extraction",
+      "Classical machine learning",
+      "Neural NLP pipelines",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "not_reported",
+    "description": "This is a survey and framework paper rather than a single newly trained entity-linking system. Its general execution pipeline is: (1) detect query mentions with named-entity recognition or word segmentation; (2) generate candidate entities from a knowledge base using a surface-form dictionary, direct indexed search, or mention-entity probability p(e|m); (3) rank or classify candidates using context similarity, lexical/type/popularity/topic features, probabilistic or classical machine-learning models, neural semantic representations, or graph-based collective inference; (4) select the top entity when its score exceeds a threshold, otherwise output NIL; and (5) optionally cluster NIL mentions referring to the same unseen entity using string similarity, hierarchical agglomerative clustering, or semantic graphs. The paper also distinguishes coreference resolution, which clusters mentions within text, from entity linking, which maps mentions to knowledge-base entities."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The reviewed methods rely on an external knowledge base rather than discovering an ontology or schema. Discussed resources include Wikipedia, DBpedia, YAGO, and TAC-KBP. DBpedia is described as representing entities with URIs, attributes, values, and RDF structure; Wikipedia-derived surface forms, redirects, disambiguation pages, hyperlinks, and aliases support candidate generation and disambiguation.",
+    "evidence": [
+      {
+        "span_id": "C0037-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "The major knowledge base will be illustrated as follows: Wikipedia ... DBpedia ... YAGO ... TAC-KBP."
+      },
+      {
+        "span_id": "C0037-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "DBpedia organize the structured data into the RDF form. It utilizes URI represent an entity and some attributes with their values describe the information of an entity."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Entity and concept extraction through named entity recognition or word segmentation",
+    "Entity typing as a candidate-disambiguation feature",
+    "Coreference resolution discussed as a related mention-clustering task",
+    "Entity resolution and linking to a knowledge-base entity",
+    "Candidate generation from dictionaries, indexed search, aliases, or p(e|m)",
+    "Candidate disambiguation using similarity, machine learning, neural, probabilistic, or graph methods",
+    "NIL detection when no candidate exceeds a threshold",
+    "Knowledge fusion and deduplication supported by mapping surface variants to one entity",
+    "NIL clustering for unseen entities",
+    "Graph construction or knowledge-base population enabled by the resulting links"
+  ],
+  "input_output": {
+    "input_type": "Unstructured web text, including news articles, short texts, tweets, and query text containing named entities.",
+    "input_granularity": "Document or text mention level: long texts usually contain more than 400 words, while short texts average fewer than 200 words; the reviewed example processes several mentions in one sentence/document.",
+    "output_representation": "A link from each query mention to a knowledge-base entity identifier, or NIL when no matching entity exists; NIL mentions may subsequently receive a shared cluster identifier."
+  },
+  "models_and_tools": [
+    "Stanford NER system for named-entity recognition",
+    "NLPIR word segmentation and word tags in the Chinese example",
+    "Dictionary and exact/loose string matching",
+    "Direct indexed knowledge-base search",
+    "Cosine, Jaccard, Dice, WLM, and PMI similarity measures",
+    "Naive Bayes, C4.5, binary logistic regression, SVM, Ranking Perceptron, and ListNet",
+    "Probabilistic p(e|m) and p(e|m,c) models",
+    "LDA topic distributions",
+    "Neural networks and deep semantic relatedness models",
+    "Random-walk, dense-subgraph, and other graph-based collective-linking methods",
+    "String similarity, hierarchical agglomerative clustering, and semantic graphs for NIL clustering"
+  ],
+  "datasets": [
+    "KORE50",
+    "AIDA-CoNLL",
+    "NEEL 2016",
+    "OKE2016",
+    "AQUAINT",
+    "TAC-KBP, including TAC-KBP2011"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Accuracy",
+      "Precision",
+      "Recall",
+      "Fα-measure, usually with α=1",
+      "Micro average",
+      "Macro average",
+      "InKB precision and recall",
+      "NIL precision and recall"
+    ],
+    "baselines": "not_reported",
+    "setting": "Survey-level comparison of entity-linking methods, knowledge bases, benchmark datasets, and evaluation criteria. The paper does not report a new controlled experiment with a single system, dataset split, or baseline configuration."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "The paper organizes entity linking into candidate entity generation, candidate entity disambiguation, linking-result selection, and optional NIL clustering.",
+      "Candidate generation is surveyed through dictionary construction, direct knowledge-base search, and probability-based selection; disambiguation is surveyed through similarity computation, machine learning, deep learning, and graph-based methods.",
+      "The review reports that a cited deep semantic relatedness model improved accuracy by 19.4% and 24.5% on two publicly available datasets; this is a result attributed to the cited method, not a new experiment in this paper.",
+      "The paper identifies Accuracy, Precision, Recall, Fα, micro averaging, macro averaging, and separate InKB/NIL evaluation as common assessment choices."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0037-D-P003-PICTURE-0001",
+        "page": 3,
+        "excerpt": "The common phases of entity linking include: candidate entity generation, candidate entity disambiguation and linking result."
+      },
+      {
+        "span_id": "C0037-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "Huang et al. ... propose a deep semantic relatedness model ... which improves the accuracy rate by 19.4% and 24.5 on two publicly available datasets respectively."
+      },
+      {
+        "span_id": "C0037-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "Most systems use the evaluation measure Accuracy ... Precision(P), Recall(R), and Fα-measure."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "[Review-level analysis] The paper provides a compact end-to-end framework for entity linking and clearly separates candidate generation, disambiguation, result selection, and NIL clustering.",
+      "[Review-level analysis] It covers multiple methodological families, from rules and lexical matching through classical learning, neural models, probabilistic models, and graph-based collective inference.",
+      "[Review-level analysis] It connects entity linking to knowledge-base population, knowledge fusion, information retrieval, and knowledge-network construction.",
+      "[Review-level analysis] It gives practical coverage of knowledge bases, benchmark datasets, and evaluation measures, including the often-separated NIL case."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0037-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "It can improve the performances of knowledge network construction, knowledge fusion, information retrieval, natural language processing, and knowledge base population."
+      },
+      {
+        "span_id": "C0037-D-P003-PICTURE-0002",
+        "page": 3,
+        "excerpt": "The common phases of entity linking include: candidate entity generation, candidate entity disambiguation and linking result."
+      },
+      {
+        "span_id": "C0037-D-P008-TABLE-0003",
+        "page": 8,
+        "excerpt": "We conclude six different datasets ... The evaluation measures can be divided into two categories."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "[Review-level analysis] The paper is a survey and does not provide a reproducible new system, implementation, ablation study, or controlled cross-dataset experiment.",
+      "[Review-level analysis] The framework combines heterogeneous methods and results from different studies, so the reported quantitative results are not directly comparable across datasets and settings.",
+      "[Review-level analysis] Coverage is centered on entity linking and does not provide a complete text-to-knowledge-graph treatment of relation extraction, triple extraction, ontology discovery, or graph validation.",
+      "[Review-level analysis] The taxonomy is descriptive rather than a formally defined comparison protocol with consistent datasets, splits, or computational budgets."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0037-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "In this paper, we review and summarize ... we analyze some main methods of entity linking."
+      },
+      {
+        "span_id": "C0037-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "The common phases of entity linking include: candidate entity generation, candidate entity disambiguation and linking result."
+      },
+      {
+        "span_id": "C0037-D-P008-TABLE-0003",
+        "page": 8,
+        "excerpt": "We conclude six different datasets ... most systems use the evaluation measure Accuracy."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "Knowledge bases used by entity-linking systems are often offline or lack automatic updating mechanisms, causing incompleteness because of slow updating.",
+      "Short texts such as tweets contain insufficient disambiguation context.",
+      "Multilingual entity linking remains limited by translation, model portability, and the lack of large-scale training corpora, resulting in low accuracy.",
+      "More complex machine-learning models can improve accuracy but increase time complexity, creating an accuracy-versus-computational-complexity trade-off."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0037-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "The knowledge bases utilized in the entity linking systems are offline databases or extracted from the online database but lacking in automatic update mechanism."
+      },
+      {
+        "span_id": "C0037-D-P009-TEXT-0002",
+        "page": 9,
+        "excerpt": "These short texts lack enough disambiguation information ... the disambiguation of mentions on short texts is full of challenges."
+      },
+      {
+        "span_id": "C0037-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "This task is limited by the problems of translation between languages, the portability of the models and gaining the large-scale training corpus."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "[Review-level inference] Add automated or near-real-time knowledge-base updating and evidence-mining mechanisms to reduce incompleteness and improve disambiguation for poorly described entities.",
+      "[Review-level inference] Use richer document-level, relational, and external-web evidence for short-text disambiguation.",
+      "[Review-level inference] Develop multilingual or cross-lingual models with better translation, portability, and training-data efficiency.",
+      "[Review-level inference] Evaluate accuracy and computational cost jointly when selecting complex disambiguation models."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0037-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "It requires us to mine more evidences for the entity with little information. Hence, exploring a good method to extract more online information can improve the performance of entity linking."
+      },
+      {
+        "span_id": "C0037-D-P009-TEXT-0002",
+        "page": 9,
+        "excerpt": "Thus, it is very meaningful to study entity linking among different languages."
+      },
+      {
+        "span_id": "C0037-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "It can be regarded as a new challenge to balance accuracy and computing complexity in the future work."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Automatic knowledge-base updating and maintaining complete entity information remain unresolved.",
+      "Entity linking in short, context-poor texts remains difficult.",
+      "Multilingual entity linking remains under-studied and affected by translation, portability, and limited training data.",
+      "Balancing disambiguation accuracy with computational complexity remains unresolved.",
+      "NIL detection and clustering remain necessary for entities absent from the knowledge base."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0037-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "Many knowledge bases are incomplete because of the slow updating."
+      },
+      {
+        "span_id": "C0037-D-P009-TEXT-0002",
+        "page": 9,
+        "excerpt": "These short texts lack enough disambiguation information ... full of challenges."
+      },
+      {
+        "span_id": "C0037-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "There are few works studying on the multilingual entity linking ... which lead to the low accuracy of multilingual entity linking."
+      }
+    ]
+  },
+  "code_and_data_availability": "not_reported"
+}

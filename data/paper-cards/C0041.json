@@ -1,0 +1,766 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0041",
+    "title": "Named Entity Extraction for Knowledge Graphs: A Literature Overview",
+    "pdf_path": "data/pdfs/C0041.pdf",
+    "authors": [
+      "Tareq Al-Moslmi",
+      "Marc Gallofré Ocaña",
+      "Andreas L. Opdahl",
+      "Csaba Veres"
+    ],
+    "year": 2020,
+    "venue": "IEEE Access, Volume 8",
+    "identifier": {
+      "status": "reported",
+      "value": "10.1109/ACCESS.2020.2973928",
+      "evidence": [
+        {
+          "span_id": "C0041-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "Digital Object Identifier 10.1109/ACCESS.2020.2973928."
+        }
+      ]
+    },
+    "abstract": "Literature overview of named-entity extraction for lifting natural-language text to knowledge graphs. It covers named-entity recognition (NER), named-entity disambiguation (NED), and named-entity linking (NEL); observes that NED/NEL often rely on older NER approaches; identifies a need for standard evaluation; and characterizes a shift from isolated sequential processes to context-aware, joint, end-to-end deep-learning approaches.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Publication header",
+      "span_id": "C0041-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "TAREQ AL-MOSLMI, MARC GALLOFRÉ OCAÑA, ANDREAS L. OPDAHL, AND CSABA VERES.",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication header",
+      "span_id": "C0041-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Received December 12, 2019, accepted January 7, 2020, date of publication February 14, 2020.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication metadata",
+      "span_id": "C0041-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Subject: IEEE Access;2020;8; ... 10.1109/ACCESS.2020.2973928; footer: VOLUME 8, 2020.",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Publication header",
+      "span_id": "C0041-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Digital Object Identifier 10.1109/ACCESS.2020.2973928.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0041-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The paper presents an overview of recent advances ... covering: Named Entity Recognition (NER), Named Entity Disambiguation (NED), and Named Entity Linking (NEL).",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-02": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0041-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "NEL has recently moved from being stepwise and isolated into an integrated process ... end-to-end processes ... entities ... lifted in each other's context.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0041-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "This paper therefore presents a literature overview of recent advances ... central for lifting NL texts to KGs: that of extracting named entities from texts.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0041-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "A total of 362 articles were identified based on abstract filtering, and 89 papers remained after closer screening.",
+      "confidence": "medium"
+    },
+    "methodology-description-07-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0041-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "To identify suitable articles we have searched six digital libraries: ACM, IEEE, Science Direct, Springer, WoS, and Google Scholar.",
+      "confidence": "medium"
+    },
+    "methodology-description-07-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "III. Representing Named Entities in KGs",
+      "span_id": "C0041-D-P002-PICTURE-0002",
+      "page": 2,
+      "excerpt": "NER attempts to find every segment ... NED attempts to determine which named entity a mention refers to ... NEL attempts to provide a standard IRI.",
+      "confidence": "medium"
+    },
+    "methodology-description-07-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "V. Conclusion",
+      "span_id": "C0041-D-P016-TEXT-0003",
+      "page": 16,
+      "excerpt": "NEL has moved from being a pipeline of clear and isolated steps into an integrated process ... joint learning and end-to-end processes.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-08-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "II.B. Knowledge Graphs",
+      "span_id": "C0041-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "KGs can leverage existing standards such as RDF, RDFS, and OWL.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-08-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "III.D.5. Datasets and KBs Used for NEL",
+      "span_id": "C0041-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "The most popular ones are DBpedia, Freebase, Wikidata, and Wikipedia.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-09-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "II.B–III.A",
+      "span_id": "C0041-D-P002-PICTURE-0001",
+      "page": 2,
+      "excerpt": "Figure 2 shows the resulting sequence of tasks from NL to KGs ... approaches usually rely on standard pre-processing steps.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-09-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "III. Representing Named Entities in KGs",
+      "span_id": "C0041-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "NER ... find every segment ... NED ... determine which named entity ... NEL ... provide a standard IRI.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-09-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "III.D.3. Disambiguation-Only NEL Methods",
+      "span_id": "C0041-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "PIKES ... integrate entity mentions into a single RDF graph. Then ... mapping rules [produce] a KG organized around semantic frames.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-10-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0041-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "An enormous amount of digital information is expressed as natural-language (NL) text that is not easily processable by computers.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-10-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "IV.C. Text Types",
+      "span_id": "C0041-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "The limited set of papers that discussed short texts like tweets ... micro posts ... SMS texts, and chats ...",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-11-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "III. Representing Named Entities in KGs",
+      "span_id": "C0041-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "A mention is a piece of text that refers to an entity.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-11-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "IV.C. Text Types",
+      "span_id": "C0041-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "In general, most of the proposed methods are optimized for either short or long texts. Few studies have considered both.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-12-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "III. Representing Named Entities in KGs",
+      "span_id": "C0041-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "NEL attempts to provide a standard IRI for each disambiguated entity.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-12-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "III.D.3. Disambiguation-Only NEL Methods",
+      "span_id": "C0041-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "FRED ... produces OWL/RDF representations of texts.",
+      "confidence": "medium"
+    },
+    "models_and_tools-13-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "II.A. Natural Language Processing",
+      "span_id": "C0041-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Many well-established techniques and tools are already available ... GATE ... IBM Watson ... NLTK, Stanford CoreNLP, DBpedia Spotlight ... OpenIE, MinIE.",
+      "confidence": "medium"
+    },
+    "models_and_tools-13-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "III.B. Named Entity Recognition",
+      "span_id": "C0041-D-P003-PICTURE-0002",
+      "page": 3,
+      "excerpt": "We divide [NER approaches] into three main categories ... rule- or knowledge-based ... learning-based ... feature-inferring neural-network approaches.",
+      "confidence": "medium"
+    },
+    "models_and_tools-13-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "III.D.1. Types, Tasks, and Techniques",
+      "span_id": "C0041-D-P008-PICTURE-0003",
+      "page": 8,
+      "excerpt": "NEL has three main sub-tasks: candidate-entity generation, candidate-entity ranking or disambiguation, and NIL clustering.",
+      "confidence": "medium"
+    },
+    "datasets-14-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "III.A. Pre-processing",
+      "span_id": "C0041-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "CoNLL2003, the most popular dataset for NER, has already applied tokenization, POS tagging, and a chunking to the raw data.",
+      "confidence": "medium"
+    },
+    "datasets-14-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "III.D.2. Previous NEL Results",
+      "span_id": "C0041-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "Figure 10 and Table 1 summarize the evaluation results ... on the most commonly used dataset: AIDA-CoNLL.",
+      "confidence": "medium"
+    },
+    "datasets-14-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "III.D.5. Datasets and KBs Used for NEL",
+      "span_id": "C0041-D-P012-TABLE-0003",
+      "page": 12,
+      "excerpt": "Many NEL datasets have been published and used in previous studies. Table 5 shows the NEL datasets ... The most popular [KBs] are DBpedia, Freebase, Wikidata, and Wikipedia.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-15-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "IV.D. Evaluation",
+      "span_id": "C0041-D-P013-TEXT-0001",
+      "page": 13,
+      "excerpt": "Most of the selected studies have used the standard evaluation metrics for NLP tasks: precision, recall, F-measure, and accuracy.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-15-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "IV.E. NLP Tools and APIs",
+      "span_id": "C0041-D-P014-CAPTION-0002",
+      "page": 14,
+      "excerpt": "Evaluation of tools using GERBIL — strong annotation; Evaluation of tools using GERBIL — weak annotation.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-16-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "III.D.2. Previous NEL Results",
+      "span_id": "C0041-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "Machine-learning and collective-linking based methods clearly outperform the entity-by-entity methods.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-16-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "III.C.3. Joint NER and NED",
+      "span_id": "C0041-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "Results are better compared to DBpedia Spotlight, Stanford NER, and the AIDA disambiguation system.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-16-03": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "III.D.4. End-to-End NEL Methods",
+      "span_id": "C0041-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "The results of using the joint model are compared to using NER and NEL separately, showing that the joint model outperforms the individual ones.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-17-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0041-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Papers that investigated approaches to named-entity extraction, were published in 2014–2019, and had sufficient quality were then considered further.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-17-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "IV.D. Evaluation",
+      "span_id": "C0041-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "Only a few studies have used the GERBIL framework for benchmarking NER and NEL systems. GERBIL outputs comparable evaluation results.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-17-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "IV.D. Evaluation",
+      "span_id": "C0041-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "Some studies have used different cross-validation settings. This makes comparison more difficult and potentially unfair.",
+      "confidence": "medium"
+    },
+    "main_results-18-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0041-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "A total of 362 articles were identified based on abstract filtering, and 89 papers remained after closer screening.",
+      "confidence": "medium"
+    },
+    "main_results-18-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "III.D.2. Previous NEL Results",
+      "span_id": "C0041-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "There is no perfect NEL model for all datasets. The best model for one dataset may perform poorly on others.",
+      "confidence": "medium"
+    },
+    "main_results-18-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "III.D.4. End-to-End NEL Methods",
+      "span_id": "C0041-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "The best end-to-end results were produced by the approach presented in [97], followed by [98].",
+      "confidence": "medium"
+    },
+    "main_results-18-04": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "IV.E. NLP Tools and APIs",
+      "span_id": "C0041-D-P014-TEXT-0004",
+      "page": 14,
+      "excerpt": "Their precision were at most 81% while their recall did not exceed 68%.",
+      "confidence": "medium"
+    },
+    "strengths-19-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "III.D.1. Types, Tasks, and Techniques",
+      "span_id": "C0041-D-P008-PICTURE-0001",
+      "page": 8,
+      "excerpt": "NEL has three main sub-tasks: candidate-entity generation, candidate-entity ranking or disambiguation, and NIL clustering.",
+      "confidence": "medium"
+    },
+    "strengths-19-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "IV.D. Evaluation",
+      "span_id": "C0041-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "Repeatable and reliable methods are required to evaluate and compare methods that have similar aim and scope.",
+      "confidence": "medium"
+    },
+    "strengths-19-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "V. Conclusion",
+      "span_id": "C0041-D-P016-TEXT-0003",
+      "page": 16,
+      "excerpt": "NEL has moved ... into an integrated process ... sequential steps are now being integrated by joint learning and end-to-end processes.",
+      "confidence": "medium"
+    },
+    "weaknesses-20-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "III.B. Named Entity Recognition",
+      "span_id": "C0041-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "This paper will not review NER approaches in greater detail, because they are already well summarized in recent surveys.",
+      "confidence": "medium"
+    },
+    "weaknesses-20-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "IV.D. Evaluation",
+      "span_id": "C0041-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "Although comparing approaches across tasks, languages and domains will always be difficult ...",
+      "confidence": "medium"
+    },
+    "weaknesses-20-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "V. Conclusion",
+      "span_id": "C0041-D-P016-TEXT-0003",
+      "page": 16,
+      "excerpt": "In our future work we plan to develop complementary overviews that also cover lifting of general concepts and of relations between entities.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-21-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "III.D.4. End-to-End NEL Methods",
+      "span_id": "C0041-D-P012-TEXT-0001",
+      "page": 12,
+      "excerpt": "Their accuracy drops dramatically when trained on or applied to small datasets ... end-to-end approaches have not yet taken the NIL problem sufficiently into account.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-21-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "IV.A. Languages",
+      "span_id": "C0041-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "Dealing with multilingual texts in general has so far received little attention ... limited availability of training datasets for languages other than English.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-21-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "IV.E. NLP Tools and APIs",
+      "span_id": "C0041-D-P014-TEXT-0003",
+      "page": 14,
+      "excerpt": "Most of the tools are built for only one or a limited number of languages, and they are hard to adapt to new settings.",
+      "confidence": "medium"
+    },
+    "possible_improvements-22-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "III.B. Named Entity Recognition",
+      "span_id": "C0041-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "There is a need to exploit [state-of-the-art NER] outputs to achieve more precise and complete lifting.",
+      "confidence": "medium"
+    },
+    "possible_improvements-22-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "IV.D. Evaluation",
+      "span_id": "C0041-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "To evaluate NEL on non-popular entities or on specific domains, benchmark datasets that link to domain-specific resources and long-tail entities are needed.",
+      "confidence": "medium"
+    },
+    "possible_improvements-22-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "V. Conclusion",
+      "span_id": "C0041-D-P016-TEXT-0003",
+      "page": 16,
+      "excerpt": "A comparative evaluation of state-of-the-art methods in the same environment using the same settings and datasets is another research direction.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-23-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "III.D.1. Types, Tasks, and Techniques",
+      "span_id": "C0041-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "NIL clustering has so far received less attention than the other sub tasks.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-23-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "IV.B. Domains",
+      "span_id": "C0041-D-P013-TEXT-0002",
+      "page": 13,
+      "excerpt": "The few systems proposed so far suffer from low accuracy.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-23-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "IV.F. Main Findings and Open Directions",
+      "span_id": "C0041-D-P016-TEXT-0003",
+      "page": 16,
+      "excerpt": "Lifting approaches are usually assessed using tasks that do not focus on specific semantic web and KG aims.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses how named entities in unstructured natural-language text can be recognized, disambiguated, and linked to knowledge-base resources as a central part of lifting text into computer-processable knowledge graphs. Its objective is to consolidate advances from 2014–2019, organize NER/NED/NEL methods and their sub-tasks, summarize datasets, tools, and reported comparative results, and identify evaluation and research gaps.",
+  "methodology": {
+    "primary_family": "not_reported",
+    "secondary_families": "not_reported",
+    "system_type": "not_reported",
+    "supervision_setting": "not_reported",
+    "description": "This is a literature overview, not a new executable Text-to-KG system, so no single methodology family, system type, or supervision setting is applicable. The authors searched ACM, IEEE, ScienceDirect, Springer, Web of Science, and Google Scholar for sufficiently high-quality, in-scope 2014–2019 papers on at least one of NER, NED, and NEL; they screened 362 abstracts down to 89 core papers, categorized them by task, and added a few papers through snowballing. The review presents the operational sequence from preprocessing through NER, NED, and NEL: NER identifies mention spans; NED resolves the intended entity; NEL assigns a KB/LOD IRI. It classifies NER as rule/knowledge-based, learning-based, and feature-inferring neural approaches; NED as traditional independent/collective and neural approaches; and NEL as independent/feature-engineering, collective, and neural approaches, also distinguishing disambiguation-only from end-to-end/joint methods. Its detailed contributions are: (1) an integrated NER–NED–NEL framing of named-entity extraction for KG lifting; (2) diagrams of the NL-to-KG workflow and NEL sub-tasks; (3) consolidated comparisons of reported NEL results, datasets, KB targets, and tools; (4) a synthesis of trends toward joint and end-to-end context-aware neural methods; and (5) a research agenda covering NER integration, multilinguality, domain transfer, NIL entities, and comparable KG-oriented evaluation."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The reviewed Text-to-KG setting uses knowledge bases and Linked Open Data resources as linking targets, with IRIs and vocabularies/ontologies such as RDF, RDFS, OWL, DBpedia, Wikidata, Freebase, Wikipedia, WordNet, and BabelNet. The review does not introduce or learn a new ontology/schema.",
+    "evidence": [
+      {
+        "span_id": "C0041-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "KGs can leverage existing standards such as RDF, RDFS, and OWL."
+      },
+      {
+        "span_id": "C0041-D-P012-TEXT-0002",
+        "page": 12,
+        "excerpt": "The most popular ones are DBpedia, Freebase, Wikidata, and Wikipedia."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing",
+    "Entity and concept extraction",
+    "Entity typing",
+    "Entity resolution and linking",
+    "Graph construction"
+  ],
+  "input_output": {
+    "input_type": "Unstructured natural-language text, including documents and shorter/noisy text such as tweets, micro-posts, SMS texts, and chats, as discussed across reviewed studies.",
+    "input_granularity": "Mention spans within sentences/documents; reviewed methods include both short texts and longer documents, although most are optimized for one or the other.",
+    "output_representation": "Recognized named-entity mentions and types; disambiguated entity identities; and NEL annotations that map each mention to an IRI in a KB/LOD resource. Some reviewed systems construct RDF/OWL graphs or KGs."
+  },
+  "models_and_tools": [
+    "NER families: hand-crafted rule/knowledge-based systems; supervised, semi-supervised, and unsupervised/bootstrapped machine learning; feature-inferring deep neural networks",
+    "NED techniques: hand-designed semantic-similarity features, BOW/cosine similarity, graph connectedness, random walks/PageRank, word2vec embeddings, neural networks, and attention",
+    "NEL techniques: candidate-entity generation, candidate ranking/disambiguation, NIL clustering; independent, collective, and neural methods; joint/end-to-end linking",
+    "Named tools/systems include GATE, IBM Watson, NLTK, Stanford CoreNLP/NER, DBpedia Spotlight, OpenIE, MinIE, AGDISTIS, Babelify/Babelfy, TagME, AIDA/Ambiverse, PIKES, FRED, EEL, GERBIL, spaCy, TextBlob, OpenNLP, Pangloss, TEXTPRO, GATE ANNIE, NLP-Ce, YODIE, FOX, PKE, and OpenCalais"
+  ],
+  "datasets": [
+    "AIDA-CoNLL (identified as the most commonly used NEL dataset)",
+    "WNED-CWEB",
+    "Reuters128",
+    "RSS-500",
+    "AQUAINT",
+    "ACE2004",
+    "WNED-WIKI",
+    "CoNLL2003 (identified as the most popular NER dataset)",
+    "Knowledge-base targets discussed: DBpedia, Freebase, Wikidata, and Wikipedia"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Precision",
+      "Recall",
+      "F-measure",
+      "Accuracy",
+      "Strong and weak annotation-match settings in GERBIL evaluations"
+    ],
+    "baselines": [
+      "The review reports comparisons among prior NEL systems rather than defining an original experimental baseline. Examples include entity-by-entity, machine-learning, and collective-linking methods; DBpedia Spotlight, Stanford NER, AIDA, FRED, and individual NER/NEL models are comparison systems in cited studies.",
+      "For an end-to-end joint NER/NEL model, the reported comparison is against NER and NEL applied separately."
+    ],
+    "setting": "This paper does not run a new common experiment; it synthesizes prior evaluations. Its review protocol searched six digital libraries, included sufficiently high-quality 2014–2019 papers addressing NER, NED, or NEL, retained 89 core papers after screening, and used snowballing for additional papers. It emphasizes that prior evaluations differ by task, language, domain, dataset, KB version, and cross-validation configuration. GERBIL is noted as a framework used by only a few studies to produce comparable NER/NEL benchmarking results."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "The review identifies 362 articles through abstract filtering and retains 89 core papers after closer screening.",
+      "The reported methodological trajectory is from rule-based and feature-engineered/sequential approaches toward neural, joint, and end-to-end approaches that model context and reduce error propagation.",
+      "Across the survey's reported comparisons, there is no universally best NEL model: methods that lead on one dataset can perform poorly on others; the authors call for models that work across data types.",
+      "The paper reports that Ment-norm [97] achieved the best reported end-to-end AIDA-CoNLL result, followed by the model in [98]; for disambiguation-only results, [93] followed by [94]–[96] were reported as best on AIDA-CoNLL. These are findings attributed to the surveyed literature, not experiments conducted by this paper.",
+      "The survey reports that evaluated common tools remained below state of the art: Babelfy and Ambiverse had precision of at most 81%, and recall did not exceed 68% in the cited evaluation."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0041-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "A total of 362 articles were identified based on abstract filtering, and 89 papers remained after closer screening."
+      },
+      {
+        "span_id": "C0041-D-P009-TEXT-0002",
+        "page": 9,
+        "excerpt": "There is no perfect NEL model for all datasets. The best model for one dataset may perform poorly on others."
+      },
+      {
+        "span_id": "C0041-D-P011-TEXT-0003",
+        "page": 11,
+        "excerpt": "The best end-to-end results were produced by the approach presented in [97], followed by [98]."
+      },
+      {
+        "span_id": "C0041-D-P014-TEXT-0004",
+        "page": 14,
+        "excerpt": "Their precision were at most 81% while their recall did not exceed 68%."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "The review supplies a clear, KG-oriented decomposition from preprocessing through NER, NED, and NEL, including precise distinctions between mention recognition, identity resolution, and IRI assignment.",
+      "It systematically connects technical mechanisms, datasets, KB targets, tools, evaluation issues, languages, domains, and text types rather than treating NEL results alone.",
+      "Its diagrams and result tables make the execution pipeline, NEL sub-tasks, and literature-reported comparative findings easier to inspect.",
+      "It explicitly separates disambiguation-only from practical end-to-end approaches and surfaces the importance of joint/contextual modelling.",
+      "Review-level inference: because the paper synthesizes 89 screened core papers and directly documents comparability caveats, it is especially useful as a 2020 map of named-entity stages within a larger Text-to-KG review; it is not evidence that any one method is universally superior."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0041-D-P008-PICTURE-0001",
+        "page": 8,
+        "excerpt": "NEL has three main sub-tasks: candidate-entity generation, candidate-entity ranking or disambiguation, and NIL clustering."
+      },
+      {
+        "span_id": "C0041-D-P013-TEXT-0002",
+        "page": 13,
+        "excerpt": "Repeatable and reliable methods are required to evaluate and compare methods that have similar aim and scope."
+      },
+      {
+        "span_id": "C0041-D-P016-TEXT-0003",
+        "page": 16,
+        "excerpt": "NEL has moved ... into an integrated process ... sequential steps are now being integrated by joint learning and end-to-end processes."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "The paper is a literature overview, not a reproducible evaluation or a proposed extraction system; its reported scores are inherited from heterogeneous source studies and should not be read as a controlled leaderboard.",
+      "Its own corpus is limited to 2014–2019 and the paper acknowledges differing tasks, languages, domains, KBs, and validation settings, which constrain direct comparison.",
+      "NER is deliberately not reviewed in detail, despite being foundational for downstream NED/NEL.",
+      "Review-level inference: the overview concentrates on named entities and linking; relation extraction, general concept lifting, full graph construction, fusion, validation, and graph updating are outside its direct method coverage."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0041-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "This paper will not review NER approaches in greater detail, because they are already well summarized in recent surveys."
+      },
+      {
+        "span_id": "C0041-D-P013-TEXT-0002",
+        "page": 13,
+        "excerpt": "Although comparing approaches across tasks, languages and domains will always be difficult ..."
+      },
+      {
+        "span_id": "C0041-D-P016-TEXT-0003",
+        "page": 16,
+        "excerpt": "In our future work we plan to develop complementary overviews that also cover lifting of general concepts and of relations between entities."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The NER–NED–NEL distinction used by the paper is not universally accepted: many researchers use NED and NEL synonymously.",
+      "No perfect NEL model performs best across all datasets; results depend on dataset characteristics and training-data amount/type.",
+      "End-to-end methods need extensive training data, have difficulty with small datasets, require contextual entity embeddings, need cross-lingual extensions, and insufficiently address NIL entities.",
+      "Multilingual and cross-lingual work is limited and less accurate than single-language approaches; limited non-English training data and translation quality are contributing issues.",
+      "Existing tools generally cover one task/language, are difficult to adapt, and can be coupled tightly to particular KBs.",
+      "Gold standards may have inconsistent annotation rules, errors, and stale links as KBs evolve; different cross-validation settings hinder fair comparisons."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0041-D-P012-TEXT-0001",
+        "page": 12,
+        "excerpt": "Their accuracy drops dramatically when trained on or applied to small datasets ... end-to-end approaches have not yet taken the NIL problem sufficiently into account."
+      },
+      {
+        "span_id": "C0041-D-P013-TEXT-0002",
+        "page": 13,
+        "excerpt": "Dealing with multilingual texts in general has so far received little attention ... limited availability of training datasets for languages other than English."
+      },
+      {
+        "span_id": "C0041-D-P014-TEXT-0003",
+        "page": 14,
+        "excerpt": "Most of the tools are built for only one or a limited number of languages, and they are hard to adapt to new settings."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Integrate disambiguation and linking with best-of-breed, contemporary NER rather than relying on older/off-the-shelf NER outputs.",
+      "Develop end-to-end and joint models that exploit dependencies among mention detection, typing, disambiguation, linking, entity context, and relations while addressing NIL entities.",
+      "Develop robust models that generalize across datasets, domains, short/long text, dynamic/open-domain settings, and languages; pursue transfer learning, domain adaptation, multilingual and cross-lingual coverage.",
+      "Create repeatable, reliable, KG/semantic-web-oriented evaluation in common environments with compatible datasets and settings, plus error analysis and maintained gold standards.",
+      "Create benchmarks with domain-specific resources and long-tail entities, and evaluate final KG/Linked Data/OWL outputs rather than only component NLP tasks."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0041-D-P004-TEXT-0001",
+        "page": 4,
+        "excerpt": "There is a need to exploit [state-of-the-art NER] outputs to achieve more precise and complete lifting."
+      },
+      {
+        "span_id": "C0041-D-P013-TEXT-0002",
+        "page": 13,
+        "excerpt": "To evaluate NEL on non-popular entities or on specific domains, benchmark datasets that link to domain-specific resources and long-tail entities are needed."
+      },
+      {
+        "span_id": "C0041-D-P016-TEXT-0003",
+        "page": 16,
+        "excerpt": "A comparative evaluation of state-of-the-art methods in the same environment using the same settings and datasets is another research direction."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Standardized and fair evaluation across NER, NED, NEL, and end-to-end systems; comparable datasets, splits/settings, KG targets, and maintained gold standards remain unresolved.",
+      "Reliable multilingual/cross-lingual named-entity extraction, especially for sparsely resourced languages, remains unresolved.",
+      "Domain adaptation and transfer from well-resourced news data to specialist domains remain difficult and current proposed systems have low accuracy.",
+      "Robust treatment of NIL/dark/emerging entities, short/noisy text, real-time data, and open/dynamic domains remains incomplete.",
+      "How to combine state-of-the-art NER with downstream NED/NEL, accommodate more entity types, represent mention/entity/relation dependencies, and evaluate KG-level semantic quality remains unresolved.",
+      "A unified lifting framework covering named entities, general concepts, and relations is still needed."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0041-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "NIL clustering has so far received less attention than the other sub tasks."
+      },
+      {
+        "span_id": "C0041-D-P013-TEXT-0002",
+        "page": 13,
+        "excerpt": "The few systems proposed so far suffer from low accuracy."
+      },
+      {
+        "span_id": "C0041-D-P016-TEXT-0003",
+        "page": 16,
+        "excerpt": "Lifting approaches are usually assessed using tasks that do not focus on specific semantic web and KG aims."
+      }
+    ]
+  },
+  "code_and_data_availability": "not_reported"
+}

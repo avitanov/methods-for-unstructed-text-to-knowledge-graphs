@@ -1,0 +1,661 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0089",
+    "title": "A Method for Traditional Chinese Medicine Knowledge Graph Dynamic Construction",
+    "pdf_path": "data/manual-pdfs/C0089.pdf",
+    "authors": [
+      "Tongyao Xu",
+      "Guo Chen",
+      "Lixin Du",
+      "Jiangying Xu",
+      "Zhang Peng",
+      "Feng Xin",
+      "Mingyue Li"
+    ],
+    "year": 2022,
+    "venue": "2022 5th International Conference on Big Data Technologies (ICBDT 2022)",
+    "identifier": {
+      "status": "reported",
+      "value": "10.1145/3565291.3565323",
+      "evidence": [
+        {
+          "span_id": "C0089-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "https://doi.org/10.1145/3565291.3565323"
+        }
+      ]
+    },
+    "abstract": "The paper proposes a dynamically growing Traditional Chinese Medicine knowledge graph construction method. Data are collected using user-input keywords, structured using BERT-CRF for named entity recognition and Bootstrapping for relation extraction, and merged into an existing knowledge graph to support dynamic construction and user-friendly search.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0089-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "TONGYAO, Xu; CHEN, Guo; LIXIN, DU; JIANGYING, Xu; PENG, Zhang; XIN, Feng; MINGYUE, Li.",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "ACM Reference Format",
+      "span_id": "C0089-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "TONGYAO, Xu, CHEN, Guo, LIXIN, DU, JIANGYING, Xu, PENG, Zhang, XIN, Feng, and MINGYUE, Li. 2022.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "ACM Reference Format",
+      "span_id": "C0089-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "In 2022 5th International Conference on Big Data Technologies (ICBDT) (ICBDT 2022), September 23–25, 2022, Qingdao, China.",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "ACM Reference Format",
+      "span_id": "C0089-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "https://doi.org/10.1145/3565291.3565323",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0089-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "First, we collect data based on user input keywords, and then, in order to obtain structured data, we use BERT-CRF method for named entity recognition and Bootstrapping method for relation extraction. Finally, we merge the structured data into the existing knowledge graph.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0089-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Most existing TCM knowledge graphs are constructed based on existing data at one time... However, the knowledge graph constructed in this way cannot dynamically grow by integrating multi-source data according to user requirements.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0089-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We use BERT-CRF method for named entity recognition and Bootstrapping method for relation extraction.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.3 Named Entity Recognition Based on BERT-CRF",
+      "span_id": "C0089-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We cooperated with experts in the field to define 6 types of entities to be identified.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.5 Knowledge Graph Refinement",
+      "span_id": "C0089-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "Then it is merged into the pre-existing knowledge graph.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3.1 Technology Roadmap",
+      "span_id": "C0089-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We collect the public data... pre-process them... Then the data are structured in the sequence of named entity identification, and relation extraction. These structured data will be merged into the original data.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.1 Technology Roadmap",
+      "span_id": "C0089-D-P002-PICTURE-0001",
+      "page": 2,
+      "excerpt": "Collect data related to the user's retrieved keywords... pre-process... named entity identification, and relation extraction... merged into the original data.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.4 Relation Extraction Based on Bootstrapping",
+      "span_id": "C0089-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "experts review M1 and determine the final set of trigger words M2... add (h, trigger word, t) to the set of triples",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.5 Knowledge Graph Refinement",
+      "span_id": "C0089-D-P003-PICTURE-0003",
+      "page": 3,
+      "excerpt": "if entity' is the same as entity in G replace all entity' in G' with entity... else if entity' not in G add entity' to G",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.3 Named Entity Recognition Based on BERT-CRF",
+      "span_id": "C0089-D-P002-TABLE-0001",
+      "page": 2,
+      "excerpt": "We cooperated with experts in the field to define 6 types of entities to be identified, including: color, form, smell, taste, cause, and symptom.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.4 Relation Extraction Based on Bootstrapping",
+      "span_id": "C0089-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "After review by experts in the field, a 'disease symptoms caused by causes' relationship is defined between the two entity types of cause and symptom.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.1 Technology Roadmap",
+      "span_id": "C0089-D-P002-PICTURE-0001",
+      "page": 2,
+      "excerpt": "We collect the public data related to the user’s retrieved keywords... pre-process them... named entity identification, and relation extraction... merged into the original data.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.4 Relation Extraction Based on Bootstrapping",
+      "span_id": "C0089-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "add (h, trigger word, t) to the set of triples",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.5 Knowledge Graph Refinement",
+      "span_id": "C0089-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "replace all entity' in G' with entity... add entity' to G... add relation' and fact' in G' to G",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3.2 Automatic Data Collection",
+      "span_id": "C0089-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "we need to obtain data related from other data sources based by the user’s retrieved keywords.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.2 Automatic Data Collection",
+      "span_id": "C0089-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "for each data in data_set, do for each sentence in data, do if sentence satisfies subsequent processing requirements, do add sentences to the TCM_data_set",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "4 Experimental Evaluation",
+      "span_id": "C0089-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "we randomly selected ten Traditional Chinese medicines and searched them in order, such as searching for 'Erdong Gao'.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Related Works",
+      "span_id": "C0089-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "the knowledge graph is defined as G = {E, R, F}, where E, R and F are sets of entities, relations, and facts, respectively. And a fact is denoted as a triple (h, r, t).",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.4 Relation Extraction Based on Bootstrapping",
+      "span_id": "C0089-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "add (h, trigger word, t) to the set of triples",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.3 Named Entity Recognition Based on BERT-CRF",
+      "span_id": "C0089-D-P002-PICTURE-0001",
+      "page": 2,
+      "excerpt": "The BERT-CRF model is divided into four layers, which are: input layer, BERT layer, CRF layer and output layer.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.4 Relation Extraction Based on Bootstrapping",
+      "span_id": "C0089-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "for each new semantic pattern is added to P... experts review M1 and determine the final set of trigger words M2",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4 Experimental Evaluation",
+      "span_id": "C0089-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "The experiment language is Python 3.8",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "3.2 Automatic Data Collection",
+      "span_id": "C0089-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We collect the public data related to the user’s retrieved keywords from several fixed websites.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4 Experimental Evaluation",
+      "span_id": "C0089-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "we randomly selected ten Traditional Chinese medicines and searched them in order, such as searching for 'Erdong Gao'.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4 Experimental Evaluation",
+      "span_id": "C0089-D-P004-TABLE-0001",
+      "page": 4,
+      "excerpt": "Count the number of entities and relations in the knowledge graph during the retrieval process.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4 Experimental Evaluation",
+      "span_id": "C0089-D-P005-CAPTION-0002",
+      "page": 5,
+      "excerpt": "The cumulative number of entities in TCM knowledge graph corresponds to the number of retrievals",
+      "confidence": "medium"
+    },
+    "evaluation-setting-19-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4 Experimental Evaluation",
+      "span_id": "C0089-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "we build knowledge graph from scratch. we randomly selected ten Traditional Chinese medicines and searched them in order... The experiment language is Python 3.8, operation system is 64-bit Windows 10. Machine has 32GB RAM and Intel i7-4790K CPU.",
+      "confidence": "medium"
+    },
+    "main_results-20-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4 Experimental Evaluation",
+      "span_id": "C0089-D-P006-TABLE-0001",
+      "page": 6,
+      "excerpt": "10 retrievals: Color 12, Form 11, Smell 5, Taste 11, Cause 20, Symptom 48, Total 107.",
+      "confidence": "medium"
+    },
+    "main_results-20-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4 Experimental Evaluation",
+      "span_id": "C0089-D-P005-PICTURE-0002",
+      "page": 5,
+      "excerpt": "The relation statistics are shown in Figure 7, and it can be seen that the number of relations gradually grows as the number of retrievals increases.",
+      "confidence": "medium"
+    },
+    "main_results-20-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Conclusions",
+      "span_id": "C0089-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "The experimental results show that the method enables the TCM knowledge graph could continuously and dynamically grow with the users’ usage process.",
+      "confidence": "medium"
+    },
+    "strengths-21-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Contributions",
+      "span_id": "C0089-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Propose a method for building a dynamically growing TCM knowledge graph, which can be triggered by user searching keywords.",
+      "confidence": "medium"
+    },
+    "strengths-21-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Abstract",
+      "span_id": "C0089-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "BERT-CRF method for named entity recognition and Bootstrapping method for relation extraction... merge the structured data into the existing knowledge graph.",
+      "confidence": "medium"
+    },
+    "strengths-21-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Experimental Evaluation",
+      "span_id": "C0089-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "Count the number of entities and relations in the knowledge graph during the retrieval process.",
+      "confidence": "medium"
+    },
+    "weaknesses-22-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusions",
+      "span_id": "C0089-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "At present, the merging method still has some shortcomings... In future, we will do deep study on discovering the implicit relationship between entities in the merging process.",
+      "confidence": "medium"
+    },
+    "weaknesses-22-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Experimental Evaluation",
+      "span_id": "C0089-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "To demonstrate the effectiveness of our method, we build knowledge graph from scratch... Count the number of entities and relations.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-23-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Conclusions",
+      "span_id": "C0089-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "At present, the merging method still has some shortcomings in the dynamically growing knowledge graph construction work of TCM.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-23-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Conclusions",
+      "span_id": "C0089-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "In future, we will do deep study on discovering the implicit relationship between entities in the merging process.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "3.5 Knowledge Graph Refinement",
+      "span_id": "C0089-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "if entity' is the same as entity in G replace all entity' in G' with entity",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Conclusions",
+      "span_id": "C0089-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "In future, we will do deep study on discovering the implicit relationship between entities in the merging process.",
+      "confidence": "medium"
+    },
+    "possible_improvements-24-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Experimental Evaluation",
+      "span_id": "C0089-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "Count the number of entities and relations in the knowledge graph during the retrieval process.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusions",
+      "span_id": "C0089-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "At present, the merging method still has some shortcomings... future... discovering the implicit relationship between entities in the merging process.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-25-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.5 Knowledge Graph Refinement",
+      "span_id": "C0089-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "if entity' is the same as entity in G replace all entity' in G' with entity",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Existing TCM knowledge graphs are generally constructed once from currently available data and therefore cannot continuously incorporate multi-source information in response to users' search needs. The paper aims to construct a TCM knowledge graph that grows dynamically when a user's query is not covered by the existing graph.",
+  "methodology": {
+    "primary_family": "Neural NLP pipelines",
+    "secondary_families": [
+      "Ontology-constrained and schema-guided methods",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "not_reported",
+    "description": "The system is a query-triggered pipeline. For each keyword in a user search, it collects related public data from several fixed websites and keeps sentences satisfying downstream processing requirements. BERT-CRF converts each sentence into BIO-labelled entity spans for six TCM-specific entity types: color, form, smell, taste, cause, and symptom. A Bootstrapping procedure begins with expert-defined semantic patterns and seed entity pairs, removes entities, participles, and stop words to identify relation-trigger candidates, expands the semantic-pattern and trigger-word sets, and uses expert review to finalize trigger words. It extracts cause–symptom triples when a finalized trigger occurs between an entity pair. The newly constructed graph is merged with the existing graph by replacing an entity in the new graph with an existing entity when they are considered the same; otherwise the entity is added, followed by adding new relations and facts. The updated graph is then shown to the user. No separate mechanism is reported for coreference resolution, general entity linking, entity typing beyond the six predefined types, ontology discovery, or graph validation beyond the merge/refinement rule."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The method uses an expert-defined extraction schema rather than discovering an ontology. Six entity types are defined—color, form, smell, taste, cause, and symptom—with 13 BIO labels. Relations are constrained to the disease-symptoms-caused-by-causes relation between cause and symptom entities; color, form, smell, and taste types are treated as already carrying relational information.",
+    "evidence": [
+      {
+        "span_id": "C0089-D-P002-TABLE-0001",
+        "page": 2,
+        "excerpt": "We cooperated with experts in the field to define 6 types of entities to be identified, including: color, form, smell, taste, cause, and symptom."
+      },
+      {
+        "span_id": "C0089-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "After review by experts in the field, a 'disease symptoms caused by causes' relationship is defined between the two entity types of cause and symptom."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "User-keyword collection and query-triggered source retrieval",
+    "Text preprocessing and filtering into sentences satisfying downstream requirements",
+    "Entity and concept extraction with BERT-CRF sequence labelling",
+    "Entity typing using six predefined TCM categories",
+    "Relation and triple extraction with expert-guided Bootstrapping",
+    "Entity resolution during graph merging by same-entity replacement",
+    "Graph construction and knowledge fusion with the pre-existing graph",
+    "Graph updating after each user retrieval",
+    "Graph display for retrieval"
+  ],
+  "input_output": {
+    "input_type": "Public Traditional Chinese Medicine textual data collected from several fixed websites in response to user search keywords.",
+    "input_granularity": "Sentence-level processing after collecting textual data; the evaluation uses data associated with searches for individual medicines.",
+    "output_representation": "Typed entity nodes and cause–symptom relation triples, merged into a dynamically updated TCM knowledge graph represented as G = {E, R, F}, where facts are triples (head, relation, tail)."
+  },
+  "models_and_tools": [
+    "BERT bidirectional Transformer encoder",
+    "Conditional Random Field (CRF) layer",
+    "BERT-CRF named entity recognition model",
+    "BIO sequence labelling with 13 labels",
+    "Bootstrapping relation extraction algorithm",
+    "Expert review of relation-trigger words",
+    "Automatic data collection and graph-merging algorithms",
+    "Python 3.8"
+  ],
+  "datasets": [
+    "TCM dataset assembled from public data collected from several fixed websites; the paper does not provide a formal dataset name or source list.",
+    "Evaluation collection consisting of ten randomly selected Traditional Chinese medicines searched sequentially, including Erdong Gao."
+  ],
+  "evaluation": {
+    "metrics": [
+      "Cumulative number of entities by type after each retrieval",
+      "Cumulative total number of entities",
+      "Cumulative number of relations after each retrieval",
+      "Qualitative observation of graph growth with user retrievals"
+    ],
+    "baselines": "not_reported",
+    "setting": "The authors build the graph from scratch, randomly select ten TCM medicines, search them in sequence, and count cumulative entities and relations as retrievals increase. The implementation uses Python 3.8 on 64-bit Windows 10 with 32 GB RAM and an Intel i7-4790K CPU. No extraction-accuracy test set, train/test split, or baseline comparison is reported."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Table 3 reports cumulative entity totals of 0, 12, 17, 29, 37, 48, 62, 76, 85, 94, and 107 after 0 through 10 retrievals, respectively.",
+      "After 10 retrievals, the entity counts are 12 color, 11 form, 5 smell, 11 taste, 20 cause, and 48 symptom entities, totaling 107.",
+      "The relation plot shows that the cumulative number of relations increases as retrievals increase; the paper concludes that the graph grows dynamically with user retrieval behavior.",
+      "The paper reports that the resulting triples are merged into the pre-existing graph to provide more comprehensive retrieval service."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0089-D-P006-TABLE-0001",
+        "page": 6,
+        "excerpt": "10 retrievals: Color 12, Form 11, Smell 5, Taste 11, Cause 20, Symptom 48, Total 107."
+      },
+      {
+        "span_id": "C0089-D-P005-PICTURE-0002",
+        "page": 5,
+        "excerpt": "The relation statistics are shown in Figure 7, and it can be seen that the number of relations gradually grows as the number of retrievals increases."
+      },
+      {
+        "span_id": "C0089-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "The experimental results show that the method enables the TCM knowledge graph could continuously and dynamically grow with the users’ usage process."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author-stated strength: the method is triggered by user search keywords and can integrate public multi-source data incrementally instead of relying only on a one-time graph construction.",
+      "Author-stated strength: BERT-CRF is used for entity extraction and Bootstrapping for relation extraction, followed by merging structured data into an existing graph.",
+      "Review-level inference: the explicit six-type schema and cause–symptom relation restrict the extraction space, which may simplify implementation in the targeted TCM setting.",
+      "Review-level inference: the evaluation directly tests the intended dynamic-growth behavior by tracking graph contents across successive retrievals."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0089-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "Propose a method for building a dynamically growing TCM knowledge graph, which can be triggered by user searching keywords."
+      },
+      {
+        "span_id": "C0089-D-P001-TEXT-0002",
+        "page": 1,
+        "excerpt": "BERT-CRF method for named entity recognition and Bootstrapping method for relation extraction... merge the structured data into the existing knowledge graph."
+      },
+      {
+        "span_id": "C0089-D-P004-TEXT-0003",
+        "page": 4,
+        "excerpt": "Count the number of entities and relations in the knowledge graph during the retrieval process."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author-stated weakness: the current merging method has shortcomings in dynamically growing knowledge graph construction.",
+      "Author-stated weakness: discovering implicit relationships between entities remains unresolved in the merging process.",
+      "Review-level inference: the evaluation measures graph growth rather than precision, recall, F1, entity-linking accuracy, relation-extraction accuracy, or graph correctness.",
+      "Review-level inference: the method supports only six predefined entity types and one explicitly defined cause–symptom relation, limiting coverage of broader TCM knowledge.",
+      "Review-level inference: the paper does not describe a reproducible corpus, annotation procedure, model-training details, source websites, or comparison baseline."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0089-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "At present, the merging method still has some shortcomings... In future, we will do deep study on discovering the implicit relationship between entities in the merging process."
+      },
+      {
+        "span_id": "C0089-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "To demonstrate the effectiveness of our method, we build knowledge graph from scratch... Count the number of entities and relations."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The authors state that the merging method still has shortcomings in dynamically growing knowledge graph construction.",
+      "The authors identify discovery of implicit relationships between entities during merging as future work."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0089-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "At present, the merging method still has some shortcomings in the dynamically growing knowledge graph construction work of TCM."
+      },
+      {
+        "span_id": "C0089-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "In future, we will do deep study on discovering the implicit relationship between entities in the merging process."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Review-level inference: add explicit entity-resolution and canonicalization procedures with documented matching criteria before replacing new entities with existing entities.",
+      "Review-level inference: evaluate entity recognition and relation extraction against manually annotated data using precision, recall, and F1, and report graph-level correctness after merging.",
+      "Review-level inference: expand the ontology/schema beyond six entity types and one cause–symptom relation, while preserving expert validation.",
+      "Review-level inference: develop methods for implicit relation discovery during graph merging, as explicitly identified by the authors.",
+      "Review-level inference: publish the source corpus, annotation guidelines, semantic patterns, trigger words, model configuration, and evaluation scripts for reproducibility."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0089-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "if entity' is the same as entity in G replace all entity' in G' with entity"
+      },
+      {
+        "span_id": "C0089-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "In future, we will do deep study on discovering the implicit relationship between entities in the merging process."
+      },
+      {
+        "span_id": "C0089-D-P004-TEXT-0003",
+        "page": 4,
+        "excerpt": "Count the number of entities and relations in the knowledge graph during the retrieval process."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Implicit relationships between entities are not discovered by the reported merging method.",
+      "The paper leaves broader graph-merging shortcomings unresolved.",
+      "Review-level inference: the paper does not establish whether extracted entities and relations are correct, whether duplicate entities are reliably resolved, or whether the updated graph remains free of erroneous facts.",
+      "Review-level inference: coverage of TCM concepts and relations outside the six entity types and cause–symptom relation remains unresolved."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0089-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "At present, the merging method still has some shortcomings... future... discovering the implicit relationship between entities in the merging process."
+      },
+      {
+        "span_id": "C0089-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "if entity' is the same as entity in G replace all entity' in G' with entity"
+      }
+    ]
+  },
+  "code_and_data_availability": "not_reported"
+}

@@ -1,0 +1,800 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0133",
+    "title": "Bootstrapped Self Training for Knowledge Base Population.",
+    "pdf_path": "data/batches/batch-04/C0133.pdf",
+    "authors": [
+      "Gabor Angeli",
+      "Victor Zhong",
+      "Danqi Chen",
+      "Arun Chaganty",
+      "Jason Bolton",
+      "Melvin Johnson Premkumar",
+      "Panupong Pasupat",
+      "Sonal Gupta",
+      "Christopher D. Manning"
+    ],
+    "year": "not_reported",
+    "venue": "not_reported",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "A central challenge in relation extraction is the lack of supervised training data. Pattern-based relation extractors suffer from low recall, whereas distant supervision yields noisy data which hurts precision. We propose bootstrapped self-training to capture the benefits of both systems: the precision of patterns and the generalizability of trained models. We show that training on the output of patterns drastically improves performance over the patterns. We propose self-training for further improvement: recall can be improved by incorporating the predictions from previous iterations; precision by filtering the assumed negatives based previous predictions. We show that even our pattern-based model achieves good performance on the task, and the self-trained models rank among the top systems.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Front matter",
+      "span_id": "C0133-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Gabor Angeli, Victor Zhong, Danqi Chen, Arun Chaganty, Jason Bolton, Melvin Johnson Premkumar, Panupong Pasupat, Sonal Gupta, Christopher D. Manning",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-02-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0133-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Pattern-based relation extractors suffer from low recall, whereas distant supervision yields noisy data which hurts precision. We propose bootstrapped self-training to capture the benefits of both systems.",
+      "confidence": "medium"
+    },
+    "problem_addressed-03-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0133-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "A central challenge in relation extraction is the lack of supervised training data. Pattern-based relation extractors suffer from low recall, whereas distant supervision yields noisy data which hurts precision.",
+      "confidence": "medium"
+    },
+    "problem_addressed-03-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0133-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "We present an approach – bootstrapped self-training – to relation extraction which mitigates the weaknesses of each of these approaches while preserving much of their benefits.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-04-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3.6 LSTM Extractor",
+      "span_id": "C0133-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "We propose a recurrent neural networks based model to automatically learn feature representations useful for the task.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-05-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.1 Patterns",
+      "span_id": "C0133-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "The base system for our bootstrapping process is a pattern-based relation extractor.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-05-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.5 Traditional Extractor",
+      "span_id": "C0133-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The first of two trained models is a traditional relation extractor, implemented using l1 regularized logistic regression.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-05-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.1 Patterns",
+      "span_id": "C0133-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "This yielded a total of 4528 Tokensregex patterns and 169 Semgrex patterns.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-06-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "2 System Design and Architecture",
+      "span_id": "C0133-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Traditionally, slot filling systems have been structured as a pipeline beginning with an information retrieval system, and then passing through an entity linker, a relation extractor, and finally a consistency component.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-06-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "2 System Design and Architecture",
+      "span_id": "C0133-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Relation extraction then becomes a simple matter of taking as input such a relation mention table, joined with its provenance sentence, and outputting the relations expressed by each row.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-07-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "4 Training",
+      "span_id": "C0133-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We run the union of these two high-precision systems on the entire source corpus, and collect the output predictions as a training dataset.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-07-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "4 Training",
+      "span_id": "C0133-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "This is added to the supervised data released in Angeli et al. (2014b), 5000 assumed negatives from each of the 41 relations, and a small corpus of additional hand-annotated relations.",
+      "confidence": "medium"
+    },
+    "methodology-description-08-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "2 System Design and Architecture",
+      "span_id": "C0133-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "At the center of this framework are two tables... populated by running Stanford CoreNLP and the Illinois Wikifier on the 2010 and 2013 source corpora.",
+      "confidence": "medium"
+    },
+    "methodology-description-08-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4 Training",
+      "span_id": "C0133-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "We run the union of these two high-precision systems on the entire source corpus, and collect the output predictions as a training dataset.",
+      "confidence": "medium"
+    },
+    "methodology-description-08-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "4.1 Model Combination",
+      "span_id": "C0133-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "We train a classifier taking as input a candidate relation produced by at least one of the extractors, and as output a judgment for whether to keep that prediction or not.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-09-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "2 System Design and Architecture",
+      "span_id": "C0133-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The resulting extractions mapped back into the KBP relation schema.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-09-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "System data tables",
+      "span_id": "C0133-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "A canonical entity link is represented by the Wikipedia title of the entity, if one exists. If not, it is the surface form of the canonical coreference mention.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-10-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "2 System Design and Architecture",
+      "span_id": "C0133-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "This includes part-of-speech tags, lemmas, named entity tags, and dependency parses.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-10-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "System data tables",
+      "span_id": "C0133-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "A table of entity mentions, along with their named entity tag and canonical entity link.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-10-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "2 System Design and Architecture",
+      "span_id": "C0133-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "Lastly, a coherent knowledge base is constructed from these relation mention predictions directly in the database through an SQL script.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-11-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "System data tables",
+      "span_id": "C0133-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "A table of sentences in the KBP source corpus. This includes part-of-speech tags, lemmas, named entity tags, and dependency parses.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-12-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "System data tables",
+      "span_id": "C0133-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Finding candidate relation mentions is a simple join on the mention table with itself, subject to constraints on occurring in the same sentence, the named entity tags type-checking.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-12-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "5 Results",
+      "span_id": "C0133-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "These runs were meant to capture different points in the precision / recall tradeoff by including different combinations of systems.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-13-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "2 System Design and Architecture",
+      "span_id": "C0133-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Relation extraction then becomes a simple matter of taking as input such a relation mention table... and outputting the relations expressed by each row.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-13-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "2 System Design and Architecture",
+      "span_id": "C0133-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Lastly, a coherent knowledge base is constructed from these relation mention predictions directly in the database through an SQL script.",
+      "confidence": "medium"
+    },
+    "models_and_tools-14-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "2 System Design and Architecture",
+      "span_id": "C0133-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Both populated by running Stanford CoreNLP and the Illinois Wikifier... Lastly, we run a retrained Stanford NER model for detecting job titles.",
+      "confidence": "medium"
+    },
+    "models_and_tools-14-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.1 Patterns",
+      "span_id": "C0133-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "This yielded a total of 4528 Tokensregex patterns and 169 Semgrex patterns.",
+      "confidence": "medium"
+    },
+    "models_and_tools-14-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "3.6 LSTM Extractor",
+      "span_id": "C0133-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "We train the network using stochastic gradient descent. In addition, we use Adagrad to adapt the learning rate per parameter and Dropout to regularize the network.",
+      "confidence": "medium"
+    },
+    "datasets-15-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "2 System Design and Architecture",
+      "span_id": "C0133-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Both populated by running Stanford CoreNLP and the Illinois Wikifier on the 2010 and 2013 source corpora.",
+      "confidence": "medium"
+    },
+    "datasets-15-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "2.2 Development Data",
+      "span_id": "C0133-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "The annotations from the 2013 KBP evaluation were propagated back into the database.",
+      "confidence": "medium"
+    },
+    "datasets-15-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4 Training",
+      "span_id": "C0133-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "We then sample 1000 examples from this dataset for each of the 41 relations, yielding 41,000 examples total... and a small corpus of additional hand-annotated relations (7,858).",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-16-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Table 1",
+      "span_id": "C0133-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "Hop 0, Hop 1, All; columns P, R, F1.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-16-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Table 2",
+      "span_id": "C0133-D-P007-TABLE-0002",
+      "page": 7,
+      "excerpt": "Hop 0, Hop 1, All; columns P, R, F1.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-17-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "3 Relation Extractors",
+      "span_id": "C0133-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "In total, Stanford trained the following 6 models: patterns, openie, website, altnames, supervised, neural.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-17-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "5 Results",
+      "span_id": "C0133-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Stanford4 The hand-coded patterns alone... Stanford3 A high recall system: the union of all models.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-18-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "2.2 Development Data",
+      "span_id": "C0133-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The 2014 cold start data was used for model combination. The 2014 slotfilling data was unused.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-18-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "5 Results",
+      "span_id": "C0133-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Stanford submitted five runs to the slotfilling track... In addition, Stanford made two submissions to the cold-start knowledge base track.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-18-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Table 1",
+      "span_id": "C0133-D-P007-TABLE-0003",
+      "page": 7,
+      "excerpt": "A summary of Stanford’s performance on the 2015 slot filling preliminary evaluation.",
+      "confidence": "medium"
+    },
+    "main_results-19-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 1",
+      "span_id": "C0133-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "Stanford1 (model combination) ... All P 46.8 R 14.4 F1 22.0; Stanford3 (high recall) ... All P 27.9 R 25.6 F1 26.7; Stanford4 (patterns only) ... All P 54.3 R 10.6 F1 17.7.",
+      "confidence": "medium"
+    },
+    "main_results-19-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 2",
+      "span_id": "C0133-D-P007-TABLE-0002",
+      "page": 7,
+      "excerpt": "Stanford1 (high precision) ... All P 48.7 R 9.1 F1 15.4; Stanford2 (high recall) ... All P 21.0 R 23.2 F1 22.1.",
+      "confidence": "medium"
+    },
+    "main_results-19-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "5 Results",
+      "span_id": "C0133-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "The pattern extractor alone achieves nearly 60% precision with a recall above 10% – unmatched by any similar system.",
+      "confidence": "medium"
+    },
+    "strengths-20-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0133-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "From a smart initialization, we infer labels on our large unlabeled corpus. Then, from the statistics gained from this corpus we retrain our parameters.",
+      "confidence": "medium"
+    },
+    "strengths-20-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "2 System Design and Architecture",
+      "span_id": "C0133-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "SQL is a powerful language for probing the corpus. Furthermore, since the output of our extractors are also in the database, we can easily view and debug...",
+      "confidence": "medium"
+    },
+    "strengths-20-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "5 Results",
+      "span_id": "C0133-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "The pattern extractor alone achieves nearly 60% precision with a recall above 10% – unmatched by any similar system.",
+      "confidence": "medium"
+    },
+    "weaknesses-21-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4 Training",
+      "span_id": "C0133-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "Predictably, more iterations of this training improves recall and degrades precision.",
+      "confidence": "medium"
+    },
+    "weaknesses-21-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0133-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "The obvious danger of such an approach is the possibility of semantic drift.",
+      "confidence": "medium"
+    },
+    "weaknesses-21-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "2.1 Supporting Infrastructure",
+      "span_id": "C0133-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "The submissions in this paper were run on a machine with 790GB of memory backed by a 1.2TB PCI-E solid state drive.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-22-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0133-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The obvious danger of such an approach is the possibility of semantic drift.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-22-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "2.2 Development Data",
+      "span_id": "C0133-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "This development data does, however, have the problem of being biased towards positive examples... Furthermore, it does not distinguish between entity linking errors and relation extraction errors.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-22-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "5 Results",
+      "span_id": "C0133-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "The challenge of finding the right training data for hop1 model combination remains outstanding.",
+      "confidence": "medium"
+    },
+    "possible_improvements-23-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4 Training",
+      "span_id": "C0133-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "A clear avenue of future exploration is assessing the tradeoff between precision and recall from both increasing the iterations of self-training, and changing the ratio of positive and negative training examples.",
+      "confidence": "medium"
+    },
+    "possible_improvements-23-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "5 Results",
+      "span_id": "C0133-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "An interesting area of future research would be to incorporate these sorts of constraints not on a per-query basis, but across the entire predicted knowledge base.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-24-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0133-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The obvious danger of such an approach is the possibility of semantic drift.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-24-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4 Training",
+      "span_id": "C0133-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "A clear avenue of future exploration is assessing the tradeoff between precision and recall from both increasing the iterations of self-training, and changing the ratio of positive and negative training examples.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-24-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5 Results",
+      "span_id": "C0133-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "The challenge of finding the right training data for hop1 model combination remains outstanding.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-25-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "2 System Design and Architecture",
+      "span_id": "C0133-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Both populated by running Stanford CoreNLP and the Illinois Wikifier on the 2010 and 2013 source corpora.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-25-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "4 Training",
+      "span_id": "C0133-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "This is added to the supervised data released in Angeli et al. (2014b)... and a small corpus of additional hand-annotated relations (7,858).",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses relation extraction for knowledge-base population when manually supervised training data is scarce. It seeks to combine the high precision but low recall of hand-written patterns with the broader generalization of learned models, while controlling semantic drift and the precision loss caused by noisy or assumed-negative training examples.",
+  "methodology": {
+    "primary_family": "Neural NLP pipelines",
+    "secondary_families": [
+      "Rule-based NLP",
+      "Linguistic and dependency-based extraction",
+      "Classical machine learning",
+      "Ontology-constrained and schema-guided methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "weakly_supervised",
+    "description": "The system starts with manually developed high-precision Tokensregex and Semgrex relation patterns, supplemented by Stanford OpenIE. Their predictions over the large unlabeled source corpus become positive training examples. A traditional L1-regularized logistic-regression extractor and a bidirectional LSTM sentence classifier are trained using these examples, supervised data, assumed negatives, and hand annotations. In subsequent self-training, predictions from the learned extractors are removed from the negative pool; for the submitted conservative version, positives remain the pattern outputs while negatives are regenerated. Six extractors—patterns, OpenIE, website, alternate names, supervised logistic regression, and neural LSTM—are optionally combined by a classifier using extractor-agreement and relation features. Predictions are stored and processed in a relational database before consistency/inference for slot filling or direct submission for the KB track."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The extractors map OpenIE and other relation predictions into the KBP relation schema. Candidate relation mentions are type-checked using subject and object named-entity tags, and the system uses canonical entity links represented by Wikipedia titles or canonical surface forms. The paper does not describe a separately formalized ontology or schema-discovery procedure.",
+    "evidence": [
+      {
+        "span_id": "C0133-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "The resulting extractions mapped back into the KBP relation schema."
+      },
+      {
+        "span_id": "C0133-D-P002-TEXT-0002",
+        "page": 2,
+        "excerpt": "A canonical entity link is represented by the Wikipedia title of the entity, if one exists. If not, it is the surface form of the canonical coreference mention."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing and linguistic annotation",
+    "Entity and concept extraction",
+    "Entity typing",
+    "Entity linking",
+    "Coreference-aware alternate-name extraction",
+    "Relation and triple extraction",
+    "Graph construction / knowledge-base population",
+    "Consistency and inference",
+    "Knowledge-base validation through evaluation"
+  ],
+  "input_output": {
+    "input_type": "Unstructured textual sentences from the KBP source corpora, enriched with POS tags, lemmas, named-entity tags, dependency parses, entity mentions, and canonical entity links.",
+    "input_granularity": "Relation-mention level: candidate pairs of entity mentions constrained to occur in the same sentence and to satisfy relation-compatible entity types; the broader system aggregates these predictions into hop-0 and hop-1 KBP queries and knowledge-base entries.",
+    "output_representation": "Extracted typed relations associated with canonical entity pairs and provenance sentences; these relation predictions are materialized as a coherent knowledge base in a relational database, submitted directly for the KB track, or passed to a consistency and inference component for slot filling."
+  },
+  "models_and_tools": [
+    "Stanford CoreNLP",
+    "Illinois Wikifier",
+    "Stanford NER model retrained for job-title detection",
+    "Tokensregex patterns",
+    "Semgrex patterns",
+    "Stanford OpenIE",
+    "L1-regularized logistic regression relation classifier",
+    "Bidirectional LSTM relation classifier",
+    "Stochastic gradient descent",
+    "Adagrad",
+    "Dropout",
+    "Relational database and SQL",
+    "Greenplum/distributed database infrastructure",
+    "Model-combination classifier"
+  ],
+  "datasets": [
+    "KBP 2010 and 2013 source corpora",
+    "2013 KBP evaluation annotations propagated into the database for development",
+    "2014 cold-start hop-0 and hop-1 data for model-combination training",
+    "2015 KBP slot-filling preliminary evaluation",
+    "2015 KB preliminary/cold-start evaluation",
+    "41 KBP relation types",
+    "150-million-sentence source corpus",
+    "Supervised relation-extraction data released in Angeli et al. (2014b)",
+    "7,858 additional hand-annotated relations"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Precision",
+      "Recall",
+      "F1",
+      "Hop-0 performance",
+      "Hop-1 performance",
+      "All-hop aggregate performance"
+    ],
+    "baselines": [
+      "Patterns-only extractor",
+      "High-precision union: patterns, OpenIE, website, alternate names",
+      "High-recall union of all extractors",
+      "Model combination of all systems",
+      "Traditional supervised logistic-regression extractor",
+      "Neural bidirectional LSTM extractor"
+    ],
+    "setting": "The system was evaluated in the 2015 KBP slot-filling and cold-start KB tracks. Slot-filling results report hop-0, hop-1, and all-hop scores for four submitted configurations in Table 1. KB-track results report the same breakdown for high-precision and high-recall configurations in Table 2. Development used propagated 2013 annotations, slower 2010–2013 end-to-end evaluation, and 2014 cold-start data for model-combination training; 2014 slot-filling data was unused."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Table 1 slot filling: model combination (Stanford1) achieved hop-0 P/R/F1 52.2/20.1/29.1, hop-1 26.4/4.6/7.8, and all-hop 46.8/14.4/22.0.",
+      "Table 1 slot filling: the high-precision system (Stanford2) achieved all-hop P/R/F1 51.8/10.5/17.4; the high-recall union (Stanford3) achieved 27.9/25.6/26.7; patterns only (Stanford4) achieved 54.3/10.6/17.7.",
+      "Table 2 KB track: high-precision (Stanford1) achieved hop-0 53.0/11.6/19.0, hop-1 36.7/5.0/8.8, and all-hop 48.7/9.1/15.4; high-recall (Stanford2) achieved all-hop 21.0/23.2/22.1.",
+      "The authors report that the pattern extractor alone had nearly 60% precision with recall above 10% and was unmatched by similar systems at that recall; the paper also states that the model-combination approach improved hop-0 precision by 18 F1 with only a 5 F1 recall drop in an earlier comparison.",
+      "The paper reports that high-recall systems consistently outperformed high-precision counterparts in the reported test results, suggesting a development/test mismatch and potential value from further recall-oriented self-training."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0133-D-P007-TABLE-0001",
+        "page": 7,
+        "excerpt": "Stanford1 (model combination) ... All P 46.8 R 14.4 F1 22.0; Stanford3 (high recall) ... All P 27.9 R 25.6 F1 26.7; Stanford4 (patterns only) ... All P 54.3 R 10.6 F1 17.7."
+      },
+      {
+        "span_id": "C0133-D-P007-TABLE-0002",
+        "page": 7,
+        "excerpt": "Stanford1 (high precision) ... All P 48.7 R 9.1 F1 15.4; Stanford2 (high recall) ... All P 21.0 R 23.2 F1 22.1."
+      },
+      {
+        "span_id": "C0133-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "The pattern extractor alone achieves nearly 60% precision with a recall above 10% – unmatched by any similar system."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "The method uses high-precision patterns to anchor self-training and mitigate semantic drift.",
+      "It combines pattern precision with learned-model generalizability and can exploit a very large unlabeled corpus.",
+      "The relational-database architecture makes candidate generation, corpus analytics, debugging, aggregation, and evaluation queries more direct and scalable.",
+      "The pattern-only system provides strong precision at non-negligible recall, while model combinations recover additional recall.",
+      "Review-level inference: the approach offers a practical bridge between rule-based extraction and learned neural extraction under limited annotation."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0133-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "From a smart initialization, we infer labels on our large unlabeled corpus. Then, from the statistics gained from this corpus we retrain our parameters."
+      },
+      {
+        "span_id": "C0133-D-P002-TEXT-0002",
+        "page": 2,
+        "excerpt": "SQL is a powerful language for probing the corpus. Furthermore, since the output of our extractors are also in the database, we can easily view and debug..."
+      },
+      {
+        "span_id": "C0133-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "The pattern extractor alone achieves nearly 60% precision with a recall above 10% – unmatched by any similar system."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Self-training introduces a precision–recall tradeoff: additional iterations improve recall but degrade precision.",
+      "The approach is sensitive to the quality of assumed negatives and requires a realistic, heavily negative class distribution.",
+      "The infrastructure is unusually resource-intensive, using a 20-core machine, 790 GB of memory, and a 1.2 TB PCI-E solid-state drive for the submissions.",
+      "The system's end-to-end evaluation does not cleanly distinguish entity-linking errors from relation-extraction errors.",
+      "Performance drops substantially from the slot-filling track to the KB track, indicating dependence on consistency and inference components.",
+      "Review-level inference: the method remains dependent on hand-written patterns and KBP-specific type/schema assumptions, limiting portability to new domains or relation inventories.",
+      "Review-level inference: reported gains are difficult to attribute uniquely to bootstrapping because the submission configurations combine multiple extractors and downstream components."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0133-D-P005-TEXT-0001",
+        "page": 5,
+        "excerpt": "Predictably, more iterations of this training improves recall and degrades precision."
+      },
+      {
+        "span_id": "C0133-D-P001-TEXT-0002",
+        "page": 1,
+        "excerpt": "The obvious danger of such an approach is the possibility of semantic drift."
+      },
+      {
+        "span_id": "C0133-D-P003-TEXT-0003",
+        "page": 3,
+        "excerpt": "The submissions in this paper were run on a machine with 790GB of memory backed by a 1.2TB PCI-E solid state drive."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The authors identify semantic drift as the principal danger of self-training.",
+      "The development data is biased toward positive examples and is therefore less sensitive to precision errors than it should be.",
+      "The evaluation does not distinguish entity-linking errors from relation-extraction errors.",
+      "The authors state that finding the right training data for hop-1 model combination remains an outstanding challenge.",
+      "The paper reports a mismatch between development and test data, inferred from high-recall systems consistently outperforming high-precision counterparts.",
+      "The system requires clean negative examples despite the highly skewed relation-classification setting."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0133-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "The obvious danger of such an approach is the possibility of semantic drift."
+      },
+      {
+        "span_id": "C0133-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "This development data does, however, have the problem of being biased towards positive examples... Furthermore, it does not distinguish between entity linking errors and relation extraction errors."
+      },
+      {
+        "span_id": "C0133-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "The challenge of finding the right training data for hop1 model combination remains outstanding."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed: explore the precision–recall tradeoff from running more self-training iterations and changing the positive-to-negative example ratio.",
+      "Author-proposed: incorporate consistency and inference constraints across the entire predicted knowledge base rather than only on a per-query basis.",
+      "Review-level proposal: use broader and less positively biased development data with separately annotated entity-linking and relation-extraction errors.",
+      "Review-level proposal: reduce dependence on manually authored patterns through domain-adaptive pattern induction or transferable representations."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0133-D-P005-TEXT-0001",
+        "page": 5,
+        "excerpt": "A clear avenue of future exploration is assessing the tradeoff between precision and recall from both increasing the iterations of self-training, and changing the ratio of positive and negative training examples."
+      },
+      {
+        "span_id": "C0133-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "An interesting area of future research would be to incorporate these sorts of constraints not on a per-query basis, but across the entire predicted knowledge base."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Controlling semantic drift during iterative self-training remains unresolved.",
+      "Selecting clean assumed negatives and the appropriate positive/negative ratio under extreme class skew remains unresolved.",
+      "The best number of self-training iterations for balancing precision and recall is unresolved.",
+      "Obtaining suitable training data for hop-1 model combination remains outstanding.",
+      "The mismatch between development and live-test distributions remains unresolved.",
+      "Applying consistency constraints globally across the predicted knowledge base remains future work.",
+      "Review-level inference: robust transfer beyond the KBP relation inventory and source-corpus assumptions is not demonstrated."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0133-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "The obvious danger of such an approach is the possibility of semantic drift."
+      },
+      {
+        "span_id": "C0133-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "A clear avenue of future exploration is assessing the tradeoff between precision and recall from both increasing the iterations of self-training, and changing the ratio of positive and negative training examples."
+      },
+      {
+        "span_id": "C0133-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "The challenge of finding the right training data for hop1 model combination remains outstanding."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper reports using Stanford CoreNLP, Illinois Wikifier, KBP 2010/2013 source corpora, released supervised data, and hand-annotated data, but it does not state that source code, a new dataset, or trained models are publicly released. The submission infrastructure included a relational database and SQL scripts; no repository or access URL is reported."
+}

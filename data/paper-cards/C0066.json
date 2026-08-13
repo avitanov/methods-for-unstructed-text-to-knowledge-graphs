@@ -1,0 +1,711 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0066",
+    "title": "A Semantic Best-Effort Approach for Extracting Structured Discourse Graphs from Wikipedia",
+    "pdf_path": "data/manual-pdfs/C0066.pdf",
+    "authors": [
+      "André Freitas",
+      "Danilo S. Carvalho",
+      "João C. P. da Silva",
+      "Seán O’Riain",
+      "Edward Curry"
+    ],
+    "year": "not_reported",
+    "venue": "not_reported",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "Most information extraction approaches available today have either focused on the extraction of simple relations or in scenarios where data extracted from texts should be normalized into a database schema or ontology. Some relevant information present in natural language texts, however, can be irregular, highly contextualized, with complex semantic dependency relations, poorly structured, and intrinsically ambiguous. These characteristics should also be supported by an information extraction approach. To cope with this scenario, this work introduces a semantic best-effort information extraction approach, which targets an information extraction scenario where text information is extracted under a pay-as-you-go data quality perspective, trading high-accuracy, schema consistency and terminological normalization for domain-independency, context capture, wider extraction scope and maximization of the text semantics extraction and representation. A semantic information extraction framework (Graphia) is implemented and evaluated over the Wikipedia corpus.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0066-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "André Freitas, Danilo S. Carvalho, João C. P. da Silva, Seán O’Riain, and Edward Curry",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-02-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0066-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "This work introduces a semantic best-effort information extraction approach... trading high-accuracy, schema consistency and terminological normalization for domain-independency, context capture, wider extraction scope and maximization of the text semantics extraction and representation.",
+      "confidence": "medium"
+    },
+    "problem_addressed-03-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0066-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "These IE approaches can be complemented by alternative information extraction scenarios where accuracy, consistency and regularity are traded by domain-independency, context capture, wider extraction scope and maximization of the text semantics representation.",
+      "confidence": "medium"
+    },
+    "problem_addressed-03-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Representing Text as Discourse Graphs",
+      "span_id": "C0066-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "A semantic best-effort extraction aims at maximizing the amount of extracted information present in the text, capturing the semantic context and the semantic dependencies where a given fact is embedded.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-04-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Mapping Natural Language to SDGs",
+      "span_id": "C0066-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "The graph extraction module... generates the triple trees for each sentence by the application of a set of transformation rules based on syntactic conditions through a DFS traversal of the C-Structure.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-05-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Mapping Natural Language to SDGs",
+      "span_id": "C0066-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "The core set of syntactic rules are split into 6 major categories: subject, predicate, object, prepositional phrase & noun complement, reification, time.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-06-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Mapping Natural Language to SDGs",
+      "span_id": "C0066-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "The extraction pipeline consists of the following components.",
+      "confidence": "medium"
+    },
+    "methodology-description-07-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Mapping Natural Language to SDGs",
+      "span_id": "C0066-D-P006-PICTURE-0001",
+      "page": 6,
+      "excerpt": "The extraction pipeline takes as input Wikipedia texts and returns an extracted RDF graph and a sentence-based graph visualization.",
+      "confidence": "medium"
+    },
+    "methodology-description-07-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Mapping Natural Language to SDGs",
+      "span_id": "C0066-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The graph extraction module takes as input the annotated C-Structures and generates the triple trees for each sentence by the application of a set of transformation rules based on syntactic conditions through a DFS traversal of the C-Structure.",
+      "confidence": "medium"
+    },
+    "methodology-description-07-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Mapping Natural Language to SDGs",
+      "span_id": "C0066-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "Context URIs are created among different sentences and among each sentence and the article context URI. Additionally, local URIs are created for each resource which was not resolved to a DBpedia URI.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-08-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Representing Text as Discourse Graphs",
+      "span_id": "C0066-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "SDGs are designed to be an RDF-based graph representation from the start.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-08-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Representing Text as Discourse Graphs",
+      "span_id": "C0066-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "Named entities map to instances... A non-named entity maps to a class which can be referred both as a class and as an instance (punning).",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-08-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Mapping Natural Language to SDGs",
+      "span_id": "C0066-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "Local URIs are created for each resource which was not resolved to a DBpedia URI.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-09-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Mapping Natural Language to SDGs",
+      "span_id": "C0066-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "1. Syntactic analysis... 2. Named entity resolution... 3. Personal co-reference resolution and normalization... 4. Graph extraction... 5. Graph construction.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-09-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Graph extraction rules",
+      "span_id": "C0066-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The core set of syntactic rules are split into 6 major categories: subject, predicate, object, prepositional phrase & noun complement, reification, time.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-10-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Mapping Natural Language to SDGs",
+      "span_id": "C0066-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "The extraction pipeline was designed targeting Wikipedia as a corpus.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-11-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Mapping Natural Language to SDGs",
+      "span_id": "C0066-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "The first step consists in the use of the Stanford parser... The extraction pipeline takes as input Wikipedia texts and returns an extracted RDF graph and a sentence-based graph visualization.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-11-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Mapping Natural Language to SDGs",
+      "span_id": "C0066-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "Context URIs are created among different sentences and among each sentence and the article context URI.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-12-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Representing Text as Discourse Graphs",
+      "span_id": "C0066-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "The SDG representation consists of the following core elements.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-12-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Mapping Natural Language to SDGs",
+      "span_id": "C0066-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "The graph construction component... outputs the final graph serialization.",
+      "confidence": "medium"
+    },
+    "models_and_tools-13-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Mapping Natural Language to SDGs",
+      "span_id": "C0066-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "This module uses the Probabilistic Context-Free Grammar (PCFG) implemented in the Stanford parser.",
+      "confidence": "medium"
+    },
+    "models_and_tools-13-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Mapping Natural Language to SDGs",
+      "span_id": "C0066-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The entity candidates’ strings are sent as search terms to a local entity index which indexes all DBpedia URIs using TF/IDF over labels extracted from the URIs.",
+      "confidence": "medium"
+    },
+    "models_and_tools-13-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Extraction & Evaluation",
+      "span_id": "C0066-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "The extraction pipeline was implemented in Python... A web evaluation platform was built to allow an efficient manual evaluation process.",
+      "confidence": "medium"
+    },
+    "datasets-14-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Extraction & Evaluation",
+      "span_id": "C0066-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "Articles were selected randomly satisfying the following criteria: 2 articles about people, 2 articles about organizations and 1 article about a place.",
+      "confidence": "medium"
+    },
+    "datasets-14-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Extraction & Evaluation",
+      "span_id": "C0066-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "The selected articles were: Apple Inc., Google, Napoleon, Paris, John Paul II.",
+      "confidence": "medium"
+    },
+    "datasets-14-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Extraction & Evaluation",
+      "span_id": "C0066-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "The final dataset consists of 1033 relations (triples) from 150 sentences which were manually classified.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-15-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Extraction & Evaluation",
+      "span_id": "C0066-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "To evaluate the accuracy in a semantic best-effort scenario three measures were defined: the correctness, the completeness and the interpretability of the graph extractions.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-15-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Table 1",
+      "span_id": "C0066-D-P009-TABLE-0002",
+      "page": 9,
+      "excerpt": "Error Categories... Reification construction, Pronominal co-reference, Conjunction, Named entity, Subject construction, Object construction, Triple tree construction, Predicate construction, Explicit temporal reference.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-16-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Extraction & Evaluation",
+      "span_id": "C0066-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "Each article has a number of characters greater than 40K. The selected articles were: Apple Inc., Google, Napoleon, Paris, John Paul II.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-16-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Extraction & Evaluation",
+      "span_id": "C0066-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "Sentences which were not well-formed or which were classified as outside the scope of the extraction pipeline... were removed from the evaluation set.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-16-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Extraction & Evaluation",
+      "span_id": "C0066-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "The original natural language sentence and a visualization of the extracted graph are displayed to a human evaluator.",
+      "confidence": "medium"
+    },
+    "main_results-17-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 1",
+      "span_id": "C0066-D-P009-TABLE-0001",
+      "page": 9,
+      "excerpt": "Correct graphs... Avg. 0.448; Complete graphs... Avg. 0.162; Interpretable graphs... Avg. 0.956. Triple tree construction... Avg. 0.280; Object construction... Avg. 0.244.",
+      "confidence": "medium"
+    },
+    "main_results-17-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Extraction & Evaluation",
+      "span_id": "C0066-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "The high percentage of interpretable graphs, shows that there is a basic triple path which is correct in 95.6% of the extracted graphs. 55.2% of graphs contained some extraction error.",
+      "confidence": "medium"
+    },
+    "main_results-17-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Conclusion & Future Work",
+      "span_id": "C0066-D-P012-TEXT-0003",
+      "page": 12,
+      "excerpt": "The final extraction achieved 44.8% of correctness, 16.2% completeness and an interpretability of 95.6%.",
+      "confidence": "medium"
+    },
+    "strengths-18-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Representing Text as Discourse Graphs",
+      "span_id": "C0066-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "This isolation facilitates the data consumption/interpretation process... where the impact of possible incomplete or erroneous extractions is minimized.",
+      "confidence": "medium"
+    },
+    "strengths-18-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Extraction & Evaluation",
+      "span_id": "C0066-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "The extractor is able to extract an informational and correct fragment in practically all the sentences.",
+      "confidence": "medium"
+    },
+    "strengths-18-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Extraction & Evaluation",
+      "span_id": "C0066-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "The proposed representation supported the best-effort extraction by isolating errors from different parts of the extraction pipeline.",
+      "confidence": "medium"
+    },
+    "weaknesses-19-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Extraction & Evaluation",
+      "span_id": "C0066-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "Only 16.2% of the extracted graphs mapped all the information contained in the sentence.",
+      "confidence": "medium"
+    },
+    "weaknesses-19-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Extraction & Evaluation",
+      "span_id": "C0066-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "The major impacting error categories were triple trees, object and reification construction.",
+      "confidence": "medium"
+    },
+    "weaknesses-19-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion & Future Work",
+      "span_id": "C0066-D-P012-TEXT-0003",
+      "page": 12,
+      "excerpt": "The evaluation of error categories shows that this can be achieved by improving non-named entity recognition criteria and the treatment of prepositional phrases.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-20-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Extraction & Evaluation",
+      "span_id": "C0066-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "The major justification for the lack of completeness is the fact that the SBE extractor, in many occasions, ignores sentence structures which are not central.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-20-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Extraction & Evaluation",
+      "span_id": "C0066-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "The relatively high reification construction error frequency shows that the breadth of the rules for extracting prepositional phrases is still limited.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-20-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Extraction & Evaluation",
+      "span_id": "C0066-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "Sentences... outside the scope of the extraction pipeline (sentences with complex subordination structures) were removed.",
+      "confidence": "medium"
+    },
+    "possible_improvements-21-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Conclusion & Future Work",
+      "span_id": "C0066-D-P012-TEXT-0001",
+      "page": 12,
+      "excerpt": "The final approach showed a high coverage of the elements of the SDG representation model, with the evaluation pointing into a main direction for improvement: increasing the extraction completeness.",
+      "confidence": "medium"
+    },
+    "possible_improvements-21-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Conclusion & Future Work",
+      "span_id": "C0066-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "This can be achieved by improving non-named entity recognition criteria and the treatment of prepositional phrases.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-22-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Extraction & Evaluation",
+      "span_id": "C0066-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "Only 16.2% of the extracted graphs mapped all the information contained in the sentence.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-22-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Extraction & Evaluation",
+      "span_id": "C0066-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "The centrality on the modelling of context brings mechanisms such as reifications, named graphs (quads) and quints to the center of the discussion for text representation.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-22-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion & Future Work",
+      "span_id": "C0066-D-P012-TEXT-0003",
+      "page": 12,
+      "excerpt": "The evaluation... pointing into a main direction for improvement: increasing the extraction completeness.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-23-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Representing Text as Discourse Graphs",
+      "span_id": "C0066-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Real sentence graphs extracted from the Wikipedia article Barack Obama by the Graphia framework are used as examples.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-23-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Mapping Natural Language to SDGs",
+      "span_id": "C0066-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "Additional details about the graph extraction algorithm can be found online.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses extraction of irregular, contextualized, semantically dependent, poorly structured, and ambiguous information from unstructured text into RDF-compatible structured discourse graphs. Its objective is to maximize text-semantic coverage and context capture under a pay-as-you-go quality perspective, accepting lower accuracy, schema consistency, and terminological normalization than conventional ontology- or database-oriented information extraction.",
+  "methodology": {
+    "primary_family": "Linguistic and dependency-based extraction",
+    "secondary_families": [
+      "Rule-based NLP"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "not_reported",
+    "description": "Graphia implements a sequential semantic-best-effort pipeline. It parses English Wikipedia sentences into Stanford PCFG syntactic C-Structures; resolves named entities with DBpedia Spotlight and a local TF/IDF DBpedia URI index; resolves personal, possessive, and reflexive coreferences using gender/number agreement and text-distance heuristics; maps annotated C-Structures to sentence-level triple trees using DFS syntactic transformation rules; detects explicit and implicit temporal references; and serializes the triple trees as an RDF-compatible graph with context URIs and local URIs for unresolved resources. The representation uses named and non-named entities, properties, quantifiers and generic operators, triple trees, reification, temporal context, coreference links, and resolved or normalized entities. The method prioritizes broad semantic representation and interpretability of graph fragments over completeness and strict normalization."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The output is an RDF-based Structured Discourse Graph representation rather than a strictly normalized domain ontology. Named entities map to RDF instances, non-named entities map to classes that may also be referenced as instances through punning, and named entities may be linked to DBpedia URIs. The approach deliberately trades schema consistency and terminological normalization for context capture and wider coverage; unresolved resources receive local URIs.",
+    "evidence": [
+      {
+        "span_id": "C0066-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "SDGs are designed to be an RDF-based graph representation from the start."
+      },
+      {
+        "span_id": "C0066-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "Named entities map to instances... A non-named entity maps to a class which can be referred both as a class and as an instance (punning)."
+      },
+      {
+        "span_id": "C0066-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "Local URIs are created for each resource which was not resolved to a DBpedia URI."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing and syntactic parsing into C-Structures",
+    "Named entity and concept extraction from POS tags and noun phrases",
+    "Entity linking and resolution to DBpedia URIs",
+    "Personal coreference resolution and normalization",
+    "Relation and triple extraction using syntactic transformation rules",
+    "Temporal expression detection and normalization",
+    "Reification and context representation",
+    "Triple-tree generation",
+    "RDF graph construction and serialization"
+  ],
+  "input_output": {
+    "input_type": "Unstructured English natural-language text from Wikipedia articles.",
+    "input_granularity": "Full Wikipedia articles are processed; extraction is performed sentence by sentence, with article-level and inter-sentence context URIs.",
+    "output_representation": "RDF-compatible structured discourse graphs consisting of sentence-level triple trees, entities, properties, reified statements, temporal nodes, context links, coreference links, DBpedia URIs, and local URIs for unresolved resources."
+  },
+  "models_and_tools": [
+    "Stanford parser with a Probabilistic Context-Free Grammar",
+    "Part-of-speech tags and syntactic C-Structures",
+    "DBpedia Spotlight service",
+    "Local DBpedia URI index using TF/IDF over URI labels",
+    "Gender and number agreement with name-list gender information",
+    "Text-distance heuristic for personal coreference resolution",
+    "Regular expressions for explicit date detection and normalization",
+    "Graphia extraction framework",
+    "Python implementation",
+    "Web-based manual evaluation platform"
+  ],
+  "datasets": [
+    "English Wikipedia corpus",
+    "Five randomly selected articles: Apple Inc., Google, Napoleon, Paris, and John Paul II",
+    "Evaluation subset of 150 sentences containing 1033 relations/triples",
+    "DBpedia URI knowledge base/index used for entity resolution"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Correctness",
+      "Completeness",
+      "Interpretability",
+      "Frequency of nine extraction-error categories"
+    ],
+    "baselines": "not_reported",
+    "setting": "Manual evaluation of graphs generated from five randomly selected English Wikipedia articles: two people, two organizations, and one place, each exceeding 40K characters. Ill-formed sentences and sentences outside the pipeline scope, including complex subordination structures, were removed. Human evaluators inspected the original sentence and graph visualization, classified ten sentence features, nine error categories, and graph correctness/completeness/interpretability."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Across 150 sentences and 1033 extracted relations, the average correctness was 44.8%, completeness was 16.2%, and interpretability was 95.6%.",
+      "The most frequent average error categories were triple-tree construction (0.280), object construction (0.244), and reification construction (0.132).",
+      "Named-entity errors averaged 0.056 and explicit-temporal-reference errors averaged 0.110; the paper characterizes these semantic pivots as comparatively robust.",
+      "The paper reports that 55.2% of graphs contained some extraction error, while 95.6% retained a correct basic triple path sufficient for interpretation.",
+      "The paper attributes low completeness mainly to partial extraction and ignored non-central structures such as appositives."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0066-D-P009-TABLE-0001",
+        "page": 9,
+        "excerpt": "Correct graphs... Avg. 0.448; Complete graphs... Avg. 0.162; Interpretable graphs... Avg. 0.956. Triple tree construction... Avg. 0.280; Object construction... Avg. 0.244."
+      },
+      {
+        "span_id": "C0066-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "The high percentage of interpretable graphs, shows that there is a basic triple path which is correct in 95.6% of the extracted graphs. 55.2% of graphs contained some extraction error."
+      },
+      {
+        "span_id": "C0066-D-P012-TEXT-0003",
+        "page": 12,
+        "excerpt": "The final extraction achieved 44.8% of correctness, 16.2% completeness and an interpretability of 95.6%."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author-reported strength: the SDG representation captures semantic context and dependencies while remaining RDF-compatible and navigable back to the source text.",
+      "Author-reported strength: isolation between extraction structures limits the semantic impact of incomplete or erroneous components and preserves interpretable graph fragments.",
+      "Experimental result: 95.6% of evaluated graphs were interpretable at the basic subject-predicate-object path level.",
+      "Review-level interpretation: the method covers entity linking, coreference, temporal context, reification, and complex discourse structure beyond simple binary open-relation extraction."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0066-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "This isolation facilitates the data consumption/interpretation process... where the impact of possible incomplete or erroneous extractions is minimized."
+      },
+      {
+        "span_id": "C0066-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "The extractor is able to extract an informational and correct fragment in practically all the sentences."
+      },
+      {
+        "span_id": "C0066-D-P010-TEXT-0003",
+        "page": 10,
+        "excerpt": "The proposed representation supported the best-effort extraction by isolating errors from different parts of the extraction pipeline."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Experimental weakness: only 44.8% of graphs were fully correct and only 16.2% were complete.",
+      "The extraction rules ignore or partially process some non-central sentence structures, including appositives, reducing completeness.",
+      "Object construction, especially for non-named entities, is a major error source.",
+      "Triple-tree and reification construction remain error-prone, particularly for prepositional phrases.",
+      "Review-level interpretation: the approach relies heavily on parser output, hand-designed syntactic rules, heuristic coreference, and external entity-linking services, limiting robustness for structures outside the supported scope."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0066-D-P010-TEXT-0001",
+        "page": 10,
+        "excerpt": "Only 16.2% of the extracted graphs mapped all the information contained in the sentence."
+      },
+      {
+        "span_id": "C0066-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "The major impacting error categories were triple trees, object and reification construction."
+      },
+      {
+        "span_id": "C0066-D-P012-TEXT-0003",
+        "page": 12,
+        "excerpt": "The evaluation of error categories shows that this can be achieved by improving non-named entity recognition criteria and the treatment of prepositional phrases."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The extractor has limited completeness because it often ignores sentence structures that are not central, such as appositives, and performs partial extraction.",
+      "The breadth of rules for extracting prepositional phrases is limited, causing relatively frequent reification-construction errors.",
+      "The paper excludes complex subordination structures from evaluation because they are outside the pipeline scope.",
+      "The representation's emphasis on context makes reification, named graphs, quads, and quints central and leaves open representational issues for text semantics."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0066-D-P010-TEXT-0001",
+        "page": 10,
+        "excerpt": "The major justification for the lack of completeness is the fact that the SBE extractor, in many occasions, ignores sentence structures which are not central."
+      },
+      {
+        "span_id": "C0066-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "The relatively high reification construction error frequency shows that the breadth of the rules for extracting prepositional phrases is still limited."
+      },
+      {
+        "span_id": "C0066-D-P010-TEXT-0003",
+        "page": 10,
+        "excerpt": "Sentences... outside the scope of the extraction pipeline (sentences with complex subordination structures) were removed."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-stated improvement: increase extraction completeness.",
+      "Author-stated improvement: improve non-named entity recognition criteria.",
+      "Author-stated improvement: improve treatment of prepositional phrases and reification construction.",
+      "Review-level proposed improvement: expand syntactic rule coverage and evaluate complex subordination rather than excluding it.",
+      "Review-level proposed improvement: replace or augment heuristic coreference and linking with broader, error-aware models while retaining provenance and component isolation."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0066-D-P012-TEXT-0001",
+        "page": 12,
+        "excerpt": "The final approach showed a high coverage of the elements of the SDG representation model, with the evaluation pointing into a main direction for improvement: increasing the extraction completeness."
+      },
+      {
+        "span_id": "C0066-D-P012-TEXT-0002",
+        "page": 12,
+        "excerpt": "This can be achieved by improving non-named entity recognition criteria and the treatment of prepositional phrases."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "The paper leaves unresolved how to obtain high completeness while preserving the semantic-best-effort strategy and interpretability.",
+      "Complex and composite sentence structures, especially complex subordination, remain outside the demonstrated extraction scope.",
+      "Non-named entity recognition, object construction, and prepositional-phrase/reification extraction remain major unresolved technical problems.",
+      "The paper identifies unresolved representational questions around context-heavy RDF modeling, including reifications, named graphs, quads, and quints.",
+      "Review-level inference: the method does not establish how well the pipeline transfers beyond English Wikipedia or domains lacking DBpedia coverage."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0066-D-P010-TEXT-0001",
+        "page": 10,
+        "excerpt": "Only 16.2% of the extracted graphs mapped all the information contained in the sentence."
+      },
+      {
+        "span_id": "C0066-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "The centrality on the modelling of context brings mechanisms such as reifications, named graphs (quads) and quints to the center of the discussion for text representation."
+      },
+      {
+        "span_id": "C0066-D-P012-TEXT-0003",
+        "page": 12,
+        "excerpt": "The evaluation... pointing into a main direction for improvement: increasing the extraction completeness."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper names the Graphia extraction framework and gives a Graphia URL; it also refers to online details of the graph-extraction algorithm. The paper does not report a source-code repository, license, downloadable release, or dataset release. The evaluation corpus consists of selected Wikipedia articles, but no packaged dataset is reported."
+}

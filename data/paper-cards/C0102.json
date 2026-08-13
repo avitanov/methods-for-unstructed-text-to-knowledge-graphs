@@ -1,0 +1,786 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0102",
+    "title": "Laying the Groundwork for Knowledge Base Population: Nine Years of Linguistic Resources for TAC KBP",
+    "pdf_path": "data/pdfs/C0102.pdf",
+    "authors": [
+      "Jeremy Getman",
+      "Joe Ellis",
+      "Stephanie Strassel",
+      "Zhiyi Song",
+      "Jennifer Tracey"
+    ],
+    "year": "not_reported",
+    "venue": "not_reported",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "Knowledge Base Population (KBP) is an evaluation series within the Text Analysis Conference (TAC) evaluation campaign conducted by the National Institute of Standards and Technology (NIST). Over the past nine years TAC KBP evaluations have targeted information extraction technologies for the population of knowledge bases comprised of entities, relations, and events. Linguistic Data Consortium (LDC) has supported TAC KBP since 2009, developing, maintaining, and distributing linguistic resources in three languages for seven distinct evaluation tracks. This paper describes LDC's resource creation efforts for the various KBP tracks, and highlights changes made over the years to support evolving evaluation requirements.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0102-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Jeremy Getman, Joe Ellis, Stephanie Strassel, Zhiyi Song, Jennifer Tracey",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-02-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0102-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "This paper describes LDC's resource creation efforts for the various KBP tracks, and highlights changes made over the years to support evolving evaluation requirements.",
+      "confidence": "medium"
+    },
+    "problem_addressed-03-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0102-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The Knowledge Base Population (KBP) evaluation track ... encourages the development of systems that can extract information from unstructured multilingual text and in order to populate an existing or emergent knowledge base.",
+      "confidence": "medium"
+    },
+    "problem_addressed-03-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0102-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "These developments culminated in 2017 with an expanded end-to-end Cold Start track that evaluated systems’ ability to combine the other KBP tracks and extract all entities, relations, sentiments, and events from a document collection, perform corpus-wide clustering of the extracted items, and build a structured knowledge base from scratch.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-04-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Abstract and Introduction",
+      "span_id": "C0102-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Linguistic Data Consortium (LDC) has supported TAC KBP since 2009, developing, maintaining, and distributing linguistic resources ... and by assessing system results.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-05-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Entity Discovery & Linking",
+      "span_id": "C0102-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "ERE exhaustively labels entities, relations and events, along with their attributes, according to specified taxonomies.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-05-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Event Argument Linking",
+      "span_id": "C0102-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The EAL task requires systems and annotators to extract event arguments ... indicate their role, link the arguments involved in the same event, and format the information in a manner suitable as input to a knowledge base.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-06-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Cold Start",
+      "span_id": "C0102-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "Cold Start systems must also find all entities mentioned in the text ... On top of regular Slot Filling slots ... the 2017 task also incorporated ... event-focused slots.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-06-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Cold Start",
+      "span_id": "C0102-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "Cold Start assessment necessarily happened in multiple stages. The first stage mirrored Slot Filling assessment, but the second stage involved assessment of slots branching off of answers marked correct in the first stage.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-07-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Source Data and Knowledge Bases",
+      "span_id": "C0102-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "For every new evaluation track introduced to KBP, LDC produced a small amount of labeled training data to illustrate the annotation approach and data properties for the track.",
+      "confidence": "medium"
+    },
+    "methodology-description-08-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Source Data and Knowledge Bases",
+      "span_id": "C0102-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Source data for the KBP evaluations consists of English, Spanish and Chinese text in two primary genres: formal newswire (NW) and informal web text (primarily blogs and discussion forums).",
+      "confidence": "medium"
+    },
+    "methodology-description-08-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Entity Linking",
+      "span_id": "C0102-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Entity Linking ... requires systems to link named mentions ... to entries in a knowledge base, report if no matching entries exist, and group mentions without entries according to identity coreference.",
+      "confidence": "medium"
+    },
+    "methodology-description-08-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Cold Start",
+      "span_id": "C0102-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "Cold Start ... is designed to evaluate a system’s ability to construct a new knowledge base from the information provided in a text collection, by combining technologies developed via other KBP tracks.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-09-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Source Data and Knowledge Bases",
+      "span_id": "C0102-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Each node in the reference KB corresponds to a Wikipedia page for a person, organization, or geopolitical entity and consists of predefined attributes derived from infoboxes.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-09-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Entity Discovery & Linking",
+      "span_id": "C0102-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "ERE exhaustively labels entities, relations and events, along with their attributes, according to specified taxonomies.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-09-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Source Data and Knowledge Bases",
+      "span_id": "C0102-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "In 2015 ... use BaseKB, which is a subset of Freebase represented in RDF.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-10-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Entity Discovery & Linking",
+      "span_id": "C0102-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The goal of EDL is full entity extraction from a collection of documents, followed by linking entities to a KB and clustering any entities not in the KB.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-10-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Event Argument Linking",
+      "span_id": "C0102-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "The EAL task requires systems and annotators to extract event arguments, indicate their role, link the arguments involved in the same event, and format the information in a manner suitable as input to a knowledge base.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-10-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Cold Start",
+      "span_id": "C0102-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "Cold Start ... construct a new knowledge base ... by combining technologies developed via other KBP tracks.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-11-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Source Data and Knowledge Bases",
+      "span_id": "C0102-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Source data ... consists of English, Spanish and Chinese text in two primary genres: formal newswire (NW) and informal web text (primarily blogs and discussion forums).",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-12-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Entity Discovery & Linking",
+      "span_id": "C0102-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "EDL differed from Entity Linking in that systems and annotators exhaustively annotated documents to create a gold standard for system scoring.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-12-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Cold Start",
+      "span_id": "C0102-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "In Cold Start query development, annotators created queries defined by an entity initiating a chain of relations.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-13-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Entity Discovery & Linking",
+      "span_id": "C0102-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "labeled entities were then linked to the KB or marked as NIL (not in the KB) or Unknown ... senior annotators then performed cross-document, cross-language NIL clustering.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-13-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Cold Start",
+      "span_id": "C0102-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "Cold Start ... evaluate a system’s ability to construct a new knowledge base from the information provided in a text collection.",
+      "confidence": "medium"
+    },
+    "models_and_tools-14-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Source Data and Knowledge Bases",
+      "span_id": "C0102-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Prior to the first KBP evaluation in 2009, LDC created a KB based on a Wikipedia snapshot.",
+      "confidence": "medium"
+    },
+    "models_and_tools-14-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Source Data and Knowledge Bases",
+      "span_id": "C0102-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "In 2015 ... use BaseKB, which is a subset of Freebase represented in RDF.",
+      "confidence": "medium"
+    },
+    "models_and_tools-14-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Entity Discovery & Linking",
+      "span_id": "C0102-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "ERE entity annotations were displayed in the context of their source documents.",
+      "confidence": "medium"
+    },
+    "models_and_tools-14-04": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Event Nugget",
+      "span_id": "C0102-D-P005-TEXT-0004",
+      "page": 5,
+      "excerpt": "the data were entirely produced by running a script over ERE data to extract and reformat a subset for use by Event Nugget.",
+      "confidence": "medium"
+    },
+    "datasets-15-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Source Data and Knowledge Bases",
+      "span_id": "C0102-D-P001-TABLE-0001",
+      "page": 1,
+      "excerpt": "Table 1 summarizes KBP source data provided by LDC for each year’s evaluations.",
+      "confidence": "medium"
+    },
+    "datasets-15-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Entity Linking",
+      "span_id": "C0102-D-P002-TABLE-0002",
+      "page": 2,
+      "excerpt": "Entity Linking resources developed by LDC.",
+      "confidence": "medium"
+    },
+    "datasets-15-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Language Resource References",
+      "span_id": "C0102-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "TAC KBP Reference Knowledge Base LDC2014T16 ... TAC KBP Spanish Cross-lingual Entity Linking ... LDC2016T26 ... Chinese ... LDC2017T17 ... Comprehensive English Source Corpora 2009-2014 LDC2018T03.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-16-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Slot Filling",
+      "span_id": "C0102-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "Answers were marked correct if they adhered to the slot definitions and were supported in the text.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-16-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Event Argument Linking",
+      "span_id": "C0102-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "annotators decided if a response’s justification proved that a document contained an instance of the corresponding query event.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-16-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Cold Start",
+      "span_id": "C0102-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "Cold Start followed the same paradigm as that in Slot Filling assessment ... Cold Start assessment necessarily happened in multiple stages.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-17-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0102-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Since the start of TAC KBP in 2009 ... LDC has provided linguistic resources by building labeled training and test sets and by assessing system results.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-17-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Cold Start",
+      "span_id": "C0102-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "In 2016 and 2017 ... query and response development were separated ... each query required searching for answers in three languages.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-17-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Discussion and Conclusions",
+      "span_id": "C0102-D-P006-TABLE-0003",
+      "page": 6,
+      "excerpt": "Increasing complexity and multilinguality in KBP over time.",
+      "confidence": "medium"
+    },
+    "main_results-18-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Discussion and Conclusions",
+      "span_id": "C0102-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "In all LDC has produced over 150 distinct KBP corpora, comprising over to 150,000 queries, 84,000 manual runs and 310,000 system assessments.",
+      "confidence": "medium"
+    },
+    "main_results-18-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Discussion and Conclusions",
+      "span_id": "C0102-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "In 2016 we made the move to using the same source corpus for all KBP evaluation tracks ... In 2017, Cold Start was further expanded to include event and sentiment slots.",
+      "confidence": "medium"
+    },
+    "main_results-18-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0102-D-P001-TEXT-0003",
+      "page": 1,
+      "excerpt": "the list of required features for the 2016 source data included ... roughly equal representation of all three languages ... genres ... and extensive event coverage.",
+      "confidence": "medium"
+    },
+    "strengths-19-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Discussion and Conclusions",
+      "span_id": "C0102-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "As illustrated here, KBP data introduced greater complexity over time, with more integration of distinct evaluation tracks and data sets, a greater emphasis on multilingual data for all tracks, and an increasing focus on events.",
+      "confidence": "medium"
+    },
+    "strengths-19-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Entity Discovery & Linking",
+      "span_id": "C0102-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "senior annotators then performed cross-document, cross-language NIL clustering.",
+      "confidence": "medium"
+    },
+    "strengths-19-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Slot Filling",
+      "span_id": "C0102-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "From 2012, responses included a justification ... supporting the validity of a response.",
+      "confidence": "medium"
+    },
+    "weaknesses-20-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0102-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "This put additional demands on data selection given the need for a single corpus to support multiple, sometimes mutually contradictory, requirements.",
+      "confidence": "medium"
+    },
+    "weaknesses-20-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Cold Start",
+      "span_id": "C0102-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "query and response development were separated ... each query required searching for answers in three languages.",
+      "confidence": "medium"
+    },
+    "weaknesses-20-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Discussion and Conclusions",
+      "span_id": "C0102-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "KBP data introduced greater complexity over time, with more integration of distinct evaluation tracks and data sets.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-21-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0102-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "This put additional demands on data selection given the need for a single corpus to support multiple, sometimes mutually contradictory, requirements.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-21-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Discussion and Conclusions",
+      "span_id": "C0102-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "An additional 15-20 KBP corpora will be published in the catalog in the coming months and years.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-21-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Discussion and Conclusions",
+      "span_id": "C0102-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "The TAC KBP evaluation series will continue into 2018 with the introduction of new tracks.",
+      "confidence": "medium"
+    },
+    "possible_improvements-22-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Discussion and Conclusions",
+      "span_id": "C0102-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "The TAC KBP evaluation series will continue into 2018 with the introduction of new tracks.",
+      "confidence": "medium"
+    },
+    "possible_improvements-22-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Discussion and Conclusions",
+      "span_id": "C0102-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "In 2017, Cold Start was further expanded to include event and sentiment slots.",
+      "confidence": "medium"
+    },
+    "possible_improvements-22-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Discussion and Conclusions",
+      "span_id": "C0102-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "After the conclusion of an evaluation series, resources are consolidated into one or more comprehensive packages and released into LDC’s public catalog.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-23-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0102-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "KBP ... encourages the development of systems that can extract information from unstructured multilingual text.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-23-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0102-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "extract all entities, relations, sentiments, and events from a document collection, perform corpus-wide clustering ... and build a structured knowledge base from scratch.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-23-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0102-D-P001-TEXT-0003",
+      "page": 1,
+      "excerpt": "Presence of synonymous entities ... Presence of polysemous entities ... Presence of only unnamed mentions.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-24-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Discussion and Conclusions",
+      "span_id": "C0102-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "After the conclusion of an evaluation series, resources are consolidated into one or more comprehensive packages and released into LDC’s public catalog.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-24-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Language Resource References",
+      "span_id": "C0102-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "TAC KBP Reference Knowledge Base LDC2014T16 ... Spanish ... LDC2016T26 ... Chinese ... LDC2017T17 ... Comprehensive English Source Corpora 2009-2014 LDC2018T03.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper documents how to create, maintain, and assess multilingual linguistic resources for TAC KBP systems that extract entities, relations, events, sentiments, and associated information from unstructured text to populate existing or emergent knowledge bases. It addresses the increasing complexity of KBP evaluation, including multilinguality, multiple genres, cross-document and cross-lingual clustering, event representation, and end-to-end Cold Start graph construction.",
+  "methodology": {
+    "primary_family": "Validation, correction, and knowledge-fusion methods",
+    "secondary_families": [
+      "Rule-based NLP",
+      "Linguistic and dependency-based extraction",
+      "Ontology-constrained and schema-guided methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "supervised",
+    "description": "The work is a longitudinal resource-construction and evaluation methodology rather than a single extraction model. LDC selects multilingual newswire, blogs, and discussion-forum documents; constructs reference knowledge bases; defines task-specific schemas and query pools; produces labeled training and evaluation annotations; creates human responses or gold standards; and assesses system submissions. The paper traces seven primary tracks: Entity Linking, Entity Discovery & Linking, Slot Filling and its variants, Event Argument Linking, Event Nugget, Belief and Sentiment, and Cold Start. The pipeline evolves from isolated entity or slot tasks toward integrated multilingual end-to-end KB construction with cross-document clustering and event/sentiment information."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The resources use predefined KBP entity types and slot schemas, event type/subtype and argument-role taxonomies, ERE annotations, belief and sentiment labels, and knowledge-base representations. The initial reference KB contains person, organization, and geopolitical-entity nodes with attributes derived from Wikipedia infoboxes; later evaluations use BaseKB represented in RDF. ERE specifies taxonomies for entities, relations, events, and attributes.",
+    "evidence": [
+      {
+        "span_id": "C0102-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "Each node in the reference KB corresponds to a Wikipedia page for a person, organization, or geopolitical entity and consists of predefined attributes derived from infoboxes."
+      },
+      {
+        "span_id": "C0102-D-P002-TEXT-0002",
+        "page": 2,
+        "excerpt": "ERE exhaustively labels entities, relations and events, along with their attributes, according to specified taxonomies."
+      },
+      {
+        "span_id": "C0102-D-P002-TEXT-0003",
+        "page": 2,
+        "excerpt": "In 2015 ... use BaseKB, which is a subset of Freebase represented in RDF."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "text preprocessing",
+    "entity and concept extraction",
+    "entity typing",
+    "coreference resolution",
+    "entity resolution",
+    "entity linking",
+    "relation extraction",
+    "triple extraction",
+    "event extraction",
+    "graph construction",
+    "knowledge fusion",
+    "deduplication",
+    "graph validation"
+  ],
+  "input_output": {
+    "input_type": "Unstructured multilingual text in English, Chinese, and Spanish, primarily formal newswire and informal web text including blogs and discussion forums.",
+    "input_granularity": "Collections of documents, document-level entity and event mentions, mention clusters, entity-linked queries, slot-filling queries, event arguments, and cross-document or cross-lingual query chains.",
+    "output_representation": "Structured KB-population outputs: linked entities or NIL/Unknown labels, cross-document and cross-lingual identity clusters, slot-value assertions with supporting text justifications, event arguments and event hoppers, event nuggets, belief and sentiment annotations, and complete Cold Start knowledge bases."
+  },
+  "models_and_tools": [
+    "Linguistic Data Consortium annotation and assessment procedures",
+    "Wikipedia-derived TAC KBP reference knowledge base",
+    "BaseKB, a subset of Freebase represented in RDF",
+    "ERE and Rich ERE annotation resources",
+    "Scripts for extracting and reformatting ERE data for Event Nugget",
+    "Manual and automatic augmentation procedures for Event Argument Linking"
+  ],
+  "datasets": [
+    "TAC KBP source corpora, 2009–2017",
+    "TAC KBP Entity Linking resources, 2009–2014",
+    "Entity Discovery & Linking resources, 2014–2017",
+    "Regular, Surprise, Sentiment, and Temporal Slot Filling resources, 2009–2014",
+    "Event Argument Linking resources, 2014–2017",
+    "Event Nugget resources, 2014–2017",
+    "Belief and Sentiment resources, 2016–2017",
+    "Cold Start resources, 2012–2017",
+    "TAC KBP Reference Knowledge Base LDC2014T16",
+    "Spanish Cross-lingual Entity Linking data LDC2016T26",
+    "Chinese Cross-lingual Entity Linking data LDC2017T17",
+    "Comprehensive English Source Corpora 2009–2014 LDC2018T03"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Slot Filling response correctness and validity",
+      "Entity Linking and EDL link correctness, NIL/Unknown handling, and clustering correctness",
+      "Event Argument Linking event type, argument role, entity filler, modality, mention type, and event-hopper correctness",
+      "Event Nugget event extent, type/subtype, realis, and coreference correctness",
+      "Belief and Sentiment target, holder, belief/sentiment type, and polarity correctness",
+      "Cold Start response correctness for multi-stage relation chains"
+    ],
+    "baselines": "not_reported",
+    "setting": "Annual TAC KBP shared-task evaluations from 2009 through 2017, using LDC-created training, development, evaluation, manual-run, gold-standard, and assessed-response resources across English, Chinese, and Spanish. Evaluation paradigms include assessment of system responses, gold-standard scoring, cross-document and cross-lingual clustering, and end-to-end Cold Start KB construction."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "LDC produced more than 150 distinct KBP corpora, over 150,000 queries, 84,000 manual runs, and 310,000 system assessments across the reported evaluation series.",
+      "The resource design evolved from separate monolingual entity and slot tasks to multilingual integrated tracks with cross-document clustering, event extraction, belief and sentiment, and end-to-end Cold Start KB construction.",
+      "The 2016 consolidation to a common source corpus increased the need for data satisfying simultaneous language, genre, temporal, document-length, event-coverage, cross-lingual, synonymy, and polysemy constraints.",
+      "The paper reports that after an evaluation series, resources are consolidated into packages and released through the LDC public catalog."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0102-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "In all LDC has produced over 150 distinct KBP corpora, comprising over to 150,000 queries, 84,000 manual runs and 310,000 system assessments."
+      },
+      {
+        "span_id": "C0102-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "In 2016 we made the move to using the same source corpus for all KBP evaluation tracks ... In 2017, Cold Start was further expanded to include event and sentiment slots."
+      },
+      {
+        "span_id": "C0102-D-P001-TEXT-0003",
+        "page": 1,
+        "excerpt": "the list of required features for the 2016 source data included ... roughly equal representation of all three languages ... genres ... and extensive event coverage."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "The methodology provides broad, reusable, multilingual resources spanning entity, relation, event, sentiment, and end-to-end KB-population stages.",
+      "It explicitly adapts resource design to changing task requirements, including multilinguality, multiple genres, cross-document clustering, event hoppers, synonymy, and polysemy.",
+      "The resource suite supports both component-level diagnosis and increasingly integrated end-to-end evaluation.",
+      "The use of gold standards, human responses, justifications, and senior-annotator review provides several forms of assessment support."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0102-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "As illustrated here, KBP data introduced greater complexity over time, with more integration of distinct evaluation tracks and data sets, a greater emphasis on multilingual data for all tracks, and an increasing focus on events."
+      },
+      {
+        "span_id": "C0102-D-P003-TEXT-0002",
+        "page": 3,
+        "excerpt": "senior annotators then performed cross-document, cross-language NIL clustering."
+      },
+      {
+        "span_id": "C0102-D-P003-TEXT-0003",
+        "page": 3,
+        "excerpt": "From 2012, responses included a justification ... supporting the validity of a response."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "The paper does not present a new extraction algorithm or controlled model comparison; its contribution is resource and evaluation methodology.",
+      "Resource construction is expensive and increasingly difficult because one corpus must satisfy many potentially contradictory sampling constraints.",
+      "The transition to multilingual and whole-corpus evaluation requires changes to annotation workflows, including separating query and response development.",
+      "Review-level inference: the large number of task-specific tracks and changing schemas may complicate direct comparison of systems across years."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0102-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "This put additional demands on data selection given the need for a single corpus to support multiple, sometimes mutually contradictory, requirements."
+      },
+      {
+        "span_id": "C0102-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "query and response development were separated ... each query required searching for answers in three languages."
+      },
+      {
+        "span_id": "C0102-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "KBP data introduced greater complexity over time, with more integration of distinct evaluation tracks and data sets."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The paper indicates that corpus selection had to satisfy multiple, sometimes mutually contradictory, requirements.",
+      "The authors report that additional 15–20 KBP corpora were still expected to be published in the coming months and years, so the resource catalog was not complete at the time of writing.",
+      "The TAC KBP evaluation series was continuing into 2018 with new tracks, meaning the described nine-year resource history was not final."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0102-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "This put additional demands on data selection given the need for a single corpus to support multiple, sometimes mutually contradictory, requirements."
+      },
+      {
+        "span_id": "C0102-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "An additional 15-20 KBP corpora will be published in the catalog in the coming months and years."
+      },
+      {
+        "span_id": "C0102-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "The TAC KBP evaluation series will continue into 2018 with the introduction of new tracks."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-supported improvement direction: continue integrating component tracks into multilingual, whole-corpus, end-to-end evaluations.",
+      "Author-supported improvement direction: extend coverage of events, sentiments, facilities, locations, and cross-lingual information as task requirements evolve.",
+      "Review-level inference: publish stable cross-year schema mappings and standardized metrics to improve longitudinal comparability.",
+      "Review-level inference: provide machine-readable annotation guidelines, provenance, and versioned releases alongside the catalog packages."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0102-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "The TAC KBP evaluation series will continue into 2018 with the introduction of new tracks."
+      },
+      {
+        "span_id": "C0102-D-P006-TEXT-0002",
+        "page": 6,
+        "excerpt": "In 2017, Cold Start was further expanded to include event and sentiment slots."
+      },
+      {
+        "span_id": "C0102-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "After the conclusion of an evaluation series, resources are consolidated into one or more comprehensive packages and released into LDC’s public catalog."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Reliable extraction and linking across multiple languages and genres remains an evaluation challenge.",
+      "Whole-corpus understanding and cross-document or cross-lingual clustering remain difficult as systems must integrate entities, relations, events, sentiment, and belief.",
+      "Resource construction must continue to handle confusable entities, synonymy, polysemy, unnamed mentions, event hoppers, and complex relation chains.",
+      "Review-level inference: the paper leaves unresolved how to maintain comparable evaluation as tasks, languages, schemas, and source-corpus designs change."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0102-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "KBP ... encourages the development of systems that can extract information from unstructured multilingual text."
+      },
+      {
+        "span_id": "C0102-D-P001-TEXT-0002",
+        "page": 1,
+        "excerpt": "extract all entities, relations, sentiments, and events from a document collection, perform corpus-wide clustering ... and build a structured knowledge base from scratch."
+      },
+      {
+        "span_id": "C0102-D-P001-TEXT-0003",
+        "page": 1,
+        "excerpt": "Presence of synonymous entities ... Presence of polysemous entities ... Presence of only unnamed mentions."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that completed resources are consolidated and released through the LDC public catalog. It names publicly catalogued resources LDC2014T16, LDC2016T26, LDC2017T17, and LDC2018T03; no source-code release is reported."
+}

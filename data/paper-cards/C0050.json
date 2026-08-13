@@ -1,0 +1,815 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0050",
+    "title": "Entity linking for biomedical literature",
+    "pdf_path": "data/pdfs/C0050.pdf",
+    "authors": [
+      "Jin G Zheng",
+      "Daniel Howsmon",
+      "Boliang Zhang",
+      "Juergen Hahn",
+      "Deborah McGuinness",
+      "James Hendler",
+      "Heng Ji"
+    ],
+    "year": 2015,
+    "venue": "BMC Medical Informatics and Decision Making, 15(Suppl 1):S4",
+    "identifier": {
+      "status": "reported",
+      "value": "doi:10.1186/1472-6947-15-S1-S4",
+      "evidence": [
+        {
+          "span_id": "C0050-D-P009-TEXT-0001",
+          "page": 9,
+          "excerpt": "doi:10.1186/1472-6947-15-S1-S4"
+        }
+      ]
+    },
+    "abstract": "The paper proposes an unsupervised collective-inference entity-linking approach for mapping mentions in full biomedical papers to entities from 300 ontologies. It uses ontology semantics and structure for similarity and ranking, reports a 9-percentage-point absolute linking-accuracy gain over a state-of-the-art supervised entity linker without manual annotation, and introduces a small biomedical benchmark.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Article header",
+      "span_id": "C0050-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Author line lists Jin G Zheng, Daniel Howsmon, Boliang Zhang, Juergen Hahn, Deborah McGuinness, James Hendler, and Heng Ji.",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication information",
+      "span_id": "C0050-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "Published: 20 May 2015.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Article header",
+      "span_id": "C0050-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Header identifies BMC Medical Informatics and Decision Making 2015, 15(Suppl 1):S4.",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Citation information",
+      "span_id": "C0050-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "doi:10.1186/1472-6947-15-S1-S4",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0050-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We propose a novel unsupervised collective inference approach to link entities from unstructured full texts of biomedical literature to 300 ontologies.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-02": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0050-D-P001-TEXT-0002",
+      "page": 1,
+      "excerpt": "Without using any manual annotation, our approach significantly outperforms state-of-the-art supervised EL method (9% absolute gain in linking accuracy).",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Background",
+      "span_id": "C0050-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "automatically identifying prominent entity mentions from unstructured full texts and linking them to ... terms described in a Knowledge Base (KB) and/or defined in an ontology",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Background",
+      "span_id": "C0050-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "The first challenge lies in the lack of sufficient context for understanding the entity mentions.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-03": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Background",
+      "span_id": "C0050-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "The second challenge is the lack and the expense of generating labeled EL data for the biomedical domain.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Methods — Knowledge Base graph construction",
+      "span_id": "C0050-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "we constructed a knowledge base from 300 biology-related ontologies from BioPortal",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Methods — Knowledge Base graph construction",
+      "span_id": "C0050-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "Each entity e is regarded as a vertex in the knowledge graph Gk ... triples ... are treated as edges.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Methods — Mention extraction",
+      "span_id": "C0050-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "a name tagger is used to extract entity mentions. Regular expressions are used to join named entities ... Then, a shallow parser is used to add noun phrase chunks.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Methods — Overview",
+      "span_id": "C0050-D-P003-PICTURE-0001",
+      "page": 3,
+      "excerpt": "We first construct a knowledge base ... extract the entity mentions ... construct a graph representation ... use the surface form dictionary to locate ... candidate entities ... compute similarity scores ... and select the candidate with the highest score.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Background — Contributions",
+      "span_id": "C0050-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "perform EL in a completely unsupervised fashion without any annotation cost",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Conclusions",
+      "span_id": "C0050-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "possible to skip the tedious manual annotation by incorporating rich structures in ontologies in an unsupervised collective inference framework.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Methods — Overview",
+      "span_id": "C0050-D-P003-PICTURE-0001",
+      "page": 3,
+      "excerpt": "The overall approach is depicted in Figure 1. We first construct a knowledge base ... extract the entity mentions ... construct a graph representation Gd.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Methods — Entity candidate retrieval",
+      "span_id": "C0050-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "we also construct a surface form dictionary ... labels and names ... synonyms ... aliases, and symbols ... more than 150 properties",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Methods — Non-collective entropy rank",
+      "span_id": "C0050-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "EntropyRank for each entity starts at 1 and is recursively updated until convergence. This equation is similar to PageRank.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-04": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Methods — Collective inference",
+      "span_id": "C0050-D-P005-TEXT-0004",
+      "page": 5,
+      "excerpt": "we can compute the similarity between each entity mention m from Gd and a candidate entity c from Gk ... empirically set α = 15 and β = 8 for all experiments.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Methods — Knowledge Base graph construction",
+      "span_id": "C0050-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "E consists of classes, individuals, and properties in the aggregated ontologies.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Methods — Non-collective entropy rank",
+      "span_id": "C0050-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "entities in the ontologies are potentially connected with many kinds of links that may have semantically rich definitions. We can leverage this greater degree of specificity and assign different weights to edges described by different properties.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Results — Data and scoring metric",
+      "span_id": "C0050-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "more than 2 million entities and more than 50 million factual statements.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Methods — Overview",
+      "span_id": "C0050-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "we extract the entity mentions M ... construct a graph representation Gd",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Methods — Knowledge Base graph construction",
+      "span_id": "C0050-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "Each entity e is regarded as a vertex in the knowledge graph Gk ... triples ... are treated as edges.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Methods — Collective inference",
+      "span_id": "C0050-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "analyzes relations among multiple entity mentions and ranks the candidates simultaneously.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0050-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "link entities from unstructured full texts of biomedical literature to 300 ontologies",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Methods — Overview",
+      "span_id": "C0050-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "The entity mentions m ∈ M are the prominent phrases in the full text of a scientific paper.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Methods — Mention extraction",
+      "span_id": "C0050-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "a shallow parser is used to add noun phrase chunks to the list of mentions.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Results — Impact of collective inference",
+      "span_id": "C0050-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Mention level ... Sentence level ... Paragraph level: mentions from the same paragraph are analyzed simultaneously.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Background",
+      "span_id": "C0050-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "linking them to ... terms described in a Knowledge Base (KB) and/or defined in an ontology",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Methods — Knowledge Base graph construction",
+      "span_id": "C0050-D-P003-TEXT-0002",
+      "page": 3,
+      "excerpt": "each entity e is described as a set of triples t ∈ T.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Methods — Mention extraction",
+      "span_id": "C0050-D-P004-TEXT-0001",
+      "page": 4,
+      "excerpt": "a name tagger ... Regular expressions ... Then, a shallow parser",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Methods — Non-collective entropy rank",
+      "span_id": "C0050-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "Currently we use Jaccard Similarity to compute partial match scores.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Methods — Non-collective entropy rank",
+      "span_id": "C0050-D-P004-TEXT-0003",
+      "page": 4,
+      "excerpt": "we compute the salience score of candidate entities using the following non-collective EntropyRank.",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Results — Data and scoring metric",
+      "span_id": "C0050-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "domain experts ... identified 318 mentions of 97 unique prominent entities from 77 sentences and link these mentions to the knowledge base constructed from 300 biology-related ontologies.",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Results — Data and scoring metric",
+      "span_id": "C0050-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "more than 2 million entities and more than 50 million factual statements.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Results — Data and scoring metric",
+      "span_id": "C0050-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "we use the linking accuracy ... For each correctly extracted mention, we check whether or not it is linked to the correct entries in the KB.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Results — Data and scoring metric",
+      "span_id": "C0050-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "mention extraction component ... achieved 63% Precision, 65% Recall and 64% F-Measure.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Results — Comparison with state-of-the-art",
+      "span_id": "C0050-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "we compare the ontology-based system with [34], one of the current state-of-the-art EL systems trained from news-related data.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Results — Impact of collective inference",
+      "span_id": "C0050-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "Mention level ... without collective inference; Sentence level ... collective inference utilized; Paragraph level ... collective inference utilized.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Results — Data and scoring metric",
+      "span_id": "C0050-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "Although this data set is rather limited, there is no known benchmark data for the biomedical domain.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Results — Data and scoring metric",
+      "span_id": "C0050-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "For each correctly extracted mention, we check whether or not it is linked to the correct entries in the KB.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Results — Comparison with state-of-the-art",
+      "span_id": "C0050-D-P007-TABLE-0003",
+      "page": 7,
+      "excerpt": "Chan and Roth: 84 correct links / 113 total links / 74.34%; Our Approach: 173 / 208 / 83.17%.",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Results — Impact of collective inference",
+      "span_id": "C0050-D-P007-TABLE-0001",
+      "page": 7,
+      "excerpt": "Mention 73.08%; Sentence 83.17%; Paragraph 65.87%.",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Results — Comparison with state-of-the-art",
+      "span_id": "C0050-D-P007-TABLE-0002",
+      "page": 7,
+      "excerpt": "Chan and Roth, 2013: 74.34%; Our Approach: 83.17%.",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Results — Data and scoring metric",
+      "span_id": "C0050-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "mention extraction component ... achieved 63% Precision, 65% Recall and 64% F-Measure.",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Abstract",
+      "span_id": "C0050-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Without using any manual annotation, our approach significantly outperforms state-of-the-art supervised EL method.",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Results — Impact of collective inference",
+      "span_id": "C0050-D-P007-TABLE-0002",
+      "page": 7,
+      "excerpt": "Sentence linking accuracy is 83.17%, compared with 73.08% at mention level.",
+      "confidence": "medium"
+    },
+    "strengths-23-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Results — Comparison with state-of-the-art",
+      "span_id": "C0050-D-P007-TABLE-0003",
+      "page": 7,
+      "excerpt": "Our Approach: 173 correct links, 208 total links, 83.17% linking accuracy.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Results — Impact of collective inference",
+      "span_id": "C0050-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "By including more mentions, we may potentially introduce unrelated information and noise when compared to the sentence level.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Results — Impact of collective inference",
+      "span_id": "C0050-D-P007-TABLE-0002",
+      "page": 7,
+      "excerpt": "Paragraph linking accuracy: 65.87%; Sentence linking accuracy: 83.17%.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Results — Data and scoring metric",
+      "span_id": "C0050-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "Although this data set is rather limited, there is no known benchmark data for the biomedical domain.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Results — Remaining challenges",
+      "span_id": "C0050-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "our EL system is not able to decide whether or not it returns a link.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Results — Remaining challenges",
+      "span_id": "C0050-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "some facts and relations among concepts are not clearly defined.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Results — Remaining challenges",
+      "span_id": "C0050-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "we currently do not make use of this knowledge.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-04": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Results — Remaining challenges",
+      "span_id": "C0050-D-P008-TEXT-0004",
+      "page": 8,
+      "excerpt": "phrases from the same sentence or same paragraph are related to each other, however such assumptions can potentially undermine the EL performance.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Conclusions",
+      "span_id": "C0050-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "In the future, we plan to apply semantic parsing to better select mention collaborators for collective inference, and leverage other existing Semantic Web technologies such as semantic reasoning to improve the linking quality.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Results — Remaining challenges",
+      "span_id": "C0050-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "we can leverage this information and apply a dictionary based approach to detect relevant concepts.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Results — Remaining challenges",
+      "span_id": "C0050-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "It is a challenging research question to optimize the threshold to determine whether a mention is linkable or not.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Results — Remaining challenges",
+      "span_id": "C0050-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "Better collaborators for a target entity may be obtained by deep semantic parsing techniques such as Dependency Parsing and Semantic Role Labeling.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Results — Data and scoring metric",
+      "span_id": "C0050-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "Although this data set is rather limited, there is no known benchmark data for the biomedical domain.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Biomedical entity linking: identify prominent entity mentions in unstructured full-text biomedical literature and ground them in knowledge-base or ontology reference entities. The work addresses scarce labeled biomedical EL data and insufficient context for ambiguous mentions, with the intended downstream benefit of enriching literature and supporting biological-process modelling.",
+  "methodology": {
+    "primary_family": "Ontology-constrained and schema-guided methods",
+    "secondary_families": [
+      "Rule-based NLP",
+      "Linguistic and dependency-based extraction"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "supervised",
+    "description": "Execution pipeline: (1) aggregate 300 BioPortal biology ontologies into a knowledge-base graph whose vertices are classes, individuals, and properties and whose edges are ontology triples; (2) extract prominent mentions using a name tagger, regex-based mention joining, and shallow noun-phrase parsing; (3) retrieve candidates through a surface-form dictionary made from labels, names, synonyms, aliases, and symbols; (4) pre-rank candidates using EntropyRank, a recursive, PageRank-like salience score weighted by entropy of ontology relation properties, with partial surface matches penalized using Jaccard similarity; (5) build a document graph linking mentions by sentence- or paragraph-level co-occurrence; (6) collectively score each mention–candidate pair using candidate salience plus matches between the candidate's ontology neighbors and the mention's document-graph neighbors; and (7) select the highest-scoring candidate. Experiments set α=15 and β=8."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The method is explicitly ontology-guided. It merges 300 BioPortal biology ontologies into a web of data with over 2 million entities and over 50 million factual statements. Ontology classes, properties, and individuals are candidate reference entities; ontology triples form the knowledge graph; labels, synonyms, aliases, and symbols populate the surface-form dictionary; relation-property entropy supplies edge weights; and ontology neighbor relations provide collective-disambiguation evidence.",
+    "evidence": [
+      {
+        "span_id": "C0050-D-P003-TEXT-0001",
+        "page": 3,
+        "excerpt": "E consists of classes, individuals, and properties in the aggregated ontologies."
+      },
+      {
+        "span_id": "C0050-D-P004-TEXT-0002",
+        "page": 4,
+        "excerpt": "entities in the ontologies are potentially connected with many kinds of links that may have semantically rich definitions. We can leverage this greater degree of specificity and assign different weights to edges described by different properties."
+      },
+      {
+        "span_id": "C0050-D-P005-TEXT-0003",
+        "page": 5,
+        "excerpt": "more than 2 million entities and more than 50 million factual statements."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Entity and concept extraction",
+    "Entity resolution and linking",
+    "Graph construction"
+  ],
+  "input_output": {
+    "input_type": "Unstructured full-text biomedical literature, plus an aggregated biomedical ontology knowledge base.",
+    "input_granularity": "Full documents; mentions are extracted as named entities and noun-phrase chunks, while collective context is evaluated at mention, sentence, or paragraph level.",
+    "output_representation": "Entity mention-to-reference-entity links (grounded ontology/knowledge-base entities); the underlying KB representation is a graph of ontology triples."
+  },
+  "models_and_tools": [
+    "Ontology-based unsupervised collective inference",
+    "EntropyRank",
+    "Jaccard similarity for partial surface-form matching",
+    "Name tagger [28]",
+    "Regular expressions",
+    "Shallow parser [29]",
+    "BioPortal ontologies"
+  ],
+  "datasets": [
+    "Lipniacki signal-transduction pathway paper benchmark: 318 annotated mentions of 97 unique prominent entities from 77 sentences",
+    "Knowledge base aggregated from 300 biology-related BioPortal ontologies: over 2 million entities and over 50 million factual statements"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Linking accuracy: for each correctly extracted mention, whether it is linked to the correct KB entry",
+      "Mention-extraction precision",
+      "Mention-extraction recall",
+      "Mention-extraction F-measure"
+    ],
+    "baselines": [
+      "Chan and Roth (2013) relational-inference wikifier, described as a state-of-the-art EL system trained on news-related data",
+      "Ablation/comparison by inference context: mention-level non-collective, sentence-level collective, and paragraph-level collective"
+    ],
+    "setting": "A pilot benchmark on one extensively cited signal-transduction pathway paper (Lipniacki). Domain experts annotated links for 318 mentions/97 unique entities from 77 sentences. The authors evaluate linking accuracy only on correctly extracted mentions; both their system and UIUC Wikifier's associated mention extractor obtained 63% precision, 65% recall, and 64% F-measure. Context granularity was compared at mention, sentence, and paragraph level; the external supervised news-trained baseline was evaluated against the proposed sentence-level result."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Mention-level non-collective linking accuracy: 73.08%.",
+      "Sentence-level collective linking accuracy: 83.17%, a 10.09-point gain over mention-level inference.",
+      "Paragraph-level collective linking accuracy: 65.87%, 17.30 points below sentence-level inference; the authors attribute the decline to unrelated context/noise.",
+      "Against the news-trained Chan and Roth (2013) wikifier, the proposed system achieved 83.17% linking accuracy (173/208 correct links) versus 74.34% (84/113), an 8.83-point absolute gain, reported in the abstract as 9%.",
+      "The associated mention extraction component achieved 63% precision, 65% recall, and 64% F-measure."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0050-D-P007-TABLE-0001",
+        "page": 7,
+        "excerpt": "Mention 73.08%; Sentence 83.17%; Paragraph 65.87%."
+      },
+      {
+        "span_id": "C0050-D-P007-TABLE-0002",
+        "page": 7,
+        "excerpt": "Chan and Roth, 2013: 74.34%; Our Approach: 83.17%."
+      },
+      {
+        "span_id": "C0050-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "mention extraction component ... achieved 63% Precision, 65% Recall and 64% F-Measure."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author claim: avoids biomedical manual-linking annotation by exploiting existing ontology structure and descriptions.",
+      "Experimental result: sentence-level collective inference improves over mention-level non-collective inference on the pilot benchmark (83.17% vs 73.08%).",
+      "Experimental result: the proposed ontology-based method exceeds the reported score of the compared news-trained supervised wikifier (83.17% vs 74.34%).",
+      "Review-level inference: the explicit graph representation, ontology-derived candidate dictionary, and reported context ablation make the method's principal disambiguation mechanism comparatively interpretable."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0050-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "Without using any manual annotation, our approach significantly outperforms state-of-the-art supervised EL method."
+      },
+      {
+        "span_id": "C0050-D-P007-TABLE-0002",
+        "page": 7,
+        "excerpt": "Sentence linking accuracy is 83.17%, compared with 73.08% at mention level."
+      },
+      {
+        "span_id": "C0050-D-P007-TABLE-0003",
+        "page": 7,
+        "excerpt": "Our Approach: 173 correct links, 208 total links, 83.17% linking accuracy."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author finding: paragraph-level collective context can inject unrelated information and reduce accuracy (65.87%) relative to sentence-level context (83.17%).",
+      "Author finding: mention extraction is imperfect (64% F-measure), but linking evaluation conditions on correctly extracted mentions, so the reported linking accuracy does not measure end-to-end EL performance.",
+      "Review-level inference: the evaluation is a small, single-paper pilot with different total-link counts for the compared systems, limiting the strength of a direct general-performance conclusion.",
+      "Review-level inference: the method's reliance on ontology coverage and quality can leave author-defined, weakly specified, or absent concepts and relations unresolved."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0050-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "By including more mentions, we may potentially introduce unrelated information and noise when compared to the sentence level."
+      },
+      {
+        "span_id": "C0050-D-P007-TABLE-0002",
+        "page": 7,
+        "excerpt": "Paragraph linking accuracy: 65.87%; Sentence linking accuracy: 83.17%."
+      },
+      {
+        "span_id": "C0050-D-P005-TEXT-0003",
+        "page": 5,
+        "excerpt": "Although this data set is rather limited, there is no known benchmark data for the biomedical domain."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The system cannot decide whether it should return a link; choosing a threshold for linkability is unresolved.",
+      "Failure to detect biomedical concept mentions is a major source of error for the compared system, motivating improved concept detection.",
+      "Some biomedical facts and relations are not clearly defined in the ontologies.",
+      "The system does not exploit dependency relationships among processes in signalling cascades.",
+      "Assuming that all same-sentence or same-paragraph phrases are related can undermine performance; paragraph context reduced performance."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0050-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "our EL system is not able to decide whether or not it returns a link."
+      },
+      {
+        "span_id": "C0050-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "some facts and relations among concepts are not clearly defined."
+      },
+      {
+        "span_id": "C0050-D-P008-TEXT-0003",
+        "page": 8,
+        "excerpt": "we currently do not make use of this knowledge."
+      },
+      {
+        "span_id": "C0050-D-P008-TEXT-0004",
+        "page": 8,
+        "excerpt": "phrases from the same sentence or same paragraph are related to each other, however such assumptions can potentially undermine the EL performance."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author proposed: apply semantic parsing to select better mention collaborators for collective inference.",
+      "Author proposed: use semantic reasoning and other Semantic Web technologies to improve linking quality.",
+      "Author proposed: exploit ontology taxonomies, synonyms, aliases, names, and abbreviations in a dictionary-based concept-detection approach.",
+      "Review-level inference: evaluate selective/linkability decisions and calibrate a reject option, then report end-to-end mention detection plus linking results on multiple independently annotated full-text papers."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0050-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "In the future, we plan to apply semantic parsing to better select mention collaborators for collective inference, and leverage other existing Semantic Web technologies such as semantic reasoning to improve the linking quality."
+      },
+      {
+        "span_id": "C0050-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "we can leverage this information and apply a dictionary based approach to detect relevant concepts."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-stated: robustly determine whether a mention is linkable and optimize the link/no-link threshold.",
+      "Author-stated: represent incomplete or vague ontology facts and relations, such as the relation between eukaryotic transcription and cell nucleus.",
+      "Author-stated: incorporate dependencies among sequential signalling-pathway events.",
+      "Author-stated: choose semantically relevant collaborators rather than treating all co-occurring sentence/paragraph mentions as related.",
+      "Review-level inference: broader biomedical full-text benchmarks and comparable end-to-end evaluations remain needed to establish generalization beyond the single pilot document."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0050-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "It is a challenging research question to optimize the threshold to determine whether a mention is linkable or not."
+      },
+      {
+        "span_id": "C0050-D-P008-TEXT-0002",
+        "page": 8,
+        "excerpt": "Better collaborators for a target entity may be obtained by deep semantic parsing techniques such as Dependency Parsing and Semantic Role Labeling."
+      },
+      {
+        "span_id": "C0050-D-P005-TEXT-0003",
+        "page": 5,
+        "excerpt": "Although this data set is rather limited, there is no known benchmark data for the biomedical domain."
+      }
+    ]
+  },
+  "code_and_data_availability": "not_reported"
+}

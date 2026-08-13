@@ -1,0 +1,773 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0158",
+    "title": "Open Relation Extraction and Grounding",
+    "pdf_path": "data/batches/batch-05/C0158.pdf",
+    "authors": [
+      "Dian Yu",
+      "Lifu Huang",
+      "Heng Ji"
+    ],
+    "year": 2017,
+    "venue": "Proceedings of the 8th International Joint Conference on Natural Language Processing (IJCNLP)",
+    "identifier": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    },
+    "abstract": "The paper proposes an importance-based open relation extraction approach that uses global dependency-tree structure to select salient triples, followed by unsupervised grounding of those triples to a large knowledge-base schema using KB triples and weighted context words. On English Slot Filling 2013, it reports an 8.1-point F1 improvement over the cited state-of-the-art open-RE method.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title block",
+      "span_id": "C0158-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Dian Yu, Lifu Huang, Heng Ji",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication footer",
+      "span_id": "C0158-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the The 8th International Joint Conference on Natural Language Processing ... November 27 – December 1, 2017.",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication footer",
+      "span_id": "C0158-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proceedings of the The 8th International Joint Conference on Natural Language Processing, pages 854–864.",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0158-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "We propose a novel importance-based open RE approach by exploiting the global structure of a dependency tree to extract salient triples. We design an unsupervised method to name relation types by grounding relational triples to a large-scale Knowledge Base (KB) schema.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0158-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Previous open Relation Extraction ... approaches mainly rely on linguistic patterns and constraints ... [and] lack ... abilities to cover diverse relation expressions or measure the relative importance of candidate triples within a sentence.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0158-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "we propose an unsupervised grounding method to name the relation type between two arguments as either a KB relation or NONE.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Relation Extraction",
+      "span_id": "C0158-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "we introduce a graph-based method to extract argument pairs of salient relational triples. We first present the extended dependency tree construction for each sentence.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Combination and Filtering",
+      "span_id": "C0158-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "we can simply apply the maximum spanning tree algorithm to keep those relatively important pairs.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Relation Grounding",
+      "span_id": "C0158-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "we aim to name the relation between a pair of arguments as one of the KB relations or NONE by comparing the semantic representations of context words and KB relations.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Relation Argument Type Constraints",
+      "span_id": "C0158-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "For each KB relation, we can obtain its type constraints for its two arguments.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Figure 1 / Introduction",
+      "span_id": "C0158-D-P002-PICTURE-0001",
+      "page": 2,
+      "excerpt": "The proposed framework is illustrated in Figure 1.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Relation Grounding",
+      "span_id": "C0158-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "We have presented how to extract candidate argument pairs in Section 2. In this section, we first introduce how to rank the context words ... Finally we ground each relational triple.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0158-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "we do not require any aligned training corpora or relation phrases for KB triples.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Relation Grounding",
+      "span_id": "C0158-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Given all the KB triples, we can estimate the probability of one of the arguments belonging to a certain entity type.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "2.1 Extended Dependency Tree Construction",
+      "span_id": "C0158-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We first apply a dependency parser ... annotate an entity or time mention node with its type. Finally we perform coreference resolution ... We regard any two entities as a candidate argument pair.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "2.4 Combination and Filtering",
+      "span_id": "C0158-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "F(i, j) = I(i) × I(j) / c²ij ... apply the maximum spanning tree algorithm to keep those relatively important pairs.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.1–3.2 Relation Grounding",
+      "span_id": "C0158-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "We only keep nouns, verbs, adjectives, prepositions, and particles as indicative context words ... ground a candidate relational triple ... considering all the possible relations.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0158-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "the relation schema in a large-scale Knowledge Base (KB) such as DBpedia ... covers a much wider range of informative relations along with their type signatures.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "4.2 Evaluation based on Slot Filling",
+      "span_id": "C0158-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "We manually map KB relations to slot types based on TAC-KBP slot descriptions ... We assign a subtype ... to a location entity based on gazetteer matching.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "2.1 Extended Dependency Tree Construction",
+      "span_id": "C0158-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We annotate an entity or time mention node with its type. Finally we perform coreference resolution ... replace any nominal or pronominal entity mention with its coreferential name mention.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "2.4 Combination and Filtering",
+      "span_id": "C0158-D-P004-TEXT-0002",
+      "page": 4,
+      "excerpt": "we can simply apply the maximum spanning tree algorithm to keep those relatively important pairs.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.2 Grounding",
+      "span_id": "C0158-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "we aim to name the relation between a pair of arguments as one of the KB relations or NONE.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "4.2 Evaluation based on Slot Filling",
+      "span_id": "C0158-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "a large-scale corpus which includes news documents, web blogs, and discussion forum posts.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "2.1 Extended Dependency Tree Construction",
+      "span_id": "C0158-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Given a sentence containing N words, we construct a weighted directed graph.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "2.1 Extended Dependency Tree Construction",
+      "span_id": "C0158-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "coreference links between nodes that refer to the same entity within a document.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "2.1 Extended Dependency Tree Construction",
+      "span_id": "C0158-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "Given a sentence containing N words, we construct a weighted directed graph.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.2 Grounding",
+      "span_id": "C0158-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "The predicted relation can either be assigned a valid KB relation or NONE.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "4.2 Evaluation based on Slot Filling",
+      "span_id": "C0158-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "The importance-based strategy is effective at extracting more salient information ... extracts both ... with their associated top-weighted context words.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "2.1 Extended Dependency Tree Construction",
+      "span_id": "C0158-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We assign a dependency edge ... weight wij = 1 ... add its reverse edge ... wji = 0.5.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.1 Knowledge Base and Word Embeddings",
+      "span_id": "C0158-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "We use ... 300-dimensional GloVe vectors ... pretrained on 6 billion tokens.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.2 Evaluation based on Slot Filling",
+      "span_id": "C0158-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "We apply Stanford CoreNLP ... for English part-of-speech tagging, name tagging, time expression extraction, dependency parsing, and coreference resolution.",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.1 Knowledge Base and Word Embeddings",
+      "span_id": "C0158-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "April 2016 dump of DBpedia ... 2,060 relation types and 30,024,093 relation triples in total.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.2 Evaluation based on Slot Filling",
+      "span_id": "C0158-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "We obtain 1,701 relevant documents from the official evaluation assessment for 50 person queries and 50 organization queries.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.2 Evaluation based on Slot Filling",
+      "span_id": "C0158-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We use the official Slot Filling evaluation scoring metrics: Precision (P), Recall (R), and F-measure (F1).",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.2 Evaluation based on Slot Filling",
+      "span_id": "C0158-D-P006-TABLE-0001",
+      "page": 6,
+      "excerpt": "UW Official ... UMass Official ... [1] KB Tuples ... [2] Relation Names ... [1]+[2] Joint.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.2 Evaluation based on Slot Filling",
+      "span_id": "C0158-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "we also compare with an approach ... which extracts relations with matrix factorization and universal schemas.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.2 Evaluation based on Slot Filling",
+      "span_id": "C0158-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We ignore all the slot types which require nominal phrases as fillers ... and ... alternate names which depend on cross-document coreference resolution.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.2 Evaluation based on Slot Filling",
+      "span_id": "C0158-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "In our experiments, we keep all the candidate triples which could be mapped to a slot type without tuning thresholds.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.4 Impact of Argument Type Constraints",
+      "span_id": "C0158-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "This approach achieves 28.9% F1 which is comparable to the highest F1 (29.2%) obtained by threshold tuning.",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.2 Evaluation based on Slot Filling",
+      "span_id": "C0158-D-P006-TABLE-0001",
+      "page": 6,
+      "excerpt": "UW Official: P 69.9, R 12.2, F1 20.8; Relation Names: P 24.3, R 30.9, F1 27.2; Joint: P 26.2, R 32.4, F1 28.9.",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.4 Impact of Argument Type Constraints",
+      "span_id": "C0158-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "This approach achieves 28.9% F1 which is comparable to the highest F1 (29.2%) obtained by threshold tuning.",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2 Evaluation based on Slot Filling",
+      "span_id": "C0158-D-P006-TEXT-0001",
+      "page": 6,
+      "excerpt": "Our method extracts both ('Sheikh Tantawi', 'Egyptian') and ('Sheikh Tantawi', 'Wednesday') ... since the connection between 'Egyptian' and 'Wednesday' is much weaker.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2 Evaluation based on Slot Filling",
+      "span_id": "C0158-D-P006-TABLE-0002",
+      "page": 6,
+      "excerpt": "Joint: P 26.2, R 32.4, F1 28.9; UW Official: P 69.9, R 12.2, F1 20.8.",
+      "confidence": "medium"
+    },
+    "strengths-22-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.3 Impact of Relation Representations",
+      "span_id": "C0158-D-P006-TEXT-0003",
+      "page": 6,
+      "excerpt": "sometimes relations are implicitly expressed ... we need more general relation representations with the help of millions of KB tuples.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.1 Open Information Extraction",
+      "span_id": "C0158-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "Currently we focus on relations between two entities.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2 Evaluation based on Slot Filling",
+      "span_id": "C0158-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "we mainly focus on relations between entities and therefore we cannot directly compare with state-of-the-art open RE methods on those datasets.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Table 4",
+      "span_id": "C0158-D-P006-TABLE-0003",
+      "page": 6,
+      "excerpt": "UW Official: P 69.9, R 12.2, F1 20.8; [1]+[2] Joint: P 26.2, R 32.4, F1 28.9.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "5.1 Open Information Extraction",
+      "span_id": "C0158-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "Some open IE approaches have the capability to extract relations between concepts or phrases ... Currently we focus on relations between two entities.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.2 Evaluation based on Slot Filling",
+      "span_id": "C0158-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "we mainly focus on relations between entities and therefore we cannot directly compare with state-of-the-art open RE methods on those datasets.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.4 Impact of Argument Type Constraints",
+      "span_id": "C0158-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "if the threshold is set too high (e.g., greater than 0.35%), we will mistakenly discard correct candidates which satisfy type constraints.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "6 Conclusions and Future Work",
+      "span_id": "C0158-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "In the future, we aim to extend our framework for multilingual open RE based on the KB schema.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4.2 Evaluation based on Slot Filling",
+      "span_id": "C0158-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "We manually map KB relations to slot types based on TAC-KBP slot descriptions.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Table 4",
+      "span_id": "C0158-D-P006-TABLE-0003",
+      "page": 6,
+      "excerpt": "The joint approach has P 26.2, R 32.4, F1 28.9, whereas UW Official has P 69.9, R 12.2, F1 20.8.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "6 Conclusions and Future Work",
+      "span_id": "C0158-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "In the future, we aim to extend our framework for multilingual open RE based on the KB schema.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "5.1 Open Information Extraction",
+      "span_id": "C0158-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "Currently we focus on relations between two entities.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2 Evaluation based on Slot Filling",
+      "span_id": "C0158-D-P005-TEXT-0003",
+      "page": 5,
+      "excerpt": "We ignore ... per/org:alternate names which depend on cross-document coreference resolution.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "4.2 Evaluation based on Slot Filling",
+      "span_id": "C0158-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "The resource is publicly available for research purposes at: http://nlp.cs.rpi.edu/data/dbpedia2slot.zip.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "4.1 Knowledge Base and Word Embeddings",
+      "span_id": "C0158-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "We use the April 2016 dump of DBpedia ... We use the 300-dimensional GloVe vectors.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Open relation extraction between entities in open-domain text: extract salient relational triples rather than many syntactically possible but unimportant pairs, and assign each retained pair a meaningful KB relation type (or NONE) when surface relation phrases are diverse, implicit, or overly specific.",
+  "methodology": {
+    "primary_family": "Linguistic and dependency-based extraction",
+    "secondary_families": [
+      "Ontology-constrained and schema-guided methods",
+      "Rule-based NLP"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "weakly_supervised",
+    "description": "For each sentence, the system parses uncollapsed dependencies, adds lower-weight reverse edges, annotates entity/time types, and resolves coreference to create an extended dependency graph. Every entity pair is a candidate. It computes directed random-walk first-passage and symmetric commute-time distances, then an entity-preferred TextRank-like importance score. Relation strength is entity-importance product divided by squared commute distance; a maximum spanning tree keeps salient pairs and first-passage asymmetry orders their arguments. For each retained pair, nouns, verbs, adjectives, prepositions, and particles receive commute-time-based context weights. Grounding compares an argument-difference/context-word embedding with KB-relation embeddings built from DBpedia triple translations and relation-name embeddings; type constraints filter incompatible KB relations, and the best remaining relation is selected or marked NONE."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "DBpedia supplies the target relation schema, relation triples, relation names, and argument-type constraints. Candidate triples are grounded to a DBpedia relation or NONE; for Slot Filling evaluation, DBpedia relations are manually mapped to TAC-KBP slot types, with location subtypes assigned by gazetteer matching.",
+    "evidence": [
+      {
+        "span_id": "C0158-D-P002-TEXT-0001",
+        "page": 2,
+        "excerpt": "the relation schema in a large-scale Knowledge Base (KB) such as DBpedia ... covers a much wider range of informative relations along with their type signatures."
+      },
+      {
+        "span_id": "C0158-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "We manually map KB relations to slot types based on TAC-KBP slot descriptions ... We assign a subtype ... to a location entity based on gazetteer matching."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Text preprocessing",
+    "Entity and concept extraction",
+    "Entity typing",
+    "Coreference resolution",
+    "Relation and triple extraction",
+    "Entity resolution and linking",
+    "Ontology or schema discovery",
+    "Graph construction"
+  ],
+  "input_output": {
+    "input_type": "English open-domain natural-language documents and sentences, processed with linguistic annotations; the evaluation corpus contains news documents, web blogs, and discussion-forum posts.",
+    "input_granularity": "Document-level input for coreference resolution and sentence-level extended dependency graphs, candidate entity pairs, and relation grounding.",
+    "output_representation": "Ordered salient entity-pair relational triples with weighted context words and a grounded DBpedia relation type, or NONE; in evaluation, grounded relations are converted to TAC-KBP slot fillers/slot types."
+  },
+  "models_and_tools": [
+    "Extended weighted directed dependency graph with original dependency edges weighted 1 and reverse edges weighted 0.5",
+    "Markov-chain random walks; mean first-passage time and commute time",
+    "Entity-preferred TextRank-style node importance with back probability",
+    "Maximum spanning tree filtering",
+    "300-dimensional GloVe pretrained word embeddings",
+    "DBpedia relation embeddings from KB triples and relation-name embeddings",
+    "Argument-type constraints with Jenks natural-break optimization",
+    "Stanford CoreNLP for POS tagging, named-entity tagging, time-expression extraction, dependency parsing, and coreference resolution",
+    "Gazetteer matching for location subtype"
+  ],
+  "datasets": [
+    "TAC-KBP English Slot Filling 2013 dataset: 1,701 relevant documents from official assessment, for 50 person and 50 organization queries",
+    "April 2016 DBpedia dump: 2,060 relation types and 30,024,093 relation triples",
+    "GloVe 300-dimensional vectors pretrained on 6 billion tokens from English Gigaword Fifth Edition and a 2014 Wikipedia dump"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Official Slot Filling precision (P)",
+      "Recall (R)",
+      "F-measure (F1)"
+    ],
+    "baselines": [
+      "University of Washington official KBP2013 submission (Soderland et al., 2013), using Open IE V4.0",
+      "UMass official submission (Singh et al., 2013), using matrix factorization and universal schemas",
+      "Ablations using relation representations from KB tuples only, relation names only, and their joint combination"
+    ],
+    "setting": "Evaluation uses TAC-KBP 2013 English Slot Filling. The authors manually map DBpedia relations to TAC-KBP slot types, exclude slot types requiring nominal fillers and alternate-name slots requiring cross-document coreference, retain candidate triples that can map to a slot type without threshold tuning for the main comparison, and score them with official SF P/R/F1. Type-constraint thresholds are separately studied; automatic Jenks-derived thresholds are compared with tuned thresholds."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "On KBP2013 English Slot Filling, the joint relation representation achieved P=26.2%, R=32.4%, and F1=28.9%.",
+      "The joint method's 28.9% F1 exceeded the UW official Open IE baseline's 20.8% F1 by 8.1 percentage points, while UW had substantially higher precision (69.9%) but lower recall (12.2%).",
+      "Relation-name-only representation achieved P=24.3%, R=30.9%, F1=27.2%; KB-tuples-only achieved P=17.3%, R=21.1%, F1=19.0%.",
+      "Automatic Jenks thresholds for type constraints produced F1=28.9%, close to the best threshold-tuned F1=29.2%; thresholds from 0.05 to 0.2 showed no significant performance differences."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0158-D-P006-TABLE-0001",
+        "page": 6,
+        "excerpt": "UW Official: P 69.9, R 12.2, F1 20.8; Relation Names: P 24.3, R 30.9, F1 27.2; Joint: P 26.2, R 32.4, F1 28.9."
+      },
+      {
+        "span_id": "C0158-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "This approach achieves 28.9% F1 which is comparable to the highest F1 (29.2%) obtained by threshold tuning."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author claim: Global dependency-tree analysis ranks salient entity pairs and can retain relations involving central/important entities that prior extraction misses.",
+      "Experimental result: The method yields markedly higher recall than the UW baseline (32.4% versus 12.2%) while improving F1 (28.9% versus 20.8%) on the stated benchmark.",
+      "Author claim: Grounding with KB triples and weighted context-word embeddings can handle implicit or varied surface expressions, and produces more general KB relation names.",
+      "Review-level inference: The use of relation names, KB triples, type constraints, and NONE gives the output a schema-compatible representation useful for KB population rather than leaving only unconstrained surface phrases."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0158-D-P006-TEXT-0001",
+        "page": 6,
+        "excerpt": "Our method extracts both ('Sheikh Tantawi', 'Egyptian') and ('Sheikh Tantawi', 'Wednesday') ... since the connection between 'Egyptian' and 'Wednesday' is much weaker."
+      },
+      {
+        "span_id": "C0158-D-P006-TABLE-0002",
+        "page": 6,
+        "excerpt": "Joint: P 26.2, R 32.4, F1 28.9; UW Official: P 69.9, R 12.2, F1 20.8."
+      },
+      {
+        "span_id": "C0158-D-P006-TEXT-0003",
+        "page": 6,
+        "excerpt": "sometimes relations are implicitly expressed ... we need more general relation representations with the help of millions of KB tuples."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author-stated scope limitation: the method currently focuses on relations between two entities, not concept or phrase relations.",
+      "Author-stated evaluation limitation: it cannot be directly compared with state-of-the-art open-RE methods on established open-RE benchmarks because its focus is entity relations.",
+      "Author-stated precision trade-off: compared with the UW system, the method has much lower precision (26.2% versus 69.9%), despite higher recall and F1.",
+      "Review-level inference: Output coverage and label correctness are bounded by DBpedia relation/schema coverage, entity typing, dependency parsing, coreference resolution, and the manual DBpedia-to-slot mapping used in evaluation.",
+      "Review-level inference: Maximum-spanning-tree filtering selects a sparse set of pairs per sentence, so it can omit multiple valid relations if they are not among the selected edges."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0158-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "Currently we focus on relations between two entities."
+      },
+      {
+        "span_id": "C0158-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "we mainly focus on relations between entities and therefore we cannot directly compare with state-of-the-art open RE methods on those datasets."
+      },
+      {
+        "span_id": "C0158-D-P006-TABLE-0003",
+        "page": 6,
+        "excerpt": "UW Official: P 69.9, R 12.2, F1 20.8; [1]+[2] Joint: P 26.2, R 32.4, F1 28.9."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "The method is limited to relations between two entities; it does not currently cover relations between concepts or phrases.",
+      "The authors cannot directly compare with leading open-RE systems on existing open-RE benchmarks because those benchmarks do not match the paper's entity-relation focus.",
+      "Excessively high type-constraint thresholds (above 0.35%) mistakenly discard correct candidates that meet type constraints."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0158-D-P007-TEXT-0001",
+        "page": 7,
+        "excerpt": "Some open IE approaches have the capability to extract relations between concepts or phrases ... Currently we focus on relations between two entities."
+      },
+      {
+        "span_id": "C0158-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "we mainly focus on relations between entities and therefore we cannot directly compare with state-of-the-art open RE methods on those datasets."
+      },
+      {
+        "span_id": "C0158-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "if the threshold is set too high (e.g., greater than 0.35%), we will mistakenly discard correct candidates which satisfy type constraints."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed improvement: extend the framework to multilingual open relation extraction based on the KB schema.",
+      "Review-level inference: Evaluate the same system on a broader entity-relation benchmark and report precision-recall behavior under comparable filtering and mapping conditions, addressing the paper's acknowledged lack of direct comparison to standard open-RE benchmarks.",
+      "Review-level inference: Replace or supplement manual DBpedia-to-slot mappings and gazetteer subtype assignment with a reproducible, released mapping protocol; this would reduce evaluation-specific manual effort.",
+      "Review-level inference: Add calibration or learned filtering beyond a maximum spanning tree to mitigate the documented precision-recall trade-off and avoid discarding valid non-tree relations."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0158-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "In the future, we aim to extend our framework for multilingual open RE based on the KB schema."
+      },
+      {
+        "span_id": "C0158-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "We manually map KB relations to slot types based on TAC-KBP slot descriptions."
+      },
+      {
+        "span_id": "C0158-D-P006-TABLE-0003",
+        "page": 6,
+        "excerpt": "The joint approach has P 26.2, R 32.4, F1 28.9, whereas UW Official has P 69.9, R 12.2, F1 20.8."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-stated unresolved direction: multilingual open relation extraction grounded through a KB schema.",
+      "Review-level inference: Reliable extraction beyond binary named-entity pairs—including concepts, noun phrases, and nominal fillers—remains unresolved by this system.",
+      "Review-level inference: Robust grounding of relations that are absent from, ambiguous in, or poorly covered by a fixed KB schema remains unresolved because the method selects a KB relation or NONE.",
+      "Review-level inference: Cross-document entity resolution and alternate-name extraction remain outside the evaluated setup; the authors explicitly exclude slots depending on cross-document coreference."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0158-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "In the future, we aim to extend our framework for multilingual open RE based on the KB schema."
+      },
+      {
+        "span_id": "C0158-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "Currently we focus on relations between two entities."
+      },
+      {
+        "span_id": "C0158-D-P005-TEXT-0003",
+        "page": 5,
+        "excerpt": "We ignore ... per/org:alternate names which depend on cross-document coreference resolution."
+      }
+    ]
+  },
+  "code_and_data_availability": "No source-code repository or implementation download is stated in the paper. The paper states that the DBpedia-relation-to-slot mapping resource is publicly available for research purposes at http://nlp.cs.rpi.edu/data/dbpedia2slot.zip. It uses the April 2016 DBpedia dump, GloVe vectors, and official TAC-KBP 2013 Slot Filling assessment data; no bundled dataset release is stated."
+}

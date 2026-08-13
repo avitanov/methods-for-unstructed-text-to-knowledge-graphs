@@ -1,0 +1,818 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0017",
+    "title": "CodeKGC: Code Language Model for Generative Knowledge Graph Construction",
+    "pdf_path": "data/batches/batch-02/C0017.pdf",
+    "authors": [
+      "Zhen Bi",
+      "Jing Chen",
+      "Yinuo Jiang",
+      "Feiyu Xiong",
+      "Wei Guo",
+      "Huajun Chen",
+      "Ningyu Zhang"
+    ],
+    "year": 2024,
+    "venue": "not_reported",
+    "identifier": {
+      "status": "reported",
+      "value": "arXiv:2304.09048v2",
+      "evidence": [
+        {
+          "span_id": "C0017-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "arXiv:2304.09048v2 [cs.CL] 18 Jan 2024"
+        }
+      ]
+    },
+    "abstract": "CodeKGC formulates generative knowledge-graph construction as code completion: it converts text and target triples into Python-like code, uses schema-aware prompts based on class definitions, and optionally generates rationales before triples. The paper evaluates the approach against textual prompting and UIE on ADE, CoNLL04, and SciERC in zero-shot and few-shot settings.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and author block",
+      "span_id": "C0017-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Zhen Bi, Jing Chen, Yinuo Jiang, Feiyu Xiong, Wei Guo, Huajun Chen, and Ningyu Zhang.",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "ACM Reference Format",
+      "span_id": "C0017-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Zhen Bi ... and Ningyu Zhang. 2024. CodeKGC: Code Language Model for Generative Knowledge Graph Construction.",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-03-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Header",
+      "span_id": "C0017-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "arXiv:2304.09048v2 [cs.CL] 18 Jan 2024",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-04-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0017-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "given a code-format natural language input, the target is to generate triples which can be represented as code completion tasks ... schema-aware prompts ... rationale-enhanced generation method.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "1 Introduction",
+      "span_id": "C0017-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "Language models struggle to generate these unnatural outputs ... especially for scenarios where facts are complexly overlapped.",
+      "confidence": "medium"
+    },
+    "problem_addressed-05-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "3.1 Schema-aware Prompt Construction",
+      "span_id": "C0017-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "Each training instance ... is in the form (T, G), where T is a text input, and G is the knowledge graph to be generated ... G are triples.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "3.2 Rationale-enhanced Generation",
+      "span_id": "C0017-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "To perform the task on an unseen example, we give the code LM a few exemplars ... for n-shot learning.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-06-02": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "4.1.2 Baselines for Comparison",
+      "span_id": "C0017-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "We evaluate our proposed CodeKGC in both zero-shot and few-shot settings.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.1 Schema-aware Prompt Construction",
+      "span_id": "C0017-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "transform a set of output triples ... into a semantically equivalent program language written in Python ... When doing the inference, we eventually convert it back into the graph G.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "3.1 Schema-aware Prompt Construction",
+      "span_id": "C0017-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "We can integrate the schema information by the inheritance of Python class definitions.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-07-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "4.2.4 Analysis of Smaller Code Language Models",
+      "span_id": "C0017-D-P012-TEXT-0003",
+      "page": 12,
+      "excerpt": "we use T5 and CodeT5 as backbone and pre-train the new smaller code language model ... fine-tune our CodeKGC on the ADE dataset.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3.1 Schema-aware Prompt Construction",
+      "span_id": "C0017-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "The re-structured language will be fed into the code language model ... When doing the inference, we eventually convert it back into the graph G.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-08-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "3.2 Rationale-enhanced Generation",
+      "span_id": "C0017-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "the key point is to identify relations and extract their corresponding entities ... reasoning chain includes three steps: relationship identification, entity extraction, and the final knowledge graph construction.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "4.1.2 Baselines for Comparison",
+      "span_id": "C0017-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "We evaluate our proposed CodeKGC in both zero-shot and few-shot settings.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-09-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "4.2.4 Analysis of Smaller Code Language Models",
+      "span_id": "C0017-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "pre-train a model with fewer parameters on our own ... fine-tune our CodeKGC on the ADE dataset.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.1 Schema-aware Prompt Construction",
+      "span_id": "C0017-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We use the pre-defined script ... to transform the original sample (T, G) into code format (Tc, Gc) ... convert it back into the graph G.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Figure 2",
+      "span_id": "C0017-D-P006-PICTURE-0002",
+      "page": 6,
+      "excerpt": "The original natural language is converted into code formats and then fed into the code language model ... schema-aware prompt ... optional rationale-enhanced module.",
+      "confidence": "medium"
+    },
+    "methodology-description-10-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "3.2 Rationale-enhanced Generation",
+      "span_id": "C0017-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "reasoning chain includes three steps: relationship identification, entity extraction, and the final knowledge graph construction.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.1 Schema-aware Prompt Construction",
+      "span_id": "C0017-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "The schema in the KG describes ... entities, relations, properties and constraints ... integrate the schema information by the inheritance of Python class definitions.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-11-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "3.1 Schema-aware Prompt Construction",
+      "span_id": "C0017-D-P005-TEXT-0002",
+      "page": 5,
+      "excerpt": "We further define Triple class ... Each triple will be represented as the instance of their corresponding entity and relation type classes.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.1 Schema-aware Prompt Construction",
+      "span_id": "C0017-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "G are triples which consists of entities and their connected relations.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "3.2 Rationale-enhanced Generation",
+      "span_id": "C0017-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "relationship identification, entity extraction, and the final knowledge graph construction.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-12-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "4.1.3 Evaluation Protocols",
+      "span_id": "C0017-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "a triple is considered correct only if the head and tail entities and the relation ... completely match ... model can predict the corresponding types of entities.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "3.1 Schema-aware Prompt Construction",
+      "span_id": "C0017-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "we convert the sentence pair into a series of pre-defined classes, and construct a task prompt containing a Docstrings which describes the task.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-13-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Figure 2",
+      "span_id": "C0017-D-P006-PICTURE-0002",
+      "page": 6,
+      "excerpt": "Schema Prompt ... In-context Prompts ... Task Prompt ... Model Output.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "3.1 Schema-aware Prompt Construction",
+      "span_id": "C0017-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "Each training instance ... is in the form (T, G), where T is a text input, and G is the knowledge graph to be generated.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-14-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "4.1.1 Datasets",
+      "span_id": "C0017-D-P008-TABLE-0002",
+      "page": 8,
+      "excerpt": "Dataset statistics ... Sentences ... Triples.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "3.1 Schema-aware Prompt Construction",
+      "span_id": "C0017-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "We further define Triple class to represent the triples contained in the textual input.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-15-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Figure 3",
+      "span_id": "C0017-D-P006-PICTURE-0002",
+      "page": 6,
+      "excerpt": "extract = Extract([Triple(person('Marvin Feuerwerger'), Rel('Work for'), organization('Washington Institute for Near East Policy'))])",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.1.2 Baselines for Comparison",
+      "span_id": "C0017-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "we use the large code language models (GPT-3.5 series) text-davinci-002 and text-davinci-003 as the backbone ... code-davinci-002.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.1.2 Baselines for Comparison",
+      "span_id": "C0017-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "pre-train a smaller code language model initialized by T5 and CodeT5 ... only 770 million parameters.",
+      "confidence": "medium"
+    },
+    "models_and_tools-16-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "4.1.4 Parameters Settings",
+      "span_id": "C0017-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "utilize the API interface provided by OpenAI ... Pytorch 1.13 with deepspeed3 package ... AdamW optimizer.",
+      "confidence": "medium"
+    },
+    "datasets-17-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.1.1 Datasets",
+      "span_id": "C0017-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "We evaluate the proposed CodeKGC on three popular benchmark datasets, ADE, CoNLL04 and SciERC.",
+      "confidence": "medium"
+    },
+    "datasets-17-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.1.1 Datasets",
+      "span_id": "C0017-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "Limited by the time constraints of the API call, we extract 300 samples randomly chosen from the test dataset for evaluation.",
+      "confidence": "medium"
+    },
+    "datasets-17-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "4.1.1 Datasets",
+      "span_id": "C0017-D-P008-TABLE-0003",
+      "page": 8,
+      "excerpt": "T-REx 838,821 / 4,378,318 / 10,496; TEKGEN 6,310,061 / 10,609,697 / 1,013; KELM 15,616,551 / 35,117,608 / 59,904.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-18-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "4.1.3 Evaluation Protocols",
+      "span_id": "C0017-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "We calculate the relation strict micro F1 score ... a triple is considered correct only if the head and tail entities and the relation ... completely match.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.1.2 Baselines for Comparison",
+      "span_id": "C0017-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "we use vanilla prompt and the supervised model UIE as our main baselines.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.2.2 Results of Prompt Variations of CodeKGC",
+      "span_id": "C0017-D-P011-PICTURE-0002",
+      "page": 11,
+      "excerpt": "CodeKGC; w/o Schema; w/o Rationale.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-19-03": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "4.2.4 Analysis of Smaller Code Language Models",
+      "span_id": "C0017-D-P012-TEXT-0003",
+      "page": 12,
+      "excerpt": "compare their performance ... four pre-trained models (pre-trained T5 and CodeT5, not pre-trained T5 and CodeT5).",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Table 2 and 4.1.3 Evaluation Protocols",
+      "span_id": "C0017-D-P009-TABLE-0001",
+      "page": 9,
+      "excerpt": "For the zero-shot setting, we replace 1-shot relations with their synonyms. For the few-shot setting, we choose 3-shot relation setting as demonstrations.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.1.3 Evaluation Protocols",
+      "span_id": "C0017-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "For all experimental setups, we run three times and use the average results.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-20-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "4.1.4 Parameters Settings",
+      "span_id": "C0017-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "temperature to 0.5 and max_tokens to either 256 or 512 ... stop the code generation whenever ... \"\"\", class or #.",
+      "confidence": "medium"
+    },
+    "main_results-21-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.2.1 Main Results",
+      "span_id": "C0017-D-P009-TABLE-0001",
+      "page": 9,
+      "excerpt": "CodeKGC (text-davinci-003): zero-shot 43.7/41.6/19.5; few-shot 64.2/49.6/24.7 for ADE/CONLL04/SciERC.",
+      "confidence": "medium"
+    },
+    "main_results-21-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.2.1 Main Results",
+      "span_id": "C0017-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "CodeKGC achieves ↑5.4, ↑6.4 and ↑5.9 score improvement on ADE, CONLL04 and SciERC datasets.",
+      "confidence": "medium"
+    },
+    "main_results-21-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "4.2.2 Results of Prompt Variations of CodeKGC",
+      "span_id": "C0017-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "When the sample size is too small, lengthy prompts can have a negative impact on the model.",
+      "confidence": "medium"
+    },
+    "strengths-22-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "3.1 Schema-aware Prompt Construction",
+      "span_id": "C0017-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "we can naturally model complex structural information in language, such as nested entities or relationships.",
+      "confidence": "medium"
+    },
+    "strengths-22-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2.1 Main Results",
+      "span_id": "C0017-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "as the number of in-context samples increases, our CodeKGC consistently outperforms the baseline in all models.",
+      "confidence": "medium"
+    },
+    "strengths-22-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2.3 Results of Handling Hard Examples",
+      "span_id": "C0017-D-P012-CAPTION-0003",
+      "page": 12,
+      "excerpt": "CodeKGC with code-davinci-002 correctly predicts the overlapping and long-range triples, while Vanilla prompt fails.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2.1 Main Results",
+      "span_id": "C0017-D-P009-TEXT-0001",
+      "page": 9,
+      "excerpt": "performance of CodeKGC on the ADE dataset is limited ... medical corpus with a large number of acronyms.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2.3 Results of Handling Hard Examples",
+      "span_id": "C0017-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "CodeKGC heavily relies on a more powerful code pre-trained model as its foundation when solving complex structures. It is also a limitation of our current approach.",
+      "confidence": "medium"
+    },
+    "weaknesses-23-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.2.4 Analysis of Smaller Code Language Models",
+      "span_id": "C0017-D-P013-PICTURE-0003",
+      "page": 13,
+      "excerpt": "UIE: 81.1; Restructured Code Pre-trained: T5 75.6, CodeT5 68.6.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.2.2 Results of Prompt Variations of CodeKGC",
+      "span_id": "C0017-D-P011-TEXT-0001",
+      "page": 11,
+      "excerpt": "When the sample size is too small, lengthy prompts can have a negative impact on the model.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.2.3 Results of Handling Hard Examples",
+      "span_id": "C0017-D-P012-TEXT-0002",
+      "page": 12,
+      "excerpt": "CodeKGC heavily relies on a more powerful code pre-trained model ... It is also a limitation of our current approach.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-24-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "4.2.4 Analysis of Smaller Code Language Models",
+      "span_id": "C0017-D-P013-TEXT-0003",
+      "page": 13,
+      "excerpt": "We can’t have our cake and eat it too due to the limited parameter space.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "6 Conclusion and Future Work",
+      "span_id": "C0017-D-P014-TEXT-0001",
+      "page": 14,
+      "excerpt": "Integration of more advanced Code-LLMs ... Optimization of code prompt generation ... prompt engineering or automatic prompt generation.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "6 Conclusion and Future Work",
+      "span_id": "C0017-D-P014-TEXT-0002",
+      "page": 14,
+      "excerpt": "exploring what form of code data truly endows LLMs with powerful structural prediction and reasoning capabilities.",
+      "confidence": "medium"
+    },
+    "possible_improvements-25-03": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "4.2.1 Main Results",
+      "span_id": "C0017-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "ADE dataset is a medical corpus with a large number of acronyms, which makes extraction more difficult.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "6 Conclusion and Future Work",
+      "span_id": "C0017-D-P014-TEXT-0001",
+      "page": 14,
+      "excerpt": "Application to additional knowledge graph tasks ... knowledge graph completion or complex reasoning tasks.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "6 Conclusion and Future Work",
+      "span_id": "C0017-D-P014-TEXT-0002",
+      "page": 14,
+      "excerpt": "Impact of code data to LLMs ... what form of code data truly endows LLMs with powerful structural prediction and reasoning capabilities.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-26-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "4.1.3 Evaluation Protocols",
+      "span_id": "C0017-D-P009-TEXT-0003",
+      "page": 9,
+      "excerpt": "We calculate the relation strict micro F1 score ... a triple is considered correct only if the head and tail entities and the relation ... completely match.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-27-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Footnote 1",
+      "span_id": "C0017-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Code and datasets are available in https://github.com/zjunlp/DeepKE/tree/main/example/llm",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "Generative knowledge graph construction from unstructured natural-language text, specifically extraction of relational triples while reducing the difficulty that flattened serializations have with structural dependencies, overlapping facts, and long-range relations.",
+  "methodology": {
+    "primary_family": "Zero-shot and few-shot LLM prompting (without task-specific model training)",
+    "secondary_families": [
+      "Generative text-to-structure methods",
+      "Ontology-constrained and schema-guided methods",
+      "Instruction-tuned or fine-tuned LLM methods (smaller-model experiment)"
+    ],
+    "system_type": "end_to_end",
+    "supervision_setting": "zero_shot",
+    "description": "Execution pipeline: (1) use a predefined Python-conformant script to convert input text T and gold/output triple graph G into code-format Tc and Gc; (2) construct a schema-aware prompt with Entity, Relation, Triple, and Extract classes, where entity/relation types inherit from base classes; (3) append k in-context completed examples, optionally including rationales; (4) generate a rationale that first identifies candidate relations and then corresponding entities; (5) generate Extract([Triple(...)]) code; and (6) convert generated code back to triples/graph G. The main large-model runs use text-davinci-002 or text-davinci-003, with code-davinci-002 in ablations."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "Uses a predefined KG schema as prompt-time structural guidance, rather than discovering an ontology. Python base classes Entity and Relation encode entity/relation definitions; typed subclasses and Triple instances represent permitted graph structure, including entity-type constraints.",
+    "evidence": [
+      {
+        "span_id": "C0017-D-P005-TEXT-0001",
+        "page": 5,
+        "excerpt": "The schema in the KG describes ... entities, relations, properties and constraints ... integrate the schema information by the inheritance of Python class definitions."
+      },
+      {
+        "span_id": "C0017-D-P005-TEXT-0002",
+        "page": 5,
+        "excerpt": "We further define Triple class ... Each triple will be represented as the instance of their corresponding entity and relation type classes."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Entity and concept extraction",
+    "Entity typing",
+    "Relation and triple extraction",
+    "Graph construction"
+  ],
+  "input_output": {
+    "input_type": "Unstructured natural-language sentences, transformed into Python-like code prompts with natural-language docstrings, schema class definitions, and optionally in-context demonstration/rationale code.",
+    "input_granularity": "Sentence-level examples; the paper describes each task instance as one text input T and its triple graph G.",
+    "output_representation": "Typed relational triples encoded as Python-like Extract([Triple(head entity, relation, tail entity), ...]) code, then converted back into a knowledge graph/triple set."
+  },
+  "models_and_tools": [
+    "text-davinci-002",
+    "text-davinci-003",
+    "code-davinci-002 (Codex; ablations)",
+    "T5 (770M smaller-model experiment)",
+    "CodeT5 (770M smaller-model experiment)",
+    "PyTorch 1.13",
+    "DeepSpeed",
+    "AdamW optimizer",
+    "OpenAI API"
+  ],
+  "datasets": [
+    "ADE: adverse-drug-event texts; 1 adverse-effect relation and 2 entity types (disease, drug); 300 randomly selected test samples evaluated because of API-time constraints",
+    "CoNLL04: 4 relations and 3 entity types",
+    "SciERC: scientific-paper information extraction; 7 relations and 6 entity types",
+    "T-REx: 838,821 sentences, 4,378,318 triples, 10,496 relations (smaller-model code pre-training)",
+    "TEKGEN: 6,310,061 sentences, 10,609,697 triples, 1,013 relations (smaller-model code pre-training)",
+    "KELM: 15,616,551 sentences, 35,117,608 triples, 59,904 relations (smaller-model code pre-training)"
+  ],
+  "evaluation": {
+    "metrics": [
+      "Relation strict micro F1; a predicted triple is correct only when head entity, tail entity, and relation all exactly match. Entity types are predicted but excluded from F1."
+    ],
+    "baselines": [
+      "UIE (supervised comparable SOTA)",
+      "Vanilla Prompt with text-davinci-002",
+      "Vanilla Prompt with text-davinci-003",
+      "Prompt variations without schema-aware prompt",
+      "Prompt variations without rationale",
+      "Smaller-model comparisons: pre-trained/not-pre-trained T5 and CodeT5"
+    ],
+    "setting": "Zero-shot and few-shot relation-extraction/knowledge-graph-construction evaluation on ADE, CoNLL04, and SciERC. Zero-shot replaces one-shot relations with synonyms; few-shot uses three-shot relation demonstrations. Results average three runs. Temperature is 0.5, max_tokens is 256 or 512, and generation stops at special patterns such as triple quotes, class, or #. ADE analyses also vary 1/5/10/15 in-context examples and evaluate a sampled overlapping-triple hard subset; a separate supervised smaller-model ADE study pre-trains for three days on four Tesla V100 GPUs."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "Table 2 zero-shot relation-strict micro F1: CodeKGC/text-davinci-003 scores 43.7 on ADE, 41.6 on CoNLL04, and 19.5 on SciERC; CodeKGC/text-davinci-002 scores 42.5, 35.8, and 15.0, respectively.",
+      "Table 2 few-shot relation-strict micro F1: CodeKGC/text-davinci-003 scores 64.2 on ADE, 49.6 on CoNLL04, and 24.7 on SciERC; CodeKGC/text-davinci-002 scores 61.5, 42.7, and 18.5.",
+      "In few-shot mode, CodeKGC/text-davinci-003 exceeds its matched Vanilla Prompt by 5.4 F1 on ADE, 6.4 on CoNLL04, and 5.9 on SciERC. It also exceeds UIE on all three few-shot results in Table 2.",
+      "On CoNLL04 prompt-variation experiments, Figure 5 reports that both schema-aware prompting and rationale-enhanced generation improve CodeKGC relative to their ablations; the paper warns that lengthy rationale prompts can hurt when sample size is too small.",
+      "For the smaller-model ADE study, Figure 8 shows restructured-code-pretrained T5 at 75.6 and CodeT5 at 68.6 F1, below UIE at 81.1; non-pretrained models score 58.8 (T5) and 52.2 (CodeT5)."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0017-D-P009-TABLE-0001",
+        "page": 9,
+        "excerpt": "CodeKGC (text-davinci-003): zero-shot 43.7/41.6/19.5; few-shot 64.2/49.6/24.7 for ADE/CONLL04/SciERC."
+      },
+      {
+        "span_id": "C0017-D-P009-TEXT-0002",
+        "page": 9,
+        "excerpt": "CodeKGC achieves ↑5.4, ↑6.4 and ↑5.9 score improvement on ADE, CONLL04 and SciERC datasets."
+      },
+      {
+        "span_id": "C0017-D-P011-TEXT-0003",
+        "page": 11,
+        "excerpt": "When the sample size is too small, lengthy prompts can have a negative impact on the model."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Author claim: schema-aware Python-format prompts explicitly represent entity, relation, property, and constraint structure through class definitions and typed triple instances.",
+      "Experimental result: the large-model CodeKGC prompt consistently exceeds its matched Vanilla Prompt in the Table 2 few-shot setting and improves zero-shot results on every reported dataset/backbone pair.",
+      "Experimental result: code formatting helps on long-range and overlapping-triple cases when paired with a strong code model; Figure 7 provides qualitative examples.",
+      "Review-level inference: representing schema and triples in an executable-style, typed code syntax makes the generated output easier to parse deterministically than unconstrained free-form text, provided the generated code follows the prescribed template."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0017-D-P005-TEXT-0001",
+        "page": 5,
+        "excerpt": "we can naturally model complex structural information in language, such as nested entities or relationships."
+      },
+      {
+        "span_id": "C0017-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "as the number of in-context samples increases, our CodeKGC consistently outperforms the baseline in all models."
+      },
+      {
+        "span_id": "C0017-D-P012-CAPTION-0003",
+        "page": 12,
+        "excerpt": "CodeKGC with code-davinci-002 correctly predicts the overlapping and long-range triples, while Vanilla prompt fails."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "Author-reported experimental finding: ADE performance is limited because the medical corpus contains many acronyms; in zero-shot mode CodeKGC is similar to Vanilla Prompt.",
+      "Author-reported limitation: performance on complex structures depends heavily on a powerful code-pretrained backbone; CodeKGC/text-davinci-002 can underperform Vanilla Prompt/text-davinci-002 on sampled hard examples.",
+      "Experimental result: the 770M restructured-code-pretrained models remain below UIE on ADE (best 75.6 versus UIE 81.1).",
+      "Review-level inference: the approach requires predefined entity and relation schemas and hand-designed code prompts, so transfer to a new schema needs schema encoding and prompt/example preparation rather than being fully schema-free."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0017-D-P009-TEXT-0001",
+        "page": 9,
+        "excerpt": "performance of CodeKGC on the ADE dataset is limited ... medical corpus with a large number of acronyms."
+      },
+      {
+        "span_id": "C0017-D-P012-TEXT-0002",
+        "page": 12,
+        "excerpt": "CodeKGC heavily relies on a more powerful code pre-trained model as its foundation when solving complex structures. It is also a limitation of our current approach."
+      },
+      {
+        "span_id": "C0017-D-P013-PICTURE-0003",
+        "page": 13,
+        "excerpt": "UIE: 81.1; Restructured Code Pre-trained: T5 75.6, CodeT5 68.6."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "Rationale-enhanced prompts can negatively affect performance when the sample size is too small because prompts become lengthy.",
+      "For complex structural examples, CodeKGC heavily relies on a more powerful code-pretrained model.",
+      "Limited parameter space creates a trade-off between semantic understanding and code generation in smaller models.",
+      "The paper identifies its present code prompts as needing refinement to capture entity/relation nuances better."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0017-D-P011-TEXT-0001",
+        "page": 11,
+        "excerpt": "When the sample size is too small, lengthy prompts can have a negative impact on the model."
+      },
+      {
+        "span_id": "C0017-D-P012-TEXT-0002",
+        "page": 12,
+        "excerpt": "CodeKGC heavily relies on a more powerful code pre-trained model ... It is also a limitation of our current approach."
+      },
+      {
+        "span_id": "C0017-D-P013-TEXT-0003",
+        "page": 13,
+        "excerpt": "We can’t have our cake and eat it too due to the limited parameter space."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed: integrate newer and more powerful code LLMs.",
+      "Author-proposed: refine code prompts with prompt-engineering or automatic prompt generation to capture entity and relation structures better.",
+      "Author-proposed: examine what forms of code data confer structural-prediction and reasoning ability.",
+      "Review-level inference: evaluate constrained syntax checking/repair before graph conversion, so malformed generated code does not silently prevent valid triple extraction.",
+      "Review-level inference: evaluate domain-adapted terminology handling for acronym-heavy corpora such as ADE, since the authors attribute weaker ADE zero-shot performance to acronyms."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0017-D-P014-TEXT-0001",
+        "page": 14,
+        "excerpt": "Integration of more advanced Code-LLMs ... Optimization of code prompt generation ... prompt engineering or automatic prompt generation."
+      },
+      {
+        "span_id": "C0017-D-P014-TEXT-0002",
+        "page": 14,
+        "excerpt": "exploring what form of code data truly endows LLMs with powerful structural prediction and reasoning capabilities."
+      },
+      {
+        "span_id": "C0017-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "ADE dataset is a medical corpus with a large number of acronyms, which makes extraction more difficult."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "Author-identified: whether CodeKGC generalizes effectively to additional KG tasks, including KG completion and complex reasoning.",
+      "Author-identified: which forms of code training data actually yield structural-prediction and reasoning capabilities.",
+      "Review-level inference: the paper does not establish cross-domain robustness beyond three English benchmarks, nor compare output validity/error rates of generated code against other structured decoding approaches.",
+      "Review-level inference: the study does not measure downstream graph quality beyond exact triple F1, such as entity resolution, deduplication, graph consistency, or updating."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0017-D-P014-TEXT-0001",
+        "page": 14,
+        "excerpt": "Application to additional knowledge graph tasks ... knowledge graph completion or complex reasoning tasks."
+      },
+      {
+        "span_id": "C0017-D-P014-TEXT-0002",
+        "page": 14,
+        "excerpt": "Impact of code data to LLMs ... what form of code data truly endows LLMs with powerful structural prediction and reasoning capabilities."
+      },
+      {
+        "span_id": "C0017-D-P009-TEXT-0003",
+        "page": 9,
+        "excerpt": "We calculate the relation strict micro F1 score ... a triple is considered correct only if the head and tail entities and the relation ... completely match."
+      }
+    ]
+  },
+  "code_and_data_availability": "The paper states that code and datasets are available at https://github.com/zjunlp/DeepKE/tree/main/example/llm. The PDF does not further specify a release version, license, archived artifact, or exact scripts/configurations used for every experiment."
+}

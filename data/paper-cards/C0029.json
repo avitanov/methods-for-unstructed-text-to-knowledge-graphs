@@ -1,0 +1,859 @@
+{
+  "paper_metadata": {
+    "paper_id": "C0029",
+    "title": "MWO2KG and Echidna: Constructing and exploring knowledge graphs from maintenance data",
+    "pdf_path": "data/manual-pdfs/C0029.pdf",
+    "authors": [
+      "Michael Stewart",
+      "Melinda Hodkiewicz",
+      "Wei Liu",
+      "Tim French"
+    ],
+    "year": 2024,
+    "venue": "Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability",
+    "identifier": {
+      "status": "reported",
+      "value": "DOI: 10.1177/1748006X221131128",
+      "evidence": [
+        {
+          "span_id": "C0029-D-P001-TEXT-0001",
+          "page": 1,
+          "excerpt": "DOI: 10.1177/1748006X221131128"
+        }
+      ]
+    },
+    "abstract": "Unstructured technical texts contain engineering knowledge that is underused for data analysis. Maintenance work orders capture information about what work was done on an asset and why, but their short text fields are unstructured, terse and jargon-rich. The paper addresses efficient extraction of technical information from work-order text and its combination with structured fields such as dates, functional locations, and asset make and model. It presents a technical-language-processing solution: Echidna is an interface for querying and visualising historic asset data as a knowledge graph, while MWO2KG uses deep learning and annotated training data to construct the graph from unstructured technical text combined with structured fields. The tools are tested on maintenance work-order and delay-accounting data from industry partners and support reliability-engineering activities including failure-modes-and-effects analysis, maintenance-strategy validation, and process improvement. Source code for both tools is reported as available on GitHub under the Apache 2.0 License.",
+    "discovery_source": {
+      "status": "not_reported",
+      "value": null,
+      "evidence": []
+    }
+  },
+  "evidence_locations": {
+    "paper_metadata-authors-01-01": {
+      "claim": "paper_metadata.authors",
+      "claim_type": "author_claim",
+      "section": "Title and authors",
+      "span_id": "C0029-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Michael Stewart, Melinda Hodkiewicz, Wei Liu and Tim French",
+      "confidence": "medium"
+    },
+    "paper_metadata-year-02-01": {
+      "claim": "paper_metadata.year",
+      "claim_type": "author_claim",
+      "section": "Publication header",
+      "span_id": "C0029-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proc IMechE Part O: J Risk and Reliability 2024, Vol. 238(5) 920–932",
+      "confidence": "medium"
+    },
+    "paper_metadata-venue-03-01": {
+      "claim": "paper_metadata.venue",
+      "claim_type": "author_claim",
+      "section": "Publication header",
+      "span_id": "C0029-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Proc IMechE Part O: J Risk and Reliability",
+      "confidence": "medium"
+    },
+    "paper_metadata-identifier-04-01": {
+      "claim": "paper_metadata.identifier",
+      "claim_type": "author_claim",
+      "section": "Publication header",
+      "span_id": "C0029-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "DOI: 10.1177/1748006X221131128",
+      "confidence": "medium"
+    },
+    "paper_metadata-abstract-05-01": {
+      "claim": "paper_metadata.abstract",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0029-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "MWO2KG uses deep learning supported by annotated training data to automatically construct knowledge graphs from unstructured technical text combined with data from structured fields.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-01": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0029-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "Data in MWO short text fields is unstructured, terse and jargon-rich, complicating the ability of both humans and machines to read it.",
+      "confidence": "medium"
+    },
+    "problem_addressed-06-02": {
+      "claim": "problem_addressed",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0029-D-P002-TEXT-0002",
+      "page": 2,
+      "excerpt": "The aim being to support reliability engineers to efficiently query information held in unstructured texts and other relevant records.",
+      "confidence": "medium"
+    },
+    "methodology-primary_family-07-01": {
+      "claim": "methodology.primary_family",
+      "claim_type": "author_claim",
+      "section": "Related work",
+      "span_id": "C0029-D-P003-TEXT-0001",
+      "page": 3,
+      "excerpt": "We therefore focus on ... a deep learning- and annotation-based approach to knowledge graph construction on technical short text.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-01": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Postprocessing",
+      "span_id": "C0029-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "This step is not performed using machine learning but rather via a rule-based approach.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-02": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Postprocessing",
+      "span_id": "C0029-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The postprocessing step of MWO2KG automatically labels any entities labelled as ‘item’ with a list of asset classes based on the ISO 15926 asset hierarchy taxonomy.",
+      "confidence": "medium"
+    },
+    "methodology-secondary_families-08-03": {
+      "claim": "methodology.secondary_families",
+      "claim_type": "author_claim",
+      "section": "Postprocessing",
+      "span_id": "C0029-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "The normalisation step resolves similar entity names into a single node, fortifying the accuracy of the knowledge graph.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-01": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "MWO2KG – knowledge graph construction from technical short text",
+      "span_id": "C0029-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "The pipeline is split into two distinct phases. The first phase is the training phase ... The second phase is the inference phase.",
+      "confidence": "medium"
+    },
+    "methodology-system_type-09-02": {
+      "claim": "methodology.system_type",
+      "claim_type": "author_claim",
+      "section": "Figure 5 and surrounding text",
+      "span_id": "C0029-D-P006-PICTURE-0002",
+      "page": 6,
+      "excerpt": "The entities are then fed into the Postprocessing stage and are finally transformed into a knowledge graph via the Triple Generation stage.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-01": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "MWO2KG – knowledge graph construction from technical short text",
+      "span_id": "C0029-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "MWO2KG is a supervised-learning based model which allows it to construct knowledge graphs ... so long as a set of annotated training data is provided.",
+      "confidence": "medium"
+    },
+    "methodology-supervision_setting-10-02": {
+      "claim": "methodology.supervision_setting",
+      "claim_type": "author_claim",
+      "section": "Failure mode classification",
+      "span_id": "C0029-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "Training the model requires an annotated dataset of (observation, failure mode code) pairs.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-01": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "MWO2KG – knowledge graph construction from technical short text",
+      "span_id": "C0029-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "The entities are then fed into the Postprocessing stage and are finally transformed into a knowledge graph via the Triple Generation stage.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-02": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Figure 5 and Named entity recognition",
+      "span_id": "C0029-D-P006-PICTURE-0002",
+      "page": 6,
+      "excerpt": "A block diagram of MWO2KG, which constructs a knowledge graph from technical short text such as maintenance work orders.",
+      "confidence": "medium"
+    },
+    "methodology-description-11-03": {
+      "claim": "methodology.description",
+      "claim_type": "author_claim",
+      "section": "Triple generation",
+      "span_id": "C0029-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "Rather than perform this task using the traditional method of ‘relation extraction’ ... MWO2KG adopts a heuristics-based method that automatically builds relationships between every entity labelled as an ‘item’ and every other entity appearing in the same work order.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-01": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Annotated data from Redcoat",
+      "span_id": "C0029-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "The template includes ... important maintenance-specific entity types such as ‘item’, ‘activity’, ‘observation’ and ‘location’.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-02": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Postprocessing",
+      "span_id": "C0029-D-P007-TEXT-0002",
+      "page": 7,
+      "excerpt": "The postprocessing step ... labels any entities labelled as ‘item’ with a list of asset classes based on the ISO 15926 asset hierarchy taxonomy.",
+      "confidence": "medium"
+    },
+    "ontology_or_schema_use-12-03": {
+      "claim": "ontology_or_schema_use",
+      "claim_type": "author_claim",
+      "section": "Failure mode classification",
+      "span_id": "C0029-D-P007-TEXT-0003",
+      "page": 7,
+      "excerpt": "The set of failure mode codes was taken from the ISO 14224. In order to ensure a sufficiently small set of classes we condensed the ISO 14224 codes into a set of 19 codes.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-01": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Annotated data from Redcoat",
+      "span_id": "C0029-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "Annotations can be exported from Redcoat and imported directly into the pipeline via a simple preprocessing script.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-02": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Named entity recognition",
+      "span_id": "C0029-D-P006-TEXT-0002",
+      "page": 6,
+      "excerpt": "MWO2KG performs Named Entity Recognition ... to extract the entities appearing in the technical short text.",
+      "confidence": "medium"
+    },
+    "text_to_kg_stages-13-03": {
+      "claim": "text_to_kg_stages",
+      "claim_type": "author_claim",
+      "section": "Triple generation",
+      "span_id": "C0029-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "Once all of the triples have been built, they are imported into Neo4j.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-01": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Abstract",
+      "span_id": "C0029-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The tools are tested on maintenance work order and delay accounting data provided by industry partners.",
+      "confidence": "medium"
+    },
+    "input_output-input_type-14-02": {
+      "claim": "input_output.input_type",
+      "claim_type": "author_claim",
+      "section": "Triple generation",
+      "span_id": "C0029-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "MWO2KG incorporates structured data from two additional sources: functional locations (FLOCs) and Downtime Events.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-01": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "MWO2KG – knowledge graph construction from technical short text",
+      "span_id": "C0029-D-P005-TEXT-0001",
+      "page": 5,
+      "excerpt": "MWO2KG has been purpose-built for short technical text such as maintenance work orders.",
+      "confidence": "medium"
+    },
+    "input_output-input_granularity-15-02": {
+      "claim": "input_output.input_granularity",
+      "claim_type": "author_claim",
+      "section": "Triple generation",
+      "span_id": "C0029-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "The triple generation stage takes each predicted entity in a work order and links them to one another.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-01": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0029-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "We produce and visualise an interactive maintenance knowledge graph using two interconnected software systems: Echidna ... and MWO2KG.",
+      "confidence": "medium"
+    },
+    "input_output-output_representation-16-02": {
+      "claim": "input_output.output_representation",
+      "claim_type": "author_claim",
+      "section": "Triple generation",
+      "span_id": "C0029-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "Once all of the triples have been built, they are imported into Neo4j.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-01": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Named entity recognition and Failure mode classification",
+      "span_id": "C0029-D-P007-TEXT-0001",
+      "page": 7,
+      "excerpt": "In MWO2KG the Named Entity Recognition task is therefore performed using Flair.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-02": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Postprocessing",
+      "span_id": "C0029-D-P007-TABLE-0002",
+      "page": 7,
+      "excerpt": "The dictionary currently contains 140 manually-curated correction pairs.",
+      "confidence": "medium"
+    },
+    "models_and_tools-17-03": {
+      "claim": "models_and_tools",
+      "claim_type": "author_claim",
+      "section": "Triple generation",
+      "span_id": "C0029-D-P008-TEXT-0003",
+      "page": 8,
+      "excerpt": "Once all of the triples have been built, they are imported into Neo4j, a graph database management system that supports graph-based queries through the Cypher query language.",
+      "confidence": "medium"
+    },
+    "datasets-18-01": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Datasets",
+      "span_id": "C0029-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "The dataset used to train and evaluate the Named Entity Recognition model comprises 3200 work orders (for training), 401 work orders (for validation) and 401 work orders (for testing).",
+      "confidence": "medium"
+    },
+    "datasets-18-02": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Datasets",
+      "span_id": "C0029-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "The dataset used to train and evaluate the Failure Mode Classification model comprises 502 (observation, label) pairs (for training), 62 pairs (for validation) and 62 pairs (for testing).",
+      "confidence": "medium"
+    },
+    "datasets-18-03": {
+      "claim": "datasets",
+      "claim_type": "author_claim",
+      "section": "Echidna – an interactive knowledge graph visualisation and query interface",
+      "span_id": "C0029-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "The demonstration graph has been constructed from a set of publicly available maintenance work orders.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-01": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Metrics",
+      "span_id": "C0029-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "We evaluate the performance of our model using F1-score ... For each class label, precision and recall are calculated.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-02": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Table 2",
+      "span_id": "C0029-D-P009-TABLE-0002",
+      "page": 9,
+      "excerpt": "The results of the Named Entity Recognition model on the test dataset.",
+      "confidence": "medium"
+    },
+    "evaluation-metrics-19-03": {
+      "claim": "evaluation.metrics",
+      "claim_type": "author_claim",
+      "section": "Table 4",
+      "span_id": "C0029-D-P010-TABLE-0003",
+      "page": 10,
+      "excerpt": "The precision, recall and F1-scores of the failure mode classification model across each of the failure mode classes.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-01": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Experiments",
+      "span_id": "C0029-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "Due to the novelty of constructing knowledge graphs from maintenance work orders and the lack of available baseline datasets, it is not possible to quantitatively analyse the performance of the pipeline as a whole.",
+      "confidence": "medium"
+    },
+    "evaluation-baselines-20-02": {
+      "claim": "evaluation.baselines",
+      "claim_type": "author_claim",
+      "section": "Named entity recognition results",
+      "span_id": "C0029-D-P009-TEXT-0002",
+      "page": 9,
+      "excerpt": "The current state-of-the-art NER models ... achieve slightly higher F1-Scores in the vicinity of 0.90–0.94.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-01": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Experiments and Datasets",
+      "span_id": "C0029-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "We therefore carry out two experiments in order to determine the performance of two components of MWO2KG.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-02": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Table 2",
+      "span_id": "C0029-D-P009-TABLE-0002",
+      "page": 9,
+      "excerpt": "The results of the Named Entity Recognition model on the test dataset.",
+      "confidence": "medium"
+    },
+    "evaluation-setting-21-03": {
+      "claim": "evaluation.setting",
+      "claim_type": "author_claim",
+      "section": "Results",
+      "span_id": "C0029-D-P010-TEXT-0003",
+      "page": 10,
+      "excerpt": "The results of the NER model do not necessarily provide an indication of how accurately the Triple Generation step is able to automatically create links between entities.",
+      "confidence": "medium"
+    },
+    "main_results-22-01": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 2 and Named entity recognition results",
+      "span_id": "C0029-D-P009-TABLE-0001",
+      "page": 9,
+      "excerpt": "Micro-F1 0.828; Macro-F1 0.858.",
+      "confidence": "medium"
+    },
+    "main_results-22-02": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Table 4 and Failure mode classification results",
+      "span_id": "C0029-D-P010-TABLE-0002",
+      "page": 10,
+      "excerpt": "Micro-F1 0.597; Macro-F1 0.459.",
+      "confidence": "medium"
+    },
+    "main_results-22-03": {
+      "claim": "main_results",
+      "claim_type": "author_claim",
+      "section": "Conclusion and future work",
+      "span_id": "C0029-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "The tools provide reliability engineers with a powerful new way to visualise historic asset data and easily identify failure modes.",
+      "confidence": "medium"
+    },
+    "strengths-23-01": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Abstract",
+      "span_id": "C0029-D-P001-TEXT-0001",
+      "page": 1,
+      "excerpt": "The tools provide reliability engineers with an efficient way to find information in historic asset data for failure modes and effects analysis, maintenance strategy validation and process improvement work.",
+      "confidence": "medium"
+    },
+    "strengths-23-02": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Results discussion",
+      "span_id": "C0029-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "The model is able to deal with these issues because it is trained at the character-level, and is hence able to handle minor variations in spelling and a lack of spacing between words.",
+      "confidence": "medium"
+    },
+    "strengths-23-03": {
+      "claim": "strengths",
+      "claim_type": "reviewer_interpretation",
+      "section": "Introduction",
+      "span_id": "C0029-D-P002-TEXT-0003",
+      "page": 2,
+      "excerpt": "The source code of our two systems is available on GitHub ... under the Apache 2.0 License.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-01": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Results",
+      "span_id": "C0029-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "The results of the NER model do not necessarily provide an indication of how accurately the Triple Generation step is able to automatically create links between entities.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-02": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Failure mode classification results",
+      "span_id": "C0029-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "The training dataset only contains 502 (observation, label) pairs, which is simply not enough to train a model to accurately predict minority classes even after upsampling.",
+      "confidence": "medium"
+    },
+    "weaknesses-24-03": {
+      "claim": "weaknesses",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion and future work",
+      "span_id": "C0029-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "At present only one graph can be visualised by Echidna at a time.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-01": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Experiments",
+      "span_id": "C0029-D-P008-TEXT-0001",
+      "page": 8,
+      "excerpt": "Due to the novelty ... and the lack of available baseline datasets, it is not possible to quantitatively analyse the performance of the pipeline as a whole.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-02": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Results",
+      "span_id": "C0029-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "For larger datasets a more thorough performance analysis of the triple generation step would be worthwhile.",
+      "confidence": "medium"
+    },
+    "author_stated_limitations-25-03": {
+      "claim": "author_stated_limitations",
+      "claim_type": "author_claim",
+      "section": "Conclusion and future work",
+      "span_id": "C0029-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "We aim to continue working on improving the failure mode classification model and creating a larger training dataset.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-01": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Results",
+      "span_id": "C0029-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "For larger datasets a more thorough performance analysis of the triple generation step would be worthwhile in order to determine whether a more sophisticated relation extraction model should be used instead.",
+      "confidence": "medium"
+    },
+    "possible_improvements-26-02": {
+      "claim": "possible_improvements",
+      "claim_type": "proposed_improvement",
+      "section": "Conclusion and future work",
+      "span_id": "C0029-D-P011-TEXT-0002",
+      "page": 11,
+      "excerpt": "We aim to further improve the tool by allowing data owners to upload their own datasets ... [and] continue working on improving the failure mode classification model and creating a larger training dataset.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-01": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Results",
+      "span_id": "C0029-D-P010-TEXT-0001",
+      "page": 10,
+      "excerpt": "The results of the NER model do not necessarily provide an indication of how accurately the Triple Generation step is able to automatically create links between entities.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-02": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Failure mode classification results",
+      "span_id": "C0029-D-P010-TEXT-0002",
+      "page": 10,
+      "excerpt": "Many words could be considered to belong to multiple categories ... The ground truth set is therefore ‘noisy’.",
+      "confidence": "medium"
+    },
+    "unresolved_problems-27-03": {
+      "claim": "unresolved_problems",
+      "claim_type": "reviewer_interpretation",
+      "section": "Conclusion and future work",
+      "span_id": "C0029-D-P011-TEXT-0003",
+      "page": 11,
+      "excerpt": "At present only one graph can be visualised by Echidna at a time.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-01": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Introduction",
+      "span_id": "C0029-D-P002-TEXT-0001",
+      "page": 2,
+      "excerpt": "The source code of our two systems is available on GitHub (https://github.com/nlp-tlp/mwo2kg-and-echidna) under the Apache 2.0 License.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-02": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Datasets",
+      "span_id": "C0029-D-P008-TEXT-0002",
+      "page": 8,
+      "excerpt": "We plan to discuss this dataset in significantly more detail and release the dataset in a future paper.",
+      "confidence": "medium"
+    },
+    "code_and_data_availability-28-03": {
+      "claim": "code_and_data_availability",
+      "claim_type": "author_claim",
+      "section": "Echidna – an interactive knowledge graph visualisation and query interface",
+      "span_id": "C0029-D-P003-TEXT-0003",
+      "page": 3,
+      "excerpt": "The demonstration graph has been constructed from a set of publicly available maintenance work orders.",
+      "confidence": "medium"
+    }
+  },
+  "analysis_confidence": "high",
+  "problem_addressed": "The paper addresses the difficulty of extracting useful engineering knowledge from terse, jargon-rich maintenance work-order text and combining it with structured asset records so that reliability engineers can query historical maintenance information, identify failure modes, validate maintenance strategies, and support process improvement.",
+  "methodology": {
+    "primary_family": "Neural NLP pipelines",
+    "secondary_families": [
+      "Rule-based NLP",
+      "Ontology-constrained and schema-guided methods",
+      "Validation, correction, and knowledge-fusion methods"
+    ],
+    "system_type": "pipeline",
+    "supervision_setting": "supervised",
+    "description": "MWO2KG converts technical short maintenance text and associated structured fields into a Neo4j knowledge graph. Deployment begins with annotation or import of work orders in Redcoat using maintenance-specific entity types such as item, activity, observation, and location. The annotations are preprocessed to retain at most one entity label per token. A Flair NER model uses pretrained character-level embeddings, a bidirectional LSTM, and a softmax classifier trained with stochastic gradient descent to label entities. A separate Flair text-classification model maps extracted observations to failure-mode codes. Postprocessing adds asset-hierarchy labels using ISO 15926 rules and normalises misspellings and inconsistent names using a manually curated correction dictionary. Triple generation links each item to every other entity in the same short work order through heuristically assigned relations; functional locations are linked to entities in the corresponding work order, and optional downtime events are linked to functional locations with cost and duration properties. The resulting triples are imported into Neo4j. Echidna then visualises and queries the graph, supporting node filtering, aggregation, functional-location filtering, structured-field queries, and failure-mode grouping using ISO 14224 categories. The paper explicitly notes that a relation-extraction step is shown in the generalised architecture but is not implemented in MWO2KG."
+  },
+  "ontology_or_schema_use": {
+    "status": "reported",
+    "value": "The annotation schema contains 10 maintenance-specific entity types, including item, activity, observation, consumable, location, agent, attribute, cardinality, specifier, and time. ISO 15926 supplies the asset hierarchy used to add parent asset-class labels during postprocessing. ISO 14224 supplies failure-mode categories, condensed to 19 codes for the failure-mode classifier in the described system; the evaluation dataset is also described as originating from 22 ISO 14224 codes. Echidna supports aggregation of classes and subclasses in these hierarchies.",
+    "evidence": [
+      {
+        "span_id": "C0029-D-P005-TEXT-0001",
+        "page": 5,
+        "excerpt": "The template includes ... important maintenance-specific entity types such as ‘item’, ‘activity’, ‘observation’ and ‘location’."
+      },
+      {
+        "span_id": "C0029-D-P007-TEXT-0002",
+        "page": 7,
+        "excerpt": "The postprocessing step ... labels any entities labelled as ‘item’ with a list of asset classes based on the ISO 15926 asset hierarchy taxonomy."
+      },
+      {
+        "span_id": "C0029-D-P007-TEXT-0003",
+        "page": 7,
+        "excerpt": "The set of failure mode codes was taken from the ISO 14224. In order to ensure a sufficiently small set of classes we condensed the ISO 14224 codes into a set of 19 codes."
+      }
+    ]
+  },
+  "text_to_kg_stages": [
+    "Annotated-data preparation and token-label preprocessing",
+    "Entity and concept extraction through supervised named entity recognition",
+    "Entity typing",
+    "Failure-mode classification",
+    "Asset-hierarchy typing using ISO 15926 rules",
+    "Entity normalisation and deduplication through a correction dictionary",
+    "Heuristic relation/triple generation",
+    "Integration of functional-location and optional downtime structured data",
+    "Graph construction in Neo4j",
+    "Graph validation/refinement through normalisation and hierarchy aggregation",
+    "Graph visualisation and querying in Echidna"
+  ],
+  "input_output": {
+    "input_type": "Short, unstructured technical maintenance work-order text combined with structured work-order fields, functional locations, and optionally downtime-event data.",
+    "input_granularity": "Work-order short-text fields and individual observations/entities within work orders; structured records are associated at work-order, functional-location, and downtime-event levels.",
+    "output_representation": "A Neo4j knowledge graph containing entities and relationships/triples, including maintenance items, activities, observations, locations, functional locations, and optional downtime-event nodes with properties such as cost and duration; Echidna provides a visual and queryable representation."
+  },
+  "models_and_tools": [
+    "MWO2KG supervised knowledge-graph construction pipeline",
+    "Echidna web-based graph visualisation and query interface",
+    "Redcoat annotation tool",
+    "Flair sequence-labelling NER model",
+    "Flair text-classification model",
+    "Pretrained Flair mix-forward and mix-backward character-level embeddings",
+    "Bidirectional LSTM and softmax token classifier",
+    "Stochastic gradient descent optimisation",
+    "Rule-based ISO 15926 hierarchy assignment",
+    "140-pair manually curated correction dictionary",
+    "Neo4j graph database and Cypher query language"
+  ],
+  "datasets": [
+    "NER dataset: 4,002 manually annotated maintenance work orders, split into 3,200 training, 401 validation, and 401 test work orders; 10 entity types; annotations produced by 10 University of Western Australia research-group annotators.",
+    "Failure-mode classification dataset: 626 observation/label pairs, split into 502 training, 62 validation, and 62 test pairs; labels derived from ISO 14224 failure-mode codes, with minority-class upsampling in training.",
+    "Industry-partner maintenance work-order and delay-accounting data; the paper does not provide partner names or a full public dataset description.",
+    "A publicly available maintenance-work-order set is used for the Echidna demonstration graph."
+  ],
+  "evaluation": {
+    "metrics": [
+      "Per-class precision, recall, and F1-score for NER",
+      "Micro-F1 and Macro-F1 for NER",
+      "Per-class precision, recall, and F1-score for failure-mode classification",
+      "Micro-F1 and Macro-F1 for failure-mode classification",
+      "Qualitative inspection of example predictions and confidence values"
+    ],
+    "baselines": [
+      "No quantitative baseline for the complete MWO2KG pipeline, because the authors state that suitable baseline datasets are unavailable.",
+      "Contextual comparison with reported state-of-the-art NER F1 scores of approximately 0.90–0.94 from other clean news-report settings; this is not a matched experimental baseline."
+    ],
+    "setting": "Two component-level supervised experiments use held-out test splits. NER is trained on 3,200 work orders, validated on 401, and tested on 401. Failure-mode classification is trained on 502 observation/label pairs, validated on 62, and tested on 62; minority classes are upsampled in training. The full graph-construction pipeline and triple-generation quality are not quantitatively evaluated. Tables 2–5 report component metrics and representative predictions."
+  },
+  "main_results": {
+    "status": "reported",
+    "value": [
+      "NER achieved Micro-F1 0.828 and Macro-F1 0.858 on the held-out test set.",
+      "NER per-class F1 ranged from 0.640 for Attribute to 1.000 for Specifier; Item achieved 0.795, Observation 0.803, Activity 0.904, and Location 0.847.",
+      "Failure-mode classification achieved Micro-F1 0.597 and Macro-F1 0.459 on its held-out test set.",
+      "Failure-mode classification performed well for Overheating (F1 1.000), Minor in-service problems (0.733), Plugged/choked (0.667), Leaking (0.667), and Structural deficiency (0.600), but poorly for several ambiguous or minority classes, including Breakdown (0.375), Low output (0.000), Failure to stop on demand (0.000), High output (0.000), Erratic output (0.000), and Spurious stop (0.000).",
+      "Qualitative examples show that character-level modelling handled spelling errors, missing spaces, abbreviations, and noisy technical text, although some predictions disagreed with noisy or ambiguous ground-truth labels.",
+      "The authors present the combined tools as a way for reliability engineers to visualise historic asset data, identify failure modes, and query by functional location or asset class."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0029-D-P009-TABLE-0001",
+        "page": 9,
+        "excerpt": "Micro-F1 0.828; Macro-F1 0.858."
+      },
+      {
+        "span_id": "C0029-D-P010-TABLE-0002",
+        "page": 10,
+        "excerpt": "Micro-F1 0.597; Macro-F1 0.459."
+      },
+      {
+        "span_id": "C0029-D-P011-TEXT-0003",
+        "page": 11,
+        "excerpt": "The tools provide reliability engineers with a powerful new way to visualise historic asset data and easily identify failure modes."
+      }
+    ]
+  },
+  "strengths": {
+    "status": "reported",
+    "value": [
+      "Targets a concrete industrial Text-to-KG problem involving highly terse, noisy, jargon-rich maintenance language.",
+      "Combines unstructured text with structured work-order, functional-location, and optional downtime data.",
+      "Uses character-level embeddings that are well suited to spelling errors, abbreviations, missing spaces, and domain-specific short text.",
+      "Provides an end-to-end operational workflow from annotation and extraction to graph construction and user-facing visualisation/querying.",
+      "Uses explicit maintenance taxonomies, ISO 15926 asset hierarchy rules, ISO 14224 failure modes, and a correction dictionary to improve semantic grouping and graph usability.",
+      "Makes the source code for MWO2KG and Echidna available under the Apache 2.0 License."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0029-D-P001-TEXT-0001",
+        "page": 1,
+        "excerpt": "The tools provide reliability engineers with an efficient way to find information in historic asset data for failure modes and effects analysis, maintenance strategy validation and process improvement work."
+      },
+      {
+        "span_id": "C0029-D-P011-TEXT-0002",
+        "page": 11,
+        "excerpt": "The model is able to deal with these issues because it is trained at the character-level, and is hence able to handle minor variations in spelling and a lack of spacing between words."
+      },
+      {
+        "span_id": "C0029-D-P002-TEXT-0003",
+        "page": 2,
+        "excerpt": "The source code of our two systems is available on GitHub ... under the Apache 2.0 License."
+      }
+    ]
+  },
+  "weaknesses": {
+    "status": "reported",
+    "value": [
+      "The complete pipeline is not quantitatively evaluated; in particular, triple-generation precision, recall, graph completeness, and downstream graph usefulness are not measured.",
+      "Relations are generated heuristically between every item and every other entity in the same short work order rather than learned through relation extraction, which may be less reliable for longer or more complex texts.",
+      "Failure-mode classification has low overall performance, especially for minority and semantically overlapping classes.",
+      "The failure-mode training set is small and its ground truth is noisier than the NER annotation set.",
+      "The system depends on domain-specific annotation, taxonomies, correction dictionaries, and structured fields, increasing deployment effort for new domains.",
+      "Echidna can visualise only one graph at a time in the reported version."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0029-D-P010-TEXT-0001",
+        "page": 10,
+        "excerpt": "The results of the NER model do not necessarily provide an indication of how accurately the Triple Generation step is able to automatically create links between entities."
+      },
+      {
+        "span_id": "C0029-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "The training dataset only contains 502 (observation, label) pairs, which is simply not enough to train a model to accurately predict minority classes even after upsampling."
+      },
+      {
+        "span_id": "C0029-D-P011-TEXT-0003",
+        "page": 11,
+        "excerpt": "At present only one graph can be visualised by Echidna at a time."
+      }
+    ]
+  },
+  "author_stated_limitations": {
+    "status": "reported",
+    "value": [
+      "Suitable baseline datasets were unavailable, preventing quantitative evaluation of the complete pipeline.",
+      "Triple-generation performance was not directly measured; the authors state that more thorough analysis would be worthwhile for larger datasets and to determine whether a more sophisticated relation-extraction model is needed.",
+      "The failure-mode dataset contains only 502 training pairs and has noisy ground truth, limiting classification performance, especially for minority classes.",
+      "The authors plan to allow data owners to upload datasets without running MWO2KG programmatically.",
+      "The reported Echidna version supports visualisation of only one graph at a time.",
+      "The authors plan to improve failure-mode classification and create a larger training dataset."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0029-D-P008-TEXT-0001",
+        "page": 8,
+        "excerpt": "Due to the novelty ... and the lack of available baseline datasets, it is not possible to quantitatively analyse the performance of the pipeline as a whole."
+      },
+      {
+        "span_id": "C0029-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "For larger datasets a more thorough performance analysis of the triple generation step would be worthwhile."
+      },
+      {
+        "span_id": "C0029-D-P011-TEXT-0003",
+        "page": 11,
+        "excerpt": "We aim to continue working on improving the failure mode classification model and creating a larger training dataset."
+      }
+    ]
+  },
+  "possible_improvements": {
+    "status": "reported",
+    "value": [
+      "Author-proposed: increase the failure-mode annotation set and refine the classifier.",
+      "Author-proposed: allow data owners to upload their own datasets without running MWO2KG programmatically.",
+      "Author-proposed: support storage and simultaneous visualisation of multiple graphs.",
+      "Author-proposed: investigate a more sophisticated relation-extraction model and evaluate triple generation on larger datasets.",
+      "Review-level inference: add end-to-end graph-quality evaluation with annotated triples, graph completeness, relation precision/recall, entity-resolution accuracy, and downstream reliability-engineering task measures.",
+      "Review-level inference: use agreement-aware annotation and explicit multi-label or uncertainty handling for ambiguous failure modes."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0029-D-P010-TEXT-0001",
+        "page": 10,
+        "excerpt": "For larger datasets a more thorough performance analysis of the triple generation step would be worthwhile in order to determine whether a more sophisticated relation extraction model should be used instead."
+      },
+      {
+        "span_id": "C0029-D-P011-TEXT-0002",
+        "page": 11,
+        "excerpt": "We aim to further improve the tool by allowing data owners to upload their own datasets ... [and] continue working on improving the failure mode classification model and creating a larger training dataset."
+      }
+    ]
+  },
+  "unresolved_problems": {
+    "status": "reported",
+    "value": [
+      "End-to-end accuracy of converting maintenance text into correct graph triples remains unresolved.",
+      "Reliable relation extraction beyond the short-work-order co-occurrence heuristic remains unresolved.",
+      "Robust classification of semantically overlapping and rare failure modes remains unresolved.",
+      "Ground-truth ambiguity and annotator disagreement for maintenance terminology remain unresolved.",
+      "Generalisation to new technical domains requires new annotated data, taxonomies, and normalisation resources.",
+      "Scalable management and simultaneous exploration of multiple organizational graphs remains unresolved in the reported Echidna version."
+    ],
+    "evidence": [
+      {
+        "span_id": "C0029-D-P010-TEXT-0001",
+        "page": 10,
+        "excerpt": "The results of the NER model do not necessarily provide an indication of how accurately the Triple Generation step is able to automatically create links between entities."
+      },
+      {
+        "span_id": "C0029-D-P010-TEXT-0002",
+        "page": 10,
+        "excerpt": "Many words could be considered to belong to multiple categories ... The ground truth set is therefore ‘noisy’."
+      },
+      {
+        "span_id": "C0029-D-P011-TEXT-0003",
+        "page": 11,
+        "excerpt": "At present only one graph can be visualised by Echidna at a time."
+      }
+    ]
+  },
+  "code_and_data_availability": "Source code for MWO2KG and Echidna is reported as available on GitHub at https://github.com/nlp-tlp/mwo2kg-and-echidna under the Apache 2.0 License. The NER dataset was planned for release in a future paper; the paper does not report that the training datasets themselves are publicly released. A public maintenance-work-order set is used for the Echidna demonstration graph."
+}
