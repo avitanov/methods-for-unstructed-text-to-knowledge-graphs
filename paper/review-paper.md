@@ -2,7 +2,7 @@
 
 ## Abstract
 
-Knowledge graphs represent facts as entities and relations, but much useful knowledge remains in ordinary text. Transforming that text into a reliable graph requires more than recognizing names or producing plausible triples. A complete process may need to identify entities, determine their types, resolve repeated mentions, extract relations or events, link mentions to known records, align the output with a schema, merge duplicate facts, and validate the resulting graph. This review synthesizes 83 acquired and analyzed papers on these tasks. It traces the field from rule-based and linguistic systems through classical machine learning, neural and transformer models, joint extraction, generative methods, and large language model (LLM) approaches. The evidence shows that technical progress has mainly changed where constraints are expressed. Early systems encoded constraints in patterns and ontologies; statistical and neural methods learned them from data; current generative systems express them through output formats, prompts, retrieval, and post-generation validation. No family solves the full problem without trade-offs. Rules remain transparent but narrow. Open extraction offers broad coverage but creates noisy and heterogeneous facts. Supervised neural systems are accurate on matched benchmarks but depend on labels and fixed relation inventories. LLMs improve flexibility and reduce task-specific engineering, yet remain sensitive to prompts, output formats, model choice, cost, privacy, and hallucination. The strongest practical designs are therefore hybrid: they combine learned extraction with explicit schemas, entity resolution, deterministic checks, confidence estimation, or human oversight. Evaluation remains fragmented because studies use different datasets, matching rules, graph scopes, and quality criteria. We propose a stage-based framework for comparing methods, identify evidence-supported design principles, and outline priorities for trustworthy, maintainable, and reproducible Text-to-Knowledge-Graph systems.
+Knowledge graphs represent facts as entities and relations, but much useful knowledge remains in ordinary text. Transforming that text into a reliable graph requires more than recognizing names or producing plausible triples. A complete process may need to identify entities, determine their types, resolve repeated mentions, extract relations or events, link mentions to known records, align the output with a schema, merge duplicate facts, and validate the resulting graph. This review synthesizes 83 acquired and analyzed papers on these tasks. It traces the field from rule-based and linguistic systems through classical machine learning, neural and transformer models, joint extraction, generative methods, and large language model (LLM) approaches. The evidence shows that technical progress has mainly changed where constraints are expressed. Early systems encoded constraints in patterns and ontologies; statistical and neural methods learned them from data; current generative systems express them through output formats, prompts, retrieval, and post-generation validation. No methodology family in the reviewed corpus addresses all stages of the defined Text-to-KG pipeline without substantial trade-offs. Rules remain transparent but narrow. Open extraction offers broad coverage but creates noisy and heterogeneous facts. Supervised neural systems are accurate on matched benchmarks but depend on labels and fixed relation inventories. LLMs improve flexibility and reduce task-specific engineering, yet remain sensitive to prompts, output formats, model choice, cost, privacy, and hallucination. The strongest practical designs are therefore hybrid: they combine learned extraction with explicit schemas, entity resolution, deterministic checks, confidence estimation, or human oversight. Evaluation remains fragmented because studies use different datasets, matching rules, graph scopes, and quality criteria. We propose a stage-based framework for comparing methods, identify evidence-supported design principles, and outline priorities for trustworthy, maintainable, and reproducible Text-to-Knowledge-Graph systems.
 
 **Keywords:** knowledge graph construction; information extraction; relation extraction; entity linking; open information extraction; transformers; large language models; ontology; knowledge fusion; graph validation
 
@@ -186,7 +186,7 @@ Joint extraction is not the same as full Text-to-KG construction. Most joint ben
 
 Generative methods represent structure as an output language. The output may be a tuple sequence, tree, graph linearization, Python-like code, JSON, or RDF. This approach unifies several predictions and can naturally emit a variable number of facts. The output language, ordering, and decoding constraints become critical sources of inductive bias.
 
-ATG's sorted graph order clearly outperformed random order (Zaratiana et al., 2024). Semi-supervised UIE-OIE found that a tree representation outperformed a tuple sequence on both LSOIE-wiki and CaRB (Zhou, 2023). The extensive RDF benchmark by Ringwald et al. showed that syntax affected validity, accuracy, output length, time, and emissions (Ringwald et al., n.d.). T5 with JSON-LD reached macro F1+ 95.63 with fully valid outputs in that restricted datatype-property task. A BART factorized Turtle Light configuration reached 94.54 while requiring about one-fifth of the training time and far lower reported emissions. Grammar-constrained decoding, however, was roughly six times slower and still produced incomplete or invalid output in the tested implementation.
+ATG's sorted graph order clearly outperformed random order (Zaratiana et al., 2024). Semi-supervised UIE-OIE found that a tree representation outperformed a tuple sequence on both LSOIE-wiki and CaRB (Zhou, 2023). The extensive RDF benchmark by Ringwald et al. showed that syntax affected validity, accuracy, output length, time, and emissions (Ringwald et al., 2026). T5 with JSON-LD reached macro F1+ 95.63 with fully valid outputs in that restricted datatype-property task. A BART factorized Turtle Light configuration reached 94.54 while requiring about one-fifth of the training time and far lower reported emissions. Grammar-constrained decoding, however, was roughly six times slower and still produced incomplete or invalid output in the tested implementation.
 
 These findings show that serialization is not merely presentation. A shorter, regular representation reduces the burden on the decoder. Conversely, a standard format such as RDF/XML or JSON-LD may be harder for a model even when it is more interoperable after generation. Practical systems may therefore generate a simpler controlled representation and convert it deterministically into standards-compliant RDF.
 
@@ -228,7 +228,7 @@ In scientific question–answer generation, a KG-based pipeline selected salient
 
 ### 5.11 Validation, correction, and knowledge fusion
 
-Validation and fusion are not optional cleanup steps. They determine whether extracted strings become durable graph knowledge. The family includes confidence estimation (Li and Grishman, 2013), probabilistic fusion (Dong et al., 2014), integration of entity extraction and linking systems (Hernandez et al., 2021), simultaneous entity and relation grounding (Lin et al., 2020), ontology growth (Suchanek, 2009), and surveys/resources for entity linking and KB population (Ji and Grishman, 2011; Shen et al., n.d.; Getman et al., n.d.).
+Validation and fusion are important components when the target application requires durable, trustworthy graph knowledge. They determine whether extracted strings become durable graph knowledge. The family includes confidence estimation (Li and Grishman, 2013), probabilistic fusion (Dong et al., 2014), integration of entity extraction and linking systems (Hernandez et al., 2021), simultaneous entity and relation grounding (Lin et al., 2020), ontology growth (Suchanek, 2009), and surveys/resources for entity linking and KB population (Ji and Grishman, 2011; Shen et al., n.d.; Getman et al., n.d.).
 
 FEEL integrates several entity extraction and linking services, removes duplicates and overlaps, and applies voting or frequency filters (Hernandez et al., 2021). A stricter configuration generally increased precision and reduced recall. Its results also differed across seven datasets, and the authors warned that changing knowledge-base identifiers could make benchmark annotations appear wrong. Fusion quality depends on the sources, their correlation, and the freshness of the evaluation data.
 
@@ -268,7 +268,7 @@ LLM generation does not remove the identity problem. iText2KG uses incremental s
 
 An ontology provides shared meaning and constraints; graph construction provides a persistent representation. Ontology-first methods improve consistency but may miss novel relations. Schema induction preserves novelty but can create synonymous or overly specific relation types. EDC explicitly supports both target alignment and self-canonicalization (Zhang and Soh, 2024a). KGGen measures relation reuse as the corpus grows (Mo et al., 2025). These are useful moves beyond isolated triple accuracy because they consider whether the graph's vocabulary remains coherent.
 
-Graph serialization also deserves evaluation. The RDF benchmark evaluates parseability, subject correctness, SHACL validity, extraction metrics, time, and emissions (Ringwald et al., n.d.). The OpenIE-to-RDF pipeline evaluates complete event representations and provenance (Martinez-Rodriguez et al., 2018). The evidence supports generating a constrained intermediate form, validating it deterministically, and only then loading it into a graph store.
+Graph serialization also deserves evaluation. The RDF benchmark evaluates parseability, subject correctness, SHACL validity, extraction metrics, time, and emissions (Ringwald et al., 2026). The OpenIE-to-RDF pipeline evaluates complete event representations and provenance (Martinez-Rodriguez et al., 2018). The evidence supports generating a constrained intermediate form, validating it deterministically, and only then loading it into a graph store.
 
 ### 6.6 Validation, fusion, and updating
 
@@ -282,7 +282,7 @@ Updating is less developed than extraction. The traditional Chinese medicine sys
 
 Precision, recall, and F1 are the most common measures. Precision asks what proportion of predicted items are correct. Recall asks what proportion of reference items were found. F1 is their harmonic mean. These measures are useful only after defining an item and a match. An item can be an entity span, a linked entity, a relation label, a complete triple, or a graph statement. A relaxed match can credit partial entity boundaries, while a strict match may require exact boundaries, types, and relation direction.
 
-The importance of the definition is visible within individual papers. OneRel reports separate partial- and exact-match results (Shang et al., 2022). The fine-tuning study reports type, partial, exact, and strict triple scores (Zhang et al., 2024b). The RDF benchmark adds parseability, correct subject, SHACL validity, and datatype-property measures (Ringwald et al., n.d.). No single number can replace this detail.
+The importance of the definition is visible within individual papers. OneRel reports separate partial- and exact-match results (Shang et al., 2022). The fine-tuning study reports type, partial, exact, and strict triple scores (Zhang et al., 2024b). The RDF benchmark adds parseability, correct subject, SHACL validity, and datatype-property measures (Ringwald et al., 2026). No single number can replace this detail.
 
 Table 2 gives representative measurements from compatible comparisons within individual studies. It does not rank the studies against one another.
 
@@ -313,7 +313,7 @@ A minimum evaluation should therefore report: entity quality; relation or triple
 
 Graph-level evaluation is less standardized. The acquired studies use several proxies:
 
-- RDF parsing and SHACL conformance (Ringwald et al., n.d.);
+- RDF parsing and SHACL conformance (Ringwald et al., 2026);
 - ontology compliance and hallucinated schema elements (Mihindukulasooriya et al., 2023);
 - entity/relation reuse and duplicate reduction (Mo et al., 2025);
 - confidence or probabilistic fusion (Dong et al., 2014; Li and Grishman, 2013);
@@ -332,7 +332,7 @@ Good practice is to report the sampling procedure, sample size, evaluator expert
 
 ### 7.5 Efficiency, cost, and reproducibility
 
-Runtime and cost matter because Text-to-KG construction can involve millions of sentences or repeated LLM calls. ReVerb compared minutes with hours (Fader et al., 2011). Pointer decoding reduced time and GPU memory relative to word decoding (Nayak and Ng, 2020). The RDF benchmark reported training time and carbon emissions (Ringwald et al., n.d.). KGGen reported wall time and API cost (Mo et al., 2025). EDC estimated USD 0.009 per example for its GPT-3.5 components (Zhang and Soh, 2024a).
+Runtime and cost matter because Text-to-KG construction can involve millions of sentences or repeated LLM calls. ReVerb compared minutes with hours (Fader et al., 2011). Pointer decoding reduced time and GPU memory relative to word decoding (Nayak and Ng, 2020). The RDF benchmark reported training time and carbon emissions (Ringwald et al., 2026). KGGen reported wall time and API cost (Mo et al., 2025). EDC estimated USD 0.009 per example for its GPT-3.5 components (Zhang and Soh, 2024a).
 
 These measurements are useful but not directly comparable across hardware, time, providers, and workloads. Reproducibility also varies. Some papers release code, datasets, or gold standards; others report no availability. For proprietary LLMs, a prompt and model name may still be insufficient because the hosted model can change. Future work should preserve prompts, decoding parameters, model versions, schemas, preprocessing rules, raw and canonical outputs, and evaluation code.
 
@@ -382,7 +382,7 @@ Use rules, encoders, OpenIE, LLMs, or combinations to generate candidate facts. 
 
 ### 9.3 Use the least complex method that meets the requirement
 
-Stable, narrow tasks may be served by rules or a small supervised encoder. Broad or changing schemas may justify prompting. Repeated high-volume tasks may justify fine-tuning a smaller model. A generative RDF model is appropriate only if serialization validity is tested. The corpus provides no evidence that the largest available LLM is always the best option (Ringwald et al., n.d.; Gajo and Barrón-Cedeño, 2025).
+Stable, narrow tasks may be served by rules or a small supervised encoder. Broad or changing schemas may justify prompting. Repeated high-volume tasks may justify fine-tuning a smaller model. A generative RDF model is appropriate only if serialization validity is tested. The corpus provides no evidence that the largest available LLM is always the best option (Ringwald et al., 2026; Gajo and Barrón-Cedeño, 2025).
 
 ### 9.4 Evaluate at every consequential boundary
 
@@ -460,9 +460,9 @@ The most defensible direction is therefore controlled generation: broad candidat
 
 The bibliography contains only papers from the acquired and analyzed corpus. `n.d.` indicates that the accepted Paper Card did not report a publication year.
 
-- Abolhasani, M. S., and Pan, R. (n.d.). *Leveraging LLM for Automated Ontology Extraction and Knowledge Graph Generation*.
+- Abolhasani, M. S., and Pan, R. (2024). *Leveraging LLM for Automated Ontology Extraction and Knowledge Graph Generation*.
 - Al-Moslmi, T., Gallofré Ocaña, M., Opdahl, A. L., and Veres, C. (2020). *Named Entity Extraction for Knowledge Graphs: A Literature Overview*.
-- Angeli, G., Zhong, V., Chen, D., Chaganty, A., Bolton, J., Premkumar, M. J., Pasupat, P., Gupta, S., and Manning, C. D. (n.d.). *Bootstrapped Self Training for Knowledge Base Population*.
+- Angeli, G., Zhong, V., Chen, D., Chaganty, A., Bolton, J., Premkumar, M. J., Pasupat, P., Gupta, S., and Manning, C. D. (2015). *Bootstrapped Self Training for Knowledge Base Population*.
 - Augenstein, I., Maynard, D., and Ciravegna, F. (2016). *Distantly Supervised Web Relation Extraction for Knowledge Base Population*.
 - Azarbonyad, H., Zhu, Z. L., Cheirmpos, G., Afzal, Z., Yadav, V., and Tsatsaronis, G. (2025). *Question-Answer Extraction from Scientific Articles Using Knowledge Graphs and Large Language Models*.
 - Baek, H.-Y., Choi, J., Seo, J., Jin, X., Lee, D., and Oh, B. (2025). *Relation-Faceted Graph Pooling with LLM Guidance for Dynamic Span-Aware Information Extraction*.
@@ -475,21 +475,21 @@ The bibliography contains only papers from the acquired and analyzed corpus. `n.
 - Cai, H., Liao, W., Liu, Z., Zhang, Y., Huang, X., Ding, S., Ren, H., Wu, Z., Dai, H., Li, S., Wu, L., Liu, N., Li, Q., Liu, T., and Li, X. (2023). *Coarse-to-Fine Knowledge Graph Domain Adaptation Based on Distantly-Supervised Iterative Training*.
 - Chaganty, A. T., Paranjape, A. P., Liang, P., and Manning, C. D. (n.d.). *Importance Sampling for Unbiased On-Demand Evaluation of Knowledge Base Population*.
 - Chepurova, A., Kuratov, Y., Bulatov, A., and Burtsev, M. (2024). *Prompt Me One More Time: A Two-Step Knowledge Extraction Pipeline with Ontology-Based Verification*.
-- Dang, M.-H., Pham, T. H. T., Molli, P., Skaf-Molli, H., and Gaignard, A. (n.d.). *LLM4Schema.org: Generating Schema.org Markups with Large Language Models*.
+- Dang, M.-H., Pham, T. H. T., Molli, P., Skaf-Molli, H., and Gaignard, A. (2025). *LLM4Schema.org: Generating Schema.org Markups with Large Language Models*.
 - Dong, K. (2024). *Incorporating Contexts to Open Information Extraction*.
 - Dong, K., Zhao, Y., Sun, A., Kim, J.-J., and Li, X. (2021). *DocOIE: A Document-Level Context-Aware Dataset for OpenIE*.
 - Dong, X. L., Gabrilovich, E., Heitz, G., Horn, W., Lao, N., Murphy, K., Strohmann, T., Sun, S., and Zhang, W. (2014). *Knowledge Vault: A Web-Scale Approach to Probabilistic Knowledge Fusion*.
 - Dredze, M., McNamee, P., Rao, D., Gerber, A., and Finin, T. (2010). *Entity Disambiguation for Knowledge Base Population*.
 - Elkhammash, E., and Ben Abdessalem, W. (2019). *A Holy Quran Ontology Construction with Semi-Automatic Population*.
-- Exner, P., and Nugues, P. (n.d.). *Entity Extraction: From Unstructured Text to DBpedia RDF Triples*.
+- Exner, P., and Nugues, P. (2012). *Entity Extraction: From Unstructured Text to DBpedia RDF Triples*.
 - Fader, A., Soderland, S., and Etzioni, O. (2011). *Identifying Relations for Open Information Extraction*.
 - Fernández Cañellas, D. (2023). *Knowledge Graph Population from News Streams*.
 - Fossati, M., Dorigatti, E., and Giuliano, C. (2015). *N-ary Relation Extraction for Simultaneous T-Box and A-Box Knowledge Base Augmentation*.
-- Freitas, A., Carvalho, D. S., da Silva, J. C. P., O'Riain, S., and Curry, E. (n.d.). *A Semantic Best-Effort Approach for Extracting Structured Discourse Graphs from Wikipedia*.
+- Freitas, A., Carvalho, D. S., da Silva, J. C. P., O'Riain, S., and Curry, E. (2012). *A Semantic Best-Effort Approach for Extracting Structured Discourse Graphs from Wikipedia*.
 - Gajo, P., and Barrón-Cedeño, A. (2025). *Natural vs Programming Language in LLM Knowledge Graph Construction*.
 - Gashteovski, K., Gemulla, R., Kotnis, B., Hertling, S., and Meilicke, C. (2020). *On Aligning OpenIE Extractions with Knowledge Bases: A Case Study*.
 - Gashteovski, K., Wanner, S., Hertling, S., Broscheit, S., and Gemulla, R. (2019). *OPIEC: An Open Information Extraction Corpus*.
-- Getman, J., Ellis, J., Strassel, S., Song, Z., and Tracey, J. (n.d.). *Laying the Groundwork for Knowledge Base Population: Nine Years of Linguistic Resources for TAC KBP*.
+- Getman, J., Ellis, J., Strassel, S., Song, Z., and Tracey, J. (2018). *Laying the Groundwork for Knowledge Base Population: Nine Years of Linguistic Resources for TAC KBP*.
 - Hernandez, J., Martinez-Rodriguez, J. L., Lopez-Arevalo, I., Rios-Alvarado, A. B., and Aldana-Bobadilla, E. (2021). *FEEL: Framework for the Integration of Entity Extraction and Linking Systems*.
 - Hoffmann, R., Zhang, C., Ling, X., Zettlemoyer, L., and Weld, D. S. (2011). *Knowledge-Based Weak Supervision for Information Extraction of Overlapping Relations*.
 - Hong, Z., and Huang, H. (2026). *A Survey on Generative Knowledge Graph Construction*.
@@ -504,24 +504,24 @@ The bibliography contains only papers from the acquired and analyzed corpus. `n.
 - Luan, Y., He, L., Ostendorf, M., and Hajishirzi, H. (2018). *Multi-Task Identification of Entities, Relations, and Coreference for Scientific Knowledge Graph Construction*.
 - Martinez-Rodriguez, J. L., Hogan, A., and Lopez-Arevalo, I. (2016). *Information Extraction Meets the Semantic Web: A Survey*.
 - Martinez-Rodriguez, J. L., Lopez-Arevalo, I., and Rios-Alvarado, A. B. (2018). *OpenIE-based Approach for Knowledge Graph Construction from Text*.
-- Mendes, P. N., Jakob, M., García-Silva, A., and Bizer, C. (n.d.). *DBpedia Spotlight: Shedding Light on the Web of Documents*.
-- Mesquita, F., Cannaviccio, M., Schmidek, J., Mirza, P., and Barbosa, D. (n.d.). *KnowledgeNet: A Benchmark Dataset for Knowledge Base Population*.
+- Mendes, P. N., Jakob, M., García-Silva, A., and Bizer, C. (2011). *DBpedia Spotlight: Shedding Light on the Web of Documents*.
+- Mesquita, F., Cannaviccio, M., Schmidek, J., Mirza, P., and Barbosa, D. (2019). *KnowledgeNet: A Benchmark Dataset for Knowledge Base Population*.
 - Mihindukulasooriya, N., Tiwari, S., Enguix, C. F., and Lata, K. (2023). *Text2KGBench: A Benchmark for Ontology-Driven Knowledge Graph Generation from Text*.
 - Milne, D., and Witten, I. H. (2008). *Learning to Link with Wikipedia*.
 - Mo, B., Yu, K., Kazdan, J., Cabezas, J., Mpala, P., Yu, L., Cundy, C., Kanatsoulis, C., and Koyejo, S. (2025). *KGGen: Extracting Knowledge Graphs from Plain Text with Language Models*.
 - Nayak, T., and Ng, H. T. (2020). *Effective Modeling of Encoder–Decoder Architecture for Joint Entity and Relation Extraction*.
 - Regino, A. G., Rossanez, A., Torres, R. S., and dos Reis, J. C. (2024). *A Systematic Literature Review on RDF Triple Generation from Natural Language Texts*.
 - Riedel, S., Yao, L., McCallum, A., and Marlin, B. M. (2013). *Relation Extraction with Matrix Factorization and Universal Schemas*.
-- Ringwald, C., Gandon, F., Faron, C., Michel, F., and Abi Akl, H. (n.d.). *Extensive Benchmark of Frugal Encoder–Decoder Language Models for Datatype Properties Extraction and RDF Knowledge Graph Generation*.
+- Ringwald, C., Gandon, F., Faron, C., Michel, F., and Abi Akl, H. (2026). *Extensive Benchmark of Frugal Encoder–Decoder Language Models for Datatype Properties Extraction and RDF Knowledge Graph Generation*.
 - Rios-Alvarado, A. B., Martinez-Rodriguez, J. L., Garcia-Perez, A. G., Guerrero-Melendez, T. Y., Lopez-Arevalo, I., and Gonzalez-Compean, J. L. (2022). *Exploiting Lexical Patterns for Knowledge Graph Construction from Unstructured Text in Spanish*.
 - Rossanez, A., dos Reis, J. C., Torres, R. S., and de Ribaupierre, H. (2020). *KGen: A Knowledge Graph Generator from Biomedical Scientific Literature*.
 - Salman, M., Haller, A., Rodríguez Méndez, S. J., and Naseem, U. (2024). *Doc-KG: Unstructured Documents to Knowledge Graph Construction, Identification and Validation with Wikidata*.
 - Schimmenti, A., Pasqual, V., Vitali, F., and van Erp, M. (2025). *Knowledge Graphs Generation from Cultural Heritage Texts: Combining LLMs and Ontological Engineering for Scholarly Debates*.
 - Shang, Y.-M., Huang, H., and Mao, X.-L. (2022). *OneRel: Joint Entity and Relation Extraction with One Module in One Step*.
-- Shen, W., Wang, J., and Han, J. (n.d.). *Entity Linking with a Knowledge Base: Issues, Techniques, and Solutions*.
+- Shen, W., Wang, J., and Han, J. (2015). *Entity Linking with a Knowledge Base: Issues, Techniques, and Solutions*.
 - Shen, W., Wang, J., Luo, P., and Wang, M. (2012). *LINDEN: Linking Named Entities with Knowledge Base via Semantic Knowledge*.
 - Specia, L., and Motta, E. (2006). *A Hybrid Approach for Extracting Semantic Relations from Texts*.
-- Stewart, M., and Liu, W. (n.d.). *Seq2KG: An End-to-End Neural Model for Domain Agnostic Knowledge Graph Construction from Text*.
+- Stewart, M., and Liu, W. (2020). *Seq2KG: An End-to-End Neural Model for Domain Agnostic Knowledge Graph Construction from Text*.
 - Stewart, M., Enkhsaikhan, M., and Liu, W. (2019). *ICDM 2019 Knowledge Graph Contest: Team UWA*.
 - Stewart, M., Hodkiewicz, M., Liu, W., and French, T. (2024). *MWO2KG and Echidna: Constructing and Exploring Knowledge Graphs from Maintenance Data*.
 - Suchanek, F. M. (2009). *Automated Construction and Growth of a Large Ontology*.
