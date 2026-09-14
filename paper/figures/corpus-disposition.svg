@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="920" viewBox="0 0 1100 920" role="img" aria-labelledby="title desc">
+  <title id="title">Study-selection flow</title>
+  <desc id="desc">PRISMA-style flow from 282 identified records to 83 full-text papers included in the synthesis.</desc>
+  <style>
+    .title { font: 700 25px Arial, sans-serif; fill: #17365d; }
+    .subtitle { font: 14px Arial, sans-serif; fill: #536273; }
+    .stage { font: 700 16px Arial, sans-serif; fill: #17365d; }
+    .box { fill: #f8fafc; stroke: #4f78ad; stroke-width: 2; rx: 7; }
+    .excluded { fill: #fff8f0; stroke: #b7791f; stroke-width: 2; rx: 7; }
+    .included { fill: #edf7ef; stroke: #4c8a5a; stroke-width: 2.5; rx: 7; }
+    .text { font: 16px Arial, sans-serif; fill: #24364b; text-anchor: middle; }
+    .small { font: 14px Arial, sans-serif; fill: #536273; text-anchor: middle; }
+    .count { font: 700 17px Arial, sans-serif; fill: #17365d; text-anchor: middle; }
+    .arrow { stroke: #536273; stroke-width: 2.5; fill: none; marker-end: url(#arrowhead); }
+    .branch { stroke: #8795a8; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#536273"/>
+    </marker>
+  </defs>
+  <rect width="1100" height="920" fill="white"/>
+  <text x="28" y="39" class="title">Study-selection flow</text>
+  <text x="28" y="65" class="subtitle">Records are counted once at each stage; source counts refer to records carried forward for review.</text>
+
+  <text x="28" y="137" class="stage">Identification</text>
+  <rect x="220" y="94" width="560" height="126" class="box"/>
+  <text x="500" y="124" class="text">Records identified through literature discovery</text>
+  <text x="500" y="151" class="small">Elicit (n = 24) · Connected Papers (n = 5)</text>
+  <text x="500" y="176" class="small">OpenAlex one-hop expansion (n = 253)</text>
+  <text x="500" y="203" class="count">Total (n = 282)</text>
+
+  <path d="M500 220 L500 290" class="arrow"/>
+  <path d="M780 157 L848 157" class="branch"/>
+  <rect x="850" y="112" width="222" height="90" class="excluded"/>
+  <text x="961" y="143" class="text">Not advanced after</text>
+  <text x="961" y="166" class="text">relevance ranking</text>
+  <text x="961" y="189" class="count">(n = 103)</text>
+
+  <text x="28" y="341" class="stage">Screening</text>
+  <rect x="220" y="290" width="560" height="96" class="box"/>
+  <text x="500" y="328" class="text">Records screened by title and abstract</text>
+  <text x="500" y="358" class="count">(n = 179)</text>
+
+  <path d="M780 338 L848 338" class="branch"/>
+  <rect x="850" y="297" width="222" height="82" class="excluded"/>
+  <text x="961" y="328" class="text">Records excluded</text>
+  <text x="961" y="356" class="count">(n = 64)</text>
+
+  <path d="M500 386 L500 466" class="arrow"/>
+  <text x="28" y="518" class="stage">Eligibility</text>
+  <rect x="220" y="466" width="560" height="96" class="box"/>
+  <text x="500" y="504" class="text">Records retained for final eligibility assessment</text>
+  <text x="500" y="534" class="count">(n = 115)</text>
+
+  <path d="M780 514 L848 514" class="branch"/>
+  <rect x="850" y="457" width="222" height="114" class="excluded"/>
+  <text x="961" y="482" class="text">Not included after</text>
+  <text x="961" y="507" class="small">eligibility and overlap</text>
+  <text x="961" y="530" class="small">assessment</text>
+  <text x="961" y="555" class="count">(n = 32)</text>
+
+  <path d="M500 562 L500 664" class="arrow"/>
+  <text x="28" y="720" class="stage">Included</text>
+  <rect x="220" y="664" width="560" height="112" class="included"/>
+  <text x="500" y="706" class="text">Full-text papers included</text>
+  <text x="500" y="733" class="text">in the synthesis</text>
+  <text x="500" y="760" class="count">(n = 83)</text>
+
+  <text x="28" y="858" class="subtitle">Flow: 282 − 103 = 179; 179 − 64 = 115; 115 − 32 = 83.</text>
+</svg>

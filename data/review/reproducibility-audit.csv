@@ -1,0 +1,84 @@
+study,public_code_reported,public_data_or_study_resources_reported,main_llm_version_reporting
+A Comprehensive Survey on Automatic Knowledge Graph Construction,no,no,not_applicable
+Review of Automatic and Semi-Automatic Creation of Knowledge Graphs from Structured and Unstructured Data,no,no,not_applicable
+A Systematic Literature Review on RDF Triple Generation from Natural Language Texts,no,no,not_applicable
+Constructing Knowledge Graphs from Text Using Large Language Models: Scoping Review,no,yes,not_applicable
+OpenIE-based Approach for Knowledge Graph construction from text,no,no,not_applicable
+Semi-Automatic Knowledge Graph Construction by Relation Pattern Extraction,no,no,not_applicable
+From Text to Knowledge: Bridging the Gap with Probabilistic Graphical Models,no,yes,not_applicable
+Joint Extraction of Entities and Relations Based on a Novel Graph Scheme,yes,yes,not_applicable
+Seq2KG: An End-to-End Neural Model for Domain Agnostic Knowledge Graph Construction from Text,yes,yes,not_applicable
+An Autoregressive Text-to-Graph Framework for Joint Entity and Relation Extraction,yes,yes,not_applicable
+LlmRe: A Zero-Shot Entity Relation Extraction Method Based on the Large Language Model,no,no,partial
+Fine-Tuning Language Models for Triple Extraction with Data Augmentation,no,no,complete
+CodeKGC: Code Language Model for Generative Knowledge Graph Construction,yes,yes,complete
+iText2KG: Incremental Knowledge Graphs Construction Using Large Language Models,yes,yes,absent
+Leveraging LLM for Automated Ontology Extraction and Knowledge Graph Generation,no,no,absent
+Prompt Me One More Time: A Two-Step Knowledge Extraction Pipeline with Ontology-Based Verification,no,no,complete
+KnowledgeNet: A Benchmark Dataset for Knowledge Base Population,yes,yes,not_applicable
+Text2KGBench: A Benchmark for Ontology-Driven Knowledge Graph Generation from Text,yes,yes,complete
+KGGen: Extracting Knowledge Graphs from Plain Text with Language Models,no,no,complete
+Knowledge Vault: A Web-Scale Approach to Probabilistic Knowledge Fusion,no,no,not_applicable
+Identifying Relations for Open Information Extraction,yes,yes,not_applicable
+FEEL: Framework for the integration of Entity Extraction and Linking systems,no,yes,not_applicable
+On Aligning OpenIE Extractions with Knowledge Bases: A Case Study,no,yes,not_applicable
+MWO2KG and Echidna: Constructing and exploring knowledge graphs from maintenance data,yes,yes,not_applicable
+"Doc‐KG: Unstructured documents to knowledge graph construction, identification and validation with Wikidata",no,no,not_applicable
+Information Extraction meets the Semantic Web: A Survey,no,yes,not_applicable
+KBPearl,no,no,not_applicable
+Exploiting lexical patterns for knowledge graph construction from unstructured text in Spanish,no,yes,not_applicable
+ICDM 2019 Knowledge Graph Contest: Team UWA,no,no,not_applicable
+Automating Biomedical Knowledge Graph Construction For Context-Aware Scientific Inference,yes,yes,complete
+Enhancing Domain-Independent Knowledge Graph Construction through OpenIE Cleaning and LLMs Validation,yes,yes,absent
+Entity Linking: An Issue to Extract Corresponding Entity With Knowledge Base,no,no,not_applicable
+Incorporating Contexts to Open Information Extraction,no,no,not_applicable
+Knowledge Graph Population from News Streams,no,yes,not_applicable
+Semi-supervised Generative Open Information Extraction,no,no,not_applicable
+Named Entity Extraction for Knowledge Graphs: A Literature Overview,no,no,not_applicable
+KGen: a knowledge graph generator from biomedical scientific literature,yes,yes,not_applicable
+Relation Extraction with Matrix Factorization and Universal Schemas,yes,yes,not_applicable
+A Novel Cascade Binary Tagging Framework for Relational Triple Extraction,yes,yes,not_applicable
+CTI-Thinker: an LLM-driven system for CTI knowledge graph construction and attack reasoning,no,no,complete
+Entity linking for biomedical literature,no,no,not_applicable
+Knowledge Base Population: Successful Approaches and Challenges,no,no,not_applicable
+N-ary Relation Extraction for Simultaneous T-Box and A-Box Knowledge Base Augmentation,yes,yes,not_applicable
+Research on Domain-Specific Knowledge Graph Based on the RoBERTa-wwm-ext Pretraining Model,no,no,not_applicable
+A Semantic Best-Effort Approach for Extracting Structured Discourse Graphs from Wikipedia,no,no,not_applicable
+Coarse-to-fine Knowledge Graph Domain Adaptation based on Distantly-supervised Iterative Training,no,no,not_applicable
+"Entity Linking with a Knowledge Base: Issues, Techniques, and Solutions",no,no,not_applicable
+Extensive Benchmark of Frugal Encoder–Decoder Language Models for Datatype Properties Extraction and RDF Knowledge Graph Generation,yes,yes,not_applicable
+Importance sampling for unbiased on-demand evaluation of knowledge base population,no,no,not_applicable
+Large Language Models for Automatic Knowledge Graph Construction From Text Documents: a Materials Science Case Study,no,yes,complete
+Natural vs programming language in LLM knowledge graph construction,yes,yes,complete
+OneRel: Joint Entity and Relation Extraction with One Module in One Step,no,yes,not_applicable
+Automated Construction and Growth of a Large Ontology,no,yes,not_applicable
+A Method for Traditional Chinese Medicine Knowledge Graph Dynamic Construction,no,no,not_applicable
+Confidence Estimation for Knowledge Base Population,no,no,not_applicable
+Distantly supervised Web relation extraction for knowledge base population,no,no,not_applicable
+Effective Modeling of Encoder-Decoder Architecture for Joint Entity and Relation Extraction,yes,yes,not_applicable
+Entity Disambiguation for Knowledge Base Population,no,yes,not_applicable
+Entity extraction: From unstructured text to DBpedia RDF triples,no,yes,not_applicable
+Knowledge Graphs Generation from Cultural Heritage Texts: Combining LLMs and Ontological Engineering for Scholarly Debates,yes,no,complete
+Laying the Groundwork for Knowledge Base Population: Nine Years of Linguistic Resources for TAC KBP,no,no,not_applicable
+"Multi-Task Identification of Entities, Relations, and Coreference for Scientific Knowledge Graph Construction",yes,yes,not_applicable
+OPIEC: An Open Information Extraction Corpus,yes,yes,not_applicable
+OPTIMIZING SYNTACTIC-SEMANTIC RELATION EXTRACTION FOR THE KAZAKH LANGUAGE WITH TRANSFORMER ARCHITECTURES AND SYNTHETIC CORPORA,no,no,not_applicable
+A Holy Quran Ontology Construction with Semi-Automatic Population,no,no,not_applicable
+A hybrid approach for extracting semantic relations from texts,no,no,not_applicable
+A Survey on Generative Knowledge Graph Construction,no,no,not_applicable
+Alzheimer’s Disease Knowledge Graph Enhances Knowledge Discovery and Disease Prediction,no,yes,not_applicable
+Bootstrapped Self Training for Knowledge Base Population.,no,no,not_applicable
+Construction of a knowledge graph for framework material enabled by large language models and its application,yes,no,complete
+DBpedia Spotlight: Shedding Light on the Web of Documents,yes,yes,not_applicable
+DocOIE: A Document-level Context-Aware Dataset for OpenIE,yes,yes,not_applicable
+"Extract, Define, Canonicalize: An LLM-based Framework for Knowledge Graph Construction",yes,yes,partial
+Generative Knowledge Graph Construction: A Review,no,no,not_applicable
+Knowledge-Based Weak Supervision for Information Extraction of Overlapping Relations,yes,yes,not_applicable
+Learning to Link with Wikipedia,no,yes,not_applicable
+LINDEN: Linking Named Entities with Knowledge Base via Semantic Knowledge,no,yes,not_applicable
+Llm-Tikg: Threat Intelligence Knowledge Graph Construction Utilizing Large Language Model,no,yes,partial
+LLM4Schema.org: Generating Schema.org Markups With Large Language Models,yes,yes,complete
+LLMs for Knowledge Graph Construction and Reasoning: Recent Capabilities and Future Opportunities,yes,yes,absent
+Open Relation Extraction and Grounding,no,yes,not_applicable
+Question-Answer Extraction from Scientific Articles Using Knowledge Graphs and Large Language Models,no,no,partial
+Relation-Faceted Graph Pooling with LLM Guidance for Dynamic Span-Aware Information Extraction,no,no,absent
